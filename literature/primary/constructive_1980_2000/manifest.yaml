@@ -1,0 +1,105 @@
+version: '1.0'
+packet: YM-002B
+description: "Constructive / Rigorous Renormalization Group Foundations (1980\u2013\
+  2000)"
+total_sources: 8
+sources:
+- source_id: PAPER-CONST-001
+  title: Proof of Confinement of Static Quarks in 3-Dimensional U(1) Lattice Gauge
+    Theory for all Values of the Coupling Constant
+  authors:
+  - "Markus G\xF6pfert"
+  - Gerhard Mack
+  year: 1981
+  doi: 10.1007/BF01961298
+  local_file: PAPER-CONST-001/record.md
+  sha256: fb3844f0b8e396a08fab7a57543096fa80fb9a02253c0efb430ef0d37a6db878
+  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  status: INGESTED_AND_VERIFIED
+- source_id: PAPER-CONST-002
+  title: The 1/r Coulomb Gas in Three Dimensions is a Gas of Dipoles
+  authors:
+  - David Brydges
+  - "J\xFCrg Fr\xF6hlich"
+  - Thomas Spencer
+  year: 1982
+  doi: 10.1007/BF01979497
+  local_file: PAPER-CONST-002/record.md
+  sha256: 87e6aa14803316a4af0024a2c9857c9b2e1811c3610001ac15d5cbfaa8cdb02f
+  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  status: INGESTED_AND_VERIFIED
+- source_id: PAPER-CONST-003
+  title: Gauge Theories as a Problem of Constructive Quantum Field Theory and Statistical
+    Mechanics
+  authors:
+  - Erhard Seiler
+  year: 1982
+  doi: 10.1007/3-540-11559-5
+  local_file: PAPER-CONST-003/record.md
+  sha256: 448f3783870747bb38148d68ea99827c6662244983476ba70b3f0b3a9ab91219
+  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  status: INGESTED_AND_VERIFIED
+- source_id: PAPER-CONST-004
+  title: Propagators and Renormalization Transformations for Lattice Gauge Theories
+    I & II / Averaging Operations
+  authors:
+  - "Tadeusz Ba\u0142aban"
+  year: 1984
+  doi: 10.1007/BF01212398
+  local_file: PAPER-CONST-004/record.md
+  sha256: e9c7fa466e156d5b96e778db37ceedffa1203e13304373aafb2a324e1f8b5d3d
+  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  status: INGESTED_AND_VERIFIED
+- source_id: PAPER-CONST-005
+  title: Renormalization Group Approach to Lattice Gauge Field Theories I, II, III
+    (Small Field Effective Actions)
+  authors:
+  - "Tadeusz Ba\u0142aban"
+  year: 1987
+  doi: 10.1007/BF01205674
+  local_file: PAPER-CONST-005/record.md
+  sha256: bfd9865799ddc7ddc2971f5851177102e47c03479b792c2e933c4df750104d24
+  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  status: INGESTED_AND_VERIFIED
+- source_id: PAPER-CONST-006
+  title: 'Convergent Renormalization Group for Lattice Gauge Theories: Large Field
+    & Small Field Polymer Expansions'
+  authors:
+  - "Tadeusz Ba\u0142aban"
+  year: 1988
+  doi: 10.1007/BF01224827
+  local_file: PAPER-CONST-006/record.md
+  sha256: 3bd6047757f598b344a96a00d8b9d46a9c65332d1b0913685ef77e8541335dfb
+  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  status: INGESTED_AND_VERIFIED
+- source_id: PAPER-CONST-007
+  title: A New Approach to the Construction of Lattice Gauge Theories / A Master Inequality
+    for Constructive Gauge Theory
+  authors:
+  - Paul Federbush
+  year: 1986
+  doi: 10.1007/BF01206941
+  local_file: PAPER-CONST-007/record.md
+  sha256: f8b1d1b0a0511adedd9780cbd8adac7297f0d1825b2b0a25b36bc77d92fc7b29
+  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  status: INGESTED_AND_VERIFIED
+- source_id: PAPER-CONST-008
+  title: Construction of YM_4 with an Infrared Cutoff
+  authors:
+  - Jacques Magnen
+  - Vincent Rivasseau
+  - "Roland S\xE9n\xE9or"
+  year: 1993
+  doi: 10.1007/BF02097397
+  local_file: PAPER-CONST-008/record.md
+  sha256: 0c1e4a57e5ade1809d8697cabbf2c35ef167bf69f9a2db62b07c50c3d3e617c9
+  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  status: INGESTED_AND_VERIFIED

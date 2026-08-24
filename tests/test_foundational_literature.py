@@ -58,14 +58,18 @@ def test_thm_ym_ids_unique():
     assert len(theorems) >= 12, "Must contain at least 12 foundational theorems"
 
 def test_theorems_reference_registered_sources():
-    sources = load_manifest()
-    valid_source_ids = {s["source_id"] for s in sources}
+    valid_source_ids = set()
+    for mpath in (ROOT / "literature" / "primary").glob("*/manifest.yaml"):
+        mdata = yaml.safe_load(mpath.read_text(encoding="utf-8"))
+        for s in mdata.get("sources", []):
+            valid_source_ids.add(s["source_id"])
     theorems = parse_theorems()
     for thm_id, thm in theorems.items():
         paper_id_raw = thm.get("PAPER_ID", "")
         paper_ids = [p.strip(" `") for p in paper_id_raw.split(",")]
         for pid in paper_ids:
             assert pid in valid_source_ids, f"{thm_id} references unregistered source {pid}"
+
 
 def test_verified_theorems_have_source_locators():
     theorems = parse_theorems()

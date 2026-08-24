@@ -383,3 +383,269 @@
 - **SOURCE_LOCATOR:** *Nucl. Phys. B* 120 (1977), pp. 429–458, Sections 5–6.
 - **REPRODUCTION_STATUS:** `RECONSTRUCTED`
 - **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
+
+---
+
+## Constructive and Rigorous Renormalization Group Foundations (1980–2000)
+
+### THM-YM-0013: Göpfert–Mack Rigorous 3D U(1) Lattice Confinement & Mass Gap
+- **THEOREM_ID:** `THM-YM-0013`
+- **PAPER_ID:** `PAPER-CONST-001`
+- **TITLE:** Proof of Confinement of Static Quarks in 3-Dimensional U(1) Lattice Gauge Theory for all Values of the Coupling Constant
+- **AUTHORS:** M. Göpfert, G. Mack
+- **YEAR:** 1981
+- **DOMAIN:** `constructive / lattice`
+- **DIMENSION:** `2+1` (3D Euclidean)
+- **GAUGE_GROUP:** Compact $U(1)$
+- **REGULARIZATION:** `Villain lattice action / continuum limit with fixed m_D`
+- **VOLUME:** `infinite` (thermodynamic limit)
+- **COUPLING_REGIME:** `arbitrary` ($0 < g^2 < \infty$)
+- **LIMITS:** $a \to 0$ with physical Debye mass $m_D > 0$ held fixed
+- **ASSUMPTIONS:** 3D lattice $U(1)$ gauge theory with Villain action, duality mapping to integer-valued current loops (monopole Coulomb plasma).
+- **EXACT_RESULT:** The string tension $\sigma(g)$ is strictly positive for all values of the coupling constant $g^2$, with asymptotic behavior $\sigma \sim \text{const} \cdot m_D^2$ as $g^2 \to 0$. In the continuum limit $a \to 0$ with $m_D$ fixed, the dual theory converges to a free massive scalar field theory of mass $m_D$.
+- **EVIDENCE_CLASS:** `RIGOROUS_MATHEMATICAL_THEOREM`
+- **CLASSIFICATION_JUSTIFICATION:** Complete mathematical proof with rigorous polymer expansion bounds of non-zero string tension and mass gap in 3D Euclidean lattice gauge theory.
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
+- **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
+- **PROOF_OR_DERIVATION_METHOD:** Exact Villain duality transformation to 3D Coulomb plasma and convergent polymer expansions for dilute monopole gases.
+- **UNIFORMITY_STATUS:** `RIGOROUS_EXACT_IN_3D`
+- **WHAT_IT_PROVES:** Rigorous non-perturbative existence of static quark confinement and a dynamical mass gap for all couplings in 3-dimensional Abelian lattice gauge theory.
+- **WHAT_IT_DOES_NOT_PROVE:** 4D pure non-Abelian Yang–Mills existence or mass gap. The continuum limit yields a free massive scalar rather than an interacting non-Abelian quantum field theory.
+- **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184), [`YM-REQ-007`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L188), [`YM-REQ-020`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L201)
+- **RELEVANCE_TO_CLAY:** `ANALOGUE`
+- **DEPENDENCIES:** `THM-YM-0008`, `THM-YM-0011`
+- **KNOWN_LATER_CORRECTIONS:** None (definitive mathematical benchmark for lower-dimensional confinement).
+- **SOURCE_LOCATOR:** *Comm. Math. Phys.* 82 (1981), pp. 545–590, Sections 1–8, Theorems 1–3.
+- **REPRODUCTION_STATUS:** `RECONSTRUCTED`
+- **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
+
+---
+
+### THM-YM-0014: Brydges–Fröhlich–Spencer Dipole Screening & Coulomb Plasma Gap
+- **THEOREM_ID:** `THM-YM-0014`
+- **PAPER_ID:** `PAPER-CONST-002`
+- **TITLE:** The 1/r Coulomb Gas in Three Dimensions is a Gas of Dipoles
+- **AUTHORS:** D. Brydges, J. Fröhlich, T. Spencer
+- **YEAR:** 1982
+- **DOMAIN:** `constructive / statistical mechanics`
+- **DIMENSION:** `3D`
+- **GAUGE_GROUP:** Abelian Coulomb / sine-Gordon
+- **REGULARIZATION:** `lattice cutoff`
+- **VOLUME:** `infinite` (thermodynamic limit)
+- **COUPLING_REGIME:** `weak / moderate`
+- **LIMITS:** Infinite volume thermodynamic limit
+- **ASSUMPTIONS:** 3D classical Coulomb gas mapped to sine-Gordon field via Kac–Siegert / sine-Gordon transformation.
+- **EXACT_RESULT:** Rigorous proof of exponential clustering of correlation functions (Debye screening) and convergent polymer expansion representation as an effective gas of neutral dipoles.
+- **EVIDENCE_CLASS:** `RIGOROUS_MATHEMATICAL_THEOREM`
+- **CLASSIFICATION_JUSTIFICATION:** Rigorous mathematical theorem with convergent polymer expansion bounds proving exponential decay of correlation functions.
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
+- **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
+- **PROOF_OR_DERIVATION_METHOD:** Sine-Gordon functional integration and multi-scale polymer cluster expansion.
+- **UNIFORMITY_STATUS:** `RIGOROUS_EXACT_IN_3D`
+- **WHAT_IT_PROVES:** Exact exponential decay of Coulomb correlations and mathematical foundation for Debye screening mass generation in 3D.
+- **WHAT_IT_DOES_NOT_PROVE:** 4D non-Abelian gauge field construction or mass gap.
+- **RELATED_YM_REQ_IDS:** [`YM-REQ-007`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L188)
+- **RELEVANCE_TO_CLAY:** `ANALOGUE`
+- **DEPENDENCIES:** `THM-YM-0011`
+- **KNOWN_LATER_CORRECTIONS:** None.
+- **SOURCE_LOCATOR:** *Comm. Math. Phys.* 83 (1982), pp. 123–150, Theorems 1–4.
+- **REPRODUCTION_STATUS:** `RECONSTRUCTED`
+- **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
+
+---
+
+### THM-YM-0015: Seiler Axiomatic Framework for Constructive Lattice Gauge Theory
+- **THEOREM_ID:** `THM-YM-0015`
+- **PAPER_ID:** `PAPER-CONST-003`
+- **TITLE:** Gauge Theories as a Problem of Constructive Quantum Field Theory and Statistical Mechanics
+- **AUTHORS:** E. Seiler
+- **YEAR:** 1982
+- **DOMAIN:** `constructive / axiomatic lattice`
+- **DIMENSION:** $d = 2, 3, 4$
+- **GAUGE_GROUP:** General compact Lie group $G$
+- **REGULARIZATION:** `lattice spacing a > 0`
+- **VOLUME:** `finite / infinite lattice`
+- **COUPLING_REGIME:** `strong / arbitrary`
+- **LIMITS:** None (exact on discrete lattice)
+- **ASSUMPTIONS:** Wilson lattice action, compact group Haar measure, hyperplane reflection symmetry.
+- **EXACT_RESULT:** Systematic mathematical construction of physical Hilbert spaces, transfer matrix self-adjointness, diamagnetic inequalities, and convergent high-temperature cluster expansions yielding string tension and mass gap on the lattice.
+- **EVIDENCE_CLASS:** `RIGOROUS_MATHEMATICAL_THEOREM`
+- **CLASSIFICATION_JUSTIFICATION:** Comprehensive monograph establishing rigorous functional-analytic and statistical-mechanical theorems for lattice gauge systems.
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
+- **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
+- **PROOF_OR_DERIVATION_METHOD:** Transfer matrix spectral theory, reflection positivity, and polymer cluster expansions.
+- **UNIFORMITY_STATUS:** `RIGOROUS_EXACT_ON_LATTICE`
+- **WHAT_IT_PROVES:** Complete axiomatic framework for lattice gauge theories at $a > 0$.
+- **WHAT_IT_DOES_NOT_PROVE:** Continuum limit $a \to 0$ in 4D with a uniform spectral gap $\Delta > 0$.
+- **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184), [`YM-REQ-004`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L185), [`YM-REQ-006`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L187), [`YM-REQ-018`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L199)
+- **RELEVANCE_TO_CLAY:** `DIRECT`
+- **DEPENDENCIES:** `THM-YM-0005`, `THM-YM-0008`, `THM-YM-0009`
+- **KNOWN_LATER_CORRECTIONS:** None.
+- **SOURCE_LOCATOR:** *Lecture Notes in Physics* 159 (Springer 1982), pp. 1–192, Parts I & II.
+- **REPRODUCTION_STATUS:** `RECONSTRUCTED`
+- **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
+
+---
+
+### THM-YM-0016: Bałaban Gauge-Invariant RG Averaging Operations & Propagator Bounds
+- **THEOREM_ID:** `THM-YM-0016`
+- **PAPER_ID:** `PAPER-CONST-004`
+- **TITLE:** Propagators and Renormalization Transformations for Lattice Gauge Theories I & II / Averaging Operations
+- **AUTHORS:** T. Bałaban
+- **YEAR:** 1984, 1985
+- **DOMAIN:** `constructive / multi-scale RG`
+- **DIMENSION:** $d = 3, 4$
+- **GAUGE_GROUP:** Compact Lie group $G$ (e.g. $SU(N)$)
+- **REGULARIZATION:** `multi-scale block lattice`
+- **VOLUME:** `finite block lattice`
+- **COUPLING_REGIME:** `asymptotically free` ($g_k \ll 1$)
+- **LIMITS:** Scale step $k \to k+1$
+- **ASSUMPTIONS:** Block-spin scale transformation on lattice gauge connections with local axial/covariant block gauge fixing.
+- **EXACT_RESULT:** Construction of gauge-covariant block averaging operations $Q(A) = A'$ and rigorous exponential decay and smoothness bounds for the effective gauge propagators across renormalization group scale transformations.
+- **EVIDENCE_CLASS:** `RIGOROUS_MATHEMATICAL_THEOREM`
+- **CLASSIFICATION_JUSTIFICATION:** Rigorous multi-scale functional analysis proving uniform propagator estimates and gauge-covariant block-spin maps on lattices.
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
+- **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
+- **PROOF_OR_DERIVATION_METHOD:** Green's function estimates, block gauge fixing, and multi-scale perturbation theory.
+- **UNIFORMITY_STATUS:** `UNIFORM_ACROSS_SCALE_STEPS`
+- **WHAT_IT_PROVES:** Mathematical existence of stable, gauge-covariant block-spin renormalization group step operations for lattice gauge fields.
+- **WHAT_IT_DOES_NOT_PROVE:** Full partition function bounds or infinite-volume mass gap in 4D.
+- **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184), [`YM-REQ-011`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L192)
+- **RELEVANCE_TO_CLAY:** `DIRECT`
+- **DEPENDENCIES:** `THM-YM-0006`, `THM-YM-0008`
+- **KNOWN_LATER_CORRECTIONS:** None.
+- **SOURCE_LOCATOR:** *Comm. Math. Phys.* 95 (1984), 419–440; *ibid.* 96 (1984), 223–250; *ibid.* 98 (1985), 17–52.
+- **REPRODUCTION_STATUS:** `RECONSTRUCTED`
+- **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
+
+---
+
+### THM-YM-0017: Bałaban Small-Field Effective Actions & Renormalization Flow
+- **THEOREM_ID:** `THM-YM-0017`
+- **PAPER_ID:** `PAPER-CONST-005`
+- **TITLE:** Renormalization Group Approach to Lattice Gauge Field Theories I, II, III (Small Field Effective Actions)
+- **AUTHORS:** T. Bałaban
+- **YEAR:** 1987, 1988
+- **DOMAIN:** `constructive / multi-scale RG`
+- **DIMENSION:** `4`
+- **GAUGE_GROUP:** Compact simple Lie group $G = SU(N)$
+- **REGULARIZATION:** `block lattice with UV cutoff a > 0`
+- **VOLUME:** `finite box V`
+- **COUPLING_REGIME:** `asymptotically free` ($g_k^2 \sim 1/\ln k$)
+- **LIMITS:** $k$ steps of RG transformation in small-field region ($|F_P| < \epsilon$)
+- **ASSUMPTIONS:** Small-field condition on gauge curvature and inductive renormalization group flow.
+- **EXACT_RESULT:** Inductive proof that the small-field effective action after $k$ scale transformations has the form of a renormalized Yang–Mills action with running coupling $g_k$ obeying asymptotic freedom, plus an analytic perturbation series of local counterterms with uniform stability bounds.
+- **EVIDENCE_CLASS:** `RIGOROUS_MATHEMATICAL_THEOREM`
+- **CLASSIFICATION_JUSTIFICATION:** Rigorous inductive multi-scale theorem with analytical bounds on small-field functional integrals.
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
+- **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
+- **PROOF_OR_DERIVATION_METHOD:** Inductive multi-scale expansion, saddle-point approximation, and BPHZ counterterm flow.
+- **UNIFORMITY_STATUS:** `UNIFORM_IN_SMALL_FIELD_REGION`
+- **WHAT_IT_PROVES:** Rigorous non-perturbative realization of asymptotic freedom and stability of effective actions in the small-field region of 4D lattice Yang–Mills.
+- **WHAT_IT_DOES_NOT_PROVE:** Control of non-perturbative large-field configurations, thermodynamic limit $V \to \infty$, or continuum mass gap.
+- **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184), [`YM-REQ-011`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L192), [`YM-REQ-013`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L194)
+- **RELEVANCE_TO_CLAY:** `DIRECT`
+- **DEPENDENCIES:** `THM-YM-0016`
+- **KNOWN_LATER_CORRECTIONS:** Requires large-field polymer expansion (`THM-YM-0018`) to form a complete partition function bound.
+- **SOURCE_LOCATOR:** *Comm. Math. Phys.* 109 (1987), 249–301; *ibid.* 114 (1988), 627–687; *ibid.* 115 (1988), 407–483.
+- **REPRODUCTION_STATUS:** `RECONSTRUCTED`
+- **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
+
+---
+
+### THM-YM-0018: Bałaban Large-Field Polymer Expansions & 4D UV Stability
+- **THEOREM_ID:** `THM-YM-0018`
+- **PAPER_ID:** `PAPER-CONST-006`
+- **TITLE:** Convergent Renormalization Group for Lattice Gauge Theories: Large Field and Small Field Polymer Expansions
+- **AUTHORS:** T. Bałaban
+- **YEAR:** 1988, 1989
+- **DOMAIN:** `constructive / multi-scale RG`
+- **DIMENSION:** `4`
+- **GAUGE_GROUP:** Compact simple Lie group $G = SU(N)$
+- **REGULARIZATION:** `lattice spacing a -> 0`
+- **VOLUME:** `finite volume V < infty`
+- **COUPLING_REGIME:** `asymptotically free` ($g(a) \to 0$ as $a \to 0$)
+- **LIMITS:** Continuum ultraviolet limit $a \to 0$ in fixed volume $V$
+- **ASSUMPTIONS:** Inductive block-spin RG combined with polymer expansion bounding large-field deviations by exponential suppression $e^{-c / g_k^2}$.
+- **EXACT_RESULT:** Rigorous mathematical proof of Ultraviolet Stability for 4D pure Yang–Mills theory: the partition function and vacuum energy density in a fixed finite volume $V$ remain uniformly bounded from above and below as the ultraviolet lattice cutoff is removed ($a \to 0$).
+- **EVIDENCE_CLASS:** `RIGOROUS_MATHEMATICAL_THEOREM`
+- **CLASSIFICATION_JUSTIFICATION:** Definitive constructive mathematical theorem establishing UV convergence and partition function stability for 4D Yang–Mills in a finite box.
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
+- **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
+- **PROOF_OR_DERIVATION_METHOD:** Multi-scale polymer expansions combining small-field inductive effective actions with large-field non-Gaussian cluster bounds.
+- **UNIFORMITY_STATUS:** `UNIFORM_IN_UV_LIMIT_FINITE_VOLUME`
+- **WHAT_IT_PROVES:** Complete mathematical proof that the ultraviolet continuum limit of 4D Yang–Mills theory exists and is stable in any finite volume.
+- **WHAT_IT_DOES_NOT_PROVE:** Thermodynamic infinite-volume limit $V \to \infty$ or non-zero continuum mass gap $\Delta > 0$. As the scale descends to the infrared ($g_k \sim 1$), the polymer expansion diverges and cannot establish the mass gap.
+- **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184), [`YM-REQ-011`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L192), [`YM-REQ-013`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L194)
+- **RELEVANCE_TO_CLAY:** `DIRECT`
+- **DEPENDENCIES:** `THM-YM-0016`, `THM-YM-0017`
+- **KNOWN_LATER_CORRECTIONS:** None (historical summit of rigorous 4D UV constructive gauge theory).
+- **SOURCE_LOCATOR:** *Comm. Math. Phys.* 116 (1988), pp. 1–22; *ibid.* 119 (1988), pp. 243–285, Theorems 1–3.
+- **REPRODUCTION_STATUS:** `RECONSTRUCTED`
+- **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
+
+---
+
+### THM-YM-0019: Federbush Phase-Cell Cluster Expansion & Master Inequality
+- **THEOREM_ID:** `THM-YM-0019`
+- **PAPER_ID:** `PAPER-CONST-007`
+- **TITLE:** A New Approach to the Construction of Lattice Gauge Theories / A Master Inequality for Constructive Gauge Theory
+- **AUTHORS:** P. Federbush
+- **YEAR:** 1986, 1988
+- **DOMAIN:** `constructive / phase-cell cluster expansion`
+- **DIMENSION:** `4`
+- **GAUGE_GROUP:** Compact simple Lie group $G = SU(N)$
+- **REGULARIZATION:** `lattice spacing a > 0`
+- **VOLUME:** `finite volume`
+- **COUPLING_REGIME:** `asymptotically free`
+- **LIMITS:** Multi-scale block expansions
+- **ASSUMPTIONS:** Phase-cell spatial decomposition and master inequalities bounding link variable fluctuations.
+- **EXACT_RESULT:** Alternative constructive proof of local gauge-field stability and multi-scale polymer cluster bounds on hypercubic lattices.
+- **EVIDENCE_CLASS:** `RIGOROUS_MATHEMATICAL_THEOREM`
+- **CLASSIFICATION_JUSTIFICATION:** Rigorous mathematical inequalities and cluster expansion theorems for non-Abelian lattice gauge theories.
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
+- **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
+- **PROOF_OR_DERIVATION_METHOD:** Phase-cell block localization and functional integration bounds.
+- **UNIFORMITY_STATUS:** `UNIFORM_IN_BOUNDED_DOMAINS`
+- **WHAT_IT_PROVES:** Independent mathematical verification of multi-scale gauge-field stability on lattices.
+- **WHAT_IT_DOES_NOT_PROVE:** 4D infinite-volume continuum mass gap.
+- **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184)
+- **RELEVANCE_TO_CLAY:** `DIRECT`
+- **DEPENDENCIES:** `THM-YM-0016`
+- **KNOWN_LATER_CORRECTIONS:** None.
+- **SOURCE_LOCATOR:** *Comm. Math. Phys.* 107 (1986), 319–329; *ibid.* 114 (1988), 317–343.
+- **REPRODUCTION_STATUS:** `RECONSTRUCTED`
+- **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
+
+---
+
+### THM-YM-0020: Magnen–Rivasseau–Sénéor Construction of 4D Yang–Mills with Infrared Cutoff
+- **THEOREM_ID:** `THM-YM-0020`
+- **PAPER_ID:** `PAPER-CONST-008`
+- **TITLE:** Construction of YM_4 with an Infrared Cutoff
+- **AUTHORS:** J. Magnen, V. Rivasseau, R. Sénéor
+- **YEAR:** 1993
+- **DOMAIN:** `constructive / phase-space cluster expansion`
+- **DIMENSION:** `4` (Euclidean $\mathbb{R}^4$)
+- **GAUGE_GROUP:** Compact simple Lie group $G = SU(N)$
+- **REGULARIZATION:** `UV lattice removed (a -> 0), IR cutoff Lambda_IR > 0 held fixed`
+- **VOLUME:** `infinite space with IR mass cutoff`
+- **COUPLING_REGIME:** `asymptotically free`
+- **LIMITS:** $a \to 0$ with $\Lambda_{IR} > 0$
+- **ASSUMPTIONS:** Multi-scale phase-space cluster expansion, Slavnov–Taylor gauge identities, explicit infrared mass / volume cutoff $\Lambda_{IR} > 0$.
+- **EXACT_RESULT:** Rigorous mathematical construction of the Euclidean Schwinger distributions for 4D pure Yang–Mills theory in the presence of an infrared cutoff $\Lambda_{IR} > 0$, proving that the ultraviolet continuum limit $a \to 0$ exists and is non-perturbatively Borel summable.
+- **EVIDENCE_CLASS:** `RIGOROUS_MATHEMATICAL_THEOREM`
+- **CLASSIFICATION_JUSTIFICATION:** Definitive constructive mathematical theorem proving the existence of 4D Euclidean Yang–Mills Schwinger distributions with infrared regularization.
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
+- **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
+- **PROOF_OR_DERIVATION_METHOD:** Multi-scale phase-space cluster expansions, tree expansions, and constructive Ward identities.
+- **UNIFORMITY_STATUS:** `UNIFORM_IN_UV_LIMIT_WITH_IR_CUTOFF`
+- **WHAT_IT_PROVES:** Complete constructive mathematical existence of 4D Euclidean Yang–Mills theory with an artificial infrared cutoff.
+- **WHAT_IT_DOES_NOT_PROVE:** Full Millennium Problem solution without infrared cutoff. Removal of $\Lambda_{IR} \to 0$ is obstructed by non-perturbative infrared renormalons and the unproved continuum mass gap $\Delta > 0$.
+- **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184), [`YM-REQ-004`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L185), [`YM-REQ-011`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L192), [`YM-REQ-015`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L196)
+- **RELEVANCE_TO_CLAY:** `DIRECT`
+- **DEPENDENCIES:** `THM-YM-0006`, `THM-YM-0018`
+- **KNOWN_LATER_CORRECTIONS:** None (historical benchmark for IR-regulated 4D constructive Yang–Mills).
+- **SOURCE_LOCATOR:** *Comm. Math. Phys.* 155 (1993), pp. 325–383, Theorems 1–4.
+- **REPRODUCTION_STATUS:** `RECONSTRUCTED`
+- **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`

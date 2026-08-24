@@ -11,7 +11,8 @@
 | YM-002 | Build theorem/literature ledger | YM-001R1 | T2 | primary literature + theorem-level extraction | IN_PROGRESS |
 | YM-002A | Foundational Yang–Mills advancement ledger (1954–1980) | YM-001R1 | T3 | primary literature + fresh blind E4 audit | INDEPENDENTLY_VERIFIED_AFTER_REPAIR |
 | YM-002AR1 | E4 provenance + foundational semantic repair | YM-002A, YM-GOV-294R1 | T3 | fresh blind E4 audit + raw receipt capture | INDEPENDENTLY_VERIFIED |
-| YM-002B | Constructive / RG foundations ledger (1980–2000) | YM-002AR1 | T3 | primary literature + fresh blind E4 audit | READY |
+| YM-002B | Constructive / RG foundations ledger (1980–2000) | YM-002AR1 | T3 | primary literature + fresh blind E4 audit | IN_PROGRESS |
+
 
 
 
