@@ -1,0 +1,9 @@
+version: "0.1"
+project_id: "YM-MASS-GAP"
+state: "UNANCHORED"
+machine_checks:
+  - "python -m pytest -q"
+  - "python scripts/check_repo.py"
+external_anchor:
+  required_for: "promotion to fully trusted governance root"
+  current: "human/operator hash or protected Git/CI not yet established"

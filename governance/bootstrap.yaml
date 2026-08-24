@@ -1,0 +1,22 @@
+version: "2.9"
+project_id: "YM-MASS-GAP"
+trust_state: "PROVISIONAL"
+project_type: "RESEARCH_R_AND_D"
+root_location: "."
+truth_axioms:
+  - "Reality outranks model report."
+  - "Truth outranks task completion."
+  - "Unknown, blocked, partial, failed, and unverified are valid states."
+  - "No mathematical claim is accepted from model self-report alone."
+  - "Numerical evidence is not silently promoted to proof."
+roles:
+  specification_authority: "project-owner"
+  worker_authority: "bounded-research-worker"
+  verification_authority: "independent-verifier"
+  acceptance_authority: "project-owner-or-governed-acceptance"
+protected_paths:
+  - "governance/"
+  - "verification/"
+  - "REJECTION_LEDGER.md"
+  - "NEGATIVE_EVIDENCE_REGISTER.md"
+known_good_checkpoint: "NOT_YET_ESTABLISHED"

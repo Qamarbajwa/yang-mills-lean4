@@ -1,0 +1,24 @@
+version: "2.9"
+project_id: "YM-MASS-GAP"
+tiers:
+  T1:
+    description: "Non-behavioral documentation/formatting"
+    minimum_evidence: "E2"
+  T2:
+    description: "Reversible local research tooling, literature extraction, ordinary reproducible calculations"
+    minimum_evidence: "E3"
+  T3:
+    description: "Material mathematical claim, reusable derivation, candidate lemma, bridge theorem"
+    minimum_evidence: "E3+E4"
+  T4:
+    description: "Candidate theorem materially claiming continuum construction or mass-gap progress"
+    minimum_evidence: "E3+E4+strong external audit"
+  T5:
+    description: "Claim of complete Millennium-problem solution"
+    minimum_evidence: "independent expert/formal verification plus externally anchored evidence"
+mandatory_escalators:
+  - "claim materially strengthens known mathematical state"
+  - "continuum-limit uniformity claim"
+  - "infinite-volume claim"
+  - "spectral-gap claim"
+  - "claimed solution"

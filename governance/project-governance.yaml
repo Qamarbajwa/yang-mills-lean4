@@ -1,0 +1,26 @@
+schema_version: "0.1"
+project:
+  id: "YM-MASS-GAP"
+  name: "Yang–Mills and the Mass Gap"
+  classification:
+    - "RESEARCH_R_AND_D"
+  governance_version: "2.9"
+
+current_state:
+  lifecycle: "S0_S1"
+  proof_status: "NO_CANDIDATE_PROOF"
+  original_verified_lemmas: 0
+  known_good_checkpoint: "NOT_YET_ESTABLISHED"
+  active_task: "YM-000"
+
+scientific_invariants:
+  - id: "SCI-001"
+    rule: "Numerical observation is not proof."
+  - id: "SCI-002"
+    rule: "A fixed-cutoff mass gap is not the continuum mass gap."
+  - id: "SCI-003"
+    rule: "Confinement and mass gap are not silently treated as equivalent."
+  - id: "SCI-004"
+    rule: "Results in modified, supersymmetric, Abelian, Higgs, lower-dimensional, or large-N theories must retain their scope labels."
+  - id: "SCI-005"
+    rule: "Uniformity in cutoff/volume parameters must be proved explicitly."
