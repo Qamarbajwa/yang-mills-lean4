@@ -67,5 +67,55 @@
 - **Date:** 2026-08-24
 - **Question:** Does Polyakov's 1977 paper prove 4D confinement?
 - **Primary Source:** A. M. Polyakov, *Nucl. Phys. B* 120 (1977), 429–458 (`PAPER-FOUND-011`).
-- **Findings:** In $2+1$ dimensions for compact $U(1)$ gauge theory, Polyakov proved that magnetic monopoles (instantons in 3D Euclidean space) form a plasma with Debye screening, generating an exact dynamical mass gap $\Delta > 0$ for the photon and linear confinement for Wilson loops. In $3+1$ dimensions for non-Abelian theory, Polyakov proposed an instanton gas mechanism, but this remained a heuristic proposal due to infrared divergences.
-- **Outcome:** Recorded as `THM-YM-0011` (rigorous in 2+1D) and `THM-YM-0012` (uncontrolled proposal in 4D).
+- **Findings:** In $2+1$ dimensions for compact $U(1)$ gauge theory, Polyakov established that magnetic monopoles (instantons in 3D Euclidean space) form a plasma with Debye screening, generating a dynamical mass gap for the photon and linear confinement for Wilson loops via a semiclassical duality mapping to a sine-Gordon model. In $3+1$ dimensions for non-Abelian theory, Polyakov proposed an instanton gas mechanism, which remained a heuristic conjecture due to infrared divergences.
+- **Outcome:** Recorded as `THM-YM-0011` (`SEMICLASSICAL_DERIVATION` in 2+1D) and `THM-YM-0012` (`CONJECTURE_OR_PROPOSAL` in 4D).
+
+### RES-YM-002AR1-001: What exactly does Faddeev–Popov 1967 establish?
+- **Date:** 2026-08-24
+- **Question:** What is the precise mathematical and perturbative scope of Faddeev and Popov's 1967 paper?
+- **Primary Source:** L. D. Faddeev & V. N. Popov, *Phys. Lett. B* 25 (1967), 29–30 (`PAPER-FOUND-002`).
+- **Findings:** The 1967 paper establishes the factorization of the gauge group volume in the formal functional integral by inserting $1 = \Delta_f(A) \int \mathcal{D}g \, \delta(f(A^g))$, yielding the ghost determinant $\det(\mathcal{M}_f)$ and Feynman rules in perturbation theory. It does not mention or discover Gribov copies.
+- **Outcome:** Recorded as `THM-YM-0002` (`PERTURBATIVE_QFT_RESULT`).
+
+### RES-YM-002AR1-002: What does Gribov 1978 add/change?
+- **Date:** 2026-08-24
+- **Question:** What is the exact historical and non-perturbative role of Gribov 1978?
+- **Primary Source:** V. N. Gribov, *Nucl. Phys. B* 139 (1978), 1–19 (`PAPER-FOUND-014`).
+- **Findings:** Gribov proved that local gauge conditions like Coulomb and Landau gauge do not uniquely fix the gauge for large field amplitudes: equivalent gauge configurations (Gribov copies) satisfy $f(A)=0$. This demonstrates that Faddeev–Popov gauge fixing is strictly a perturbative local device obstructed globally by Gribov horizons.
+- **Outcome:** Admitted as `PAPER-FOUND-014` (`LATER_LIMITATION_OR_DEVELOPMENT`).
+
+### RES-YM-002AR1-003: What is the evidentiary status of Polyakov's 2+1D confinement argument?
+- **Date:** 2026-08-24
+- **Question:** Is Polyakov 1977 Part A a rigorous mathematical theorem or a semiclassical derivation?
+- **Primary Source:** A. M. Polyakov, *Nucl. Phys. B* 120 (1977), 429–458 (`PAPER-FOUND-011`).
+- **Findings:** Polyakov uses a dilute monopole gas approximation and semiclassical duality to map 3D compact $U(1)$ / broken $SU(2)$ gauge theory to a Coulomb plasma with Debye screening mass $m_D$. While physically compelling, it was a semiclassical derivation, not an axiomatic constructive proof. Rigorous mathematical proof on the lattice was achieved later by Göpfert & Mack (1981) and Brydges et al. (1980).
+- **Outcome:** Classified as `SEMICLASSICAL_DERIVATION` in `THM-YM-0011`.
+
+### RES-YM-002AR1-004: What status does Polyakov's 3+1D non-Abelian analysis have?
+- **Date:** 2026-08-24
+- **Question:** What is the mathematical status of Polyakov 1977 Part B in 4D?
+- **Primary Source:** A. M. Polyakov, *Nucl. Phys. B* 120 (1977), 429–458 (`PAPER-FOUND-011`).
+- **Findings:** Section 5–6 of Polyakov 1977 proposes that instantons in 4D non-Abelian gauge theory might induce confinement and mass gap by analogy with 3D monopoles. However, the 4D dilute instanton gas is plagued by infrared logarithmic divergence $\int d\rho / \rho^5$ from large instantons, making the proposal uncontrolled in pure 4D Yang–Mills.
+- **Outcome:** Classified as `CONJECTURE_OR_PROPOSAL` in `THM-YM-0012`.
+
+### RES-YM-002AR1-005: What exactly is established in Wilson's strong-coupling limit?
+- **Date:** 2026-08-24
+- **Question:** What are the exact assumptions and limitations of Wilson's 1974 lattice confinement?
+- **Primary Source:** K. G. Wilson, *Phys. Rev. D* 10 (1974), 2445–2459 (`PAPER-FOUND-009`).
+- **Findings:** Wilson proved that at fixed lattice cutoff $a > 0$ and strong coupling $g^2 \gg 1$, the character expansion of the Wilson loop produces an area law with string tension $\sigma = \ln(g^2)/a^2$. In this regime, continuous Euclidean/Lorentz invariance is explicitly broken. Crucially, the continuum limit $a \to 0$ requires $g \to 0$ (weak coupling) due to asymptotic freedom, where the strong-coupling expansion is invalid.
+- **Outcome:** Classified as `CONTROLLED_STRONG_COUPLING_EXPANSION` in `THM-YM-0008`.
+
+### RES-YM-002AR1-006: What is classical versus quantum in BPST?
+- **Date:** 2026-08-24
+- **Question:** Does the BPST instanton establish a quantum mass gap?
+- **Primary Source:** A. A. Belavin et al., *Phys. Lett. B* 59 (1975), 85–87 (`PAPER-FOUND-010`).
+- **Findings:** BPST discovered an exact classical non-singular self-dual solution in Euclidean $\mathbb{R}^4$ with topological Pontryagin charge $Q=1$ and finite action $S = 8\pi^2/g^2$. This is a classical field solution and does not construct the quantum Hilbert space, quantum measure, or quantum mass gap.
+- **Outcome:** Classified as `CLASSICAL_EXACT_SOLUTION` in `THM-YM-0010`.
+
+### RES-YM-002AR1-007: What does OS II correct/extend relative to OS I?
+- **Date:** 2026-08-24
+- **Question:** Why did Osterwalder and Schrader publish OS II in 1975?
+- **Primary Sources:** K. Osterwalder & R. Schrader, *Comm. Math. Phys.* 31 (1973), 83–112 (`PAPER-FOUND-004`); *ibid.* 42 (1975), 281–305 (`PAPER-FOUND-005`).
+- **Findings:** OS I (1973) introduced the Euclidean axioms (reflection positivity, Euclidean invariance, cluster decomposition) but had technical subtleties in the linear growth condition for reconstructing Wightman distributions. OS II (1975) established the definitive, corrected, and extended theorem with linear growth condition OS-0 and proved the equivalence with Wightman axioms W-1 through W-7.
+- **Outcome:** Recorded as `THM-YM-0005` (`RIGOROUS_MATHEMATICAL_THEOREM`).
+

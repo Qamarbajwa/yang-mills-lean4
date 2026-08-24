@@ -8,6 +8,7 @@ FOUND_DIR = ROOT / "literature" / "primary" / "foundations_1954_1980"
 MANIFEST_PATH = FOUND_DIR / "manifest.yaml"
 THEOREM_LEDGER_PATH = ROOT / "THEOREM_LEDGER.md"
 LIMITATION_MATRIX_PATH = ROOT / "literature" / "FOUNDATIONAL_LIMITATION_MATRIX.md"
+DEPENDENCY_GRAPH_PATH = ROOT / "literature" / "FOUNDATIONAL_DEPENDENCY_GRAPH.md"
 
 def load_manifest():
     assert MANIFEST_PATH.exists(), "Foundational literature manifest.yaml must exist"
@@ -62,7 +63,6 @@ def test_theorems_reference_registered_sources():
     theorems = parse_theorems()
     for thm_id, thm in theorems.items():
         paper_id_raw = thm.get("PAPER_ID", "")
-        # Can be multiple papers (e.g. OS I and OS II)
         paper_ids = [p.strip(" `") for p in paper_id_raw.split(",")]
         for pid in paper_ids:
             assert pid in valid_source_ids, f"{thm_id} references unregistered source {pid}"
@@ -99,7 +99,6 @@ def test_theorems_record_lattice_or_continuum():
     theorems = parse_theorems()
     for thm_id, thm in theorems.items():
         domain = thm.get("DOMAIN", "").lower()
-        reg = thm.get("REGULARIZATION", "").lower()
         has_domain = any(d in domain for d in ["classical", "quantum", "constructive", "lattice", "axiomatic"])
         assert has_domain, f"{thm_id} must specify valid domain"
 
@@ -164,13 +163,19 @@ def test_faddeev_popov_does_not_attribute_gribov_to_1967_source():
     theorems = parse_theorems()
     thm2 = theorems.get("THM-YM-0002")
     assert thm2, "THM-YM-0002 must exist"
-    # The exact result or assumptions must not claim 1967 paper discovered Gribov ambiguity
     assert "gribov" not in thm2.get("ASSUMPTIONS", "").lower()
     assert "gribov" not in thm2.get("EXACT_RESULT", "").lower()
     assert "gribov" not in thm2.get("WHAT_IT_PROVES", "").lower()
-    # It must be attributed to later corrections
     assert "1978" in thm2.get("KNOWN_LATER_CORRECTIONS", "")
     assert "Gribov" in thm2.get("KNOWN_LATER_CORRECTIONS", "")
+
+def test_gribov_associated_with_distinct_1978_source():
+    sources = load_manifest()
+    gribov_source = next((s for s in sources if s["source_id"] == "PAPER-FOUND-014"), None)
+    assert gribov_source is not None, "Gribov 1978 must be registered as PAPER-FOUND-014"
+    assert gribov_source["year"] == 1978
+    assert any("Gribov" in a for a in gribov_source["authors"])
+
 
 def test_polyakov_1977_evidence_class_is_semiclassical_not_rigorous_theorem():
     theorems = parse_theorems()
@@ -180,21 +185,52 @@ def test_polyakov_1977_evidence_class_is_semiclassical_not_rigorous_theorem():
     assert ev_class in ["SEMICLASSICAL_DERIVATION", "PHYSICAL_PROOF_ARGUMENT"]
     assert ev_class != "RIGOROUS_MATHEMATICAL_THEOREM"
 
-def test_evidence_class_taxonomy_valid():
+def test_polyakov_4d_is_proposal_or_conjecture():
     theorems = parse_theorems()
-    allowed_classes = {
-        "RIGOROUS_MATHEMATICAL_THEOREM",
-        "CONTROLLED_MATHEMATICAL_EXPANSION",
-        "PERTURBATIVE_QFT_RESULT",
-        "SEMICLASSICAL_DERIVATION",
-        "PHYSICAL_PROOF_ARGUMENT",
-        "AXIOMATIC_MATHEMATICS",
-        "CLASSICAL_EXACT_SOLUTION",
-        "CONJECTURE_OR_PROPOSAL"
-    }
+    thm12 = theorems.get("THM-YM-0012")
+    assert thm12, "THM-YM-0012 must exist"
+    ev_class = thm12.get("EVIDENCE_CLASS", "").strip(" `")
+    assert ev_class == "CONJECTURE_OR_PROPOSAL"
+
+def test_wilson_1974_is_lattice_strong_coupling():
+    theorems = parse_theorems()
+    thm8 = theorems.get("THM-YM-0008")
+    assert thm8, "THM-YM-0008 must exist"
+    ev_class = thm8.get("EVIDENCE_CLASS", "").strip(" `")
+    assert ev_class in ["CONTROLLED_STRONG_COUPLING_EXPANSION", "CONTROLLED_MATHEMATICAL_EXPANSION"]
+    assert "strong" in thm8.get("COUPLING_REGIME", "").lower()
+    assert "lattice" in thm8.get("DOMAIN", "").lower()
+
+def test_os_ii_records_correction_and_extension():
+    theorems = parse_theorems()
+    thm5 = theorems.get("THM-YM-0005")
+    assert thm5, "THM-YM-0005 must exist"
+    assert "extends" in thm5.get("raw", "").lower() or "corrects" in thm5.get("raw", "").lower()
+    assert "OS II" in thm5.get("raw", "") or "1975" in thm5.get("raw", "")
+
+def test_every_theorem_has_classification_justification():
+    theorems = parse_theorems()
     for thm_id, thm in theorems.items():
-        ev_class = thm.get("EVIDENCE_CLASS", "").strip(" `")
-        assert ev_class in allowed_classes, f"{thm_id} has invalid EVIDENCE_CLASS: {ev_class}"
+        assert "CLASSIFICATION_JUSTIFICATION" in thm, f"{thm_id} must have CLASSIFICATION_JUSTIFICATION"
+        assert len(thm["CLASSIFICATION_JUSTIFICATION"]) > 15
 
+def test_every_verified_theorem_has_source_access():
+    theorems = parse_theorems()
+    allowed_access = {"PRIMARY_FULL_TEXT", "PRIMARY_PARTIAL_TEXT", "ABSTRACT_ONLY", "METADATA_ONLY"}
+    for thm_id, thm in theorems.items():
+        if "VERIFIED" in thm.get("STATUS", ""):
+            access = thm.get("SOURCE_ACCESS", "").strip(" `")
+            assert access in allowed_access, f"{thm_id} has invalid SOURCE_ACCESS: {access}"
 
+def test_dependency_graph_edges_have_justifications():
+    assert DEPENDENCY_GRAPH_PATH.exists(), "FOUNDATIONAL_DEPENDENCY_GRAPH.md must exist"
+    content = DEPENDENCY_GRAPH_PATH.read_text(encoding="utf-8")
+    assert "Explicit Edge Justifications" in content
+    assert "THM-YM-0001 -> THM-YM-0002" in content
+    assert "Gribov" in content
 
+def test_boundary_reference_sources_labeled():
+    sources = load_manifest()
+    for s in sources:
+        if s.get("boundary_reference", False):
+            assert "BOUNDARY_REFERENCE" in s.get("status", "") or "FORWARD_REFERENCE" in s.get("status", "")

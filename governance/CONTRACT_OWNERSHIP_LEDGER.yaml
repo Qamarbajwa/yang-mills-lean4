@@ -64,21 +64,41 @@ contracts:
 - contract_id: CONTRACT-YM-002AR1
   task_id: YM-002AR1
   risk_tier: T3
+  base_sha: "1a7be396065dedc4433e28f13e53926ecd4fa540"
   writer:
     environment: Antigravity
     agent_id: primary-writer-gemini
+    execution_id: "conversation://00ffe8a3-c73a-4096-b0e7-53138b34c21a"
     model: Gemini / Antigravity
   reviewer:
     environment: Antigravity
-    agent_id: 9dc7460c-e591-4229-b602-6d8ac5e56026
+    agent_id: independent-verifier-subagent
+    execution_id: "conversation://subagent"
     model: Gemini / Antigravity
     independence_level: LEVEL_A_SAME_APP_SAME_MODEL_SEPARATE_SESSION
   acceptance_authority:
-    environment: Antigravity
-    authority_id: antigravity-local-acceptance-orchestrator
+    environment: "HumanOwner + CI"
+    authority_id: human-owner-and-ci-evaluator
+    execution_id: "user-interactive-session + deterministic-ci"
     authority_type: ENVIRONMENT_LOCAL
-  candidate_id: f718005bb6d326eae36d4e0d627c362a6766858d
-  outcome: BLOCKED
+  allowed_scope:
+    - "THEOREM_LEDGER.md"
+    - "RESEARCH_LEDGER.md"
+    - "CLAIM_EVIDENCE_MATRIX.md"
+    - "EVIDENCE_LEDGER.md"
+    - "NEGATIVE_EVIDENCE_REGISTER.md"
+    - "literature/FOUNDATIONAL_LIMITATION_MATRIX.md"
+    - "literature/FOUNDATIONAL_DEPENDENCY_GRAPH.md"
+    - "literature/primary/foundations_1954_1980/**"
+    - "tests/test_foundational_literature.py"
+    - "TASK_GRAPH.md"
+    - "CURRENT_SCIENTIFIC_STATE.md"
+    - "NEXT_ACTION.md"
+  forbidden_scope:
+    - "OFFICIAL_PROBLEM_SPECIFICATION.md"
+    - "Creating synthetic acceptance-authority aliases"
+    - "Authoring raw E4 text directly"
+  outcome: IN_PROGRESS
 - contract_id: CONTRACT-YM-GOV-293
   task_id: YM-GOV-293
   risk_tier: T4
@@ -128,14 +148,16 @@ contracts:
     model: Gemini / Antigravity
   reviewer:
     environment: Antigravity
-    agent_id: independent-verifier-subagent
-    execution_id: "conversation://subagent"
+    agent_id: 0934720d-5ba8-4922-b471-5226ee549a1f
+    execution_id: "conversation://0934720d-5ba8-4922-b471-5226ee549a1f"
     model: Gemini / Antigravity
     independence_level: LEVEL_A_SAME_APP_SAME_MODEL_SEPARATE_SESSION
   acceptance_authority:
     environment: "HumanOwner + CI"
     authority_id: human-owner-and-ci-evaluator
-    execution_id: "user-interactive-session + deterministic-ci"
+    execution_id: "user-interactive-session + evidence/test_runs/verify_20260824T150925Z.json"
     authority_type: ENVIRONMENT_LOCAL
-  outcome: IN_PROGRESS
+  candidate_id: 57438529e800da5901a686bca45ea5c9f399c2aa
+  outcome: ACCEPTED
+
 

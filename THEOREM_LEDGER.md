@@ -18,6 +18,8 @@
 - **ASSUMPTIONS:** Local $SU(2)$ isotopic gauge invariance, minimal coupling principle, spacetime Minkowski $M^4$.
 - **EXACT_RESULT:** Explicit non-linear field strength tensor $F_{\mu\nu} = \partial_\mu B_\nu - \partial_\nu B_\mu - 2\epsilon(B_\mu \times B_\nu)$ and Euler–Lagrange variational wave equations $\partial_\mu F^{\mu\nu} + 2\epsilon(B_\mu \times F^{\mu\nu}) + J^\nu = 0$.
 - **EVIDENCE_CLASS:** `CLASSICAL_EXACT_SOLUTION`
+- **CLASSIFICATION_JUSTIFICATION:** Exact classical Lagrangian differential geometry and variational Euler–Lagrange field equations on classical Minkowski spacetime $M^4$.
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **PROOF_OR_DERIVATION_METHOD:** Classical variational calculus and Lie-algebraic local gauge transformations.
 - **UNIFORMITY_STATUS:** `NOT_APPLICABLE` (classical)
 - **WHAT_IT_PROVES:** Classical geometric consistency of non-Abelian gauge fields and massless relativistic wave equations.
@@ -48,6 +50,8 @@
 - **ASSUMPTIONS:** Functional integral over gauge equivalence classes (orbit space $\mathcal{A}/\mathcal{G}$) factorized by inserting identity $1 = \Delta_f(A) \int \mathcal{D}g \, \delta(f(A^g))$.
 - **EXACT_RESULT:** Integration over gauge group factors out orbit volume, yielding gauge-fixed effective action $S_{eff} = S_{YM} + S_{gf} + S_{ghost}$ with Grassmann ghost fields $c, \bar{c}$ and ghost determinant $\Delta_f(A) = \det(\mathcal{M}_f) = \int \mathcal{D}c \mathcal{D}\bar{c} \exp(i \int \bar{c} \mathcal{M}_f c)$.
 - **EVIDENCE_CLASS:** `PERTURBATIVE_QFT_RESULT`
+- **CLASSIFICATION_JUSTIFICATION:** Perturbative functional integral orbit division and Grassmann ghost determinant $\Delta_f(A) = \det(\mathcal{M}_f)$ for generating Feynman diagrams without longitudinal gauge modes. Does not claim Gribov copies (which is Gribov 1978 `PAPER-FOUND-014`).
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **PROOF_OR_DERIVATION_METHOD:** Formal transformation of variables on functional integrals and Lie group Haar measure.
 - **UNIFORMITY_STATUS:** `NOT_APPLICABLE` (formal continuum path integral)
 - **WHAT_IT_PROVES:** Unitary perturbative Feynman rules with ghost loops cancelling unphysical longitudinal/timelike gauge degrees of freedom.
@@ -55,7 +59,7 @@
 - **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184), [`YM-REQ-009`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L190)
 - **RELEVANCE_TO_CLAY:** `ENABLING`
 - **DEPENDENCIES:** `THM-YM-0001`
-- **KNOWN_LATER_CORRECTIONS:** V. N. Gribov (1978, *Nucl. Phys. B* 139, 1–19, `PAPER-FOUND-014`) proved that Coulomb/Landau gauge conditions $f(A)=0$ possess multiple copies (Gribov ambiguity) at large field amplitudes, creating non-perturbative Gribov horizon obstructions.
+- **KNOWN_LATER_CORRECTIONS:** V. N. Gribov (1978, *Nucl. Phys. B* 139, 1–19, `PAPER-FOUND-014`, admitted to record the historical non-perturbative limitation of Faddeev–Popov gauge fixing) proved that Coulomb/Landau gauge conditions $f(A)=0$ possess multiple copies (Gribov ambiguity) at large field amplitudes, creating non-perturbative Gribov horizon obstructions.
 - **SOURCE_LOCATOR:** *Phys. Lett. B* 25 (1967), pp. 29–30, Eqs. (1)–(10).
 - **REPRODUCTION_STATUS:** `RECONSTRUCTED`
 - **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
@@ -78,6 +82,8 @@
 - **ASSUMPTIONS:** Order-by-order formal Feynman diagrammatic expansion and Slavnov–Taylor / Ward–Takahashi identities.
 - **EXACT_RESULT:** All ultraviolet divergences occurring in the perturbative S-matrix and Green's functions of massless Yang–Mills theory can be canceled to all orders by a finite set of local gauge-invariant counterterms for gauge coupling $g$ and field normalizations.
 - **EVIDENCE_CLASS:** `PERTURBATIVE_QFT_RESULT`
+- **CLASSIFICATION_JUSTIFICATION:** Combinatorial analysis of Feynman graphs, BPHZ subtractions, and gauge-symmetry Ward identities in formal perturbation theory.
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **PROOF_OR_DERIVATION_METHOD:** Combinatorial analysis of Feynman graphs, BPHZ subtractions, and gauge-symmetry Ward identities.
 - **UNIFORMITY_STATUS:** `NOT_APPLICABLE` (formal power series)
 - **WHAT_IT_PROVES:** Order-by-order ultraviolet renormalizability of perturbative Yang–Mills theory.
@@ -108,6 +114,8 @@
 - **ASSUMPTIONS:** Analytic continuation of loop momentum integrals in complex continuous dimension $d$.
 - **EXACT_RESULT:** Dimensional regularization provides a mathematically consistent, Lorentz-invariant and local gauge-invariant regulator for non-Abelian gauge fields, preserving Ward–Takahashi–Slavnov–Taylor identities automatically at all loop orders.
 - **EVIDENCE_CLASS:** `PERTURBATIVE_QFT_RESULT`
+- **CLASSIFICATION_JUSTIFICATION:** Analytic continuation of momentum-space Feynman parameter integrals preserving local gauge symmetry order by order in perturbation theory.
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **PROOF_OR_DERIVATION_METHOD:** Analytic continuation of momentum-space Feynman parameter integrals.
 - **UNIFORMITY_STATUS:** `NOT_APPLICABLE` (perturbative)
 - **WHAT_IT_PROVES:** Systematic preservation of gauge invariance in perturbative multi-loop renormalization.
@@ -135,9 +143,11 @@
 - **VOLUME:** `infinite` ($\mathbb{R}^d$)
 - **COUPLING_REGIME:** `arbitrary`
 - **LIMITS:** None (exact continuum distributions)
-- **ASSUMPTIONS:** OS-0 (Temperedness & Analyticity at non-coinciding points), OS-1 (Euclidean Invariance under $E(d)$), OS-2 (Reflection Positivity on $t > 0$), OS-3 (Symmetry under Bose permutation), OS-4 (Cluster Decomposition).
+- **ASSUMPTIONS:** OS-0 (Temperedness & Analyticity at non-coinciding points), OS-1 (Euclidean Invariance under $E(d)$), OS-2 (Reflection Positivity on $t > 0$), OS-3 (Symmetry under Bose permutation), OS-4 (Cluster Decomposition). OS II explicitly extends and corrects the linear growth/regularity condition of OS I.
 - **EXACT_RESULT:** A family of Euclidean Green's functions (Schwinger functions) satisfying OS-0 through OS-4 uniquely defines an analytic continuation to Wightman distributions on Minkowski spacetime satisfying the full Wightman axioms (W-1 through W-7), uniquely determining a separable Hilbert space $\mathcal{H}$, a unitary representation of the Poincaré group $\mathcal{P}_+^\uparrow$, positive energy $H \ge 0$, and a unique vacuum state $\Omega$.
 - **EVIDENCE_CLASS:** `RIGOROUS_MATHEMATICAL_THEOREM`
+- **CLASSIFICATION_JUSTIFICATION:** Rigorous functional-analytic theorem proving mathematical equivalence between Euclidean reflection-positive Schwinger distributions and relativistic Wightman quantum field theories. OS II (1975) explicitly extends and corrects the linear growth/regularity conditions of OS I (1973).
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **PROOF_OR_DERIVATION_METHOD:** Functional analysis, Hilbert space completion via reflection positivity, Laplace/Fourier transform analytic continuation in tube domains (Bargmann–Hall–Wightman theorem).
 - **UNIFORMITY_STATUS:** `RIGOROUS_EXACT`
 - **WHAT_IT_PROVES:** Complete mathematical equivalence between Euclidean reflection-positive Schwinger distributions and relativistic Wightman quantum field theories.
@@ -168,6 +178,8 @@
 - **ASSUMPTIONS:** 1-loop perturbation theory and Callan–Symanzik renormalization group equation.
 - **EXACT_RESULT:** The 1-loop renormalization group beta function for pure non-Abelian gauge theory is strictly negative: $\beta(g) = -\frac{b_0}{(4\pi)^2} g^3 + \mathcal{O}(g^5)$ with $b_0 = \frac{11}{3} C_2(G) > 0$ ($b_0 = \frac{11}{3} N$ for $SU(N)$), causing the effective running coupling constant to vanish logarithmically at short distances: $g^2(\mu) = \frac{(4\pi)^2}{2 b_0 \ln(\mu / \Lambda_{QCD})}$.
 - **EVIDENCE_CLASS:** `PERTURBATIVE_QFT_RESULT`
+- **CLASSIFICATION_JUSTIFICATION:** 1-loop perturbative Feynman diagram calculation of vertex and self-energy corrections in background/Feynman gauge showing negative beta function.
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **PROOF_OR_DERIVATION_METHOD:** 1-loop Feynman diagram calculation of vertex and self-energy corrections in background/Feynman gauge.
 - **UNIFORMITY_STATUS:** `NOT_APPLICABLE` (asymptotic expansion valid only as $\mu \to \infty$)
 - **WHAT_IT_PROVES:** Strict logarithmic ultraviolet weak coupling (asymptotic freedom) for 4D non-Abelian gauge fields.
@@ -198,6 +210,8 @@
 - **ASSUMPTIONS:** Double-line index notation for gluon propagators and topological classification of Feynman graphs by Riemann surfaces of genus $h$.
 - **EXACT_RESULT:** Perturbative vacuum diagrams scale as $N^{2 - 2h - L}$, where $h$ is the genus and $L$ the number of quark loops. In the limit $N \to \infty$, only planar diagrams ($h=0, L=0$) survive at leading order $\mathcal{O}(N^2)$, establishing that $1/N$ acts as a topological string coupling constant.
 - **EVIDENCE_CLASS:** `PERTURBATIVE_QFT_RESULT`
+- **CLASSIFICATION_JUSTIFICATION:** Graph-theoretic Euler characteristic formula $\chi = V - E + F = 2 - 2h$ organizing perturbative Feynman diagrams by topology in the $N \to \infty$ limit.
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **PROOF_OR_DERIVATION_METHOD:** Graph-theoretic Euler characteristic formula $\chi = V - E + F = 2 - 2h$ on Feynman diagrams.
 - **UNIFORMITY_STATUS:** `NOT_APPLICABLE` ($N \to \infty$ limit only)
 - **WHAT_IT_PROVES:** Leading planar dominance and $1/N$ topological reorganization of gauge theory perturbation series.
@@ -226,8 +240,10 @@
 - **COUPLING_REGIME:** `strong` ($g^2 \gg 1$, $1/g^2 \ll 1$)
 - **LIMITS:** Fixed lattice cutoff $a > 0$, fixed strong coupling $g^2 \gg 1$
 - **ASSUMPTIONS:** Gauge field represented by group-valued link variables $U_{x,\mu} \in G$; gauge-invariant Wilson plaquette action $S[U] = \sum_P \frac{1}{g^2} \mathrm{Re}\mathrm{Tr}(1 - U_P)$; invariant Haar measure $\prod_{x,\mu} dU_{x,\mu}$.
-- **EXACT_RESULT:** Exact local gauge invariance preserved on discrete lattice at $a > 0$. High-temperature / strong-coupling expansion of the Wilson loop expectation value yields an area law: $\langle W(C) \rangle = \langle \mathrm{Tr} \prod_{l \in C} U_l \rangle \sim \exp(-\sigma \cdot \mathrm{Area}(C))$ with leading string tension $\sigma = \frac{\ln(g^2)}{a^2} (1 + \mathcal{O}(1/g^4))$, establishing confinement of static quarks at strong coupling on the fixed lattice.
-- **EVIDENCE_CLASS:** `CONTROLLED_MATHEMATICAL_EXPANSION`
+- **EXACT_RESULT:** Exact local gauge invariance preserved on discrete lattice at $a > 0$. High-temperature / strong-coupling expansion of the Wilson loop expectation value yields an area law: $\langle W(C) \rangle = \langle \mathrm{Tr} \prod_{l \in C} U_l \rangle \sim \exp(-\sigma \cdot \mathrm{Area}(C))$ with leading string tension $\sigma = \frac{\ln(g^2)}{a^2} (1 + \mathcal{O}(1/g^4))$, establishing confinement of static quarks at strong coupling on the fixed lattice. Continuous Euclidean/Lorentz invariance is explicitly absent in this strong-coupling regime.
+- **EVIDENCE_CLASS:** `CONTROLLED_STRONG_COUPLING_EXPANSION`
+- **CLASSIFICATION_JUSTIFICATION:** Controlled high-temperature/character expansion over compact Lie group Haar measures yielding an area law on a fixed lattice ($a > 0, g^2 \gg 1$). Does not establish the weak-coupling continuum limit.
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **PROOF_OR_DERIVATION_METHOD:** Character expansion of group integrals over compact Lie groups (Peter–Weyl theorem) and polymer/cluster graph summation on hypercubic lattice.
 - **UNIFORMITY_STATUS:** `FIXED_LATTICE_ONLY` (expansion valid only for $g^2 \gg 1$ at fixed $a > 0$)
 - **WHAT_IT_PROVES:** Computable strong-coupling expansion with exact local lattice gauge invariance yielding static quark confinement on a fixed lattice at $g \gg 1$.
@@ -258,6 +274,8 @@
 - **ASSUMPTIONS:** Wilson lattice action, hypercubic lattice partitioned across a hyperplane into positive and negative time halves.
 - **EXACT_RESULT:** Wilson lattice gauge theory satisfies Osterwalder–Schrader reflection positivity $\langle \Theta F, F \rangle \ge 0$ for all functions $F$ supported on the positive-time half of the lattice. Consequently, the lattice transfer matrix $\mathbb{T} = e^{-a H_a}$ is a positive self-adjoint contraction operator on a well-defined physical Hilbert space $\mathcal{H}_a$.
 - **EVIDENCE_CLASS:** `RIGOROUS_MATHEMATICAL_THEOREM`
+- **CLASSIFICATION_JUSTIFICATION:** Rigorous mathematical theorem proving reflection positivity and construction of a self-adjoint physical transfer matrix and Hilbert space on the discrete lattice for all couplings $g$.
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **PROOF_OR_DERIVATION_METHOD:** Slicing of compact group Haar measure along spatial hyperplanes, reflection anti-automorphism, and Cauchy–Schwarz inequality for positive measures.
 - **UNIFORMITY_STATUS:** `RIGOROUS_EXACT_ON_LATTICE`
 - **WHAT_IT_PROVES:** Exact existence of a quantum-mechanical Hilbert space $\mathcal{H}_a$, positive energy $H_a \ge 0$, and unitary transfer matrix on the discrete lattice for all couplings $g$.
@@ -288,6 +306,8 @@
 - **ASSUMPTIONS:** Self-duality equation $F_{\mu\nu} = \tilde{F}_{\mu\nu} = \frac{1}{2} \epsilon_{\mu\nu\rho\sigma} F_{\rho\sigma}$.
 - **EXACT_RESULT:** Explicit construction of finite-action classical solution in 4D Euclidean space: $A_\mu^a(x) = \frac{2 \eta_{a\mu\nu} (x - x_0)_\nu}{(x - x_0)^2 + \rho^2}$, with integer topological Pontryagin charge $Q = \frac{1}{32\pi^2} \int \mathrm{Tr}(F \wedge F) = 1$ and classical Euclidean action $S = \frac{8\pi^2}{g^2}$.
 - **EVIDENCE_CLASS:** `CLASSICAL_EXACT_SOLUTION`
+- **CLASSIFICATION_JUSTIFICATION:** Exact classical non-singular solution to first-order self-duality Bogomolny equations in classical Euclidean $\mathbb{R}^4$. Does not establish quantum mass gap.
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **PROOF_OR_DERIVATION_METHOD:** Exact solution of non-linear first-order self-duality Bogomolny equations and homotopy classification $\pi_3(SU(2)) \cong \mathbb{Z}$.
 - **UNIFORMITY_STATUS:** `NOT_APPLICABLE` (classical solution)
 - **WHAT_IT_PROVES:** Existence of non-trivial topological sectors, vacuum tunneling instantons, and finite-action localized classical configurations in 4D Euclidean Yang–Mills.
@@ -318,6 +338,8 @@
 - **ASSUMPTIONS:** 3D compact gauge field admitting magnetic monopoles (instantons in 2+1 dimensions) with finite action $S_{mono} \sim \text{const}/e^2$, dilute monopole gas approximation.
 - **EXACT_RESULT:** Semiclassical mapping of the monopole gas to a 3D classical Coulomb plasma with Debye screening. The dual photon acquires an effective Debye screening mass $m_D \sim M \exp(-S_{mono}/2) > 0$, generating exponential decay of magnetic correlations and an area law for Wilson loops (confinement).
 - **EVIDENCE_CLASS:** `SEMICLASSICAL_DERIVATION`
+- **CLASSIFICATION_JUSTIFICATION:** Semiclassical transformation mapping 3D compact gauge fields to a sine-Gordon Coulomb plasma with Debye screening mass. Does not constitute a formal constructive spectral theorem (which was established later by Göpfert & Mack 1981 / Brydges et al. 1980).
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **PROOF_OR_DERIVATION_METHOD:** Semiclassical duality transformation mapping 3D compact gauge field to a sine-Gordon Coulomb plasma and Debye screening expansion.
 - **UNIFORMITY_STATUS:** `SEMICLASSICAL_ESTIMATE` (in 2+1 dimensions)
 - **WHAT_IT_PROVES:** Physical semiclassical mechanism for dynamical photon mass generation and confinement from topological monopoles in (2+1)-dimensional compact gauge theory.
@@ -325,7 +347,7 @@
 - **RELATED_YM_REQ_IDS:** [`YM-REQ-007`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L188), [`YM-REQ-020`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L201)
 - **RELEVANCE_TO_CLAY:** `ANALOGUE`
 - **DEPENDENCIES:** `THM-YM-0008`
-- **KNOWN_LATER_CORRECTIONS:** Semiclassical approximation was elevated to a rigorous mathematical theorem for 3D compact $U(1)$ lattice gauge theory by M. Göpfert & G. Mack (1981, *Comm. Math. Phys.* 82, 545–590, `PAPER-FOUND-015`) and D. Brydges, J. Fröhlich, & T. Spencer (1980) (`BOUNDARY_REFERENCE / FOLLOWUP_REQUIRED_YM-002B`).
+- **KNOWN_LATER_CORRECTIONS:** Semiclassical approximation was elevated to a rigorous mathematical theorem for 3D compact $U(1)$ lattice gauge theory by M. Göpfert & G. Mack (1981, *Comm. Math. Phys.* 82, 545–590, `PAPER-FOUND-015`) and D. Brydges, J. Fröhlich, & T. Spencer (1980) (`BOUNDARY_REFERENCE / FORWARD_REFERENCE_YM-002B`).
 - **SOURCE_LOCATOR:** *Nucl. Phys. B* 120 (1977), pp. 429–458, Sections 1–4.
 - **REPRODUCTION_STATUS:** `RECONSTRUCTED`
 - **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
@@ -348,6 +370,8 @@
 - **ASSUMPTIONS:** Semiclassical approximation of 4D path integral by a gas of non-interacting instantons and anti-instantons.
 - **EXACT_RESULT:** Polyakov proposed that instanton gas density fluctuations in 4D Euclidean Yang–Mills could produce confinement and a mass gap by analogy with the 2+1D monopole gas.
 - **EVIDENCE_CLASS:** `CONJECTURE_OR_PROPOSAL`
+- **CLASSIFICATION_JUSTIFICATION:** Heuristic proposal and physical conjecture based on analogy with 3D Coulomb plasma. Uncontrolled due to infrared divergence of large instantons ($\int d\rho/\rho^5$).
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **PROOF_OR_DERIVATION_METHOD:** Heuristic analogy with 3D Coulomb gas and 1-loop instanton determinant.
 - **UNIFORMITY_STATUS:** `UNCONTROLLED` (infrared divergent)
 - **WHAT_IT_PROVES:** Physical heuristics motivating topological vacuum structure in 4D.
