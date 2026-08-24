@@ -1,0 +1,43 @@
+$ D:\Comfy UI\yang mills and the mass gap\.venv\Scripts\python.exe -m pytest -q
+.............FF..                                                        [100%]
+================================== FAILURES ===================================
+_________ test_independent_review_references_raw_artifact_and_sha256 __________
+
+    def test_independent_review_references_raw_artifact_and_sha256():
+        review_path = ROOT / "verification" / "YM-001R1_INDEPENDENT_REVIEW.md"
+        assert review_path.exists(), "YM-001R1_INDEPENDENT_REVIEW.md must exist"
+        content = review_path.read_text(encoding="utf-8")
+    
+        # 1. Reference raw artifact
+        m_raw = re.search(r"DERIVED FROM:\s*`([^`]+)`", content)
+>       assert m_raw, "Must declare DERIVED FROM raw verifier file"
+E       AssertionError: Must declare DERIVED FROM raw verifier file
+E       assert None
+
+tests\test_verification_provenance.py:14: AssertionError
+______________ test_verifier_identity_and_candidate_sha_present _______________
+
+    def test_verifier_identity_and_candidate_sha_present():
+        review_path = ROOT / "verification" / "YM-001R1_INDEPENDENT_REVIEW.md"
+        content = review_path.read_text(encoding="utf-8")
+    
+        # 3. Verifier identity exists
+        m_verifier = re.search(r"VERIFIER CONVERSATION ID:\s*`([^`]+)`", content)
+>       assert m_verifier, "Must record VERIFIER CONVERSATION ID"
+E       AssertionError: Must record VERIFIER CONVERSATION ID
+E       assert None
+
+tests\test_verification_provenance.py:32: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_verification_provenance.py::test_independent_review_references_raw_artifact_and_sha256
+FAILED tests/test_verification_provenance.py::test_verifier_identity_and_candidate_sha_present
+2 failed, 15 passed in 0.14s
+
+
+[exit_code=1]
+
+$ D:\Comfy UI\yang mills and the mass gap\.venv\Scripts\python.exe scripts/check_repo.py
+PASS: repository invariants and governance YAML are readable.
+
+
+[exit_code=0]

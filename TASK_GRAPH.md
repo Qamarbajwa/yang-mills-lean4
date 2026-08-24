@@ -4,9 +4,11 @@
 |---|---|---|---|---|---|
 | YM-000 | Bootstrap and verify local repository | none | T2 | E3 local reproducible tests | DONE |
 | YM-001 | Reconstruct official problem specification | YM-000 | T3 | primary-source citations + independent consistency check | INDEPENDENTLY_VERIFIED |
-| YM-002 | Build theorem/literature ledger | YM-001 | T2 | primary literature + theorem-level extraction | READY |
+| YM-001R1 | Repair independent-review E4 provenance | YM-001 | T3 | fresh blind E4 audit + raw receipt preservation | INDEPENDENTLY_VERIFIED |
+| YM-002 | Build theorem/literature ledger | YM-001R1 | T2 | primary literature + theorem-level extraction | READY |
 | YM-003 | Construct missing-bridge graph | YM-002 | T3 | independent semantic review | BLOCKED |
 | YM-004 | Reconstruct rigorous RG/Bałaban program | YM-003 | T3 | theorem reproduction + independent review | BLOCKED |
 | YM-005 | Reconstruct rigorous lattice gap program | YM-003 | T3 | theorem reproduction + independent review | BLOCKED |
 | YM-006 | Identify the precise non-meeting estimate | YM-004, YM-005 | T3 | explicit dependency proof + adversarial review | BLOCKED |
+
 

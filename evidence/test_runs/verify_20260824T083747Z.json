@@ -1,0 +1,35 @@
+{
+  "task_id": "YM-000",
+  "timestamp_utc": "2026-08-24T08:37:47.815188+00:00",
+  "status": "FAIL",
+  "evidence_level": "E3_REPRODUCIBLE_MACHINE_EVIDENCE",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "git_sha": "ada4c4e9ce2e6e14dbe35117eea96fff38dbc77c",
+  "git_branch": "master",
+  "git_status": "M CURRENT_SCIENTIFIC_STATE.md\n M EVIDENCE_LEDGER.md\n M TASK_GRAPH.md\n M verification/YM-001_INDEPENDENT_REVIEW.md\n?? INTEGRITY_VIOLATION_REGISTER.md\n?? evidence/test_runs/verify_20260824T083747Z.log\n?? tests/test_verification_provenance.py\n?? verification/YM-001R1_INDEPENDENT_REVIEW.md\n?? verification/historical/\n?? verification/raw/",
+  "commands": [
+    {
+      "command": [
+        "D:\\Comfy UI\\yang mills and the mass gap\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 1,
+      "stdout": ".............FF..                                                        [100%]\n================================== FAILURES ===================================\n_________ test_independent_review_references_raw_artifact_and_sha256 __________\n\n    def test_independent_review_references_raw_artifact_and_sha256():\n        review_path = ROOT / \"verification\" / \"YM-001R1_INDEPENDENT_REVIEW.md\"\n        assert review_path.exists(), \"YM-001R1_INDEPENDENT_REVIEW.md must exist\"\n        content = review_path.read_text(encoding=\"utf-8\")\n    \n        # 1. Reference raw artifact\n        m_raw = re.search(r\"DERIVED FROM:\\s*`([^`]+)`\", content)\n>       assert m_raw, \"Must declare DERIVED FROM raw verifier file\"\nE       AssertionError: Must declare DERIVED FROM raw verifier file\nE       assert None\n\ntests\\test_verification_provenance.py:14: AssertionError\n______________ test_verifier_identity_and_candidate_sha_present _______________\n\n    def test_verifier_identity_and_candidate_sha_present():\n        review_path = ROOT / \"verification\" / \"YM-001R1_INDEPENDENT_REVIEW.md\"\n        content = review_path.read_text(encoding=\"utf-8\")\n    \n        # 3. Verifier identity exists\n        m_verifier = re.search(r\"VERIFIER CONVERSATION ID:\\s*`([^`]+)`\", content)\n>       assert m_verifier, \"Must record VERIFIER CONVERSATION ID\"\nE       AssertionError: Must record VERIFIER CONVERSATION ID\nE       assert None\n\ntests\\test_verification_provenance.py:32: AssertionError\n=========================== short test summary info ===========================\nFAILED tests/test_verification_provenance.py::test_independent_review_references_raw_artifact_and_sha256\nFAILED tests/test_verification_provenance.py::test_verifier_identity_and_candidate_sha_present\n2 failed, 15 passed in 0.14s\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\Comfy UI\\yang mills and the mass gap\\.venv\\Scripts\\python.exe",
+        "scripts/check_repo.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: repository invariants and governance YAML are readable.\n",
+      "stderr": ""
+    }
+  ],
+  "log_file": "evidence\\test_runs\\verify_20260824T083747Z.log",
+  "log_sha256": "67b4282416ba7b929db84a1967ab719c8c6066884aaec85fdf15f00bf0da8da5"
+}

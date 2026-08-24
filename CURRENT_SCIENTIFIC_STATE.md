@@ -2,8 +2,9 @@
 
 ## VERIFIED
 - Local repository scaffold exists and passes the bootstrap verification suite (YM-000).
-- The official Millennium Problem specification has been reconstructed from primary Clay sources (Jaffe & Witten 2000/2006) and independently verified (YM-001).
-- 30 formal requirements, 17 mathematical definitions, and full source provenance are recorded and machine-checked against primary artifacts.
+- The official Millennium Problem specification has been reconstructed from primary Clay sources (Jaffe & Witten 2000/2006) and independently audited via fresh blind E4 verifier with preserved raw cryptographic provenance (YM-001 / YM-001R1).
+- 30 formal requirements, 17 mathematical definitions, and full source provenance are recorded, regression-tested, and machine-checked against primary artifacts.
+- Incident `IVR-001` (worker-authored review without raw E4 receipt) resolved and regression-protected.
 
 ## EXTERNALLY SOURCED / TO BE ADVANCED IN YM-002+
 - Literature families (Constructive QFT, Balaban RG, Lattice gauge theory, Osterwalder–Schrader / Wightman reconstructions) identified for structured theorem extraction.
@@ -18,4 +19,5 @@ The exact theorem-level dependency map between rigorous UV control and rigorous 
 
 ## NEXT ACTION
 `YM-002`: build theorem and literature advancement ledger.
+
 
