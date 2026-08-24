@@ -1,11 +1,12 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "ProjectGovernanceSchema_v293",
+  "title": "ProjectGovernanceSchema_v294",
   "type": "object",
   "required": [
     "project",
     "governance_state",
     "coding_environment",
+    "acceptance",
     "integrity",
     "current_state",
     "known_good_checkpoint"
@@ -36,7 +37,7 @@
         "governance_version": {
           "type": "string",
           "enum": [
-            "2.9.3"
+            "2.9.4"
           ]
         },
         "base_sha": {
@@ -84,6 +85,39 @@
         }
       }
     },
+    "acceptance": {
+      "type": "object",
+      "required": [
+        "authority_model",
+        "universal_codex_authority",
+        "universal_provider_authority",
+        "mapping_ref"
+      ],
+      "properties": {
+        "authority_model": {
+          "type": "string",
+          "enum": [
+            "ENVIRONMENT_LOCAL",
+            "EXTERNAL_AUTHORITY"
+          ]
+        },
+        "universal_codex_authority": {
+          "type": "boolean",
+          "enum": [
+            false
+          ]
+        },
+        "universal_provider_authority": {
+          "type": "boolean",
+          "enum": [
+            false
+          ]
+        },
+        "mapping_ref": {
+          "type": "string"
+        }
+      }
+    },
     "integrity": {
       "type": "object",
       "required": [
@@ -117,6 +151,7 @@
         "proof_status",
         "original_verified_lemmas",
         "ym_002a",
+        "ym_002ar1",
         "ym_002b"
       ],
       "properties": {
@@ -133,6 +168,9 @@
           "type": "integer"
         },
         "ym_002a": {
+          "type": "string"
+        },
+        "ym_002ar1": {
           "type": "string"
         },
         "ym_002b": {

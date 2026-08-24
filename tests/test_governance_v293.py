@@ -10,21 +10,23 @@ REF_DIR = GOV_DIR / "reference"
 CURR_DIR = REF_DIR / "current"
 HIST_DIR = REF_DIR / "historical"
 
-def test_1_project_governance_version_is_293():
-    proj_gov_path = GOV_DIR / "project-governance.yaml"
-    assert proj_gov_path.exists(), "project-governance.yaml must exist"
-    data = yaml.safe_load(proj_gov_path.read_text(encoding="utf-8"))
-    assert data["project"]["governance_version"] == "2.9.3", "Governance version must be 2.9.3"
+def test_1_historical_governance_version_manifest_tracks_v293():
+    manifest_path = GOV_DIR / "GOVERNANCE_VERSION_MANIFEST.yaml"
+    assert manifest_path.exists()
+    manifest = yaml.safe_load(manifest_path.read_text(encoding="utf-8"))
+    versions = {d["version"] for d in manifest["documents"]}
+    assert "2.9.3" in versions
 
-def test_2_current_master_v293_exists():
-    master_path = CURR_DIR / "MASTER_AUTONOMOUS_PROJECT_GOVERNANCE_DEVELOPMENT_EVOLUTION_v2.9.3.md"
-    assert master_path.exists(), "v2.9.3 Master Constitution must exist"
+def test_2_historical_master_v293_exists():
+    master_path = HIST_DIR / "MASTER_AUTONOMOUS_PROJECT_GOVERNANCE_DEVELOPMENT_EVOLUTION_v2.9.3.md"
+    assert master_path.exists(), "v2.9.3 Master Constitution must exist in historical/"
     assert len(master_path.read_text(encoding="utf-8")) > 100
 
-def test_3_current_runtime_kernel_v293_exists():
-    kernel_path = CURR_DIR / "AUTONOMOUS_PROJECT_RUNTIME_GOVERNANCE_KERNEL_v2.9.3.md"
-    assert kernel_path.exists(), "v2.9.3 Runtime Kernel must exist"
+def test_3_historical_runtime_kernel_v293_exists():
+    kernel_path = HIST_DIR / "AUTONOMOUS_PROJECT_RUNTIME_GOVERNANCE_KERNEL_v2.9.3.md"
+    assert kernel_path.exists(), "v2.9.3 Runtime Kernel must exist in historical/"
     assert len(kernel_path.read_text(encoding="utf-8")) > 100
+
 
 def test_4_governance_manifest_hashes_match_disk():
     manifest_path = GOV_DIR / "GOVERNANCE_VERSION_MANIFEST.yaml"
@@ -75,8 +77,10 @@ def test_9_reviewer_independence_level_is_mandatory_for_t3_plus():
     data = yaml.safe_load(contracts_path.read_text(encoding="utf-8"))
     for c in data["contracts"]:
         if c["risk_tier"] in ["T3", "T4"] and c.get("outcome") in ["INDEPENDENTLY_VERIFIED", "READY_FOR_EVALUATION"]:
-            assert "independence_level" in c, f"Contract {c['contract_id']} must specify independence_level"
-            assert c["independence_level"].startswith("LEVEL_")
+            ind_level = c.get("independence_level") or c.get("reviewer", {}).get("independence_level")
+            assert ind_level, f"Contract {c['contract_id']} must specify independence_level"
+            assert ind_level.startswith("LEVEL_")
+
 
 def test_10_project_governance_schema_validates():
     schema_path = GOV_DIR / "project-governance.schema.json"
@@ -156,5 +160,6 @@ def test_19_raw_artifact_modification_invalidates_receipt():
 def test_20_governance_version_mismatch_fails_verification():
     manifest = yaml.safe_load((GOV_DIR / "GOVERNANCE_VERSION_MANIFEST.yaml").read_text(encoding="utf-8"))
     proj_gov = yaml.safe_load((GOV_DIR / "project-governance.yaml").read_text(encoding="utf-8"))
-    assert manifest["active_governance_version"] == proj_gov["project"]["governance_version"] == "2.9.3"
+    assert manifest["active_governance_version"] == proj_gov["project"]["governance_version"]
+
 

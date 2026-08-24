@@ -1,44 +1,44 @@
 project:
-  id: "YM-MASS-GAP"
-  project_id: "YM-MASS-GAP"
-  name: "Yang-Mills and the Mass Gap"
-  canonical_name: "Yang–Mills and the Mass Gap"
-  governance_version: "2.9.3"
-  base_sha: "34e8b411feef4e198723b9cd5fe2275a90a87a44"
-
+  id: YM-MASS-GAP
+  project_id: YM-MASS-GAP
+  name: Yang-Mills and the Mass Gap
+  canonical_name: "Yang\u2013Mills and the Mass Gap"
+  governance_version: 2.9.4
+  base_sha: 0550d6138f9f61ac877baf340971517cbb3c2e95
 governance_state:
-  mode: "HYBRID_DISCOVERY"
-  manifest_ref: "governance/GOVERNANCE_VERSION_MANIFEST.yaml"
-  migration_doc_ref: "governance/GOVERNANCE_STATE_MIGRATION.md"
-
+  mode: HYBRID_DISCOVERY
+  manifest_ref: governance/GOVERNANCE_VERSION_MANIFEST.yaml
+  migration_doc_ref: governance/GOVERNANCE_STATE_MIGRATION.md
 coding_environment:
-  profile_ref: "governance/CODING_ENVIRONMENT_PROFILE.yaml"
-  isolation_level: "SOFT_CONTROL_PROCESS_ISOLATION"
-
+  profile_ref: governance/CODING_ENVIRONMENT_PROFILE.yaml
+  isolation_level: SOFT_CONTROL_PROCESS_ISOLATION
+acceptance:
+  authority_model: ENVIRONMENT_LOCAL
+  universal_codex_authority: false
+  universal_provider_authority: false
+  mapping_ref: governance/CODING_ENVIRONMENT_PROFILE.yaml
 integrity:
   open_incidents:
-    - "IVR-001"
-    - "IVR-002"
-  status: "INCIDENTS_CONTAINED_REMEDIATION_ACTIVE"
+  - IVR-001
+  - IVR-002
+  status: INCIDENTS_CONTAINED_REMEDIATION_ACTIVE
   acceptance_constraints:
-    - "raw verifier provenance required"
-    - "writer cannot satisfy own E4 gate"
-    - "exact candidate binding required"
-    - "transcript log extraction required for raw E4"
-
+  - raw verifier provenance required
+  - writer cannot satisfy own E4 gate
+  - exact candidate binding required
+  - transcript log extraction required for raw E4
+  - acceptance authority is role not permanent provider
 current_state:
-  active_governance_task: "YM-GOV-293"
+  active_governance_task: YM-GOV-294
   scientific_work_paused_for_governance_migration: true
-  proof_status: "NO_CANDIDATE_PROOF"
+  proof_status: NO_CANDIDATE_PROOF
   original_verified_lemmas: 0
-  ym_000: "ACCEPTED_BASELINE"
-  ym_001: "INDEPENDENTLY_VERIFIED"
-  ym_001r1: "INDEPENDENTLY_VERIFIED"
-  ym_002a: "E3_VERIFIED_E4_PROVENANCE_CHALLENGED"
-  ym_002ar1: "IN_PROGRESS"
-  ym_002b: "BLOCKED"
-
+  ym_000: ACCEPTED_BASELINE
+  ym_001: INDEPENDENTLY_VERIFIED
+  ym_001r1: INDEPENDENTLY_VERIFIED
+  ym_002a: E3_VERIFIED_E4_PROVENANCE_CHALLENGED
+  ym_002ar1: BLOCKED
+  ym_002b: BLOCKED
 known_good_checkpoint:
-  checkpoint_ref: "KNOWN_GOOD_CHECKPOINT.md"
-  last_sealed_checkpoint: "checkpoints/checkpoint_20260824T085716Z.json"
-
+  checkpoint_ref: KNOWN_GOOD_CHECKPOINT.md
+  last_sealed_checkpoint: checkpoints/checkpoint_20260824T091056Z.json

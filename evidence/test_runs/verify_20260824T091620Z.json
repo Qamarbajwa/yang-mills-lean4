@@ -1,0 +1,35 @@
+{
+  "task_id": "YM-000",
+  "timestamp_utc": "2026-08-24T09:16:20.549154+00:00",
+  "status": "PASS",
+  "evidence_level": "E3_REPRODUCIBLE_MACHINE_EVIDENCE",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "git_sha": "0550d6138f9f61ac877baf340971517cbb3c2e95",
+  "git_branch": "master",
+  "git_status": "M TASK_GRAPH.md\n M governance/ACCEPTANCE_GATE_POLICY.md\n M governance/AGENT_CAPABILITY_REGISTRY.yaml\n M governance/CODING_ENVIRONMENT_PROFILE.yaml\n M governance/CONTRACT_OWNERSHIP_LEDGER.yaml\n M governance/GOVERNANCE_STATE_MIGRATION.md\n M governance/GOVERNANCE_VERSION_MANIFEST.yaml\n M governance/MODEL_TOOL_ROUTING.yaml\n M governance/TOOL_PERMISSION_MATRIX.yaml\n M governance/project-governance.schema.json\n M governance/project-governance.yaml\n D governance/reference/current/AUTONOMOUS_PROJECT_RUNTIME_GOVERNANCE_KERNEL_v2.9.3.md\n D governance/reference/current/MASTER_AUTONOMOUS_PROJECT_GOVERNANCE_DEVELOPMENT_EVOLUTION_v2.9.3.md\n M tests/test_governance_v293.py\n?? evidence/test_runs/verify_20260824T091620Z.log\n?? governance/reference/current/AUTONOMOUS_PROJECT_RUNTIME_GOVERNANCE_KERNEL_v2.9.4.md\n?? governance/reference/current/MASTER_AUTONOMOUS_PROJECT_GOVERNANCE_DEVELOPMENT_EVOLUTION_v2.9.4.md\n?? governance/reference/historical/AUTONOMOUS_PROJECT_RUNTIME_GOVERNANCE_KERNEL_v2.9.3.md\n?? governance/reference/historical/MASTER_AUTONOMOUS_PROJECT_GOVERNANCE_DEVELOPMENT_EVOLUTION_v2.9.3.md\n?? scripts/migrate_to_v294_governance.py\n?? tests/test_governance_v294.py",
+  "commands": [
+    {
+      "command": [
+        "D:\\Comfy UI\\yang mills and the mass gap\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 0,
+      "stdout": "........................................................................ [ 85%]\n............                                                             [100%]\n84 passed in 0.50s\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\Comfy UI\\yang mills and the mass gap\\.venv\\Scripts\\python.exe",
+        "scripts/check_repo.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: repository invariants and governance YAML are readable.\n",
+      "stderr": ""
+    }
+  ],
+  "log_file": "evidence\\test_runs\\verify_20260824T091620Z.log",
+  "log_sha256": "8f41a7101b34c5628550d244129a9fdbfdb8ef6c1c5484dbb3d9a3b02aaf3a20"
+}

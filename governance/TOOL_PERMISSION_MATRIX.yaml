@@ -30,4 +30,9 @@ permissions:
     allowed_actions:
       - "Sealing checkpoints"
       - "Promoting candidate state to INDEPENDENTLY_VERIFIED"
-      - "Accepting governance transitions"
+      - "Recording environment-local technical acceptance"
+
+  HUMAN_AUTHORITY:
+    allowed_actions:
+      - "Authorizing major governance constitution migrations (T4/T5)"
+      - "Production deployment authorization"

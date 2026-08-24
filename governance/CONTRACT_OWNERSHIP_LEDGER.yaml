@@ -2,45 +2,115 @@ contracts:
 - contract_id: CONTRACT-YM-000
   task_id: YM-000
   risk_tier: T2
-  writer_id: primary-writer-gemini
-  reviewer_id: deterministic-test-suite
-  independence_level: LEVEL_E_DETERMINISTIC_EXTERNAL_OR_HUMAN
+  writer:
+    environment: Antigravity
+    agent_id: primary-writer-gemini
+    model: Gemini / Antigravity
+  reviewer:
+    environment: Antigravity
+    agent_id: deterministic-test-suite
+    model: pytest
+    independence_level: LEVEL_E_DETERMINISTIC_EXTERNAL_OR_HUMAN
+  acceptance_authority:
+    environment: Antigravity
+    authority_id: antigravity-local-acceptance-orchestrator
+    authority_type: ENVIRONMENT_LOCAL
   outcome: ACCEPTED
 - contract_id: CONTRACT-YM-001
   task_id: YM-001
   risk_tier: T3
-  writer_id: primary-writer-gemini
-  reviewer_id: self-authored (CHALLENGED under IVR-001)
-  independence_level: INVALID_SELF_AUTHORED
+  writer:
+    environment: Antigravity
+    agent_id: primary-writer-gemini
+    model: Gemini / Antigravity
+  reviewer:
+    environment: Antigravity
+    agent_id: self-authored (CHALLENGED under IVR-001)
+    model: Gemini / Antigravity
+    independence_level: INVALID_SELF_AUTHORED
   outcome: SUPERSEDED_BY_YM-001R1
 - contract_id: CONTRACT-YM-001R1
   task_id: YM-001R1
   risk_tier: T3
-  writer_id: primary-writer-gemini
-  reviewer_id: bf418fe4-0e72-4987-b56f-02ed2d051c43
-  independence_level: LEVEL_A_SAME_APP_SAME_MODEL_SEPARATE_SESSION
+  writer:
+    environment: Antigravity
+    agent_id: primary-writer-gemini
+    model: Gemini / Antigravity
+  reviewer:
+    environment: Antigravity
+    agent_id: bf418fe4-0e72-4987-b56f-02ed2d051c43
+    model: Gemini / Antigravity
+    independence_level: LEVEL_A_SAME_APP_SAME_MODEL_SEPARATE_SESSION
+  acceptance_authority:
+    environment: Antigravity
+    authority_id: antigravity-local-acceptance-orchestrator
+    authority_type: ENVIRONMENT_LOCAL
   candidate_id: 24af7f9c9b648269be7438af10480c036f177dd4
   outcome: INDEPENDENTLY_VERIFIED
 - contract_id: CONTRACT-YM-002A
   task_id: YM-002A
   risk_tier: T3
-  writer_id: primary-writer-gemini
-  reviewer_id: b3661f81-ff9a-483f-af3f-13de74b6ede5 (CHALLENGED under IVR-002)
-  independence_level: PROVENANCE_CHALLENGED
+  writer:
+    environment: Antigravity
+    agent_id: primary-writer-gemini
+    model: Gemini / Antigravity
+  reviewer:
+    environment: Antigravity
+    agent_id: b3661f81-ff9a-483f-af3f-13de74b6ede5 (CHALLENGED under IVR-002)
+    model: Gemini / Antigravity
+    independence_level: PROVENANCE_CHALLENGED
   candidate_id: b15cbf62e4a9c40f7a6eb8d885f36fc805f2ae09
   outcome: CHALLENGED_REQUIRES_REPAIR
 - contract_id: CONTRACT-YM-002AR1
   task_id: YM-002AR1
   risk_tier: T3
-  writer_id: primary-writer-gemini
-  reviewer_id: 9dc7460c-e591-4229-b602-6d8ac5e56026
-  independence_level: LEVEL_A_SAME_APP_SAME_MODEL_SEPARATE_SESSION
+  writer:
+    environment: Antigravity
+    agent_id: primary-writer-gemini
+    model: Gemini / Antigravity
+  reviewer:
+    environment: Antigravity
+    agent_id: 9dc7460c-e591-4229-b602-6d8ac5e56026
+    model: Gemini / Antigravity
+    independence_level: LEVEL_A_SAME_APP_SAME_MODEL_SEPARATE_SESSION
+  acceptance_authority:
+    environment: Antigravity
+    authority_id: antigravity-local-acceptance-orchestrator
+    authority_type: ENVIRONMENT_LOCAL
   candidate_id: f718005bb6d326eae36d4e0d627c362a6766858d
-  outcome: READY_FOR_EVALUATION
+  outcome: BLOCKED
 - contract_id: CONTRACT-YM-GOV-293
   task_id: YM-GOV-293
   risk_tier: T4
-  writer_id: primary-writer-gemini
-  reviewer_id: independent-verifier-subagent
-  independence_level: LEVEL_A_SAME_APP_SAME_MODEL_SEPARATE_SESSION
+  writer:
+    environment: Antigravity
+    agent_id: primary-writer-gemini
+    model: Gemini / Antigravity
+  reviewer:
+    environment: Antigravity
+    agent_id: ce14fe80-a7fe-46bc-91e0-cf249b52b3e2
+    model: Gemini / Antigravity
+    independence_level: LEVEL_A_SAME_APP_SAME_MODEL_SEPARATE_SESSION
+  acceptance_authority:
+    environment: Antigravity
+    authority_id: antigravity-local-acceptance-orchestrator
+    authority_type: ENVIRONMENT_LOCAL
+  candidate_id: 690faecc3d643f1dada3f5f6ecb5937461609af3
+  outcome: SUPERSEDED_BY_YM-GOV-294
+- contract_id: CONTRACT-YM-GOV-294
+  task_id: YM-GOV-294
+  risk_tier: T4
+  writer:
+    environment: Antigravity
+    agent_id: primary-writer-gemini
+    model: Gemini / Antigravity
+  reviewer:
+    environment: Antigravity
+    agent_id: independent-verifier-subagent
+    model: Gemini / Antigravity
+    independence_level: LEVEL_A_SAME_APP_SAME_MODEL_SEPARATE_SESSION
+  acceptance_authority:
+    environment: Antigravity
+    authority_id: antigravity-local-acceptance-orchestrator
+    authority_type: ENVIRONMENT_LOCAL
   outcome: IN_PROGRESS

@@ -1,3 +1,10 @@
+# [HISTORICAL / SUPERSEDED_BY_v2.9.4]
+STATUS: SUPERSEDED_BY_v2.9.4
+SUPERSEDED_DATE: 2026-08-24
+REASON: Upgraded to Governance v2.9.4 under Task YM-GOV-294
+
+---
+
 # AUTONOMOUS PROJECT RUNTIME GOVERNANCE KERNEL — v2.9.3
 
 > Compact always-loaded operational governance kernel extracted from

@@ -1,8 +1,30 @@
-# ACCEPTANCE GATE POLICY (v2.9.3)
+# ACCEPTANCE GATE POLICY (v2.9.4)
 
-## Gate Criteria by Risk Tier
-- **T0 (Informational / Scratch):** Worker self-check.
-- **T1 (Minor Refactor / Documentation):** Deterministic E3 test pass.
-- **T2 (Substantive Code / Standard Feature):** E3 test pass + structural integrity check.
-- **T3 (Scientific Claim / Theorem Ledger / Problem Spec):** E3 deterministic test suite + fresh blind E4 independent review with raw transcript capture.
-- **T4 (Governance Constitution / Root Control Plane):** Full E3 test suite + independent T4 audit + explicit candidate binding + user sign-off.
+## 1. Acceptance Authority Invariant
+- `ACCEPTANCE_AUTHORITY` is a **functional role**, not a model, provider, or company.
+- Universal provider or model authority (e.g. Codex, OpenAI, Gemini, Claude, DeepSeek) is prohibited.
+- Technical acceptance is **environment-local**:
+  - `Antigravity`: Gemini Writer -> Separate Gemini Reviewer -> E3 Deterministic Tests -> Antigravity Local Acceptance Gate.
+  - `Claude Code`: Claude Writer -> Separate Claude Reviewer -> E3 Deterministic Tests -> Claude Code Local Acceptance Gate.
+  - `OpenCode`: OpenCode Writer -> Distinct OpenCode Reviewer -> E3 Deterministic Tests -> OpenCode Local Acceptance Gate.
+
+## 2. Gate Sequence for Consequential Contracts (T3+)
+```
+CANDIDATE
+    -> EVIDENCE_ATTACHED
+    -> MACHINE_CHECKED (E3)
+    -> INDEPENDENT_REVIEW (E4)
+    -> INTEGRITY_CHECKED
+    -> ENVIRONMENT_LOCAL_ACCEPTANCE
+    -> ACCEPTED
+```
+
+## 3. Distinction Between Technical Acceptance and Release Authority
+- Environment-local technical acceptance = `BOUNDED TECHNICAL CONTRACT ACCEPTED`.
+- It does NOT constitute `RELEASE_READY` or `PRODUCTION_AUTHORIZED`.
+- T4/T5 governance or deployment changes retain distinct `HUMAN_AUTHORITY` authorization.
+
+## 4. Stale Evidence Invalidation
+- If any material candidate artifact changes after review, `OLD EVIDENCE = STALE`.
+- Full E3 machine verification and E4 independent review must be rerun against the exact final candidate.
+

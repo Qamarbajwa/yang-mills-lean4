@@ -28,7 +28,7 @@ agents:
       - "IVR-002 (YM-002A review provenance recurrence)"
     last_qualification: "2026-08-24"
     requalification_triggers:
-      - "Successful automated capture pipeline verification under YM-GOV-293 / YM-002AR1"
+      - "Successful automated capture pipeline verification under YM-GOV-294 / YM-002AR1"
 
   - id: "independent-verifier-subagent"
     provider: "Google DeepMind"
@@ -49,7 +49,7 @@ agents:
       - "read_url_content"
       - "search_web"
     known_strengths:
-      - "Unbiased blind verification of mathematical and bibliographic claims"
+      - "Unbiased blind verification of mathematical, bibliographic, and governance claims"
       - "Zero write authority prevents artifact contamination"
     known_weaknesses:
       - "Read-only access limits self-testing execution without orchestrator commands"

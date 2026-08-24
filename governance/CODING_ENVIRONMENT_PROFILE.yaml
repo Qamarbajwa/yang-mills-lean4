@@ -31,11 +31,18 @@ capabilities:
   supports_external_reviewer: true
   supports_raw_verifier_capture: true
 
+acceptance_capabilities:
+  local_parent_orchestrator: true
+  distinct_reviewer: true
+  automated_acceptance_gate: true
+  human_approval_available: true
+
 discovery_evidence:
-  commands_or_tool_observations:
+  evidence:
     - "Active workspace: d:/Comfy UI/yang mills and the mass gap"
     - "Tools exposed: run_command, view_file, replace_file_content, invoke_subagent, manage_subagents, etc."
     - "Subagent transcript path: C:/Users/arqam/.gemini/antigravity/brain/<conversation-id>/.system_generated/logs/transcript.jsonl"
     - "Raw capture script: scripts/capture_verifier_output.py"
-  timestamp_utc: "2026-08-24T09:00:00Z"
+    - "Acceptance authority: Environment-local Antigravity Orchestrator + Deterministic Test Suite"
+  timestamp_utc: "2026-08-24T09:15:00Z"
   limitations: "Subagents execute under same OS user account; process isolation is managed via IDE agent orchestrator and read-only subagent tool restrictions (soft control)."

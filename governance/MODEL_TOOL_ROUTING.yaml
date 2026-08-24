@@ -1,34 +1,51 @@
 routing_policy:
-  version: "2.9.3"
-  invariant: "WRITER_ID != REVIEWER_ID for all T3+ contracts"
+  version: "2.9.4"
+  invariants:
+    - "WRITER_ID != REVIEWER_ID for all T3+ contracts"
+    - "WRITER_ID != ACCEPTANCE_AUTHORITY_ID for all consequential contracts"
+    - "NO_PERMANENT_MODEL_ACCEPTANCE_AUTHORITY (Acceptance Authority is a functional role)"
+    - "Acceptance routing is environment-local by default; cross-application is optional fallback"
 
 role_assignments:
   ORCHESTRATOR:
     agent_id: "primary-writer-gemini"
+    environment: "Antigravity"
     risk_tiers: ["T0", "T1", "T2", "T3", "T4"]
     constraints: "Must compile bounded task envelopes"
 
   RESEARCH_WRITER:
     agent_id: "primary-writer-gemini"
+    environment: "Antigravity"
     risk_tiers: ["T0", "T1", "T2", "T3"]
     constraints: "Writes candidate artifacts only; no self-acceptance"
 
   MATHEMATICAL_WORKER:
     agent_id: "primary-writer-gemini"
+    environment: "Antigravity"
     risk_tiers: ["T0", "T1", "T2", "T3"]
     constraints: "Executes Python / SymPy proofs and derivations"
 
   INDEPENDENT_REVIEWER:
     agent_id: "independent-verifier-subagent"
+    environment: "Antigravity"
     risk_tiers: ["T2", "T3", "T4"]
     constraints: "Read-only subagent session; prompt isolation mandatory"
 
   ADVERSARIAL_CHALLENGER:
     agent_id: "independent-verifier-subagent"
+    environment: "Antigravity"
     risk_tiers: ["T3", "T4"]
     constraints: "Actively attempts to construct counterexamples and find flaws"
 
   ACCEPTANCE_AUTHORITY:
-    agent_id: "deterministic-evaluator-and-user"
+    agent_id: "antigravity-local-acceptance-orchestrator"
+    environment: "Antigravity"
+    authority_type: "ENVIRONMENT_LOCAL"
     risk_tiers: ["T0", "T1", "T2", "T3", "T4"]
-    constraints: "E3 deterministic test pass + genuine E4 receipt required"
+    constraints: "E3 deterministic test pass + genuine E4 receipt required. No universal provider authority."
+
+  HUMAN_AUTHORITY:
+    agent_id: "project-owner-human"
+    environment: "User"
+    risk_tiers: ["T4", "T5"]
+    constraints: "Mandatory for production release or fundamental constitution overhaul"

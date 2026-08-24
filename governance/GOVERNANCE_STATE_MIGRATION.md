@@ -2,19 +2,19 @@
 
 - **CURRENT_MODE:** `HYBRID_DISCOVERY`
 - **TARGET_MODE:** `CANONICAL`
-- **CURRENT_GOVERNANCE_VERSION:** `2.9.3`
-- **PREVIOUS_GOVERNANCE_VERSION:** `2.9`
-- **MIGRATION_TASK_ID:** `YM-GOV-293`
+- **CURRENT_GOVERNANCE_VERSION:** `2.9.4`
+- **PREVIOUS_GOVERNANCE_VERSIONS:** `2.9`, `2.9.3`
+- **MIGRATION_TASK_ID:** `YM-GOV-294`
 
 ---
 
 ## Migration Status and Discrepancies
 
 ### Canonical Ownership Already Established
-- `governance/GOVERNANCE_VERSION_MANIFEST.yaml`: Authoritative manifest of all active and historical governance constitutions and hashes.
-- `governance/CODING_ENVIRONMENT_PROFILE.yaml`: Discovered platform and tool profile.
+- `governance/GOVERNANCE_VERSION_MANIFEST.yaml`: Authoritative manifest of active (v2.9.4) and historical (v2.9, v2.9.3) governance documents and cryptographic hashes.
+- `governance/CODING_ENVIRONMENT_PROFILE.yaml`: Discovered platform, tools, and acceptance capabilities.
 - `governance/AGENT_CAPABILITY_REGISTRY.yaml`: Active agent roles, permissions, and risk tiers.
-- `governance/MODEL_TOOL_ROUTING.yaml`: Dynamic routing matrix.
+- `governance/MODEL_TOOL_ROUTING.yaml`: Dynamic routing matrix enforcing environment-local acceptance authority.
 - `governance/TOOL_PERMISSION_MATRIX.yaml`: Tool authority boundaries.
 
 ### Fields Still Hybrid / Markdown-Authoritative
@@ -23,7 +23,7 @@
 - Negative findings (`NEGATIVE_EVIDENCE_REGISTER.md`).
 
 ### Discrepancies Tracked
-- `DISC-001`: YM-002A initial acceptance was challenged under IVR-002 and is undergoing formal E4 re-audit under v2.9.3.
+- `DISC-001`: YM-002A initial acceptance was challenged under IVR-002 and is undergoing formal E4 re-audit under v2.9.4 (`YM-002AR1`).
 - `DISC-002`: Tool isolation on Windows is logical/process-based (soft control) supported by transcript cryptographic hashing.
 
 ### Next Migration Step
