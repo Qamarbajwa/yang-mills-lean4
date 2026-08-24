@@ -14,7 +14,11 @@
 | EVD-002AR1-01 | YM-002AR1 Primary source manifest and boundary records (15 papers) | E3 | `literature/primary/foundations_1954_1980/manifest.yaml` | `manifest.yaml` v1.1 verified against local files | MACHINE_CHECKED (`manifest.yaml`) | ACCEPTED |
 | EVD-002AR1-02 | YM-002AR1 Machine test suite with semantic regressions (20 foundational tests) | E3 | `tests/test_foundational_literature.py` | Pass receipt `evidence/test_runs/verify_20260824T085502Z.json` | REPRODUCIBLE_LOCALLY (`pytest tests/`) | ACCEPTED |
 | EVD-002AR1-03 | YM-002AR1 Fresh Blind E4 Independent Audit (Verifier `9dc7460c-e591-4229-b602-6d8ac5e56026`) | E4 | `verification/raw/YM-002AR1_E4_RAW_20260824T085619Z.md` | `04da3555f8a8dcb6d61f24bdc3abc9578d9407afaa47360fc804d957def6566d` (Candidate SHA: `f718005bb6d326eae36d4e0d627c362a6766858d`) | TRANSCRIPT_LOG_CAPTURED | ACCEPTED |
-| EVD-002AR1-04 | YM-002AR1 Derived E4 Independent Review Report | E4_DERIVED | `verification/YM-002AR1_INDEPENDENT_REVIEW.md` | Derived from raw `04da3555f8a8dcb6d61f24bdc3abc9578d9407afaa47360fc804d957def6566d` | TRACEABLE_TO_RAW_E4 | ACCEPTED |
+| EVD-GOV-293-01 | YM-GOV-293 Governance v2.9.3 Manifests, Profiles, and Schemas | E3 | `governance/GOVERNANCE_VERSION_MANIFEST.yaml` | Manifest v1.0 verified against disk hashes | MACHINE_CHECKED (`manifest.yaml`) | ACCEPTED |
+| EVD-GOV-293-02 | YM-GOV-293 Governance Regression Suite (20 tests) | E3 | `tests/test_governance_v293.py` | Pass receipt `evidence/test_runs/verify_20260824T090802Z.json` | REPRODUCIBLE_LOCALLY (`RUN_VERIFY.ps1`) | ACCEPTED |
+| EVD-GOV-293-03 | YM-GOV-293 Fresh Blind E4 Independent Audit (Verifier `ce14fe80-a7fe-46bc-91e0-cf249b52b3e2`) | E4 | `verification/raw/YM-GOV-293_E4_RAW_20260824T091011Z.md` | `b991712eaeca86421fe23ef74fe1528871d7500d01f68267996faa14f7741b91` (Candidate SHA: `690faecc3d643f1dada3f5f6ecb5937461609af3`) | TRANSCRIPT_LOG_CAPTURED | ACCEPTED |
+| EVD-GOV-293-04 | YM-GOV-293 Derived E4 Independent Review Report | E4_DERIVED | `verification/YM-GOV-293_INDEPENDENT_REVIEW.md` | Derived from raw `b991712eaeca86421fe23ef74fe1528871d7500d01f68267996faa14f7741b91` | TRACEABLE_TO_RAW_E4 | ACCEPTED |
+
 
 
 

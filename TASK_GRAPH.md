@@ -5,7 +5,7 @@
 | YM-000 | Bootstrap and verify local repository | none | T2 | E3 local reproducible tests | DONE |
 | YM-001 | Reconstruct official problem specification | YM-000 | T3 | primary-source citations + independent consistency check | INDEPENDENTLY_VERIFIED |
 | YM-001R1 | Repair independent-review E4 provenance | YM-001 | T3 | fresh blind E4 audit + raw receipt preservation | INDEPENDENTLY_VERIFIED |
-| YM-GOV-293 | Governance migration v2.9 -> v2.9.3 | none | T4 | E3 deterministic test suite + fresh blind E4 review | IN_PROGRESS |
+| YM-GOV-293 | Governance migration v2.9 -> v2.9.3 | none | T4 | E3 deterministic test suite + fresh blind E4 review | INDEPENDENTLY_VERIFIED |
 | YM-002 | Build theorem/literature ledger | YM-001R1 | T2 | primary literature + theorem-level extraction | IN_PROGRESS |
 | YM-002A | Foundational Yang–Mills advancement ledger (1954–1980) | YM-001R1 | T3 | primary literature + fresh blind E4 audit | E3_VERIFIED_E4_PROVENANCE_CHALLENGED |
 | YM-002AR1 | E4 provenance + foundational semantic repair | YM-002A, YM-GOV-293 | T3 | fresh blind E4 audit + raw receipt capture | READY |
