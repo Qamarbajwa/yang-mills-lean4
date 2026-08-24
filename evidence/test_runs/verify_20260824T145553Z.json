@@ -1,0 +1,35 @@
+{
+  "task_id": "YM-000",
+  "timestamp_utc": "2026-08-24T14:55:53.164109+00:00",
+  "status": "PASS",
+  "evidence_level": "E3_REPRODUCIBLE_MACHINE_EVIDENCE",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "git_sha": "86a541f0f8894d713adce25df6a8dfbfeca051e3",
+  "git_branch": "master",
+  "git_status": "M CURRENT_SCIENTIFIC_STATE.md\n M EVIDENCE_LEDGER.md\n M NEXT_ACTION.md\n M TASK_GRAPH.md\n?? evidence/test_runs/verify_20260824T145553Z.log\n?? verification/YM-GOV-294_INDEPENDENT_REVIEW.md\n?? verification/raw/YM-GOV-294_E4_RAW_20260824T145519Z.md",
+  "commands": [
+    {
+      "command": [
+        "D:\\Comfy UI\\yang mills and the mass gap\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 0,
+      "stdout": "........................................................................ [ 85%]\n............                                                             [100%]\n84 passed in 0.26s\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\Comfy UI\\yang mills and the mass gap\\.venv\\Scripts\\python.exe",
+        "scripts/check_repo.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: repository invariants and governance YAML are readable.\n",
+      "stderr": ""
+    }
+  ],
+  "log_file": "evidence\\test_runs\\verify_20260824T145553Z.log",
+  "log_sha256": "dcf5e71d305782095c65358b91198e37a2689376f37c7327e5a087df32c687e8"
+}
