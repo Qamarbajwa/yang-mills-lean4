@@ -13,17 +13,20 @@
   - Zero pre-1981 results satisfy the full 4D continuum Millennium requirements (`CLAY_SUFFICIENT: NO` across all entries).
   - Current status: `INDEPENDENTLY_VERIFIED_AFTER_REPAIR` (E4 verifier `6f209429-fd90-4d78-9d0f-132d899cd455`, `INTEGRITY_PASS`).
 
-- Constructive and Rigorous Renormalization Group Foundations ledger (1980–2000) reconstructed and independently verified (`YM-002B` / `YM-002` complete):
+- Constructive and Rigorous Renormalization Group Foundations ledger (1980–2000) reconstructed, enriched with strict epistemic taxonomy, and independently verified (`YM-002B` / `YM-002BR1`):
   - 8 primary constructive sources cataloged and hashed in `literature/primary/constructive_1980_2000/manifest.yaml`.
   - 8 constructive theorems (`THM-YM-0013` through `THM-YM-0020`) extracted with granular evidence classifications, complete limitation blocks, and source access scopes in `THEOREM_LEDGER.md`.
   - Constructive limitation matrix (`literature/CONSTRUCTIVE_LIMITATION_MATRIX.md`) and technical prerequisite graph (`literature/CONSTRUCTIVE_DEPENDENCY_GRAPH.md`) verified with 9 explicit edge justifications.
-  - Pathway Memory Register (`literature/PATHWAY_MEMORY_REGISTER.md`) established, recording 4 major historical programs (`PATH-CONST-001` through `PATH-CONST-004`) with complete pathway memory fields.
+  - Pathway Memory Register (`literature/PATHWAY_MEMORY_REGISTER.md`) established with strict epistemic taxonomy (`[PRIMARY_SOURCE_RESULT]`, `[PRIMARY_SOURCE_LIMITATION]`, `[LATER_LITERATURE_LIMITATION]`, `[PROJECT_SYNTHESIS]`, `[HYPOTHESIS]`, `[UNKNOWN]`), corrected 4D monopole loop geometry, exact primary locators (e.g. MRS p. 326), and 4 governing epistemic invariants.
   - Confirmed: 4D Ultraviolet Stability in finite volume proved (Bałaban `THM-YM-0018`) and IR-regulated Euclidean Schwinger functions constructed (Magnen–Rivasseau–Sénéor `THM-YM-0020`), but 4D continuum infinite-volume mass gap $\Delta > 0$ remains unsolved (`CLAY_SUFFICIENT: NO` across all entries).
-  - Current status: `INDEPENDENTLY_VERIFIED` (E4 verifier `fe2c26cc-08cf-441d-a871-e1c9f48d3fe4`, `INTEGRITY_PASS`).
+  - Current status: `INDEPENDENTLY_VERIFIED` (E4 verifier `66e23357-ea7d-4b3b-9e20-365e15f72c09`, `INTEGRITY_PASS`).
 
-## EXTERNALLY SOURCED / TO BE ADVANCED IN YM-003+
-- Systematic missing-bridge graph between UV asymptotic freedom and infrared mass generation.
-- Modern non-perturbative reformulations, gauge/gravity duality bounds, and spectral gap obstacles.
+## EXTERNALLY SOURCED / TO BE ADVANCED IN YM-002C+
+- Modern rigorous advances 2000–2026 (`YM-002C`).
+- Solved/modified/analogous theories (`YM-002D`).
+- Claimed-solution adversarial audits (`YM-002E`).
+- Cross-era theorem and dependency synthesis (`YM-002F`).
+- Missing-bridge graph (`YM-003`).
 
 ## UNVERIFIED
 - No original Yang–Mills lemma has been established in this repository.
@@ -34,7 +37,8 @@
 Rigorous constructive control linking ultraviolet asymptotic freedom to infrared mass generation remains open in 4D continuum spacetime across the strong-coupling transition ($g_k \sim 1$).
 
 ## NEXT ACTION
-`YM-003`: Construct missing-bridge graph.
+`YM-002C`: Modern rigorous advances (2000–2026).
+
 
 
 

@@ -212,14 +212,14 @@ contracts:
     model: Gemini / Antigravity
   reviewer:
     environment: Antigravity
-    agent_id: independent-verifier-subagent
-    execution_id: "conversation://subagent"
+    agent_id: 66e23357-ea7d-4b3b-9e20-365e15f72c09
+    execution_id: "conversation://66e23357-ea7d-4b3b-9e20-365e15f72c09"
     model: Gemini / Antigravity
     independence_level: LEVEL_A_SAME_APP_SAME_MODEL_SEPARATE_SESSION
   acceptance_authority:
     environment: "HumanOwner + CI"
     authority_id: human-owner-and-ci-evaluator
-    execution_id: "user-interactive-session + deterministic-ci"
+    execution_id: "user-interactive-session + evidence/test_runs/verify_20260824T154400Z.json"
     authority_type: ENVIRONMENT_LOCAL
   allowed_scope:
     - "literature/PATHWAY_MEMORY_REGISTER.md"
@@ -237,7 +237,9 @@ contracts:
     - "OFFICIAL_PROBLEM_SPECIFICATION.md"
     - "Creating synthetic acceptance-authority aliases"
     - "Authoring raw E4 text directly"
-  outcome: IN_PROGRESS
+  candidate_id: ca0d6c29f946540f0a5ab58d8a361ba639226cb3
+  outcome: ACCEPTED
+
 
 
 

@@ -1,11 +1,11 @@
 # NEXT ACTION
 
 ## Current action
-`YM-003 — Construct missing-bridge graph`
+`YM-002C — Modern rigorous advances, approximately 2000–2026`
 
 ## Scope
-- Construct formal structural graph linking known mathematical facts from YM-001, YM-002A, and YM-002B to the unresolved Clay Millennium requirements.
-- Identify the exact non-meeting boundaries between short-distance asymptotic freedom, lattice cluster expansions, and infinite-volume spectral gap generation.
+- Reconstruct modern mathematical advances in gauge theory, including singular SPDE / stochastic quantization of 2D/3D/4D Yang–Mills (Hairer, Shen, Chandra, Chevyrev), modern Euclidean constructive updates, and mathematical bounds from non-perturbative frameworks.
+- Map exact proven scopes and unresolved infrared limits.
 
 ## Completed actions
 - `YM-000 — Local bootstrap` (DONE)
@@ -17,7 +17,8 @@
 - `YM-002A — Foundational Yang–Mills advancement ledger (1954–1980)` (INDEPENDENTLY_VERIFIED_AFTER_REPAIR)
 - `YM-002AR1 — E4 provenance + foundational semantic repair` (INDEPENDENTLY_VERIFIED)
 - `YM-002B — Constructive / RG foundations ledger (1980–2000)` (INDEPENDENTLY_VERIFIED)
-- `YM-002 — Build theorem and literature advancement ledger` (INDEPENDENTLY_VERIFIED)
+- `YM-002BR1 — Constructive pathway-memory semantic + closeout reconciliation` (INDEPENDENTLY_VERIFIED)
+
 
 
 
