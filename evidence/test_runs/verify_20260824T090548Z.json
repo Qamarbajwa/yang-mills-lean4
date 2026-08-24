@@ -1,0 +1,35 @@
+{
+  "task_id": "YM-000",
+  "timestamp_utc": "2026-08-24T09:05:48.931592+00:00",
+  "status": "FAIL",
+  "evidence_level": "E3_REPRODUCIBLE_MACHINE_EVIDENCE",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "git_sha": "34e8b411feef4e198723b9cd5fe2275a90a87a44",
+  "git_branch": "master",
+  "git_status": "M TASK_GRAPH.md\n M governance/project-governance.yaml\n D governance/reference/AUTONOMOUS_PROJECT_RUNTIME_GOVERNANCE_KERNEL_v2.9.md\n D governance/reference/MASTER_AUTONOMOUS_PROJECT_GOVERNANCE_DEVELOPMENT_EVOLUTION_v2.9.md\n?? evidence/test_runs/verify_20260824T090548Z.log\n?? governance/ACCEPTANCE_GATE_POLICY.md\n?? governance/AGENT_CAPABILITY_REGISTRY.yaml\n?? governance/CODING_ENVIRONMENT_PROFILE.yaml\n?? governance/CONTRACT_OWNERSHIP_LEDGER.yaml\n?? governance/EVALUATOR_OWNERSHIP.md\n?? governance/GOVERNANCE_LOCK_POLICY.md\n?? governance/GOVERNANCE_STATE_MIGRATION.md\n?? governance/GOVERNANCE_VERSION_MANIFEST.yaml\n?? governance/INTEGRITY_QUARANTINE.md\n?? governance/MODEL_TOOL_ROUTING.yaml\n?? governance/TAMPER_EVIDENT_AUDIT_POLICY.md\n?? governance/TOOL_PERMISSION_MATRIX.yaml\n?? governance/TRUTH_CONTROL_PLANE.md\n?? governance/project-governance.schema.json\n?? governance/reference/current/\n?? governance/reference/historical/\n?? scripts/generate_v293_governance.py\n?? tests/test_governance_v293.py",
+  "commands": [
+    {
+      "command": [
+        "D:\\Comfy UI\\yang mills and the mass gap\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 2,
+      "stdout": "\n=================================== ERRORS ====================================\n_______________ ERROR collecting tests/test_governance_v293.py ________________\nImportError while importing test module 'D:\\Comfy UI\\yang mills and the mass gap\\tests\\test_governance_v293.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\nC:\\Users\\arqam\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\importlib\\__init__.py:90: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntests\\test_governance_v293.py:4: in <module>\n    import jsonschema\nE   ModuleNotFoundError: No module named 'jsonschema'\n=========================== short test summary info ===========================\nERROR tests/test_governance_v293.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 0.33s\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\Comfy UI\\yang mills and the mass gap\\.venv\\Scripts\\python.exe",
+        "scripts/check_repo.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: repository invariants and governance YAML are readable.\n",
+      "stderr": ""
+    }
+  ],
+  "log_file": "evidence\\test_runs\\verify_20260824T090548Z.log",
+  "log_sha256": "c1985f911ef57d0cc8050bba3efaf87dc52ce47ecacfe75f29376cacd6522660"
+}

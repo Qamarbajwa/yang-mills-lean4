@@ -1,26 +1,44 @@
-schema_version: "0.1"
 project:
   id: "YM-MASS-GAP"
-  name: "Yang–Mills and the Mass Gap"
-  classification:
-    - "RESEARCH_R_AND_D"
-  governance_version: "2.9"
+  project_id: "YM-MASS-GAP"
+  name: "Yang-Mills and the Mass Gap"
+  canonical_name: "Yang–Mills and the Mass Gap"
+  governance_version: "2.9.3"
+  base_sha: "34e8b411feef4e198723b9cd5fe2275a90a87a44"
+
+governance_state:
+  mode: "HYBRID_DISCOVERY"
+  manifest_ref: "governance/GOVERNANCE_VERSION_MANIFEST.yaml"
+  migration_doc_ref: "governance/GOVERNANCE_STATE_MIGRATION.md"
+
+coding_environment:
+  profile_ref: "governance/CODING_ENVIRONMENT_PROFILE.yaml"
+  isolation_level: "SOFT_CONTROL_PROCESS_ISOLATION"
+
+integrity:
+  open_incidents:
+    - "IVR-001"
+    - "IVR-002"
+  status: "INCIDENTS_CONTAINED_REMEDIATION_ACTIVE"
+  acceptance_constraints:
+    - "raw verifier provenance required"
+    - "writer cannot satisfy own E4 gate"
+    - "exact candidate binding required"
+    - "transcript log extraction required for raw E4"
 
 current_state:
-  lifecycle: "S0_S1"
+  active_governance_task: "YM-GOV-293"
+  scientific_work_paused_for_governance_migration: true
   proof_status: "NO_CANDIDATE_PROOF"
   original_verified_lemmas: 0
-  known_good_checkpoint: "NOT_YET_ESTABLISHED"
-  active_task: "YM-000"
+  ym_000: "ACCEPTED_BASELINE"
+  ym_001: "INDEPENDENTLY_VERIFIED"
+  ym_001r1: "INDEPENDENTLY_VERIFIED"
+  ym_002a: "E3_VERIFIED_E4_PROVENANCE_CHALLENGED"
+  ym_002ar1: "IN_PROGRESS"
+  ym_002b: "BLOCKED"
 
-scientific_invariants:
-  - id: "SCI-001"
-    rule: "Numerical observation is not proof."
-  - id: "SCI-002"
-    rule: "A fixed-cutoff mass gap is not the continuum mass gap."
-  - id: "SCI-003"
-    rule: "Confinement and mass gap are not silently treated as equivalent."
-  - id: "SCI-004"
-    rule: "Results in modified, supersymmetric, Abelian, Higgs, lower-dimensional, or large-N theories must retain their scope labels."
-  - id: "SCI-005"
-    rule: "Uniformity in cutoff/volume parameters must be proved explicitly."
+known_good_checkpoint:
+  checkpoint_ref: "KNOWN_GOOD_CHECKPOINT.md"
+  last_sealed_checkpoint: "checkpoints/checkpoint_20260824T085716Z.json"
+

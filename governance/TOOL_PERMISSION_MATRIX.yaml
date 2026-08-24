@@ -1,0 +1,33 @@
+permissions:
+  WRITER:
+    allowed_tools:
+      - "view_file"
+      - "replace_file_content"
+      - "write_to_file"
+      - "run_command"
+      - "invoke_subagent"
+      - "grep_search"
+      - "find_by_name"
+      - "list_dir"
+    forbidden_actions:
+      - "Modifying verification/raw/ or verification/accepted/"
+      - "Overwriting historical integrity incident records"
+      - "Self-certifying E4 gates for T3+ tasks"
+
+  REVIEWER:
+    allowed_tools:
+      - "view_file"
+      - "grep_search"
+      - "find_by_name"
+      - "list_dir"
+      - "read_url_content"
+      - "search_web"
+    forbidden_actions:
+      - "Writing or mutating workspace files directly"
+      - "Executing modifying shell commands"
+
+  ACCEPTANCE_AUTHORITY:
+    allowed_actions:
+      - "Sealing checkpoints"
+      - "Promoting candidate state to INDEPENDENTLY_VERIFIED"
+      - "Accepting governance transitions"

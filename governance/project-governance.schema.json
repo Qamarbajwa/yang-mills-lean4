@@ -1,0 +1,159 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ProjectGovernanceSchema_v293",
+  "type": "object",
+  "required": [
+    "project",
+    "governance_state",
+    "coding_environment",
+    "integrity",
+    "current_state",
+    "known_good_checkpoint"
+  ],
+  "properties": {
+    "project": {
+      "type": "object",
+      "required": [
+        "id",
+        "project_id",
+        "canonical_name",
+        "governance_version",
+        "base_sha"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "project_id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "canonical_name": {
+          "type": "string"
+        },
+        "governance_version": {
+          "type": "string",
+          "enum": [
+            "2.9.3"
+          ]
+        },
+        "base_sha": {
+          "type": "string"
+        }
+      }
+    },
+    "governance_state": {
+      "type": "object",
+      "required": [
+        "mode",
+        "manifest_ref",
+        "migration_doc_ref"
+      ],
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "HYBRID_DISCOVERY",
+            "STRUCTURED_RECONCILIATION",
+            "SCHEMA_VALIDATED",
+            "CANONICAL"
+          ]
+        },
+        "manifest_ref": {
+          "type": "string"
+        },
+        "migration_doc_ref": {
+          "type": "string"
+        }
+      }
+    },
+    "coding_environment": {
+      "type": "object",
+      "required": [
+        "profile_ref",
+        "isolation_level"
+      ],
+      "properties": {
+        "profile_ref": {
+          "type": "string"
+        },
+        "isolation_level": {
+          "type": "string"
+        }
+      }
+    },
+    "integrity": {
+      "type": "object",
+      "required": [
+        "open_incidents",
+        "status",
+        "acceptance_constraints"
+      ],
+      "properties": {
+        "open_incidents": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "status": {
+          "type": "string"
+        },
+        "acceptance_constraints": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "current_state": {
+      "type": "object",
+      "required": [
+        "active_governance_task",
+        "scientific_work_paused_for_governance_migration",
+        "proof_status",
+        "original_verified_lemmas",
+        "ym_002a",
+        "ym_002b"
+      ],
+      "properties": {
+        "active_governance_task": {
+          "type": "string"
+        },
+        "scientific_work_paused_for_governance_migration": {
+          "type": "boolean"
+        },
+        "proof_status": {
+          "type": "string"
+        },
+        "original_verified_lemmas": {
+          "type": "integer"
+        },
+        "ym_002a": {
+          "type": "string"
+        },
+        "ym_002b": {
+          "type": "string"
+        }
+      }
+    },
+    "known_good_checkpoint": {
+      "type": "object",
+      "required": [
+        "checkpoint_ref",
+        "last_sealed_checkpoint"
+      ],
+      "properties": {
+        "checkpoint_ref": {
+          "type": "string"
+        },
+        "last_sealed_checkpoint": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

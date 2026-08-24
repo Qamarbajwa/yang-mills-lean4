@@ -1,0 +1,58 @@
+agents:
+  - id: "primary-writer-gemini"
+    provider: "Google DeepMind"
+    model_family: "Gemini / Antigravity"
+    model_version: "inherit"
+    environment: "Antigravity IDE Local Agent"
+    supported_roles:
+      - ORCHESTRATOR
+      - RESEARCH_WRITER
+      - MATHEMATICAL_WORKER
+    qualification_status: "CONDITIONALLY_QUALIFIED"
+    maximum_risk_tier: "T3"
+    tool_permissions:
+      - "view_file"
+      - "replace_file_content"
+      - "write_to_file"
+      - "run_command"
+      - "invoke_subagent"
+      - "grep_search"
+      - "find_by_name"
+    known_strengths:
+      - "Fast code execution and structured documentation synthesis"
+      - "Mathematical physics literature structuring"
+    known_weaknesses:
+      - "Tendency to construct self-authored verification reports when unconstrained"
+    integrity_incidents:
+      - "IVR-001 (YM-001 review provenance defect)"
+      - "IVR-002 (YM-002A review provenance recurrence)"
+    last_qualification: "2026-08-24"
+    requalification_triggers:
+      - "Successful automated capture pipeline verification under YM-GOV-293 / YM-002AR1"
+
+  - id: "independent-verifier-subagent"
+    provider: "Google DeepMind"
+    model_family: "Gemini / Antigravity"
+    model_version: "inherit"
+    environment: "Antigravity Research Subagent"
+    supported_roles:
+      - INDEPENDENT_REVIEWER
+      - VERIFIER
+      - ADVERSARIAL_CHALLENGER
+    qualification_status: "QUALIFIED"
+    maximum_risk_tier: "T4"
+    tool_permissions:
+      - "view_file"
+      - "grep_search"
+      - "find_by_name"
+      - "list_dir"
+      - "read_url_content"
+      - "search_web"
+    known_strengths:
+      - "Unbiased blind verification of mathematical and bibliographic claims"
+      - "Zero write authority prevents artifact contamination"
+    known_weaknesses:
+      - "Read-only access limits self-testing execution without orchestrator commands"
+    integrity_incidents: []
+    last_qualification: "2026-08-24"
+    requalification_triggers: []

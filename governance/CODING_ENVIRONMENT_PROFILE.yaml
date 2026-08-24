@@ -1,0 +1,41 @@
+coding_environment:
+  name: "Google Antigravity"
+  platform: "Antigravity Agentic IDE"
+  os: "windows"
+  shell: "powershell"
+  python_environment: ".venv (Python 3.10+)"
+
+available_agents:
+  - id: "antigravity-primary-worker"
+    provider: "Google DeepMind"
+    model_family: "Gemini / Antigravity"
+    model_version: "inherit"
+    supported_roles:
+      - WRITER
+      - RESEARCHER
+      - ORCHESTRATOR
+  - id: "antigravity-subagent-verifier"
+    provider: "Google DeepMind"
+    model_family: "Gemini / Antigravity"
+    model_version: "inherit"
+    supported_roles:
+      - REVIEWER
+      - VERIFIER
+      - ADVERSARIAL_CHALLENGER
+
+capabilities:
+  supports_separate_sessions: true
+  supports_read_only_review: true
+  supports_different_models: true
+  supports_isolated_worktrees: true
+  supports_external_reviewer: true
+  supports_raw_verifier_capture: true
+
+discovery_evidence:
+  commands_or_tool_observations:
+    - "Active workspace: d:/Comfy UI/yang mills and the mass gap"
+    - "Tools exposed: run_command, view_file, replace_file_content, invoke_subagent, manage_subagents, etc."
+    - "Subagent transcript path: C:/Users/arqam/.gemini/antigravity/brain/<conversation-id>/.system_generated/logs/transcript.jsonl"
+    - "Raw capture script: scripts/capture_verifier_output.py"
+  timestamp_utc: "2026-08-24T09:00:00Z"
+  limitations: "Subagents execute under same OS user account; process isolation is managed via IDE agent orchestrator and read-only subagent tool restrictions (soft control)."

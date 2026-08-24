@@ -1,0 +1,26 @@
+$ D:\Comfy UI\yang mills and the mass gap\.venv\Scripts\python.exe -m pytest -q
+
+=================================== ERRORS ====================================
+_______________ ERROR collecting tests/test_governance_v293.py ________________
+ImportError while importing test module 'D:\Comfy UI\yang mills and the mass gap\tests\test_governance_v293.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\arqam\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_governance_v293.py:4: in <module>
+    import jsonschema
+E   ModuleNotFoundError: No module named 'jsonschema'
+=========================== short test summary info ===========================
+ERROR tests/test_governance_v293.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 0.33s
+
+
+[exit_code=2]
+
+$ D:\Comfy UI\yang mills and the mass gap\.venv\Scripts\python.exe scripts/check_repo.py
+PASS: repository invariants and governance YAML are readable.
+
+
+[exit_code=0]
