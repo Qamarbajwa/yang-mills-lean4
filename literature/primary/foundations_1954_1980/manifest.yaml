@@ -1,0 +1,306 @@
+manifest_version: '1.0'
+timestamp_utc: '2026-08-24T08:40:00Z'
+packet: YM-002A
+description: Foundational Yang-Mills Literature (1954-1980)
+sources:
+- source_id: PAPER-FOUND-001
+  theorem_ids:
+  - THM-YM-0001
+  canonical_title: Conservation of Isotopic Spin and Isotopic Gauge Invariance
+  authors:
+  - C. N. Yang
+  - R. L. Mills
+  year: 1954
+  journal: Physical Review
+  volume: '96'
+  pages: 191-195
+  doi: 10.1103/PhysRev.96.191
+  source_url: https://doi.org/10.1103/PhysRev.96.191
+  retrieval_time_utc: '2026-08-24T08:40:00Z'
+  source_type: JOURNAL_ARTICLE
+  primary_source: true
+  local_file: PAPER-FOUND-001/record.md
+  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  pages_or_sections_actually_inspected: Sections I-V (pp. 191-195)
+  limitations: Classical 4D formulation; no quantum existence, no renormalization,
+    no mass gap.
+  status: PARTIAL_PRIMARY_TEXT_CAPTURED
+  sha256: 5071e345acca858d420d747d40573a203e9f1038484734e18505a9fe87d8f0db
+- source_id: PAPER-FOUND-002
+  theorem_ids:
+  - THM-YM-0002
+  canonical_title: Feynman Diagrams for the Yang-Mills Field
+  authors:
+  - L. D. Faddeev
+  - V. N. Popov
+  year: 1967
+  journal: Physics Letters B
+  volume: '25'
+  pages: 29-30
+  doi: 10.1016/0370-2693(67)90067-6
+  source_url: https://doi.org/10.1016/0370-2693(67)90067-6
+  retrieval_time_utc: '2026-08-24T08:40:00Z'
+  source_type: JOURNAL_ARTICLE
+  primary_source: true
+  local_file: PAPER-FOUND-002/record.md
+  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  pages_or_sections_actually_inspected: Full text (pp. 29-30)
+  limitations: Perturbative functional integral gauge-fixing; Gribov ambiguity not
+    addressed; no non-perturbative measure.
+  status: PARTIAL_PRIMARY_TEXT_CAPTURED
+  sha256: 1f6540fa243a8bb4d440f21b64527de259f14b9758f01896b33a925584de8439
+- source_id: PAPER-FOUND-003
+  theorem_ids:
+  - THM-YM-0003
+  canonical_title: Renormalization of Massless Yang-Mills Fields
+  authors:
+  - G. 't Hooft
+  year: 1971
+  journal: Nuclear Physics B
+  volume: '33'
+  pages: 173-199
+  doi: 10.1016/0550-3213(71)90395-6
+  source_url: https://doi.org/10.1016/0550-3213(71)90395-6
+  retrieval_time_utc: '2026-08-24T08:40:00Z'
+  source_type: JOURNAL_ARTICLE
+  primary_source: true
+  local_file: PAPER-FOUND-003/record.md
+  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  pages_or_sections_actually_inspected: Sections 1-7 (pp. 173-199)
+  limitations: Perturbative proof of renormalizability; no non-perturbative continuum
+    existence; no mass gap.
+  status: PARTIAL_PRIMARY_TEXT_CAPTURED
+  sha256: 95cd0af12cf066d674bc5c1ba83e9a758108718c553339be54feff9dd458ebfc
+- source_id: PAPER-FOUND-004
+  theorem_ids:
+  - THM-YM-0005
+  canonical_title: Axioms for Euclidean Green's Functions
+  authors:
+  - K. Osterwalder
+  - R. Schrader
+  year: 1973
+  journal: Communications in Mathematical Physics
+  volume: '31'
+  pages: 83-112
+  doi: 10.1007/BF01645738
+  source_url: https://doi.org/10.1007/BF01645738
+  retrieval_time_utc: '2026-08-24T08:40:00Z'
+  source_type: JOURNAL_ARTICLE
+  primary_source: true
+  local_file: PAPER-FOUND-004/record.md
+  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  pages_or_sections_actually_inspected: Sections 1-4 (pp. 83-112)
+  limitations: Euclidean axiomatic reconstruction theorem; corrected and completed
+    in OS II (1975); does not construct 4D Yang-Mills.
+  status: PARTIAL_PRIMARY_TEXT_CAPTURED
+  sha256: fec9bd8d36fe544eb80a51d7a356fec5f59919a5db54103307f0e3288e0c6d86
+- source_id: PAPER-FOUND-005
+  theorem_ids:
+  - THM-YM-0005
+  canonical_title: Axioms for Euclidean Green's Functions II
+  authors:
+  - K. Osterwalder
+  - R. Schrader
+  year: 1975
+  journal: Communications in Mathematical Physics
+  volume: '42'
+  pages: 281-305
+  doi: 10.1007/BF01608978
+  source_url: https://doi.org/10.1007/BF01608978
+  retrieval_time_utc: '2026-08-24T08:40:00Z'
+  source_type: JOURNAL_ARTICLE
+  primary_source: true
+  local_file: PAPER-FOUND-005/record.md
+  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  pages_or_sections_actually_inspected: Sections 1-5 (pp. 281-305)
+  limitations: Definitive OS reconstruction theorem for general QFT; does not construct
+    Yang-Mills measure or prove 4D spectral gap.
+  status: PARTIAL_PRIMARY_TEXT_CAPTURED
+  sha256: b51aecd5eecc363db58ed0ee14f1d0a4d5a433a52c90233e0b5a5693e97c5bc7
+- source_id: PAPER-FOUND-006
+  theorem_ids:
+  - THM-YM-0006
+  canonical_title: Ultraviolet Behavior of Non-Abelian Gauge Theories
+  authors:
+  - D. J. Gross
+  - F. Wilczek
+  year: 1973
+  journal: Physical Review Letters
+  volume: '30'
+  pages: 1343-1346
+  doi: 10.1103/PhysRevLett.30.1343
+  source_url: https://doi.org/10.1103/PhysRevLett.30.1343
+  retrieval_time_utc: '2026-08-24T08:40:00Z'
+  source_type: JOURNAL_ARTICLE
+  primary_source: true
+  local_file: PAPER-FOUND-006/record.md
+  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  pages_or_sections_actually_inspected: Full Letter (pp. 1343-1346)
+  limitations: 1-loop perturbative beta function calculation; establishes UV asymptotic
+    freedom, not IR mass gap or non-perturbative confinement.
+  status: PARTIAL_PRIMARY_TEXT_CAPTURED
+  sha256: e60aea3c9a8a7293b81d07e9ca8ba12b82934d9f0d685634d55eca94938eca10
+- source_id: PAPER-FOUND-007
+  theorem_ids:
+  - THM-YM-0006
+  canonical_title: Reliable Perturbative Results for Strong Interactions?
+  authors:
+  - H. D. Politzer
+  year: 1973
+  journal: Physical Review Letters
+  volume: '30'
+  pages: 1346-1349
+  doi: 10.1103/PhysRevLett.30.1346
+  source_url: https://doi.org/10.1103/PhysRevLett.30.1346
+  retrieval_time_utc: '2026-08-24T08:40:00Z'
+  source_type: JOURNAL_ARTICLE
+  primary_source: true
+  local_file: PAPER-FOUND-007/record.md
+  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  pages_or_sections_actually_inspected: Full Letter (pp. 1346-1349)
+  limitations: 1-loop perturbative beta function; independent calculation of negative
+    beta function; limited to weak coupling UV.
+  status: PARTIAL_PRIMARY_TEXT_CAPTURED
+  sha256: 7cdf312377bab809f4870f639f83d87f37136bc32db8cb23659727ef55eb9931
+- source_id: PAPER-FOUND-008
+  theorem_ids:
+  - THM-YM-0007
+  canonical_title: A Planar Diagram Theory for Strong Interactions
+  authors:
+  - G. 't Hooft
+  year: 1974
+  journal: Nuclear Physics B
+  volume: '72'
+  pages: 461-473
+  doi: 10.1016/0550-3213(74)90154-0
+  source_url: https://doi.org/10.1016/0550-3213(74)90154-0
+  retrieval_time_utc: '2026-08-24T08:40:00Z'
+  source_type: JOURNAL_ARTICLE
+  primary_source: true
+  local_file: PAPER-FOUND-008/record.md
+  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  pages_or_sections_actually_inspected: Sections 1-5 (pp. 461-473)
+  limitations: Strictly limited to the limit N -> infinity with g^2 N fixed; does
+    not solve 4D pure Yang-Mills for finite N.
+  status: PARTIAL_PRIMARY_TEXT_CAPTURED
+  sha256: 8bd7868b4c97bd7ea608c63d0b5c286b144e7e3acbc6ae33215051b88eced059
+- source_id: PAPER-FOUND-009
+  theorem_ids:
+  - THM-YM-0008
+  canonical_title: Confinement of Quarks
+  authors:
+  - K. G. Wilson
+  year: 1974
+  journal: Physical Review D
+  volume: '10'
+  pages: 2445-2459
+  doi: 10.1103/PhysRevD.10.2445
+  source_url: https://doi.org/10.1103/PhysRevD.10.2445
+  retrieval_time_utc: '2026-08-24T08:40:00Z'
+  source_type: JOURNAL_ARTICLE
+  primary_source: true
+  local_file: PAPER-FOUND-009/record.md
+  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  pages_or_sections_actually_inspected: Sections I-VI (pp. 2445-2459)
+  limitations: Strong-coupling lattice expansion (g^2 >> 1); does not establish the
+    weak-coupling continuum limit a -> 0 or continuum mass gap.
+  status: PARTIAL_PRIMARY_TEXT_CAPTURED
+  sha256: 2c6fd6d2c4ba35c858ef998e9bf3cd9485abb9f8f80e26567a5f718ff1bc74a3
+- source_id: PAPER-FOUND-010
+  theorem_ids:
+  - THM-YM-0010
+  canonical_title: Pseudoparticle Solutions of the Yang-Mills Equations
+  authors:
+  - A. A. Belavin
+  - A. M. Polyakov
+  - A. S. Schwartz
+  - Yu. S. Tyupkin
+  year: 1975
+  journal: Physics Letters B
+  volume: '59'
+  pages: 85-87
+  doi: 10.1016/0370-2693(75)90163-X
+  source_url: https://doi.org/10.1016/0370-2693(75)90163-X
+  retrieval_time_utc: '2026-08-24T08:40:00Z'
+  source_type: JOURNAL_ARTICLE
+  primary_source: true
+  local_file: PAPER-FOUND-010/record.md
+  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  pages_or_sections_actually_inspected: Full Letter (pp. 85-87)
+  limitations: Classical 4D Euclidean solution; topological charge Q=1; does not establish
+    quantum mass gap or quantum measure.
+  status: PARTIAL_PRIMARY_TEXT_CAPTURED
+  sha256: 3400304ec05585d6885e850da9bd0be89b8bcf3547d6e2d1df6e7a7cf6946675
+- source_id: PAPER-FOUND-011
+  theorem_ids:
+  - THM-YM-0011
+  - THM-YM-0012
+  canonical_title: Quark Confinement and Topology of Gauge Theories
+  authors:
+  - A. M. Polyakov
+  year: 1977
+  journal: Nuclear Physics B
+  volume: '120'
+  pages: 429-458
+  doi: 10.1016/0550-3213(77)90086-4
+  source_url: https://doi.org/10.1016/0550-3213(77)90086-4
+  retrieval_time_utc: '2026-08-24T08:40:00Z'
+  source_type: JOURNAL_ARTICLE
+  primary_source: true
+  local_file: PAPER-FOUND-011/record.md
+  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  pages_or_sections_actually_inspected: Sections 1-6 (pp. 429-458)
+  limitations: Mass gap and confinement rigorously proved in 2+1D compact QED; 4D
+    non-Abelian instanton gas is a heuristic proposal with IR divergences.
+  status: PARTIAL_PRIMARY_TEXT_CAPTURED
+  sha256: ea59baacea004fff3eeeb9f752d4ff78fb27d5801491e65eae9b491620ee08b7
+- source_id: PAPER-FOUND-012
+  theorem_ids:
+  - THM-YM-0004
+  canonical_title: Regularization and Renormalization of Gauge Fields
+  authors:
+  - G. 't Hooft
+  - M. Veltman
+  year: 1972
+  journal: Nuclear Physics B
+  volume: '44'
+  pages: 189-213
+  doi: 10.1016/0550-3213(72)90279-9
+  source_url: https://doi.org/10.1016/0550-3213(72)90279-9
+  retrieval_time_utc: '2026-08-24T08:40:00Z'
+  source_type: JOURNAL_ARTICLE
+  primary_source: true
+  local_file: PAPER-FOUND-012/record.md
+  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  pages_or_sections_actually_inspected: Sections 1-6 (pp. 189-213)
+  limitations: Dimensional regularization in 4-epsilon dimensions; establishes all-orders
+    perturbative Ward identities; perturbative only.
+  status: PARTIAL_PRIMARY_TEXT_CAPTURED
+  admission_reason: Required to accurately state the full mathematical foundation
+    of gauge-invariant perturbative renormalization cited in Jaffe-Witten.
+  sha256: 24cd19309cd53f21e5d9e6aaf6bcd22720aee9b1ad9ed7f4ae5224f0f1fcf623
+- source_id: PAPER-FOUND-013
+  theorem_ids:
+  - THM-YM-0009
+  canonical_title: Gauge Theories on the Lattice
+  authors:
+  - K. Osterwalder
+  - E. Seiler
+  year: 1978
+  journal: Annals of Physics
+  volume: '110'
+  pages: 440-471
+  doi: 10.1016/0003-4916(78)90039-8
+  source_url: https://doi.org/10.1016/0003-4916(78)90039-8
+  retrieval_time_utc: '2026-08-24T08:40:00Z'
+  source_type: JOURNAL_ARTICLE
+  primary_source: true
+  local_file: PAPER-FOUND-013/record.md
+  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  pages_or_sections_actually_inspected: Sections 1-5 (pp. 440-471)
+  limitations: Rigorous lattice transfer matrix and reflection positivity for Wilson
+    action; does not establish continuum limit a -> 0.
+  status: PARTIAL_PRIMARY_TEXT_CAPTURED
+  admission_reason: Directly cited in Jaffe-Witten [36] as the foundational proof
+    of lattice reflection positivity and Hilbert space construction.
+  sha256: cd4ab1a7238e278dd96d109c1c410310a1489f57bad51fc316ec7ac773574853

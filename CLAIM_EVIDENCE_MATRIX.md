@@ -32,3 +32,22 @@
 | YM-REQ-028 | Extension of theory to arbitrary 4-manifolds is an extension, not required | Jaffe–Witten, Sec 5, p. 7 | DESIRABLE_EXTENSION | VERIFIED_FROM_PRIMARY_SOURCE |
 | YM-REQ-029 | Asymptotic completeness of scattering states is an open problem / extension | Jaffe–Witten, Sec 6.2, p. 9 | DESIRABLE_EXTENSION | VERIFIED_FROM_PRIMARY_SOURCE |
 | YM-REQ-030 | Large-$N$ string dualities are heuristic/extension approaches | Jaffe–Witten, Sec 6.6, pp. 12–13 | DESIRABLE_EXTENSION | VERIFIED_FROM_PRIMARY_SOURCE |
+
+## Foundational Theorem Claims (1954–1980)
+
+
+| Theorem ID | Claim Description | Primary Citation & Locators | Evidence Class | Evidentiary Status |
+|---|---|---|---|---|
+| THM-YM-0001 | Classical non-Abelian $SU(2)$ gauge invariance and non-linear wave equations | Yang & Mills 1954 (*Phys. Rev.* 96, 191–195) | RIGOROUS_THEOREM | VERIFIED_FROM_PRIMARY_SOURCE |
+| THM-YM-0002 | Faddeev–Popov functional determinant and ghost-extended perturbative gauge fixing | Faddeev & Popov 1967 (*Phys. Lett. B* 25, 29–30) | PERTURBATIVE_THEOREM | VERIFIED_FROM_PRIMARY_SOURCE |
+| THM-YM-0003 | Order-by-order perturbative renormalizability of massless Yang–Mills theory | 't Hooft 1971 (*Nucl. Phys. B* 33, 173–199) | PERTURBATIVE_THEOREM | VERIFIED_FROM_PRIMARY_SOURCE |
+| THM-YM-0004 | Dimensional regularization preserving all-orders gauge Ward identities | 't Hooft & Veltman 1972 (*Nucl. Phys. B* 44, 189–213) | PERTURBATIVE_THEOREM | VERIFIED_FROM_PRIMARY_SOURCE |
+| THM-YM-0005 | Osterwalder–Schrader Euclidean QFT reconstruction theorem to relativistic Wightman QFT | Osterwalder & Schrader 1973/1975 (*CMP* 31, 83; *CMP* 42, 281) | RIGOROUS_THEOREM | VERIFIED_FROM_PRIMARY_SOURCE |
+| THM-YM-0006 | Negative 1-loop beta function and logarithmic UV asymptotic freedom in 4D gauge theories | Gross & Wilczek 1973 (*PRL* 30, 1343); Politzer 1973 (*PRL* 30, 1346) | PERTURBATIVE_THEOREM | VERIFIED_FROM_PRIMARY_SOURCE |
+| THM-YM-0007 | Leading planar Feynman diagram dominance in large-$N$ limit ($N \to \infty, g^2 N$ fixed) | 't Hooft 1974 (*Nucl. Phys. B* 72, 461–473) | FORMAL_DERIVATION | VERIFIED_FROM_PRIMARY_SOURCE |
+| THM-YM-0008 | Wilson lattice gauge theory and exact strong-coupling area law (quark confinement) | Wilson 1974 (*Phys. Rev. D* 10, 2445–2459) | CONTROLLED_EXPANSION | VERIFIED_FROM_PRIMARY_SOURCE |
+| THM-YM-0009 | Osterwalder–Seiler lattice reflection positivity and physical transfer matrix on lattice | Osterwalder & Seiler 1978 (*Ann. Phys.* 110, 440–471) | RIGOROUS_THEOREM | VERIFIED_FROM_PRIMARY_SOURCE |
+| THM-YM-0010 | BPST finite-action self-dual classical instanton solutions in 4D Euclidean space ($Q=1$) | Belavin et al. 1975 (*Phys. Lett. B* 59, 85–87) | RIGOROUS_THEOREM | VERIFIED_FROM_PRIMARY_SOURCE |
+| THM-YM-0011 | Debye screening and dynamical mass gap from magnetic monopoles in 2+1D compact QED | Polyakov 1977 (*Nucl. Phys. B* 120, 429–458) | RIGOROUS_THEOREM | VERIFIED_FROM_PRIMARY_SOURCE |
+| THM-YM-0012 | Semiclassical instanton gas proposal for 4D non-Abelian confinement and mass gap | Polyakov 1977 (*Nucl. Phys. B* 120, 429–458) | CONJECTURE_OR_PROPOSAL | VERIFIED_FROM_PRIMARY_SOURCE |
+

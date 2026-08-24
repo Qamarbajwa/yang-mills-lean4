@@ -1,0 +1,35 @@
+{
+  "task_id": "YM-000",
+  "timestamp_utc": "2026-08-24T08:44:49.461625+00:00",
+  "status": "FAIL",
+  "evidence_level": "E3_REPRODUCIBLE_MACHINE_EVIDENCE",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "git_sha": "33930cfaf28eaab509720762b1c9f064ed88cad4",
+  "git_branch": "master",
+  "git_status": "M CLAIM_EVIDENCE_MATRIX.md\n M NEGATIVE_EVIDENCE_REGISTER.md\n M RESEARCH_LEDGER.md\n M THEOREM_LEDGER.md\n?? evidence/test_runs/verify_20260824T084449Z.log\n?? literature/FOUNDATIONAL_DEPENDENCY_GRAPH.md\n?? literature/FOUNDATIONAL_LIMITATION_MATRIX.md\n?? literature/primary/foundations_1954_1980/\n?? scripts/build_ym002a_sources.py\n?? tests/test_foundational_literature.py",
+  "commands": [
+    {
+      "command": [
+        "D:\\Comfy UI\\yang mills and the mass gap\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 1,
+      "stdout": "................F.................                                       [100%]\n================================== FAILURES ===================================\n___________________ test_no_theorem_marked_clay_sufficient ____________________\n\n    def test_no_theorem_marked_clay_sufficient():\n        lim_matrix = parse_limitation_matrix()\n        for thm_id, row in lim_matrix.items():\n>           assert row.get(\"CLAY_SUFFICIENT\") == \"NO\", f\"{thm_id} cannot be marked CLAY_SUFFICIENT without complete existence + mass gap\"\nE           AssertionError: THM-YM-0011 cannot be marked CLAY_SUFFICIENT without complete existence + mass gap\nE           assert 'NO (2+1D U(1) only)' == 'NO'\nE             \nE             - NO\nE             + NO (2+1D U(1) only)\n\ntests\\test_foundational_literature.py:161: AssertionError\n=========================== short test summary info ===========================\nFAILED tests/test_foundational_literature.py::test_no_theorem_marked_clay_sufficient\n1 failed, 33 passed in 0.27s\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\Comfy UI\\yang mills and the mass gap\\.venv\\Scripts\\python.exe",
+        "scripts/check_repo.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: repository invariants and governance YAML are readable.\n",
+      "stderr": ""
+    }
+  ],
+  "log_file": "evidence\\test_runs\\verify_20260824T084449Z.log",
+  "log_sha256": "7f3ae936f0578ad7bf95bffed8cb6836f4a60d789847e88883775266eee56260"
+}

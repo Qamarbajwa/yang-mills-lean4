@@ -1,0 +1,28 @@
+$ D:\Comfy UI\yang mills and the mass gap\.venv\Scripts\python.exe -m pytest -q
+................F.................                                       [100%]
+================================== FAILURES ===================================
+___________________ test_no_theorem_marked_clay_sufficient ____________________
+
+    def test_no_theorem_marked_clay_sufficient():
+        lim_matrix = parse_limitation_matrix()
+        for thm_id, row in lim_matrix.items():
+>           assert row.get("CLAY_SUFFICIENT") == "NO", f"{thm_id} cannot be marked CLAY_SUFFICIENT without complete existence + mass gap"
+E           AssertionError: THM-YM-0011 cannot be marked CLAY_SUFFICIENT without complete existence + mass gap
+E           assert 'NO (2+1D U(1) only)' == 'NO'
+E             
+E             - NO
+E             + NO (2+1D U(1) only)
+
+tests\test_foundational_literature.py:161: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_foundational_literature.py::test_no_theorem_marked_clay_sufficient
+1 failed, 33 passed in 0.27s
+
+
+[exit_code=1]
+
+$ D:\Comfy UI\yang mills and the mass gap\.venv\Scripts\python.exe scripts/check_repo.py
+PASS: repository invariants and governance YAML are readable.
+
+
+[exit_code=0]
