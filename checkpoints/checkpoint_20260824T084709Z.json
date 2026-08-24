@@ -1,0 +1,10 @@
+{
+  "timestamp_utc": "2026-08-24T08:47:09.009736+00:00",
+  "git_sha": "01f177555e09d571a25c8f5b1d50685e5be53e2d",
+  "git_branch": "master",
+  "working_tree_status": "",
+  "verification_evidence": "evidence\\test_runs\\verify_20260824T084700Z.json",
+  "verification_log_sha256": "81a81f6bb2ce218de5d7b98130d477268435ef0be7754bf651eda1aa853c5885",
+  "checkpoint_state": "KNOWN_GOOD_CHECKPOINT_CANDIDATE",
+  "checkpoint_record_sha256": "329a4f99841cdd6b4469ac6a329c3e04ed7d042596815b4ac1adf312ac1dba6d"
+}
