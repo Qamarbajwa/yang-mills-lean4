@@ -1,0 +1,35 @@
+{
+  "task_id": "YM-000",
+  "timestamp_utc": "2026-08-24T22:25:30.940427+00:00",
+  "status": "PASS",
+  "evidence_level": "E3_REPRODUCIBLE_MACHINE_EVIDENCE",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "git_sha": "d9fc71a4867f5a695d5b50401bdd9cb569477148",
+  "git_branch": "master",
+  "git_status": "M CURRENT_SCIENTIFIC_STATE.md\n M EVIDENCE_LEDGER.md\n M NEXT_ACTION.md\n M TASK_GRAPH.md\n M governance/CONTRACT_OWNERSHIP_LEDGER.yaml\n M tests/test_verification_provenance.py\n?? evidence/test_runs/verify_20260824T222530Z.log\n?? verification/YM-002CR1_INDEPENDENT_REVIEW.md\n?? verification/raw/YM-002CR1_E4_RAW_20260824T222447Z.md",
+  "commands": [
+    {
+      "command": [
+        "D:\\Comfy UI\\yang mills and the mass gap\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 0,
+      "stdout": "........................................................................ [ 57%]\n.....................................................                    [100%]\n125 passed in 0.43s\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\Comfy UI\\yang mills and the mass gap\\.venv\\Scripts\\python.exe",
+        "scripts/check_repo.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: repository invariants and governance YAML are readable.\n",
+      "stderr": ""
+    }
+  ],
+  "log_file": "evidence\\test_runs\\verify_20260824T222530Z.log",
+  "log_sha256": "d648c81ed43707e6e1ca050d57e32c1fc622fe1e4ae60c8ecf68d6bd7c4e767f"
+}
