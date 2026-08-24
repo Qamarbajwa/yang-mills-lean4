@@ -2,7 +2,9 @@ routing_policy:
   version: "2.9.4"
   invariants:
     - "WRITER_ID != REVIEWER_ID for all T3+ contracts"
-    - "WRITER_ID != ACCEPTANCE_AUTHORITY_ID for all consequential contracts"
+    - "WRITER_EXECUTION_ID != REVIEWER_EXECUTION_ID for all T3+ contracts"
+    - "WRITER_EXECUTION_ID != ACCEPTANCE_AUTHORITY_EXECUTION_ID for independent technical acceptance"
+    - "ROLE_NAME DIFFERENCE != EXECUTION IDENTITY SEPARATION"
     - "NO_PERMANENT_MODEL_ACCEPTANCE_AUTHORITY (Acceptance Authority is a functional role)"
     - "Acceptance routing is environment-local by default; cross-application is optional fallback"
 
@@ -38,14 +40,17 @@ role_assignments:
     constraints: "Actively attempts to construct counterexamples and find flaws"
 
   ACCEPTANCE_AUTHORITY:
-    agent_id: "antigravity-local-acceptance-orchestrator"
+    agent_id: "antigravity-human-owner-and-ci-evaluator"
     environment: "Antigravity"
     authority_type: "ENVIRONMENT_LOCAL"
     risk_tiers: ["T0", "T1", "T2", "T3", "T4"]
-    constraints: "E3 deterministic test pass + genuine E4 receipt required. No universal provider authority."
+    constraints: "E3 deterministic test pass + genuine E4 receipt required. Cannot share execution identity with writer."
+
+
 
   HUMAN_AUTHORITY:
     agent_id: "project-owner-human"
     environment: "User"
     risk_tiers: ["T4", "T5"]
     constraints: "Mandatory for production release or fundamental constitution overhaul"
+

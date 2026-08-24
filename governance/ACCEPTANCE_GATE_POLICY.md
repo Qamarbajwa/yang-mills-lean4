@@ -28,3 +28,10 @@ CANDIDATE
 - If any material candidate artifact changes after review, `OLD EVIDENCE = STALE`.
 - Full E3 machine verification and E4 independent review must be rerun against the exact final candidate.
 
+## 5. Execution Identity Separation vs Role Name Inequality
+- `ROLE_NAME DIFFERENCE != EXECUTION IDENTITY SEPARATION`.
+- For T3+ contracts, the writer execution identity (`writer.execution_id`) and reviewer execution identity (`reviewer.execution_id`) must be distinct.
+- A single agent cannot satisfy independent technical acceptance merely by renaming its role from `primary-writer` to `local-orchestrator` within the same execution session (`writer.execution_id == acceptance_authority.execution_id`).
+- Independent technical acceptance must bind to a distinct subagent session, deterministic CI evaluator, or the Human Project Owner.
+
+

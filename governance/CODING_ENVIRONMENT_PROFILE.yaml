@@ -32,17 +32,20 @@ capabilities:
   supports_raw_verifier_capture: true
 
 acceptance_capabilities:
-  local_parent_orchestrator: true
-  distinct_reviewer: true
-  automated_acceptance_gate: true
-  human_approval_available: true
+  local_parent_orchestrator: true  # Interactive main agent session orchestrates subagents
+  distinct_reviewer: true          # Genuine isolated subagent sessions with read-only tools
+  automated_acceptance_gate: true  # Machine E3 deterministic pytest suite
+  human_approval_available: true   # Interactive user sign-off
 
 discovery_evidence:
   evidence:
     - "Active workspace: d:/Comfy UI/yang mills and the mass gap"
+    - "Primary interactive worker session: 00ffe8a3-c73a-4096-b0e7-53138b34c21a"
     - "Tools exposed: run_command, view_file, replace_file_content, invoke_subagent, manage_subagents, etc."
     - "Subagent transcript path: C:/Users/arqam/.gemini/antigravity/brain/<conversation-id>/.system_generated/logs/transcript.jsonl"
     - "Raw capture script: scripts/capture_verifier_output.py"
-    - "Acceptance authority: Environment-local Antigravity Orchestrator + Deterministic Test Suite"
-  timestamp_utc: "2026-08-24T09:15:00Z"
-  limitations: "Subagents execute under same OS user account; process isolation is managed via IDE agent orchestrator and read-only subagent tool restrictions (soft control)."
+    - "Acceptance authority: Deterministic CI Suite (E3) + Independent Subagent Verifier (E4) + Human Project Owner (T4/T5)"
+  timestamp_utc: "2026-08-24T15:10:00Z"
+  limitations: "Single primary worker cannot self-sign as an independent local acceptance orchestrator; execution identity separation requires distinct subagents or Human Owner."
+
+
