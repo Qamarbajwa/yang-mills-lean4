@@ -72,8 +72,8 @@ contracts:
     model: Gemini / Antigravity
   reviewer:
     environment: Antigravity
-    agent_id: independent-verifier-subagent
-    execution_id: "conversation://subagent"
+    agent_id: 6f209429-fd90-4d78-9d0f-132d899cd455
+    execution_id: "conversation://6f209429-fd90-4d78-9d0f-132d899cd455"
     model: Gemini / Antigravity
     independence_level: LEVEL_A_SAME_APP_SAME_MODEL_SEPARATE_SESSION
   acceptance_authority:
@@ -98,7 +98,9 @@ contracts:
     - "OFFICIAL_PROBLEM_SPECIFICATION.md"
     - "Creating synthetic acceptance-authority aliases"
     - "Authoring raw E4 text directly"
-  outcome: IN_PROGRESS
+  candidate_id: d2842b2dfd813e44370f2e6af162b2e7bd3fb134
+  outcome: ACCEPTED
+
 - contract_id: CONTRACT-YM-GOV-293
   task_id: YM-GOV-293
   risk_tier: T4

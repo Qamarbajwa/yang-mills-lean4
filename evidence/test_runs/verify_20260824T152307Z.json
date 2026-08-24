@@ -1,0 +1,35 @@
+{
+  "task_id": "YM-000",
+  "timestamp_utc": "2026-08-24T15:23:07.911674+00:00",
+  "status": "FAIL",
+  "evidence_level": "E3_REPRODUCIBLE_MACHINE_EVIDENCE",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "git_sha": "d2842b2dfd813e44370f2e6af162b2e7bd3fb134",
+  "git_branch": "master",
+  "git_status": "M CURRENT_SCIENTIFIC_STATE.md\n M EVIDENCE_LEDGER.md\n M NEXT_ACTION.md\n M TASK_GRAPH.md\n M governance/CONTRACT_OWNERSHIP_LEDGER.yaml\n M verification/YM-002AR1_INDEPENDENT_REVIEW.md\n?? evidence/test_runs/verify_20260824T152243Z.json\n?? evidence/test_runs/verify_20260824T152243Z.log\n?? evidence/test_runs/verify_20260824T152307Z.log\n?? verification/raw/YM-002AR1_E4_RAW_20260824T152143Z.md",
+  "commands": [
+    {
+      "command": [
+        "D:\\Comfy UI\\yang mills and the mass gap\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 1,
+      "stdout": "........................................................................ [ 75%]\n.......................F                                                 [100%]\n================================== FAILURES ===================================\n___________ test_ym002ar1_independent_review_provenance_if_present ____________\n\n    def test_ym002ar1_independent_review_provenance_if_present():\n        review_path = ROOT / \"verification\" / \"YM-002AR1_INDEPENDENT_REVIEW.md\"\n        if not review_path.exists():\n            return\n        content = review_path.read_text(encoding=\"utf-8\")\n    \n        # Raw file reference\n        m_raw = re.search(r\"DERIVED FROM[:\\* ]*`([^`]+)`\", content)\n>       assert m_raw, \"Must declare DERIVED FROM raw verifier file\"\nE       AssertionError: Must declare DERIVED FROM raw verifier file\nE       assert None\n\ntests\\test_verification_provenance.py:78: AssertionError\n=========================== short test summary info ===========================\nFAILED tests/test_verification_provenance.py::test_ym002ar1_independent_review_provenance_if_present\n1 failed, 95 passed in 1.29s\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\Comfy UI\\yang mills and the mass gap\\.venv\\Scripts\\python.exe",
+        "scripts/check_repo.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: repository invariants and governance YAML are readable.\n",
+      "stderr": ""
+    }
+  ],
+  "log_file": "evidence\\test_runs\\verify_20260824T152307Z.log",
+  "log_sha256": "426e1ac82ff261f4aad572abe40bb04e0a557570cd494826615134fb0b01abc6"
+}

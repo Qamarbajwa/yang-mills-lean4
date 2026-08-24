@@ -1,0 +1,31 @@
+$ D:\Comfy UI\yang mills and the mass gap\.venv\Scripts\python.exe -m pytest -q
+........................................................................ [ 75%]
+.......................F                                                 [100%]
+================================== FAILURES ===================================
+___________ test_ym002ar1_independent_review_provenance_if_present ____________
+
+    def test_ym002ar1_independent_review_provenance_if_present():
+        review_path = ROOT / "verification" / "YM-002AR1_INDEPENDENT_REVIEW.md"
+        if not review_path.exists():
+            return
+        content = review_path.read_text(encoding="utf-8")
+    
+        # Raw file reference
+        m_raw = re.search(r"DERIVED FROM[:\* ]*`([^`]+)`", content)
+>       assert m_raw, "Must declare DERIVED FROM raw verifier file"
+E       AssertionError: Must declare DERIVED FROM raw verifier file
+E       assert None
+
+tests\test_verification_provenance.py:78: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_verification_provenance.py::test_ym002ar1_independent_review_provenance_if_present
+1 failed, 95 passed in 1.29s
+
+
+[exit_code=1]
+
+$ D:\Comfy UI\yang mills and the mass gap\.venv\Scripts\python.exe scripts/check_repo.py
+PASS: repository invariants and governance YAML are readable.
+
+
+[exit_code=0]
