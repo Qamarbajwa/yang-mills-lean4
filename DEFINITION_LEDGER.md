@@ -1,4 +1,23 @@
 # DEFINITION LEDGER
 
-| ID | Term | Definition | Source | Scope | Status |
-|---|---|---|---|---|---|
+## Terminology and Mathematical Definitions
+
+| Definition ID | Term | Formal Definition / Meaning in Primary Source | Source Citation & Locators | Definition Status |
+|---|---|---|---|---|
+| DEF-YM-001 | Gauge group | A Lie group $G$ acting as internal local symmetry transformations on connections and matter fields. | Jaffe–Witten, Sec 1, pp. 1–2 | VERIFIED_FROM_PRIMARY_SOURCE |
+| DEF-YM-002 | Compact simple gauge group | A compact connected Lie group $G$ whose Lie algebra $\mathfrak{g}$ is simple (contains no non-trivial proper ideals). Includes $SU(N) (N \ge 2), SO(N) (N \ge 3), Sp(N) (N \ge 1)$, and exceptional groups $G_2, F_4, E_6, E_7, E_8$. | Jaffe–Witten, Sec 4, p. 6 | VERIFIED_FROM_PRIMARY_SOURCE |
+| DEF-YM-003 | Connection | A principal $G$-connection $A$, locally a $\mathfrak{g}$-valued 1-form on spacetime defining the gauge-covariant derivative $d_A = d + A \wedge \cdot$. | Jaffe–Witten, Sec 1, pp. 1–2 | VERIFIED_FROM_PRIMARY_SOURCE |
+| DEF-YM-004 | Curvature $F$ | The $\mathfrak{g}$-valued 2-form $F = dA + A \wedge A$, representing the field strength tensor $F_{\mu\nu}$. | Jaffe–Witten, Sec 1, pp. 1–2 | VERIFIED_FROM_PRIMARY_SOURCE |
+| DEF-YM-005 | Gauge-invariant local polynomial | Classical differential polynomials constructed from $F$ and its gauge-covariant derivatives invariant under local gauge transformations, e.g. $\mathrm{Tr}(F_{ij}F_{kl}(x))$. | Jaffe–Witten, Sec 4, p. 6 | VERIFIED_FROM_PRIMARY_SOURCE |
+| DEF-YM-006 | Quantum field | An operator-valued generalized function (distribution) on spacetime acting on a dense invariant domain $\mathcal{D}$ of a Hilbert space $\mathcal{H}$ obeying QFT axioms. | Jaffe–Witten, Sec 3, p. 5 | VERIFIED_FROM_PRIMARY_SOURCE |
+| DEF-YM-007 | Hilbert space | A separable complex Hilbert space $\mathcal{H}$ carrying a continuous unitary representation of the Poincaré group $\mathcal{P}_+^{\uparrow}$. | Jaffe–Witten, Sec 3, p. 5 | VERIFIED_FROM_PRIMARY_SOURCE |
+| DEF-YM-008 | Vacuum $\Omega$ | A unit vector $\Omega \in \mathcal{H}$, unique up to a phase, invariant under all Poincaré transformations ($U(a, \Lambda)\Omega = \Omega$), with $H\Omega = 0, \vec{P}\Omega = 0$. | Jaffe–Witten, Sec 3, p. 5 | VERIFIED_FROM_PRIMARY_SOURCE |
+| DEF-YM-009 | Hamiltonian $H$ | The self-adjoint generator of time translations on $\mathcal{H}$, satisfying $H \ge 0$. | Jaffe–Witten, Sec 3, p. 5; Sec 4, p. 6 | VERIFIED_FROM_PRIMARY_SOURCE |
+| DEF-YM-010 | Positive energy | The spectral condition $\mathrm{spec}(H) \subseteq [0, \infty)$, with the joint spectrum of $(H, \vec{P})$ supported in the closed forward light-cone $\overline{V_+}$. | Jaffe–Witten, Sec 3, p. 5; Sec 4, p. 6 | VERIFIED_FROM_PRIMARY_SOURCE |
+| DEF-YM-011 | Mass gap $\Delta$ | A strictly positive real constant $\Delta > 0$ such that the Hamiltonian $H$ has no spectrum in the open interval $(0, \Delta)$: $\mathrm{spec}(H) \cap (0, \Delta) = \emptyset$. | Jaffe–Witten, Sec 4, p. 6 | VERIFIED_FROM_PRIMARY_SOURCE |
+| DEF-YM-012 | Mass $m$ | The supremum of all mass gap parameters $\Delta$: $m = \sup \{ \Delta > 0 : \mathrm{spec}(H) \cap (0, \Delta) = \emptyset \}$, required to satisfy $m < \infty$. | Jaffe–Witten, Sec 4, p. 6 | VERIFIED_FROM_PRIMARY_SOURCE |
+| DEF-YM-013 | Clustering | Exponential spatial decay of truncated vacuum expectation values: $|\langle \Omega, \mathcal{O}(\vec{x}) \mathcal{O}(\vec{y}) \Omega \rangle| \le \exp(-C |\vec{x} - \vec{y}|)$ for $C < \Delta$ and $\langle \Omega, \mathcal{O}\Omega \rangle = 0$. | Jaffe–Witten, Sec 5, p. 6, Eq. (2) | DERIVED_CONSEQUENCE |
+| DEF-YM-014 | Reflection positivity | The property of Euclidean functional measures/Schwinger functions that the time-reflected inner product on positive-time test functions is positive semidefinite, enabling OS reconstruction of $\mathcal{H}$. | Jaffe–Witten, Sec 3, p. 5; Sec 6.2, p. 8; Sec 6.5, p. 11 | VERIFIED_FROM_PRIMARY_SOURCE |
+| DEF-YM-015 | Non-trivial quantum Yang–Mills theory | A quantum Yang–Mills theory on $\mathbb{R}^4$ with non-Gaussian Schwinger functions and non-trivial interactions/scattering matching asymptotic freedom, not a generalized free field. | Jaffe–Witten, Sec 4, p. 6; Sec 6.2, p. 8 | PARTIAL_SOURCE_DEFINITION |
+| DEF-YM-016 | Continuum limit | The limit as the regularization UV cutoff is removed (e.g. lattice spacing $a \to 0$) such that correlation functions of renormalized observables converge to distributions on continuous spacetime $\mathbb{R}^4$. | Jaffe–Witten, Sec 6.5, p. 11 | VERIFIED_FROM_PRIMARY_SOURCE |
+| DEF-YM-017 | Infinite-volume limit | The thermodynamic IR limit as the spatial/spacetime volume $V \to \infty$ (e.g. $T^4 \to \mathbb{R}^4$) with boundary conditions removed. | Jaffe–Witten, Sec 6, p. 7; Sec 6.5, p. 11 | VERIFIED_FROM_PRIMARY_SOURCE |

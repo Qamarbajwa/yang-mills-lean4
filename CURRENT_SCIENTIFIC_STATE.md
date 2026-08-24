@@ -1,11 +1,12 @@
 # CURRENT SCIENTIFIC STATE
 
 ## VERIFIED
-- Local repository scaffold exists once the bootstrap verification suite passes.
+- Local repository scaffold exists and passes the bootstrap verification suite (YM-000).
+- The official Millennium Problem specification has been reconstructed from primary Clay sources (Jaffe & Witten 2000/2006) and independently verified (YM-001).
+- 30 formal requirements, 17 mathematical definitions, and full source provenance are recorded and machine-checked against primary artifacts.
 
-## EXTERNALLY SOURCED / TO BE VERIFIED IN YM-001+
-- The Clay Yang–Mills existence and mass-gap problem remains the target.
-- Major literature families have been identified, but individual theorem statements are not yet admitted to project truth.
+## EXTERNALLY SOURCED / TO BE ADVANCED IN YM-002+
+- Literature families (Constructive QFT, Balaban RG, Lattice gauge theory, Osterwalder–Schrader / Wightman reconstructions) identified for structured theorem extraction.
 
 ## UNVERIFIED
 - No original Yang–Mills lemma has been established in this repository.
@@ -16,4 +17,5 @@
 The exact theorem-level dependency map between rigorous UV control and rigorous IR mass-gap results has not yet been constructed.
 
 ## NEXT ACTION
-`YM-001`: reconstruct the official problem statement and its acceptance obligations from primary sources.
+`YM-002`: build theorem and literature advancement ledger.
+

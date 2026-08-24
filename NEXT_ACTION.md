@@ -1,16 +1,16 @@
 # NEXT ACTION
 
 ## Current action
-`YM-000 — Local bootstrap`
+`YM-002 — Theorem / Literature Advancement Ledger`
 
 ## Exit criteria
-- Python environment created.
-- Development dependencies installed.
-- Repository invariant tests pass.
-- Verification record written to `evidence/test_runs/`.
-- Git repository initialized.
-- Initial commit created by the human/operator.
-- Checkpoint seal created after the commit.
+- Primary and secondary literature families structured under `literature/`.
+- Concrete theorem-level extractions recorded in `THEOREM_LEDGER.md`.
+- Hypotheses recorded in `HYPOTHESIS_REGISTER.md`.
+- Automated test suite passes and verified test run recorded.
+- Checkpoint sealed.
 
-## After YM-000
-Proceed to `YM-001 — Official problem specification`.
+## Completed actions
+- `YM-000 — Local bootstrap` (DONE)
+- `YM-001 — Official problem specification` (INDEPENDENTLY_VERIFIED)
+

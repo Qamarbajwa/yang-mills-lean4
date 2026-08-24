@@ -1,0 +1,46 @@
+manifest_version: '1.0'
+timestamp_utc: '2026-08-24T07:22:05Z'
+repository: Yang-Mills and the Mass Gap
+task_id: YM-001
+sources:
+- source_id: SRC-CLAY-001
+  canonical_title: Quantum Yang-Mills Theory
+  authors:
+  - Arthur Jaffe
+  - Edward Witten
+  source_organization: Clay Mathematics Institute
+  source_url: https://www.claymath.org/wp-content/uploads/2022/06/yangmills.pdf
+  file_name: jaffe_witten_yang_mills.pdf
+  file_size_bytes: 195976
+  sha256: 3558403ca14c11e382f73a09e548222708540bfdf478cf96aa11c52d43e23e09
+  retrieval_timestamp_utc: '2026-08-24T07:22:05Z'
+  classification: PRIMARY_OFFICIAL_PROBLEM_DESCRIPTION
+  publication_info: The Millennium Prize Problems, Clay Mathematics Institute / American
+    Mathematical Society, 2006, pp. 129-152
+  pages_total: 14
+  sections_used:
+  - 1. The Physics of Gauge Theory (pp. 1-3)
+  - 2. Quest for Mathematical Understanding (pp. 3-5)
+  - 3. Quantum Fields (pp. 5-6)
+  - 4. The Problem (pp. 6-7)
+  - 5. Comments (pp. 6-7)
+  - 6. Mathematical Perspective (pp. 7-12)
+  - Footnote 1 (p. 6)
+  - Footnote 2 (p. 12)
+  - References [1]-[50] (pp. 12-14)
+- source_id: SRC-CLAY-002
+  canonical_title: Yang-Mills & The Mass Gap (Official Problem Page)
+  authors:
+  - Clay Mathematics Institute
+  source_organization: Clay Mathematics Institute
+  source_url: https://www.claymath.org/millennium/yang-mills-the-maths-gap/
+  file_name: CURRENT_CLAY_STATUS.md
+  file_size_bytes: 671
+  sha256: c0069ad6f05c8d950a3521abc67aefc02db52da69eb6276b552586c78af369b5
+  retrieval_timestamp_utc: '2026-08-24T07:22:05Z'
+  classification: PRIMARY_OFFICIAL_STATUS_PAGE
+  publication_info: Clay Mathematics Institute Millennium Prize Problems official
+    website
+  pages_total: 1
+  sections_used:
+  - Problem summary and official status
