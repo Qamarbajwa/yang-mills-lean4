@@ -124,19 +124,23 @@
 - **Date:** 2026-08-24
 - **Question:** What was the mathematical scope and limitation of the 1981 Göpfert–Mack confinement proof?
 - **Primary Source:** M. Göpfert & G. Mack, *Comm. Math. Phys.* 82 (1981), 545–590 (`PAPER-CONST-001`).
-- **Findings:** They rigorously proved confinement of static quarks (non-zero string tension $\sigma > 0$) for all coupling constants $g^2$ in 3D $U(1)$ lattice gauge theory with Villain action. In the continuum limit with Debye mass $m_D$ fixed, the dual theory converges to a free massive scalar field. It does not generalize to 4D or non-Abelian gauge groups.
+- **Epistemic Classification:** `[PRIMARY_SOURCE_RESULT]` (Theorems 1–3) / `[PRIMARY_SOURCE_LIMITATION]`
+- **Findings:** They rigorously proved static quark confinement (non-zero string tension $\sigma > 0$) for all values of coupling $g^2$ in 3D $U(1)$ lattice gauge theory with Villain action. In the continuum limit with physical Debye mass $m_D > 0$ held fixed, the dual field theory converges to a free massive scalar field. Monopoles in 3D Euclidean spacetime are 0D point events. The method does not generalize directly to 4D where monopoles are 1D closed current loops, nor to non-Abelian gauge groups.
 - **Outcome:** Recorded as `THM-YM-0013` and `PATH-CONST-001`.
 
 ### RES-YM-002B-002: What is the exact mathematical scope of Bałaban's RG program?
 - **Date:** 2026-08-24
 - **Question:** What did Bałaban prove in 4D Yang–Mills, and where did the program stop?
 - **Primary Sources:** T. Bałaban, *Comm. Math. Phys.* 95 (1984), 419; *ibid.* 109 (1987), 249; *ibid.* 116 (1988), 1; *ibid.* 119 (1988), 243 (`PAPER-CONST-004`, `PAPER-CONST-005`, `PAPER-CONST-006`).
-- **Findings:** Bałaban proved Ultraviolet Stability for 4D pure Yang–Mills theory in a fixed finite volume $V < \infty$, showing the partition function $Z(a, V)$ has uniform upper and lower bounds as the lattice cutoff $a 	o 0$. However, the infinite-volume limit $V 	o \infty$ and mass gap generation were not achieved because as the RG flow reaches the infrared, the running coupling grows large ($g_k \sim 1$), causing the small-field and polymer expansions to diverge.
+- **Epistemic Classification:** `[PRIMARY_SOURCE_RESULT]` (UV stability) / `[PRIMARY_SOURCE_LIMITATION]` (finite volume $V < \infty$) / `[LATER_LITERATURE_LIMITATION]`
+- **Findings:** Bałaban proved 4D Ultraviolet Stability in a fixed finite volume $V < \infty$: uniform upper and lower bounds on the partition function $Z(a, V)$ as $a \to 0$. In the infinite volume limit ($V \to \infty$), the RG trajectory enters the strong-coupling infrared regime ($g_k \sim 1$), where small-field inductive series and large-field polymer expansions lose convergence without an independent infrared closure mechanism.
 - **Outcome:** Recorded as `THM-YM-0016`, `THM-YM-0017`, `THM-YM-0018`, and `PATH-CONST-002`.
 
 ### RES-YM-002B-003: What did Magnen, Rivasseau, and Sénéor achieve in 1993?
 - **Date:** 2026-08-24
 - **Question:** What was constructed in the 1993 MRS paper on $YM_4$?
 - **Primary Source:** J. Magnen, V. Rivasseau, R. Sénéor, *Comm. Math. Phys.* 155 (1993), 325–383 (`PAPER-CONST-008`).
-- **Findings:** They rigorously constructed 4D Euclidean Yang–Mills Schwinger distributions with an artificial infrared cutoff $\Lambda_{IR} > 0$, proving the continuum limit $a 	o 0$ exists and is non-perturbatively Borel summable. The infrared cutoff cannot be removed without prior non-perturbative control over the mass gap $\Delta > 0$.
+- **Epistemic Classification:** `[PRIMARY_SOURCE_RESULT]` (Theorems 1–4) / `[PRIMARY_SOURCE_LIMITATION]` (p. 326) / `[PROJECT_SYNTHESIS]`
+- **Findings:** They constructively proved the existence of 4D Euclidean Yang–Mills Schwinger distributions with an artificial infrared cutoff $\Lambda_{IR} > 0$ (such as finite volume or mass regulator), proving UV Borel summability. The authors explicitly stated (p. 326) that the removal of the infrared cutoff ($\Lambda_{IR} \to 0$) remains open. In constructive field theory literature, removing $\Lambda_{IR}$ without a prior mass gap is obstructed by infrared renormalons.
 - **Outcome:** Recorded as `THM-YM-0020` and `PATH-CONST-003`.
+

@@ -201,6 +201,44 @@ contracts:
     - "Authoring raw E4 text directly"
   candidate_id: 41f51cddeed6518ef4fe7a04850638fab4ea218f
   outcome: ACCEPTED
+- contract_id: CONTRACT-YM-002BR1
+  task_id: YM-002BR1
+  risk_tier: T3
+  base_sha: "0613010738676d4993a4669894e6c382103f169f"
+  writer:
+    environment: Antigravity
+    agent_id: primary-writer-gemini
+    execution_id: "conversation://00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    model: Gemini / Antigravity
+  reviewer:
+    environment: Antigravity
+    agent_id: independent-verifier-subagent
+    execution_id: "conversation://subagent"
+    model: Gemini / Antigravity
+    independence_level: LEVEL_A_SAME_APP_SAME_MODEL_SEPARATE_SESSION
+  acceptance_authority:
+    environment: "HumanOwner + CI"
+    authority_id: human-owner-and-ci-evaluator
+    execution_id: "user-interactive-session + deterministic-ci"
+    authority_type: ENVIRONMENT_LOCAL
+  allowed_scope:
+    - "literature/PATHWAY_MEMORY_REGISTER.md"
+    - "literature/CONSTRUCTIVE_DEPENDENCY_GRAPH.md"
+    - "literature/CONSTRUCTIVE_LIMITATION_MATRIX.md"
+    - "NEGATIVE_EVIDENCE_REGISTER.md"
+    - "RESEARCH_LEDGER.md"
+    - "THEOREM_LEDGER.md"
+    - "TASK_GRAPH.md"
+    - "CURRENT_SCIENTIFIC_STATE.md"
+    - "NEXT_ACTION.md"
+    - "tests/test_pathway_epistemic_taxonomy.py"
+    - "tests/test_constructive_literature.py"
+  forbidden_scope:
+    - "OFFICIAL_PROBLEM_SPECIFICATION.md"
+    - "Creating synthetic acceptance-authority aliases"
+    - "Authoring raw E4 text directly"
+  outcome: IN_PROGRESS
+
 
 
 

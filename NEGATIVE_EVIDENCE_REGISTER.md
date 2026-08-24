@@ -29,14 +29,18 @@
 - **Finding:** Faddeev–Popov gauge fixing (`THM-YM-0002`, 1967) relies on a local gauge condition $f(A)=0$. Gribov (1978, `PAPER-FOUND-014`) proved that for large field amplitudes, non-Abelian gauge orbits intersect the gauge condition multiple times (Gribov copies). Thus, Faddeev–Popov quantization is strictly a local perturbative tool and cannot be extended globally without resolving Gribov horizon boundaries.
 
 
-### NEG-CONST-001: The 4D Infinite-Volume Infrared Barrier in Bałaban's RG Program
+### NEG-CONST-001: The 4D Infinite-Volume Infrared Boundary in Bałaban's RG Program
 - **Discovery Date:** 2026-08-24
-- **Finding:** Bałaban's multi-scale block-spin RG program achieves complete mathematical control over the ultraviolet limit ($a 	o 0$) in any finite volume $V < \infty$, but is fundamentally obstructed from taking the thermodynamic infinite-volume limit ($V 	o \infty$). In 4D, as the RG scale descends toward the infrared, asymptotic freedom causes the effective coupling to grow ($g_k \sim 1$), destroying the small-field analyticity and polymer convergence.
+- **Epistemic Classification:** `[PRIMARY_SOURCE_LIMITATION]` / `[LATER_LITERATURE_LIMITATION]`
+- **Finding:** Bałaban's multi-scale block-spin RG program achieves complete mathematical control over the ultraviolet limit ($a \to 0$) in any finite volume $V < \infty$, but was bounded at the finite-volume boundary. In 4D, as the RG scale descends toward the infrared ($V \to \infty$), asymptotic freedom causes the effective coupling to grow ($g_k \sim 1$), preventing small-field inductive bounds and large-field polymer expansions from controlling the thermodynamic infinite-volume limit without a separate non-perturbative infrared closure mechanism.
 
-### NEG-CONST-002: Circularity in Removing the Infrared Cutoff in Constructive $YM_4$
+### NEG-CONST-002: Infrared Cutoff Removal Obstruction in Constructive $YM_4$
 - **Discovery Date:** 2026-08-24
-- **Finding:** Magnen, Rivasseau, and Sénéor (1993) proved that 4D Euclidean Yang–Mills exists constructively with an infrared cutoff $\Lambda_{IR} > 0$. However, removing $\Lambda_{IR} 	o 0$ requires establishing an isolated vacuum and a positive mass gap $\Delta > 0$. Attempting to remove $\Lambda_{IR}$ without a mass gap triggers non-perturbative infrared renormalon divergences.
+- **Epistemic Classification:** `[PRIMARY_SOURCE_LIMITATION]` / `[LATER_LITERATURE_LIMITATION]`
+- **Finding:** Magnen, Rivasseau, and Sénéor (1993, *CMP* 155, 325) proved that 4D Euclidean Yang–Mills exists constructively in the presence of an artificial infrared cutoff $\Lambda_{IR} > 0$, explicitly stating that the removal of the infrared cutoff ($\Lambda_{IR} \to 0$) remains open. In constructive field theory literature, removing $\Lambda_{IR}$ without an established isolated vacuum and positive mass gap $\Delta > 0$ encounters infrared renormalon divergences and unbounded long-distance fluctuations.
 
-### NEG-CONST-003: Non-Generalizability of 3D Monopole Confinement to 4D Non-Abelian Theory
+### NEG-CONST-003: Dimensional and Non-Abelian Boundaries in Monopole Confinement
 - **Discovery Date:** 2026-08-24
-- **Finding:** Göpfert & Mack (1981) rigorously proved confinement and mass gap for 3D $U(1)$ lattice gauge theory via monopole Coulomb gas duality. In 4D spacetime, monopoles form 2D closed worldsheets rather than 1D point trajectories, and Abelian duality fails to capture non-Abelian self-interactions. Thus, 3D Abelian confinement cannot be extended to solve 4D Yang–Mills.
+- **Epistemic Classification:** `[PRIMARY_SOURCE_LIMITATION]` / `[PROJECT_SYNTHESIS]`
+- **Finding:** Göpfert & Mack (1981) rigorously proved confinement and mass gap for 3D $U(1)$ lattice gauge theory via monopole Coulomb gas duality. In 4D Euclidean spacetime, magnetic monopoles form 1D closed worldlines / current loops rather than 0D point events (with Dirac strings forming 2D Dirac sheets bounded by the loops), and the non-Abelian field self-interaction $[A_\mu, A_\nu]$ obstructs direct Hodge-star scalar duality. No direct mathematical extension from 3D Abelian duality to 4D non-Abelian Yang–Mills has been established, though no impossibility theorem rules out confinement via dual superconductor mechanisms.
+
