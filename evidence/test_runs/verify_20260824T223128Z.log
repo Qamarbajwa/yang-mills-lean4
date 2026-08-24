@@ -1,0 +1,13 @@
+$ D:\Comfy UI\yang mills and the mass gap\.venv\Scripts\python.exe -m pytest -q
+........................................................................ [ 58%]
+...................................................                      [100%]
+123 passed in 0.46s
+
+
+[exit_code=0]
+
+$ D:\Comfy UI\yang mills and the mass gap\.venv\Scripts\python.exe scripts/check_repo.py
+PASS: repository invariants and governance YAML are readable.
+
+
+[exit_code=0]

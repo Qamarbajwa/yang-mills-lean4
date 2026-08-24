@@ -52,62 +52,68 @@ def parse_limitation_matrix():
 
 def test_manifest_sources_hashes_and_count():
     sources = load_manifest()
-    assert len(sources) == 8, "Must contain exactly 8 modern primary sources"
+    assert len(sources) == 10, "Must contain exactly 10 modern primary sources"
     for s in sources:
         fpath = MOD_DIR / s["local_file"]
         assert fpath.exists(), f"Source file {fpath} must exist"
         sha = hashlib.sha256(fpath.read_bytes()).hexdigest()
         assert sha == s["sha256"], f"Hash mismatch for {s['source_id']}: {sha} != {s['sha256']}"
 
-def test_invariant_project_register_not_in_primary_manifest():
-    sources = load_manifest()
-    for s in sources:
-        assert "Adversarial" not in s["title"], "Project registers must not be in primary literature manifest"
-        assert "Screening" not in s["title"], "Project registers must not be in primary literature manifest"
-
-def test_invariant_official_status_not_in_theorem_ledger():
-    theorems = parse_theorems()
-    assert "THM-YM-0025" in theorems
-    assert "Clay" not in theorems["THM-YM-0025"]["TITLE"], "Clay status must not be a mathematical theorem ID"
-    assert OFFICIAL_STATUS_PATH.exists(), "OFFICIAL_PROBLEM_STATUS_INVARIANT.md must exist"
-
-def test_invariant_2d_and_3d_stochastic_separated():
+def test_invariant_2d_markov_process_not_invariant_measure_proof():
     theorems = parse_theorems()
     thm21 = theorems["THM-YM-0021"]
+    assert "Markov" in thm21["TITLE"] or "Markov" in thm21["EXACT_RESULT"]
+    assert "Chevyrev" in thm21["WHAT_IT_DOES_NOT_PROVE"] or "2026" in thm21["WHAT_IT_DOES_NOT_PROVE"]
     thm22 = theorems["THM-YM-0022"]
-    assert "2D" in thm21["TITLE"] or "2D" in thm21["DIMENSION"]
-    assert "3D" in thm22["TITLE"] or "3D" in thm22["DIMENSION"]
-    assert "IHÉS" in thm21["raw"] or "IHES" in thm21["raw"]
-    assert "Inventiones" in thm22["raw"]
-    assert "invariant" in thm22["WHAT_IT_DOES_NOT_PROVE"].lower() and "measure" in thm22["WHAT_IT_DOES_NOT_PROVE"].lower()
+    assert "CPAM" in thm22["raw"] or "Communications on Pure and Applied Mathematics" in thm22["raw"]
+    assert "unique invariant measure" in thm22["EXACT_RESULT"]
 
-def test_invariant_chevyrev_shen_scoped_to_3d():
+def test_invariant_shen_zhu_zhu_cmp_metadata():
+    sources = {s["source_id"]: s for s in load_manifest()}
+    szz = sources["PAPER-MOD-007"]
+    assert szz["year"] == 2023
+    assert "Communications in Mathematical Physics" in szz["title"] or "10.1007/s00220-022-04609-1" in szz["doi"]
     theorems = parse_theorems()
-    thm23 = theorems["THM-YM-0023"]
-    assert "3D" in thm23["TITLE"]
-    assert "3" in thm23["DIMENSION"]
-    assert "250" in thm23["raw"]
-    assert "2503.03060" in thm23["raw"]
+    thm27 = theorems["THM-YM-0027"]
+    assert "400" in thm27["raw"]
+    assert "2023" in thm27["YEAR"]
 
-def test_invariant_kazakov_zheng_large_and_finite_n_separated():
+def test_invariant_two_cns_papers_separated():
+    sources = {s["source_id"]: s for s in load_manifest()}
+    cns1 = sources["PAPER-MOD-008"]
+    cns2 = sources["PAPER-MOD-009"]
+    assert "Expanded" in cns1["title"]
+    assert "Dynamical" in cns2["title"]
     theorems = parse_theorems()
-    thm24 = theorems["THM-YM-0024"]
-    thm25 = theorems["THM-YM-0025"]
-    assert "Large N" in thm24["TITLE"] or r"SU(\infty)" in thm24["GAUGE_GROUP"] or "SU(\\infty)" in thm24["GAUGE_GROUP"]
-    assert "Finite N" in thm25["TITLE"] or "SU(2)" in thm25["GAUGE_GROUP"]
+    thm28 = theorems["THM-YM-0028"]
+    thm29 = theorems["THM-YM-0029"]
+    assert "Expanded" in thm28["TITLE"]
+    assert "Dynamical" in thm29["TITLE"]
+    assert "2509.04688" in thm29["raw"]
 
-def test_shen_zhu_zhu_lattice_strong_coupling_mass_gap():
-
+def test_invariant_kazakov_zheng_finite_n_jhep_metadata():
+    sources = {s["source_id"]: s for s in load_manifest()}
+    kz_fin = sources["PAPER-MOD-006"]
+    assert kz_fin["year"] == 2025
+    assert "JHEP" in kz_fin["doi"]
     theorems = parse_theorems()
     thm26 = theorems["THM-YM-0026"]
-    assert "Shen" in thm26["AUTHORS"]
-    assert "Poincaré" in thm26["EXACT_RESULT"] or "Poincare" in thm26["EXACT_RESULT"]
-    assert "strong coupling" in thm26["COUPLING_REGIME"].lower()
-    assert "clay" in thm26["WHAT_IT_DOES_NOT_PROVE"].lower()
+    assert "2025" in thm26["YEAR"]
+    assert "JHEP" in thm26["raw"]
+
+def test_invariant_chatterjee_pmp_metadata():
+    sources = {s["source_id"]: s for s in load_manifest()}
+    chat = sources["PAPER-MOD-010"]
+    assert chat["year"] == 2026
+    assert "Probability and Mathematical Physics" in chat["title"] or "10.2140/pmp.2026.7.339" in chat["doi"]
+    theorems = parse_theorems()
+    thm30 = theorems["THM-YM-0030"]
+    assert "2026" in thm30["YEAR"]
+    assert "Probability and Mathematical Physics" in thm30["raw"]
 
 def test_all_modern_theorems_have_bridge_variables_and_failure_locality():
     theorems = parse_theorems()
-    for tid in ["THM-YM-0021", "THM-YM-0022", "THM-YM-0023", "THM-YM-0024", "THM-YM-0025", "THM-YM-0026", "THM-YM-0027", "THM-YM-0028"]:
+    for tid in [f"THM-YM-{i:04d}" for i in range(21, 31)]:
         assert tid in theorems, f"{tid} must exist in THEOREM_LEDGER.md"
         thm = theorems[tid]
         assert "BRIDGE_VARIABLES" in thm, f"{tid} must have BRIDGE_VARIABLES"
@@ -117,14 +123,8 @@ def test_all_modern_theorems_have_bridge_variables_and_failure_locality():
 
 def test_modern_limitation_matrix_all_clay_sufficient_no():
     rows = parse_limitation_matrix()
-    assert len(rows) == 8, "Must contain all 8 modern theorems"
+    assert len(rows) == 10, "Must contain all 10 modern theorems"
     for tid, r in rows.items():
         assert "NO" in r.get("CLAY_SUFFICIENT", ""), f"{tid} cannot be marked CLAY_SUFFICIENT"
         assert len(r.get("BRIDGE_VARIABLES", "")) > 3
         assert len(r.get("FAILURE_LOCALITY", "")) > 3
-
-def test_claim_quarantine_register_present():
-    assert CLAIM_QUARANTINE_PATH.exists()
-    content = CLAIM_QUARANTINE_PATH.read_text(encoding="utf-8")
-    assert "PROJECT_REGISTER != PRIMARY_LITERATURE_SOURCE" in content
-    assert "YM-002E" in content

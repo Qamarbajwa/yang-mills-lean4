@@ -21,11 +21,11 @@
   - Confirmed: 4D Ultraviolet Stability in finite volume proved (Bałaban `THM-YM-0018`) and IR-regulated Euclidean Schwinger functions constructed (Magnen–Rivasseau–Sénéor `THM-YM-0020`), but 4D continuum infinite-volume mass gap $\Delta > 0$ remains unsolved (`CLAY_SUFFICIENT: NO` across all entries).
   - Current status: `INDEPENDENTLY_VERIFIED` (E4 verifier `66e23357-ea7d-4b3b-9e20-365e15f72c09`, `INTEGRITY_PASS`).
 
-- Modern Rigorous Advances and Boundary Invariants ledger (2000–2026) reconstructed, repaired, and independently verified (`YM-002CR1`):
-  - 8 primary modern sources cataloged and hashed in `literature/primary/modern_2000_2026/manifest.yaml`.
-  - 8 modern theorems (`THM-YM-0021` through `THM-YM-0028`) extracted with granular evidence classifications, complete limitation blocks, bridge variables, and failure localities in `THEOREM_LEDGER.md`.
-  - Conflations repaired: separated 2D from 3D stochastic Yang–Mills, properly scoped Chevyrev–Shen 2026 to 3D, separated Kazakov–Zheng large-$N$ from finite-$N$, added Shen–Zhu–Zhu strong-coupling infinite-volume lattice mass gap, added Cao–Nissim–Sheffield 2025 area-law advances, separated Clay problem status invariant to `OFFICIAL_PROBLEM_STATUS_INVARIANT.md`, moved adversarial screening register to `literature/CLAIM_QUARANTINE_REGISTER.md`.
-  - Current status: `INDEPENDENTLY_VERIFIED` (E4 verifier `be81fdbf-8020-4c0d-ae77-19499c9ad867`, `INTEGRITY_PASS`).
+- Modern Rigorous Advances and Boundary Invariants ledger (2000–2026) under final attribution and bibliographic repair (`YM-002CR2`):
+  - 10 primary modern sources cataloged and hashed in `literature/primary/modern_2000_2026/manifest.yaml`.
+  - 10 modern theorems (`THM-YM-0021` through `THM-YM-0030`) extracted with granular evidence classifications, complete limitation blocks, bridge variables, and failure localities in `THEOREM_LEDGER.md`.
+  - Attribution and bibliographic finalizations: separated 2D Markov process construction (Chandra et al. 2022) from invariant measure proof (Chevyrev & Shen 2026, CPAM 79); updated Shen–Zhu–Zhu to CMP 400 (2023); separated Cao–Nissim–Sheffield into arXiv:2505.16585 (expanded area-law regimes) and arXiv:2509.04688 (dynamical area law in 't Hooft regimes); updated Kazakov–Zheng finite-$N$ to JHEP 2025; updated Chatterjee to PMP 7 (2026).
+  - Current status: `IN_PROGRESS` (Candidate prepared for fresh blind E4 audit).
 
 ## REPOSITORY SYNCHRONIZATION
 - `REMOTE_SYNC`: `BLOCKED_NO_REMOTE` (No remote upstream configured in local Git config; local checkpoints remain sealed and clean).
@@ -45,7 +45,8 @@
 Rigorous constructive control linking ultraviolet asymptotic freedom to infrared mass generation remains open in 4D continuum spacetime across the strong-coupling transition ($g_k \sim 1$).
 
 ## NEXT ACTION
-`YM-002D`: Solved, modified, and analogous theories ledger.
+`YM-002CR2`: Modern-source theorem attribution and bibliographic finalization.
+
 
 
 

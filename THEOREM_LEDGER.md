@@ -654,7 +654,7 @@
 
 ## Modern Rigorous Advances and Boundary Invariants (2000–2026)
 
-### THM-YM-0021: Chandra–Chevyrev–Hairer–Shen 2D Yang–Mills Langevin Invariant Measure
+### THM-YM-0021: Chandra–Chevyrev–Hairer–Shen 2D Yang–Mills Langevin Markov Process
 - **THEOREM_ID:** `THM-YM-0021`
 - **PAPER_ID:** `PAPER-MOD-001`
 - **TITLE:** Langevin dynamic for the 2D Yang-Mills measure
@@ -668,30 +668,65 @@
 - **COUPLING_REGIME:** `subcritical`
 - **LIMITS:** Mollification cutoff $\epsilon \to 0$
 - **ASSUMPTIONS:** Regularity structures on 2D gauge-orbit metric space, gauge-invariant Langevin dynamic.
-- **EXACT_RESULT:** Complete mathematical construction of the 2D Yang–Mills Langevin dynamic on gauge orbit space and rigorous proof that the 2D Euclidean Yang–Mills measure is the unique invariant measure of this stochastic flow.
+- **EXACT_RESULT:** Mathematical construction of the distributional connection state space, gauge-orbit metric state space, and stochastic Yang–Mills heat flow on the 2D torus, establishing the associated Markov diffusion process and proving gauge covariance and invariance in law of the dynamic.
 - **EVIDENCE_CLASS:** `RIGOROUS_MATHEMATICAL_THEOREM`
 - **CLASSIFICATION_JUSTIFICATION:** Definitive mathematical theorem in singular SPDE theory establishing Langevin dynamic for 2D gauge theories (*Publ. Math. IHÉS* 136 (2022), 1–147).
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
 - **PROOF_OR_DERIVATION_METHOD:** Theory of regularity structures, gauge orbit metric geometry, and Dirichlet form analysis.
 - **UNIFORMITY_STATUS:** `RIGOROUS_EXACT_IN_2D`
-- **WHAT_IT_PROVES:** Complete mathematical existence of dynamic stochastic quantization and invariant measure for 2D Yang–Mills.
-- **WHAT_IT_DOES_NOT_PROVE:** 3D/4D pure Yang–Mills existence or mass gap. 2D Yang–Mills has zero propagating transverse degrees of freedom.
+- **WHAT_IT_PROVES:** Mathematical existence of distributional state space, stochastic heat flow, and Markov dynamic for 2D Yang–Mills.
+- **WHAT_IT_DOES_NOT_PROVE:** Proof of the unique invariant measure (established in Chevyrev–Shen 2026) or 3D/4D pure Yang–Mills existence.
 - **BRIDGE_VARIABLES:** `mollifier cutoff epsilon`, `gauge orbit metric d_orbit`, `dimension d = 2`, `stochastic time t`
-- **FAILURE_LOCALITY:** `wrong dimension/theory (2D / no transverse gluons)`
+- **FAILURE_LOCALITY:** `wrong dimension/theory (2D Markov process construction)`
 - **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184), [`YM-REQ-011`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L192)
 - **RELEVANCE_TO_CLAY:** `ANALOGUE`
 - **DEPENDENCIES:** `THM-YM-0005`
-- **KNOWN_LATER_CORRECTIONS:** None.
+- **KNOWN_LATER_CORRECTIONS:** Invariant measure proof completed in Chevyrev & Shen (2026).
 - **SOURCE_LOCATOR:** *Publ. Math. IHÉS* 136 (2022), pp. 1–147, Theorems 1.1–1.4.
 - **REPRODUCTION_STATUS:** `RECONSTRUCTED`
 - **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
 
 ---
 
-### THM-YM-0022: Chandra–Chevyrev–Hairer–Shen 3D Stochastic Yang–Mills–Higgs Local Flow
+### THM-YM-0022: Chevyrev–Shen 2D Yang–Mills Invariant Measure and Universality
 - **THEOREM_ID:** `THM-YM-0022`
 - **PAPER_ID:** `PAPER-MOD-002`
+- **TITLE:** Invariant Measure and Universality of the 2D Yang-Mills Langevin Dynamic
+- **AUTHORS:** I. Chevyrev, H. Shen
+- **YEAR:** 2026
+- **DOMAIN:** `modern constructive / singular SPDEs`
+- **DIMENSION:** `2` (Euclidean torus $\mathbb{T}^2$)
+- **GAUGE_GROUP:** Connected compact Lie group $G$
+- **REGULARIZATION:** `singular SPDE mollifier / regularity structures`
+- **VOLUME:** `torus T^2`
+- **COUPLING_REGIME:** `subcritical`
+- **LIMITS:** Mollification cutoff $\epsilon \to 0$
+- **ASSUMPTIONS:** Langevin Markov dynamic on gauge orbits on $\mathbb{T}^2$ for connected compact Lie group $G$.
+- **EXACT_RESULT:** Rigorous mathematical proof that the 2D Euclidean Yang–Mills measure is the unique invariant measure of the 2D Langevin dynamic on $\mathbb{T}^2$ for any connected compact Lie group $G$, and proof of the universality of the continuum dynamic under general mollifications and lattice approximations.
+- **EVIDENCE_CLASS:** `RIGOROUS_MATHEMATICAL_THEOREM`
+- **CLASSIFICATION_JUSTIFICATION:** Definitive mathematical theorem proving the invariant measure property and universality of 2D stochastic Yang–Mills (*CPAM* 79 (2026), 1973–2102).
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
+- **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
+- **PROOF_OR_DERIVATION_METHOD:** Dirichlet form analysis, non-local Wilson loop observables, and multi-scale regularity structures.
+- **UNIFORMITY_STATUS:** `RIGOROUS_EXACT_IN_2D`
+- **WHAT_IT_PROVES:** Complete proof that the 2D Yang–Mills measure is the unique invariant measure of the 2D Langevin dynamic.
+- **WHAT_IT_DOES_NOT_PROVE:** 3D/4D Yang–Mills invariant measures or mass gap. 2D pure Yang–Mills has zero propagating transverse gluons.
+- **BRIDGE_VARIABLES:** `mollifier scale epsilon`, `invariant measure mu_YM`, `dimension d = 2`, `connected compact group G`
+- **FAILURE_LOCALITY:** `wrong dimension/theory (2D invariant measure on T^2)`
+- **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184), [`YM-REQ-011`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L192)
+- **RELEVANCE_TO_CLAY:** `ANALOGUE`
+- **DEPENDENCIES:** `THM-YM-0021`
+- **KNOWN_LATER_CORRECTIONS:** None.
+- **SOURCE_LOCATOR:** *Communications on Pure and Applied Mathematics* 79 (2026), pp. 1973–2102, Theorems 1.1–1.5, DOI 10.1002/cpa.70043.
+- **REPRODUCTION_STATUS:** `RECONSTRUCTED`
+- **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
+
+---
+
+### THM-YM-0023: Chandra–Chevyrev–Hairer–Shen 3D Stochastic Yang–Mills–Higgs Local Flow
+- **THEOREM_ID:** `THM-YM-0023`
+- **PAPER_ID:** `PAPER-MOD-003`
 - **TITLE:** Stochastic quantisation of Yang-Mills-Higgs in 3D
 - **AUTHORS:** A. Chandra, I. Chevyrev, M. Hairer, H. Shen
 - **YEAR:** 2024
@@ -724,9 +759,9 @@
 
 ---
 
-### THM-YM-0023: Chevyrev–Shen 3D Stochastic YMH Gauge-Covariant Renormalization Uniqueness
-- **THEOREM_ID:** `THM-YM-0023`
-- **PAPER_ID:** `PAPER-MOD-003`
+### THM-YM-0024: Chevyrev–Shen 3D Stochastic YMH Gauge-Covariant Renormalization Uniqueness
+- **THEOREM_ID:** `THM-YM-0024`
+- **PAPER_ID:** `PAPER-MOD-004`
 - **TITLE:** Uniqueness of Gauge Covariant Renormalisation of Stochastic 3D Yang-Mills-Higgs
 - **AUTHORS:** I. Chevyrev, H. Shen
 - **YEAR:** 2026
@@ -751,7 +786,7 @@
 - **FAILURE_LOCALITY:** `wrong dimension/theory (3D stochastic YMH)`
 - **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184)
 - **RELEVANCE_TO_CLAY:** `ANALOGUE`
-- **DEPENDENCIES:** `THM-YM-0022`
+- **DEPENDENCIES:** `THM-YM-0023`
 - **KNOWN_LATER_CORRECTIONS:** None.
 - **SOURCE_LOCATOR:** *Archive for Rational Mechanics and Analysis* 250 (2026), article 11, Theorems 1.1–1.4; preprint *arXiv:2503.03060*.
 - **REPRODUCTION_STATUS:** `RECONSTRUCTED`
@@ -759,9 +794,9 @@
 
 ---
 
-### THM-YM-0024: Kazakov–Zheng Large-N Lattice Yang–Mills Bootstrap Bounds
-- **THEOREM_ID:** `THM-YM-0024`
-- **PAPER_ID:** `PAPER-MOD-004`
+### THM-YM-0025: Kazakov–Zheng Large-N Lattice Yang–Mills Bootstrap Bounds
+- **THEOREM_ID:** `THM-YM-0025`
+- **PAPER_ID:** `PAPER-MOD-005`
 - **TITLE:** Analytic Bootstrap for Large N Lattice Yang-Mills Theory
 - **AUTHORS:** V. Kazakov, Z. Zheng
 - **YEAR:** 2023
@@ -787,19 +822,19 @@
 - **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184), [`YM-REQ-008`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L189), [`YM-REQ-020`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L201)
 - **RELEVANCE_TO_CLAY:** `ANALOGUE`
 - **DEPENDENCIES:** `THM-YM-0008`
-- **KNOWN_LATER_CORRECTIONS:** Extended to finite $N$ in Kazakov–Zheng (2024).
+- **KNOWN_LATER_CORRECTIONS:** Extended to finite $N$ in Kazakov–Zheng (2025).
 - **SOURCE_LOCATOR:** *Phys. Rev. D* 107 (2023), L051501, Equations (1)–(15).
 - **REPRODUCTION_STATUS:** `RECONSTRUCTED`
 - **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
 
 ---
 
-### THM-YM-0025: Kazakov–Zheng Finite-N Lattice Gauge Theory Bootstrap
-- **THEOREM_ID:** `THM-YM-0025`
-- **PAPER_ID:** `PAPER-MOD-005`
-- **TITLE:** Bootstrapping Finite N Lattice Gauge Theories: Matrix Model and SU(2) Yang-Mills
+### THM-YM-0026: Kazakov–Zheng Finite-N Lattice Gauge Theory Bootstrap
+- **THEOREM_ID:** `THM-YM-0026`
+- **PAPER_ID:** `PAPER-MOD-006`
+- **TITLE:** Bootstrap for finite N lattice Yang-Mills theory
 - **AUTHORS:** V. Kazakov, Z. Zheng
-- **YEAR:** 2024
+- **YEAR:** 2025
 - **DOMAIN:** `modern lattice / finite-N bootstrap`
 - **DIMENSION:** $d = 2, 3, 4$
 - **GAUGE_GROUP:** Finite $N$ (e.g. $SU(2)$)
@@ -810,7 +845,7 @@
 - **ASSUMPTIONS:** Wilson lattice action, finite-$N$ trace identities (Cayley–Hamilton relations), and finite-$N$ positive semidefinite Gram matrices.
 - **EXACT_RESULT:** Systematic derivation of rigorous non-perturbative bootstrap inequalities for finite-$N$ gauge groups ($SU(2)$), providing non-perturbative upper and lower bounds on finite-$N$ plaquette expectation values.
 - **EVIDENCE_CLASS:** `RIGOROUS_MATHEMATICAL_THEOREM`
-- **CLASSIFICATION_JUSTIFICATION:** Rigorous derivation of finite-$N$ matrix inequalities and semidefinite bounds from lattice loop identities (*arXiv:2404.16925*).
+- **CLASSIFICATION_JUSTIFICATION:** Rigorous derivation of finite-$N$ matrix inequalities and semidefinite bounds from lattice loop identities (*JHEP* 2025 (2025), article 99, DOI 10.1007/JHEP03(2025)099).
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
 - **PROOF_OR_DERIVATION_METHOD:** Finite-$N$ semidefinite programming and Cayley–Hamilton trace reductions.
@@ -821,20 +856,20 @@
 - **FAILURE_LOCALITY:** `continuum limit (infinite loop truncation at finite N)`
 - **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184), [`YM-REQ-008`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L189)
 - **RELEVANCE_TO_CLAY:** `DIRECT`
-- **DEPENDENCIES:** `THM-YM-0008`, `THM-YM-0024`
+- **DEPENDENCIES:** `THM-YM-0008`, `THM-YM-0025`
 - **KNOWN_LATER_CORRECTIONS:** None.
-- **SOURCE_LOCATOR:** *arXiv:2404.16925* (2024), Sections 1–6.
+- **SOURCE_LOCATOR:** *Journal of High Energy Physics* 2025 (2025), article 99, DOI 10.1007/JHEP03(2025)099; preprint *arXiv:2404.16925*.
 - **REPRODUCTION_STATUS:** `RECONSTRUCTED`
 - **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
 
 ---
 
-### THM-YM-0026: Shen–Zhu–Zhu Infinite-Volume Lattice Strong-Coupling Mass Gap
-- **THEOREM_ID:** `THM-YM-0026`
-- **PAPER_ID:** `PAPER-MOD-006`
-- **TITLE:** Large N / Strong Coupling Limit of Lattice Gauge Theories and Functional Inequalities
+### THM-YM-0027: Shen–Zhu–Zhu Infinite-Volume Lattice Strong-Coupling Mass Gap
+- **THEOREM_ID:** `THM-YM-0027`
+- **PAPER_ID:** `PAPER-MOD-007`
+- **TITLE:** A Stochastic Analysis Approach to Lattice Yang-Mills at Strong Coupling
 - **AUTHORS:** H. Shen, R. Zhu, X. Zhu
-- **YEAR:** 2022
+- **YEAR:** 2023
 - **DOMAIN:** `modern constructive / lattice functional inequalities`
 - **DIMENSION:** $d = 2, 3, 4$
 - **GAUGE_GROUP:** Compact Lie group $G$ (e.g. $SU(N)$)
@@ -845,7 +880,7 @@
 - **ASSUMPTIONS:** Lattice Yang–Mills measure with Wilson action at strong coupling $\beta < \beta_0$.
 - **EXACT_RESULT:** Rigorous proof of the existence of the infinite-volume lattice Yang–Mills measure at strong coupling, uniform Poincaré and log-Sobolev inequalities with constant independent of volume, exponential decay of gauge-invariant correlation functions, and existence of a strictly positive lattice mass gap $\Delta_{lat}(\beta) > 0$.
 - **EVIDENCE_CLASS:** `RIGOROUS_MATHEMATICAL_THEOREM`
-- **CLASSIFICATION_JUSTIFICATION:** Definitive mathematical theorem establishing functional inequalities, infinite-volume measure, and non-zero spectral gap on the lattice (*Ann. Probab.* / *arXiv:2204.12737*, Theorems 1.1–1.5).
+- **CLASSIFICATION_JUSTIFICATION:** Definitive mathematical theorem establishing functional inequalities, infinite-volume measure, and non-zero spectral gap on the lattice (*Comm. Math. Phys.* 400 (2023), 805–851, DOI 10.1007/s00220-022-04609-1).
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
 - **PROOF_OR_DERIVATION_METHOD:** Glauber/Langevin dynamic functional inequalities, Bakry–Émery curvature bounds, and polymer expansions.
@@ -858,16 +893,16 @@
 - **RELEVANCE_TO_CLAY:** `DIRECT`
 - **DEPENDENCIES:** `THM-YM-0008`
 - **KNOWN_LATER_CORRECTIONS:** None.
-- **SOURCE_LOCATOR:** *Annals of Probability* / *arXiv:2204.12737* (2022), Theorems 1.1–1.5, Sections 1–7.
+- **SOURCE_LOCATOR:** *Communications in Mathematical Physics* 400 (2023), pp. 805–851, Theorems 1.1–1.5; preprint *arXiv:2204.12737*.
 - **REPRODUCTION_STATUS:** `RECONSTRUCTED`
 - **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
 
 ---
 
-### THM-YM-0027: Cao–Nissim–Sheffield Area Law & Mass Gap Bounds in Lattice Gauge Theories
-- **THEOREM_ID:** `THM-YM-0027`
-- **PAPER_ID:** `PAPER-MOD-007`
-- **TITLE:** Wilson loop area law and mass gap bounds in lattice gauge theories
+### THM-YM-0028: Cao–Nissim–Sheffield Expanded Area Law Regimes
+- **THEOREM_ID:** `THM-YM-0028`
+- **PAPER_ID:** `PAPER-MOD-008`
+- **TITLE:** Expanded regimes of area law for lattice Yang-Mills theories
 - **AUTHORS:** Y. Cao, E. Nissim, S. Sheffield
 - **YEAR:** 2025
 - **DOMAIN:** `modern lattice / mathematical physics`
@@ -875,20 +910,20 @@
 - **GAUGE_GROUP:** Classical Lie groups ($SU(N), SO(N), Sp(N)$)
 - **REGULARIZATION:** `lattice spacing a > 0`
 - **VOLUME:** `infinite lattice`
-- **COUPLING_REGIME:** `expanded strong coupling / 't Hooft regime`
+- **COUPLING_REGIME:** `expanded strong coupling`
 - **LIMITS:** Thermodynamic infinite volume at fixed lattice spacing
 - **ASSUMPTIONS:** Lattice gauge theories with Wilson action for classical Lie groups.
-- **EXACT_RESULT:** Extension of rigorous parameter regimes for Wilson loop area law and string tension, establishing explicit lower bounds on the mass gap using a dynamical / stochastic coupling approach in 't Hooft regimes.
+- **EXACT_RESULT:** Extension of rigorous parameter regimes for Wilson loop area law and string tension, establishing explicit lower bounds on string tension across expanded coupling domains.
 - **EVIDENCE_CLASS:** `RIGOROUS_MATHEMATICAL_THEOREM`
-- **CLASSIFICATION_JUSTIFICATION:** Rigorous mathematical theorem proving expanded area law regimes and mass gap bounds (*arXiv:2505.16585*, Theorems 1.1–1.4).
+- **CLASSIFICATION_JUSTIFICATION:** Rigorous mathematical theorem proving expanded area law regimes on discrete lattices (*arXiv:2505.16585*, Theorems 1.1–1.4).
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
-- **PROOF_OR_DERIVATION_METHOD:** Stochastic coupling methods, random surface representations, and dynamical loop inequalities.
+- **PROOF_OR_DERIVATION_METHOD:** Stochastic coupling methods, random surface representations, and geometric loop inequalities.
 - **UNIFORMITY_STATUS:** `RIGOROUS_ON_EXPANDED_LATTICE_REGIME`
-- **WHAT_IT_PROVES:** Expanded rigorous parameter bounds for area law and spectral gap in discrete lattice gauge theories.
-- **WHAT_IT_DOES_NOT_PROVE:** Continuum 4D Yang–Mills limit $a \to 0$ with mass gap.
-- **BRIDGE_VARIABLES:** `lattice coupling beta`, `'t Hooft coupling lambda`, `perimeter C`, `string tension sigma`
-- **FAILURE_LOCALITY:** `continuum limit (discrete lattice / expanded strong-coupling bounds)`
+- **WHAT_IT_PROVES:** Expanded rigorous parameter bounds for area law and string tension on discrete lattices.
+- **WHAT_IT_DOES_NOT_PROVE:** Continuum 4D Yang–Mills limit $a \to 0$ or continuum spectral mass gap.
+- **BRIDGE_VARIABLES:** `lattice coupling beta`, `loop perimeter C`, `string tension sigma`, `spacing a`
+- **FAILURE_LOCALITY:** `continuum limit (discrete lattice area law bounds)`
 - **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184), [`YM-REQ-008`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L189)
 - **RELEVANCE_TO_CLAY:** `DIRECT`
 - **DEPENDENCIES:** `THM-YM-0008`
@@ -899,12 +934,47 @@
 
 ---
 
-### THM-YM-0028: Chatterjee 4D SU(2) Yang–Mills–Higgs Massive Gaussian Scaling Limit
-- **THEOREM_ID:** `THM-YM-0028`
-- **PAPER_ID:** `PAPER-MOD-008`
-- **TITLE:** A Scaling Limit of 4D SU(2) Yang-Mills-Higgs on a Lattice
+### THM-YM-0029: Cao–Nissim–Sheffield Dynamical Area Law in 't Hooft Regimes
+- **THEOREM_ID:** `THM-YM-0029`
+- **PAPER_ID:** `PAPER-MOD-009`
+- **TITLE:** Dynamical approach to area law for lattice Yang-Mills
+- **AUTHORS:** Y. Cao, E. Nissim, S. Sheffield
+- **YEAR:** 2025
+- **DOMAIN:** `modern lattice / mathematical physics`
+- **DIMENSION:** $d = 2, 3, 4$
+- **GAUGE_GROUP:** $U(N), SU(N), SO(2N)$
+- **REGULARIZATION:** `lattice spacing a > 0`
+- **VOLUME:** `infinite lattice`
+- **COUPLING_REGIME:** `'t Hooft coupling regime`
+- **LIMITS:** Thermodynamic infinite volume at fixed lattice spacing
+- **ASSUMPTIONS:** Lattice gauge theories building upon Shen–Zhu–Zhu stochastic dynamics and spectral gap conditions.
+- **EXACT_RESULT:** Formulation of a dynamical approach deriving rigorous Wilson loop area law bounds from a spectral mass gap condition in 't Hooft coupling regimes for $U(N), SU(N)$, and $SO(2N)$ lattice gauge theories.
+- **EVIDENCE_CLASS:** `RIGOROUS_MATHEMATICAL_THEOREM`
+- **CLASSIFICATION_JUSTIFICATION:** Rigorous mathematical theorem connecting dynamic spectral gap conditions to Wilson area law (*arXiv:2509.04688*, Theorems 1.1–1.5).
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
+- **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
+- **PROOF_OR_DERIVATION_METHOD:** Dynamical coupling techniques, spectral gap functional inequalities, and loop observables.
+- **UNIFORMITY_STATUS:** `RIGOROUS_IN_T_HOOFT_REGIME`
+- **WHAT_IT_PROVES:** Connection between lattice spectral mass gap and Wilson area law in 't Hooft regimes.
+- **WHAT_IT_DOES_NOT_PROVE:** Continuum 4D pure Yang–Mills mass gap. Area law on a discrete lattice does not equal the Clay continuum spectral mass gap.
+- **BRIDGE_VARIABLES:** `'t Hooft coupling lambda`, `gauge groups U(N), SU(N), SO(2N)`, `spectral gap Delta_lat`, `loop area A`
+- **FAILURE_LOCALITY:** `continuum limit / 't Hooft regime (discrete lattice bounds)`
+- **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184), [`YM-REQ-008`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L189)
+- **RELEVANCE_TO_CLAY:** `DIRECT`
+- **DEPENDENCIES:** `THM-YM-0008`, `THM-YM-0027`
+- **KNOWN_LATER_CORRECTIONS:** None.
+- **SOURCE_LOCATOR:** *arXiv:2509.04688* (2025), Theorems 1.1–1.5.
+- **REPRODUCTION_STATUS:** `RECONSTRUCTED`
+- **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
+
+---
+
+### THM-YM-0030: Chatterjee 4D SU(2) Yang–Mills–Higgs Massive Gaussian Scaling Limit
+- **THEOREM_ID:** `THM-YM-0030`
+- **PAPER_ID:** `PAPER-MOD-010`
+- **TITLE:** A scaling limit of SU(2) lattice Yang-Mills-Higgs theory
 - **AUTHORS:** S. Chatterjee
-- **YEAR:** 2024
+- **YEAR:** 2026
 - **DOMAIN:** `modern constructive / lattice scaling limit`
 - **DIMENSION:** `4` (Euclidean $\mathbb{R}^4$)
 - **GAUGE_GROUP:** $SU(2)$ with fundamental scalar Higgs field
@@ -915,7 +985,7 @@
 - **ASSUMPTIONS:** Lattice $SU(2)$ gauge field coupled to fundamental Higgs scalar with unitary gauge fixing and specific joint parameter scaling.
 - **EXACT_RESULT:** Rigorous mathematical proof that the 4D lattice $SU(2)$ Yang–Mills–Higgs theory converges in the continuum limit $a \to 0$ under joint parameter scaling to a generalized massive Gaussian random field with an explicit strictly positive mass gap $m > 0$.
 - **EVIDENCE_CLASS:** `RIGOROUS_MATHEMATICAL_THEOREM`
-- **CLASSIFICATION_JUSTIFICATION:** Definitive mathematical theorem proving existence of a continuum massive scaling limit for 4D lattice gauge-Higgs theory (*arXiv:2401.10507*, Theorems 1.1–1.3).
+- **CLASSIFICATION_JUSTIFICATION:** Definitive mathematical theorem proving existence of a continuum massive scaling limit for 4D lattice gauge-Higgs theory (*Probability and Mathematical Physics* 7 (2026), 339–381, DOI 10.2140/pmp.2026.7.339).
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
 - **PROOF_OR_DERIVATION_METHOD:** Unitary gauge reduction, polymer expansion around condensed Higgs vacuum, and central limit theorem for lattice fields.
@@ -928,6 +998,6 @@
 - **RELEVANCE_TO_CLAY:** `ANALOGUE`
 - **DEPENDENCIES:** `THM-YM-0008`
 - **KNOWN_LATER_CORRECTIONS:** None.
-- **SOURCE_LOCATOR:** *arXiv:2401.10507* (2024), Theorems 1.1–1.3, Sections 1–5.
+- **SOURCE_LOCATOR:** *Probability and Mathematical Physics* 7 (2026), pp. 339–381, Theorems 1.1–1.3, DOI 10.2140/pmp.2026.7.339; preprint *arXiv:2401.10507*.
 - **REPRODUCTION_STATUS:** `RECONSTRUCTED`
 - **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`

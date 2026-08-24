@@ -1,27 +1,25 @@
-# PAPER-MOD-004: Analytic Bootstrap for Large N Lattice Yang-Mills Theory
+# PAPER-MOD-004: Uniqueness of Gauge Covariant Renormalisation of Stochastic 3D Yang-Mills-Higgs
 
 - **SOURCE_ID:** `PAPER-MOD-004`
-- **TITLE:** Analytic Bootstrap for Large N Lattice Yang-Mills Theory
-- **AUTHORS:** Vladimir Kazakov, Zechuan Zheng
-- **JOURNAL:** Physical Review D
-- **VOLUME:** 107
-- **PAGES:** L051501
-- **YEAR:** 2023
-- **DOI:** `10.1103/PhysRevD.107.L051501`
+- **TITLE:** Uniqueness of Gauge Covariant Renormalisation of Stochastic 3D Yang-Mills-Higgs
+- **AUTHORS:** Ilya Chevyrev, Hao Shen
+- **JOURNAL:** Archive for Rational Mechanics and Analysis
+- **VOLUME:** 250
+- **PAGES:** Article 11 (1-55)
+- **YEAR:** 2026
+- **DOI:** `10.1007/s00205-025-02163-3`
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
-- **BRIDGE_VARIABLES:** lattice coupling beta, loop perimeter C, bootstrap truncation L_max, gauge group SU(infinity)
-- **FAILURE_LOCALITY:** `continuum limit / large-N (infinite loop truncation / N=infinity only)`
+- **BRIDGE_VARIABLES:** counterterm group G_count, mollifier scale delta, dimension d = 3
+- **FAILURE_LOCALITY:** `wrong dimension/theory (3D stochastic YMH)`
 
 ## Executive Summary
-Kazakov and Zheng developed an analytic and numerical bootstrap method for SU(infinity) large-N lattice Yang-Mills theory in 2D, 3D, and 4D. Combining Makeenko-Migdal loop equations with Gram matrix positive semidefiniteness of Wilson loops, they obtained rigorous upper and lower bounds on plaquette expectation values and string tension at large N.
+Chevyrev and Shen proved that the gauge-covariant counterterms in singular stochastic 3D Yang-Mills-Higgs equations are uniquely determined by gauge symmetry and geometric regularity, establishing that the 3D stochastic quantization flow is canonically independent of the mollification scheme.
 
 ## Key Proven Results
-- Derivation of rigorous bootstrap inequalities on Wilson loop expectation values at large N (SU(infinity)).
-- Rigorous non-perturbative upper and lower bounds on large-N lattice plaquette energy and string tension.
-- Formulation of semidefinite programming relaxation for planar loop equations.
+- Proof of uniqueness of gauge-covariant stochastic counterterms specifically for 3D Yang-Mills-Higgs.
+- Scheme-independence of the resulting 3D Markov diffusion generator on gauge orbit space.
 
 ## Limitations and Unresolved Boundaries
-- Specifically restricted to large-N (SU(infinity)) planar limit.
-- Operates on a discrete lattice at fixed coupling beta and lattice spacing a > 0.
-- Continuum limit a -> 0 requires scaling infinite loops simultaneously, which is truncated at finite loop size L_max.
+- Specifically scoped to 3D spacetime; does not prove uniqueness in 4D.
+- Critical 4D stochastic quantization remains blocked by non-renormalizable singular divergences.

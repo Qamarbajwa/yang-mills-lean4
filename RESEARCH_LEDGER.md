@@ -144,34 +144,26 @@
 - **Findings:** They constructively proved the existence of 4D Euclidean Yang–Mills Schwinger distributions with an artificial infrared cutoff $\Lambda_{IR} > 0$ (such as finite volume or mass regulator), proving UV Borel summability. The authors explicitly stated (p. 326) that the removal of the infrared cutoff ($\Lambda_{IR} \to 0$) remains open. In constructive field theory literature, removing $\Lambda_{IR}$ without a prior mass gap is obstructed by infrared renormalons.
 - **Outcome:** Recorded as `THM-YM-0020` and `PATH-CONST-003`.
 
-### RES-YM-002CR1-001: How do 2D Yang–Mills and 3D Yang–Mills–Higgs stochastic quantization differ?
+### RES-YM-002CR2-001: Separation of 2D Markov Process vs. Invariant Measure Proof
 - **Date:** 2026-08-25
-- **Question:** What are the exact mathematical scopes and differences between Chandra et al. 2D (2022) and 3D (2024)?
-- **Primary Sources:** A. Chandra et al., *Publ. Math. IHÉS* 136 (2022), 1–147 (`PAPER-MOD-001`); *Invent. Math.* 237 (2024), 85–236 (`PAPER-MOD-002`).
+- **Question:** What is the precise division of labor between Chandra et al. (2022) and Chevyrev & Shen (2026)?
+- **Primary Sources:** A. Chandra et al., *Publ. Math. IHÉS* 136 (2022), 1–147 (`PAPER-MOD-001`); I. Chevyrev & H. Shen, *CPAM* 79 (2026), 1973–2102 (`PAPER-MOD-002`).
 - **Epistemic Classification:** `[PRIMARY_SOURCE_RESULT]` / `[PRIMARY_SOURCE_LIMITATION]`
-- **Findings:** The 2D paper constructs the global Langevin dynamic and proves that the 2D Yang–Mills Euclidean measure is the unique invariant measure. The 3D paper constructs the local-in-time stochastic flow for Yang–Mills–Higgs up to possible blow-up, but explicitly notes (p. 87) that the existence of an invariant measure in 3D remains an open problem.
+- **Findings:** Chandra et al. (2022) constructed the distributional connection state space, gauge-orbit metric state space, and stochastic Markov process on the torus $\mathbb{T}^2$. Chevyrev & Shen (2026) proved that the 2D Euclidean Yang–Mills measure is the unique invariant measure of this Langevin dynamic for any connected compact Lie group $G$, and established universality of the continuum dynamic.
 - **Outcome:** Recorded as separate theorems `THM-YM-0021` and `THM-YM-0022`.
 
-### RES-YM-002CR1-002: What is the exact scope of Chevyrev–Shen (2026)?
+### RES-YM-002CR2-002: Shen–Zhu–Zhu Strong Coupling Lattice Mass Gap Publication
 - **Date:** 2026-08-25
-- **Question:** What does Chevyrev–Shen prove for stochastic gauge counterterms?
-- **Primary Source:** I. Chevyrev & H. Shen, *Arch. Ration. Mech. Anal.* 250 (2026), art. 11 (`PAPER-MOD-003`).
-- **Epistemic Classification:** `[PRIMARY_SOURCE_RESULT]` / `[PRIMARY_SOURCE_LIMITATION]`
-- **Findings:** The theorem proves uniqueness and scheme-independence of gauge-covariant counterterms specifically for 3D stochastic Yang–Mills–Higgs, rather than generic subcritical dimensions.
-- **Outcome:** Recorded as `THM-YM-0023`.
-
-### RES-YM-002CR1-003: How do Kazakov–Zheng large-N and finite-N bootstrap results differ?
-- **Date:** 2026-08-25
-- **Question:** What are the mathematical formulations of Kazakov–Zheng (2023) vs (2024)?
-- **Primary Sources:** V. Kazakov & Z. Zheng, *Phys. Rev. D* 107 (2023), L051501 (`PAPER-MOD-004`); *arXiv:2404.16925* (2024) (`PAPER-MOD-005`).
-- **Epistemic Classification:** `[PRIMARY_SOURCE_RESULT]` / `[PRIMARY_SOURCE_LIMITATION]`
-- **Findings:** The 2023 paper uses planar loop equations for $SU(\infty)$ large-$N$ lattice gauge theory. The 2024 paper incorporates Cayley–Hamilton trace identities and finite-$N$ Gram matrices to establish non-perturbative SDP bounds for finite-$N$ groups like $SU(2)$.
-- **Outcome:** Recorded as separate theorems `THM-YM-0024` and `THM-YM-0025`.
-
-### RES-YM-002CR1-004: What did Shen–Zhu–Zhu prove on the lattice at strong coupling?
-- **Date:** 2026-08-25
-- **Question:** Does Shen–Zhu–Zhu (2022) prove an infinite-volume lattice mass gap?
-- **Primary Source:** H. Shen, R. Zhu, X. Zhu, *Ann. Probab.* / *arXiv:2204.12737* (2022) (`PAPER-MOD-006`).
+- **Question:** What is the authoritative publication metadata and scope of Shen–Zhu–Zhu?
+- **Primary Source:** H. Shen, R. Zhu, X. Zhu, *Comm. Math. Phys.* 400 (2023), 805–851 (`PAPER-MOD-007`).
 - **Epistemic Classification:** `[PRIMARY_SOURCE_RESULT]` / `[PRIMARY_SOURCE_LIMITATION]` / `[PROJECT_SYNTHESIS]`
-- **Findings:** Shen, Zhu, and Zhu proved the existence of the infinite-volume Gibbs measure, established uniform Poincaré and log-Sobolev inequalities, and proved exponential correlation decay (strictly positive lattice mass gap $\Delta_{lat}(\beta) > 0$) for 2D, 3D, and 4D lattice Yang–Mills at strong coupling ($\beta < \beta_0$). This is a major bridge node: it establishes an infinite-volume lattice mass gap, but does not extend to the weak-coupling continuum limit $\beta \to \infty$.
-- **Outcome:** Recorded as `THM-YM-0026` and `PATH-MOD-004`.
+- **Findings:** Published in *Communications in Mathematical Physics* (2023), proving infinite-volume Gibbs measure existence, uniform Poincaré and log-Sobolev inequalities, and exponential correlation decay (strictly positive lattice mass gap $\Delta_{lat}(\beta) > 0$) at strong coupling ($\beta < \beta_0$). Confined to $\beta < \beta_0$; does not establish the weak-coupling continuum limit $\beta \to \infty$.
+- **Outcome:** Recorded as `THM-YM-0027`.
+
+### RES-YM-002CR2-003: Cao–Nissim–Sheffield Area Law Advances
+- **Date:** 2026-08-25
+- **Question:** How do the two Cao–Nissim–Sheffield 2025 papers differ?
+- **Primary Sources:** Y. Cao, E. Nissim, S. Sheffield, *arXiv:2505.16585* (`PAPER-MOD-008`); *arXiv:2509.04688* (`PAPER-MOD-009`).
+- **Epistemic Classification:** `[PRIMARY_SOURCE_RESULT]` / `[PRIMARY_SOURCE_LIMITATION]`
+- **Findings:** *arXiv:2505.16585* expands the rigorous parameter regimes for the Wilson loop area law. *arXiv:2509.04688* develops a dynamical approach building on Shen–Zhu–Zhu inequalities, deriving area law from spectral gap conditions in 't Hooft regimes for $U(N), SU(N), SO(2N)$.
+- **Outcome:** Recorded as separate theorems `THM-YM-0028` and `THM-YM-0029`.

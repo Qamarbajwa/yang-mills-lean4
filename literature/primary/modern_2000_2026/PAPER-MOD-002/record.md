@@ -1,26 +1,26 @@
-# PAPER-MOD-002: Stochastic quantisation of Yang-Mills-Higgs in 3D
+# PAPER-MOD-002: Invariant Measure and Universality of the 2D Yang-Mills Langevin Dynamic
 
 - **SOURCE_ID:** `PAPER-MOD-002`
-- **TITLE:** Stochastic quantisation of Yang-Mills-Higgs in 3D
-- **AUTHORS:** Ajay Chandra, Ilya Chevyrev, Martin Hairer, Hao Shen
-- **JOURNAL:** Inventiones Mathematicae
-- **VOLUME:** 237
-- **PAGES:** 85-236
-- **YEAR:** 2024
-- **DOI:** `10.1007/s00222-024-01264-2`
+- **TITLE:** Invariant Measure and Universality of the 2D Yang-Mills Langevin Dynamic
+- **AUTHORS:** Ilya Chevyrev, Hao Shen
+- **JOURNAL:** Communications on Pure and Applied Mathematics
+- **VOLUME:** 79
+- **PAGES:** 1973-2102
+- **YEAR:** 2026
+- **DOI:** `10.1002/cpa.70043`
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
-- **BRIDGE_VARIABLES:** mollifier scale epsilon, orbit metric d_orbit, dimension d = 3, stochastic time t, blow-up time tau
-- **FAILURE_LOCALITY:** `wrong dimension/theory (3D / local flow only / invariant measure open)`
+- **BRIDGE_VARIABLES:** mollifier scale epsilon, invariant measure mu_YM, dimension d = 2, connected compact group G
+- **FAILURE_LOCALITY:** `wrong dimension/theory (2D invariant measure on T^2)`
 
 ## Executive Summary
-Chandra, Chevyrev, Hairer, and Shen established a local-in-time state space and renormalized stochastic flow for 3D Yang-Mills-Higgs fields using regularity structures, defining a canonical Markov process on gauge orbits up to possible finite-time blow-up. The authors explicitly state (p. 87) that the construction of an invariant measure for this 3D dynamic remains an open problem.
+Chevyrev and Shen proved that the 2D Euclidean Yang-Mills measure is the unique invariant measure of the stochastic Langevin dynamic on the 2D torus for any connected compact Lie group G, and established universality of the continuum dynamic under general mollifications and lattice approximations.
 
 ## Key Proven Results
-- Rigorous construction of local-in-time 3D stochastic Yang-Mills-Higgs flow on gauge orbit space.
-- Construction of a canonical Markov diffusion process up to potential finite-time blow-up.
+- Rigorous proof that the 2D Yang-Mills measure is the unique invariant measure of the 2D Langevin dynamic on the torus T^2.
+- Establishment of the result for any connected compact Lie structure group G.
+- Proof of universality of the continuum dynamic under mollifications and discrete approximations.
 
 ## Limitations and Unresolved Boundaries
-- Local-in-time existence only; does not prove global-in-time existence without blow-up.
-- Does NOT construct the 3D Yang-Mills-Higgs invariant Euclidean measure (explicitly open problem, p. 87).
-- 4D Yang-Mills stochastic flow is critically singular and outside current parabolic SPDE theory.
+- Restricted to 2 spacetime dimensions (T^2).
+- Does not directly generalize to 3D or 4D where singular UV structures require non-trivial physical renormalization.

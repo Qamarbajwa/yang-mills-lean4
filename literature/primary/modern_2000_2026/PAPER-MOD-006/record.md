@@ -1,26 +1,25 @@
-# PAPER-MOD-006: Large N / Strong Coupling Limit of Lattice Gauge Theories and Functional Inequalities
+# PAPER-MOD-006: Bootstrap for finite N lattice Yang-Mills theory
 
 - **SOURCE_ID:** `PAPER-MOD-006`
-- **TITLE:** Large N / Strong Coupling Limit of Lattice Gauge Theories and Functional Inequalities
-- **AUTHORS:** Hao Shen, Rongchan Zhu, Xiangchan Zhu
-- **JOURNAL:** Annals of Probability / arXiv:2204.12737
-- **VOLUME:** 52
-- **PAGES:** 1-62
-- **YEAR:** 2022
-- **DOI:** `10.48550/arXiv.2204.12737`
+- **TITLE:** Bootstrap for finite N lattice Yang-Mills theory
+- **AUTHORS:** Vladimir Kazakov, Zechuan Zheng
+- **JOURNAL:** Journal of High Energy Physics
+- **VOLUME:** 2025
+- **PAGES:** Article 99
+- **YEAR:** 2025
+- **DOI:** `10.1007/JHEP03(2025)099`
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
-- **BRIDGE_VARIABLES:** lattice coupling beta, strong-coupling threshold beta_0, lattice correlation length xi_lat, lattice mass gap Delta_lat, lattice spacing a
-- **FAILURE_LOCALITY:** `continuum/weak-coupling trajectory (blocked at beta -> infinity / g -> 0)`
+- **BRIDGE_VARIABLES:** lattice coupling beta, loop perimeter C, bootstrap truncation L_max, finite gauge group SU(2)
+- **FAILURE_LOCALITY:** `continuum limit (infinite loop truncation at finite N)`
 
 ## Executive Summary
-Shen, Zhu, and Zhu established rigorous functional inequalities for lattice Yang-Mills theories in 2D, 3D, and 4D at strong coupling (beta < beta_0). They proved the existence of the infinite-volume lattice measure, established uniform Poincaré and log-Sobolev inequalities, and proved exponential decay of correlation functions, establishing a strictly positive lattice mass gap Delta_lat(beta) > 0 in the strong-coupling regime.
+Kazakov and Zheng extended the lattice bootstrap framework to finite-N gauge groups, specifically analyzing SU(2) lattice Yang-Mills and matrix models by incorporating 1/N non-planar corrections, trace relations (Cayley-Hamilton constraints), and finite-N positive semidefinite Gram matrices.
 
 ## Key Proven Results
-- Rigorous proof of uniform Poincaré and log-Sobolev inequalities on infinite lattice at strong coupling beta < beta_0.
-- Rigorous proof of exponential correlation decay and strictly positive lattice mass gap Delta_lat(beta) > 0 in infinite volume.
-- Construction of the infinite-volume lattice Yang-Mills Gibbs measure at strong coupling.
+- Formulation of finite-N lattice bootstrap incorporating trace identities and finite-N Gram matrices.
+- Rigorous non-perturbative bounds on finite-N SU(2) plaquette observables on discrete lattices.
 
 ## Limitations and Unresolved Boundaries
-- Restricted to the strong-coupling regime (beta < beta_0); does not reach the weak-coupling continuum regime beta -> infinity (g -> 0).
-- Lattice mass gap Delta_lat(beta) > 0 at strong coupling does NOT prove the continuum 4D Clay mass gap.
+- Operates at fixed discrete lattice spacing a > 0.
+- Continuum limit a -> 0 requires L_max -> infinity, which remains unclosed analytically.

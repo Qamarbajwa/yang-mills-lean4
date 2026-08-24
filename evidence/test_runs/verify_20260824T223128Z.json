@@ -1,0 +1,35 @@
+{
+  "task_id": "YM-000",
+  "timestamp_utc": "2026-08-24T22:31:28.525114+00:00",
+  "status": "PASS",
+  "evidence_level": "E3_REPRODUCIBLE_MACHINE_EVIDENCE",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "git_sha": "c1d9469604b4261c1b2d50c962a54a2911eeb6b9",
+  "git_branch": "master",
+  "git_status": "M CURRENT_SCIENTIFIC_STATE.md\n M EVIDENCE_LEDGER.md\n M NEXT_ACTION.md\n M RESEARCH_LEDGER.md\n M TASK_GRAPH.md\n M THEOREM_LEDGER.md\n M governance/CONTRACT_OWNERSHIP_LEDGER.yaml\n M literature/MODERN_DEPENDENCY_GRAPH.md\n M literature/MODERN_LIMITATION_MATRIX.md\n M literature/PATHWAY_MEMORY_REGISTER.md\n M literature/primary/modern_2000_2026/PAPER-MOD-001/record.md\n M literature/primary/modern_2000_2026/PAPER-MOD-002/record.md\n M literature/primary/modern_2000_2026/PAPER-MOD-003/record.md\n M literature/primary/modern_2000_2026/PAPER-MOD-004/record.md\n M literature/primary/modern_2000_2026/PAPER-MOD-005/record.md\n M literature/primary/modern_2000_2026/PAPER-MOD-006/record.md\n M literature/primary/modern_2000_2026/PAPER-MOD-007/record.md\n M literature/primary/modern_2000_2026/PAPER-MOD-008/record.md\n M literature/primary/modern_2000_2026/manifest.yaml\n M tests/test_modern_literature.py\n M tests/test_pathway_epistemic_taxonomy.py\n?? evidence/test_runs/verify_20260824T223128Z.log\n?? literature/primary/modern_2000_2026/PAPER-MOD-009/\n?? literature/primary/modern_2000_2026/PAPER-MOD-010/",
+  "commands": [
+    {
+      "command": [
+        "D:\\Comfy UI\\yang mills and the mass gap\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 0,
+      "stdout": "........................................................................ [ 58%]\n...................................................                      [100%]\n123 passed in 0.46s\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\Comfy UI\\yang mills and the mass gap\\.venv\\Scripts\\python.exe",
+        "scripts/check_repo.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: repository invariants and governance YAML are readable.\n",
+      "stderr": ""
+    }
+  ],
+  "log_file": "evidence\\test_runs\\verify_20260824T223128Z.log",
+  "log_sha256": "bb12cb9f60c41c9e84eaf8cc537c9c1c68ba91bbfa09e4f139f32778a09c845e"
+}

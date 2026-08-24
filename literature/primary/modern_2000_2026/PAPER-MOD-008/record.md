@@ -1,27 +1,25 @@
-# PAPER-MOD-008: A Scaling Limit of 4D SU(2) Yang-Mills-Higgs on a Lattice
+# PAPER-MOD-008: Expanded regimes of area law for lattice Yang-Mills theories
 
 - **SOURCE_ID:** `PAPER-MOD-008`
-- **TITLE:** A Scaling Limit of 4D SU(2) Yang-Mills-Higgs on a Lattice
-- **AUTHORS:** Sourav Chatterjee
-- **JOURNAL:** Communications in Mathematical Physics / arXiv
-- **VOLUME:** arXiv:2401.10507
-- **PAGES:** 1-52
-- **YEAR:** 2024
-- **DOI:** `10.48550/arXiv.2401.10507`
+- **TITLE:** Expanded regimes of area law for lattice Yang-Mills theories
+- **AUTHORS:** Yu Cao, Eyal Nissim, Scott Sheffield
+- **JOURNAL:** arXiv / Preprints in Mathematical Physics
+- **VOLUME:** arXiv:2505.16585
+- **PAGES:** 1-35
+- **YEAR:** 2025
+- **DOI:** `10.48550/arXiv.2505.16585`
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
-- **BRIDGE_VARIABLES:** gauge coupling g, Higgs parameter gamma, lattice spacing a, correlation length xi
-- **FAILURE_LOCALITY:** `nontriviality (Gaussian limit / Higgs-dominated)`
+- **BRIDGE_VARIABLES:** lattice coupling beta, loop perimeter |C|, string tension sigma, lattice spacing a
+- **FAILURE_LOCALITY:** `continuum limit (discrete lattice area law bounds)`
 
 ## Executive Summary
-Sourav Chatterjee established a rigorous continuum scaling limit for 4D lattice SU(2) Yang-Mills-Higgs theory under a joint scaling of gauge coupling g and Higgs expectation value, proving convergence to a massive generalized Gaussian field. The author explicitly notes that pure 4D non-Abelian Yang-Mills continuum construction remains mathematically open.
+Cao, Nissim, and Sheffield expanded the rigorous parameter regimes for the Wilson loop area law and string tension in lattice Yang-Mills theories for classical Lie groups, deriving non-perturbative lower bounds on string tension across expanded coupling domains.
 
 ## Key Proven Results
-- Rigorous proof of continuum scaling limit for 4D SU(2) Yang-Mills-Higgs under joint parameter tuning.
-- Convergence to a massive Euclidean Gaussian field with an explicit mass gap.
-- Exact mathematical control of lattice fluctuations in the Higgs-dominated scaling regime.
+- Expanded rigorous parameter domains for Wilson area law in lattice gauge theories.
+- Rigorous string tension bounds for classical gauge groups on discrete lattices.
 
 ## Limitations and Unresolved Boundaries
-- The limiting continuum field is Gaussian (trivial S-matrix) due to the Higgs condensation dominating fluctuations.
-- Does NOT construct pure 4D Yang-Mills theory without Higgs fields.
-- The non-Gaussian / interacting pure Yang-Mills continuum limit remains unconstructed.
+- Operates on discrete lattices in strong/intermediate coupling regimes.
+- Area law on the lattice does not prove the continuum spectral mass gap required by Clay.

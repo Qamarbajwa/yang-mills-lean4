@@ -14,12 +14,13 @@
 - **FAILURE_LOCALITY:** `wrong dimension/theory (2D / no propagating transverse gluons)`
 
 ## Executive Summary
-Chandra, Chevyrev, Hairer, and Shen constructed the state space of 2D gauge orbits as a complete metric space, formulated the gauge-invariant Langevin dynamic using regularity structures, and proved that the 2D Yang-Mills Euclidean measure is the unique invariant measure of this stochastic flow.
+Chandra, Chevyrev, Hairer, and Shen constructed the distributional connection state space, gauge-orbit metric state space, and stochastic Yang-Mills heat flow on the 2D torus, formulating the associated Markov process and establishing gauge covariance and invariance in law of the flow.
 
 ## Key Proven Results
-- Rigorous construction of 2D Yang-Mills Langevin dynamic on gauge orbit space.
-- Proof that the 2D Yang-Mills Euclidean measure is invariant under the stochastic flow.
+- Rigorous construction of distributional connection state space and gauge-orbit metric space in 2D.
+- Construction of stochastic Yang-Mills heat flow and its associated Markov diffusion process.
+- Proof of gauge covariance and invariance in law of the resulting stochastic dynamic.
 
 ## Limitations and Unresolved Boundaries
-- Restricted to 2 spacetime dimensions where Yang-Mills has no propagating transverse gluonic degrees of freedom.
-- Does not generalize directly to 3D or 4D where dynamic UV singular structures and divergences are fundamentally different.
+- Restricted to 2 spacetime dimensions where gauge fields have no propagating transverse gluons.
+- Constructs the dynamic Markov process; proof that the 2D Yang-Mills measure is the unique invariant measure was established in Chevyrev & Shen (2026).

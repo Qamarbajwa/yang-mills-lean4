@@ -1,25 +1,26 @@
-# PAPER-MOD-007: Wilson loop area law and mass gap bounds in lattice gauge theories
+# PAPER-MOD-007: A Stochastic Analysis Approach to Lattice Yang-Mills at Strong Coupling
 
 - **SOURCE_ID:** `PAPER-MOD-007`
-- **TITLE:** Wilson loop area law and mass gap bounds in lattice gauge theories
-- **AUTHORS:** Yu Cao, Eyal Nissim, Scott Sheffield
-- **JOURNAL:** arXiv / Preprints in Mathematical Physics
-- **VOLUME:** arXiv:2505.16585
-- **PAGES:** 1-45
-- **YEAR:** 2025
-- **DOI:** `10.48550/arXiv.2505.16585`
+- **TITLE:** A Stochastic Analysis Approach to Lattice Yang-Mills at Strong Coupling
+- **AUTHORS:** Hao Shen, Rongchan Zhu, Xiangchan Zhu
+- **JOURNAL:** Communications in Mathematical Physics
+- **VOLUME:** 400
+- **PAGES:** 805-851
+- **YEAR:** 2023
+- **DOI:** `10.1007/s00220-022-04609-1`
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
-- **BRIDGE_VARIABLES:** lattice coupling beta, 't Hooft coupling lambda, Wilson loop perimeter |C|, string tension sigma
-- **FAILURE_LOCALITY:** `continuum limit (discrete lattice / expanded strong-coupling bounds)`
+- **BRIDGE_VARIABLES:** lattice coupling beta, strong-coupling threshold beta_0, lattice correlation length xi_lat, lattice mass gap Delta_lat, lattice spacing a
+- **FAILURE_LOCALITY:** `continuum/weak-coupling trajectory (blocked at beta -> infinity / g -> 0)`
 
 ## Executive Summary
-Cao, Nissim, and Sheffield expanded the rigorous parameter regimes for the Wilson area law and string tension in lattice gauge theories for classical Lie groups, introducing a dynamical / mass-gap approach that establishes rigorous area law bounds in 't Hooft coupling regimes.
+Shen, Zhu, and Zhu established rigorous functional inequalities for lattice Yang-Mills theories in 2D, 3D, and 4D at strong coupling (beta < beta_0). They proved the existence of the infinite-volume lattice measure, established uniform Poincaré and log-Sobolev inequalities, and proved exponential decay of correlation functions, establishing a strictly positive lattice mass gap Delta_lat(beta) > 0 in the strong-coupling regime.
 
 ## Key Proven Results
-- Expanded rigorous parameter domains for Wilson area law in lattice gauge theories.
-- Rigorous mass gap bounds and area law in 't Hooft regimes for classical Lie groups.
+- Rigorous proof of uniform Poincaré and log-Sobolev inequalities on infinite lattice at strong coupling beta < beta_0.
+- Rigorous proof of exponential correlation decay and strictly positive lattice mass gap Delta_lat(beta) > 0 in infinite volume.
+- Construction of the infinite-volume lattice Yang-Mills Gibbs measure at strong coupling.
 
 ## Limitations and Unresolved Boundaries
-- Operates on discrete lattices in strong/'t Hooft coupling regimes.
-- Does not establish the continuum limit a -> 0 with a mass gap in 4D pure Yang-Mills.
+- Restricted to the strong-coupling regime (beta < beta_0); does not reach the weak-coupling continuum regime beta -> infinity (g -> 0).
+- Lattice mass gap Delta_lat(beta) > 0 at strong coupling does NOT prove the continuum 4D Clay mass gap.

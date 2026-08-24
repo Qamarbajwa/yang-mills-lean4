@@ -1,11 +1,11 @@
 # NEXT ACTION
 
 ## Current action
-`YM-002D — Solved, modified, and analogous theories ledger`
+`YM-002CR2 — Modern-source theorem attribution and bibliographic finalization`
 
 ## Scope
-- Reconstruct rigorous theorems on solved or modified gauge models: 2D pure Yang–Mills ($YM_2$), topological/supersymmetric formulations ($\mathcal{N}=1, \mathcal{N}=2$ Seiberg–Witten, $\mathcal{N}=4$ SYM), massive gauge theories (Proca, Higgs), and gauge-gravity / holographic boundary bounds.
-- Systematically extract bridge variables, exact failure localities, and non-generalizability barriers to pure 4D continuum non-supersymmetric Yang–Mills.
+- Attribution & bibliographic finalization: separate 2D Markov process construction (Chandra et al. 2022) from invariant measure proof (Chevyrev & Shen 2026, CPAM 79); update Shen–Zhu–Zhu to CMP 400 (2023); split Cao–Nissim–Sheffield into arXiv:2505.16585 (expanded area law) and arXiv:2509.04688 (dynamical area law in 't Hooft regimes); update Kazakov–Zheng finite-$N$ to JHEP 2025; update Chatterjee to PMP 7 (2026).
+- Run E3 verification suite, commit candidate, and conduct fresh blind E4 independent audit.
 
 ## Completed actions
 - `YM-000 — Local bootstrap` (DONE)
@@ -18,7 +18,7 @@
 - `YM-002AR1 — E4 provenance + foundational semantic repair` (INDEPENDENTLY_VERIFIED)
 - `YM-002B — Constructive / RG foundations ledger (1980–2000)` (INDEPENDENTLY_VERIFIED)
 - `YM-002BR1 — Constructive pathway-memory semantic + closeout reconciliation` (INDEPENDENTLY_VERIFIED)
-- `YM-002CR1 — Modern literature scope, taxonomy & completeness repair` (INDEPENDENTLY_VERIFIED)
+
 
 
 
