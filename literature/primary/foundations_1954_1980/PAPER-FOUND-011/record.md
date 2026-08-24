@@ -13,4 +13,4 @@
 - **Status:** `PARTIAL_PRIMARY_TEXT_CAPTURED`
 
 ## Limitations and Boundaries
-Mass gap and confinement rigorously proved in 2+1D compact QED; 4D non-Abelian instanton gas is a heuristic proposal with IR divergences.
+Semiclassical Debye screening and confinement in 2+1D compact QED; 4D non-Abelian instanton gas is a heuristic proposal with IR scale divergences.

@@ -1,0 +1,27 @@
+$ D:\Comfy UI\yang mills and the mass gap\.venv\Scripts\python.exe -m pytest -q
+...................................F..                                   [100%]
+================================== FAILURES ===================================
+________________ test_worker_authored_review_cannot_satisfy_e4 ________________
+
+    def test_worker_authored_review_cannot_satisfy_e4():
+        # Verify that historical worker-authored reviews are explicitly marked NOT_E4
+        hist_ym001 = ROOT / "verification" / "historical" / "YM-001_INDEPENDENT_REVIEW_WORKER_AUTHORED.md"
+        assert hist_ym001.exists(), "Historical YM-001 worker-authored review must be preserved"
+>       assert "EVIDENCE_LEVEL: NOT_E4" in hist_ym001.read_text(encoding="utf-8")
+E       AssertionError: assert 'EVIDENCE_LEVEL: NOT_E4' in '# Independent Scientific Verifier Report (E4 Audit)\n\n- **Task:** YM-001 (Official Yang-Mills Problem Specification)...te, mathematically rigorous, and fully faithful to the primary source documents of the Clay Mathematics Institute.\n\n'
+E        +  where '# Independent Scientific Verifier Report (E4 Audit)\n\n- **Task:** YM-001 (Official Yang-Mills Problem Specification)...te, mathematically rigorous, and fully faithful to the primary source documents of the Clay Mathematics Institute.\n\n' = read_text(encoding='utf-8')
+E        +    where read_text = WindowsPath('D:/Comfy UI/yang mills and the mass gap/verification/historical/YM-001_INDEPENDENT_REVIEW_WORKER_AUTHORED.md').read_text
+
+tests\test_verification_provenance.py:46: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_verification_provenance.py::test_worker_authored_review_cannot_satisfy_e4
+1 failed, 37 passed in 0.19s
+
+
+[exit_code=1]
+
+$ D:\Comfy UI\yang mills and the mass gap\.venv\Scripts\python.exe scripts/check_repo.py
+PASS: repository invariants and governance YAML are readable.
+
+
+[exit_code=0]

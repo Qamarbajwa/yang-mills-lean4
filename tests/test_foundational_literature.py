@@ -160,3 +160,41 @@ def test_no_theorem_marked_clay_sufficient():
     for thm_id, row in lim_matrix.items():
         assert row.get("CLAY_SUFFICIENT") == "NO", f"{thm_id} cannot be marked CLAY_SUFFICIENT without complete existence + mass gap"
 
+def test_faddeev_popov_does_not_attribute_gribov_to_1967_source():
+    theorems = parse_theorems()
+    thm2 = theorems.get("THM-YM-0002")
+    assert thm2, "THM-YM-0002 must exist"
+    # The exact result or assumptions must not claim 1967 paper discovered Gribov ambiguity
+    assert "gribov" not in thm2.get("ASSUMPTIONS", "").lower()
+    assert "gribov" not in thm2.get("EXACT_RESULT", "").lower()
+    assert "gribov" not in thm2.get("WHAT_IT_PROVES", "").lower()
+    # It must be attributed to later corrections
+    assert "1978" in thm2.get("KNOWN_LATER_CORRECTIONS", "")
+    assert "Gribov" in thm2.get("KNOWN_LATER_CORRECTIONS", "")
+
+def test_polyakov_1977_evidence_class_is_semiclassical_not_rigorous_theorem():
+    theorems = parse_theorems()
+    thm11 = theorems.get("THM-YM-0011")
+    assert thm11, "THM-YM-0011 must exist"
+    ev_class = thm11.get("EVIDENCE_CLASS", "").strip(" `")
+    assert ev_class in ["SEMICLASSICAL_DERIVATION", "PHYSICAL_PROOF_ARGUMENT"]
+    assert ev_class != "RIGOROUS_MATHEMATICAL_THEOREM"
+
+def test_evidence_class_taxonomy_valid():
+    theorems = parse_theorems()
+    allowed_classes = {
+        "RIGOROUS_MATHEMATICAL_THEOREM",
+        "CONTROLLED_MATHEMATICAL_EXPANSION",
+        "PERTURBATIVE_QFT_RESULT",
+        "SEMICLASSICAL_DERIVATION",
+        "PHYSICAL_PROOF_ARGUMENT",
+        "AXIOMATIC_MATHEMATICS",
+        "CLASSICAL_EXACT_SOLUTION",
+        "CONJECTURE_OR_PROPOSAL"
+    }
+    for thm_id, thm in theorems.items():
+        ev_class = thm.get("EVIDENCE_CLASS", "").strip(" `")
+        assert ev_class in allowed_classes, f"{thm_id} has invalid EVIDENCE_CLASS: {ev_class}"
+
+
+

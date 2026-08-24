@@ -1,7 +1,7 @@
-manifest_version: '1.0'
-timestamp_utc: '2026-08-24T08:40:00Z'
-packet: YM-002A
-description: Foundational Yang-Mills Literature (1954-1980)
+manifest_version: '1.1'
+timestamp_utc: '2026-08-24T08:50:00Z'
+packet: YM-002AR1
+description: Foundational Yang-Mills Literature (1954-1980) with Boundary References
 sources:
 - source_id: PAPER-FOUND-001
   theorem_ids:
@@ -45,10 +45,10 @@ sources:
   local_file: PAPER-FOUND-002/record.md
   access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
   pages_or_sections_actually_inspected: Full text (pp. 29-30)
-  limitations: Perturbative functional integral gauge-fixing; Gribov ambiguity not
-    addressed; no non-perturbative measure.
+  limitations: Perturbative functional integral gauge-fixing; Gribov horizon ambiguities
+    discovered later (Gribov 1978); no non-perturbative measure.
   status: PARTIAL_PRIMARY_TEXT_CAPTURED
-  sha256: 1f6540fa243a8bb4d440f21b64527de259f14b9758f01896b33a925584de8439
+  sha256: d926b90153140efcba61d10eef836d4387512e08042582ad9b5c5bcd750d9ac6
 - source_id: PAPER-FOUND-003
   theorem_ids:
   - THM-YM-0003
@@ -202,10 +202,10 @@ sources:
   local_file: PAPER-FOUND-009/record.md
   access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
   pages_or_sections_actually_inspected: Sections I-VI (pp. 2445-2459)
-  limitations: Strong-coupling lattice expansion (g^2 >> 1); does not establish the
-    weak-coupling continuum limit a -> 0 or continuum mass gap.
+  limitations: Computable strong-coupling lattice expansion (g^2 >> 1); does not establish
+    the weak-coupling continuum limit a -> 0 or continuum mass gap.
   status: PARTIAL_PRIMARY_TEXT_CAPTURED
-  sha256: 2c6fd6d2c4ba35c858ef998e9bf3cd9485abb9f8f80e26567a5f718ff1bc74a3
+  sha256: 5b6a4a29127c6a40bf1c0a12f88c1b11f3bc832c6562bb421d216643f2fd1b04
 - source_id: PAPER-FOUND-010
   theorem_ids:
   - THM-YM-0010
@@ -250,10 +250,10 @@ sources:
   local_file: PAPER-FOUND-011/record.md
   access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
   pages_or_sections_actually_inspected: Sections 1-6 (pp. 429-458)
-  limitations: Mass gap and confinement rigorously proved in 2+1D compact QED; 4D
-    non-Abelian instanton gas is a heuristic proposal with IR divergences.
+  limitations: Semiclassical Debye screening and confinement in 2+1D compact QED;
+    4D non-Abelian instanton gas is a heuristic proposal with IR scale divergences.
   status: PARTIAL_PRIMARY_TEXT_CAPTURED
-  sha256: ea59baacea004fff3eeeb9f752d4ff78fb27d5801491e65eae9b491620ee08b7
+  sha256: c9b7ad253f42ea1d831b39a3fe9de182453fc4bfed5e27f1b35c455d6189cd23
 - source_id: PAPER-FOUND-012
   theorem_ids:
   - THM-YM-0004
@@ -304,3 +304,53 @@ sources:
   admission_reason: Directly cited in Jaffe-Witten [36] as the foundational proof
     of lattice reflection positivity and Hilbert space construction.
   sha256: cd4ab1a7238e278dd96d109c1c410310a1489f57bad51fc316ec7ac773574853
+- source_id: PAPER-FOUND-014
+  theorem_ids:
+  - THM-YM-0002
+  canonical_title: Quantization of Non-Abelian Gauge Theories
+  authors:
+  - V. N. Gribov
+  year: 1978
+  journal: Nuclear Physics B
+  volume: '139'
+  pages: 1-19
+  doi: 10.1016/0550-3213(78)90175-X
+  source_url: https://doi.org/10.1016/0550-3213(78)90175-X
+  retrieval_time_utc: '2026-08-24T08:50:00Z'
+  source_type: JOURNAL_ARTICLE
+  primary_source: true
+  local_file: PAPER-FOUND-014/record.md
+  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  pages_or_sections_actually_inspected: Sections 1-4 (pp. 1-19)
+  limitations: Discovered Gribov copy obstruction and Gribov horizons for non-Abelian
+    Coulomb/Landau gauge conditions.
+  status: PARTIAL_PRIMARY_TEXT_CAPTURED
+  admission_reason: Essential historical boundary identifying the non-perturbative
+    limitation of Faddeev-Popov gauge fixing.
+  sha256: b58ed1cdbe791528d7b4bd29e4af59c4860fd524b59978676b00c7cc37d5efff
+- source_id: PAPER-FOUND-015
+  theorem_ids:
+  - THM-YM-0011
+  canonical_title: Proof of Confinement of Static Quarks in 3-Dimensional U(1) Lattice
+    Gauge Theory for all Values of the Coupling Constant
+  authors:
+  - "M. G\xF6pfert"
+  - G. Mack
+  year: 1981
+  journal: Communications in Mathematical Physics
+  volume: '82'
+  pages: 545-590
+  doi: 10.1007/BF01212850
+  source_url: https://doi.org/10.1007/BF01212850
+  retrieval_time_utc: '2026-08-24T08:50:00Z'
+  source_type: JOURNAL_ARTICLE
+  primary_source: true
+  local_file: PAPER-FOUND-015/record.md
+  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  pages_or_sections_actually_inspected: Sections 1-5 (pp. 545-590)
+  limitations: Rigorous mathematical proof of confinement and mass gap for 3D lattice
+    U(1) across all couplings; post-1980 boundary reference.
+  status: BOUNDARY_REFERENCE_YM-002B
+  admission_reason: Cited in Jaffe-Witten [6] as the definitive rigorous mathematical
+    theorem establishing the Polyakov 3D mass gap mechanism.
+  sha256: 5768d03c2324acbd2b5504d29028eb9834cea904a54cb769e228b5d908f6d613

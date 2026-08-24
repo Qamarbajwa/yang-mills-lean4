@@ -13,4 +13,4 @@
 - **Status:** `PARTIAL_PRIMARY_TEXT_CAPTURED`
 
 ## Limitations and Boundaries
-Perturbative functional integral gauge-fixing; Gribov ambiguity not addressed; no non-perturbative measure.
+Perturbative functional integral gauge-fixing; Gribov horizon ambiguities discovered later (Gribov 1978); no non-perturbative measure.

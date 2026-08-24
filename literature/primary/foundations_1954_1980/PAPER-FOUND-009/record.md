@@ -13,4 +13,4 @@
 - **Status:** `PARTIAL_PRIMARY_TEXT_CAPTURED`
 
 ## Limitations and Boundaries
-Strong-coupling lattice expansion (g^2 >> 1); does not establish the weak-coupling continuum limit a -> 0 or continuum mass gap.
+Computable strong-coupling lattice expansion (g^2 >> 1); does not establish the weak-coupling continuum limit a -> 0 or continuum mass gap.

@@ -1,0 +1,35 @@
+{
+  "task_id": "YM-000",
+  "timestamp_utc": "2026-08-24T08:54:33.990635+00:00",
+  "status": "FAIL",
+  "evidence_level": "E3_REPRODUCIBLE_MACHINE_EVIDENCE",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "git_sha": "93b611bf758e0bdfab0e6ad92a50e1f7424e9820",
+  "git_branch": "master",
+  "git_status": "M CLAIM_EVIDENCE_MATRIX.md\n M INTEGRITY_VIOLATION_REGISTER.md\n M TASK_GRAPH.md\n M THEOREM_LEDGER.md\n M literature/FOUNDATIONAL_DEPENDENCY_GRAPH.md\n M literature/FOUNDATIONAL_LIMITATION_MATRIX.md\n M literature/primary/foundations_1954_1980/PAPER-FOUND-002/record.md\n M literature/primary/foundations_1954_1980/PAPER-FOUND-009/record.md\n M literature/primary/foundations_1954_1980/PAPER-FOUND-011/record.md\n M literature/primary/foundations_1954_1980/manifest.yaml\n M tests/test_foundational_literature.py\n M verification/YM-002A_INDEPENDENT_REVIEW.md\n M verification/raw/YM-002A_E4_RAW_20260824T084548Z.md\n?? evidence/test_runs/verify_20260824T085433Z.log\n?? literature/primary/foundations_1954_1980/PAPER-FOUND-014/\n?? literature/primary/foundations_1954_1980/PAPER-FOUND-015/\n?? scripts/capture_verifier_output.py\n?? scripts/rebuild_all_ym002a.py\n?? verification/historical/YM-002A_E4_RAW_WORKER_AUTHORED.md\n?? verification/historical/YM-002A_INDEPENDENT_REVIEW_WORKER_AUTHORED.md",
+  "commands": [
+    {
+      "command": [
+        "D:\\Comfy UI\\yang mills and the mass gap\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 1,
+      "stdout": "..................FF.................F                                   [100%]\n================================== FAILURES ===================================\n___ test_polyakov_1977_evidence_class_is_semiclassical_not_rigorous_theorem ___\n\n    def test_polyakov_1977_evidence_class_is_semiclassical_not_rigorous_theorem():\n        theorems = parse_theorems()\n        thm11 = theorems.get(\"THM-YM-0011\")\n        assert thm11, \"THM-YM-0011 must exist\"\n        ev_class = thm11.get(\"EVIDENCE_CLASS\", \"\")\n>       assert ev_class in [\"SEMICLASSICAL_DERIVATION\", \"PHYSICAL_PROOF_ARGUMENT\"]\nE       AssertionError: assert '`SEMICLASSICAL_DERIVATION`' in ['SEMICLASSICAL_DERIVATION', 'PHYSICAL_PROOF_ARGUMENT']\n\ntests\\test_foundational_literature.py:180: AssertionError\n_____________________ test_evidence_class_taxonomy_valid ______________________\n\n    def test_evidence_class_taxonomy_valid():\n        theorems = parse_theorems()\n        allowed_classes = {\n            \"RIGOROUS_MATHEMATICAL_THEOREM\",\n            \"CONTROLLED_MATHEMATICAL_EXPANSION\",\n            \"PERTURBATIVE_QFT_RESULT\",\n            \"SEMICLASSICAL_DERIVATION\",\n            \"PHYSICAL_PROOF_ARGUMENT\",\n            \"AXIOMATIC_MATHEMATICS\",\n            \"CLASSICAL_EXACT_SOLUTION\",\n            \"CONJECTURE_OR_PROPOSAL\"\n        }\n        for thm_id, thm in theorems.items():\n            ev_class = thm.get(\"EVIDENCE_CLASS\", \"\")\n>           assert ev_class in allowed_classes, f\"{thm_id} has invalid EVIDENCE_CLASS: {ev_class}\"\nE           AssertionError: THM-YM-0001 has invalid EVIDENCE_CLASS: `CLASSICAL_EXACT_SOLUTION`\nE           assert '`CLASSICAL_EXACT_SOLUTION`' in {'AXIOMATIC_MATHEMATICS', 'CLASSICAL_EXACT_SOLUTION', 'CONJECTURE_OR_PROPOSAL', 'CONTROLLED_MATHEMATICAL_EXPANSION', 'PERTURBATIVE_QFT_RESULT', 'PHYSICAL_PROOF_ARGUMENT', ...}\n\ntests\\test_foundational_literature.py:197: AssertionError\n_____________ test_ym002a_independent_review_provenance_and_hash ______________\n\n    def test_ym002a_independent_review_provenance_and_hash():\n        review_path = ROOT / \"verification\" / \"YM-002A_INDEPENDENT_REVIEW.md\"\n        assert review_path.exists(), \"YM-002A_INDEPENDENT_REVIEW.md must exist\"\n        content = review_path.read_text(encoding=\"utf-8\")\n    \n        # Raw file reference\n        m_raw = re.search(r\"DERIVED FROM[:\\* ]*`([^`]+)`\", content)\n        assert m_raw, \"Must declare DERIVED FROM raw verifier file\"\n        raw_rel = m_raw.group(1)\n        raw_path = ROOT / raw_rel\n        assert raw_path.exists(), f\"Raw verifier artifact {raw_path} must exist on disk\"\n    \n        # Raw hash match\n        m_sha = re.search(r\"RAW_SHA256[:\\* ]*`([a-f0-9]{64})`\", content)\n        assert m_sha, \"Must record RAW_SHA256\"\n        recorded_sha = m_sha.group(1)\n        actual_sha = hashlib.sha256(raw_path.read_bytes()).hexdigest()\n>       assert recorded_sha == actual_sha, f\"Raw artifact hash mismatch: {recorded_sha} != {actual_sha}\"\nE       AssertionError: Raw artifact hash mismatch: 0bcaf5cdb43d936f56c15c6d7c5014bb665bfd677f71fda30584919f3585a133 != c746e4fc5e69027010bc5a658a9adfd22fd9d3da8286168019b4a17e06a5b6f3\nE       assert '0bcaf5cdb43d...4919f3585a133' == 'c746e4fc5e69...4a17e06a5b6f3'\nE         \nE         - c746e4fc5e69027010bc5a658a9adfd22fd9d3da8286168019b4a17e06a5b6f3\nE         + 0bcaf5cdb43d936f56c15c6d7c5014bb665bfd677f71fda30584919f3585a133\n\ntests\\test_verification_provenance.py:77: AssertionError\n=========================== short test summary info ===========================\nFAILED tests/test_foundational_literature.py::test_polyakov_1977_evidence_class_is_semiclassical_not_rigorous_theorem\nFAILED tests/test_foundational_literature.py::test_evidence_class_taxonomy_valid\nFAILED tests/test_verification_provenance.py::test_ym002a_independent_review_provenance_and_hash\n3 failed, 35 passed in 0.34s\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\Comfy UI\\yang mills and the mass gap\\.venv\\Scripts\\python.exe",
+        "scripts/check_repo.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: repository invariants and governance YAML are readable.\n",
+      "stderr": ""
+    }
+  ],
+  "log_file": "evidence\\test_runs\\verify_20260824T085433Z.log",
+  "log_sha256": "b18e4ee9e1e6d78aa48bf1ea214a16f396e34eeb8397339cb0c9ffcd5f5da4fe"
+}

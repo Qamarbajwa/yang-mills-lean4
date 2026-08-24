@@ -1,0 +1,35 @@
+{
+  "task_id": "YM-000",
+  "timestamp_utc": "2026-08-24T08:54:53.640714+00:00",
+  "status": "FAIL",
+  "evidence_level": "E3_REPRODUCIBLE_MACHINE_EVIDENCE",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "git_sha": "93b611bf758e0bdfab0e6ad92a50e1f7424e9820",
+  "git_branch": "master",
+  "git_status": "M CLAIM_EVIDENCE_MATRIX.md\n M INTEGRITY_VIOLATION_REGISTER.md\n M TASK_GRAPH.md\n M THEOREM_LEDGER.md\n M literature/FOUNDATIONAL_DEPENDENCY_GRAPH.md\n M literature/FOUNDATIONAL_LIMITATION_MATRIX.md\n M literature/primary/foundations_1954_1980/PAPER-FOUND-002/record.md\n M literature/primary/foundations_1954_1980/PAPER-FOUND-009/record.md\n M literature/primary/foundations_1954_1980/PAPER-FOUND-011/record.md\n M literature/primary/foundations_1954_1980/manifest.yaml\n M tests/test_foundational_literature.py\n M tests/test_verification_provenance.py\n M verification/YM-002A_INDEPENDENT_REVIEW.md\n M verification/raw/YM-002A_E4_RAW_20260824T084548Z.md\n?? evidence/test_runs/verify_20260824T085433Z.json\n?? evidence/test_runs/verify_20260824T085433Z.log\n?? evidence/test_runs/verify_20260824T085453Z.log\n?? literature/primary/foundations_1954_1980/PAPER-FOUND-014/\n?? literature/primary/foundations_1954_1980/PAPER-FOUND-015/\n?? scripts/capture_verifier_output.py\n?? scripts/rebuild_all_ym002a.py\n?? verification/historical/YM-002A_E4_RAW_WORKER_AUTHORED.md\n?? verification/historical/YM-002A_INDEPENDENT_REVIEW_WORKER_AUTHORED.md",
+  "commands": [
+    {
+      "command": [
+        "D:\\Comfy UI\\yang mills and the mass gap\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 1,
+      "stdout": "...................................F..                                   [100%]\n================================== FAILURES ===================================\n________________ test_worker_authored_review_cannot_satisfy_e4 ________________\n\n    def test_worker_authored_review_cannot_satisfy_e4():\n        # Verify that historical worker-authored reviews are explicitly marked NOT_E4\n        hist_ym001 = ROOT / \"verification\" / \"historical\" / \"YM-001_INDEPENDENT_REVIEW_WORKER_AUTHORED.md\"\n        assert hist_ym001.exists(), \"Historical YM-001 worker-authored review must be preserved\"\n>       assert \"EVIDENCE_LEVEL: NOT_E4\" in hist_ym001.read_text(encoding=\"utf-8\")\nE       AssertionError: assert 'EVIDENCE_LEVEL: NOT_E4' in '# Independent Scientific Verifier Report (E4 Audit)\\n\\n- **Task:** YM-001 (Official Yang-Mills Problem Specification)...te, mathematically rigorous, and fully faithful to the primary source documents of the Clay Mathematics Institute.\\n\\n'\nE        +  where '# Independent Scientific Verifier Report (E4 Audit)\\n\\n- **Task:** YM-001 (Official Yang-Mills Problem Specification)...te, mathematically rigorous, and fully faithful to the primary source documents of the Clay Mathematics Institute.\\n\\n' = read_text(encoding='utf-8')\nE        +    where read_text = WindowsPath('D:/Comfy UI/yang mills and the mass gap/verification/historical/YM-001_INDEPENDENT_REVIEW_WORKER_AUTHORED.md').read_text\n\ntests\\test_verification_provenance.py:46: AssertionError\n=========================== short test summary info ===========================\nFAILED tests/test_verification_provenance.py::test_worker_authored_review_cannot_satisfy_e4\n1 failed, 37 passed in 0.19s\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\Comfy UI\\yang mills and the mass gap\\.venv\\Scripts\\python.exe",
+        "scripts/check_repo.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: repository invariants and governance YAML are readable.\n",
+      "stderr": ""
+    }
+  ],
+  "log_file": "evidence\\test_runs\\verify_20260824T085453Z.log",
+  "log_sha256": "108f3ecfeb06531bfad3875371d6a8424f08bc37494137fc2260b08c6ff560ad"
+}

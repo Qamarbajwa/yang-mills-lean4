@@ -12,6 +12,5 @@
 | THM-YM-0008 | 4 | General | YES (a>0) | NO | YES (g^2>>1) | NO (strong coupling) | NO | NO | NO (g->0 uncontrolled) | NO (fixed lattice) | NO | YES (lattice only) | NO |
 | THM-YM-0009 | 2, 3, 4 | General | YES (a>0) | NO | NO | NO | NO | NO | YES (exact on lattice) | NO (a->0 unproven) | NO (spectral gap unproven) | NO | NO |
 | THM-YM-0010 | 4 | SU(2) | NO | NO | NO | NO | NO | YES | NOT_APPLICABLE | YES (classical) | NO | NO | NO |
-| THM-YM-0011 | 2+1 | U(1) compact | YES/NO | NO | YES (weak e^2<<1) | NO (semiclassical) | NO | NO | YES (in 2+1D) | YES (in 2+1D compact QED) | YES (in 2+1D) | YES (in 2+1D) | NO |
+| THM-YM-0011 | 2+1 | Compact U(1) / SU(2) broken | YES/NO | NO | YES (weak e^2<<1) | NO (semiclassical) | NO | NO | NO (semiclassical) | NO (semiclassical) | NO (semiclassical screening) | NO (semiclassical screening) | NO |
 | THM-YM-0012 | 4 | SU(2) | NO | NO | YES (semiclassical) | NO (proposal) | NO | NO | NO (IR divergent) | NO | NO (proposal only) | NO (proposal only) | NO |
-
