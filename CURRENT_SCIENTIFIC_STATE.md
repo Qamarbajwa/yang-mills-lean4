@@ -5,9 +5,15 @@
 - The official Millennium Problem specification has been reconstructed from primary Clay sources (Jaffe & Witten 2000/2006) and independently audited via fresh blind E4 verifier with preserved raw cryptographic provenance (YM-001 / YM-001R1).
 - 30 formal requirements, 17 mathematical definitions, and full source provenance are recorded, regression-tested, and machine-checked against primary artifacts.
 - Incident `IVR-001` (worker-authored review without raw E4 receipt) resolved and regression-protected.
+- Foundational Yang–Mills literature (1954–1980) reconstructed and independently verified (YM-002A):
+  - 13 primary sources cataloged and hashed in `literature/primary/foundations_1954_1980/manifest.yaml`.
+  - 12 foundational theorems (`THM-YM-0001` through `THM-YM-0012`) extracted with rigorous boundaries in `THEOREM_LEDGER.md`.
+  - Foundational limitation matrix (`literature/FOUNDATIONAL_LIMITATION_MATRIX.md`) and technical prerequisite graph (`literature/FOUNDATIONAL_DEPENDENCY_GRAPH.md`) verified.
+  - Zero pre-1981 results satisfy the full 4D continuum Millennium requirements (`CLAY_SUFFICIENT: NO` across all entries).
 
-## EXTERNALLY SOURCED / TO BE ADVANCED IN YM-002+
-- Literature families (Constructive QFT, Balaban RG, Lattice gauge theory, Osterwalder–Schrader / Wightman reconstructions) identified for structured theorem extraction.
+## EXTERNALLY SOURCED / TO BE ADVANCED IN YM-002B+
+- Rigorous constructive renormalization group program (Bałaban 1980s, Federbush, Battle, Magnen–Sénéor).
+- Rigorous lattice mass gap and continuum limits (Osterwalder–Seiler, Göpfert–Mack, Brydges–Fröhlich–Spencer).
 
 ## UNVERIFIED
 - No original Yang–Mills lemma has been established in this repository.
@@ -15,9 +21,10 @@
 - No claimed external solution has been accepted.
 
 ## CURRENT BOTTLENECK
-The exact theorem-level dependency map between rigorous UV control and rigorous IR mass-gap results has not yet been constructed.
+Rigorous constructive control linking ultraviolet asymptotic freedom to infrared mass generation remains open in 4D continuum spacetime.
 
 ## NEXT ACTION
-`YM-002`: build theorem and literature advancement ledger.
+`YM-002B`: Rigorous constructive / renormalization-group foundations, approximately 1980–2000.
+
 
 
