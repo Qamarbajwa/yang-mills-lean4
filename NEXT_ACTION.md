@@ -1,11 +1,11 @@
 # NEXT ACTION
 
 ## Current action
-`YM-002B — Constructive / RG foundations ledger, approximately 1980–2000`
+`YM-003 — Construct missing-bridge graph`
 
 ## Scope
-- Reconstruct rigorous constructive renormalization group advancements (Bałaban, Federbush, Battle, Magnen–Sénéor) and lattice continuum limits (Göpfert–Mack, Brydges–Fröhlich–Spencer).
-- Map mathematical obstacles preventing the continuum extension of lattice mass gaps in 4D.
+- Construct formal structural graph linking known mathematical facts from YM-001, YM-002A, and YM-002B to the unresolved Clay Millennium requirements.
+- Identify the exact non-meeting boundaries between short-distance asymptotic freedom, lattice cluster expansions, and infinite-volume spectral gap generation.
 
 ## Completed actions
 - `YM-000 — Local bootstrap` (DONE)
@@ -16,6 +16,9 @@
 - `YM-GOV-294R1 — Acceptance-authority identity reconciliation` (INDEPENDENTLY_VERIFIED)
 - `YM-002A — Foundational Yang–Mills advancement ledger (1954–1980)` (INDEPENDENTLY_VERIFIED_AFTER_REPAIR)
 - `YM-002AR1 — E4 provenance + foundational semantic repair` (INDEPENDENTLY_VERIFIED)
+- `YM-002B — Constructive / RG foundations ledger (1980–2000)` (INDEPENDENTLY_VERIFIED)
+- `YM-002 — Build theorem and literature advancement ledger` (INDEPENDENTLY_VERIFIED)
+
 
 
 
