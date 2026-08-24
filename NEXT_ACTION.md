@@ -12,5 +12,7 @@
 - `YM-001 — Official problem specification` (INDEPENDENTLY_VERIFIED)
 - `YM-001R1 — Independent-review provenance repair` (INDEPENDENTLY_VERIFIED)
 - `YM-002A — Foundational Yang–Mills advancement ledger, 1954–1980` (INDEPENDENTLY_VERIFIED)
+- `YM-002AR1 — E4 provenance + foundational semantic repair` (INDEPENDENTLY_VERIFIED)
+
 
 
