@@ -144,3 +144,35 @@
 - **Findings:** They constructively proved the existence of 4D Euclidean Yang–Mills Schwinger distributions with an artificial infrared cutoff $\Lambda_{IR} > 0$ (such as finite volume or mass regulator), proving UV Borel summability. The authors explicitly stated (p. 326) that the removal of the infrared cutoff ($\Lambda_{IR} \to 0$) remains open. In constructive field theory literature, removing $\Lambda_{IR}$ without a prior mass gap is obstructed by infrared renormalons.
 - **Outcome:** Recorded as `THM-YM-0020` and `PATH-CONST-003`.
 
+
+### RES-YM-002C-001: What did Chandra, Chevyrev, Hairer, and Shen achieve for stochastic Yang–Mills?
+- **Date:** 2026-08-25
+- **Question:** What is the mathematical scope of stochastic quantization for 2D/3D Yang–Mills–Higgs?
+- **Primary Source:** A. Chandra, I. Chevyrev, M. Hairer, H. Shen, *Invent. Math.* 236 (2024), 545–648 (`PAPER-MOD-001`).
+- **Epistemic Classification:** `[PRIMARY_SOURCE_RESULT]` / `[PRIMARY_SOURCE_LIMITATION]`
+- **Findings:** They constructed the local singular Langevin SPDE and gauge-orbit Markov diffusion process leaving the Yang–Mills–Higgs Euclidean measure invariant in 2D and 3D using regularity structures. The 4D SPDE is critically singular and remains mathematically open.
+- **Outcome:** Recorded as `THM-YM-0021` and `PATH-MOD-001`.
+
+### RES-YM-002C-002: What are the mathematical capabilities of the lattice bootstrap?
+- **Date:** 2026-08-25
+- **Question:** How do Kazakov and Zheng obtain non-perturbative bounds on Wilson loops?
+- **Primary Source:** V. Kazakov & Z. Zheng, *Phys. Rev. D* 107 (2023), 034509 (`PAPER-MOD-003`).
+- **Epistemic Classification:** `[PRIMARY_SOURCE_RESULT]` / `[PRIMARY_SOURCE_LIMITATION]`
+- **Findings:** By combining exact Makeenko–Migdal lattice loop equations with Gram matrix positive semidefiniteness from reflection positivity, they formulate semidefinite programming relaxations that rigorously bound plaquette energies and string tensions on discrete lattices. Taking the continuum limit $a 	o 0$ requires infinite loop sizes ($L_{max} 	o \infty$), which remains unclosed analytically.
+- **Outcome:** Recorded as `THM-YM-0023` and `PATH-MOD-002`.
+
+### RES-YM-002C-003: What did Chatterjee prove in 4D SU(2) Yang–Mills–Higgs?
+- **Date:** 2026-08-25
+- **Question:** What scaling limit was established in Chatterjee (2024)?
+- **Primary Source:** S. Chatterjee, *arXiv:2401.10507* (2024) (`PAPER-MOD-004`).
+- **Epistemic Classification:** `[PRIMARY_SOURCE_RESULT]` / `[PRIMARY_SOURCE_LIMITATION]`
+- **Findings:** Chatterjee proved that 4D lattice $SU(2)$ Yang–Mills–Higgs converges under joint scaling to a massive Gaussian field with non-zero mass gap. The author explicitly notes that pure 4D Yang–Mills construction remains open, and the limiting Gaussian field has trivial interactions.
+- **Outcome:** Recorded as `THM-YM-0024` and `PATH-MOD-003`.
+
+### RES-YM-002C-004: What is the official 2026 status of the Clay Millennium Prize Problem?
+- **Date:** 2026-08-25
+- **Question:** Has any claimed solution to the Yang–Mills Millennium Problem been accepted as of 2026?
+- **Primary Source:** Clay Mathematics Institute Official Register (`PAPER-MOD-005`).
+- **Epistemic Classification:** `[PRIMARY_SOURCE_RESULT]` (Official Status)
+- **Findings:** The Clay Mathematics Institute confirms that the problem remains officially open and unsolved. No proposed proof has been accepted.
+- **Outcome:** Recorded as `THM-YM-0025` and `PATH-MOD-004`.

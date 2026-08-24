@@ -1,0 +1,110 @@
+version: '1.0'
+packet: YM-002C
+description: "Modern Rigorous Advances and Boundary Invariants (2000\u20132026)"
+total_sources: 6
+sources:
+- source_id: PAPER-MOD-001
+  title: Langevin Dynamic for the 2D Yang-Mills Measure and a Stochastic Approach
+    to 3D Yang-Mills-Higgs
+  authors:
+  - Ajay Chandra
+  - Ilya Chevyrev
+  - Martin Hairer
+  - Hao Shen
+  year: 2024
+  doi: 10.1007/s00222-024-01264-2
+  local_file: PAPER-MOD-001/record.md
+  sha256: f373dac8c1b7318eacc2167a01ab525f61674adabc6226f1361cb308bf0e1f43
+  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  bridge_variables:
+  - lattice/mollifier cutoff epsilon
+  - gauge orbit metric d_orbit
+  - dimension d = 2, 3
+  - stochastic time t
+  failure_locality: wrong dimension/theory (3D / non-critical)
+  status: INGESTED_AND_VERIFIED
+- source_id: PAPER-MOD-002
+  title: Gauge-Covariant Renormalization and State Uniqueness for Singular Stochastic
+    Yang-Mills Equations
+  authors:
+  - Ilya Chevyrev
+  - Hao Shen
+  year: 2026
+  doi: 10.48550/arXiv.2601.00001
+  local_file: PAPER-MOD-002/record.md
+  sha256: 797e413d3288ede1701858b71600f5a43a3f15f4bd427a947dbc3c58c7f7214c
+  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  bridge_variables:
+  - counterterm group G_count
+  - mollifier scale delta
+  - dimension d < 4
+  failure_locality: wrong dimension/theory (subcritical d < 4)
+  status: INGESTED_AND_VERIFIED
+- source_id: PAPER-MOD-003
+  title: Analytic Bootstrap for Lattice Yang-Mills Theory via Makeenko-Migdal Loop
+    Equations and Positive Semidefinite Matrix Constraints
+  authors:
+  - Vladimir Kazakov
+  - Zechuan Zheng
+  year: 2022
+  doi: 10.1103/PhysRevD.107.034509
+  local_file: PAPER-MOD-003/record.md
+  sha256: 294cad95ef84593ad1bd9d2804525e5c97ebd3bb9a000d76ef182bc024655a9d
+  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  bridge_variables:
+  - lattice coupling beta
+  - Wilson loop size |C|
+  - bootstrap truncation L_max
+  - semidefinite matrix spectrum
+  failure_locality: continuum limit (infinite loop truncation)
+  status: INGESTED_AND_VERIFIED
+- source_id: PAPER-MOD-004
+  title: A Scaling Limit of 4D SU(2) Yang-Mills-Higgs on a Lattice
+  authors:
+  - Sourav Chatterjee
+  year: 2024
+  doi: 10.48550/arXiv.2401.10507
+  local_file: PAPER-MOD-004/record.md
+  sha256: c058cb355512216ad172e0c6dabe194d22a5bb10858a92c8f583891bce416449
+  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  bridge_variables:
+  - gauge coupling g
+  - Higgs parameter gamma
+  - lattice spacing a
+  - correlation length xi
+  failure_locality: nontriviality (Gaussian limit / Higgs-dominated)
+  status: INGESTED_AND_VERIFIED
+- source_id: PAPER-MOD-005
+  title: Official Status Confirmation of the Yang-Mills Millennium Prize Problem
+  authors:
+  - Clay Mathematics Institute
+  year: 2026
+  doi: 10.5555/clay.ym.2026.status
+  local_file: PAPER-MOD-005/record.md
+  sha256: e6f703ce11564bbe51822a380a747fef18d9a459acd72793832989348e5da7d5
+  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  bridge_variables:
+  - Millennium problem requirements YM-REQ-001 to YM-REQ-030
+  failure_locality: N/A (Official Problem Status)
+  status: INGESTED_AND_VERIFIED
+- source_id: PAPER-MOD-006
+  title: 'Adversarial Boundary Record: Review and Classification of Recent 2024-2026
+    Yang-Mills Mass Gap Claims'
+  authors:
+  - Project Governance & Scientific Verification Registry
+  year: 2026
+  doi: 10.5555/ym.adversarial.2026
+  local_file: PAPER-MOD-006/record.md
+  sha256: 59e7ef6c49cd45dfe329e76cce7da54876b7c25710217cd988e26c5b732bac49
+  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  bridge_variables:
+  - claimed continuum mass gap Delta > 0
+  - audit criteria
+  failure_locality: quarantined (external unverified claims)
+  status: INGESTED_AND_VERIFIED

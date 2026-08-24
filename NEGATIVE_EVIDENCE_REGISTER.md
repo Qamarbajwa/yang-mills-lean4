@@ -44,3 +44,18 @@
 - **Epistemic Classification:** `[PRIMARY_SOURCE_LIMITATION]` / `[PROJECT_SYNTHESIS]`
 - **Finding:** Göpfert & Mack (1981) rigorously proved confinement and mass gap for 3D $U(1)$ lattice gauge theory via monopole Coulomb gas duality. In 4D Euclidean spacetime, magnetic monopoles form 1D closed worldlines / current loops rather than 0D point events (with Dirac strings forming 2D Dirac sheets bounded by the loops), and the non-Abelian field self-interaction $[A_\mu, A_\nu]$ obstructs direct Hodge-star scalar duality. No direct mathematical extension from 3D Abelian duality to 4D non-Abelian Yang–Mills has been established, though no impossibility theorem rules out confinement via dual superconductor mechanisms.
 
+
+### NEG-MOD-001: Dimensional Criticality Barrier in 4D Stochastic Yang–Mills Quantization
+- **Discovery Date:** 2026-08-25
+- **Epistemic Classification:** `[PRIMARY_SOURCE_LIMITATION]` / `[PROJECT_SYNTHESIS]`
+- **Finding:** Chandra, Chevyrev, Hairer, and Shen (2024) established rigorous stochastic quantization for Yang–Mills–Higgs in 2D and 3D. However, in 4D spacetime, stochastic Yang–Mills is critically singular, meaning that standard local polynomial counterterms and regularity structures are insufficient to control UV fluctuations, leaving 4D stochastic quantization open.
+
+### NEG-MOD-002: Infinite-Loop Truncation Barrier in Continuum Lattice Bootstrap
+- **Discovery Date:** 2026-08-25
+- **Epistemic Classification:** `[PRIMARY_SOURCE_LIMITATION]` / `[PROJECT_SYNTHESIS]`
+- **Finding:** The Makeenko–Migdal loop equation bootstrap (Kazakov & Zheng 2022) provides rigorous upper and lower bounds on lattice observables at fixed lattice spacing $a > 0$. However, taking the continuum limit $a 	o 0$ requires loops of arbitrarily large perimeter ($L_{max} 	o \infty$), causing truncated semidefinite bootstrap matrices to lose rigorous closure without independent non-perturbative continuum bounds.
+
+### NEG-MOD-003: Triviality of the Massive Continuum Scaling Limit in Gauge-Higgs Systems
+- **Discovery Date:** 2026-08-25
+- **Epistemic Classification:** `[PRIMARY_SOURCE_LIMITATION]` / `[PROJECT_SYNTHESIS]`
+- **Finding:** Chatterjee (2024) proved that 4D $SU(2)$ Yang–Mills–Higgs under joint parameter scaling produces a continuum field with a strictly positive mass gap $m > 0$. However, because the mass generation is driven by Higgs condensation, the resulting continuum field is a free Gaussian field (trivial $S$-matrix), which does not solve the interacting non-Abelian pure Yang–Mills problem.
