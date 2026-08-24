@@ -35,6 +35,12 @@
 | EVD-002BR1-01 | YM-002BR1 Pathway Epistemic Taxonomy & Invariants Test Suite (8 tests) | E3 | `tests/test_pathway_epistemic_taxonomy.py` | Pass receipt `evidence/test_runs/verify_20260824T154400Z.json` | REPRODUCIBLE_LOCALLY (`RUN_VERIFY.ps1`) | ACCEPTED |
 | EVD-002BR1-02 | YM-002BR1 Fresh Blind E4 Independent Audit (Verifier `66e23357-ea7d-4b3b-9e20-365e15f72c09`) | E4 | `verification/raw/YM-002BR1_E4_RAW_20260824T154558Z.md` | `b77c5c02f28001b565688ed8278affbe4f7a21690f9a32d23bfa58eff6f9f946` (Candidate SHA: `ca0d6c29f946540f0a5ab58d8a361ba639226cb3`) | TRANSCRIPT_LOG_CAPTURED | ACCEPTED |
 | EVD-002BR1-03 | YM-002BR1 Derived E4 Independent Review Report | E4_DERIVED | `verification/YM-002BR1_INDEPENDENT_REVIEW.md` | Derived from raw `b77c5c02f28001b565688ed8278affbe4f7a21690f9a32d23bfa58eff6f9f946` | TRACEABLE_TO_RAW_E4 | ACCEPTED |
+| EVD-002C-01 | YM-002C Modern Literature Manifest & Records (6 sources, 2000–2026) | E3 | `literature/primary/modern_2000_2026/manifest.yaml` | `manifest.yaml` verified against disk hashes | MACHINE_CHECKED (`manifest.yaml`) | ACCEPTED |
+| EVD-002C-02 | YM-002C Modern Literature Test Suite (8 tests) | E3 | `tests/test_modern_literature.py` | Pass receipt `evidence/test_runs/verify_20260824T220746Z.json` | REPRODUCIBLE_LOCALLY (`RUN_VERIFY.ps1`) | ACCEPTED |
+| EVD-002C-03 | YM-002C Modern Limitation Matrix & Dependency Graph | E3 | `literature/MODERN_LIMITATION_MATRIX.md`, `literature/MODERN_DEPENDENCY_GRAPH.md` | Matrix and graph verified | MACHINE_CHECKED | ACCEPTED |
+| EVD-002C-04 | YM-002C Fresh Blind E4 Independent Audit (Verifier `c1e0c3fb-b950-430c-ac35-3a0784e8c9ef`) | E4 | `verification/raw/YM-002C_E4_RAW_20260824T220916Z.md` | `be14aec741a4e5f5038eae60c68b5bb33e3ea271ecaeeef129813e94997f3693` (Candidate SHA: `c3acff2987333fe3cc0d8b61e1876d5b44cd0875`) | TRANSCRIPT_LOG_CAPTURED | ACCEPTED |
+| EVD-002C-05 | YM-002C Derived E4 Independent Review Report | E4_DERIVED | `verification/YM-002C_INDEPENDENT_REVIEW.md` | Derived from raw `be14aec741a4e5f5038eae60c68b5bb33e3ea271ecaeeef129813e94997f3693` | TRACEABLE_TO_RAW_E4 | ACCEPTED |
+
 
 
 

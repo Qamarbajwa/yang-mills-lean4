@@ -1,11 +1,11 @@
 # NEXT ACTION
 
 ## Current action
-`YM-002C — Modern rigorous advances, approximately 2000–2026`
+`YM-002D — Solved, modified, and analogous theories ledger`
 
 ## Scope
-- Reconstruct modern mathematical advances in gauge theory, including singular SPDE / stochastic quantization of 2D/3D/4D Yang–Mills (Hairer, Shen, Chandra, Chevyrev), modern Euclidean constructive updates, and mathematical bounds from non-perturbative frameworks.
-- Map exact proven scopes and unresolved infrared limits.
+- Reconstruct rigorous theorems on solved or modified gauge models: 2D pure Yang–Mills ($YM_2$), topological/supersymmetric formulations ($\mathcal{N}=1, \mathcal{N}=2$ Seiberg–Witten, $\mathcal{N}=4$ SYM), massive gauge theories (Proca, Higgs), and gauge-gravity / holographic boundary bounds.
+- Systematically extract bridge variables, exact failure localities, and non-generalizability barriers to pure 4D continuum non-supersymmetric Yang–Mills.
 
 ## Completed actions
 - `YM-000 — Local bootstrap` (DONE)
@@ -18,6 +18,8 @@
 - `YM-002AR1 — E4 provenance + foundational semantic repair` (INDEPENDENTLY_VERIFIED)
 - `YM-002B — Constructive / RG foundations ledger (1980–2000)` (INDEPENDENTLY_VERIFIED)
 - `YM-002BR1 — Constructive pathway-memory semantic + closeout reconciliation` (INDEPENDENTLY_VERIFIED)
+- `YM-002C — Modern rigorous advances, approximately 2000–2026` (INDEPENDENTLY_VERIFIED)
+
 
 
 

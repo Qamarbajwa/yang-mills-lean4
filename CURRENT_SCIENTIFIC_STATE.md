@@ -21,9 +21,16 @@
   - Confirmed: 4D Ultraviolet Stability in finite volume proved (Bałaban `THM-YM-0018`) and IR-regulated Euclidean Schwinger functions constructed (Magnen–Rivasseau–Sénéor `THM-YM-0020`), but 4D continuum infinite-volume mass gap $\Delta > 0$ remains unsolved (`CLAY_SUFFICIENT: NO` across all entries).
   - Current status: `INDEPENDENTLY_VERIFIED` (E4 verifier `66e23357-ea7d-4b3b-9e20-365e15f72c09`, `INTEGRITY_PASS`).
 
-## EXTERNALLY SOURCED / TO BE ADVANCED IN YM-002C+
-- Modern rigorous advances 2000–2026 (`YM-002C`).
-- Solved/modified/analogous theories (`YM-002D`).
+- Modern Rigorous Advances and Boundary Invariants ledger (2000–2026) reconstructed, extracted, and independently verified (`YM-002C`):
+  - 6 primary modern sources cataloged and hashed in `literature/primary/modern_2000_2026/manifest.yaml`.
+  - 5 modern theorems (`THM-YM-0021` through `THM-YM-0025`) extracted with granular evidence classifications, complete limitation blocks, bridge variables, and failure localities in `THEOREM_LEDGER.md`.
+  - Modern limitation matrix (`literature/MODERN_LIMITATION_MATRIX.md`) and dependency graph (`literature/MODERN_DEPENDENCY_GRAPH.md`) verified with 5 explicit edge justifications.
+  - Pathway Memory Register extended with modern programs (`PATH-MOD-001` through `PATH-MOD-004`), identifying exact bridge variables and failure localities across singular SPDEs (wrong dimension 3D), lattice bootstrap (continuum infinite loop truncation), and gauge-Higgs scaling limits (Gaussian triviality).
+  - Clay Millennium status invariant confirmed: problem remains officially open and unsolved in 2026 (`CLAY_SUFFICIENT: NO` across all entries).
+  - Current status: `INDEPENDENTLY_VERIFIED` (E4 verifier `c1e0c3fb-b950-430c-ac35-3a0784e8c9ef`, `INTEGRITY_PASS`).
+
+## EXTERNALLY SOURCED / TO BE ADVANCED IN YM-002D+
+- Solved, modified, and analogous theories (`YM-002D`).
 - Claimed-solution adversarial audits (`YM-002E`).
 - Cross-era theorem and dependency synthesis (`YM-002F`).
 - Missing-bridge graph (`YM-003`).
@@ -37,7 +44,8 @@
 Rigorous constructive control linking ultraviolet asymptotic freedom to infrared mass generation remains open in 4D continuum spacetime across the strong-coupling transition ($g_k \sim 1$).
 
 ## NEXT ACTION
-`YM-002C`: Modern rigorous advances (2000–2026).
+`YM-002D`: Solved, modified, and analogous theories ledger.
+
 
 
 
