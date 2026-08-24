@@ -22,6 +22,11 @@
 | EVD-GOV-294-02 | YM-GOV-294 Governance Regression Suite (26 tests) | E3 | `tests/test_governance_v294.py` | Pass receipt `evidence/test_runs/verify_20260824T091620Z.json` | REPRODUCIBLE_LOCALLY (`RUN_VERIFY.ps1`) | ACCEPTED |
 | EVD-GOV-294-03 | YM-GOV-294 Fresh Blind E4 Independent Audit (Verifier `ef322c0f-d0ba-41e9-9e92-90b9b846af45`) | E4 | `verification/raw/YM-GOV-294_E4_RAW_20260824T145519Z.md` | `d1977ad650eccf729b341e3bcdbf04c8b59f5dee21c47dc7eaa6048d0d71db16` (Candidate SHA: `86a541f0f8894d713adce25df6a8dfbfeca051e3`) | TRANSCRIPT_LOG_CAPTURED | ACCEPTED |
 | EVD-GOV-294-04 | YM-GOV-294 Derived E4 Independent Review Report | E4_DERIVED | `verification/YM-GOV-294_INDEPENDENT_REVIEW.md` | Derived from raw `d1977ad650eccf729b341e3bcdbf04c8b59f5dee21c47dc7eaa6048d0d71db16` | TRACEABLE_TO_RAW_E4 | ACCEPTED |
+| EVD-GOV-294R1-01 | YM-GOV-294R1 Acceptance Authority Identity Reconciliation Doc | E3 | `governance/ACCEPTANCE_AUTHORITY_RECONCILIATION_YM-GOV-294.md` | Document verified against disk | MACHINE_CHECKED | ACCEPTED |
+| EVD-GOV-294R1-02 | YM-GOV-294R1 Identity Separation Regression Suite (5 tests) | E3 | `tests/test_acceptance_identity_separation.py` | Pass receipt `evidence/test_runs/verify_20260824T150717Z.json` | REPRODUCIBLE_LOCALLY (`RUN_VERIFY.ps1`) | ACCEPTED |
+| EVD-GOV-294R1-03 | YM-GOV-294R1 Fresh Blind E4 Independent Audit (Verifier `0934720d-5ba8-4922-b471-5226ee549a1f`) | E4 | `verification/raw/YM-GOV-294R1_E4_RAW_20260824T150841Z.md` | `caedd68d112b2285f949394d8750a6fa5ca1d696932a4aedb839f549cb16be8e` (Candidate SHA: `57438529e800da5901a686bca45ea5c9f399c2aa`) | TRANSCRIPT_LOG_CAPTURED | ACCEPTED |
+| EVD-GOV-294R1-04 | YM-GOV-294R1 Derived E4 Independent Review Report | E4_DERIVED | `verification/YM-GOV-294R1_INDEPENDENT_REVIEW.md` | Derived from raw `caedd68d112b2285f949394d8750a6fa5ca1d696932a4aedb839f549cb16be8e` | TRACEABLE_TO_RAW_E4 | ACCEPTED |
+
 
 
 

@@ -2,7 +2,7 @@
 
 ## VERIFIED
 - Local repository scaffold exists and passes the bootstrap verification suite (YM-000).
-- Governance upgraded to authoritative v2.9.4 Constitution and Runtime Kernel, verified via E3 84-test regression suite and independent blind E4 audit (`YM-GOV-294`).
+- Governance upgraded to authoritative v2.9.4 Constitution and Runtime Kernel (`YM-GOV-294`), with acceptance-authority execution identity separation formally reconciled and verified via E3 regression suite and blind E4 review (`YM-GOV-294R1`).
 - The official Millennium Problem specification has been reconstructed from primary Clay sources (Jaffe & Witten 2000/2006) and independently audited via fresh blind E4 verifier with preserved raw cryptographic provenance (YM-001 / YM-001R1).
 - 30 formal requirements, 17 mathematical definitions, and full source provenance are recorded, regression-tested, and machine-checked against primary artifacts.
 - Incidents `IVR-001` and `IVR-002` recorded and quarantined under v2.9.4 truth control plane (`INTEGRITY_QUARANTINE.md`).
@@ -10,8 +10,9 @@
   - 15 primary and boundary sources cataloged and hashed in `literature/primary/foundations_1954_1980/manifest.yaml` (including Gribov 1978 and Göpfert–Mack 1981 boundary references).
   - 12 foundational theorems (`THM-YM-0001` through `THM-YM-0012`) extracted with granular evidence classifications in `THEOREM_LEDGER.md`.
   - Foundational limitation matrix (`literature/FOUNDATIONAL_LIMITATION_MATRIX.md`) and technical prerequisite graph (`literature/FOUNDATIONAL_DEPENDENCY_GRAPH.md`) verified.
-  - Zero pre-1981 results satisfy the full 4D continuum Millennium requirements (`CLAY_SUIENT: NO` across all entries).
+  - Zero pre-1981 results satisfy the full 4D continuum Millennium requirements (`CLAY_SUFFICIENT: NO` across all entries).
   - Current status: `E3_VERIFIED_E4_PROVENANCE_CHALLENGED` (queued for E4 re-audit under v2.9.4 pipeline in YM-002AR1).
+
 
 ## EXTERNALLY SOURCED / TO BE ADVANCED IN YM-002B+
 - Rigorous constructive renormalization group program (Bałaban 1980s, Federbush, Battle, Magnen–Sénéor).

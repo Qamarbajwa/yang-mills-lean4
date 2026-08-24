@@ -12,7 +12,9 @@
 - `YM-001 — Official problem specification` (INDEPENDENTLY_VERIFIED)
 - `YM-001R1 — Independent-review provenance repair` (INDEPENDENTLY_VERIFIED)
 - `YM-GOV-293 — Governance migration v2.9 -> v2.9.3` (SUPERSEDED_BY_YM-GOV-294)
-- `YM-GOV-294 — Governance migration to v2.9.4 (Role-based environment-local acceptance)` (INDEPENDENTLY_VERIFIED)
+- `YM-GOV-294 — Governance migration to v2.9.4` (ACCEPTED_AFTER_ACCEPTANCE_REPAIR)
+- `YM-GOV-294R1 — Acceptance-authority identity reconciliation` (INDEPENDENTLY_VERIFIED)
+
 
 
 
