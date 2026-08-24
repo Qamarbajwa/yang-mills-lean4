@@ -1,27 +1,25 @@
-# PAPER-MOD-003: Analytic Bootstrap for Lattice Yang-Mills Theory via Makeenko-Migdal Loop Equations and Positive Semidefinite Matrix Constraints
+# PAPER-MOD-003: Uniqueness of Gauge Covariant Renormalisation of Stochastic 3D Yang-Mills-Higgs
 
 - **SOURCE_ID:** `PAPER-MOD-003`
-- **TITLE:** Analytic Bootstrap for Lattice Yang-Mills Theory via Makeenko-Migdal Loop Equations and Positive Semidefinite Matrix Constraints
-- **AUTHORS:** Vladimir Kazakov, Zechuan Zheng
-- **JOURNAL:** Physical Review D
-- **VOLUME:** 107
-- **PAGES:** 034509
-- **YEAR:** 2022
-- **DOI:** `10.1103/PhysRevD.107.034509`
+- **TITLE:** Uniqueness of Gauge Covariant Renormalisation of Stochastic 3D Yang-Mills-Higgs
+- **AUTHORS:** Ilya Chevyrev, Hao Shen
+- **JOURNAL:** Archive for Rational Mechanics and Analysis
+- **VOLUME:** 250
+- **PAGES:** Article 11 (1-55)
+- **YEAR:** 2026
+- **DOI:** `10.1007/s00205-025-02163-3`
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
-- **BRIDGE_VARIABLES:** lattice coupling beta, Wilson loop size |C|, bootstrap truncation L_max, semidefinite matrix spectrum
-- **FAILURE_LOCALITY:** `continuum limit (infinite loop truncation)`
+- **BRIDGE_VARIABLES:** counterterm group G_count, mollifier scale delta, dimension d = 3
+- **FAILURE_LOCALITY:** `wrong dimension/theory (3D stochastic YMH)`
 
 ## Executive Summary
-Kazakov and Zheng developed a non-perturbative numerical/analytical bootstrap method for lattice gauge theories in 2D, 3D, and 4D. Combining the exact Schwinger-Dyson / Makeenko-Migdal loop equations on the lattice with reflection positivity and Gram matrix positive-semidefiniteness of Wilson loops, they obtained rigorous upper and lower bounds on plaquette expectation values and string tension at finite N and large N.
+Chevyrev and Shen proved that the gauge-covariant counterterms in singular stochastic 3D Yang-Mills-Higgs equations are uniquely determined by gauge symmetry and geometric regularity, establishing that the 3D stochastic quantization flow is canonically independent of the mollification scheme.
 
 ## Key Proven Results
-- Derivation of rigorous bootstrap inequalities on Wilson loop expectation values from Makeenko-Migdal equations and positivity.
-- Rigorous non-perturbative upper and lower bounds on lattice plaquette energy and string tension without Monte Carlo sampling.
-- Formulation of semidefinite programming relaxation for non-Abelian lattice gauge theories.
+- Proof of uniqueness of gauge-covariant stochastic counterterms specifically for 3D Yang-Mills-Higgs.
+- Scheme-independence of the resulting 3D Markov diffusion generator on gauge orbit space.
 
 ## Limitations and Unresolved Boundaries
-- Operates on a discrete lattice at fixed coupling beta = 2N/g^2 and lattice spacing a > 0.
-- Continuum limit a -> 0 requires scaling infinite loops simultaneously, which is truncated in finite-size bootstrap relaxations.
-- Does not prove the continuum mass gap Delta > 0 analytically in 4D.
+- Specifically scoped to 3D spacetime; does not prove uniqueness in 4D.
+- Critical 4D stochastic quantization remains blocked by non-renormalizable singular divergences.

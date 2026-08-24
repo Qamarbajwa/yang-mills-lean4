@@ -144,35 +144,34 @@
 - **Findings:** They constructively proved the existence of 4D Euclidean Yang–Mills Schwinger distributions with an artificial infrared cutoff $\Lambda_{IR} > 0$ (such as finite volume or mass regulator), proving UV Borel summability. The authors explicitly stated (p. 326) that the removal of the infrared cutoff ($\Lambda_{IR} \to 0$) remains open. In constructive field theory literature, removing $\Lambda_{IR}$ without a prior mass gap is obstructed by infrared renormalons.
 - **Outcome:** Recorded as `THM-YM-0020` and `PATH-CONST-003`.
 
-
-### RES-YM-002C-001: What did Chandra, Chevyrev, Hairer, and Shen achieve for stochastic Yang–Mills?
+### RES-YM-002CR1-001: How do 2D Yang–Mills and 3D Yang–Mills–Higgs stochastic quantization differ?
 - **Date:** 2026-08-25
-- **Question:** What is the mathematical scope of stochastic quantization for 2D/3D Yang–Mills–Higgs?
-- **Primary Source:** A. Chandra, I. Chevyrev, M. Hairer, H. Shen, *Invent. Math.* 236 (2024), 545–648 (`PAPER-MOD-001`).
+- **Question:** What are the exact mathematical scopes and differences between Chandra et al. 2D (2022) and 3D (2024)?
+- **Primary Sources:** A. Chandra et al., *Publ. Math. IHÉS* 136 (2022), 1–147 (`PAPER-MOD-001`); *Invent. Math.* 237 (2024), 85–236 (`PAPER-MOD-002`).
 - **Epistemic Classification:** `[PRIMARY_SOURCE_RESULT]` / `[PRIMARY_SOURCE_LIMITATION]`
-- **Findings:** They constructed the local singular Langevin SPDE and gauge-orbit Markov diffusion process leaving the Yang–Mills–Higgs Euclidean measure invariant in 2D and 3D using regularity structures. The 4D SPDE is critically singular and remains mathematically open.
-- **Outcome:** Recorded as `THM-YM-0021` and `PATH-MOD-001`.
+- **Findings:** The 2D paper constructs the global Langevin dynamic and proves that the 2D Yang–Mills Euclidean measure is the unique invariant measure. The 3D paper constructs the local-in-time stochastic flow for Yang–Mills–Higgs up to possible blow-up, but explicitly notes (p. 87) that the existence of an invariant measure in 3D remains an open problem.
+- **Outcome:** Recorded as separate theorems `THM-YM-0021` and `THM-YM-0022`.
 
-### RES-YM-002C-002: What are the mathematical capabilities of the lattice bootstrap?
+### RES-YM-002CR1-002: What is the exact scope of Chevyrev–Shen (2026)?
 - **Date:** 2026-08-25
-- **Question:** How do Kazakov and Zheng obtain non-perturbative bounds on Wilson loops?
-- **Primary Source:** V. Kazakov & Z. Zheng, *Phys. Rev. D* 107 (2023), 034509 (`PAPER-MOD-003`).
+- **Question:** What does Chevyrev–Shen prove for stochastic gauge counterterms?
+- **Primary Source:** I. Chevyrev & H. Shen, *Arch. Ration. Mech. Anal.* 250 (2026), art. 11 (`PAPER-MOD-003`).
 - **Epistemic Classification:** `[PRIMARY_SOURCE_RESULT]` / `[PRIMARY_SOURCE_LIMITATION]`
-- **Findings:** By combining exact Makeenko–Migdal lattice loop equations with Gram matrix positive semidefiniteness from reflection positivity, they formulate semidefinite programming relaxations that rigorously bound plaquette energies and string tensions on discrete lattices. Taking the continuum limit $a 	o 0$ requires infinite loop sizes ($L_{max} 	o \infty$), which remains unclosed analytically.
-- **Outcome:** Recorded as `THM-YM-0023` and `PATH-MOD-002`.
+- **Findings:** The theorem proves uniqueness and scheme-independence of gauge-covariant counterterms specifically for 3D stochastic Yang–Mills–Higgs, rather than generic subcritical dimensions.
+- **Outcome:** Recorded as `THM-YM-0023`.
 
-### RES-YM-002C-003: What did Chatterjee prove in 4D SU(2) Yang–Mills–Higgs?
+### RES-YM-002CR1-003: How do Kazakov–Zheng large-N and finite-N bootstrap results differ?
 - **Date:** 2026-08-25
-- **Question:** What scaling limit was established in Chatterjee (2024)?
-- **Primary Source:** S. Chatterjee, *arXiv:2401.10507* (2024) (`PAPER-MOD-004`).
+- **Question:** What are the mathematical formulations of Kazakov–Zheng (2023) vs (2024)?
+- **Primary Sources:** V. Kazakov & Z. Zheng, *Phys. Rev. D* 107 (2023), L051501 (`PAPER-MOD-004`); *arXiv:2404.16925* (2024) (`PAPER-MOD-005`).
 - **Epistemic Classification:** `[PRIMARY_SOURCE_RESULT]` / `[PRIMARY_SOURCE_LIMITATION]`
-- **Findings:** Chatterjee proved that 4D lattice $SU(2)$ Yang–Mills–Higgs converges under joint scaling to a massive Gaussian field with non-zero mass gap. The author explicitly notes that pure 4D Yang–Mills construction remains open, and the limiting Gaussian field has trivial interactions.
-- **Outcome:** Recorded as `THM-YM-0024` and `PATH-MOD-003`.
+- **Findings:** The 2023 paper uses planar loop equations for $SU(\infty)$ large-$N$ lattice gauge theory. The 2024 paper incorporates Cayley–Hamilton trace identities and finite-$N$ Gram matrices to establish non-perturbative SDP bounds for finite-$N$ groups like $SU(2)$.
+- **Outcome:** Recorded as separate theorems `THM-YM-0024` and `THM-YM-0025`.
 
-### RES-YM-002C-004: What is the official 2026 status of the Clay Millennium Prize Problem?
+### RES-YM-002CR1-004: What did Shen–Zhu–Zhu prove on the lattice at strong coupling?
 - **Date:** 2026-08-25
-- **Question:** Has any claimed solution to the Yang–Mills Millennium Problem been accepted as of 2026?
-- **Primary Source:** Clay Mathematics Institute Official Register (`PAPER-MOD-005`).
-- **Epistemic Classification:** `[PRIMARY_SOURCE_RESULT]` (Official Status)
-- **Findings:** The Clay Mathematics Institute confirms that the problem remains officially open and unsolved. No proposed proof has been accepted.
-- **Outcome:** Recorded as `THM-YM-0025` and `PATH-MOD-004`.
+- **Question:** Does Shen–Zhu–Zhu (2022) prove an infinite-volume lattice mass gap?
+- **Primary Source:** H. Shen, R. Zhu, X. Zhu, *Ann. Probab.* / *arXiv:2204.12737* (2022) (`PAPER-MOD-006`).
+- **Epistemic Classification:** `[PRIMARY_SOURCE_RESULT]` / `[PRIMARY_SOURCE_LIMITATION]` / `[PROJECT_SYNTHESIS]`
+- **Findings:** Shen, Zhu, and Zhu proved the existence of the infinite-volume Gibbs measure, established uniform Poincaré and log-Sobolev inequalities, and proved exponential correlation decay (strictly positive lattice mass gap $\Delta_{lat}(\beta) > 0$) for 2D, 3D, and 4D lattice Yang–Mills at strong coupling ($\beta < \beta_0$). This is a major bridge node: it establishes an infinite-volume lattice mass gap, but does not extend to the weak-coupling continuum limit $\beta \to \infty$.
+- **Outcome:** Recorded as `THM-YM-0026` and `PATH-MOD-004`.

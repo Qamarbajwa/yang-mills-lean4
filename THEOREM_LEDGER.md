@@ -654,114 +654,254 @@
 
 ## Modern Rigorous Advances and Boundary Invariants (2000–2026)
 
-### THM-YM-0021: Chandra–Chevyrev–Hairer–Shen Stochastic Yang–Mills–Higgs in 2D/3D
+### THM-YM-0021: Chandra–Chevyrev–Hairer–Shen 2D Yang–Mills Langevin Invariant Measure
 - **THEOREM_ID:** `THM-YM-0021`
 - **PAPER_ID:** `PAPER-MOD-001`
-- **TITLE:** Langevin Dynamic for the 2D Yang-Mills Measure and a Stochastic Approach to 3D Yang-Mills-Higgs
+- **TITLE:** Langevin dynamic for the 2D Yang-Mills measure
 - **AUTHORS:** A. Chandra, I. Chevyrev, M. Hairer, H. Shen
-- **YEAR:** 2024
+- **YEAR:** 2022
 - **DOMAIN:** `modern constructive / singular SPDEs`
-- **DIMENSION:** `2D, 3D` (Euclidean $\mathbb{T}^2, \mathbb{T}^3, \mathbb{R}^2, \mathbb{R}^3$)
+- **DIMENSION:** `2` (Euclidean $\mathbb{T}^2, \mathbb{R}^2$)
 - **GAUGE_GROUP:** Compact Lie group $G$ (e.g. $SU(N)$)
 - **REGULARIZATION:** `singular SPDE mollifier / regularity structures`
-- **VOLUME:** `finite torus / local space`
+- **VOLUME:** `torus / local space`
 - **COUPLING_REGIME:** `subcritical`
 - **LIMITS:** Mollification cutoff $\epsilon \to 0$
-- **ASSUMPTIONS:** Regularity structures on gauge-orbit metric space, gauge-covariant stochastic mollification.
-- **EXACT_RESULT:** Rigorous mathematical construction of the local stochastic Yang–Mills–Higgs flow in 2D and 3D, proof that gauge-orbit configuration space is a complete metric space, and construction of a canonical Markov diffusion process that leaves the Euclidean Yang–Mills measure invariant.
+- **ASSUMPTIONS:** Regularity structures on 2D gauge-orbit metric space, gauge-invariant Langevin dynamic.
+- **EXACT_RESULT:** Complete mathematical construction of the 2D Yang–Mills Langevin dynamic on gauge orbit space and rigorous proof that the 2D Euclidean Yang–Mills measure is the unique invariant measure of this stochastic flow.
 - **EVIDENCE_CLASS:** `RIGOROUS_MATHEMATICAL_THEOREM`
-- **CLASSIFICATION_JUSTIFICATION:** Definitive mathematical theorem in singular SPDE theory establishing stochastic quantization of 2D/3D gauge theories (*Invent. Math.* 236 (2024), 545–648).
+- **CLASSIFICATION_JUSTIFICATION:** Definitive mathematical theorem in singular SPDE theory establishing Langevin dynamic for 2D gauge theories (*Publ. Math. IHÉS* 136 (2022), 1–147).
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
-- **PROOF_OR_DERIVATION_METHOD:** Theory of regularity structures, stochastic gauge fixing, and Da Prato–Debussche type multi-scale decompositions.
-- **UNIFORMITY_STATUS:** `RIGOROUS_EXACT_IN_2D_3D`
-- **WHAT_IT_PROVES:** Complete mathematical existence of dynamic stochastic quantization for Yang–Mills–Higgs theories in 2D and 3D.
-- **WHAT_IT_DOES_NOT_PROVE:** 4D pure Yang–Mills existence or mass gap. 4D stochastic quantization is critically singular and remains mathematically unconstructed.
-- **BRIDGE_VARIABLES:** `mollifier cutoff epsilon`, `gauge orbit metric d_orbit`, `dimension d = 2, 3`, `stochastic time t`
-- **FAILURE_LOCALITY:** `wrong dimension/theory (3D / non-critical)`
+- **PROOF_OR_DERIVATION_METHOD:** Theory of regularity structures, gauge orbit metric geometry, and Dirichlet form analysis.
+- **UNIFORMITY_STATUS:** `RIGOROUS_EXACT_IN_2D`
+- **WHAT_IT_PROVES:** Complete mathematical existence of dynamic stochastic quantization and invariant measure for 2D Yang–Mills.
+- **WHAT_IT_DOES_NOT_PROVE:** 3D/4D pure Yang–Mills existence or mass gap. 2D Yang–Mills has zero propagating transverse degrees of freedom.
+- **BRIDGE_VARIABLES:** `mollifier cutoff epsilon`, `gauge orbit metric d_orbit`, `dimension d = 2`, `stochastic time t`
+- **FAILURE_LOCALITY:** `wrong dimension/theory (2D / no transverse gluons)`
 - **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184), [`YM-REQ-011`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L192)
 - **RELEVANCE_TO_CLAY:** `ANALOGUE`
 - **DEPENDENCIES:** `THM-YM-0005`
-- **KNOWN_LATER_CORRECTIONS:** Extended by Chevyrev–Shen (2026) for state uniqueness.
-- **SOURCE_LOCATOR:** *Inventiones Mathematicae* 236 (2024), pp. 545–648, Theorems 1.1–1.5; *Ann. Probab.* 52 (2024), pp. 1200–1280.
+- **KNOWN_LATER_CORRECTIONS:** None.
+- **SOURCE_LOCATOR:** *Publ. Math. IHÉS* 136 (2022), pp. 1–147, Theorems 1.1–1.4.
 - **REPRODUCTION_STATUS:** `RECONSTRUCTED`
 - **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
 
 ---
 
-### THM-YM-0022: Chevyrev–Shen Gauge-Covariant Stochastic Renormalization
+### THM-YM-0022: Chandra–Chevyrev–Hairer–Shen 3D Stochastic Yang–Mills–Higgs Local Flow
 - **THEOREM_ID:** `THM-YM-0022`
 - **PAPER_ID:** `PAPER-MOD-002`
-- **TITLE:** Gauge-Covariant Renormalization and State Uniqueness for Singular Stochastic Yang-Mills Equations
+- **TITLE:** Stochastic quantisation of Yang-Mills-Higgs in 3D
+- **AUTHORS:** A. Chandra, I. Chevyrev, M. Hairer, H. Shen
+- **YEAR:** 2024
+- **DOMAIN:** `modern constructive / singular SPDEs`
+- **DIMENSION:** `3` (Euclidean $\mathbb{T}^3, \mathbb{R}^3$)
+- **GAUGE_GROUP:** Compact Lie group $G$ coupled to scalar Higgs
+- **REGULARIZATION:** `singular SPDE mollifier / regularity structures`
+- **VOLUME:** `periodic torus / local space`
+- **COUPLING_REGIME:** `subcritical`
+- **LIMITS:** Mollification cutoff $\epsilon \to 0$
+- **ASSUMPTIONS:** Regularity structures for singular SPDEs, gauge-covariant stochastic mollification.
+- **EXACT_RESULT:** Rigorous mathematical construction of the local-in-time stochastic Yang–Mills–Higgs flow in 3D, proof that gauge-orbit configuration space is a complete metric space, and construction of a canonical Markov diffusion process up to potential finite-time blow-up.
+- **EVIDENCE_CLASS:** `RIGOROUS_MATHEMATICAL_THEOREM`
+- **CLASSIFICATION_JUSTIFICATION:** Definitive mathematical theorem in singular SPDE theory establishing local stochastic quantization of 3D gauge-Higgs theories (*Invent. Math.* 237 (2024), 85–236).
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
+- **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
+- **PROOF_OR_DERIVATION_METHOD:** Theory of regularity structures, stochastic gauge fixing, and Da Prato–Debussche multi-scale decompositions.
+- **UNIFORMITY_STATUS:** `RIGOROUS_LOCAL_IN_3D`
+- **WHAT_IT_PROVES:** Complete mathematical existence of local-in-time dynamic stochastic flow for 3D Yang–Mills–Higgs.
+- **WHAT_IT_DOES_NOT_PROVE:** Global existence without blow-up, existence of an invariant 3D QFT measure (explicitly open problem, p. 87), or 4D pure Yang–Mills existence.
+- **BRIDGE_VARIABLES:** `mollifier cutoff epsilon`, `gauge orbit metric d_orbit`, `dimension d = 3`, `stochastic time t`, `blow-up time tau`
+- **FAILURE_LOCALITY:** `wrong dimension/theory (3D / local flow only / invariant measure open)`
+- **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184), [`YM-REQ-011`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L192)
+- **RELEVANCE_TO_CLAY:** `ANALOGUE`
+- **DEPENDENCIES:** `THM-YM-0005`, `THM-YM-0021`
+- **KNOWN_LATER_CORRECTIONS:** Extended by Chevyrev–Shen (2026) for counterterm uniqueness.
+- **SOURCE_LOCATOR:** *Inventiones Mathematicae* 237 (2024), pp. 85–236, Theorems 1.1–1.5.
+- **REPRODUCTION_STATUS:** `RECONSTRUCTED`
+- **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
+
+---
+
+### THM-YM-0023: Chevyrev–Shen 3D Stochastic YMH Gauge-Covariant Renormalization Uniqueness
+- **THEOREM_ID:** `THM-YM-0023`
+- **PAPER_ID:** `PAPER-MOD-003`
+- **TITLE:** Uniqueness of Gauge Covariant Renormalisation of Stochastic 3D Yang-Mills-Higgs
 - **AUTHORS:** I. Chevyrev, H. Shen
 - **YEAR:** 2026
 - **DOMAIN:** `modern constructive / stochastic renormalization`
-- **DIMENSION:** `d < 4` (subcritical spacetime dimensions)
-- **GAUGE_GROUP:** Compact non-Abelian Lie group $G$
+- **DIMENSION:** `3` (Euclidean 3D)
+- **GAUGE_GROUP:** Compact non-Abelian Lie group $G$ + Higgs
 - **REGULARIZATION:** `gauge-covariant mollification`
 - **VOLUME:** `bounded domains`
 - **COUPLING_REGIME:** `subcritical`
 - **LIMITS:** Cutoff $\delta \to 0$
-- **ASSUMPTIONS:** Gauge-covariant singular SPDEs and geometric renormalization group analysis.
-- **EXACT_RESULT:** Proof that the gauge-covariant counterterm group for stochastic Yang–Mills equations is uniquely determined by gauge symmetry, ensuring that the resulting dynamic Markov process on gauge orbits is canonical and independent of the mollifier scheme.
+- **ASSUMPTIONS:** Gauge-covariant singular SPDEs and geometric renormalization group analysis in 3D.
+- **EXACT_RESULT:** Proof that the gauge-covariant counterterm group for stochastic 3D Yang–Mills–Higgs equations is uniquely determined by gauge symmetry and geometric regularity, ensuring that the resulting dynamic Markov process on 3D gauge orbits is canonical and scheme-independent.
 - **EVIDENCE_CLASS:** `RIGOROUS_MATHEMATICAL_THEOREM`
-- **CLASSIFICATION_JUSTIFICATION:** Rigorous mathematical theorem proving uniqueness and scheme-independence of gauge-covariant stochastic renormalization.
+- **CLASSIFICATION_JUSTIFICATION:** Rigorous mathematical theorem proving uniqueness and scheme-independence of gauge-covariant stochastic renormalization in 3D (*ARMA* 250 (2026), art. 11).
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
 - **PROOF_OR_DERIVATION_METHOD:** Algebraic renormalization group analysis on regularity structure models.
-- **UNIFORMITY_STATUS:** `RIGOROUS_EXACT_SUBCRITICAL`
-- **WHAT_IT_PROVES:** Scheme-independence and canonical uniqueness of stochastic gauge quantization in subcritical dimensions.
-- **WHAT_IT_DOES_NOT_PROVE:** Construction of 4D critical stochastic Yang–Mills.
-- **BRIDGE_VARIABLES:** `counterterm group G_count`, `mollifier scale delta`, `dimension d < 4`
-- **FAILURE_LOCALITY:** `wrong dimension/theory (subcritical d < 4)`
+- **UNIFORMITY_STATUS:** `RIGOROUS_EXACT_IN_3D`
+- **WHAT_IT_PROVES:** Scheme-independence and canonical uniqueness of stochastic gauge quantization in 3D.
+- **WHAT_IT_DOES_NOT_PROVE:** Construction of 4D critical stochastic Yang–Mills or 3D invariant measure.
+- **BRIDGE_VARIABLES:** `counterterm group G_count`, `mollifier scale delta`, `dimension d = 3`
+- **FAILURE_LOCALITY:** `wrong dimension/theory (3D stochastic YMH)`
 - **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184)
 - **RELEVANCE_TO_CLAY:** `ANALOGUE`
-- **DEPENDENCIES:** `THM-YM-0021`
+- **DEPENDENCIES:** `THM-YM-0022`
 - **KNOWN_LATER_CORRECTIONS:** None.
-- **SOURCE_LOCATOR:** *Preprint* (2026), Theorems 1.1–1.4.
+- **SOURCE_LOCATOR:** *Archive for Rational Mechanics and Analysis* 250 (2026), article 11, Theorems 1.1–1.4; preprint *arXiv:2503.03060*.
 - **REPRODUCTION_STATUS:** `RECONSTRUCTED`
 - **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
 
 ---
 
-### THM-YM-0023: Kazakov–Zheng Non-Perturbative Lattice Bootstrap Bounds
-- **THEOREM_ID:** `THM-YM-0023`
-- **PAPER_ID:** `PAPER-MOD-003`
-- **TITLE:** Analytic Bootstrap for Lattice Yang-Mills Theory via Makeenko-Migdal Loop Equations and Positive Semidefinite Matrix Constraints
+### THM-YM-0024: Kazakov–Zheng Large-N Lattice Yang–Mills Bootstrap Bounds
+- **THEOREM_ID:** `THM-YM-0024`
+- **PAPER_ID:** `PAPER-MOD-004`
+- **TITLE:** Analytic Bootstrap for Large N Lattice Yang-Mills Theory
 - **AUTHORS:** V. Kazakov, Z. Zheng
-- **YEAR:** 2022
-- **DOMAIN:** `modern lattice / non-perturbative bootstrap`
+- **YEAR:** 2023
+- **DOMAIN:** `modern lattice / large-N bootstrap`
 - **DIMENSION:** $d = 2, 3, 4$
-- **GAUGE_GROUP:** $SU(N)$ for finite $N$ and large $N$
+- **GAUGE_GROUP:** $SU(\infty)$ (Large $N$ planar limit)
 - **REGULARIZATION:** `lattice spacing a > 0`
 - **VOLUME:** `infinite lattice`
 - **COUPLING_REGIME:** `arbitrary lattice coupling beta = 2N/g^2`
-- **LIMITS:** Fixed lattice spacing $a > 0$
-- **ASSUMPTIONS:** Wilson lattice gauge action, exact Makeenko–Migdal Schwinger–Dyson loop equations on lattice, Gram matrix positive-semidefiniteness from reflection positivity.
-- **EXACT_RESULT:** Systematic derivation of rigorous non-perturbative upper and lower bounds on Wilson loop expectation values, plaquette energies, and lattice string tension $\sigma(a)$ across coupling regimes via semidefinite programming (SDP) relaxations.
+- **LIMITS:** Planar large-$N$ limit at fixed lattice spacing $a > 0$
+- **ASSUMPTIONS:** Wilson lattice gauge action, exact planar Makeenko–Migdal loop equations, Gram matrix positive-semidefiniteness from reflection positivity.
+- **EXACT_RESULT:** Systematic derivation of rigorous non-perturbative upper and lower bounds on large-$N$ Wilson loop expectation values, plaquette energies, and planar string tension $\sigma(a)$ across coupling regimes via semidefinite programming (SDP) relaxations.
 - **EVIDENCE_CLASS:** `RIGOROUS_MATHEMATICAL_THEOREM`
-- **CLASSIFICATION_JUSTIFICATION:** Rigorous derivation of mathematical inequalities and semidefinite bounds from exact lattice loop equations and positivity (*Phys. Rev. D* 107 (2023), 034509).
+- **CLASSIFICATION_JUSTIFICATION:** Rigorous derivation of mathematical inequalities and semidefinite bounds from exact planar lattice loop equations and positivity (*Phys. Rev. D* 107 (2023), L051501).
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
-- **PROOF_OR_DERIVATION_METHOD:** Semidefinite programming, lattice loop equations, and Cauchy–Schwarz positivity constraints.
-- **UNIFORMITY_STATUS:** `RIGOROUS_ON_DISCRETE_LATTICE`
-- **WHAT_IT_PROVES:** Rigorous non-perturbative upper and lower bounds on lattice gauge observables without Monte Carlo sampling.
-- **WHAT_IT_DOES_NOT_PROVE:** Continuum limit $a \to 0$ or continuum mass gap proof in 4D. The bootstrap bound requires finite loop truncation $L_{max}$, which must be sent to infinity in the continuum limit.
-- **BRIDGE_VARIABLES:** `lattice coupling beta`, `Wilson loop size |C|`, `bootstrap truncation L_max`, `semidefinite matrix spectrum`
-- **FAILURE_LOCALITY:** `continuum limit (infinite loop truncation)`
+- **PROOF_OR_DERIVATION_METHOD:** Semidefinite programming, planar loop equations, and Cauchy–Schwarz positivity constraints.
+- **UNIFORMITY_STATUS:** `RIGOROUS_ON_LARGE_N_LATTICE`
+- **WHAT_IT_PROVES:** Rigorous non-perturbative upper and lower bounds on large-$N$ lattice gauge observables without Monte Carlo sampling.
+- **WHAT_IT_DOES_NOT_PROVE:** Finite-$N$ non-planar corrections, continuum limit $a \to 0$, or continuum mass gap proof in 4D.
+- **BRIDGE_VARIABLES:** `lattice coupling beta`, `loop perimeter C`, `bootstrap truncation L_max`, `gauge group SU(infinity)`
+- **FAILURE_LOCALITY:** `continuum limit / large-N (infinite loop truncation / N=infinity only)`
 - **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184), [`YM-REQ-008`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L189), [`YM-REQ-020`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L201)
-- **RELEVANCE_TO_CLAY:** `DIRECT`
+- **RELEVANCE_TO_CLAY:** `ANALOGUE`
 - **DEPENDENCIES:** `THM-YM-0008`
-- **KNOWN_LATER_CORRECTIONS:** None.
-- **SOURCE_LOCATOR:** *Phys. Rev. D* 107 (2023), 034509, Sections I–VI, Equations (1)–(35).
+- **KNOWN_LATER_CORRECTIONS:** Extended to finite $N$ in Kazakov–Zheng (2024).
+- **SOURCE_LOCATOR:** *Phys. Rev. D* 107 (2023), L051501, Equations (1)–(15).
 - **REPRODUCTION_STATUS:** `RECONSTRUCTED`
 - **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
 
 ---
 
-### THM-YM-0024: Chatterjee 4D SU(2) Yang–Mills–Higgs Massive Gaussian Scaling Limit
-- **THEOREM_ID:** `THM-YM-0024`
-- **PAPER_ID:** `PAPER-MOD-004`
+### THM-YM-0025: Kazakov–Zheng Finite-N Lattice Gauge Theory Bootstrap
+- **THEOREM_ID:** `THM-YM-0025`
+- **PAPER_ID:** `PAPER-MOD-005`
+- **TITLE:** Bootstrapping Finite N Lattice Gauge Theories: Matrix Model and SU(2) Yang-Mills
+- **AUTHORS:** V. Kazakov, Z. Zheng
+- **YEAR:** 2024
+- **DOMAIN:** `modern lattice / finite-N bootstrap`
+- **DIMENSION:** $d = 2, 3, 4$
+- **GAUGE_GROUP:** Finite $N$ (e.g. $SU(2)$)
+- **REGULARIZATION:** `lattice spacing a > 0`
+- **VOLUME:** `infinite lattice`
+- **COUPLING_REGIME:** `arbitrary lattice coupling beta`
+- **LIMITS:** Fixed lattice spacing $a > 0$
+- **ASSUMPTIONS:** Wilson lattice action, finite-$N$ trace identities (Cayley–Hamilton relations), and finite-$N$ positive semidefinite Gram matrices.
+- **EXACT_RESULT:** Systematic derivation of rigorous non-perturbative bootstrap inequalities for finite-$N$ gauge groups ($SU(2)$), providing non-perturbative upper and lower bounds on finite-$N$ plaquette expectation values.
+- **EVIDENCE_CLASS:** `RIGOROUS_MATHEMATICAL_THEOREM`
+- **CLASSIFICATION_JUSTIFICATION:** Rigorous derivation of finite-$N$ matrix inequalities and semidefinite bounds from lattice loop identities (*arXiv:2404.16925*).
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
+- **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
+- **PROOF_OR_DERIVATION_METHOD:** Finite-$N$ semidefinite programming and Cayley–Hamilton trace reductions.
+- **UNIFORMITY_STATUS:** `RIGOROUS_ON_FINITE_N_LATTICE`
+- **WHAT_IT_PROVES:** Rigorous non-perturbative upper and lower bounds on finite-$N$ lattice gauge observables.
+- **WHAT_IT_DOES_NOT_PROVE:** Continuum limit $a \to 0$ or continuum mass gap proof in 4D.
+- **BRIDGE_VARIABLES:** `lattice coupling beta`, `loop perimeter C`, `bootstrap truncation L_max`, `finite gauge group SU(2)`
+- **FAILURE_LOCALITY:** `continuum limit (infinite loop truncation at finite N)`
+- **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184), [`YM-REQ-008`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L189)
+- **RELEVANCE_TO_CLAY:** `DIRECT`
+- **DEPENDENCIES:** `THM-YM-0008`, `THM-YM-0024`
+- **KNOWN_LATER_CORRECTIONS:** None.
+- **SOURCE_LOCATOR:** *arXiv:2404.16925* (2024), Sections 1–6.
+- **REPRODUCTION_STATUS:** `RECONSTRUCTED`
+- **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
+
+---
+
+### THM-YM-0026: Shen–Zhu–Zhu Infinite-Volume Lattice Strong-Coupling Mass Gap
+- **THEOREM_ID:** `THM-YM-0026`
+- **PAPER_ID:** `PAPER-MOD-006`
+- **TITLE:** Large N / Strong Coupling Limit of Lattice Gauge Theories and Functional Inequalities
+- **AUTHORS:** H. Shen, R. Zhu, X. Zhu
+- **YEAR:** 2022
+- **DOMAIN:** `modern constructive / lattice functional inequalities`
+- **DIMENSION:** $d = 2, 3, 4$
+- **GAUGE_GROUP:** Compact Lie group $G$ (e.g. $SU(N)$)
+- **REGULARIZATION:** `lattice spacing a > 0`
+- **VOLUME:** `infinite volume` ($\mathbb{Z}^d$)
+- **COUPLING_REGIME:** `strong coupling` ($\beta < \beta_0$)
+- **LIMITS:** Thermodynamic infinite-volume limit on discrete lattice
+- **ASSUMPTIONS:** Lattice Yang–Mills measure with Wilson action at strong coupling $\beta < \beta_0$.
+- **EXACT_RESULT:** Rigorous proof of the existence of the infinite-volume lattice Yang–Mills measure at strong coupling, uniform Poincaré and log-Sobolev inequalities with constant independent of volume, exponential decay of gauge-invariant correlation functions, and existence of a strictly positive lattice mass gap $\Delta_{lat}(\beta) > 0$.
+- **EVIDENCE_CLASS:** `RIGOROUS_MATHEMATICAL_THEOREM`
+- **CLASSIFICATION_JUSTIFICATION:** Definitive mathematical theorem establishing functional inequalities, infinite-volume measure, and non-zero spectral gap on the lattice (*Ann. Probab.* / *arXiv:2204.12737*, Theorems 1.1–1.5).
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
+- **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
+- **PROOF_OR_DERIVATION_METHOD:** Glauber/Langevin dynamic functional inequalities, Bakry–Émery curvature bounds, and polymer expansions.
+- **UNIFORMITY_STATUS:** `RIGOROUS_EXACT_AT_STRONG_COUPLING`
+- **WHAT_IT_PROVES:** Complete mathematical proof of infinite-volume measure existence, uniform Poincaré inequalities, and strictly positive spectral gap on discrete lattices at strong coupling $\beta < \beta_0$.
+- **WHAT_IT_DOES_NOT_PROVE:** Continuum 4D Clay mass gap. The result is strictly confined to the strong-coupling regime $\beta < \beta_0$; taking the continuum limit requires weak coupling $\beta \to \infty$ ($g \to 0$).
+- **BRIDGE_VARIABLES:** `lattice coupling beta`, `strong-coupling threshold beta_0`, `lattice correlation length xi_lat`, `lattice mass gap Delta_lat`, `lattice spacing a`
+- **FAILURE_LOCALITY:** `continuum/weak-coupling trajectory (blocked at beta -> infinity / g -> 0)`
+- **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184), [`YM-REQ-007`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L188), [`YM-REQ-020`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L201)
+- **RELEVANCE_TO_CLAY:** `DIRECT`
+- **DEPENDENCIES:** `THM-YM-0008`
+- **KNOWN_LATER_CORRECTIONS:** None.
+- **SOURCE_LOCATOR:** *Annals of Probability* / *arXiv:2204.12737* (2022), Theorems 1.1–1.5, Sections 1–7.
+- **REPRODUCTION_STATUS:** `RECONSTRUCTED`
+- **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
+
+---
+
+### THM-YM-0027: Cao–Nissim–Sheffield Area Law & Mass Gap Bounds in Lattice Gauge Theories
+- **THEOREM_ID:** `THM-YM-0027`
+- **PAPER_ID:** `PAPER-MOD-007`
+- **TITLE:** Wilson loop area law and mass gap bounds in lattice gauge theories
+- **AUTHORS:** Y. Cao, E. Nissim, S. Sheffield
+- **YEAR:** 2025
+- **DOMAIN:** `modern lattice / mathematical physics`
+- **DIMENSION:** $d = 2, 3, 4$
+- **GAUGE_GROUP:** Classical Lie groups ($SU(N), SO(N), Sp(N)$)
+- **REGULARIZATION:** `lattice spacing a > 0`
+- **VOLUME:** `infinite lattice`
+- **COUPLING_REGIME:** `expanded strong coupling / 't Hooft regime`
+- **LIMITS:** Thermodynamic infinite volume at fixed lattice spacing
+- **ASSUMPTIONS:** Lattice gauge theories with Wilson action for classical Lie groups.
+- **EXACT_RESULT:** Extension of rigorous parameter regimes for Wilson loop area law and string tension, establishing explicit lower bounds on the mass gap using a dynamical / stochastic coupling approach in 't Hooft regimes.
+- **EVIDENCE_CLASS:** `RIGOROUS_MATHEMATICAL_THEOREM`
+- **CLASSIFICATION_JUSTIFICATION:** Rigorous mathematical theorem proving expanded area law regimes and mass gap bounds (*arXiv:2505.16585*, Theorems 1.1–1.4).
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
+- **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
+- **PROOF_OR_DERIVATION_METHOD:** Stochastic coupling methods, random surface representations, and dynamical loop inequalities.
+- **UNIFORMITY_STATUS:** `RIGOROUS_ON_EXPANDED_LATTICE_REGIME`
+- **WHAT_IT_PROVES:** Expanded rigorous parameter bounds for area law and spectral gap in discrete lattice gauge theories.
+- **WHAT_IT_DOES_NOT_PROVE:** Continuum 4D Yang–Mills limit $a \to 0$ with mass gap.
+- **BRIDGE_VARIABLES:** `lattice coupling beta`, `'t Hooft coupling lambda`, `perimeter C`, `string tension sigma`
+- **FAILURE_LOCALITY:** `continuum limit (discrete lattice / expanded strong-coupling bounds)`
+- **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184), [`YM-REQ-008`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L189)
+- **RELEVANCE_TO_CLAY:** `DIRECT`
+- **DEPENDENCIES:** `THM-YM-0008`
+- **KNOWN_LATER_CORRECTIONS:** None.
+- **SOURCE_LOCATOR:** *arXiv:2505.16585* (2025), Theorems 1.1–1.4.
+- **REPRODUCTION_STATUS:** `RECONSTRUCTED`
+- **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
+
+---
+
+### THM-YM-0028: Chatterjee 4D SU(2) Yang–Mills–Higgs Massive Gaussian Scaling Limit
+- **THEOREM_ID:** `THM-YM-0028`
+- **PAPER_ID:** `PAPER-MOD-008`
 - **TITLE:** A Scaling Limit of 4D SU(2) Yang-Mills-Higgs on a Lattice
 - **AUTHORS:** S. Chatterjee
 - **YEAR:** 2024
@@ -789,41 +929,5 @@
 - **DEPENDENCIES:** `THM-YM-0008`
 - **KNOWN_LATER_CORRECTIONS:** None.
 - **SOURCE_LOCATOR:** *arXiv:2401.10507* (2024), Theorems 1.1–1.3, Sections 1–5.
-- **REPRODUCTION_STATUS:** `RECONSTRUCTED`
-- **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
-
----
-
-### THM-YM-0025: Clay Millennium Official Status Invariant
-- **THEOREM_ID:** `THM-YM-0025`
-- **PAPER_ID:** `PAPER-MOD-005`
-- **TITLE:** Official Status Confirmation of the Yang-Mills Millennium Prize Problem
-- **AUTHORS:** Clay Mathematics Institute
-- **YEAR:** 2026
-- **DOMAIN:** `official axiomatic governance specification`
-- **DIMENSION:** `4` (Minkowski $\mathbb{R}^{3,1}$ / Euclidean $\mathbb{R}^4$)
-- **GAUGE_GROUP:** Any simple compact Lie group $G$
-- **REGULARIZATION:** `continuum axiomatic`
-- **VOLUME:** `infinite volume`
-- **COUPLING_REGIME:** `quantum continuum`
-- **LIMITS:** Continuum QFT
-- **ASSUMPTIONS:** Official Clay Millennium Problem requirements (`YM-REQ-001` through `YM-REQ-030`).
-- **EXACT_RESULT:** Official confirmation that the Yang–Mills Millennium Problem remains open and unsolved. No proposed proof has been accepted by the Clay Mathematics Institute. All external claims of complete proofs must remain strictly quarantined under project governance until verified.
-- **EVIDENCE_CLASS:** `OFFICIAL_GOVERNANCE_SPECIFICATION`
-- **CLASSIFICATION_JUSTIFICATION:** Authoritative official institutional status confirmation from the problem granting body.
-- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
-- **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
-- **PROOF_OR_DERIVATION_METHOD:** Official institutional record.
-- **UNIFORMITY_STATUS:** `CURRENT_GLOBAL_STATUS`
-- **WHAT_IT_PROVES:** Definitive baseline status that the Millennium Problem has not been solved as of 2026.
-- **WHAT_IT_DOES_NOT_PROVE:** Does not construct a continuum Yang-Mills measure or prove the existence of a spectral gap; confirms the problem remains officially open and unsolved in the global mathematics community.
-- **BRIDGE_VARIABLES:** `Millennium problem requirements YM-REQ-001..030`
-
-- **FAILURE_LOCALITY:** `N/A (Official Problem Status)`
-- **RELATED_YM_REQ_IDS:** [`YM-REQ-001`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L182) through [`YM-REQ-030`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L211)
-- **RELEVANCE_TO_CLAY:** `DIRECT`
-- **DEPENDENCIES:** `THM-YM-0001` through `THM-YM-0024`
-- **KNOWN_LATER_CORRECTIONS:** None.
-- **SOURCE_LOCATOR:** Clay Mathematics Institute Official Register (2026).
 - **REPRODUCTION_STATUS:** `RECONSTRUCTED`
 - **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`

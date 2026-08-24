@@ -1,11 +1,31 @@
-version: '1.0'
-packet: YM-002C
-description: "Modern Rigorous Advances and Boundary Invariants (2000\u20132026)"
-total_sources: 6
+version: '2.0'
+packet: YM-002CR1
+description: "Repaired Modern Rigorous Advances and Boundary Invariants (2000\u2013\
+  2026)"
+total_sources: 8
 sources:
 - source_id: PAPER-MOD-001
-  title: Langevin Dynamic for the 2D Yang-Mills Measure and a Stochastic Approach
-    to 3D Yang-Mills-Higgs
+  title: Langevin dynamic for the 2D Yang-Mills measure
+  authors:
+  - Ajay Chandra
+  - Ilya Chevyrev
+  - Martin Hairer
+  - Hao Shen
+  year: 2022
+  doi: 10.1007/s10240-022-00132-0
+  local_file: PAPER-MOD-001/record.md
+  sha256: f01b8d6afb67d506b2d473df6f1d51d0b533b727c142055fcaed4097c3e62343
+  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  bridge_variables:
+  - mollifier scale epsilon
+  - gauge orbit metric d_orbit
+  - dimension d = 2
+  - stochastic time t
+  failure_locality: wrong dimension/theory (2D / no propagating transverse gluons)
+  status: INGESTED_AND_VERIFIED
+- source_id: PAPER-MOD-002
+  title: Stochastic quantisation of Yang-Mills-Higgs in 3D
   authors:
   - Ajay Chandra
   - Ilya Chevyrev
@@ -13,62 +33,122 @@ sources:
   - Hao Shen
   year: 2024
   doi: 10.1007/s00222-024-01264-2
-  local_file: PAPER-MOD-001/record.md
-  sha256: f373dac8c1b7318eacc2167a01ab525f61674adabc6226f1361cb308bf0e1f43
+  local_file: PAPER-MOD-002/record.md
+  sha256: 30ebb1421d4436d980c9c5782b206843474671c1b604aa1dbaa770f65123e55d
   access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
   storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
   bridge_variables:
-  - lattice/mollifier cutoff epsilon
-  - gauge orbit metric d_orbit
-  - dimension d = 2, 3
+  - mollifier scale epsilon
+  - orbit metric d_orbit
+  - dimension d = 3
   - stochastic time t
-  failure_locality: wrong dimension/theory (3D / non-critical)
+  - blow-up time tau
+  failure_locality: wrong dimension/theory (3D / local flow only / invariant measure
+    open)
   status: INGESTED_AND_VERIFIED
-- source_id: PAPER-MOD-002
-  title: Gauge-Covariant Renormalization and State Uniqueness for Singular Stochastic
-    Yang-Mills Equations
+- source_id: PAPER-MOD-003
+  title: Uniqueness of Gauge Covariant Renormalisation of Stochastic 3D Yang-Mills-Higgs
   authors:
   - Ilya Chevyrev
   - Hao Shen
   year: 2026
-  doi: 10.48550/arXiv.2601.00001
-  local_file: PAPER-MOD-002/record.md
-  sha256: 797e413d3288ede1701858b71600f5a43a3f15f4bd427a947dbc3c58c7f7214c
+  doi: 10.1007/s00205-025-02163-3
+  local_file: PAPER-MOD-003/record.md
+  sha256: ee8c7be29a356971064643aa7d60d01ac38eab8dcf5d9ab0b1d6f5686e83f96c
   access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
   storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
   bridge_variables:
   - counterterm group G_count
   - mollifier scale delta
-  - dimension d < 4
-  failure_locality: wrong dimension/theory (subcritical d < 4)
+  - dimension d = 3
+  failure_locality: wrong dimension/theory (3D stochastic YMH)
   status: INGESTED_AND_VERIFIED
-- source_id: PAPER-MOD-003
-  title: Analytic Bootstrap for Lattice Yang-Mills Theory via Makeenko-Migdal Loop
-    Equations and Positive Semidefinite Matrix Constraints
+- source_id: PAPER-MOD-004
+  title: Analytic Bootstrap for Large N Lattice Yang-Mills Theory
   authors:
   - Vladimir Kazakov
   - Zechuan Zheng
-  year: 2022
-  doi: 10.1103/PhysRevD.107.034509
-  local_file: PAPER-MOD-003/record.md
-  sha256: 294cad95ef84593ad1bd9d2804525e5c97ebd3bb9a000d76ef182bc024655a9d
+  year: 2023
+  doi: 10.1103/PhysRevD.107.L051501
+  local_file: PAPER-MOD-004/record.md
+  sha256: 8b33c16119595f62670f1c69e519147a1c797df68174fa7b925abaaa3e49a401
   access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
   storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
   bridge_variables:
   - lattice coupling beta
-  - Wilson loop size |C|
+  - loop perimeter C
   - bootstrap truncation L_max
-  - semidefinite matrix spectrum
-  failure_locality: continuum limit (infinite loop truncation)
+  - gauge group SU(infinity)
+  failure_locality: continuum limit / large-N (infinite loop truncation / N=infinity
+    only)
   status: INGESTED_AND_VERIFIED
-- source_id: PAPER-MOD-004
+- source_id: PAPER-MOD-005
+  title: 'Bootstrapping Finite N Lattice Gauge Theories: Matrix Model and SU(2) Yang-Mills'
+  authors:
+  - Vladimir Kazakov
+  - Zechuan Zheng
+  year: 2024
+  doi: 10.48550/arXiv.2404.16925
+  local_file: PAPER-MOD-005/record.md
+  sha256: 7fb4f375c478d1f08f31bdce769ef0e5f56996c1beb07c76954f526acff77dc3
+  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  bridge_variables:
+  - lattice coupling beta
+  - loop perimeter C
+  - bootstrap truncation L_max
+  - finite gauge group SU(2)
+  failure_locality: continuum limit (infinite loop truncation at finite N)
+  status: INGESTED_AND_VERIFIED
+- source_id: PAPER-MOD-006
+  title: Large N / Strong Coupling Limit of Lattice Gauge Theories and Functional
+    Inequalities
+  authors:
+  - Hao Shen
+  - Rongchan Zhu
+  - Xiangchan Zhu
+  year: 2022
+  doi: 10.48550/arXiv.2204.12737
+  local_file: PAPER-MOD-006/record.md
+  sha256: 4c5944ec4436a5d469ffa1f7ac5e417104527777e418edd4e39d9dadad86a6cb
+  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  bridge_variables:
+  - lattice coupling beta
+  - strong-coupling threshold beta_0
+  - lattice correlation length xi_lat
+  - lattice mass gap Delta_lat
+  - lattice spacing a
+  failure_locality: continuum/weak-coupling trajectory (blocked at beta -> infinity
+    / g -> 0)
+  status: INGESTED_AND_VERIFIED
+- source_id: PAPER-MOD-007
+  title: Wilson loop area law and mass gap bounds in lattice gauge theories
+  authors:
+  - Yu Cao
+  - Eyal Nissim
+  - Scott Sheffield
+  year: 2025
+  doi: 10.48550/arXiv.2505.16585
+  local_file: PAPER-MOD-007/record.md
+  sha256: 0c1332b010611eaf80d29aadbd7008d93591587fbd65ec639cf0870e3919644c
+  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
+  bridge_variables:
+  - lattice coupling beta
+  - '''t Hooft coupling lambda'
+  - Wilson loop perimeter |C|
+  - string tension sigma
+  failure_locality: continuum limit (discrete lattice / expanded strong-coupling bounds)
+  status: INGESTED_AND_VERIFIED
+- source_id: PAPER-MOD-008
   title: A Scaling Limit of 4D SU(2) Yang-Mills-Higgs on a Lattice
   authors:
   - Sourav Chatterjee
   year: 2024
   doi: 10.48550/arXiv.2401.10507
-  local_file: PAPER-MOD-004/record.md
-  sha256: c058cb355512216ad172e0c6dabe194d22a5bb10858a92c8f583891bce416449
+  local_file: PAPER-MOD-008/record.md
+  sha256: 7a00f7bbb86d6c96f8daa8d5583c9bbc618803d05507ffa3d0ffdb58c8d74963
   access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
   storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
   bridge_variables:
@@ -77,34 +157,4 @@ sources:
   - lattice spacing a
   - correlation length xi
   failure_locality: nontriviality (Gaussian limit / Higgs-dominated)
-  status: INGESTED_AND_VERIFIED
-- source_id: PAPER-MOD-005
-  title: Official Status Confirmation of the Yang-Mills Millennium Prize Problem
-  authors:
-  - Clay Mathematics Institute
-  year: 2026
-  doi: 10.5555/clay.ym.2026.status
-  local_file: PAPER-MOD-005/record.md
-  sha256: e6f703ce11564bbe51822a380a747fef18d9a459acd72793832989348e5da7d5
-  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
-  storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
-  bridge_variables:
-  - Millennium problem requirements YM-REQ-001 to YM-REQ-030
-  failure_locality: N/A (Official Problem Status)
-  status: INGESTED_AND_VERIFIED
-- source_id: PAPER-MOD-006
-  title: 'Adversarial Boundary Record: Review and Classification of Recent 2024-2026
-    Yang-Mills Mass Gap Claims'
-  authors:
-  - Project Governance & Scientific Verification Registry
-  year: 2026
-  doi: 10.5555/ym.adversarial.2026
-  local_file: PAPER-MOD-006/record.md
-  sha256: 59e7ef6c49cd45dfe329e76cce7da54876b7c25710217cd988e26c5b732bac49
-  access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
-  storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
-  bridge_variables:
-  - claimed continuum mass gap Delta > 0
-  - audit criteria
-  failure_locality: quarantined (external unverified claims)
   status: INGESTED_AND_VERIFIED

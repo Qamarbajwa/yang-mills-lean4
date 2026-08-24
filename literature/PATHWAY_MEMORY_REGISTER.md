@@ -1,21 +1,29 @@
-# PATHWAY MEMORY REGISTER (CONSTRUCTIVE & RG ERA 1980–2000)
+# PATHWAY MEMORY REGISTER
 
-## 1. Epistemic Taxonomy & Governing Invariants
+## 1. Governance & Epistemic Taxonomy
 
-Every pathway-memory entry and claim in this register is categorized according to the following strict epistemic taxonomy:
+Every pathway entry in this register documents a distinct mathematical or physical attempt to construct 4D Yang–Mills theory or prove the existence of a non-zero mass gap $\Delta > 0$.
 
-- `[PRIMARY_SOURCE_RESULT]`: Direct mathematical theorem, equation, or bound proved in the cited primary paper.
-- `[PRIMARY_SOURCE_LIMITATION]`: Exact boundary, unproved assumption, or scope limitation explicitly stated by the primary authors.
-- `[LATER_LITERATURE_LIMITATION]`: Boundary, obstruction, or analysis established in subsequent peer-reviewed literature.
-- `[PROJECT_SYNTHESIS]`: Deductive structural synthesis or comparative assessment derived within this project linking established results.
-- `[HYPOTHESIS]`: Formally stated conjectural proposal requiring future mathematical proof or refutation.
-- `[UNKNOWN]`: Question whose answer cannot be determined with certainty from current evidence.
+### Epistemic Classification Prefixes
+Every claim, result, and limitation recorded in this register is strictly tagged with one of the following epistemic classifications:
+- `[PRIMARY_SOURCE_RESULT]`: A theorem, bound, or exact formula rigorously established within the primary paper itself.
+- `[PRIMARY_SOURCE_LIMITATION]`: A scope restriction, failure, or open problem explicitly acknowledged by the original authors in the primary source text.
+- `[LATER_LITERATURE_LIMITATION]`: An obstruction, divergence, or correction identified by subsequent peer-reviewed literature.
+- `[PROJECT_SYNTHESIS]`: A comparative structural analysis, cross-pathway synthesis, or dimensional mapping developed within this research project.
+- `[HYPOTHESIS]`: A testable conjecture formulated to bridge identified gaps between known results.
+- `[UNKNOWN]`: An open mathematical question with no definitive resolution established in primary or secondary literature.
 
-### Permanent Epistemic Invariants:
+### Permanent Invariants
 1. `FAILED_EXPERIMENT != FALSIFIED_PATHWAY` (A failed attempt or parameter breakdown does not prove the conceptual pathway is impossible).
 2. `NO_KNOWN_EXTENSION != PROVED_NONEXTENDABILITY` (Absence of a known mathematical extension must never be promoted to an impossibility theorem without a rigorous no-go proof).
 3. `SOURCE_STATED_LIMITATION != PROJECT_SYNTHESIS` (Authors' own scope caveats must be distinguished from later project interpretations).
 4. `DORMANT_PATHWAY != SCIENTIFICALLY_DEAD_PATHWAY` (An active line of inquiry that ceased due to technical complexity remains dormant, not disproved).
+5. `PROJECT_REGISTER != PRIMARY_LITERATURE_SOURCE` (Internal screening registers must not be classified as primary literature).
+6. `OFFICIAL_STATUS != MATHEMATICAL_THEOREM` (Institutional governance status is an invariant, not a mathematical theorem).
+7. `2D_STOCHASTIC_YM != 3D_STOCHASTIC_YMH` (2D pure YM Langevin dynamics is distinct from 3D YMH singular flow).
+8. `LOCAL_STOCHASTIC_FLOW != INVARIANT_QFT_MEASURE` (Local-in-time existence does not imply construction of an invariant Euclidean measure).
+9. `LARGE_N_RESULT != FINITE_N_RESULT` (Planar $N=\infty$ bounds must not be conflated with finite-$N$ non-planar theorems).
+10. `LATTICE_STRONG_COUPLING_MASS_GAP != CONTINUUM_4D_CLAY_MASS_GAP` (A rigorous lattice mass gap at strong coupling $\beta < \beta_0$ does not equal the continuum weak-coupling Clay mass gap).
 
 ---
 
@@ -89,46 +97,83 @@ Every pathway-memory entry and claim in this register is categorized according t
 - **REOPEN_CONDITIONS:** `[PROJECT_SYNTHESIS]` Application of phase-cell master inequalities to non-perturbative infrared block measures.
 - **OUTCOME_FINGERPRINT:** `ALTERNATIVE_UV_METHOD_CONVERGED_TO_COMMON_IR_BARRIER`
 
-
 ---
 
-### PATH-MOD-001: Singular SPDE / Stochastic Quantization Pathway
+### PATH-MOD-001: 2D Stochastic Yang–Mills Langevin Invariant Measure Pathway
 - **PROGRAM_ID:** `PATH-MOD-001`
-- **PRIMARY_PAPERS:** `PAPER-MOD-001` (Chandra, Chevyrev, Hairer, Shen 2024), `PAPER-MOD-002` (Chevyrev, Shen 2026)
-- **CENTRAL_THESIS:** `[PRIMARY_SOURCE_RESULT]` Non-perturbative Euclidean Yang–Mills measures can be constructed as the unique invariant measures of gauge-covariant singular Langevin stochastic partial differential equations using regularity structures.
-- **DIRECTION:** `[PRIMARY_SOURCE_RESULT]` Regularity structures on gauge orbit space, gauge-covariant mollification, and stochastic dynamic renormalization.
-- **WHAT_SUCCEEDED:** `[PRIMARY_SOURCE_RESULT]` Rigorous local existence, gauge-covariant counterterm uniqueness, and canonical Markov diffusion process on gauge orbit space leaving the Yang–Mills–Higgs measure invariant in 2D and 3D.
-- **WHAT_REMAINS_OPEN:** `[PRIMARY_SOURCE_LIMITATION]` Extension to 4D spacetime. In 4D, the Yang–Mills stochastic quantization SPDE is critically singular, where standard regularity structures and dynamic renormalization fail without non-perturbative control.
-- **SOURCE_STATED_LIMITATION:** `[PRIMARY_SOURCE_LIMITATION]` Authors explicitly state that 4D pure Yang–Mills stochastic flow is critically singular and outside current parabolic SPDE theory.
-- **PROJECT_SYNTHESIS:** `[PROJECT_SYNTHESIS]` Stochastic quantization provides a rigorous alternative to functional integrals in subcritical dimensions (d < 4), but hits the identical dimensional barrier at d = 4.
-- **WHAT_SURVIVED:** `[PROJECT_SYNTHESIS]` Geometric framework of gauge orbit metric spaces, gauge-covariant counterterm classifications, and singular SPDE renormalization machinery.
-- **BRIDGE_VARIABLES:** `lattice/mollifier cutoff epsilon`, `gauge orbit metric d_orbit`, `dimension d = 2, 3, 4`, `stochastic time t`
-- **FAILURE_LOCALITY:** `wrong dimension/theory (3D / non-critical)`
-- **REOPEN_CONDITIONS:** `[PROJECT_SYNTHESIS]` Development of critically singular non-perturbative SPDE techniques capable of controlling 4D gauge-covariant noise without catastrophic UV divergences.
-- **OUTCOME_FINGERPRINT:** `SOLVED_LOWER_DIMENSIONAL_STOCHASTIC_GAUGE_FLOW_4D_CRITICAL_OPEN`
+- **PRIMARY_PAPERS:** `PAPER-MOD-001` (Chandra, Chevyrev, Hairer, Shen 2022, *Publ. Math. IHÉS* 136, 1–147)
+- **CENTRAL_THESIS:** `[PRIMARY_SOURCE_RESULT]` Non-perturbative 2D Euclidean Yang–Mills measure can be dynamically realized as the unique invariant measure of a singular Langevin SPDE on gauge orbit space.
+- **DIRECTION:** `[PRIMARY_SOURCE_RESULT]` Regularity structures on 2D gauge orbit space, gauge-invariant Langevin dynamic, and invariant measure construction.
+- **WHAT_SUCCEEDED:** `[PRIMARY_SOURCE_RESULT]` Complete mathematical proof of global existence of the Langevin dynamic and uniqueness of the 2D Yang–Mills invariant measure.
+- **WHAT_REMAINS_OPEN:** `[PRIMARY_SOURCE_LIMITATION]` Extension to higher dimensions where gauge theories possess propagating transverse gluons and non-trivial scattering states.
+- **SOURCE_STATED_LIMITATION:** `[PRIMARY_SOURCE_LIMITATION]` Specifically restricted to 2D spacetime where pure Yang–Mills has zero local degrees of freedom.
+- **PROJECT_SYNTHESIS:** `[PROJECT_SYNTHESIS]` Solved completely in 2D; serves as a rigorous proof-of-concept for stochastic quantization on gauge orbits.
+- **WHAT_SURVIVED:** `[PROJECT_SYNTHESIS]` Gauge-orbit metric space construction and stochastic Langevin quantization formalism.
+- **BRIDGE_VARIABLES:** `mollifier scale epsilon`, `gauge orbit metric d_orbit`, `dimension d = 2`, `stochastic time t`
+- **FAILURE_LOCALITY:** `wrong dimension/theory (2D / no transverse gluons)`
+- **REOPEN_CONDITIONS:** `[PROJECT_SYNTHESIS]` Extension of invariant measure techniques to subcritical 3D and critical 4D gauge systems.
+- **OUTCOME_FINGERPRINT:** `SOLVED_2D_STOCHASTIC_LANGEVIN_INVARIANT_MEASURE`
 
 ---
 
-### PATH-MOD-002: Modern Analytic Lattice Bootstrap Pathway
+### PATH-MOD-002: 3D Singular Stochastic Yang–Mills–Higgs Flow Pathway
 - **PROGRAM_ID:** `PATH-MOD-002`
-- **PRIMARY_PAPERS:** `PAPER-MOD-003` (Kazakov & Zheng 2022, *Phys. Rev. D* 107, 034509)
-- **CENTRAL_THESIS:** `[PRIMARY_SOURCE_RESULT]` Non-perturbative lattice Yang–Mills observables and mass gaps can be rigorously bounded from above and below by combining Makeenko–Migdal loop equations with positive semidefiniteness of Wilson loop Gram matrices.
-- **DIRECTION:** `[PRIMARY_SOURCE_RESULT]` Exact loop equations, reflection positivity constraints, and semidefinite programming (SDP) relaxations at finite $N$ and large $N$.
-- **WHAT_SUCCEEDED:** `[PRIMARY_SOURCE_RESULT]` Analytical and rigorous numerical bounds on plaquette expectation values and string tension on discrete lattices without Monte Carlo sign/statistical errors.
-- **WHAT_REMAINS_OPEN:** `[PRIMARY_SOURCE_LIMITATION]` Rigorous analytical continuum limit $a 	o 0$. In SDP bootstrap, taking $a 	o 0$ requires loops of arbitrarily large perimeter ($L_{max} 	o \infty$), causing the truncated bootstrap matrix constraints to lose rigorous closure.
-- **SOURCE_STATED_LIMITATION:** `[PRIMARY_SOURCE_LIMITATION]` Results are obtained on a discrete lattice at fixed coupling $eta$; continuum scaling requires infinite loop size truncations.
+- **PRIMARY_PAPERS:** `PAPER-MOD-002` (Chandra, Chevyrev, Hairer, Shen 2024, *Invent. Math.* 237, 85–236), `PAPER-MOD-003` (Chevyrev & Shen 2026, *ARMA* 250, art. 11)
+- **CENTRAL_THESIS:** `[PRIMARY_SOURCE_RESULT]` Singular SPDEs can be renormalized in a gauge-covariant manner to yield a local-in-time Markov process on 3D gauge orbits.
+- **DIRECTION:** `[PRIMARY_SOURCE_RESULT]` 3D regularity structures, gauge-covariant mollification, local-in-time flow, and unique counterterm group analysis.
+- **WHAT_SUCCEEDED:** `[PRIMARY_SOURCE_RESULT]` Rigorous construction of local-in-time 3D stochastic Yang–Mills–Higgs flow, canonical Markov diffusion on gauge orbits, and proof of uniqueness of gauge-covariant counterterms.
+- **WHAT_REMAINS_OPEN:** `[PRIMARY_SOURCE_LIMITATION]`
+  - *Primary Source Fact:* `[PRIMARY_SOURCE_LIMITATION]` Authors explicitly state (*Invent. Math.* 237, p. 87) that the construction of an invariant measure in 3D remains an open problem.
+  - *Dimensional Barrier:* `[PRIMARY_SOURCE_LIMITATION]` In 4D, stochastic Yang–Mills is critically singular and outside current parabolic SPDE theory.
+- **SOURCE_STATED_LIMITATION:** `[PRIMARY_SOURCE_LIMITATION]` Construction is local in time; invariant measure existence in 3D is open.
+- **PROJECT_SYNTHESIS:** `[PROJECT_SYNTHESIS]` Establishes local dynamic stochastic quantization in 3D; stopping short of invariant equilibrium measures or 4D critical flow.
+- **WHAT_SURVIVED:** `[PROJECT_SYNTHESIS]` Regularity structure models for non-Abelian gauge-Higgs fields and counterterm classification theorems.
+- **BRIDGE_VARIABLES:** `mollifier scale epsilon`, `gauge orbit metric d_orbit`, `dimension d = 3`, `stochastic time t`, `blow-up time tau`
+- **FAILURE_LOCALITY:** `wrong dimension/theory (3D / local flow only / invariant measure open)`
+- **REOPEN_CONDITIONS:** `[PROJECT_SYNTHESIS]` Proof of global-in-time non-explosion and construction of 3D invariant Gibbs measure; developing critical SPDE methods for 4D.
+- **OUTCOME_FINGERPRINT:** `SOLVED_3D_LOCAL_STOCHASTIC_FLOW_INVARIANT_MEASURE_OPEN_4D_CRITICAL_OPEN`
+
+---
+
+### PATH-MOD-003: Modern Non-Perturbative Lattice Bootstrap Pathway
+- **PROGRAM_ID:** `PATH-MOD-003`
+- **PRIMARY_PAPERS:** `PAPER-MOD-004` (Kazakov & Zheng 2023, *Phys. Rev. D* 107, L051501), `PAPER-MOD-005` (Kazakov & Zheng 2024, *arXiv:2404.16925*)
+- **CENTRAL_THESIS:** `[PRIMARY_SOURCE_RESULT]` Combining Makeenko–Migdal loop equations with positive semidefiniteness of Wilson loop Gram matrices yields rigorous upper and lower bounds on lattice observables and string tension at large $N$ and finite $N$.
+- **DIRECTION:** `[PRIMARY_SOURCE_RESULT]` Exact lattice loop equations, reflection positivity, trace identities, and semidefinite programming (SDP) relaxations.
+- **WHAT_SUCCEEDED:** `[PRIMARY_SOURCE_RESULT]` Rigorous numerical/analytical bounds on plaquette energies and string tensions on discrete lattices for $SU(\infty)$ and $SU(2)$ without Monte Carlo sampling errors.
+- **WHAT_REMAINS_OPEN:** `[PRIMARY_SOURCE_LIMITATION]` Rigorous analytical continuum limit $a \to 0$. In SDP bootstrap, taking $a \to 0$ requires loops of arbitrarily large perimeter ($L_{max} \to \infty$), where truncated SDP constraints lose closure.
+- **SOURCE_STATED_LIMITATION:** `[PRIMARY_SOURCE_LIMITATION]` Results are obtained on a discrete lattice at fixed coupling $\beta$; continuum scaling requires infinite loop size truncations.
 - **PROJECT_SYNTHESIS:** `[PROJECT_SYNTHESIS]` The bootstrap provides powerful rigorous inequalities on lattice correlation functions, offering rigorous non-perturbative lower bounds that could potentially bound the spectral gap away from zero if loop-space scaling is controlled.
 - **WHAT_SURVIVED:** `[PROJECT_SYNTHESIS]` Semidefinite matrix positivity constraints on Wilson loop spaces and exact Makeenko–Migdal lattice representations.
-- **BRIDGE_VARIABLES:** `lattice coupling beta`, `Wilson loop size |C|`, `bootstrap truncation L_max`, `semidefinite matrix spectrum`
+- **BRIDGE_VARIABLES:** `lattice coupling beta`, `loop perimeter C`, `bootstrap truncation L_max`, `gauge group SU(N)`
 - **FAILURE_LOCALITY:** `continuum limit (infinite loop truncation)`
-- **REOPEN_CONDITIONS:** `[PROJECT_SYNTHESIS]` Analytic proof of a uniform positive lower bound on string tension / spectral gap that survives the $L_{max} 	o \infty$ and $a 	o 0$ limits simultaneously.
+- **REOPEN_CONDITIONS:** `[PROJECT_SYNTHESIS]` Analytic proof of a uniform positive lower bound on string tension / spectral gap that survives the $L_{max} \to \infty$ and $a \to 0$ limits simultaneously.
 - **OUTCOME_FINGERPRINT:** `RIGOROUS_LATTICE_BOUNDS_OBTAINED_CONTINUUM_BOOTSTRAP_LIMIT_UNRESOLVED`
 
 ---
 
-### PATH-MOD-003: Nearby Theory Scaling Limits Pathway
-- **PROGRAM_ID:** `PATH-MOD-003`
-- **PRIMARY_PAPERS:** `PAPER-MOD-004` (Chatterjee 2024, *arXiv:2401.10507*)
+### PATH-MOD-004: Rigorous Infinite-Volume Lattice Strong-Coupling Mass Gap Pathway
+- **PROGRAM_ID:** `PATH-MOD-004`
+- **PRIMARY_PAPERS:** `PAPER-MOD-006` (Shen, Zhu, Zhu 2022, *Ann. Probab.* / *arXiv:2204.12737*), `PAPER-MOD-007` (Cao, Nissim, Sheffield 2025, *arXiv:2505.16585*)
+- **CENTRAL_THESIS:** `[PRIMARY_SOURCE_RESULT]` In the infinite-volume lattice limit at strong coupling ($\beta < \beta_0$), Yang–Mills theory satisfies uniform Poincaré and log-Sobolev inequalities, yielding exponential correlation decay and a strictly positive lattice mass gap $\Delta_{lat}(\beta) > 0$.
+- **DIRECTION:** `[PRIMARY_SOURCE_RESULT]` Infinite-volume lattice Gibbs measures, Glauber/Langevin dynamic functional inequalities, and non-perturbative area-law bounds.
+- **WHAT_SUCCEEDED:** `[PRIMARY_SOURCE_RESULT]` Rigorous proof of infinite-volume Gibbs measure existence, uniform Poincaré/log-Sobolev inequalities, and exponential correlation decay in 2D, 3D, and 4D at strong coupling ($\beta < \beta_0$).
+- **WHAT_REMAINS_OPEN:** `[PRIMARY_SOURCE_LIMITATION]`
+  - *Coupling Barrier:* `[PRIMARY_SOURCE_LIMITATION]` The bounds are strictly restricted to strong coupling ($\beta < \beta_0$).
+  - *Continuum Transition:* `[PRIMARY_SOURCE_LIMITATION]` Asymptotic freedom requires taking the continuum limit along the weak-coupling trajectory ($\beta \to \infty, g \to 0, a \to 0$), where strong-coupling functional inequalities lose uniformity.
+- **SOURCE_STATED_LIMITATION:** `[PRIMARY_SOURCE_LIMITATION]` Results hold for $\beta < \beta_0$ at fixed lattice spacing $a > 0$; continuum limit requires weak coupling.
+- **PROJECT_SYNTHESIS:** `[PROJECT_SYNTHESIS]` This provides a definitive modern benchmark for the lattice mass gap at strong coupling. The essential missing bridge for the Clay Millennium problem is connecting this strong-coupling mass gap to the weak-coupling continuum limit.
+- **WHAT_SURVIVED:** `[PROJECT_SYNTHESIS]` Infinite-volume functional inequality techniques on lattice gauge manifolds.
+- **BRIDGE_VARIABLES:** `lattice coupling beta`, `strong-coupling threshold beta_0`, `lattice correlation length xi_lat`, `lattice mass gap Delta_lat`, `lattice spacing a`
+- **FAILURE_LOCALITY:** `continuum/weak-coupling trajectory (blocked at beta -> infinity / g -> 0)`
+- **REOPEN_CONDITIONS:** `[PROJECT_SYNTHESIS]` Establishing uniform functional inequalities or non-vanishing mass gap estimates along an analytical trajectory extending to the weak-coupling critical point $\beta \to \infty$.
+- **OUTCOME_FINGERPRINT:** `RIGOROUS_INFINITE_VOLUME_LATTICE_MASS_GAP_AT_STRONG_COUPLING`
+
+---
+
+### PATH-MOD-005: Nearby Gauge-Higgs Scaling Limits Pathway
+- **PROGRAM_ID:** `PATH-MOD-005`
+- **PRIMARY_PAPERS:** `PAPER-MOD-008` (Chatterjee 2024, *arXiv:2401.10507*)
 - **CENTRAL_THESIS:** `[PRIMARY_SOURCE_RESULT]` Rigorous 4D continuum limits with a mass gap can be constructed by studying nearby gauge-scalar models (Yang–Mills–Higgs) under joint parameter scaling.
 - **DIRECTION:** `[PRIMARY_SOURCE_RESULT]` Lattice $SU(2)$ Yang–Mills–Higgs, unitary gauge transformations, and correlation inequality expansions.
 - **WHAT_SUCCEEDED:** `[PRIMARY_SOURCE_RESULT]` Rigorous proof that 4D $SU(2)$ Yang–Mills–Higgs has a continuum scaling limit converging to a massive Gaussian generalized field with an explicit non-zero mass gap.
@@ -138,22 +183,5 @@ Every pathway-memory entry and claim in this register is categorized according t
 - **WHAT_SURVIVED:** `[PROJECT_SYNTHESIS]` Rigorous techniques for controlling joint scaling of lattice parameters in 4D gauge-scalar systems.
 - **BRIDGE_VARIABLES:** `gauge coupling g`, `Higgs parameter gamma`, `lattice spacing a`, `correlation length xi`
 - **FAILURE_LOCALITY:** `nontriviality (Gaussian limit / Higgs-dominated)`
-- **REOPEN_CONDITIONS:** `[PROJECT_SYNTHESIS]` Scaling trajectories in parameter space that do not condense the scalar field and preserve non-Gaussian non-Abelian interaction vertices in the limit $a 	o 0$.
+- **REOPEN_CONDITIONS:** `[PROJECT_SYNTHESIS]` Scaling trajectories in parameter space that do not condense the scalar field and preserve non-Gaussian non-Abelian interaction vertices in the limit $a \to 0$.
 - **OUTCOME_FINGERPRINT:** `RIGOROUS_MASSIVE_SCALING_LIMIT_ESTABLISHED_LIMIT_IS_GAUSSIAN`
-
----
-
-### PATH-MOD-004: Adversarial Claim Audit Pathway (2024–2026 Preprints)
-- **PROGRAM_ID:** `PATH-MOD-004`
-- **PRIMARY_PAPERS:** `PAPER-MOD-005` (Clay Millennium Invariant 2026), `PAPER-MOD-006` (Adversarial Boundary Register)
-- **CENTRAL_THESIS:** `[PROJECT_SYNTHESIS]` External claims asserting full continuum mass gap solutions must be quarantined and subjected to adversarial mathematical audit against Jaffe–Witten requirements.
-- **DIRECTION:** `[PROJECT_SYNTHESIS]` Adversarial verification of compactness, non-triviality, Lorentz invariance, and Wightman axioms.
-- **WHAT_SUCCEEDED:** `[PROJECT_SYNTHESIS]` Preservation of project integrity against unverified external announcements and strict adherence to Clay Mathematics Institute official standards.
-- **WHAT_REMAINS_OPEN:** `[PROJECT_SYNTHESIS]` Execution of systematic adversarial audits on claimed-solution families in task `YM-002E`.
-- **SOURCE_STATED_LIMITATION:** `[PRIMARY_SOURCE_LIMITATION]` Clay Mathematics Institute confirms the Millennium Problem remains officially open and unsolved in 2026.
-- **PROJECT_SYNTHESIS:** `[PROJECT_SYNTHESIS]` No unrefereed preprint has survived rigorous mathematical scrutiny without identifying unproved compactness assumptions or heuristic truncations.
-- **WHAT_SURVIVED:** `[PROJECT_SYNTHESIS]` Formal adversarial audit protocol and negative evidence recording.
-- **BRIDGE_VARIABLES:** `claimed continuum mass gap Delta > 0`, `audit criteria`
-- **FAILURE_LOCALITY:** `quarantined (external unverified claims)`
-- **REOPEN_CONDITIONS:** `[PROJECT_SYNTHESIS]` Official peer review acceptance by Clay Mathematics Institute advisory committee.
-- **OUTCOME_FINGERPRINT:** `EXTERNAL_CLAIMS_QUARANTINED_SUBJECT_TO_ADVERSARIAL_AUDIT`

@@ -1,27 +1,27 @@
-# PAPER-MOD-004: A Scaling Limit of 4D SU(2) Yang-Mills-Higgs on a Lattice
+# PAPER-MOD-004: Analytic Bootstrap for Large N Lattice Yang-Mills Theory
 
 - **SOURCE_ID:** `PAPER-MOD-004`
-- **TITLE:** A Scaling Limit of 4D SU(2) Yang-Mills-Higgs on a Lattice
-- **AUTHORS:** Sourav Chatterjee
-- **JOURNAL:** Communications in Mathematical Physics / arXiv
-- **VOLUME:** arXiv:2401.10507
-- **PAGES:** 1-52
-- **YEAR:** 2024
-- **DOI:** `10.48550/arXiv.2401.10507`
+- **TITLE:** Analytic Bootstrap for Large N Lattice Yang-Mills Theory
+- **AUTHORS:** Vladimir Kazakov, Zechuan Zheng
+- **JOURNAL:** Physical Review D
+- **VOLUME:** 107
+- **PAGES:** L051501
+- **YEAR:** 2023
+- **DOI:** `10.1103/PhysRevD.107.L051501`
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
-- **BRIDGE_VARIABLES:** gauge coupling g, Higgs parameter gamma, lattice spacing a, correlation length xi
-- **FAILURE_LOCALITY:** `nontriviality (Gaussian limit / Higgs-dominated)`
+- **BRIDGE_VARIABLES:** lattice coupling beta, loop perimeter C, bootstrap truncation L_max, gauge group SU(infinity)
+- **FAILURE_LOCALITY:** `continuum limit / large-N (infinite loop truncation / N=infinity only)`
 
 ## Executive Summary
-Sourav Chatterjee established a rigorous continuum scaling limit for 4D lattice SU(2) Yang-Mills-Higgs theory under a joint scaling of gauge coupling g and Higgs expectation value, proving convergence to a massive generalized Gaussian field. The author explicitly notes that pure 4D non-Abelian Yang-Mills continuum construction remains mathematically open.
+Kazakov and Zheng developed an analytic and numerical bootstrap method for SU(infinity) large-N lattice Yang-Mills theory in 2D, 3D, and 4D. Combining Makeenko-Migdal loop equations with Gram matrix positive semidefiniteness of Wilson loops, they obtained rigorous upper and lower bounds on plaquette expectation values and string tension at large N.
 
 ## Key Proven Results
-- Rigorous proof of continuum scaling limit for 4D SU(2) Yang-Mills-Higgs under joint parameter tuning.
-- Convergence to a massive Euclidean Gaussian field with an explicit mass gap.
-- Exact mathematical control of lattice fluctuations in the Higgs-dominated scaling regime.
+- Derivation of rigorous bootstrap inequalities on Wilson loop expectation values at large N (SU(infinity)).
+- Rigorous non-perturbative upper and lower bounds on large-N lattice plaquette energy and string tension.
+- Formulation of semidefinite programming relaxation for planar loop equations.
 
 ## Limitations and Unresolved Boundaries
-- The limiting continuum field is Gaussian (trivial S-matrix) due to the Higgs condensation dominating fluctuations.
-- Does NOT construct pure 4D Yang-Mills theory without Higgs fields.
-- The non-Gaussian / interacting pure Yang-Mills continuum limit remains unconstructed.
+- Specifically restricted to large-N (SU(infinity)) planar limit.
+- Operates on a discrete lattice at fixed coupling beta and lattice spacing a > 0.
+- Continuum limit a -> 0 requires scaling infinite loops simultaneously, which is truncated at finite loop size L_max.

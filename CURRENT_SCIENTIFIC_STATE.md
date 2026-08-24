@@ -21,13 +21,14 @@
   - Confirmed: 4D Ultraviolet Stability in finite volume proved (Bałaban `THM-YM-0018`) and IR-regulated Euclidean Schwinger functions constructed (Magnen–Rivasseau–Sénéor `THM-YM-0020`), but 4D continuum infinite-volume mass gap $\Delta > 0$ remains unsolved (`CLAY_SUFFICIENT: NO` across all entries).
   - Current status: `INDEPENDENTLY_VERIFIED` (E4 verifier `66e23357-ea7d-4b3b-9e20-365e15f72c09`, `INTEGRITY_PASS`).
 
-- Modern Rigorous Advances and Boundary Invariants ledger (2000–2026) reconstructed, extracted, and independently verified (`YM-002C`):
-  - 6 primary modern sources cataloged and hashed in `literature/primary/modern_2000_2026/manifest.yaml`.
-  - 5 modern theorems (`THM-YM-0021` through `THM-YM-0025`) extracted with granular evidence classifications, complete limitation blocks, bridge variables, and failure localities in `THEOREM_LEDGER.md`.
-  - Modern limitation matrix (`literature/MODERN_LIMITATION_MATRIX.md`) and dependency graph (`literature/MODERN_DEPENDENCY_GRAPH.md`) verified with 5 explicit edge justifications.
-  - Pathway Memory Register extended with modern programs (`PATH-MOD-001` through `PATH-MOD-004`), identifying exact bridge variables and failure localities across singular SPDEs (wrong dimension 3D), lattice bootstrap (continuum infinite loop truncation), and gauge-Higgs scaling limits (Gaussian triviality).
-  - Clay Millennium status invariant confirmed: problem remains officially open and unsolved in 2026 (`CLAY_SUFFICIENT: NO` across all entries).
-  - Current status: `INDEPENDENTLY_VERIFIED` (E4 verifier `c1e0c3fb-b950-430c-ac35-3a0784e8c9ef`, `INTEGRITY_PASS`).
+- Modern Rigorous Advances and Boundary Invariants ledger (2000–2026) under repair and expansion (`YM-002CR1`):
+  - 8 primary modern sources cataloged and hashed in `literature/primary/modern_2000_2026/manifest.yaml`.
+  - 8 modern theorems (`THM-YM-0021` through `THM-YM-0028`) extracted with granular evidence classifications, complete limitation blocks, bridge variables, and failure localities in `THEOREM_LEDGER.md`.
+  - Conflations repaired: separated 2D from 3D stochastic Yang–Mills, properly scoped Chevyrev–Shen 2026 to 3D, separated Kazakov–Zheng large-$N$ from finite-$N$, added Shen–Zhu–Zhu strong-coupling infinite-volume lattice mass gap, added Cao–Nissim–Sheffield 2025 area-law advances, separated Clay problem status invariant to `OFFICIAL_PROBLEM_STATUS_INVARIANT.md`, moved adversarial screening register to `literature/CLAIM_QUARANTINE_REGISTER.md`.
+  - Current status: `IN_PROGRESS` (Candidate prepared for fresh blind E4 audit).
+
+## REPOSITORY SYNCHRONIZATION
+- `REMOTE_SYNC`: `BLOCKED_NO_REMOTE` (No remote upstream configured in local Git config; local checkpoints remain sealed and clean).
 
 ## EXTERNALLY SOURCED / TO BE ADVANCED IN YM-002D+
 - Solved, modified, and analogous theories (`YM-002D`).
@@ -44,7 +45,8 @@
 Rigorous constructive control linking ultraviolet asymptotic freedom to infrared mass generation remains open in 4D continuum spacetime across the strong-coupling transition ($g_k \sim 1$).
 
 ## NEXT ACTION
-`YM-002D`: Solved, modified, and analogous theories ledger.
+`YM-002CR1`: Modern literature scope, taxonomy & completeness repair.
+
 
 
 

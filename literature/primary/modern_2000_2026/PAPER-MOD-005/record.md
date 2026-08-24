@@ -1,24 +1,25 @@
-# PAPER-MOD-005: Official Status Confirmation of the Yang-Mills Millennium Prize Problem
+# PAPER-MOD-005: Bootstrapping Finite N Lattice Gauge Theories: Matrix Model and SU(2) Yang-Mills
 
 - **SOURCE_ID:** `PAPER-MOD-005`
-- **TITLE:** Official Status Confirmation of the Yang-Mills Millennium Prize Problem
-- **AUTHORS:** Clay Mathematics Institute
-- **JOURNAL:** Clay Mathematics Institute Official Register
-- **VOLUME:** 2026 Status Update
-- **PAGES:** 1-4
-- **YEAR:** 2026
-- **DOI:** `10.5555/clay.ym.2026.status`
+- **TITLE:** Bootstrapping Finite N Lattice Gauge Theories: Matrix Model and SU(2) Yang-Mills
+- **AUTHORS:** Vladimir Kazakov, Zechuan Zheng
+- **JOURNAL:** arXiv / Preprints in High Energy Physics
+- **VOLUME:** arXiv:2404.16925
+- **PAGES:** 1-38
+- **YEAR:** 2024
+- **DOI:** `10.48550/arXiv.2404.16925`
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
-- **BRIDGE_VARIABLES:** Millennium problem requirements YM-REQ-001 to YM-REQ-030
-- **FAILURE_LOCALITY:** `N/A (Official Problem Status)`
+- **BRIDGE_VARIABLES:** lattice coupling beta, loop perimeter C, bootstrap truncation L_max, finite gauge group SU(2)
+- **FAILURE_LOCALITY:** `continuum limit (infinite loop truncation at finite N)`
 
 ## Executive Summary
-Official status verification from the Clay Mathematics Institute confirming that as of 2026, the Yang-Mills and Mass Gap Millennium Prize Problem remains unsolved. No proposed proof of 4D continuum quantum Yang-Mills existence and non-zero mass gap has been accepted.
+Kazakov and Zheng extended the lattice bootstrap framework to finite-N gauge groups, specifically analyzing SU(2) lattice Yang-Mills and matrix models by incorporating 1/N non-planar corrections, trace relations (Cayley-Hamilton constraints), and finite-N positive semidefinite Gram matrices.
 
 ## Key Proven Results
-- Authoritative verification that the Yang-Mills Millennium Prize Problem remains officially open and unsolved in 2026.
-- Re-affirmation that any claim of solution requires complete peer review and verification against Jaffe-Witten requirements.
+- Formulation of finite-N lattice bootstrap incorporating trace identities and finite-N Gram matrices.
+- Rigorous non-perturbative bounds on finite-N SU(2) plaquette observables on discrete lattices.
 
 ## Limitations and Unresolved Boundaries
-- Governance status invariant confirming open problem status.
+- Operates at fixed discrete lattice spacing a > 0.
+- Continuum limit a -> 0 requires L_max -> infinity, which remains unclosed analytically.

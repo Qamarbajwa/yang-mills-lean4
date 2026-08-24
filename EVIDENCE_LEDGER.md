@@ -38,8 +38,12 @@
 | EVD-002C-01 | YM-002C Modern Literature Manifest & Records (6 sources, 2000–2026) | E3 | `literature/primary/modern_2000_2026/manifest.yaml` | `manifest.yaml` verified against disk hashes | MACHINE_CHECKED (`manifest.yaml`) | ACCEPTED |
 | EVD-002C-02 | YM-002C Modern Literature Test Suite (8 tests) | E3 | `tests/test_modern_literature.py` | Pass receipt `evidence/test_runs/verify_20260824T220746Z.json` | REPRODUCIBLE_LOCALLY (`RUN_VERIFY.ps1`) | ACCEPTED |
 | EVD-002C-03 | YM-002C Modern Limitation Matrix & Dependency Graph | E3 | `literature/MODERN_LIMITATION_MATRIX.md`, `literature/MODERN_DEPENDENCY_GRAPH.md` | Matrix and graph verified | MACHINE_CHECKED | ACCEPTED |
-| EVD-002C-04 | YM-002C Fresh Blind E4 Independent Audit (Verifier `c1e0c3fb-b950-430c-ac35-3a0784e8c9ef`) | E4 | `verification/raw/YM-002C_E4_RAW_20260824T220916Z.md` | `be14aec741a4e5f5038eae60c68b5bb33e3ea271ecaeeef129813e94997f3693` (Candidate SHA: `c3acff2987333fe3cc0d8b61e1876d5b44cd0875`) | TRANSCRIPT_LOG_CAPTURED | ACCEPTED |
-| EVD-002C-05 | YM-002C Derived E4 Independent Review Report | E4_DERIVED | `verification/YM-002C_INDEPENDENT_REVIEW.md` | Derived from raw `be14aec741a4e5f5038eae60c68b5bb33e3ea271ecaeeef129813e94997f3693` | TRACEABLE_TO_RAW_E4 | ACCEPTED |
+| EVD-002C-04 | YM-002C Fresh Blind E4 Independent Audit (Verifier `c1e0c3fb-b950-430c-ac35-3a0784e8c9ef`) | E4 | `verification/raw/YM-002C_E4_RAW_20260824T220916Z.md` | `be14aec741a4e5f5038eae60c68b5bb33e3ea271ecaeeef129813e94997f3693` (Candidate SHA: `c3acff2987333fe3cc0d8b61e1876d5b44cd0875`) | TRANSCRIPT_LOG_CAPTURED | STALE_FOR_FINAL_SUPERSEDED_BY_YM-002CR1 |
+| EVD-002C-05 | YM-002C Derived E4 Independent Review Report | E4_DERIVED | `verification/YM-002C_INDEPENDENT_REVIEW.md` | Derived from raw `be14aec741a4e5f5038eae60c68b5bb33e3ea271ecaeeef129813e94997f3693` | TRACEABLE_TO_RAW_E4 | STALE_FOR_FINAL_SUPERSEDED_BY_YM-002CR1 |
+| EVD-002CR1-01 | YM-002CR1 Repaired Modern Literature Manifest & Records (8 sources, 2000–2026) | E3 | `literature/primary/modern_2000_2026/manifest.yaml` | `manifest.yaml` verified against disk hashes | MACHINE_CHECKED (`manifest.yaml`) | ACCEPTED |
+| EVD-002CR1-02 | YM-002CR1 Repaired Modern Literature Test Suite (10 tests) | E3 | `tests/test_modern_literature.py` | Pass receipt `RUN_VERIFY.ps1` | REPRODUCIBLE_LOCALLY (`RUN_VERIFY.ps1`) | ACCEPTED |
+| EVD-002CR1-03 | YM-002CR1 Official Problem Status Invariant & Claim Quarantine Register | E3 | `OFFICIAL_PROBLEM_STATUS_INVARIANT.md`, `literature/CLAIM_QUARANTINE_REGISTER.md` | Files verified against governance schema | MACHINE_CHECKED | ACCEPTED |
+
 
 
 
