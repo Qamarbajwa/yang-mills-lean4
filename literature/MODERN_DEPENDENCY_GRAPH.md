@@ -64,7 +64,7 @@ flowchart TD
 
 1. **`THM-YM-0005 -> THM-YM-0021`**: Chandra, Chevyrev, Hairer, and Shen build upon Euclidean reflection positivity and OS measure formulations to construct the 2D distributional state space and Markov process (*Publ. Math. IHÉS* 136, 1).
 2. **`THM-YM-0021 -> THM-YM-0022`**: Chevyrev and Shen prove that the 2D Yang–Mills measure is the unique invariant measure of the Markov dynamic constructed in CCHS 2022 (*CPAM* 79, 1973).
-3. **`THM-YM-0005 -> THM-YM-0023`**: CCHS use Euclidean regularity structures and gauge orbit geometry to construct the local 3D stochastic flow (*Invent. Math.* 237, 85).
+3. **`THM-YM-0005 -> THM-YM-0023`**: CCHS use Euclidean regularity structures and gauge orbit geometry to construct the local 3D stochastic flow (*Invent. Math.* 237, 541).
 4. **`THM-YM-0023 -> THM-YM-0024`**: Chevyrev and Shen prove uniqueness of the mass renormalisation that leads to gauge-covariant solutions of the 3D singular SPDE developed in CCHS 2024 (*ARMA* 250, art. 11).
 5. **`THM-YM-0008 -> THM-YM-0025`**: Kazakov and Zheng derive large-N bootstrap inequalities directly from Wilson's discrete lattice gauge action combined with planar loop equations (*Phys. Rev. D* 107, L051501).
 6. **`THM-YM-0025 -> THM-YM-0026`**: Kazakov and Zheng extend the planar bootstrap to finite-N ($SU(2)$) gauge theories using trace relations and finite-N Gram matrices (*JHEP* 2025, 99).

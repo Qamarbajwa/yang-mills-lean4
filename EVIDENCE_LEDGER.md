@@ -53,6 +53,9 @@
 | EVD-002CR2A-01 | YM-002CR2A Erratum Fixed Modern Literature Manifest & Records (10 sources) | E3 | `literature/primary/modern_2000_2026/manifest.yaml` | `manifest.yaml` verified against disk hashes | MACHINE_CHECKED (`manifest.yaml`) | ACCEPTED |
 | EVD-002CR2A-02 | YM-002CR2A Erratum Regression Test Suite (9 tests) | E3 | `tests/test_modern_literature.py` | Pass receipt `RUN_VERIFY.ps1` | REPRODUCIBLE_LOCALLY (`RUN_VERIFY.ps1`) | ACCEPTED |
 | EVD-002CR2A-03 | YM-002CR2A Audited Modern Limitation Matrix & Dependency Graph | E3 | `literature/MODERN_LIMITATION_MATRIX.md`, `literature/MODERN_DEPENDENCY_GRAPH.md` | Matrix and graph verified | MACHINE_CHECKED | ACCEPTED |
+| EVD-002CR2A-04 | YM-002CR2A Fresh Blind E4 Independent Audit (Verifier `529d2a32-15bb-4bdf-b2b6-af422b22503e`) | E4 | `verification/raw/YM-002CR2A_E4_RAW_20260825T185749Z.md` | `d7e2b5455d411d072403d9441a0bfd12262b68d6898cce76bfb0eb2c07ef913e` (Candidate SHA: `5b7bd0adf9dbfd2e04c5a681c9fa35bc8ee25181`) | TRANSCRIPT_LOG_CAPTURED | ACCEPTED |
+| EVD-002CR2A-05 | YM-002CR2A Derived E4 Independent Review Report | E4_DERIVED | `verification/YM-002CR2A_INDEPENDENT_REVIEW.md` | Derived from raw `d7e2b5455d411d072403d9441a0bfd12262b68d6898cce76bfb0eb2c07ef913e` | TRACEABLE_TO_RAW_E4 | ACCEPTED |
+
 
 
 

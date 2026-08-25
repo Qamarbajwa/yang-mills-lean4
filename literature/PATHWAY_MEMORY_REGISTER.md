@@ -123,7 +123,7 @@ Every claim, result, and limitation recorded in this register is strictly tagged
 
 ### PATH-MOD-002: 3D Singular Stochastic Yang–Mills–Higgs Flow Pathway
 - **PROGRAM_ID:** `PATH-MOD-002`
-- **PRIMARY_PAPERS:** `PAPER-MOD-003` (Chandra, Chevyrev, Hairer, Shen 2024, *Invent. Math.* 237, 85–236), `PAPER-MOD-004` (Chevyrev & Shen 2026, *ARMA* 250, art. 11)
+- **PRIMARY_PAPERS:** `PAPER-MOD-003` (Chandra, Chevyrev, Hairer, Shen 2024, *Invent. Math.* 237, 541–696), `PAPER-MOD-004` (Chevyrev & Shen 2026, *ARMA* 250, art. 11)
 - **CENTRAL_THESIS:** `[PRIMARY_SOURCE_RESULT]` Singular SPDEs can be renormalized in a gauge-covariant manner to yield a local-in-time Markov process on 3D gauge orbits.
 - **DIRECTION:** `[PRIMARY_SOURCE_RESULT]` 3D regularity structures, gauge-covariant mollification, local-in-time flow, and unique gauge-covariant mass renormalization analysis.
 - **WHAT_SUCCEEDED:** `[PRIMARY_SOURCE_RESULT]` Rigorous construction of local-in-time 3D stochastic Yang–Mills–Higgs flow, canonical Markov diffusion on gauge orbits (*Invent. Math.* 237, pp. 541–696), and proof of uniqueness of the gauge-covariant mass renormalization (*ARMA* 250, art. 11).

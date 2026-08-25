@@ -740,7 +740,7 @@
 - **ASSUMPTIONS:** Regularity structures for singular SPDEs, gauge-covariant stochastic mollification.
 - **EXACT_RESULT:** Rigorous mathematical construction of the local-in-time stochastic Yang–Mills–Higgs flow in 3D, proof that gauge-orbit configuration space is a complete metric space, and construction of a canonical Markov diffusion process up to potential finite-time blow-up.
 - **EVIDENCE_CLASS:** `RIGOROUS_MATHEMATICAL_THEOREM`
-- **CLASSIFICATION_JUSTIFICATION:** Definitive mathematical theorem in singular SPDE theory establishing local stochastic quantization of 3D gauge-Higgs theories (*Invent. Math.* 237 (2024), 85–236).
+- **CLASSIFICATION_JUSTIFICATION:** Definitive mathematical theorem in singular SPDE theory establishing local stochastic quantization of 3D gauge-Higgs theories (*Invent. Math.* 237 (2024), 541–696).
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
 - **PROOF_OR_DERIVATION_METHOD:** Theory of regularity structures, stochastic gauge fixing, and Da Prato–Debussche multi-scale decompositions.
