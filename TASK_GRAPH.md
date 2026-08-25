@@ -16,8 +16,7 @@
 | YM-002C | Modern rigorous advances (2000–2026) | YM-002BR1 | T3 | primary literature + fresh blind E4 audit | E3_VERIFIED_E4_CHALLENGED_SUPERSEDED |
 | YM-002CR1 | Modern literature scope, taxonomy & completeness repair | YM-002C | T3 | fresh blind E4 audit + epistemic taxonomy | E3_VERIFIED_E4_CHALLENGED_SUPERSEDED |
 | YM-002CR2 | Modern-source theorem attribution and bibliographic finalization | YM-002CR1 | T3 | fresh blind E4 audit + epistemic taxonomy | E3_VERIFIED_E4_CHALLENGED_SUPERSEDED |
-| YM-002CR2A | Modern-source locator and theorem-wording erratum | YM-002CR2 | T2 | fresh blind E4 audit + bounded erratum verification | INDEPENDENTLY_VERIFIED |
-| YM-002D | Solved, modified, and analogous theories ledger | YM-002CR2A | T3 | primary literature + theorem extraction | READY |
+| YM-002D | Solved, modified, and analogous theories ledger | YM-002CR2A | T3 | primary literature + theorem extraction | IN_PROGRESS |
 
 
 

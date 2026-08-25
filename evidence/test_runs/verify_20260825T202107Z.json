@@ -1,0 +1,35 @@
+{
+  "task_id": "YM-000",
+  "timestamp_utc": "2026-08-25T20:21:07.657425+00:00",
+  "status": "PASS",
+  "evidence_level": "E3_REPRODUCIBLE_MACHINE_EVIDENCE",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "git_sha": "504f8941fb4d9db0a92109a079ad38f539ef97da",
+  "git_branch": "master",
+  "git_status": "M CURRENT_SCIENTIFIC_STATE.md\n M NEXT_ACTION.md\n M RESEARCH_LEDGER.md\n M TASK_GRAPH.md\n M THEOREM_LEDGER.md\n M governance/CONTRACT_OWNERSHIP_LEDGER.yaml\n M literature/PATHWAY_MEMORY_REGISTER.md\n M tests/test_pathway_epistemic_taxonomy.py\n?? evidence/test_runs/verify_20260825T201930Z.json\n?? evidence/test_runs/verify_20260825T201930Z.log\n?? evidence/test_runs/verify_20260825T201948Z.json\n?? evidence/test_runs/verify_20260825T201948Z.log\n?? evidence/test_runs/verify_20260825T201959Z.json\n?? evidence/test_runs/verify_20260825T201959Z.log\n?? evidence/test_runs/verify_20260825T202012Z.json\n?? evidence/test_runs/verify_20260825T202012Z.log\n?? evidence/test_runs/verify_20260825T202107Z.log\n?? literature/ANALOGUE_DEPENDENCY_GRAPH.md\n?? literature/ANALOGUE_LIMITATION_MATRIX.md\n?? literature/ANALOGUE_MECHANISM_MATRIX.md\n?? literature/primary/solved_modified_analogous/\n?? tests/test_analogous_theories.py",
+  "commands": [
+    {
+      "command": [
+        "D:\\Comfy UI\\yang mills and the mass gap\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 0,
+      "stdout": "........................................................................ [ 54%]\n.............................................................            [100%]\n133 passed in 0.61s\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\Comfy UI\\yang mills and the mass gap\\.venv\\Scripts\\python.exe",
+        "scripts/check_repo.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: repository invariants and governance YAML are readable.\n",
+      "stderr": ""
+    }
+  ],
+  "log_file": "evidence\\test_runs\\verify_20260825T202107Z.log",
+  "log_sha256": "0b3d5515f60f8cbf66af17fd9e6f6e5dff8b1e5938e644fa8d9668c742530cc5"
+}

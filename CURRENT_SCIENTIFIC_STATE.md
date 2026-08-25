@@ -24,14 +24,19 @@
 - Modern Rigorous Advances and Boundary Invariants ledger (2000–2026) erratum repaired and independently verified (`YM-002CR2A`):
   - 10 primary modern sources cataloged and hashed in `literature/primary/modern_2000_2026/manifest.yaml`.
   - 10 modern theorems (`THM-YM-0021` through `THM-YM-0030`) extracted with granular evidence classifications, complete limitation blocks, bridge variables, and failure localities in `THEOREM_LEDGER.md`.
-  - Erratum corrections finalized: updated Chandra et al. (2024) 3D YMH page range to Invent. Math. 237, 541–696; refined Chevyrev & Shen (2026) theorem scope strictly to uniqueness of the mass renormalisation required for gauge covariance.
-  - Current status: `INDEPENDENTLY_VERIFIED` (E4 verifier `529d2a32-15bb-4bdf-b2b6-af422b22503e`, `INTEGRITY_PASS`).
+  - Current status: `ACCEPTED` (E4 verifier `529d2a32-15bb-4bdf-b2b6-af422b22503e`, `INTEGRITY_PASS`).
+
+- Solved, Modified, and Analogous Gauge-Theory Mechanisms Ledger (`YM-002D` - IN PROGRESS):
+  - 10 primary analogue programs (`PAPER-ANA-001` through `PAPER-ANA-010`) cataloged and hashed in `literature/primary/solved_modified_analogous/manifest.yaml`.
+  - 10 analogue theorems (`THM-YM-0031` through `THM-YM-0040`) extracted into `THEOREM_LEDGER.md` with explicit `TRANSFER_BARRIER`, `TRANSFERABLE_COMPONENT`, `NONTRANSFERABLE_COMPONENT`, `BRIDGE_VARIABLES`, and `FAILURE_LOCALITY`.
+  - 15-column Analogue Mechanism Matrix (`literature/ANALOGUE_MECHANISM_MATRIX.md`), Limitation Matrix (`literature/ANALOGUE_LIMITATION_MATRIX.md`), and Dependency Graph (`literature/ANALOGUE_DEPENDENCY_GRAPH.md`) constructed.
+  - Pathway Memory Register expanded with `PATH-ANA-001` through `PATH-ANA-010`, Permanent Invariants 16–28, and 4 Cross-Pathway Resonances (`RES-PATH-001` through `004`).
+  - Deterministic test suite `tests/test_analogous_theories.py` and research ledger (`RES-YM-002D-001` through `003`) implemented.
 
 ## REPOSITORY SYNCHRONIZATION
 - `REMOTE_SYNC`: `BLOCKED_NO_REMOTE` (No remote upstream configured in local Git config; local checkpoints remain sealed and clean).
 
-## EXTERNALLY SOURCED / TO BE ADVANCED IN YM-002D+
-- Solved, modified, and analogous theories (`YM-002D`).
+## EXTERNALLY SOURCED / TO BE ADVANCED IN YM-002E+
 - Claimed-solution adversarial audits (`YM-002E`).
 - Cross-era theorem and dependency synthesis (`YM-002F`).
 - Missing-bridge graph (`YM-003`).
@@ -45,7 +50,8 @@
 Rigorous constructive control linking ultraviolet asymptotic freedom to infrared mass generation remains open in 4D continuum spacetime across the strong-coupling transition ($g_k \sim 1$).
 
 ## NEXT ACTION
-`YM-002D`: Solved, modified, and analogous theories ledger.
+Execute candidate commit for `YM-002D` and launch fresh blind independent E4 verifier subagent.
+
 
 
 

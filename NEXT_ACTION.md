@@ -19,6 +19,8 @@
 - `YM-002B — Constructive / RG foundations ledger (1980–2000)` (INDEPENDENTLY_VERIFIED)
 - `YM-002BR1 — Constructive pathway-memory semantic + closeout reconciliation` (INDEPENDENTLY_VERIFIED)
 - `YM-002CR2A — Modern-source locator and theorem-wording erratum` (INDEPENDENTLY_VERIFIED)
+- `YM-002D — Solved, modified, and analogous gauge-theory mechanisms ledger` (CANDIDATE IMPLEMENTED / READY FOR E4 AUDIT)
+
 
 
 

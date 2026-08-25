@@ -59,5 +59,28 @@ def test_task_graph_ym002_subtask_completeness():
         assert st in content, f"Subtask {st} must be present in TASK_GRAPH.md"
     assert "YM-003 | Construct missing-bridge graph | YM-002F | T3 | independent semantic review | BLOCKED" in content
 
-
-
+def test_analogue_pathways_epistemic_structure():
+    content = PATHWAY_PATH.read_text(encoding="utf-8")
+    allowed_evidence_classes = [
+        "RIGOROUS_MATHEMATICAL_CONSTRUCTION",
+        "RIGOROUS_MATHEMATICAL_THEOREM",
+        "EXACTLY_SOLVABLE_PHYSICS_MODEL",
+        "EXACT_SUPERSYMMETRIC_PHYSICS_RESULT",
+        "PERTURBATIVE_ALL_ORDERS_RESULT",
+        "SEMICLASSICAL_MECHANISM",
+        "CLASSICAL_MASS_MECHANISM",
+        "HIGGSED_QUANTUM_GAUGE_THEORY",
+        "DUALITY_BASED_RESULT",
+        "HOLOGRAPHIC_CONJECTURAL_ANALOGUE",
+        "PROJECT_SYNTHESIS",
+        "UNKNOWN"
+    ]
+    for i in range(1, 11):
+        p_id = f"PATH-ANA-00{i}" if i < 10 else f"PATH-ANA-0{i}"
+        assert p_id in content, f"Pathway {p_id} must be in PATHWAY_MEMORY_REGISTER.md"
+        assert f"- **PATHWAY_ID:** `{p_id}`" in content
+        assert "- **TRANSFER_BARRIER:**" in content
+        assert "- **TRANSFERABLE_COMPONENT:**" in content
+        assert "- **NONTRANSFERABLE_COMPONENT:**" in content
+        assert "- **REOPEN_CONDITIONS:**" in content
+        assert "- **OUTCOME_FINGERPRINT:**" in content

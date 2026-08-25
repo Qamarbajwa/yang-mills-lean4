@@ -1,0 +1,47 @@
+$ D:\Comfy UI\yang mills and the mass gap\.venv\Scripts\python.exe -m pytest -q
+....................F....F.............................................. [ 54%]
+.............................................................            [100%]
+================================== FAILURES ===================================
+_________________ test_theorems_reference_registered_sources __________________
+
+    def test_theorems_reference_registered_sources():
+        valid_source_ids = set()
+        for mpath in (ROOT / "literature" / "primary").glob("*/manifest.yaml"):
+            mdata = yaml.safe_load(mpath.read_text(encoding="utf-8"))
+            for s in mdata.get("sources", []):
+                valid_source_ids.add(s["source_id"])
+        theorems = parse_theorems()
+        for thm_id, thm in theorems.items():
+            paper_id_raw = thm.get("PAPER_ID", "")
+            paper_ids = [p.strip(" `") for p in paper_id_raw.split(",")]
+            for pid in paper_ids:
+>               assert pid in valid_source_ids, f"{thm_id} references unregistered source {pid}"
+E               AssertionError: THM-YM-0031 references unregistered source 
+E               assert '' in {'PAPER-ANA-001', 'PAPER-ANA-002', 'PAPER-ANA-003', 'PAPER-ANA-004', 'PAPER-ANA-005', 'PAPER-ANA-006', ...}
+
+tests\test_foundational_literature.py:71: AssertionError
+__________________ test_theorems_record_lattice_or_continuum __________________
+
+    def test_theorems_record_lattice_or_continuum():
+        theorems = parse_theorems()
+        for thm_id, thm in theorems.items():
+            domain = thm.get("DOMAIN", "").lower()
+            has_domain = any(d in domain for d in ["classical", "quantum", "constructive", "lattice", "axiomatic"])
+>           assert has_domain, f"{thm_id} must specify valid domain"
+E           AssertionError: THM-YM-0031 must specify valid domain
+E           assert False
+
+tests\test_foundational_literature.py:107: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_foundational_literature.py::test_theorems_reference_registered_sources
+FAILED tests/test_foundational_literature.py::test_theorems_record_lattice_or_continuum
+2 failed, 131 passed in 0.57s
+
+
+[exit_code=1]
+
+$ D:\Comfy UI\yang mills and the mass gap\.venv\Scripts\python.exe scripts/check_repo.py
+PASS: repository invariants and governance YAML are readable.
+
+
+[exit_code=0]

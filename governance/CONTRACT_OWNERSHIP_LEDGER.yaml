@@ -400,6 +400,46 @@ contracts:
     - "Authoring raw E4 text directly"
   candidate_id: 5b7bd0adf9dbfd2e04c5a681c9fa35bc8ee25181
   outcome: ACCEPTED
+- contract_id: CONTRACT-YM-002D
+  task_id: YM-002D
+  risk_tier: T3
+  base_sha: "504f8941fb4d9db0a92109a079ad38f539ef97da"
+  writer:
+    environment: Antigravity
+    agent_id: primary-writer-gemini
+    execution_id: "conversation://00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    model: Gemini / Antigravity
+  reviewer:
+    environment: Antigravity
+    agent_id: independent-verifier-subagent
+    model: Gemini / Antigravity
+    independence_level: LEVEL_A_SAME_APP_SAME_MODEL_SEPARATE_SESSION
+  acceptance_authority:
+    environment: "HumanOwner + CI"
+    authority_id: human-owner-and-ci-evaluator
+    execution_id: "user-interactive-session + deterministic-ci"
+    authority_type: ENVIRONMENT_LOCAL
+  allowed_scope:
+    - "literature/primary/solved_modified_analogous/**"
+    - "literature/ANALOGUE_MECHANISM_MATRIX.md"
+    - "literature/ANALOGUE_LIMITATION_MATRIX.md"
+    - "literature/ANALOGUE_DEPENDENCY_GRAPH.md"
+    - "literature/PATHWAY_MEMORY_REGISTER.md"
+    - "NEGATIVE_EVIDENCE_REGISTER.md"
+    - "RESEARCH_LEDGER.md"
+    - "THEOREM_LEDGER.md"
+    - "TASK_GRAPH.md"
+    - "CURRENT_SCIENTIFIC_STATE.md"
+    - "NEXT_ACTION.md"
+    - "tests/test_analogous_theories.py"
+    - "tests/test_pathway_epistemic_taxonomy.py"
+  forbidden_scope:
+    - "OFFICIAL_PROBLEM_SPECIFICATION.md"
+    - "Creating synthetic acceptance-authority aliases"
+    - "Authoring raw E4 text directly"
+  candidate_id: PENDING_CANDIDATE_COMMIT
+  outcome: IN_PROGRESS
+
 
 
 

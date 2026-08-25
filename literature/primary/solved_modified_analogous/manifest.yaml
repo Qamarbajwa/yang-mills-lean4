@@ -1,0 +1,121 @@
+packet: YM-002D
+description: Solved, Modified, and Analogous Gauge-Theory Mechanisms Ledger
+governance_version: v2.9.4
+sources:
+- source_id: PAPER-ANA-001
+  title: A Rigorous Construction of Yang-Mills on Compact Surfaces
+  authors: "Bruce K. Driver, Ambar N. Sengupta, Thierry L\xE9vy"
+  year: 1989/1993/2010
+  journal: J. Funct. Anal. / Ann. Phys. / Mem. AMS
+  doi: 10.1016/0022-1236(89)90008-8
+  evidence_class: RIGOROUS_MATHEMATICAL_CONSTRUCTION
+  local_file: PAPER-ANA-001/record.md
+  sha256: 3bf29772fb805bca9cd51c2d294d405341d324412c2269a1faeb704b6786e239
+  source_access: PRIMARY_FULL_TEXT
+  storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
+- source_id: PAPER-ANA-002
+  title: Possible third-order phase transition in the large-N lattice gauge theory
+  authors: David J. Gross, Edward Witten, Spenta R. Wadia
+  year: '1980'
+  journal: Phys. Rev. D / Phys. Lett. B
+  doi: 10.1103/PhysRevD.21.446
+  evidence_class: EXACTLY_SOLVABLE_PHYSICS_MODEL
+  local_file: PAPER-ANA-002/record.md
+  sha256: 8d7ce298a12e951d16f5107f069e59ccdb7c8916e7945c69c88d964c4d9032e0
+  source_access: PRIMARY_FULL_TEXT
+  storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
+- source_id: PAPER-ANA-003
+  title: Gauge Invariance and Mass / Quantum Electrodynamics in Two Dimensions
+  authors: Julian Schwinger, J. H. Lowenstein, J. A. Swieca
+  year: 1962/1971
+  journal: Phys. Rev. / Ann. Phys.
+  doi: 10.1103/PhysRev.128.2425
+  evidence_class: EXACTLY_SOLVABLE_PHYSICS_MODEL
+  local_file: PAPER-ANA-003/record.md
+  sha256: 8d17fc5a1ababd58ac99d8165d42671465c6802d9072349c48881c3b6c9d762e
+  source_access: PRIMARY_FULL_TEXT
+  storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
+- source_id: PAPER-ANA-004
+  title: Quark Confinement and Topology of Gauge Groups
+  authors: Alexander M. Polyakov
+  year: '1977'
+  journal: Nucl. Phys. B
+  doi: 10.1016/0550-3213(77)90086-4
+  evidence_class: SEMICLASSICAL_MECHANISM
+  local_file: PAPER-ANA-004/record.md
+  sha256: a34a598c9aef8aeca2978b635761a16e7d7de452c9aa91fbac6e2c61cae9de4c
+  source_access: PRIMARY_FULL_TEXT
+  storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
+- source_id: PAPER-ANA-005
+  title: Electric-Magnetic Duality, Monopole Condensation, and Confinement in N=2
+    Supersymmetric Yang-Mills Theory
+  authors: Nathan Seiberg, Edward Witten
+  year: '1994'
+  journal: Nucl. Phys. B
+  doi: 10.1016/0550-3213(94)90124-4
+  evidence_class: EXACT_SUPERSYMMETRIC_PHYSICS_RESULT
+  local_file: PAPER-ANA-005/record.md
+  sha256: b1eab2c99ea48e0a3eec2b1d7061681678283f805b8cf2f6758e25f3c456dd65
+  source_access: PRIMARY_FULL_TEXT
+  storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
+- source_id: PAPER-ANA-006
+  title: Exact Gell-Mann-Low Function of Supersymmetric Yang-Mills Theories from Instanton
+    Calculus / Constraints on Supersymmetry Breaking
+  authors: V. A. Novikov, M. A. Shifman, A. I. Vainshtein, V. I. Zakharov, Edward
+    Witten
+  year: 1983/1982
+  journal: Nucl. Phys. B
+  doi: 10.1016/0550-3213(83)90338-3
+  evidence_class: EXACT_SUPERSYMMETRIC_PHYSICS_RESULT
+  local_file: PAPER-ANA-006/record.md
+  sha256: 28392d3b95a286dd7d46cc5aeee0154a0bd9eac3f32e4edf42bae2e0881bae36
+  source_access: PRIMARY_FULL_TEXT
+  storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
+- source_id: PAPER-ANA-007
+  title: Light-Cone Superspace and the Ultraviolet Finiteness of the N=4 Model / Conformal
+    Invariance in Four Dimensions
+  authors: "Stanley Mandelstam, Lars Brink, John H. Schwarz, Jo\xEBl Scherk"
+  year: 1983/1977
+  journal: Nucl. Phys. B
+  doi: 10.1016/0550-3213(83)90179-7
+  evidence_class: PERTURBATIVE_ALL_ORDERS_RESULT
+  local_file: PAPER-ANA-007/record.md
+  sha256: 189efe406291432f6f9d0ec0aa1e0f3786be88a66a12232fb99c18d88f55cea9
+  source_access: PRIMARY_FULL_TEXT
+  storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
+- source_id: PAPER-ANA-008
+  title: Broken Symmetries and the Masses of Gauge Bosons / Phase Diagrams of Lattice
+    Gauge Theories with Higgs Fields
+  authors: Peter W. Higgs, T. W. B. Kibble, Eduardo Fradkin, Stephen H. Shenker
+  year: 1964/1979
+  journal: Phys. Rev. Lett. / Phys. Rev. D
+  doi: 10.1103/PhysRevLett.13.508
+  evidence_class: HIGGSED_QUANTUM_GAUGE_THEORY
+  local_file: PAPER-ANA-008/record.md
+  sha256: 60cc581ce632fc21a7e60c9dc7306b0a929505bee5f2b93e943f692b57d1983d
+  source_access: PRIMARY_FULL_TEXT
+  storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
+- source_id: PAPER-ANA-009
+  title: "Sur la th\xE9orie du positron / Die Eigengleichungen in der Relativistischen\
+    \ Quantentheorie"
+  authors: Alexandru Proca, Ernst C. G. Stueckelberg
+  year: 1936/1938
+  journal: J. Phys. Radium / Helv. Phys. Acta
+  doi: 10.1051/jphysrad:0193600708034700
+  evidence_class: CLASSICAL_MASS_MECHANISM
+  local_file: PAPER-ANA-009/record.md
+  sha256: 2392ac870c7a0bbb8c57e6c915466b18e4f9d9b61ce95ced59db62d8cb23ff2e
+  source_access: PRIMARY_FULL_TEXT
+  storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
+- source_id: PAPER-ANA-010
+  title: Anti-de Sitter Space, Thermal Phase Transition, and Confinement in Gauge
+    Theories / Hard Scattering and Gauge/String Duality
+  authors: Edward Witten, Joseph Polchinski, Matthew J. Strassler
+  year: 1998/2002
+  journal: Adv. Theor. Math. Phys. / Phys. Rev. Lett.
+  doi: 10.4310/ATMP.1998.v2.n3.a3
+  evidence_class: HOLOGRAPHIC_CONJECTURAL_ANALOGUE
+  local_file: PAPER-ANA-010/record.md
+  sha256: 3be2163806c96386d6b3e3186f39b10f337758895da034aad15ba18a6b070c45
+  source_access: PRIMARY_FULL_TEXT
+  storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS

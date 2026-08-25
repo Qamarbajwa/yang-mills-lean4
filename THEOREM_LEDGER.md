@@ -1001,3 +1001,363 @@
 - **SOURCE_LOCATOR:** *Probability and Mathematical Physics* 7 (2026), pp. 339–381, Theorems 1.1–1.3, DOI 10.2140/pmp.2026.7.339; preprint *arXiv:2401.10507*.
 - **REPRODUCTION_STATUS:** `RECONSTRUCTED`
 - **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
+
+---
+
+### THM-YM-0031: Driver–Sengupta–Lévy Rigorous Construction of 2D Yang–Mills
+- **THEOREM_ID:** `THM-YM-0031`
+- **CANONICAL_NAME:** Driver–Sengupta–Lévy Rigorous Construction of 2D Yang–Mills
+- **PAPER_ID:** `PAPER-ANA-001`
+- **SOURCE_ID:** `PAPER-ANA-001`
+- **DOMAIN:** `analogue / solved / modified gauge theories (quantum/lattice/classical/constructive)`
+- **AUTHORS:** Bruce K. Driver, Ambar N. Sengupta, Thierry Lévy
+- **YEAR:** 1989/1993/2010
+- **DIMENSION:** 2D
+- **GAUGE_GROUP:** Compact Lie group G
+- **REGULARIZATION:** `Continuous Brownian motion / heat kernel on G`
+- **VOLUME:** `Compact 2D surface Sigma (cylinder, torus, Riemann surfaces)`
+- **COUPLING_REGIME:** `All couplings g > 0`
+- **LIMITS:** Continuum loop space limit rigorously constructed
+- **ASSUMPTIONS:** Riemannian structure on 2D surface Sigma, compact Lie group G.
+- **EXACT_RESULT:** Rigorous mathematical construction of a gauge-invariant probability measure on the space of connections modulo gauge transformations on compact 2D surfaces, yielding exact area-dependent Wilson loop expectation values and satisfying Osterwalder-Schrader reflection positivity on cylinders and tori.
+- **EVIDENCE_CLASS:** `RIGOROUS_MATHEMATICAL_CONSTRUCTION`
+- **CLASSIFICATION_JUSTIFICATION:** Definitive mathematical construction in probability and geometric analysis establishing rigorous 2D Yang-Mills measures (Driver 1989, Sengupta 1993, Lévy 2010).
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
+- **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
+- **WHAT_IT_PROVES:** Complete rigorous non-perturbative existence and Osterwalder-Schrader satisfaction of pure Yang-Mills in two spacetime dimensions.
+- **WHAT_IT_DOES_NOT_PROVE:** Construction of 4D Yang-Mills, existence of local propagating transverse gluons, or 4D non-linear UV renormalization.
+- **TRANSFER_BARRIER:** In 2D spacetime, the field strength F_12 is a scalar-valued function with zero propagating transverse gluonic degrees of freedom (2 - 2 = 0), making the theory topological/integrable; 4D YM contains 2 local propagating polarizations with non-linear UV singularities.
+- **TRANSFERABLE_COMPONENT:** Gauge-invariant probability measures on loop spaces, holonomy process construction, reflection positivity on cylinders/tori, exact Wilson loop area law calculations.
+- **NONTRANSFERABLE_COMPONENT:** Complete absence of local propagating transverse gluons, reduction of gauge field dynamics to scalar area dependence, absence of non-trivial 4D local interactions.
+- **BRIDGE_VARIABLES:** `holonomy process H_gamma, surface area A, heat kernel p_t(g), dimension d = 2`
+- **FAILURE_LOCALITY:** `wrong dimension/theory (2D topological/heat-kernel gauge theory)`
+- **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184), [`YM-REQ-011`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L192)
+- **RELEVANCE_TO_CLAY:** `ANALOGUE (Rigorous 2D construction analogue)`
+- **SOURCE_LOCATOR:** J. Funct. Anal. 87 (1989), 272–306; Ann. Phys. 221 (1993), 17–52; Mem. AMS 208 (2010), no. 972
+- **REPRODUCTION_STATUS:** `RECONSTRUCTED`
+- **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
+
+
+---
+
+### THM-YM-0032: Gross–Witten–Wadia Large-N 2D Lattice Phase Transition
+- **THEOREM_ID:** `THM-YM-0032`
+- **CANONICAL_NAME:** Gross–Witten–Wadia Large-N 2D Lattice Phase Transition
+- **PAPER_ID:** `PAPER-ANA-002`
+- **SOURCE_ID:** `PAPER-ANA-002`
+- **DOMAIN:** `analogue / solved / modified gauge theories (quantum/lattice/classical/constructive)`
+- **AUTHORS:** David J. Gross, Edward Witten, Spenta R. Wadia
+- **YEAR:** 1980
+- **DIMENSION:** 2D
+- **GAUGE_GROUP:** U(N) in the large-N limit (N -> infinity)
+- **REGULARIZATION:** `Discrete single-plaquette lattice`
+- **VOLUME:** `Discrete single-plaquette / infinite lattice`
+- **COUPLING_REGIME:** `'t Hooft coupling lambda = g^2 N across critical point lambda_c = 2`
+- **LIMITS:** Large-N limit N -> infinity with lambda fixed
+- **ASSUMPTIONS:** Planar large-N saddle-point approximation of single-plaquette unitary matrix integral.
+- **EXACT_RESULT:** Exact analytic solution of the large-N 2D unitary lattice gauge model, demonstrating that the free energy has a continuous 2nd derivative and discontinuous 3rd derivative at lambda_c = 2, where the eigenvalue density on the unit circle undergoes a gap-opening transition.
+- **EVIDENCE_CLASS:** `EXACTLY_SOLVABLE_PHYSICS_MODEL`
+- **CLASSIFICATION_JUSTIFICATION:** Exact physics solution of a large-N matrix model via steepest-descent methods (Gross & Witten 1980, Wadia 1980).
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
+- **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
+- **WHAT_IT_PROVES:** Exact existence of a third-order large-N phase transition separating strong-coupling and weak-coupling regimes in 2D lattice gauge theory.
+- **WHAT_IT_DOES_NOT_PROVE:** Finite-N non-perturbative behavior, 4D continuum scaling limit, or rigorous continuum quantum field theory construction.
+- **TRANSFER_BARRIER:** Exact saddle-point solution requires N -> infinity on a discrete 2D single-plaquette lattice, suppressing 1/N non-planar fluctuations, higher-dimensional loop entanglement, and the non-trivial 4D continuum scaling trajectory.
+- **TRANSFERABLE_COMPONENT:** Identification of large-N master fields, eigenvalue density techniques, and the concept of third-order phase transitions separating weak and strong coupling regimes.
+- **NONTRANSFERABLE_COMPONENT:** Planar single-plaquette matrix factorization, suppression of multi-plaquette correlations, and reliance on N -> infinity without 4D continuum renormalization.
+- **BRIDGE_VARIABLES:** `'t Hooft coupling lambda = g^2 N, eigenvalue density rho(theta), large-N limit N -> inf`
+- **FAILURE_LOCALITY:** `wrong dimension/theory (Large-N 2D discrete lattice saddle point)`
+- **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184), [`YM-REQ-011`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L192)
+- **RELEVANCE_TO_CLAY:** `ANALOGUE (Large-N matrix model analogue)`
+- **SOURCE_LOCATOR:** Phys. Rev. D 21 (1980), 446–453; Phys. Lett. B 93 (1980), 403–410
+- **REPRODUCTION_STATUS:** `RECONSTRUCTED`
+- **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
+
+
+---
+
+### THM-YM-0033: Schwinger Model 2D Dynamical Mass Generation and Bosonization
+- **THEOREM_ID:** `THM-YM-0033`
+- **CANONICAL_NAME:** Schwinger Model 2D Dynamical Mass Generation and Bosonization
+- **PAPER_ID:** `PAPER-ANA-003`
+- **SOURCE_ID:** `PAPER-ANA-003`
+- **DOMAIN:** `analogue / solved / modified gauge theories (quantum/lattice/classical/constructive)`
+- **AUTHORS:** Julian Schwinger, J. H. Lowenstein, J. A. Swieca
+- **YEAR:** 1962/1971
+- **DIMENSION:** 2D (1+1D)
+- **GAUGE_GROUP:** Abelian U(1)
+- **REGULARIZATION:** `Point-splitting / dimensional regularization / Pauli-Villars`
+- **VOLUME:** `Minkowski / Euclidean spacetime R^2`
+- **COUPLING_REGIME:** `All couplings e > 0`
+- **LIMITS:** Exact continuum solution
+- **ASSUMPTIONS:** Massless Dirac fermions coupled to Abelian U(1) gauge field in 1+1 dimensions.
+- **EXACT_RESULT:** Exact dynamical mass generation for the gauge boson m_gamma^2 = e^2 / pi via 2D chiral anomaly and vacuum polarization, complete screening of fractional charges, and exact equivalence to a free massive pseudo-scalar field via 1+1D bosonization.
+- **EVIDENCE_CLASS:** `EXACTLY_SOLVABLE_PHYSICS_MODEL`
+- **CLASSIFICATION_JUSTIFICATION:** Exact physics solution (Schwinger 1962) with rigorous mathematical Wightman reconstruction (Lowenstein & Swieca 1971).
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
+- **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
+- **WHAT_IT_PROVES:** Gauge invariance is fully compatible with dynamical mass generation when vacuum polarization generates an infrared pole.
+- **WHAT_IT_DOES_NOT_PROVE:** Dynamical mass gap in 4D pure non-Abelian Yang-Mills in the absence of fundamental fermions.
+- **TRANSFER_BARRIER:** Mechanism is strictly dependent on 2D spacetime (where [e] has mass dimension 1), Abelian U(1) gauge symmetry, fundamental dynamical Dirac fermions, and exact 1+1D bosonization. Pure 4D YM has no fundamental fermions, d=4, non-Abelian self-interactions, and no exact 4D bosonization.
+- **TRANSFERABLE_COMPONENT:** Demonstration that local gauge invariance does not forbid a non-zero gauge-boson mass when vacuum polarization develops an infrared pole (Schwinger mechanism).
+- **NONTRANSFERABLE_COMPONENT:** Exact 1+1D fermion-boson duality (bosonization), linear 2D Coulomb potential V(r) ~ |r|, and reliance on fundamental dynamical Dirac fermions.
+- **BRIDGE_VARIABLES:** `fermion chiral anomaly, vacuum polarization pole, photon mass m_gamma = e/sqrt(pi), dim d = 2`
+- **FAILURE_LOCALITY:** `wrong dimension/theory (2D Abelian QED with fundamental fermions)`
+- **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184), [`YM-REQ-011`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L192)
+- **RELEVANCE_TO_CLAY:** `ANALOGUE (Dynamical mass generation via anomaly analogue)`
+- **SOURCE_LOCATOR:** Phys. Rev. 128 (1962), 2425–2429; Ann. Phys. 68 (1971), 172–195
+- **REPRODUCTION_STATUS:** `RECONSTRUCTED`
+- **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
+
+
+---
+
+### THM-YM-0034: Polyakov 3D Monopole Semiclassical Confinement Mechanism
+- **THEOREM_ID:** `THM-YM-0034`
+- **CANONICAL_NAME:** Polyakov 3D Monopole Semiclassical Confinement Mechanism
+- **PAPER_ID:** `PAPER-ANA-004`
+- **SOURCE_ID:** `PAPER-ANA-004`
+- **DOMAIN:** `analogue / solved / modified gauge theories (quantum/lattice/classical/constructive)`
+- **AUTHORS:** Alexander M. Polyakov
+- **YEAR:** 1977
+- **DIMENSION:** 3D
+- **GAUGE_GROUP:** SU(2) broken to U(1) via adjoint Higgs / Compact U(1)
+- **REGULARIZATION:** `Semiclassical instanton saddle-point / lattice cutoff`
+- **VOLUME:** `Infinite volume R^3`
+- **COUPLING_REGIME:** `Weak coupling / semiclassical regime v = <Phi> >> g^2`
+- **LIMITS:** Dilute monopole gas approximation
+- **ASSUMPTIONS:** Adjoint Higgs scalar condensation breaking SU(2) to U(1), dilute non-interacting monopole gas.
+- **EXACT_RESULT:** Semiclassical derivation demonstrating that finite-action magnetic monopoles in 3D Georgi-Glashow model form a plasma inducing magnetic Debye screening with mass m_D ~ exp(-S_inst / 2) and an area law for Wilson loops with non-zero string tension sigma > 0 at all couplings.
+- **EVIDENCE_CLASS:** `SEMICLASSICAL_MECHANISM`
+- **CLASSIFICATION_JUSTIFICATION:** Semiclassical physical derivation and instanton gas mechanism (Polyakov 1977).
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
+- **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
+- **WHAT_IT_PROVES:** Semiclassical generation of a mass gap and linear confinement from topological magnetic monopole condensation in 3D.
+- **WHAT_IT_DOES_NOT_PROVE:** Rigorous constructive proof of 4D pure Yang-Mills mass gap in the absence of an adjoint Higgs field.
+- **TRANSFER_BARRIER:** Relies on an adjoint Higgs field providing a classical symmetry-breaking scale v = <Phi> >> g^2 with point-like topological 't Hooft-Polyakov monopoles in 3D. In pure 4D YM, there is no scalar Higgs field, monopoles are 1D worldlines rather than 3D instanton points, and strong IR coupling destroys the dilute semiclassical approximation.
+- **TRANSFERABLE_COMPONENT:** Concept of magnetic charge disordering electric Wilson loops, generating dual Debye screening and linear confinement.
+- **NONTRANSFERABLE_COMPONENT:** Adjoint Higgs scalar condensation, pointlike 3D monopole instantons, and weak-coupling semiclassical expansion v >> g^2.
+- **BRIDGE_VARIABLES:** `monopole action S_inst, magnetic Debye mass m_D, adjoint VEV v, dimension d = 3`
+- **FAILURE_LOCALITY:** `wrong dimension/theory (3D broken Georgi-Glashow semiclassical gas)`
+- **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184), [`YM-REQ-011`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L192)
+- **RELEVANCE_TO_CLAY:** `ANALOGUE (3D monopole confinement analogue)`
+- **SOURCE_LOCATOR:** Nucl. Phys. B 120 (1977), 429–458
+- **REPRODUCTION_STATUS:** `RECONSTRUCTED`
+- **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
+
+
+---
+
+### THM-YM-0035: Seiberg–Witten Exact Low-Energy Effective Action and Monopole Condensation
+- **THEOREM_ID:** `THM-YM-0035`
+- **CANONICAL_NAME:** Seiberg–Witten Exact Low-Energy Effective Action and Monopole Condensation
+- **PAPER_ID:** `PAPER-ANA-005`
+- **SOURCE_ID:** `PAPER-ANA-005`
+- **DOMAIN:** `analogue / solved / modified gauge theories (quantum/lattice/classical/constructive)`
+- **AUTHORS:** Nathan Seiberg, Edward Witten
+- **YEAR:** 1994
+- **DIMENSION:** 4D
+- **GAUGE_GROUP:** SU(2) with N=2 supersymmetry
+- **REGULARIZATION:** `Wilsonian effective action / Pauli-Villars / dimensional reduction`
+- **VOLUME:** `Continuum 4D spacetime R^4`
+- **COUPLING_REGIME:** `Exact across all couplings on Coulomb branch`
+- **LIMITS:** Low-energy effective field theory limit
+- **ASSUMPTIONS:** N=2 extended supersymmetry, holomorphic prepotential F(a), SL(2,Z) modular invariance.
+- **EXACT_RESULT:** Exact non-perturbative determination of the low-energy Wilsonian effective action for 4D N=2 SU(2) SYM via elliptic curves, identification of massless monopoles/dyons at discriminant singularities, and proof of dual Meissner confinement with a mass gap upon adding an N=1 mass perturbation W = m Tr(Phi^2).
+- **EVIDENCE_CLASS:** `EXACT_SUPERSYMMETRIC_PHYSICS_RESULT`
+- **CLASSIFICATION_JUSTIFICATION:** Exact non-perturbative physics result in extended supersymmetric gauge theory (Seiberg & Witten 1994).
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
+- **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
+- **WHAT_IT_PROVES:** Physical demonstration of the dual superconductor confinement mechanism and mass gap in 4D gauge theory.
+- **WHAT_IT_DOES_NOT_PROVE:** Rigorous constructive mathematical proof of pure 4D non-supersymmetric Yang-Mills existence or mass gap.
+- **TRANSFER_BARRIER:** Non-perturbative control rests entirely on N=2 supersymmetry, holomorphic prepotential F(a), complex scalar moduli space, BPS mass formulas, and electromagnetic duality SL(2,Z). Pure 4D YM has zero supersymmetry, no scalar fields, no moduli space, and no protected holomorphic quantities.
+- **TRANSFERABLE_COMPONENT:** Physical realization of the Mandelstam-'t Hooft dual superconductor mechanism: magnetic monopoles becoming massless and condensing to confine electric charge.
+- **NONTRANSFERABLE_COMPONENT:** N=2 supersymmetry, holomorphic prepotential, Coulomb branch moduli space, and soft SUSY-breaking mass deformation.
+- **BRIDGE_VARIABLES:** `holomorphic prepotential F(a), Seiberg-Witten elliptic curve y^2 = (x^2 - u)^2 - Lambda^4, monopole VEV <M>`
+- **FAILURE_LOCALITY:** `wrong dimension/theory (4D N=2 supersymmetric gauge theory with scalar moduli)`
+- **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184), [`YM-REQ-011`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L192)
+- **RELEVANCE_TO_CLAY:** `ANALOGUE (Supersymmetric dual superconductor analogue)`
+- **SOURCE_LOCATOR:** Nucl. Phys. B 426 (1994), 19–52; Nucl. Phys. B 431 (1994), 484–550
+- **REPRODUCTION_STATUS:** `RECONSTRUCTED`
+- **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
+
+
+---
+
+### THM-YM-0036: Novikov–Shifman–Vainshtein–Zakharov and Witten N=1 SYM Invariants
+- **THEOREM_ID:** `THM-YM-0036`
+- **CANONICAL_NAME:** Novikov–Shifman–Vainshtein–Zakharov and Witten N=1 SYM Invariants
+- **PAPER_ID:** `PAPER-ANA-006`
+- **SOURCE_ID:** `PAPER-ANA-006`
+- **DOMAIN:** `analogue / solved / modified gauge theories (quantum/lattice/classical/constructive)`
+- **AUTHORS:** V. A. Novikov, M. A. Shifman, A. I. Vainshtein, V. I. Zakharov, Edward Witten
+- **YEAR:** 1983/1982
+- **DIMENSION:** 4D
+- **GAUGE_GROUP:** SU(N) with N=1 supersymmetry
+- **REGULARIZATION:** `Supersymmetric dimensional reduction / Pauli-Villars`
+- **VOLUME:** `Continuum 4D spacetime R^4 / compact torus`
+- **COUPLING_REGIME:** `All couplings`
+- **LIMITS:** Exact non-perturbative quantum relations
+- **ASSUMPTIONS:** N=1 supersymmetry, adjoint Majorana gluinos lambda, instanton holomorphy.
+- **EXACT_RESULT:** Exact all-orders NSVZ beta function beta(g) = -g^3 / (16 pi^2) * (3N) / (1 - N g^2 / (8 pi^2)), calculation of the non-vanishing Witten index I_W = N, and non-perturbative proof of gluino condensation <lambda lambda> = Lambda^3 exp(2 pi i k / N) spontaneously breaking discrete Z_2N chiral symmetry to Z_2.
+- **EVIDENCE_CLASS:** `EXACT_SUPERSYMMETRIC_PHYSICS_RESULT`
+- **CLASSIFICATION_JUSTIFICATION:** Exact physics results and non-perturbative topological index theorems in N=1 supersymmetric gauge theory (NSVZ 1983, Witten 1982).
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
+- **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
+- **WHAT_IT_PROVES:** Exact dimensional transmutation, vacuum degeneracy, and non-perturbative fermion condensation in 4D N=1 SYM.
+- **WHAT_IT_DOES_NOT_PROVE:** Rigorous constructive mathematical proof of pure 4D non-supersymmetric Yang-Mills.
+- **TRANSFER_BARRIER:** Requires N=1 supersymmetry, adjoint Majorana gluinos lambda, and anomalous U(1)_R axial symmetry. Pure 4D YM contains no fermions, no gluino condensate, no R-symmetry, and lacks supersymmetric instanton clustering theorems.
+- **TRANSFERABLE_COMPONENT:** Dynamical generation of a mass scale via dimensional transmutation and non-perturbative vacuum condensates.
+- **NONTRANSFERABLE_COMPONENT:** Adjoint gluino fields, N=1 supersymmetry algebra, non-vanishing Witten index, and exact NSVZ beta function.
+- **BRIDGE_VARIABLES:** `gluino condensate <lambda lambda>, Witten index I_W = N, NSVZ beta function`
+- **FAILURE_LOCALITY:** `wrong dimension/theory (4D N=1 supersymmetric gauge theory with adjoint fermions)`
+- **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184), [`YM-REQ-011`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L192)
+- **RELEVANCE_TO_CLAY:** `ANALOGUE (N=1 supersymmetric condensate analogue)`
+- **SOURCE_LOCATOR:** Nucl. Phys. B 229 (1983), 381–393; Nucl. Phys. B 202 (1982), 253–316
+- **REPRODUCTION_STATUS:** `RECONSTRUCTED`
+- **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
+
+
+---
+
+### THM-YM-0037: Mandelstam–Brink–Schwarz–Scherk N=4 SYM All-Orders Finiteness and S-Duality
+- **THEOREM_ID:** `THM-YM-0037`
+- **CANONICAL_NAME:** Mandelstam–Brink–Schwarz–Scherk N=4 SYM All-Orders Finiteness and S-Duality
+- **PAPER_ID:** `PAPER-ANA-007`
+- **SOURCE_ID:** `PAPER-ANA-007`
+- **DOMAIN:** `analogue / solved / modified gauge theories (quantum/lattice/classical/constructive)`
+- **AUTHORS:** Stanley Mandelstam, Lars Brink, John H. Schwarz, Joël Scherk
+- **YEAR:** 1983/1977
+- **DIMENSION:** 4D
+- **GAUGE_GROUP:** SU(N) with maximal N=4 supersymmetry
+- **REGULARIZATION:** `Light-cone superspace / dimensional reduction`
+- **VOLUME:** `Continuum 4D spacetime R^4`
+- **COUPLING_REGIME:** `All couplings g > 0`
+- **LIMITS:** All orders in perturbation theory
+- **ASSUMPTIONS:** Maximal N=4 supersymmetry (6 adjoint scalars, 4 adjoint Weyl fermions).
+- **EXACT_RESULT:** All-orders perturbative proof that the beta function vanishes identically beta(g) = 0, establishing exact quantum superconformal invariance PSU(2,2|4) and Montonen-Olive S-duality invariance under g -> 1/g.
+- **EVIDENCE_CLASS:** `PERTURBATIVE_ALL_ORDERS_RESULT`
+- **CLASSIFICATION_JUSTIFICATION:** All-orders perturbative theorem in light-cone superspace (Mandelstam 1983) and classical/exact supersymmetric duality (Brink et al. 1977).
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
+- **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
+- **WHAT_IT_PROVES:** Complete ultraviolet finiteness and exact conformal invariance of 4D N=4 Super Yang-Mills.
+- **WHAT_IT_DOES_NOT_PROVE:** Mass gap generation (N=4 SYM is strictly massless with continuous spectrum Delta = 0).
+- **TRANSFER_BARRIER:** N=4 SYM is strictly scale-invariant and massless (Delta = 0) with continuous spectrum, 6 adjoint scalars, and 4 adjoint fermions. Pure 4D YM is non-supersymmetric, asymptotically free with non-zero beta function beta(g) < 0, and must generate a mass scale dynamically via dimensional transmutation.
+- **TRANSFERABLE_COMPONENT:** Perturbative light-cone superspace techniques, non-renormalization theorems, and S-duality concepts relating strong and weak coupling.
+- **NONTRANSFERABLE_COMPONENT:** Vanishing beta function (beta(g) = 0), absence of mass gap (Delta = 0), superconformal symmetry PSU(2,2|4), and 6 adjoint scalars + 4 adjoint fermions.
+- **BRIDGE_VARIABLES:** `beta function beta(g) = 0, S-duality parameter tau = theta/(2pi) + 4pi i / g^2, superconformal group PSU(2,2|4)`
+- **FAILURE_LOCALITY:** `wrong dimension/theory (4D N=4 superconformal gauge theory with Delta = 0)`
+- **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184), [`YM-REQ-011`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L192)
+- **RELEVANCE_TO_CLAY:** `ANALOGUE (Maximal SUSY finiteness analogue with Delta = 0)`
+- **SOURCE_LOCATOR:** Nucl. Phys. B 213 (1983), 149–168; Nucl. Phys. B 121 (1977), 77–92
+- **REPRODUCTION_STATUS:** `RECONSTRUCTED`
+- **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
+
+
+---
+
+### THM-YM-0038: Fradkin–Shenker Analyticity and Higgs Mechanism in Gauge Theories
+- **THEOREM_ID:** `THM-YM-0038`
+- **CANONICAL_NAME:** Fradkin–Shenker Analyticity and Higgs Mechanism in Gauge Theories
+- **PAPER_ID:** `PAPER-ANA-008`
+- **SOURCE_ID:** `PAPER-ANA-008`
+- **DOMAIN:** `analogue / solved / modified gauge theories (quantum/lattice/classical/constructive)`
+- **AUTHORS:** Peter W. Higgs, T. W. B. Kibble, Eduardo Fradkin, Stephen H. Shenker
+- **YEAR:** 1964/1979
+- **DIMENSION:** 4D (Lattice / Continuum)
+- **GAUGE_GROUP:** Compact Lie group G coupled to fundamental / adjoint scalars
+- **REGULARIZATION:** `Lattice cutoff a > 0`
+- **VOLUME:** `Infinite volume thermodynamic limit`
+- **COUPLING_REGIME:** `All couplings beta, gamma`
+- **LIMITS:** Infinite volume limit on lattice
+- **ASSUMPTIONS:** Lattice gauge theory coupled to fundamental scalar Higgs fields.
+- **EXACT_RESULT:** Rigorous mathematical proof that in lattice gauge theories coupled to fundamental scalar fields, the Higgs regime (large scalar hopping gamma) and confinement regime (small gauge coupling beta) are smoothly connected by an analytic path without a thermodynamic phase transition.
+- **EVIDENCE_CLASS:** `HIGGSED_QUANTUM_GAUGE_THEORY`
+- **CLASSIFICATION_JUSTIFICATION:** Rigorous mathematical theorem in lattice statistical mechanics (Fradkin & Shenker 1979) and classical Higgs mechanism (Higgs 1964).
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
+- **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
+- **WHAT_IT_PROVES:** Rigorous mathematical proof of analyticity and absence of an invariant local order parameter separating Higgs and confinement phases with fundamental matter.
+- **WHAT_IT_DOES_NOT_PROVE:** Dynamical mass gap in pure Yang-Mills without fundamental scalar Higgs fields.
+- **TRANSFER_BARRIER:** Mass scale is generated by an explicit scalar potential parameter (-mu^2 Phi^dagger Phi + lambda (Phi^dagger Phi)^2) and vacuum expectation value <Phi> != 0. Pure 4D YM has no scalar fields, no fundamental Higgs condensate, and must generate a mass gap without any tree-level scalar mass parameter.
+- **TRANSFERABLE_COMPONENT:** Rigorous non-perturbative lattice theorem (Fradkin-Shenker 1979) proving that gauge theories with fundamental matter exhibit a continuous crossover between Higgs and confinement phases without a local order parameter.
+- **NONTRANSFERABLE_COMPONENT:** Presence of fundamental scalar Higgs fields, explicit tree-level scalar potential parameters, and non-zero scalar vacuum expectation values.
+- **BRIDGE_VARIABLES:** `scalar hopping parameter gamma, gauge coupling beta, scalar VEV v = <Phi>`
+- **FAILURE_LOCALITY:** `wrong dimension/theory (Lattice gauge-Higgs theory with fundamental scalars)`
+- **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184), [`YM-REQ-011`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L192)
+- **RELEVANCE_TO_CLAY:** `ANALOGUE (Lattice gauge-Higgs analyticity analogue)`
+- **SOURCE_LOCATOR:** Phys. Rev. D 19 (1979), 3682–3697; Phys. Rev. Lett. 13 (1964), 508–509
+- **REPRODUCTION_STATUS:** `RECONSTRUCTED`
+- **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
+
+
+---
+
+### THM-YM-0039: Proca–Stueckelberg Explicit Classical Vector Mass Formulation
+- **THEOREM_ID:** `THM-YM-0039`
+- **CANONICAL_NAME:** Proca–Stueckelberg Explicit Classical Vector Mass Formulation
+- **PAPER_ID:** `PAPER-ANA-009`
+- **SOURCE_ID:** `PAPER-ANA-009`
+- **DOMAIN:** `analogue / solved / modified gauge theories (quantum/lattice/classical/constructive)`
+- **AUTHORS:** Alexandru Proca, Ernst C. G. Stueckelberg
+- **YEAR:** 1936/1938
+- **DIMENSION:** 4D
+- **GAUGE_GROUP:** U(1) / Non-gauge explicit massive vector
+- **REGULARIZATION:** `Classical relativistic Lagrangian / perturbative canonical quantization`
+- **VOLUME:** `Minkowski spacetime R^4`
+- **COUPLING_REGIME:** `Tree level`
+- **LIMITS:** Classical field equations
+- **ASSUMPTIONS:** Explicit quadratic mass term (1/2) m^2 A_mu A^mu inserted into Lagrangian.
+- **EXACT_RESULT:** Classical formulation of relativistic spin-1 field equations with 3 physical polarizations obeying (partial^2 + m^2) A_mu = 0 and partial_mu A^mu = 0, and Stueckelberg gauge restoration via auxiliary scalar field B(x) with shift symmetry.
+- **EVIDENCE_CLASS:** `CLASSICAL_MASS_MECHANISM`
+- **CLASSIFICATION_JUSTIFICATION:** Classical relativistic field theory formulation (Proca 1936, Stueckelberg 1938).
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
+- **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
+- **WHAT_IT_PROVES:** Relativistic consistency of massive spin-1 vector fields with 3 propagating polarizations.
+- **WHAT_IT_DOES_NOT_PROVE:** Non-perturbative dynamical mass generation in gauge theories, or non-Abelian quantum consistency without Higgs.
+- **TRANSFER_BARRIER:** The mass term is inserted by hand as an explicit classical parameter in the Lagrangian, violating non-Abelian local gauge invariance and destroying non-Abelian perturbative renormalizability and unitarity in the absence of a Higgs mechanism. It does not describe a dynamically generated spectral gap in an unbroken non-Abelian gauge theory.
+- **TRANSFERABLE_COMPONENT:** Classical relativistic wave equations for massive spin-1 vector bosons and propagation of 3 physical polarization states.
+- **NONTRANSFERABLE_COMPONENT:** Explicit tree-level mass parameter in the bare Lagrangian, loss of non-Abelian gauge symmetry, and non-renormalizability in non-Abelian Proca theory.
+- **BRIDGE_VARIABLES:** `bare vector mass m, longitudinal polarization epsilon_L, Stueckelberg scalar B`
+- **FAILURE_LOCALITY:** `wrong dimension/theory (Classical explicit mass insertion)`
+- **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184), [`YM-REQ-011`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L192)
+- **RELEVANCE_TO_CLAY:** `ANALOGUE (Classical mass insertion analogue)`
+- **SOURCE_LOCATOR:** J. Phys. Radium 7 (1936), 347–353; Helv. Phys. Acta 11 (1938), 225–244
+- **REPRODUCTION_STATUS:** `RECONSTRUCTED`
+- **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
+
+
+---
+
+### THM-YM-0040: Witten–Polchinski–Strassler Holographic Confinement and Glueball Spectrum
+- **THEOREM_ID:** `THM-YM-0040`
+- **CANONICAL_NAME:** Witten–Polchinski–Strassler Holographic Confinement and Glueball Spectrum
+- **PAPER_ID:** `PAPER-ANA-010`
+- **SOURCE_ID:** `PAPER-ANA-010`
+- **DOMAIN:** `analogue / solved / modified gauge theories (quantum/lattice/classical/constructive)`
+- **AUTHORS:** Edward Witten, Joseph Polchinski, Matthew J. Strassler
+- **YEAR:** 1998/2002
+- **DIMENSION:** Boundary 4D / Bulk 5D-10D
+- **GAUGE_GROUP:** SU(N) in large-N 't Hooft limit (N -> inf, lambda -> inf)
+- **REGULARIZATION:** `AdS warp geometry with IR cut-off / thermal compactification`
+- **VOLUME:** `Boundary 4D Minkowski / Bulk warped curved spacetime`
+- **COUPLING_REGIME:** `Large 't Hooft coupling lambda = g^2 N >> 1 and large N`
+- **LIMITS:** Classical supergravity limit on curved backgrounds
+- **ASSUMPTIONS:** AdS/CFT correspondence conjecture, classical supergravity approximation, large-N and large-lambda limit.
+- **EXACT_RESULT:** Holographic derivation that 4D gauge theories dual to supergravity on warped geometries with an infrared cap-off exhibit a discrete, normalizable Kaluza-Klein spectrum with a strictly positive glueball mass gap Delta > 0, linear Wilson area law, and a thermal confinement/deconfinement Hawking-Page phase transition.
+- **EVIDENCE_CLASS:** `HOLOGRAPHIC_CONJECTURAL_ANALOGUE`
+- **CLASSIFICATION_JUSTIFICATION:** Conjectural gauge-gravity holographic model based on classical supergravity on curved warped backgrounds (Witten 1998, Polchinski & Strassler 2001).
+- **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
+- **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
+- **WHAT_IT_PROVES:** Geometrical realization of mass gap and confinement in boundary gauge theories dual to capped gravitational backgrounds.
+- **WHAT_IT_DOES_NOT_PROVE:** Rigorous constructive mathematical proof of 4D pure Yang-Mills existence or mass gap at finite N and weak coupling.
+- **TRANSFER_BARRIER:** Relies on an unproved gauge-gravity holographic duality conjecture, large-N limit (N -> infinity), large 't Hooft coupling (lambda = g^2 N >> 1), higher-dimensional curved spacetime geometry, and classical supergravity approximations that are uncontrolled in the UV weak-coupling regime (g^2 -> 0) and finite-N regime of 4D pure Yang-Mills.
+- **TRANSFERABLE_COMPONENT:** Geometrical picture of confinement via warp factors capping off in the infrared, translating mass gaps to Sturm-Liouville eigenvalue problems.
+- **NONTRANSFERABLE_COMPONENT:** Higher-dimensional curved spacetime, classical supergravity approximation, large-N planar limit, and large 't Hooft coupling lambda >> 1.
+- **BRIDGE_VARIABLES:** `warp factor A(z), IR geometric cutoff z_0 = 1/Lambda_QCD, 't Hooft coupling lambda = g^2 N`
+- **FAILURE_LOCALITY:** `wrong dimension/theory (Holographic large-N supergravity dual)`
+- **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184), [`YM-REQ-011`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L192)
+- **RELEVANCE_TO_CLAY:** `ANALOGUE (Holographic geometric confinement analogue)`
+- **SOURCE_LOCATOR:** Adv. Theor. Math. Phys. 2 (1998), 505–532; Phys. Rev. Lett. 88 (2002), 031601
+- **REPRODUCTION_STATUS:** `RECONSTRUCTED`
+- **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
+
