@@ -1,0 +1,10 @@
+{
+  "timestamp_utc": "2026-08-25T20:23:55.460743+00:00",
+  "git_sha": "ef51b69350c8b78ad81799404fb32967266d3e16",
+  "git_branch": "master",
+  "working_tree_status": "M CURRENT_SCIENTIFIC_STATE.md\n M NEXT_ACTION.md\n M TASK_GRAPH.md\n M governance/CONTRACT_OWNERSHIP_LEDGER.yaml\n?? evidence/test_runs/verify_20260825T202346Z.json\n?? evidence/test_runs/verify_20260825T202346Z.log\n?? verification/YM-002D_INDEPENDENT_REVIEW.md\n?? verification/raw/YM-002D_E4_RAW_20260825T202244Z.md",
+  "verification_evidence": "evidence\\test_runs\\verify_20260825T202346Z.json",
+  "verification_log_sha256": "b8571be7aa9caa711d5dd701a0941cf477d3ca55ff2c2fc88de0b8f524289655",
+  "checkpoint_state": "BASELINE_SMOKE_TESTED",
+  "checkpoint_record_sha256": "d3fb43a0715e868471520ee7d72ebaf3eaaca43cf46aa5cdbbd54a4100291df1"
+}

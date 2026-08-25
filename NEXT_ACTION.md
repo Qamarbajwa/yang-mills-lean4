@@ -1,11 +1,12 @@
 # NEXT ACTION
 
 ## Current action
-`YM-002D — Solved, modified, and analogous theories ledger`
+`YM-002E — Claimed-solution adversarial audit ledger`
 
 ## Scope
-- Reconstruct rigorous theorems on solved or modified gauge models: 2D pure Yang–Mills ($YM_2$), topological/supersymmetric formulations ($\mathcal{N}=1, \mathcal{N}=2$ Seiberg–Witten, $\mathcal{N}=4$ SYM), massive gauge theories (Proca, Higgs), and gauge-gravity / holographic boundary bounds.
-- Systematically extract bridge variables, exact failure localities, and non-generalizability barriers to pure 4D continuum non-supersymmetric Yang–Mills.
+- Conduct systematic adversarial audits of historical and modern claimed mathematical proofs or solutions to the 4D Yang–Mills existence and mass gap problem.
+- Extract exact mathematical failure points, gap locations, unwarranted assumptions, or heuristic substitutions across claimed proofs in the literature.
+- Record failure taxonomy in `literature/CLAIMED_SOLUTION_AUDIT_MATRIX.md` and update `CLAIM_QUARANTINE_REGISTER.md`.
 
 ## Completed actions
 - `YM-000 — Local bootstrap` (DONE)
@@ -19,7 +20,8 @@
 - `YM-002B — Constructive / RG foundations ledger (1980–2000)` (INDEPENDENTLY_VERIFIED)
 - `YM-002BR1 — Constructive pathway-memory semantic + closeout reconciliation` (INDEPENDENTLY_VERIFIED)
 - `YM-002CR2A — Modern-source locator and theorem-wording erratum` (INDEPENDENTLY_VERIFIED)
-- `YM-002D — Solved, modified, and analogous gauge-theory mechanisms ledger` (CANDIDATE IMPLEMENTED / READY FOR E4 AUDIT)
+- `YM-002D — Solved, modified, and analogous gauge-theory mechanisms ledger` (INDEPENDENTLY_VERIFIED)
+
 
 
 
