@@ -15,7 +15,7 @@ flowchart TD
         CCHS_22["THM-YM-0021: Chandra-Chevyrev-Hairer-Shen 2D YM Markov Process (2022)<br/>[Publ. Math. IHES 136]"]
         CS_26A["THM-YM-0022: Chevyrev-Shen 2D YM Invariant Measure (2026)<br/>[CPAM 79]"]
         CCHS_24["THM-YM-0023: Chandra-Chevyrev-Hairer-Shen 3D YMH Flow (2024)<br/>[Inventiones Math 237]"]
-        CS_26B["THM-YM-0024: Chevyrev-Shen 3D YMH Counterterm Uniqueness (2026)<br/>[ARMA 250]"]
+        CS_26B["THM-YM-0024: Chevyrev-Shen 3D YMH Mass Renormalization Uniqueness (2026)<br/>[ARMA 250]"]
 
         OS_75 --> CCHS_22
         CCHS_22 --> CS_26A
@@ -65,7 +65,7 @@ flowchart TD
 1. **`THM-YM-0005 -> THM-YM-0021`**: Chandra, Chevyrev, Hairer, and Shen build upon Euclidean reflection positivity and OS measure formulations to construct the 2D distributional state space and Markov process (*Publ. Math. IHÉS* 136, 1).
 2. **`THM-YM-0021 -> THM-YM-0022`**: Chevyrev and Shen prove that the 2D Yang–Mills measure is the unique invariant measure of the Markov dynamic constructed in CCHS 2022 (*CPAM* 79, 1973).
 3. **`THM-YM-0005 -> THM-YM-0023`**: CCHS use Euclidean regularity structures and gauge orbit geometry to construct the local 3D stochastic flow (*Invent. Math.* 237, 85).
-4. **`THM-YM-0023 -> THM-YM-0024`**: Chevyrev and Shen prove canonical uniqueness of the stochastic renormalization counterterm group for the 3D singular SPDE developed in CCHS 2024 (*ARMA* 250, art. 11).
+4. **`THM-YM-0023 -> THM-YM-0024`**: Chevyrev and Shen prove uniqueness of the mass renormalisation that leads to gauge-covariant solutions of the 3D singular SPDE developed in CCHS 2024 (*ARMA* 250, art. 11).
 5. **`THM-YM-0008 -> THM-YM-0025`**: Kazakov and Zheng derive large-N bootstrap inequalities directly from Wilson's discrete lattice gauge action combined with planar loop equations (*Phys. Rev. D* 107, L051501).
 6. **`THM-YM-0025 -> THM-YM-0026`**: Kazakov and Zheng extend the planar bootstrap to finite-N ($SU(2)$) gauge theories using trace relations and finite-N Gram matrices (*JHEP* 2025, 99).
 7. **`THM-YM-0008 -> THM-YM-0027`**: Shen, Zhu, and Zhu construct the infinite-volume Gibbs measure and prove Poincaré/log-Sobolev inequalities starting from Wilson's lattice action at strong coupling (*CMP* 400, 805).

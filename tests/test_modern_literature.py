@@ -128,3 +128,15 @@ def test_modern_limitation_matrix_all_clay_sufficient_no():
         assert "NO" in r.get("CLAY_SUFFICIENT", ""), f"{tid} cannot be marked CLAY_SUFFICIENT"
         assert len(r.get("BRIDGE_VARIABLES", "")) > 3
         assert len(r.get("FAILURE_LOCALITY", "")) > 3
+
+def test_invariant_cchs_3d_locator_and_chevyrev_shen_mass_renormalization():
+    sources = {s["source_id"]: s for s in load_manifest()}
+    cchs3d = sources["PAPER-MOD-003"]
+    assert cchs3d["pages"] == "541-696", f"CCHS 3D page range must be 541-696, got {cchs3d.get('pages')}"
+    theorems = parse_theorems()
+    thm23 = theorems["THM-YM-0023"]
+    assert "541–696" in thm23["raw"] or "541-696" in thm23["raw"]
+    
+    thm24 = theorems["THM-YM-0024"]
+    assert "mass renormalisation" in thm24["EXACT_RESULT"] or "mass renormalization" in thm24["EXACT_RESULT"]
+    assert "gauge-covariant" in thm24["EXACT_RESULT"]

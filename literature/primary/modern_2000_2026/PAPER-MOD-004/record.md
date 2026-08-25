@@ -10,16 +10,16 @@
 - **DOI:** `10.1007/s00205-025-02163-3`
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
-- **BRIDGE_VARIABLES:** counterterm group G_count, mollifier scale delta, dimension d = 3
-- **FAILURE_LOCALITY:** `wrong dimension/theory (3D stochastic YMH)`
+- **BRIDGE_VARIABLES:** gauge-covariant mass counterterm, mollifier scale delta, dimension d = 3
+- **FAILURE_LOCALITY:** `wrong dimension/theory (3D stochastic YMH mass renormalization)`
 
 ## Executive Summary
-Chevyrev and Shen proved that the gauge-covariant counterterms in singular stochastic 3D Yang-Mills-Higgs equations are uniquely determined by gauge symmetry and geometric regularity, establishing that the 3D stochastic quantization flow is canonically independent of the mollification scheme.
+Chevyrev and Shen proved the uniqueness of the mass renormalisation that leads to gauge-covariant solutions of the stochastic 3D Yang-Mills-Higgs equations, showing that among all possible local polynomial counterterms, only a unique mass renormalization choice yields solutions satisfying gauge covariance.
 
 ## Key Proven Results
-- Proof of uniqueness of gauge-covariant stochastic counterterms specifically for 3D Yang-Mills-Higgs.
-- Scheme-independence of the resulting 3D Markov diffusion generator on gauge orbit space.
+- Rigorous proof of the uniqueness of the gauge-covariant mass renormalisation for stochastic 3D Yang-Mills-Higgs.
+- Establishment of the canonical character of the resulting gauge-covariant stochastic solution on gauge orbit space.
 
 ## Limitations and Unresolved Boundaries
-- Specifically scoped to 3D spacetime; does not prove uniqueness in 4D.
-- Critical 4D stochastic quantization remains blocked by non-renormalizable singular divergences.
+- Specifically scoped to 3D spacetime; does not establish 4D critical stochastic quantization.
+- Proves uniqueness of the mass counterterm leading to gauge covariance; does not constitute an unqualified renormalization scheme-independence for arbitrary non-local regularizations without further analysis.

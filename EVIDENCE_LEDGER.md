@@ -48,8 +48,12 @@
 | EVD-002CR2-01 | YM-002CR2 Finalized Modern Literature Manifest & Records (10 sources, 2000–2026) | E3 | `literature/primary/modern_2000_2026/manifest.yaml` | `manifest.yaml` verified against disk hashes | MACHINE_CHECKED (`manifest.yaml`) | ACCEPTED |
 | EVD-002CR2-02 | YM-002CR2 Finalized Modern Literature Test Suite (8 tests) | E3 | `tests/test_modern_literature.py` | Pass receipt `RUN_VERIFY.ps1` | REPRODUCIBLE_LOCALLY (`RUN_VERIFY.ps1`) | ACCEPTED |
 | EVD-002CR2-03 | YM-002CR2 Modern Limitation Matrix & Dependency Graph | E3 | `literature/MODERN_LIMITATION_MATRIX.md`, `literature/MODERN_DEPENDENCY_GRAPH.md` | Matrix and graph verified | MACHINE_CHECKED | ACCEPTED |
-| EVD-002CR2-04 | YM-002CR2 Fresh Blind E4 Independent Audit (Verifier `24bec7a8-9d29-4b8c-9e2e-3873970873f6`) | E4 | `verification/raw/YM-002CR2_E4_RAW_20260824T223247Z.md` | `28204877af58fe05b72a912a6794a4bacacd8e7483a4e2e223e798d4e4c81e81` (Candidate SHA: `81840652b096d1c9f7ee4435a3adeb67f5e7c677`) | TRANSCRIPT_LOG_CAPTURED | ACCEPTED |
-| EVD-002CR2-05 | YM-002CR2 Derived E4 Independent Review Report | E4_DERIVED | `verification/YM-002CR2_INDEPENDENT_REVIEW.md` | Derived from raw `28204877af58fe05b72a912a6794a4bacacd8e7483a4e2e223e798d4e4c81e81` | TRACEABLE_TO_RAW_E4 | ACCEPTED |
+| EVD-002CR2-04 | YM-002CR2 Fresh Blind E4 Independent Audit (Verifier `24bec7a8-9d29-4b8c-9e2e-3873970873f6`) | E4 | `verification/raw/YM-002CR2_E4_RAW_20260824T223247Z.md` | `28204877af58fe05b72a912a6794a4bacacd8e7483a4e2e223e798d4e4c81e81` (Candidate SHA: `81840652b096d1c9f7ee4435a3adeb67f5e7c677`) | TRANSCRIPT_LOG_CAPTURED | STALE_FOR_FINAL_SUPERSEDED_BY_YM-002CR2A |
+| EVD-002CR2-05 | YM-002CR2 Derived E4 Independent Review Report | E4_DERIVED | `verification/YM-002CR2_INDEPENDENT_REVIEW.md` | Derived from raw `28204877af58fe05b72a912a6794a4bacacd8e7483a4e2e223e798d4e4c81e81` | TRACEABLE_TO_RAW_E4 | STALE_FOR_FINAL_SUPERSEDED_BY_YM-002CR2A |
+| EVD-002CR2A-01 | YM-002CR2A Erratum Fixed Modern Literature Manifest & Records (10 sources) | E3 | `literature/primary/modern_2000_2026/manifest.yaml` | `manifest.yaml` verified against disk hashes | MACHINE_CHECKED (`manifest.yaml`) | ACCEPTED |
+| EVD-002CR2A-02 | YM-002CR2A Erratum Regression Test Suite (9 tests) | E3 | `tests/test_modern_literature.py` | Pass receipt `RUN_VERIFY.ps1` | REPRODUCIBLE_LOCALLY (`RUN_VERIFY.ps1`) | ACCEPTED |
+| EVD-002CR2A-03 | YM-002CR2A Audited Modern Limitation Matrix & Dependency Graph | E3 | `literature/MODERN_LIMITATION_MATRIX.md`, `literature/MODERN_DEPENDENCY_GRAPH.md` | Matrix and graph verified | MACHINE_CHECKED | ACCEPTED |
+
 
 
 

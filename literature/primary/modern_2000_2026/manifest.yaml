@@ -1,7 +1,7 @@
 version: '2.1'
-packet: YM-002CR2
-description: "Finalized Modern Rigorous Advances and Boundary Invariants (2000\u2013\
-  2026)"
+packet: YM-002CR2A
+description: "Modern Rigorous Advances and Boundary Invariants (2000\u20132026) with\
+  \ Erratum Fixes"
 total_sources: 10
 sources:
 - source_id: PAPER-MOD-001
@@ -52,7 +52,7 @@ sources:
   year: 2024
   doi: 10.1007/s00222-024-01264-2
   local_file: PAPER-MOD-003/record.md
-  sha256: 92be12dbab645ca610afbdf5adb92c2baff3bb8a074d732af5b0ed51dedf287f
+  sha256: 4fc5aa85b4ef9817625214977379c9fa0f7786a3a7fddbb4bb8429d392c24ddd
   access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
   storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
   bridge_variables:
@@ -64,6 +64,7 @@ sources:
   failure_locality: wrong dimension/theory (3D / local flow only / invariant measure
     open)
   status: INGESTED_AND_VERIFIED
+  pages: 541-696
 - source_id: PAPER-MOD-004
   title: Uniqueness of Gauge Covariant Renormalisation of Stochastic 3D Yang-Mills-Higgs
   authors:
@@ -72,14 +73,14 @@ sources:
   year: 2026
   doi: 10.1007/s00205-025-02163-3
   local_file: PAPER-MOD-004/record.md
-  sha256: f9d555d34044a1cc98a700dff3711f81515c8cfde1e3891448e74c8173e03e28
+  sha256: 06a29cefd8e30a720b509a2a2e6aeb997027c139a741ed9dc700e7bf9c06996f
   access_scope: AUTHORITATIVE_METADATA_AND_EXCERPTS
   storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
   bridge_variables:
-  - counterterm group G_count
+  - gauge-covariant mass counterterm
   - mollifier scale delta
   - dimension d = 3
-  failure_locality: wrong dimension/theory (3D stochastic YMH)
+  failure_locality: wrong dimension/theory (3D stochastic YMH mass renormalization)
   status: INGESTED_AND_VERIFIED
 - source_id: PAPER-MOD-005
   title: Analytic Bootstrap for Large N Lattice Yang-Mills Theory

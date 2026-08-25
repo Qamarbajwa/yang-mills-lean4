@@ -746,20 +746,20 @@
 - **PROOF_OR_DERIVATION_METHOD:** Theory of regularity structures, stochastic gauge fixing, and Da Prato–Debussche multi-scale decompositions.
 - **UNIFORMITY_STATUS:** `RIGOROUS_LOCAL_IN_3D`
 - **WHAT_IT_PROVES:** Complete mathematical existence of local-in-time dynamic stochastic flow for 3D Yang–Mills–Higgs.
-- **WHAT_IT_DOES_NOT_PROVE:** Global existence without blow-up, existence of an invariant 3D QFT measure (explicitly open problem, p. 87), or 4D pure Yang–Mills existence.
+- **WHAT_IT_DOES_NOT_PROVE:** Global existence without blow-up, existence of an invariant 3D QFT measure (explicitly open problem, p. 543), or 4D pure Yang–Mills existence.
 - **BRIDGE_VARIABLES:** `mollifier cutoff epsilon`, `gauge orbit metric d_orbit`, `dimension d = 3`, `stochastic time t`, `blow-up time tau`
 - **FAILURE_LOCALITY:** `wrong dimension/theory (3D / local flow only / invariant measure open)`
 - **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184), [`YM-REQ-011`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L192)
 - **RELEVANCE_TO_CLAY:** `ANALOGUE`
 - **DEPENDENCIES:** `THM-YM-0005`, `THM-YM-0021`
-- **KNOWN_LATER_CORRECTIONS:** Extended by Chevyrev–Shen (2026) for counterterm uniqueness.
-- **SOURCE_LOCATOR:** *Inventiones Mathematicae* 237 (2024), pp. 85–236, Theorems 1.1–1.5.
+- **KNOWN_LATER_CORRECTIONS:** Extended by Chevyrev–Shen (2026) for gauge-covariant mass counterterm uniqueness.
+- **SOURCE_LOCATOR:** *Inventiones Mathematicae* 237 (2024), pp. 541–696, Theorems 1.1–1.5.
 - **REPRODUCTION_STATUS:** `RECONSTRUCTED`
 - **STATUS:** `VERIFIED_FROM_PRIMARY_SOURCE`
 
 ---
 
-### THM-YM-0024: Chevyrev–Shen 3D Stochastic YMH Gauge-Covariant Renormalization Uniqueness
+### THM-YM-0024: Chevyrev–Shen 3D Stochastic YMH Gauge-Covariant Mass Renormalization Uniqueness
 - **THEOREM_ID:** `THM-YM-0024`
 - **PAPER_ID:** `PAPER-MOD-004`
 - **TITLE:** Uniqueness of Gauge Covariant Renormalisation of Stochastic 3D Yang-Mills-Higgs
@@ -773,17 +773,17 @@
 - **COUPLING_REGIME:** `subcritical`
 - **LIMITS:** Cutoff $\delta \to 0$
 - **ASSUMPTIONS:** Gauge-covariant singular SPDEs and geometric renormalization group analysis in 3D.
-- **EXACT_RESULT:** Proof that the gauge-covariant counterterm group for stochastic 3D Yang–Mills–Higgs equations is uniquely determined by gauge symmetry and geometric regularity, ensuring that the resulting dynamic Markov process on 3D gauge orbits is canonical and scheme-independent.
+- **EXACT_RESULT:** Rigorous mathematical proof of the uniqueness of the mass renormalisation that leads to gauge-covariant solutions of the stochastic 3D Yang–Mills–Higgs equations, showing that among all local polynomial counterterms, only a unique mass renormalization choice yields solutions satisfying gauge covariance.
 - **EVIDENCE_CLASS:** `RIGOROUS_MATHEMATICAL_THEOREM`
-- **CLASSIFICATION_JUSTIFICATION:** Rigorous mathematical theorem proving uniqueness and scheme-independence of gauge-covariant stochastic renormalization in 3D (*ARMA* 250 (2026), art. 11).
+- **CLASSIFICATION_JUSTIFICATION:** Rigorous mathematical theorem proving uniqueness of the mass renormalisation required for gauge covariance in stochastic 3D Yang–Mills–Higgs (*ARMA* 250 (2026), art. 11).
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
 - **PROOF_OR_DERIVATION_METHOD:** Algebraic renormalization group analysis on regularity structure models.
 - **UNIFORMITY_STATUS:** `RIGOROUS_EXACT_IN_3D`
-- **WHAT_IT_PROVES:** Scheme-independence and canonical uniqueness of stochastic gauge quantization in 3D.
-- **WHAT_IT_DOES_NOT_PROVE:** Construction of 4D critical stochastic Yang–Mills or 3D invariant measure.
-- **BRIDGE_VARIABLES:** `counterterm group G_count`, `mollifier scale delta`, `dimension d = 3`
-- **FAILURE_LOCALITY:** `wrong dimension/theory (3D stochastic YMH)`
+- **WHAT_IT_PROVES:** Uniqueness of the mass counterterm required to preserve gauge covariance in singular stochastic 3D Yang–Mills–Higgs flow.
+- **WHAT_IT_DOES_NOT_PROVE:** Construction of 4D critical stochastic Yang–Mills, 3D invariant measure, or unqualified scheme-independence for arbitrary non-local regularizations.
+- **BRIDGE_VARIABLES:** `gauge-covariant mass counterterm`, `mollifier scale delta`, `dimension d = 3`
+- **FAILURE_LOCALITY:** `wrong dimension/theory (3D stochastic YMH mass renormalization)`
 - **RELATED_YM_REQ_IDS:** [`YM-REQ-003`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/OFFICIAL_PROBLEM_SPECIFICATION.md#L184)
 - **RELEVANCE_TO_CLAY:** `ANALOGUE`
 - **DEPENDENCIES:** `THM-YM-0023`

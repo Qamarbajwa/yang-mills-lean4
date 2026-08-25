@@ -1,11 +1,12 @@
 # NEXT ACTION
 
 ## Current action
-`YM-002D — Solved, modified, and analogous theories ledger`
+`YM-002CR2A — Modern-source locator and theorem-wording erratum`
 
 ## Scope
-- Reconstruct rigorous theorems on solved or modified gauge models: 2D pure Yang–Mills ($YM_2$), topological/supersymmetric formulations ($\mathcal{N}=1, \mathcal{N}=2$ Seiberg–Witten, $\mathcal{N}=4$ SYM), massive gauge theories (Proca, Higgs), and gauge-gravity / holographic boundary bounds.
-- Systematically extract bridge variables, exact failure localities, and non-generalizability barriers to pure 4D continuum non-supersymmetric Yang–Mills.
+- Correct CCHS (2024) 3D YMH page range to Invent. Math. 237, 541–696.
+- Refine Chevyrev & Shen (2026) theorem scope strictly to uniqueness of the mass renormalisation required for gauge covariance, enforcing `UNIQUENESS_OF_GAUGE_COVARIANT_MASS_RENORMALISATION != UNQUALIFIED_RENORMALISATION_SCHEME_INDEPENDENCE`.
+- Run E3 verification suite, commit candidate, and conduct bounded fresh blind E4 independent audit.
 
 ## Completed actions
 - `YM-000 — Local bootstrap` (DONE)
@@ -18,7 +19,7 @@
 - `YM-002AR1 — E4 provenance + foundational semantic repair` (INDEPENDENTLY_VERIFIED)
 - `YM-002B — Constructive / RG foundations ledger (1980–2000)` (INDEPENDENTLY_VERIFIED)
 - `YM-002BR1 — Constructive pathway-memory semantic + closeout reconciliation` (INDEPENDENTLY_VERIFIED)
-- `YM-002CR2 — Modern-source theorem attribution and bibliographic finalization` (INDEPENDENTLY_VERIFIED)
+
 
 
 

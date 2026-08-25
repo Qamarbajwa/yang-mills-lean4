@@ -1,0 +1,58 @@
+# GOVERNANCE_STATE.yaml — TEMPLATE v2.10.1
+# Copy to project root (or .governance/GOVERNANCE_STATE.yaml).
+# This file is the persistent project-binding anchor the kernel reads on every
+# session start / context loss. Keep it small, current, and committed.
+
+governance:
+  kernel_version: v2.10.1
+  master_version: v2.9.10
+  master_sha256: 34f2dc33ba2c8f7edb5280d6f63426fad431cdcdf61642f26c3c7aee4bd84f07
+  bootstrap_level: LIGHT          # LIGHT | STANDARD | HIGH_ASSURANCE
+  adopted: <yyyy-mm-dd>
+  adoption_mode: DAY0 | MID_PROJECT
+
+project:
+  id: <short-id>
+  name: <name>
+  root: <repo path>
+  default_branch: <main>
+  source_of_truth: <e.g. docs/SPEC.md, or "code + this file">
+  coding_environments: [<Claude Code>, <Cursor>, ...]
+
+direction:                        # direction layer (kernel §2B) — the source of WHAT to build
+  intent: PROJECT_INTENT.md                 # PRESENT | MISSING
+  architecture: ARCHITECTURE_DECISIONS.md   # PRESENT | MISSING
+  roadmap: ROADMAP.md                       # PRESENT | MISSING
+  current_goal_ref: <one line copied from ROADMAP "Current goal">
+
+protected:                        # verifier-owned / locked — workers never edit
+  paths:
+    - GOVERNANCE_STATE.yaml
+    - PROJECT_INTENT.md           # owner-authored; orchestrator proposes diffs only
+    - <test dirs, CI config, release scripts, evaluator files>
+  components: []                  # locked components per PART 0-AE
+
+risk_profile:
+  t4_domains_present: [<auth | payments | migrations | none>]
+  known_escalators: []
+
+roles:
+  known_agents:                   # discovered pool, per CAPDISC
+    - id: <model/agent>
+      callable_via: <environment>
+      typical_role: WRITER | REVIEWER | BOTH
+      independence: HIGH | MEDIUM | LOW
+      cost_class: LOW | MEDIUM | HIGH
+
+state:
+  last_verified_checkpoint:
+    ref: <branch @ SHA or manifest hash>
+    at: <timestamp>
+  accepted_t3plus_count: 0        # drives the ≥5% audit floor
+  last_random_audit: <envelope id or NONE>
+  retrofit_debt: []               # legacy areas pending characterization
+  open_findings: []               # unresolved security/secret/risk findings
+
+emergency:
+  incident_state: NONE            # NONE | ACTIVE
+  break_glass_record: NONE

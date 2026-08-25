@@ -28,6 +28,7 @@ Every claim, result, and limitation recorded in this register is strictly tagged
 12. `DISTINCT_PAPER != SAME_THEOREM_RECORD` (Separate independent papers must receive distinct primary literature records and theorem entries).
 13. `LATTICE_STRONG_COUPLING_MASS_GAP != CONTINUUM_4D_CLAY_MASS_GAP` (A rigorous lattice mass gap at strong coupling $\beta < \beta_0$ does not equal the continuum weak-coupling Clay mass gap).
 14. `AREA_LAW != CLAY_SPECTRAL_MASS_GAP` (Wilson area law and string tension on discrete lattices do not establish the continuum Hamiltonian spectral gap).
+15. `UNIQUENESS_OF_GAUGE_COVARIANT_MASS_RENORMALISATION != UNQUALIFIED_RENORMALISATION_SCHEME_INDEPENDENCE` (Proving uniqueness of the mass counterterm required for gauge covariance does not constitute an unqualified renormalization scheme-independence for arbitrary non-local regularizations).
 
 ---
 
@@ -124,14 +125,14 @@ Every claim, result, and limitation recorded in this register is strictly tagged
 - **PROGRAM_ID:** `PATH-MOD-002`
 - **PRIMARY_PAPERS:** `PAPER-MOD-003` (Chandra, Chevyrev, Hairer, Shen 2024, *Invent. Math.* 237, 85–236), `PAPER-MOD-004` (Chevyrev & Shen 2026, *ARMA* 250, art. 11)
 - **CENTRAL_THESIS:** `[PRIMARY_SOURCE_RESULT]` Singular SPDEs can be renormalized in a gauge-covariant manner to yield a local-in-time Markov process on 3D gauge orbits.
-- **DIRECTION:** `[PRIMARY_SOURCE_RESULT]` 3D regularity structures, gauge-covariant mollification, local-in-time flow, and unique counterterm group analysis.
-- **WHAT_SUCCEEDED:** `[PRIMARY_SOURCE_RESULT]` Rigorous construction of local-in-time 3D stochastic Yang–Mills–Higgs flow, canonical Markov diffusion on gauge orbits, and proof of uniqueness of gauge-covariant counterterms.
+- **DIRECTION:** `[PRIMARY_SOURCE_RESULT]` 3D regularity structures, gauge-covariant mollification, local-in-time flow, and unique gauge-covariant mass renormalization analysis.
+- **WHAT_SUCCEEDED:** `[PRIMARY_SOURCE_RESULT]` Rigorous construction of local-in-time 3D stochastic Yang–Mills–Higgs flow, canonical Markov diffusion on gauge orbits (*Invent. Math.* 237, pp. 541–696), and proof of uniqueness of the gauge-covariant mass renormalization (*ARMA* 250, art. 11).
 - **WHAT_REMAINS_OPEN:** `[PRIMARY_SOURCE_LIMITATION]`
-  - *Primary Source Fact:* `[PRIMARY_SOURCE_LIMITATION]` Authors explicitly state (*Invent. Math.* 237, p. 87) that the construction of an invariant measure in 3D remains an open problem.
+  - *Primary Source Fact:* `[PRIMARY_SOURCE_LIMITATION]` Authors explicitly state (*Invent. Math.* 237, p. 543) that the construction of an invariant measure in 3D remains an open problem.
   - *Dimensional Barrier:* `[PRIMARY_SOURCE_LIMITATION]` In 4D, stochastic Yang–Mills is critically singular and outside current parabolic SPDE theory.
 - **SOURCE_STATED_LIMITATION:** `[PRIMARY_SOURCE_LIMITATION]` Construction is local in time; invariant measure existence in 3D is open.
 - **PROJECT_SYNTHESIS:** `[PROJECT_SYNTHESIS]` Establishes local dynamic stochastic quantization in 3D; stopping short of invariant equilibrium measures or 4D critical flow.
-- **WHAT_SURVIVED:** `[PROJECT_SYNTHESIS]` Regularity structure models for non-Abelian gauge-Higgs fields and counterterm classification theorems.
+- **WHAT_SURVIVED:** `[PROJECT_SYNTHESIS]` Regularity structure models for non-Abelian gauge-Higgs fields and gauge-covariant mass counterterm classification theorems.
 - **BRIDGE_VARIABLES:** `mollifier scale epsilon`, `gauge orbit metric d_orbit`, `dimension d = 3`, `stochastic time t`, `blow-up time tau`
 - **FAILURE_LOCALITY:** `wrong dimension/theory (3D / local flow only / invariant measure open)`
 - **REOPEN_CONDITIONS:** `[PROJECT_SYNTHESIS]` Proof of global-in-time non-explosion and construction of 3D invariant Gibbs measure; developing critical SPDE methods for 4D.

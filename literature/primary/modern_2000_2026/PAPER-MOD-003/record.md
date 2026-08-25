@@ -5,7 +5,7 @@
 - **AUTHORS:** Ajay Chandra, Ilya Chevyrev, Martin Hairer, Hao Shen
 - **JOURNAL:** Inventiones Mathematicae
 - **VOLUME:** 237
-- **PAGES:** 85-236
+- **PAGES:** 541-696
 - **YEAR:** 2024
 - **DOI:** `10.1007/s00222-024-01264-2`
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
@@ -14,7 +14,7 @@
 - **FAILURE_LOCALITY:** `wrong dimension/theory (3D / local flow only / invariant measure open)`
 
 ## Executive Summary
-Chandra, Chevyrev, Hairer, and Shen established a local-in-time state space and renormalized stochastic flow for 3D Yang-Mills-Higgs fields using regularity structures, defining a canonical Markov process on gauge orbits up to possible finite-time blow-up. The authors explicitly state (p. 87) that the construction of an invariant measure for this 3D dynamic remains an open problem.
+Chandra, Chevyrev, Hairer, and Shen established a local-in-time state space and renormalized stochastic flow for 3D Yang-Mills-Higgs fields using regularity structures, defining a canonical Markov process on gauge orbits up to possible finite-time blow-up. The authors explicitly state (p. 543) that the construction of an invariant measure for this 3D dynamic remains an open problem.
 
 ## Key Proven Results
 - Rigorous construction of local-in-time 3D stochastic Yang-Mills-Higgs flow on gauge orbit space.
@@ -22,5 +22,5 @@ Chandra, Chevyrev, Hairer, and Shen established a local-in-time state space and 
 
 ## Limitations and Unresolved Boundaries
 - Local-in-time existence only; does not prove global-in-time existence without blow-up.
-- Does NOT construct the 3D Yang-Mills-Higgs invariant Euclidean measure (explicitly open problem, p. 87).
+- Does NOT construct the 3D Yang-Mills-Higgs invariant Euclidean measure (explicitly open problem, p. 543).
 - 4D Yang-Mills stochastic flow is critically singular and outside current parabolic SPDE theory.

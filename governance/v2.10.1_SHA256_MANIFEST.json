@@ -1,0 +1,57 @@
+{
+  "MASTER_AUTONOMOUS_PROJECT_GOVERNANCE_DEVELOPMENT_EVOLUTION_v2_9_10_FINAL.md": {
+    "sha256": "34f2dc33ba2c8f7edb5280d6f63426fad431cdcdf61642f26c3c7aee4bd84f07",
+    "bytes": 304919,
+    "lines": 11802
+  },
+  "AUTONOMOUS_PROJECT_RUNTIME_GOVERNANCE_KERNEL_v2.10.1.md": {
+    "sha256": "e817b71b9651b3da072b04e6549d40cad8f7c261c3315055de0f444bc58438cf",
+    "bytes": 13167,
+    "lines": 362
+  },
+  "AUTONOMOUS_PROJECT_WORKER_MICRO_KERNEL_v2.10.1.md": {
+    "sha256": "b48a4f5da36504f97178bdeb9e7f2e70b0e5c826979a0ae973ff509bd0b615f8",
+    "bytes": 3440,
+    "lines": 68
+  },
+  "TASK_EXECUTION_ENVELOPE_TEMPLATE_v2.10.1.md": {
+    "sha256": "c264cf62fb3ed10bde4a89cdc441f92c58b55ff66ec9b4db61395794e81d5be4",
+    "bytes": 3284,
+    "lines": 89
+  },
+  "GOVERNANCE_STATE_TEMPLATE_v2.10.1.yaml": {
+    "sha256": "8c28ca61d62d448295058dbf2c3afc51b78fbba589caef759dfdc37339ffec01",
+    "bytes": 2231,
+    "lines": 59
+  },
+  "PROJECT_INTENT_TEMPLATE_v2.10.1.md": {
+    "sha256": "35e8b909ba3532b6ea85d3977a8b0e9c9bc03ba9aa47e991e6b5d6114995a8c8",
+    "bytes": 1514,
+    "lines": 50
+  },
+  "ARCHITECTURE_DECISIONS_TEMPLATE_v2.10.1.md": {
+    "sha256": "0eab8a649ed0e3bac5972c93197aced703370001ae9e95a8eb346eb8af8cb296",
+    "bytes": 1630,
+    "lines": 50
+  },
+  "ROADMAP_TEMPLATE_v2.10.1.md": {
+    "sha256": "2d46a1cfa4b72e43e1cecfb6f38da31b6fc51bbf188333b6c68ff596c48ab45c",
+    "bytes": 1911,
+    "lines": 62
+  },
+  "UNIVERSAL_ACTIVATION_PROMPT_v2.10.1.md": {
+    "sha256": "0c14a0ec0e7c562b543fc6abd0f051a8d3b715c48ef8a42066f0ca4c0cd772ec",
+    "bytes": 4837,
+    "lines": 90
+  },
+  "MASTER_MODULE_INDEX_v2.10.0.json": {
+    "sha256": "f9fd6c6fbab7b1e4de55ca47da9cb8e33d776fa816992220c5990c79aae0bd3b",
+    "bytes": 26942,
+    "lines": 1071
+  },
+  "GOVERNANCE_OPERATOR_GUIDE_v2.10.1.md": {
+    "sha256": "098a04e66b9930cf70295e151378a239365985f389be948fbdeb4598e1a24f4e",
+    "bytes": 6049,
+    "lines": 100
+  }
+}

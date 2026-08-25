@@ -167,3 +167,13 @@
 - **Epistemic Classification:** `[PRIMARY_SOURCE_RESULT]` / `[PRIMARY_SOURCE_LIMITATION]`
 - **Findings:** *arXiv:2505.16585* expands the rigorous parameter regimes for the Wilson loop area law. *arXiv:2509.04688* develops a dynamical approach building on Shen–Zhu–Zhu inequalities, deriving area law from spectral gap conditions in 't Hooft regimes for $U(N), SU(N), SO(2N)$.
 - **Outcome:** Recorded as separate theorems `THM-YM-0028` and `THM-YM-0029`.
+
+### RES-YM-002CR2A-001: Modern-Source Locator and Theorem-Wording Erratum
+- **Date:** 2026-08-25
+- **Question:** What is the precise page range for CCHS (2024) 3D YMH and the exact theorem scope of Chevyrev & Shen (2026)?
+- **Primary Sources:** A. Chandra, I. Chevyrev, M. Hairer, H. Shen, *Inventiones Mathematicae* 237 (2024), 541–696 (`PAPER-MOD-003`); I. Chevyrev & H. Shen, *Archive for Rational Mechanics and Analysis* 250 (2026), article 11, 1–55 (`PAPER-MOD-004`).
+- **Epistemic Classification:** `[PRIMARY_SOURCE_RESULT]` / `[PRIMARY_SOURCE_LIMITATION]`
+- **Findings:**
+  1. *CCHS 2024 Locator:* Published in *Inventiones Mathematicae* 237 (2024), pp. 541–696 (replacing any erroneous 85–236 range). Invariant measure existence remains an open problem (cited on p. 543).
+  2. *Chevyrev–Shen 2026 Theorem Scope:* Rigorously establishes uniqueness of the mass renormalisation that leads to gauge-covariant solutions of the stochastic 3D Yang–Mills–Higgs equations. The phrase 'scheme-independence' is not an unqualified source claim and is restricted to the canonical uniqueness of the gauge-covariant mass counterterm.
+- **Outcome:** Recorded in `THM-YM-0023` and `THM-YM-0024`.
