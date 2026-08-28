@@ -1,0 +1,135 @@
+version: "1.0.0"
+document_type: "EPISTEMIC_TAXONOMY_SPECIFICATION"
+status: "PROTECTED_VERSIONED_SCHEMA"
+
+problem_identity_contract:
+  problem_id: "CLAY-YM-001"
+  canonical_name: "Quantum Yang–Mills Existence and Mass Gap"
+  official_target:
+    source: "Arthur Jaffe and Edward Witten, 'Quantum Yang–Mills Theory' (Clay Mathematics Institute, 2000/2006)"
+    statement: "For any compact simple gauge group G, construct a non-trivial quantum Yang–Mills theory on R^4 satisfying the required axiomatic QFT properties and prove a mass gap Delta > 0."
+  official_mass_gap_condition:
+    source_status: "SOURCE_RECONCILED"
+    spectral_condition: "Spec(H) ∩ (0, Delta) = ∅ for some Delta > 0"
+    subspace_condition: "Delta = inf { E > 0 : E in Spec(H|_{H_0^⟂}) } > 0 where H_0 = C * Omega"
+    vacuum_normalization: "H * Omega = 0"
+  nontriviality:
+    status: "SOURCE_RECONCILIATION_REQUIRED"
+    rule: "Do not replace 'non-trivial' by scattering, Wilson-loop, interaction, or other criteria unless an explicit equivalence or adequacy proof has been independently verified and source-grounded."
+  axiomatic_existence:
+    official_requirement: "Properties at least as strong as those cited by Jaffe–Witten (Wightman / Osterwalder–Schrader framework)."
+    euclidean_route:
+      relation: "RECONSTRUCTION_ROUTE"
+      description: "Construct Schwinger functions satisfying the required Osterwalder–Schrader conditions and reconstruct the corresponding relativistic QFT via Osterwalder–Schrader reconstruction theorems."
+  local_observable_requirement:
+    source_bound: "Local quantum fields corresponding appropriately to gauge-invariant local polynomials in curvature and covariant derivatives."
+  short_distance_requirement:
+    source_bound: "Agreement with asymptotic-freedom / perturbative-renormalization predictions at short distances."
+  nearby_non_equivalent_targets:
+    - "fixed-spacing lattice Yang–Mills (a > 0)"
+    - "finite-volume Yang–Mills only (V < inf)"
+    - "2D / 3D lower-dimensional Yang–Mills"
+    - "supersymmetric Yang–Mills (N=1, 2, 4)"
+    - "gauge-Higgs theories with scalar condensates"
+    - "Proca / explicit-mass vector theories"
+
+formulation_relations:
+  - PROVED_EQUIVALENT
+  - RECONSTRUCTION_ROUTE
+  - IMPLIES
+  - CONJECTURALLY_EQUIVALENT
+  - PHYSICALLY_EXPECTED_EQUIVALENT
+  - NOT_EQUIVALENT
+  - UNKNOWN
+
+semantic_failure_library:
+  FAIL-YM-CONTINUUM-UNIFORMITY:
+    semantic_name: "LATTICE_OR_CUTOFF_STRONG_COUPLING_UNIFORMITY_NOT_ESTABLISHED"
+    description: "Claiming continuum mass gap from a > 0 strong coupling expansion without proving uniform convergence as a -> 0."
+  FAIL-YM-THERMODYNAMIC-UNIFORMITY:
+    semantic_name: "FINITE_VOLUME_SPECTRUM_INFINITE_VOLUME_GAP_CONFLATION"
+    description: "Claiming thermodynamic spectral gap from isolated discrete eigenvalues on compact torus without proving uniform positive gap in infinite volume."
+  FAIL-YM-REFLECTION-POSITIVITY:
+    semantic_name: "REQUIRED_OS_REFLECTION_POSITIVITY_NOT_ESTABLISHED"
+    description: "Constructing Euclidean Schwinger functions without establishing Osterwalder–Schrader reflection positivity (Theta-positivity). Note: source-specific numbering (e.g. OS I E2, OS II E0/E2) must be recorded only as metadata."
+  FAIL-YM-SEMICLASSICAL-APPROXIMATION:
+    semantic_name: "DILUTE_GAS_WEAK_COUPLING_APPROXIMATION_INVALID_IN_IR"
+    description: "Extrapolating semiclassical instanton/monopole gas results beyond weak coupling into the non-perturbative IR regime."
+  FAIL-YM-CONFINEMENT-GAP-CONFLATION:
+    semantic_name: "WILSON_AREA_LAW_CONFINEMENT_NOT_IDENTICAL_TO_MASS_GAP"
+    description: "Conflating static quark confinement (area law for Wilson loop) with pure gluonic Hamiltonian spectral gap Delta > 0."
+  FAIL-YM-GAUGE-VARIANT-SPECTRAL-CLAIM:
+    semantic_name: "GAUGE_VARIANT_CORRELATOR_PROMOTED_TO_PHYSICAL_SPECTRUM"
+    description: "Deducing mass gap from gluon 2-point propagator poles in covariant gauge without constructing gauge-invariant physical observables."
+  FAIL-YM-UNJUSTIFIED-ANALOGUE-TRANSFER:
+    semantic_name: "UNJUSTIFIED_ANALOGUE_TRANSFER_TO_PURE_4D_YM"
+    description: "Transferring results requiring supersymmetry (N=1,2,4), scalar Higgs condensates, or lower dimensions (2D, 3D) to pure 4D non-supersymmetric YM."
+
+resonance_schema:
+  dimensions:
+    - THESIS
+    - MECHANISM
+    - ASSUMPTIONS
+    - SCALING
+    - BRIDGE_VARIABLE
+    - FAILURE_LOCALITY
+    - OBSERVABLE
+  allowed_scores:
+    - NONE
+    - LOW
+    - MODERATE
+    - HIGH
+    - EXACT
+    - UNKNOWN
+  mandatory_fields_per_dimension:
+    - score
+    - textual_justification
+    - evidence_pointers
+
+obstruction_taxonomy:
+  allowed_types:
+    - METHOD_OBSTRUCTION
+    - MODEL_REGIME_OBSTRUCTION
+    - TRANSFER_OBSTRUCTION
+    - TARGET_THEOREM_OBSTRUCTION
+    - UNKNOWN
+  lifecycle_states:
+    - CANDIDATE
+    - FALSIFIED
+    - METHOD_LIMITATION
+    - SURVIVED_FALSIFICATION
+    - THEOREM_CANDIDATE
+    - PROVED_OBSTRUCTION_THEOREM
+
+memory_partitions:
+  episodic:
+    scope: "Execution transcripts, raw E4 audit logs, tool invocations, candidate SHAs, test run outputs, git checkpoints."
+  semantic:
+    accepted: "Verified theorems, mathematical definitions, verified source facts, verified boundary limitations."
+    negative: "Falsified lemmas, refuted claims, counterexample catalogs, established method limitations."
+    quarantined: "Contested external proofs, claimed Millennium solutions, unverified conjectures, suspect literature."
+  structural:
+    scope: "Theorem dependency DAGs, critical load-bearing cut-sets, pathway memory register, 7D resonance vectors, common obstruction candidates."
+
+candidate_identity_rules:
+  scientific_fingerprint_components:
+    - theorem_statements
+    - formal_proofs
+    - canonical_dependency_tuples: "(dependency_id, dependency_version, dependency_statement_hash)"
+    - cited_source_bundles: "(source_id, source_version, source_content_hash, source_access_level)"
+    - pathway_memory_records
+  post_e4_change_classes:
+    NONE: "No changes after E4 review."
+    ADMINISTRATIVE_ONLY: "Only review summaries, task graph status, contract ownership ledger, and checkpoint files modified. E4 validity preserved."
+    SCIENTIFIC_MATERIAL: "Any scientific statement, proof, source record, or dependency altered. E4 marked STALE."
+
+constitutional_amendment_protocol:
+  required_fields:
+    - CHANGE_PROPOSAL
+    - RATIONALE
+    - IMPACT_ANALYSIS
+    - REGRESSION_TESTS
+    - NEW_VERSION
+    - INDEPENDENT_REVIEW
+    - HUMAN_OWNER_ACCEPTANCE
+    - SEALED_MIGRATION_RECEIPT

@@ -17,7 +17,8 @@
 | YM-002CR1 | Modern literature scope, taxonomy & completeness repair | YM-002C | T3 | fresh blind E4 audit + epistemic taxonomy | E3_VERIFIED_E4_CHALLENGED_SUPERSEDED |
 | YM-002CR2A | Modern-source locator and theorem-wording erratum | YM-002CR2 | T2 | fresh blind E4 audit + bounded erratum verification | INDEPENDENTLY_VERIFIED |
 | YM-002D | Solved, modified, and analogous theories ledger | YM-002CR2A | T3 | primary literature + theorem extraction | INDEPENDENTLY_VERIFIED |
-| YM-002E | Claimed-solution adversarial audit ledger | YM-002D | T3 | primary claims + refutation evidence | READY |
+| YM-ROS-100R1 | ROS v1.0 constitutional semantic and acceptance hardening | YM-002D | T4 | E3 deterministic test suite + fresh blind E4 audit | IN_PROGRESS |
+| YM-002E | Claimed-solution adversarial audit ledger | YM-002D, YM-ROS-100R1 | T3 | primary claims + refutation evidence | READY |
 | YM-002F | Cross-era theorem and dependency synthesis | YM-002E | T3 | structural graph synthesis + E4 review | BLOCKED |
 | YM-003 | Construct missing-bridge graph | YM-002F | T3 | independent semantic review | BLOCKED |
 | YM-004 | Reconstruct rigorous RG/Bałaban program | YM-003 | T3 | theorem reproduction + independent review | BLOCKED |
