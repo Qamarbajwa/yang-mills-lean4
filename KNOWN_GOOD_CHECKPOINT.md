@@ -1,9 +1,9 @@
 # KNOWN GOOD CHECKPOINT
 
-- Timestamp UTC: `2026-08-25T20:23:55.460743+00:00`
-- Git SHA: `ef51b69350c8b78ad81799404fb32967266d3e16`
+- Timestamp UTC: `2026-08-28T07:56:59.947189+00:00`
+- Git SHA: `f362ee20e661f519065be30a8d09a0cf1a0f2564`
 - Branch: `master`
-- Working tree: `DIRTY`
-- Verification: `evidence\test_runs\verify_20260825T202346Z.json`
-- Verification log SHA-256: `b8571be7aa9caa711d5dd701a0941cf477d3ca55ff2c2fc88de0b8f524289655`
-- State: `BASELINE_SMOKE_TESTED`
+- Working tree: `CLEAN`
+- Verification: `evidence\test_runs\verify_20260828T075642Z.json`
+- Verification log SHA-256: `91e6d6742701842f5a79e84a576f892e13380feef2244b213491e862cc88847b`
+- State: `KNOWN_GOOD_CHECKPOINT_CANDIDATE`
