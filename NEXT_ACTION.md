@@ -1,19 +1,14 @@
 # NEXT ACTION
 
 ## Current action
-`YM-ROS-100R1 — ROS v1.0 constitutional semantic and acceptance hardening`
+`YM-002E — Claimed-solution adversarial audit ledger`
 
 ## Scope
-- Formalize and harden the Mathematical Research Operating System v1.0 Constitution (`governance/MATHEMATICAL_RESEARCH_OPERATING_SYSTEM_v1.0.md`).
-- Implement Law 0 reality and project binding with minimal-read exception and fail-closed gate.
-- Reconcile Problem Identity Contract strictly against official Jaffe–Witten Clay problem statement.
-- Eliminate fragile axiom numbering from semantic OS reflection-positivity failures.
-- Implement 7D categorical pathway resonance and common obstruction candidate state machine.
-- Establish candidate scientific tree hashing and tripartite memory contamination barriers.
-- Run deterministic test suite `tests/test_research_operating_system.py`, commit candidate, and conduct fresh blind E4 audit.
+- Conduct systematic adversarial audits of historical and modern claimed mathematical proofs or solutions to the 4D Yang–Mills existence and mass gap problem.
+- Extract exact mathematical failure points, gap locations, unwarranted assumptions, or heuristic substitutions across claimed proofs in the literature.
+- Record failure taxonomy in `literature/CLAIMED_SOLUTION_AUDIT_MATRIX.md` and update `literature/CLAIM_QUARANTINE_REGISTER.md`.
 
 ## Completed actions
-
 - `YM-000 — Local bootstrap` (DONE)
 - `YM-001 — Official problem specification` (INDEPENDENTLY_VERIFIED)
 - `YM-001R1 — Independent-review provenance repair` (INDEPENDENTLY_VERIFIED)
@@ -26,6 +21,8 @@
 - `YM-002BR1 — Constructive pathway-memory semantic + closeout reconciliation` (INDEPENDENTLY_VERIFIED)
 - `YM-002CR2A — Modern-source locator and theorem-wording erratum` (INDEPENDENTLY_VERIFIED)
 - `YM-002D — Solved, modified, and analogous gauge-theory mechanisms ledger` (INDEPENDENTLY_VERIFIED)
+- `YM-ROS-100R1 — ROS v1.0 constitutional semantic and acceptance hardening` (INDEPENDENTLY_VERIFIED)
+
 
 
 
