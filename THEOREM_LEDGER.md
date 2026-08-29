@@ -1021,6 +1021,8 @@
 - **ASSUMPTIONS:** Riemannian structure on 2D surface Sigma, compact Lie group G.
 - **EXACT_RESULT:** Rigorous mathematical construction of a gauge-invariant probability measure on the space of connections modulo gauge transformations on compact 2D surfaces, yielding exact area-dependent Wilson loop expectation values and satisfying Osterwalder-Schrader reflection positivity on cylinders and tori.
 - **EVIDENCE_CLASS:** `RIGOROUS_MATHEMATICAL_CONSTRUCTION`
+- **RESULT_SCOPE:** `RIGOROUS_2D_YANG_MILLS_CONSTRUCTION`
+- **COMPLETE_SOLUTION_STATUS:** `DOES_NOT_CONSTITUTE_COMPLETE_CLAY_SOLUTION`
 - **CLASSIFICATION_JUSTIFICATION:** Definitive mathematical construction in probability and geometric analysis establishing rigorous 2D Yang-Mills measures (Driver 1989, Sengupta 1993, Lévy 2010).
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
@@ -1057,6 +1059,8 @@
 - **ASSUMPTIONS:** Planar large-N saddle-point approximation of single-plaquette unitary matrix integral.
 - **EXACT_RESULT:** Exact analytic solution of the large-N 2D unitary lattice gauge model, demonstrating that the free energy has a continuous 2nd derivative and discontinuous 3rd derivative at lambda_c = 2, where the eigenvalue density on the unit circle undergoes a gap-opening transition.
 - **EVIDENCE_CLASS:** `EXACTLY_SOLVABLE_PHYSICS_MODEL`
+- **RESULT_SCOPE:** `EXACT_LARGE_N_2D_LATTICE_MODEL_SOLUTION`
+- **COMPLETE_SOLUTION_STATUS:** `DOES_NOT_CONSTITUTE_COMPLETE_CLAY_SOLUTION`
 - **CLASSIFICATION_JUSTIFICATION:** Exact physics solution of a large-N matrix model via steepest-descent methods (Gross & Witten 1980, Wadia 1980).
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
@@ -1093,6 +1097,8 @@
 - **ASSUMPTIONS:** Massless Dirac fermions coupled to Abelian U(1) gauge field in 1+1 dimensions.
 - **EXACT_RESULT:** Exact dynamical mass generation for the gauge boson m_gamma^2 = e^2 / pi via 2D chiral anomaly and vacuum polarization, complete screening of fractional charges, and exact equivalence to a free massive pseudo-scalar field via 1+1D bosonization.
 - **EVIDENCE_CLASS:** `EXACTLY_SOLVABLE_PHYSICS_MODEL`
+- **RESULT_SCOPE:** `EXACT_2D_ABELIAN_QFT_RESULT`
+- **COMPLETE_SOLUTION_STATUS:** `DOES_NOT_CONSTITUTE_COMPLETE_CLAY_SOLUTION`
 - **CLASSIFICATION_JUSTIFICATION:** Exact physics solution (Schwinger 1962) with rigorous mathematical Wightman reconstruction (Lowenstein & Swieca 1971).
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
@@ -1129,6 +1135,8 @@
 - **ASSUMPTIONS:** Adjoint Higgs scalar condensation breaking SU(2) to U(1), dilute non-interacting monopole gas.
 - **EXACT_RESULT:** Semiclassical derivation demonstrating that finite-action magnetic monopoles in 3D Georgi-Glashow model form a plasma inducing magnetic Debye screening with mass m_D ~ exp(-S_inst / 2) and an area law for Wilson loops with non-zero string tension sigma > 0 at all couplings.
 - **EVIDENCE_CLASS:** `SEMICLASSICAL_MECHANISM`
+- **RESULT_SCOPE:** `SEMICLASSICAL_3D_GEORGI_GLASHOW_MECHANISM`
+- **COMPLETE_SOLUTION_STATUS:** `DOES_NOT_CONSTITUTE_COMPLETE_CLAY_SOLUTION`
 - **CLASSIFICATION_JUSTIFICATION:** Semiclassical physical derivation and instanton gas mechanism (Polyakov 1977).
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
@@ -1165,6 +1173,8 @@
 - **ASSUMPTIONS:** N=2 extended supersymmetry, holomorphic prepotential F(a), SL(2,Z) modular invariance.
 - **EXACT_RESULT:** Exact non-perturbative determination of the low-energy Wilsonian effective action for 4D N=2 SU(2) SYM via elliptic curves, identification of massless monopoles/dyons at discriminant singularities, and proof of dual Meissner confinement with a mass gap upon adding an N=1 mass perturbation W = m Tr(Phi^2).
 - **EVIDENCE_CLASS:** `EXACT_SUPERSYMMETRIC_PHYSICS_RESULT`
+- **RESULT_SCOPE:** `EXACT_N2_LOW_ENERGY_EFFECTIVE_THEORY_RESULT`
+- **COMPLETE_SOLUTION_STATUS:** `DOES_NOT_CONSTITUTE_COMPLETE_CLAY_SOLUTION`
 - **CLASSIFICATION_JUSTIFICATION:** Exact non-perturbative physics result in extended supersymmetric gauge theory (Seiberg & Witten 1994).
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
@@ -1201,6 +1211,8 @@
 - **ASSUMPTIONS:** N=1 supersymmetry, adjoint Majorana gluinos lambda, instanton holomorphy.
 - **EXACT_RESULT:** Exact all-orders NSVZ beta function beta(g) = -g^3 / (16 pi^2) * (3N) / (1 - N g^2 / (8 pi^2)), calculation of the non-vanishing Witten index I_W = N, and non-perturbative proof of gluino condensation <lambda lambda> = Lambda^3 exp(2 pi i k / N) spontaneously breaking discrete Z_2N chiral symmetry to Z_2.
 - **EVIDENCE_CLASS:** `EXACT_SUPERSYMMETRIC_PHYSICS_RESULT`
+- **RESULT_SCOPE:** `EXACT_N1_SUPERSYMMETRIC_INVARIANTS`
+- **COMPLETE_SOLUTION_STATUS:** `DOES_NOT_CONSTITUTE_COMPLETE_CLAY_SOLUTION`
 - **CLASSIFICATION_JUSTIFICATION:** Exact physics results and non-perturbative topological index theorems in N=1 supersymmetric gauge theory (NSVZ 1983, Witten 1982).
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
@@ -1235,12 +1247,14 @@
 - **COUPLING_REGIME:** `All couplings g > 0`
 - **LIMITS:** All orders in perturbation theory
 - **ASSUMPTIONS:** Maximal N=4 supersymmetry (6 adjoint scalars, 4 adjoint Weyl fermions).
-- **EXACT_RESULT:** All-orders perturbative proof that the beta function vanishes identically beta(g) = 0, establishing exact quantum superconformal invariance PSU(2,2|4) and Montonen-Olive S-duality invariance under g -> 1/g.
-- **EVIDENCE_CLASS:** `PERTURBATIVE_ALL_ORDERS_RESULT`
+- **EXACT_RESULT:** All-orders perturbative and protected-sector results establish beta(g) = 0 and the superconformal structure of N=4 SYM; they do not assert a complete finite-N nonperturbative solution of the QFT.
+- **EVIDENCE_CLASS:** `SUPERCONFORMAL_QFT_WITH_EXACT_PROTECTED_AND_ALL_ORDER_RESULTS`
+- **RESULT_SCOPE:** `EXACT_PROTECTED_AND_ALL_ORDER_RESULTS_WITHIN_N4_SUPERCONFORMAL_QFT`
+- **COMPLETE_SOLUTION_STATUS:** `DOES_NOT_CONSTITUTE_COMPLETE_CLAY_SOLUTION`
 - **CLASSIFICATION_JUSTIFICATION:** All-orders perturbative theorem in light-cone superspace (Mandelstam 1983) and classical/exact supersymmetric duality (Brink et al. 1977).
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
-- **WHAT_IT_PROVES:** Complete ultraviolet finiteness and exact conformal invariance of 4D N=4 Super Yang-Mills.
+- **WHAT_IT_PROVES:** All-order finiteness/protected-sector control and superconformal structure within 4D N=4 SYM.
 - **WHAT_IT_DOES_NOT_PROVE:** Mass gap generation (N=4 SYM is strictly massless with continuous spectrum Delta = 0).
 - **TRANSFER_BARRIER:** N=4 SYM is strictly scale-invariant and massless (Delta = 0) with continuous spectrum, 6 adjoint scalars, and 4 adjoint fermions. Pure 4D YM is non-supersymmetric, asymptotically free with non-zero beta function beta(g) < 0, and must generate a mass scale dynamically via dimensional transmutation.
 - **TRANSFERABLE_COMPONENT:** Perturbative light-cone superspace techniques, non-renormalization theorems, and S-duality concepts relating strong and weak coupling.
@@ -1271,15 +1285,17 @@
 - **COUPLING_REGIME:** `All couplings beta, gamma`
 - **LIMITS:** Infinite volume limit on lattice
 - **ASSUMPTIONS:** Lattice gauge theory coupled to fundamental scalar Higgs fields.
-- **EXACT_RESULT:** Rigorous mathematical proof that in lattice gauge theories coupled to fundamental scalar fields, the Higgs regime (large scalar hopping gamma) and confinement regime (small gauge coupling beta) are smoothly connected by an analytic path without a thermodynamic phase transition.
-- **EVIDENCE_CLASS:** `HIGGSED_QUANTUM_GAUGE_THEORY`
-- **CLASSIFICATION_JUSTIFICATION:** Rigorous mathematical theorem in lattice statistical mechanics (Fradkin & Shenker 1979) and classical Higgs mechanism (Higgs 1964).
+- **EXACT_RESULT:** Fradkin–Shenker prove analyticity along a specified path connecting Higgs and confinement regions in lattice gauge-Higgs theories with fundamental scalars; Higgs/Kibble separately describe scalar-induced gauge-boson mass generation.
+- **EVIDENCE_CLASS:** `GAUGE_HIGGS_LATTICE_ANALYTICITY_AND_HIGGS_MASS_RESULT`
+- **RESULT_SCOPE:** `FRADKIN_SHENKER_LATTICE_ANALYTICITY_WITH_SEPARATE_HIGGS_MECHANISM`
+- **COMPLETE_SOLUTION_STATUS:** `DOES_NOT_CONSTITUTE_COMPLETE_CLAY_SOLUTION`
+- **CLASSIFICATION_JUSTIFICATION:** Fradkin–Shenker is a lattice analyticity theorem for the stated gauge-Higgs parameter region; Higgs/Kibble is the separate scalar mass mechanism.
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
-- **WHAT_IT_PROVES:** Rigorous mathematical proof of analyticity and absence of an invariant local order parameter separating Higgs and confinement phases with fundamental matter.
+- **WHAT_IT_PROVES:** Analytic connection along the stated lattice gauge-Higgs path and the absence of a separating thermodynamic phase boundary there; it is not a theorem of pure-YM dynamical mass generation.
 - **WHAT_IT_DOES_NOT_PROVE:** Dynamical mass gap in pure Yang-Mills without fundamental scalar Higgs fields.
-- **TRANSFER_BARRIER:** Mass scale is generated by an explicit scalar potential parameter (-mu^2 Phi^dagger Phi + lambda (Phi^dagger Phi)^2) and vacuum expectation value <Phi> != 0. Pure 4D YM has no scalar fields, no fundamental Higgs condensate, and must generate a mass gap without any tree-level scalar mass parameter.
-- **TRANSFERABLE_COMPONENT:** Rigorous non-perturbative lattice theorem (Fradkin-Shenker 1979) proving that gauge theories with fundamental matter exhibit a continuous crossover between Higgs and confinement phases without a local order parameter.
+- **TRANSFER_BARRIER:** The Higgs mass mechanism uses fundamental scalars and a scalar potential, while Fradkin–Shenker analyticity concerns a lattice gauge-Higgs phase diagram. Neither supplies a dynamical mass gap in scalar-free pure 4D YM.
+- **TRANSFERABLE_COMPONENT:** Rigorous lattice analyticity result for the specified fundamental-matter gauge-Higgs path, kept distinct from the scalar Higgs mass mechanism.
 - **NONTRANSFERABLE_COMPONENT:** Presence of fundamental scalar Higgs fields, explicit tree-level scalar potential parameters, and non-zero scalar vacuum expectation values.
 - **BRIDGE_VARIABLES:** `scalar hopping parameter gamma, gauge coupling beta, scalar VEV v = <Phi>`
 - **FAILURE_LOCALITY:** `wrong dimension/theory (Lattice gauge-Higgs theory with fundamental scalars)`
@@ -1307,14 +1323,16 @@
 - **COUPLING_REGIME:** `Tree level`
 - **LIMITS:** Classical field equations
 - **ASSUMPTIONS:** Explicit quadratic mass term (1/2) m^2 A_mu A^mu inserted into Lagrangian.
-- **EXACT_RESULT:** Classical formulation of relativistic spin-1 field equations with 3 physical polarizations obeying (partial^2 + m^2) A_mu = 0 and partial_mu A^mu = 0, and Stueckelberg gauge restoration via auxiliary scalar field B(x) with shift symmetry.
-- **EVIDENCE_CLASS:** `CLASSICAL_MASS_MECHANISM`
-- **CLASSIFICATION_JUSTIFICATION:** Classical relativistic field theory formulation (Proca 1936, Stueckelberg 1938).
+- **EXACT_RESULT:** Proca gives classical massive spin-1 equations with 3 physical polarizations from an explicit mass term; Stueckelberg separately supplies a compensating-field formulation with formal Abelian gauge invariance.
+- **EVIDENCE_CLASS:** `PROCA_EXPLICIT_MASS_STUECKELBERG_GAUGE_REFORMULATION`
+- **RESULT_SCOPE:** `PROCA_EXPLICIT_VECTOR_MASS_AND_STUECKELBERG_ABELIAN_REFORMULATION`
+- **COMPLETE_SOLUTION_STATUS:** `DOES_NOT_CONSTITUTE_COMPLETE_CLAY_SOLUTION`
+- **CLASSIFICATION_JUSTIFICATION:** Proca's explicit-mass classical formulation and Stueckelberg's Abelian compensating-field reformulation are distinct results.
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
 - **WHAT_IT_PROVES:** Relativistic consistency of massive spin-1 vector fields with 3 propagating polarizations.
-- **WHAT_IT_DOES_NOT_PROVE:** Non-perturbative dynamical mass generation in gauge theories, or non-Abelian quantum consistency without Higgs.
-- **TRANSFER_BARRIER:** The mass term is inserted by hand as an explicit classical parameter in the Lagrangian, violating non-Abelian local gauge invariance and destroying non-Abelian perturbative renormalizability and unitarity in the absence of a Higgs mechanism. It does not describe a dynamically generated spectral gap in an unbroken non-Abelian gauge theory.
+- **WHAT_IT_DOES_NOT_PROVE:** Non-perturbative dynamical mass generation in gauge theories, or a complete non-Abelian quantum construction.
+- **TRANSFER_BARRIER:** Proca's mass is inserted by hand and is not dynamical. Stueckelberg restores an Abelian gauge-invariant formulation using a compensating field; non-Abelian extensions have separate renormalizability and consistency issues and do not provide the pure-YM spectral gap.
 - **TRANSFERABLE_COMPONENT:** Classical relativistic wave equations for massive spin-1 vector bosons and propagation of 3 physical polarization states.
 - **NONTRANSFERABLE_COMPONENT:** Explicit tree-level mass parameter in the bare Lagrangian, loss of non-Abelian gauge symmetry, and non-renormalizability in non-Abelian Proca theory.
 - **BRIDGE_VARIABLES:** `bare vector mass m, longitudinal polarization epsilon_L, Stueckelberg scalar B`
@@ -1345,6 +1363,8 @@
 - **ASSUMPTIONS:** AdS/CFT correspondence conjecture, classical supergravity approximation, large-N and large-lambda limit.
 - **EXACT_RESULT:** Holographic derivation that 4D gauge theories dual to supergravity on warped geometries with an infrared cap-off exhibit a discrete, normalizable Kaluza-Klein spectrum with a strictly positive glueball mass gap Delta > 0, linear Wilson area law, and a thermal confinement/deconfinement Hawking-Page phase transition.
 - **EVIDENCE_CLASS:** `HOLOGRAPHIC_CONJECTURAL_ANALOGUE`
+- **RESULT_SCOPE:** `HOLOGRAPHIC_CONJECTURAL_ANALOGUE`
+- **COMPLETE_SOLUTION_STATUS:** `DOES_NOT_CONSTITUTE_COMPLETE_CLAY_SOLUTION`
 - **CLASSIFICATION_JUSTIFICATION:** Conjectural gauge-gravity holographic model based on classical supergravity on curved warped backgrounds (Witten 1998, Polchinski & Strassler 2001).
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`

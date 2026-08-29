@@ -11,6 +11,8 @@
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
 - **EVIDENCE_CLASS:** `HOLOGRAPHIC_CONJECTURAL_ANALOGUE`
+- **RESULT_SCOPE:** `HOLOGRAPHIC_CONJECTURAL_ANALOGUE`
+- **COMPLETE_SOLUTION_STATUS:** `DOES_NOT_CONSTITUTE_COMPLETE_CLAY_SOLUTION`
 - **MASS_OR_GAP_MECHANISM:** Holographic dual higher-dimensional warped geometry with infrared cap-off generating discrete Kaluza-Klein glueball spectrum and Wilson area law
 - **TRANSFER_BARRIER:** Relies on an unproved gauge-gravity holographic duality conjecture, large-N limit (N -> infinity), large 't Hooft coupling (lambda = g^2 N >> 1), higher-dimensional curved spacetime geometry, and classical supergravity approximations that are uncontrolled in the UV weak-coupling regime (g^2 -> 0) and finite-N regime of 4D pure Yang-Mills.
 - **TRANSFERABLE_COMPONENT:** Geometrical picture of confinement via warp factors capping off in the infrared, translating mass gaps to Sturm-Liouville eigenvalue problems.

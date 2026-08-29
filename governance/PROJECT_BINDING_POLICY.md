@@ -54,6 +54,14 @@ Where {\\rm scientific}$ is computed over:
 - Cited source bundles: (source_id, source_version, source_content_hash, source_access_level).
 - Associated pathway memory entries.
 
+R3 adds discovery before hashing. Every discovered repository artifact is
+classified by `governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml` as
+`SCIENTIFIC`, `PROVENANCE_CRITICAL`, `ADMINISTRATIVE`, `GENERATED`, or
+`IGNORED_WITH_JUSTIFICATION`. `UNKNOWN` is terminal: a new research-shaped
+file in `literature/`, `proofs/`, `derivations/`, or a research-named file
+elsewhere fails closed. A `SCIENTIFIC` artifact is valid only when it is also
+present in the canonical fingerprint manifest.
+
 Post-E4 changes are strictly classified:
 - NONE: Identical Git tree.
 - ADMINISTRATIVE_ONLY: Modification strictly confined to review summaries, task graph status, contract ledger metadata, and checkpoint seals. Scientific tree hash is identical; E4 review remains valid.

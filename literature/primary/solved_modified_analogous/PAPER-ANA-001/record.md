@@ -11,6 +11,8 @@
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
 - **EVIDENCE_CLASS:** `RIGOROUS_MATHEMATICAL_CONSTRUCTION`
+- **RESULT_SCOPE:** `RIGOROUS_2D_YANG_MILLS_CONSTRUCTION`
+- **COMPLETE_SOLUTION_STATUS:** `DOES_NOT_CONSTITUTE_COMPLETE_CLAY_SOLUTION`
 - **MASS_OR_GAP_MECHANISM:** Heat-kernel / Brownian motion holonomy multiplicative processes on compact surfaces
 - **TRANSFER_BARRIER:** In 2D spacetime, the field strength F_12 is scalar-valued with zero propagating transverse gluonic degrees of freedom (2 - 2 = 0), making the theory topological/integrable; 4D YM contains 2 local propagating polarizations with non-linear UV ultraviolet singularities.
 - **TRANSFERABLE_COMPONENT:** Gauge-invariant probability measures on loop spaces, holonomy process construction, reflection positivity on cylinders/tori, exact Wilson loop area law calculations.

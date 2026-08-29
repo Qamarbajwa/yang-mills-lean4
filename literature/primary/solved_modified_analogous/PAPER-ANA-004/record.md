@@ -11,6 +11,8 @@
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
 - **EVIDENCE_CLASS:** `SEMICLASSICAL_MECHANISM`
+- **RESULT_SCOPE:** `SEMICLASSICAL_3D_GEORGI_GLASHOW_MECHANISM`
+- **COMPLETE_SOLUTION_STATUS:** `DOES_NOT_CONSTITUTE_COMPLETE_CLAY_SOLUTION`
 - **MASS_OR_GAP_MECHANISM:** 3D semiclassical dilute monopole gas inducing magnetic Debye screening and linear Wilson loop area law
 - **TRANSFER_BARRIER:** Relies on an adjoint Higgs field providing a classical symmetry-breaking scale v = <Phi> >> g^2 with point-like topological 't Hooft-Polyakov monopoles in 3D. In pure 4D YM, there is no scalar Higgs field, monopoles are 1D worldlines rather than 3D instanton points, and strong IR coupling destroys the dilute semiclassical approximation.
 - **TRANSFERABLE_COMPONENT:** Concept of magnetic charge disordering electric Wilson loops, generating dual Debye screening and linear confinement.

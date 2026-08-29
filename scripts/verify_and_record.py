@@ -26,7 +26,7 @@ def main():
     json_path = OUTDIR / f"verify_{stamp}.json"
 
     commands = [
-        [sys.executable, "-m", "pytest", "-q"],
+        [sys.executable, "-m", "pytest", "-q", "--basetemp", str(ROOT / ".pytest_r3_run_2")],
         [sys.executable, "scripts/check_repo.py"],
     ]
 

@@ -29,6 +29,27 @@ def test_manifest_sources_and_hashes():
         import hashlib
         actual_sha = hashlib.sha256(rec_path.read_bytes()).hexdigest()
         assert actual_sha == s["sha256"], f"Hash mismatch for {s['source_id']}"
+        record = rec_path.read_text(encoding="utf-8")
+        assert "RESULT_SCOPE:" in record
+        assert "- **COMPLETE_SOLUTION_STATUS:** `DOES_NOT_CONSTITUTE_COMPLETE_CLAY_SOLUTION`" in record
+
+
+def test_dr1_semantic_errata_preserves_scope_and_clay_non_sufficiency():
+    sources = {s["source_id"]: s for s in load_manifest()}
+    assert sources["PAPER-ANA-007"]["evidence_class"] == "SUPERCONFORMAL_QFT_WITH_EXACT_PROTECTED_AND_ALL_ORDER_RESULTS"
+    assert sources["PAPER-ANA-008"]["evidence_class"] == "GAUGE_HIGGS_LATTICE_ANALYTICITY_AND_HIGGS_MASS_RESULT"
+    assert sources["PAPER-ANA-009"]["evidence_class"] == "PROCA_EXPLICIT_MASS_STUECKELBERG_GAUGE_REFORMULATION"
+
+    theorem_text = THEOREM_PATH.read_text(encoding="utf-8")
+    analogue_block = theorem_text[theorem_text.index("THM-YM-0031"):]
+    assert analogue_block.count("- **COMPLETE_SOLUTION_STATUS:** `DOES_NOT_CONSTITUTE_COMPLETE_CLAY_SOLUTION`") == 10
+    assert "EXACT_CFT_SOLUTION" not in analogue_block
+    assert "Fradkin–Shenker prove analyticity along a specified path" in analogue_block
+    assert "Proca gives classical massive spin-1 equations" in analogue_block
+
+    pathway_text = PATHWAY_PATH.read_text(encoding="utf-8")
+    assert pathway_text.count("- **COMPLETE_SOLUTION_STATUS:** `DOES_NOT_CONSTITUTE_COMPLETE_CLAY_SOLUTION`") == 10
+    assert "EXACT_RESULT != COMPLETE_CLAY_SOLUTION" in pathway_text
 
 
 def test_analogue_theorems_in_ledger():

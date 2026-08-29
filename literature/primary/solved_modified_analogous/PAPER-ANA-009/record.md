@@ -10,19 +10,21 @@
 - **DOI:** `10.1051/jphysrad:0193600708034700`
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
-- **EVIDENCE_CLASS:** `CLASSICAL_MASS_MECHANISM`
-- **MASS_OR_GAP_MECHANISM:** Explicit classical mass term (1/2) m^2 A_mu A^mu inserted into Lagrangian; Stueckelberg scalar shift restoration of formal gauge invariance
-- **TRANSFER_BARRIER:** The mass term is inserted by hand as an explicit classical parameter in the Lagrangian, violating non-Abelian local gauge invariance and destroying non-Abelian perturbative renormalizability and unitarity in the absence of a Higgs mechanism. It does not describe a dynamically generated spectral gap in an unbroken non-Abelian gauge theory.
+- **EVIDENCE_CLASS:** `PROCA_EXPLICIT_MASS_STUECKELBERG_GAUGE_REFORMULATION`
+- **RESULT_SCOPE:** `PROCA_EXPLICIT_VECTOR_MASS_AND_STUECKELBERG_ABELIAN_REFORMULATION`
+- **COMPLETE_SOLUTION_STATUS:** `DOES_NOT_CONSTITUTE_COMPLETE_CLAY_SOLUTION`
+- **MASS_OR_GAP_MECHANISM:** Proca explicitly inserts a vector mass term (1/2) m^2 A_mu A^mu; Stueckelberg introduces a compensating field to formulate the Abelian massive-vector theory in a gauge-invariant way
+- **TRANSFER_BARRIER:** Proca's bare mass is not dynamical. Stueckelberg's compensating-field construction restores an Abelian gauge-invariant formulation; it does not turn the mass into a dynamically generated gap, and non-Abelian extensions have separate renormalizability and consistency issues.
 - **TRANSFERABLE_COMPONENT:** Classical relativistic wave equations for massive spin-1 vector bosons and propagation of 3 physical polarization states.
 - **NONTRANSFERABLE_COMPONENT:** Explicit tree-level mass parameter in the bare Lagrangian, loss of non-Abelian gauge symmetry, and non-renormalizability in non-Abelian Proca theory.
 
 ## Executive Summary
-Proca (1936) formulated the classical Lagrangian for massive vector bosons with an explicit mass term. Stueckelberg (1938) introduced an auxiliary scalar field B(x) with shift transformation B -> B + m Lambda to restore formal Abelian gauge invariance.
+Proca (1936) formulated the classical Lagrangian for massive vector bosons with an explicit mass term. Stueckelberg (1938) introduced an auxiliary scalar field B(x) with a compensating shift to provide a gauge-invariant Abelian formulation of the same explicit-mass theory. These are distinct constructions and neither supplies dynamical mass generation in pure non-Abelian Yang-Mills.
 
 ## Key Proven Results
 - Formulation of massive spin-1 relativistic field theory with 3 physical polarization degrees of freedom.
-- Stueckelberg formulation demonstrating that massive Abelian vector bosons can be represented with formal gauge invariance.
+- Stueckelberg formulation demonstrating that an explicitly massive Abelian vector can be represented in a gauge-invariant formulation.
 
 ## Limitations and Unresolved Boundaries
 - Explicit tree-level bare mass term; zero dynamical mass generation.
-- Non-Abelian Proca theory is non-renormalizable and violates local gauge symmetry; completely irrelevant to pure Yang-Mills mass gap.
+- Non-Abelian extensions require separate consistency and renormalizability analysis and do not establish the pure Yang-Mills mass gap.

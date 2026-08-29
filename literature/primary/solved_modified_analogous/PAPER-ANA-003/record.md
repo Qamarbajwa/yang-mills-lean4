@@ -11,6 +11,8 @@
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
 - **EVIDENCE_CLASS:** `EXACTLY_SOLVABLE_PHYSICS_MODEL`
+- **RESULT_SCOPE:** `EXACT_2D_ABELIAN_QFT_RESULT`
+- **COMPLETE_SOLUTION_STATUS:** `DOES_NOT_CONSTITUTE_COMPLETE_CLAY_SOLUTION`
 - **MASS_OR_GAP_MECHANISM:** 2D chiral anomaly / fermion vacuum polarization generating dynamical photon mass and exact bosonization
 - **TRANSFER_BARRIER:** Mechanism is strictly dependent on 2D spacetime (where [e] has mass dimension 1), Abelian U(1) gauge symmetry, fundamental dynamical Dirac fermions, and exact 1+1D bosonization. Pure 4D YM has no fundamental fermions, d=4, non-Abelian self-interactions, and no exact 4D bosonization.
 - **TRANSFERABLE_COMPONENT:** Demonstration that local gauge invariance does not forbid a non-zero gauge-boson mass when vacuum polarization develops an infrared pole (Schwinger mechanism).

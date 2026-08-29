@@ -151,6 +151,11 @@ $$\boxed{ \text{Accepted Scientific State Valid} \iff F_{\rm scientific}^{\rm au
 
 where $F_{\rm scientific}$ is the deterministic SHA-256 tree hash of all theorem statements, proofs, relevant dependencies, source records, and pathway registers.
 
+R3 discovery is part of candidate identity: the repository is classified before
+the tree hash is computed. The classification policy is explicit and
+integrity-bound; any `UNKNOWN` research-shaped artifact fails closed, and every
+`SCIENTIFIC` artifact must be present in the canonical fingerprint manifest.
+
 Lineage records:
 - `AUDITED_CANDIDATE_SHA`: Git SHA audited by the independent E4 verifier.
 - `ACCEPTANCE_COMMIT_SHA`: Git commit sealed upon contract acceptance.

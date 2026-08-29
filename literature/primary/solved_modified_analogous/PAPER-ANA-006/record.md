@@ -11,6 +11,8 @@
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
 - **EVIDENCE_CLASS:** `EXACT_SUPERSYMMETRIC_PHYSICS_RESULT`
+- **RESULT_SCOPE:** `EXACT_N1_SUPERSYMMETRIC_INVARIANTS`
+- **COMPLETE_SOLUTION_STATUS:** `DOES_NOT_CONSTITUTE_COMPLETE_CLAY_SOLUTION`
 - **MASS_OR_GAP_MECHANISM:** N=1 gluino condensation <lambda lambda> != 0, discrete Z_2N chiral symmetry breaking, non-zero Witten index I_W = N, and exact NSVZ beta function
 - **TRANSFER_BARRIER:** Requires N=1 supersymmetry, adjoint Majorana gluinos lambda, and anomalous U(1)_R axial symmetry. Pure 4D YM contains no fermions, no gluino condensate, no R-symmetry, and lacks supersymmetric instanton clustering theorems.
 - **TRANSFERABLE_COMPONENT:** Dynamical generation of a mass scale via dimensional transmutation and non-perturbative vacuum condensates.

@@ -11,6 +11,8 @@
 - **SOURCE_ACCESS:** `PRIMARY_FULL_TEXT`
 - **STORAGE_FORMAT:** `AUTHORITATIVE_METADATA_AND_EXCERPTS`
 - **EVIDENCE_CLASS:** `EXACTLY_SOLVABLE_PHYSICS_MODEL`
+- **RESULT_SCOPE:** `EXACT_LARGE_N_2D_LATTICE_MODEL_SOLUTION`
+- **COMPLETE_SOLUTION_STATUS:** `DOES_NOT_CONSTITUTE_COMPLETE_CLAY_SOLUTION`
 - **MASS_OR_GAP_MECHANISM:** Large-N steepest-descent / unitary matrix eigenvalue saddle point on 2D lattice
 - **TRANSFER_BARRIER:** Exact saddle-point solution requires N -> infinity on a discrete 2D single-plaquette lattice, suppressing 1/N non-planar fluctuations, higher-dimensional loop entanglement, and the non-trivial 4D continuum scaling trajectory.
 - **TRANSFERABLE_COMPONENT:** Identification of large-N master fields, eigenvalue density techniques, and the concept of third-order phase transitions separating weak and strong coupling regimes.

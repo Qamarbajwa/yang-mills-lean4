@@ -55,7 +55,7 @@
 | EVD-002CR2A-03 | YM-002CR2A Audited Modern Limitation Matrix & Dependency Graph | E3 | `literature/MODERN_LIMITATION_MATRIX.md`, `literature/MODERN_DEPENDENCY_GRAPH.md` | Matrix and graph verified | MACHINE_CHECKED | ACCEPTED |
 | EVD-002CR2A-04 | YM-002CR2A Fresh Blind E4 Independent Audit (Verifier `529d2a32-15bb-4bdf-b2b6-af422b22503e`) | E4 | `verification/raw/YM-002CR2A_E4_RAW_20260825T185749Z.md` | `d7e2b5455d411d072403d9441a0bfd12262b68d6898cce76bfb0eb2c07ef913e` (Candidate SHA: `5b7bd0adf9dbfd2e04c5a681c9fa35bc8ee25181`) | TRANSCRIPT_LOG_CAPTURED | ACCEPTED |
 | EVD-002CR2A-05 | YM-002CR2A Derived E4 Independent Review Report | E4_DERIVED | `verification/YM-002CR2A_INDEPENDENT_REVIEW.md` | Derived from raw `d7e2b5455d411d072403d9441a0bfd12262b68d6898cce76bfb0eb2c07ef913e` | TRACEABLE_TO_RAW_E4 | ACCEPTED |
-
+| EVD-ROS-100R3-01 | YM-ROS-100R3 + YM-002DR1 reproducible E3 closure verification | E3 | `evidence/test_runs/verify_20260829T221022Z.json` | Log SHA-256: `273f63f0989c6fa948e29761085ea7d79da283d71c38139f702afc844f007cca` | REPRODUCIBLE_LOCALLY (`scripts/verify_and_record.py`) | ACCEPTED_PENDING_FRESH_BLIND_DELTA_E4 |
 
 
 

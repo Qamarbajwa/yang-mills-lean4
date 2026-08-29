@@ -9,8 +9,10 @@ sources:
   journal: J. Funct. Anal. / Ann. Phys. / Mem. AMS
   doi: 10.1016/0022-1236(89)90008-8
   evidence_class: RIGOROUS_MATHEMATICAL_CONSTRUCTION
+  result_scope: RIGOROUS_2D_YANG_MILLS_CONSTRUCTION
+  complete_solution_status: DOES_NOT_CONSTITUTE_COMPLETE_CLAY_SOLUTION
   local_file: PAPER-ANA-001/record.md
-  sha256: 3bf29772fb805bca9cd51c2d294d405341d324412c2269a1faeb704b6786e239
+  sha256: 8c2c8e8754d9fb670cddf704f8972b8ec4506c970e0515af1ea8b4a278034176
   source_access: PRIMARY_FULL_TEXT
   storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
 - source_id: PAPER-ANA-002
@@ -20,8 +22,10 @@ sources:
   journal: Phys. Rev. D / Phys. Lett. B
   doi: 10.1103/PhysRevD.21.446
   evidence_class: EXACTLY_SOLVABLE_PHYSICS_MODEL
+  result_scope: EXACT_LARGE_N_2D_LATTICE_MODEL_SOLUTION
+  complete_solution_status: DOES_NOT_CONSTITUTE_COMPLETE_CLAY_SOLUTION
   local_file: PAPER-ANA-002/record.md
-  sha256: 8d7ce298a12e951d16f5107f069e59ccdb7c8916e7945c69c88d964c4d9032e0
+  sha256: 6a6f315907712fd96f8a00b5330994924d8e250aa78ab9afadab967df9c576bd
   source_access: PRIMARY_FULL_TEXT
   storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
 - source_id: PAPER-ANA-003
@@ -31,8 +35,10 @@ sources:
   journal: Phys. Rev. / Ann. Phys.
   doi: 10.1103/PhysRev.128.2425
   evidence_class: EXACTLY_SOLVABLE_PHYSICS_MODEL
+  result_scope: EXACT_2D_ABELIAN_QFT_RESULT
+  complete_solution_status: DOES_NOT_CONSTITUTE_COMPLETE_CLAY_SOLUTION
   local_file: PAPER-ANA-003/record.md
-  sha256: 8d17fc5a1ababd58ac99d8165d42671465c6802d9072349c48881c3b6c9d762e
+  sha256: 434ec7a1033648c62a71a58abe6381481228887ef6f9197e8aa8651800c106d7
   source_access: PRIMARY_FULL_TEXT
   storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
 - source_id: PAPER-ANA-004
@@ -42,8 +48,10 @@ sources:
   journal: Nucl. Phys. B
   doi: 10.1016/0550-3213(77)90086-4
   evidence_class: SEMICLASSICAL_MECHANISM
+  result_scope: SEMICLASSICAL_3D_GEORGI_GLASHOW_MECHANISM
+  complete_solution_status: DOES_NOT_CONSTITUTE_COMPLETE_CLAY_SOLUTION
   local_file: PAPER-ANA-004/record.md
-  sha256: a34a598c9aef8aeca2978b635761a16e7d7de452c9aa91fbac6e2c61cae9de4c
+  sha256: 777d01c970cd3d0d57497e1808820a3c171e5fd8338664dd550bfbbeb22e530f
   source_access: PRIMARY_FULL_TEXT
   storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
 - source_id: PAPER-ANA-005
@@ -54,8 +62,10 @@ sources:
   journal: Nucl. Phys. B
   doi: 10.1016/0550-3213(94)90124-4
   evidence_class: EXACT_SUPERSYMMETRIC_PHYSICS_RESULT
+  result_scope: EXACT_N2_LOW_ENERGY_EFFECTIVE_THEORY_RESULT
+  complete_solution_status: DOES_NOT_CONSTITUTE_COMPLETE_CLAY_SOLUTION
   local_file: PAPER-ANA-005/record.md
-  sha256: b1eab2c99ea48e0a3eec2b1d7061681678283f805b8cf2f6758e25f3c456dd65
+  sha256: 41e44070ad4bd8d83b3ebbcc194dc8bc791fa370c5636d62f33438b18503657c
   source_access: PRIMARY_FULL_TEXT
   storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
 - source_id: PAPER-ANA-006
@@ -67,8 +77,10 @@ sources:
   journal: Nucl. Phys. B
   doi: 10.1016/0550-3213(83)90338-3
   evidence_class: EXACT_SUPERSYMMETRIC_PHYSICS_RESULT
+  result_scope: EXACT_N1_SUPERSYMMETRIC_INVARIANTS
+  complete_solution_status: DOES_NOT_CONSTITUTE_COMPLETE_CLAY_SOLUTION
   local_file: PAPER-ANA-006/record.md
-  sha256: 28392d3b95a286dd7d46cc5aeee0154a0bd9eac3f32e4edf42bae2e0881bae36
+  sha256: 1023fac61c28012dcef4c17e579c03e54927f2a4bce90b839d3641135846bde3
   source_access: PRIMARY_FULL_TEXT
   storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
 - source_id: PAPER-ANA-007
@@ -78,9 +90,11 @@ sources:
   year: 1983/1977
   journal: Nucl. Phys. B
   doi: 10.1016/0550-3213(83)90179-7
-  evidence_class: PERTURBATIVE_ALL_ORDERS_RESULT
+  evidence_class: SUPERCONFORMAL_QFT_WITH_EXACT_PROTECTED_AND_ALL_ORDER_RESULTS
+  result_scope: EXACT_PROTECTED_AND_ALL_ORDER_RESULTS_WITHIN_N4_SUPERCONFORMAL_QFT
+  complete_solution_status: DOES_NOT_CONSTITUTE_COMPLETE_CLAY_SOLUTION
   local_file: PAPER-ANA-007/record.md
-  sha256: 189efe406291432f6f9d0ec0aa1e0f3786be88a66a12232fb99c18d88f55cea9
+  sha256: a9e60197f77a7849dec5ac235178f4a1491ae020d12e1921441af0f266380427
   source_access: PRIMARY_FULL_TEXT
   storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
 - source_id: PAPER-ANA-008
@@ -90,9 +104,11 @@ sources:
   year: 1964/1979
   journal: Phys. Rev. Lett. / Phys. Rev. D
   doi: 10.1103/PhysRevLett.13.508
-  evidence_class: HIGGSED_QUANTUM_GAUGE_THEORY
+  evidence_class: GAUGE_HIGGS_LATTICE_ANALYTICITY_AND_HIGGS_MASS_RESULT
+  result_scope: FRADKIN_SHENKER_LATTICE_ANALYTICITY_WITH_SEPARATE_HIGGS_MECHANISM
+  complete_solution_status: DOES_NOT_CONSTITUTE_COMPLETE_CLAY_SOLUTION
   local_file: PAPER-ANA-008/record.md
-  sha256: 60cc581ce632fc21a7e60c9dc7306b0a929505bee5f2b93e943f692b57d1983d
+  sha256: de559da6351929e804066007164fd1b7766628ed6e6c742e2fc0fab694ef608e
   source_access: PRIMARY_FULL_TEXT
   storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
 - source_id: PAPER-ANA-009
@@ -102,9 +118,11 @@ sources:
   year: 1936/1938
   journal: J. Phys. Radium / Helv. Phys. Acta
   doi: 10.1051/jphysrad:0193600708034700
-  evidence_class: CLASSICAL_MASS_MECHANISM
+  evidence_class: PROCA_EXPLICIT_MASS_STUECKELBERG_GAUGE_REFORMULATION
+  result_scope: PROCA_EXPLICIT_VECTOR_MASS_AND_STUECKELBERG_ABELIAN_REFORMULATION
+  complete_solution_status: DOES_NOT_CONSTITUTE_COMPLETE_CLAY_SOLUTION
   local_file: PAPER-ANA-009/record.md
-  sha256: 2392ac870c7a0bbb8c57e6c915466b18e4f9d9b61ce95ced59db62d8cb23ff2e
+  sha256: 6099841e5e66cbb1396896e6c17b99d4a7de23773955681ca456affbd685ffcb
   source_access: PRIMARY_FULL_TEXT
   storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS
 - source_id: PAPER-ANA-010
@@ -115,7 +133,9 @@ sources:
   journal: Adv. Theor. Math. Phys. / Phys. Rev. Lett.
   doi: 10.4310/ATMP.1998.v2.n3.a3
   evidence_class: HOLOGRAPHIC_CONJECTURAL_ANALOGUE
+  result_scope: HOLOGRAPHIC_CONJECTURAL_ANALOGUE
+  complete_solution_status: DOES_NOT_CONSTITUTE_COMPLETE_CLAY_SOLUTION
   local_file: PAPER-ANA-010/record.md
-  sha256: 3be2163806c96386d6b3e3186f39b10f337758895da034aad15ba18a6b070c45
+  sha256: 596766fff1c54b45f1559abbb50a770151a4e5ebadabd7279952483a66a1e3a2
   source_access: PRIMARY_FULL_TEXT
   storage_format: AUTHORITATIVE_METADATA_AND_EXCERPTS

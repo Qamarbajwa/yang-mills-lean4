@@ -514,6 +514,74 @@ contracts:
   candidate_id: 18b255d6779b0e9702fcc43305f86cc5cfc99da1
   outcome: E4_PASS_AWAITING_HUMAN_OWNER_ACCEPTANCE
 
+- contract_id: CONTRACT-YM-ROS-100R3
+  task_id: YM-ROS-100R3
+  risk_tier: T4
+  base_sha: "18b255d6779b0e9702fcc43305f86cc5cfc99da1"
+  writer:
+    environment: Codex
+    agent_id: primary-worker
+    model: GPT-5
+  reviewer:
+    environment: Independent verifier required
+    agent_id: PENDING_FRESH_BLIND_DELTA_E4
+    independence_level: PENDING
+  acceptance_authority:
+    environment: HumanOwner + CI
+    authority_id: human-owner-and-ci-evaluator
+    authority_type: ENVIRONMENT_LOCAL
+  allowed_scope:
+    - governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml
+    - governance/MATHEMATICAL_RESEARCH_OPERATING_SYSTEM_v1.0.md
+    - governance/EPISTEMIC_TAXONOMY_v1.0.yaml
+    - governance/PROJECT_BINDING_POLICY.md
+    - src/ymmg/ros.py
+    - tests/test_research_operating_system.py
+    - scripts/verify_and_record.py
+    - TASK_GRAPH.md
+    - CURRENT_SCIENTIFIC_STATE.md
+    - NEXT_ACTION.md
+  forbidden_scope:
+    - OFFICIAL_PROBLEM_SPECIFICATION.md
+    - Authoring raw E4 text directly
+    - Self-declaring human-owner constitutional acceptance
+  outcome: E3_VERIFIED_AWAITING_FRESH_BLIND_DELTA_E4
+
+- contract_id: CONTRACT-YM-002DR1
+  task_id: YM-002DR1
+  risk_tier: T3
+  base_sha: "ef51b69350c8b78ad81799404fb32967266d3e16"
+  writer:
+    environment: Codex
+    agent_id: primary-worker
+    model: GPT-5
+  reviewer:
+    environment: Independent verifier required
+    agent_id: PENDING_FRESH_BLIND_DELTA_E4
+    independence_level: PENDING
+  acceptance_authority:
+    environment: HumanOwner + CI
+    authority_id: human-owner-and-ci-evaluator
+    authority_type: ENVIRONMENT_LOCAL
+  allowed_scope:
+    - literature/primary/solved_modified_analogous/**
+    - literature/ANALOGUE_MECHANISM_MATRIX.md
+    - literature/ANALOGUE_LIMITATION_MATRIX.md
+    - literature/ANALOGUE_DEPENDENCY_GRAPH.md
+    - literature/PATHWAY_MEMORY_REGISTER.md
+    - RESEARCH_LEDGER.md
+    - THEOREM_LEDGER.md
+    - tests/test_analogous_theories.py
+    - tests/test_pathway_epistemic_taxonomy.py
+    - TASK_GRAPH.md
+    - CURRENT_SCIENTIFIC_STATE.md
+    - NEXT_ACTION.md
+  forbidden_scope:
+    - OFFICIAL_PROBLEM_SPECIFICATION.md
+    - Authoring raw E4 text directly
+    - Self-declaring human-owner constitutional acceptance
+  outcome: E3_VERIFIED_AWAITING_FRESH_BLIND_DELTA_E4
+
 
 
 

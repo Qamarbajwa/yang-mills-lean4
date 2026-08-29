@@ -40,7 +40,7 @@
   - Acceptance challenged due to premature self-declaration of constitutional acceptance prior to explicit human owner sign-off (recorded as incident `IVR-003`).
 
 - ROS v1.0 Constitutional & Epistemic Hardening Repair (`YM-ROS-100R2` - INDEPENDENTLY_VERIFIED):
-  - Closed-world `SCIENTIFIC_FINGERPRINT_MANIFEST` (16 canonical scientific files) and canonical tree hash $F_{\text{scientific}}$ (`e401e50e6f09815adb1bc0f23c2960df2c8b0dc0043f2ab4f93174eb469f8ecb`) implemented.
+  - Closed-world `SCIENTIFIC_FINGERPRINT_MANIFEST` (16 canonical scientific files) and canonical tree hash $F_{\text{scientific}}$ implemented.
   - `validate_project_binding()` hardened with Git root verification, directory matching, and `governance/project-governance.yaml` verification.
   - `PROVENANCE_CRITICAL` post-E4 change classification and raw-E4 SHA-256 byte reconciliation implemented in `src/ymmg/ros.py`.
   - Fail-closed obstruction transitions and memory contamination barriers enforced.
@@ -49,6 +49,14 @@
   - Deterministic test suite `tests/test_research_operating_system.py` (16 passing tests; 154 repository-wide) passing cleanly.
   - Fresh blind independent E4 verifier subagent `fc1bf746-16bc-4e1a-a4cf-06375b9ed63e` issued `INTEGRITY_PASS` on Candidate SHA `18b255d6779b0e9702fcc43305f86cc5cfc99da1`.
   - Current status: `ROS_v1.0 = AWAITING_HUMAN_OWNER_ACCEPTANCE`.
+
+- ROS v1.0 Discovery Closure and Analogue Semantic Errata (`YM-ROS-100R3` / `YM-002DR1` - E3 VERIFIED, FRESH BLIND DELTA-E4 PENDING):
+  - Added integrity-bound artifact classification policy with `SCIENTIFIC`, `PROVENANCE_CRITICAL`, `ADMINISTRATIVE`, `GENERATED`, `IGNORED_WITH_JUSTIFICATION`, and fail-closed `UNKNOWN` classes.
+  - Scientific fingerprint discovery now covers the policy plus the 16 canonical scientific files and rejects unclassified research-shaped files before hashing; regressions cover new proof, lemma, and primary-source artifacts.
+  - Reconciled all ten analogue records, theorem entries, matrices, dependency graph, pathway register, and research summary with explicit result scopes and `DOES_NOT_CONSTITUTE_COMPLETE_CLAY_SOLUTION` guards.
+  - Corrected N=4 SYM to `SUPERCONFORMAL_QFT_WITH_EXACT_PROTECTED_AND_ALL_ORDER_RESULTS`, separated Fradkin–Shenker lattice analyticity from the Higgs mass mechanism, and separated Proca explicit mass from the Stueckelberg Abelian reformulation.
+  - E3 status: focused ROS suite `18 passed`; analogue reconciliation suite `7 passed`. Fresh independent delta-E4 receipts are not yet present.
+  - Current authoritative state remains: `YM-ROS-100R3 = E3_VERIFIED_AWAITING_FRESH_BLIND_E4`, `YM-002DR1 = E3_VERIFIED_AWAITING_FRESH_BLIND_E4`, `ROS_v1.0 = AWAITING_HUMAN_OWNER_ACCEPTANCE`, `YM-002E = BLOCKED`.
 
 
 ## REPOSITORY SYNCHRONIZATION
@@ -68,8 +76,7 @@
 Rigorous constructive control linking ultraviolet asymptotic freedom to infrared mass generation remains open in 4D continuum spacetime across the strong-coupling transition ($g_k \sim 1$).
 
 ## NEXT ACTION
-Commit candidate SHA for `YM-ROS-100R2`, conduct fresh blind independent E4 review, and hold terminal state at `ROS_v1.0 = AWAITING_HUMAN_OWNER_ACCEPTANCE`.
-
+Obtain fresh blind delta-E4 receipts for `YM-ROS-100R3` and `YM-002DR1`, reconcile their raw hashes against the candidate SHA, and hold terminal state at `ROS_v1.0 = AWAITING_HUMAN_OWNER_ACCEPTANCE` with `YM-002E = BLOCKED`.
 
 
 

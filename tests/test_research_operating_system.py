@@ -5,6 +5,9 @@ from pathlib import Path
 from src.ymmg.ros import (
     validate_project_binding,
     compute_closed_world_scientific_tree_hash,
+    classify_repository_artifact,
+    discover_repository_artifacts,
+    validate_scientific_artifact_classification,
     compute_canonical_dependency_hash,
     compute_cited_source_hash,
     evaluate_post_e4_change_class,
@@ -37,13 +40,38 @@ def test_law_0_minimal_read_exception_and_fail_closed_gate(tmp_path):
         validate_project_binding(tmp_path, "YANG_MILLS_MASS_GAP")
 
 def test_closed_world_scientific_fingerprint_manifest():
-    assert len(SCIENTIFIC_FINGERPRINT_MANIFEST) == 16
+    assert len(SCIENTIFIC_FINGERPRINT_MANIFEST) == 17
     tree_hash, file_hashes = compute_closed_world_scientific_tree_hash(ROOT)
     assert len(tree_hash) == 64
-    assert len(file_hashes) == 16
+    assert len(file_hashes) == 17
     for rel_path in SCIENTIFIC_FINGERPRINT_MANIFEST:
         assert rel_path in file_hashes
         assert (ROOT / rel_path).exists()
+
+
+def test_r3_classifies_existing_repository_without_unknown_artifacts():
+    classifications = validate_scientific_artifact_classification(ROOT)
+    assert classifications["governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"] == "SCIENTIFIC"
+    assert classifications["literature/primary/solved_modified_analogous/PAPER-ANA-001/record.md"] == "PROVENANCE_CRITICAL"
+    assert classifications["verification/raw/YM-ROS-100R2_E4_RAW_20260829T004439Z.md"] == "PROVENANCE_CRITICAL"
+    assert classifications["checkpoints/checkpoint_20260829T004511Z.json"] == "GENERATED"
+
+
+def test_r3_new_scientific_locations_fail_closed():
+    assert classify_repository_artifact(ROOT, "proofs/bridge_lemma.md") == "UNKNOWN"
+    assert classify_repository_artifact(ROOT, "OPEN_LEMMA_REGISTER_R3.md") == "UNKNOWN"
+    assert classify_repository_artifact(
+        ROOT, "literature/primary/solved_modified_analogous/PAPER-ANA-011/record.md"
+    ) == "UNKNOWN"
+
+    # The discovery API sees an untracked artifact as well as Git-tracked files.
+    new_path = ROOT / "proofs" / "bridge_lemma.md"
+    new_path.write_text("# unclassified bridge lemma\n", encoding="utf-8")
+    try:
+        with pytest.raises(ConstitutionalIntegrityError, match="Unknown research artifact"):
+            discover_repository_artifacts(ROOT) and validate_scientific_artifact_classification(ROOT)
+    finally:
+        new_path.unlink()
 
 def test_source_bound_official_target_fields():
     assert TAXONOMY_PATH.exists(), "EPISTEMIC_TAXONOMY_v1.0.yaml must exist"

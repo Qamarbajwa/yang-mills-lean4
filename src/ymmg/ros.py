@@ -2,6 +2,7 @@ import hashlib
 import json
 import subprocess
 import yaml
+from functools import lru_cache
 from pathlib import Path
 from typing import Dict, List, Any, Optional, Tuple
 
@@ -13,6 +14,17 @@ class ConstitutionalIntegrityError(Exception):
 
 EXPECTED_PROJECT_IDS = {"YM-MASS-GAP", "YANG_MILLS_MASS_GAP"}
 EXPECTED_REPO_DIR_NAME = "yang mills and the mass gap"
+
+ARTIFACT_CLASSES = {
+    "SCIENTIFIC",
+    "PROVENANCE_CRITICAL",
+    "ADMINISTRATIVE",
+    "GENERATED",
+    "IGNORED_WITH_JUSTIFICATION",
+    "UNKNOWN",
+}
+
+SCIENTIFIC_ARTIFACT_CLASSIFICATION_PATH = "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
 SCIENTIFIC_FINGERPRINT_MANIFEST = [
     "CLAIM_EVIDENCE_MATRIX.md",
@@ -31,7 +43,205 @@ SCIENTIFIC_FINGERPRINT_MANIFEST = [
     "literature/FOUNDATIONAL_LIMITATION_MATRIX.md",
     "literature/MODERN_LIMITATION_MATRIX.md",
     "literature/PATHWAY_MEMORY_REGISTER.md",
+    SCIENTIFIC_ARTIFACT_CLASSIFICATION_PATH,
 ]
+
+# These files are controlled research/provenance records but are deliberately
+# not part of the scientific-content tree. Their paths are explicit so a new
+# ledger, lemma register, or source artifact cannot silently join this class.
+KNOWN_PROVENANCE_CRITICAL_PATHS = {
+    "CLAIM_QUARANTINE_REGISTER.md",
+    "CURRENT_SCIENTIFIC_STATE.md",
+    "EVIDENCE_LEDGER.md",
+    "HYPOTHESIS_REGISTER.md",
+    "INTEGRITY_VIOLATION_REGISTER.md",
+    "KNOWN_GOOD_CHECKPOINT.md",
+    "NEXT_ACTION.md",
+    "OPEN_LEMMA_REGISTER.md",
+    "OFFICIAL_PROBLEM_STATUS_INVARIANT.md",
+    "REJECTION_LEDGER.md",
+    "RESEARCH_LEDGER.md",
+    "SCIENTIFIC_INTERROGATION_LEDGER.md",
+    "SOURCE_OF_TRUTH.md",
+    "TASK_GRAPH.md",
+    "VERIFICATION_LEDGER.md",
+    "literature/CLAIM_QUARANTINE_REGISTER.md",
+    "literature/CONSTRUCTIVE_DEPENDENCY_GRAPH.md",
+    "literature/FOUNDATIONAL_DEPENDENCY_GRAPH.md",
+    "literature/MODERN_DEPENDENCY_GRAPH.md",
+}
+
+KNOWN_ADMINISTRATIVE_ROOT_PATHS = {
+    ".gitignore",
+    "INIT_GIT_WINDOWS.ps1",
+    "PROJECT_PROFILE.md",
+    "README.md",
+    "RUN_VERIFY.ps1",
+    "SETUP_WINDOWS.ps1",
+    "TEST_STRATEGY.md",
+    "pyproject.toml",
+    "requirements.txt",
+}
+
+GENERATED_PREFIXES = ("checkpoints/", "evidence/", "experiments/", "numerical/")
+PROVENANCE_PREFIXES = ("verification/",)
+ADMINISTRATIVE_PREFIXES = ("governance/", "scripts/", "src/", "tests/")
+IGNORED_EXACT_PATHS = {
+    "checkpoints/.gitkeep",
+    "derivations/.gitkeep",
+    "evidence/test_runs/.gitkeep",
+    "experiments/records/.gitkeep",
+    "literature/primary/.gitkeep",
+    "literature/reviews/.gitkeep",
+    "numerical/.gitkeep",
+    "proofs/.gitkeep",
+    "verification/.gitkeep",
+}
+
+
+def _normalize_relative_path(path: Path) -> str:
+    value = path.as_posix()
+    return value[2:] if value.startswith("./") else value
+
+
+def _workspace_relative_path(workspace_root: Path, path: Path) -> str:
+    return _normalize_relative_path(path.resolve().relative_to(workspace_root.resolve()))
+
+
+def _load_classification_policy(workspace_root: Path) -> Dict[str, Any]:
+    policy_path = workspace_root / SCIENTIFIC_ARTIFACT_CLASSIFICATION_PATH
+    if not policy_path.exists():
+        raise ConstitutionalIntegrityError(
+            f"Scientific artifact classification policy missing: {SCIENTIFIC_ARTIFACT_CLASSIFICATION_PATH}"
+        )
+    try:
+        policy = yaml.safe_load(policy_path.read_text(encoding="utf-8"))
+    except (OSError, yaml.YAMLError) as exc:
+        raise ConstitutionalIntegrityError("Scientific artifact classification policy is unreadable") from exc
+    if not isinstance(policy, dict) or set(policy.get("classes", [])) != ARTIFACT_CLASSES:
+        raise ConstitutionalIntegrityError("Scientific artifact classification policy has an invalid class set")
+    declared = policy.get("scientific_fingerprint", {}).get("paths")
+    if sorted(declared or []) != sorted(SCIENTIFIC_FINGERPRINT_MANIFEST):
+        raise ConstitutionalIntegrityError(
+            "Scientific artifact classification policy does not match the canonical fingerprint manifest"
+        )
+    return policy
+
+
+@lru_cache(maxsize=8)
+def _manifest_referenced_paths(workspace_root: Path) -> set[str]:
+    """Return source artifacts explicitly registered by primary manifests."""
+    referenced: set[str] = set()
+    primary_root = workspace_root / "literature" / "primary"
+    manifest_paths = list(primary_root.glob("*/manifest.yaml"))
+    manifest_paths.extend(primary_root.glob("*/SOURCE_MANIFEST.yaml"))
+    for manifest_path in manifest_paths:
+        try:
+            data = yaml.safe_load(manifest_path.read_text(encoding="utf-8")) or {}
+        except (OSError, yaml.YAMLError) as exc:
+            raise ConstitutionalIntegrityError(f"Unreadable primary manifest: {manifest_path}") from exc
+        for source in data.get("sources", []):
+            if not isinstance(source, dict):
+                continue
+            local_file = source.get("local_file")
+            if local_file:
+                referenced.add(_workspace_relative_path(workspace_root, manifest_path.parent / local_file))
+            file_name = source.get("file_name")
+            if file_name:
+                referenced.add(_workspace_relative_path(workspace_root, manifest_path.parent / file_name))
+    return referenced | {"literature/primary/clay/jaffe_witten_extracted.txt"}
+
+
+def classify_repository_artifact(workspace_root: Path, relative_path: str) -> str:
+    """Classify one repository artifact under the R3 closed-world policy."""
+    rel = _normalize_relative_path(Path(relative_path))
+    if rel in SCIENTIFIC_FINGERPRINT_MANIFEST:
+        return "SCIENTIFIC"
+    if rel in IGNORED_EXACT_PATHS:
+        return "IGNORED_WITH_JUSTIFICATION"
+    if rel in KNOWN_PROVENANCE_CRITICAL_PATHS or rel in _manifest_referenced_paths(workspace_root):
+        return "PROVENANCE_CRITICAL"
+    if rel.startswith("literature/primary/") and (
+        rel.endswith("/manifest.yaml") or rel.endswith("/SOURCE_MANIFEST.yaml")
+    ):
+        return "PROVENANCE_CRITICAL"
+    if rel == "yang_mills_mass_gap_local_scaffold.zip":
+        return "GENERATED"
+    if any(rel.startswith(prefix) for prefix in GENERATED_PREFIXES):
+        return "GENERATED"
+    if any(rel.startswith(prefix) for prefix in PROVENANCE_PREFIXES):
+        return "PROVENANCE_CRITICAL"
+    if rel in KNOWN_ADMINISTRATIVE_ROOT_PATHS or any(
+        rel.startswith(prefix) for prefix in ADMINISTRATIVE_PREFIXES
+    ):
+        return "ADMINISTRATIVE"
+
+    # Research-shaped locations and names are never implicitly administrative.
+    # This is the fail-closed boundary for new proofs, lemmas, theorem support,
+    # and unregistered primary-source material.
+    name = Path(rel).name.upper()
+    research_markers = (
+        "LEDGER", "THEOREM", "LEMMA", "HYPOTHESIS", "EVIDENCE", "SPECIFICATION",
+        "MATRIX", "GRAPH", "PROOF", "SOURCE", "RESEARCH", "PATHWAY",
+    )
+    research_suffixes = {".MD", ".YAML", ".YML", ".TXT", ".TEX", ".PDF", ".IPYNB"}
+    if rel.startswith(("literature/", "proofs/", "derivations/")) or (
+        Path(rel).suffix.upper() in research_suffixes and any(marker in name for marker in research_markers)
+    ):
+        return "UNKNOWN"
+    return "UNKNOWN"
+
+
+def discover_repository_artifacts(workspace_root: Path) -> Dict[str, str]:
+    """Discover and classify all files, including untracked research files."""
+    _load_classification_policy(workspace_root)
+    # Git gives the stable baseline cheaply. The additional bounded scans cover
+    # untracked research files in the only locations where they can extend the
+    # scientific packet without walking .venv/node_modules/build outputs.
+    paths: set[Path] = set()
+    try:
+        result = subprocess.run(
+            ["git", "ls-files", "-z"],
+            cwd=workspace_root,
+            capture_output=True,
+            check=True,
+        )
+        paths.update(workspace_root / item.decode("utf-8") for item in result.stdout.split(b"\0") if item)
+    except (OSError, subprocess.CalledProcessError):
+        paths.update(path for path in workspace_root.iterdir() if path.is_file())
+
+    for search_root in (workspace_root / "literature", workspace_root / "proofs", workspace_root / "derivations"):
+        if search_root.exists():
+            paths.update(path for path in search_root.rglob("*") if path.is_file())
+    paths.update(path for path in workspace_root.iterdir() if path.is_file())
+    policy_path = workspace_root / SCIENTIFIC_ARTIFACT_CLASSIFICATION_PATH
+    if policy_path.exists():
+        paths.add(policy_path)
+
+    classifications: Dict[str, str] = {}
+    for path in paths:
+        rel = _normalize_relative_path(path.relative_to(workspace_root))
+        classifications[rel] = classify_repository_artifact(workspace_root, rel)
+    return classifications
+
+
+def validate_scientific_artifact_classification(workspace_root: Path) -> Dict[str, str]:
+    """Reject unknown or out-of-manifest research artifacts before fingerprinting."""
+    classifications = discover_repository_artifacts(workspace_root)
+    unknown = sorted(path for path, cls in classifications.items() if cls == "UNKNOWN")
+    if unknown:
+        raise ConstitutionalIntegrityError(
+            "Unknown research artifact(s) discovered; classify and bind before acceptance: " + ", ".join(unknown)
+        )
+    out_of_manifest = sorted(
+        path for path, cls in classifications.items()
+        if cls == "SCIENTIFIC" and path not in SCIENTIFIC_FINGERPRINT_MANIFEST
+    )
+    if out_of_manifest:
+        raise ConstitutionalIntegrityError(
+            "Scientific artifact(s) are outside the canonical fingerprint manifest: " + ", ".join(out_of_manifest)
+        )
+    return classifications
 
 def validate_project_binding(workspace_root: Path, task_project_id: str) -> bool:
     """
@@ -81,12 +291,20 @@ def validate_project_binding(workspace_root: Path, task_project_id: str) -> bool
 
 def compute_closed_world_scientific_tree_hash(workspace_root: Path) -> Tuple[str, Dict[str, str]]:
     """
-    Computes deterministic closed-world SHA-256 tree hash over all canonical scientific files.
+    Discovers the repository under the R3 classification policy, then computes
+    a deterministic SHA-256 tree hash over every classified scientific file.
     """
+    classifications = validate_scientific_artifact_classification(workspace_root)
     file_hashes = {}
     entries = []
     
-    for rel_path in sorted(SCIENTIFIC_FINGERPRINT_MANIFEST):
+    discovered_scientific = sorted(path for path, cls in classifications.items() if cls == "SCIENTIFIC")
+    if discovered_scientific != sorted(SCIENTIFIC_FINGERPRINT_MANIFEST):
+        raise ConstitutionalIntegrityError(
+            "Discovered scientific artifact set does not equal the canonical fingerprint manifest"
+        )
+
+    for rel_path in discovered_scientific:
         full_path = workspace_root / rel_path
         if not full_path.exists():
             raise ConstitutionalIntegrityError(f"Canonical scientific file missing: {rel_path}")

@@ -111,13 +111,24 @@ memory_partitions:
   structural:
     scope: "Theorem dependency DAGs, critical load-bearing cut-sets, pathway memory register, 7D resonance vectors, common obstruction candidates."
 
-candidate_identity_rules:
-  scientific_fingerprint_components:
-    - theorem_statements
-    - formal_proofs
-    - canonical_dependency_tuples: "(dependency_id, dependency_version, dependency_statement_hash)"
-    - cited_source_bundles: "(source_id, source_version, source_content_hash, source_access_level)"
-    - pathway_memory_records
+  candidate_identity_rules:
+    artifact_classification_policy:
+      classes:
+        - SCIENTIFIC
+        - PROVENANCE_CRITICAL
+        - ADMINISTRATIVE
+        - GENERATED
+        - IGNORED_WITH_JUSTIFICATION
+        - UNKNOWN
+      unknown_action: "FAIL_CLOSED"
+      policy_file: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
+      rule: "Every discovered research-shaped artifact must be explicitly classified before a scientific fingerprint is accepted."
+    scientific_fingerprint_components:
+      - theorem_statements
+      - formal_proofs
+      - canonical_dependency_tuples: "(dependency_id, dependency_version, dependency_statement_hash)"
+      - cited_source_bundles: "(source_id, source_version, source_content_hash, source_access_level)"
+      - pathway_memory_records
   post_e4_change_classes:
     NONE: "No changes after E4 review."
     ADMINISTRATIVE_ONLY: "Only review summaries, task graph status, contract ownership ledger, and checkpoint files modified. E4 validity preserved."

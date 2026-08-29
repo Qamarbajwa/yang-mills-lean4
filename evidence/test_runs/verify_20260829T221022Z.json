@@ -1,0 +1,37 @@
+{
+  "task_id": "YM-000",
+  "timestamp_utc": "2026-08-29T22:10:22.014380+00:00",
+  "status": "PASS",
+  "evidence_level": "E3_REPRODUCIBLE_MACHINE_EVIDENCE",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "git_sha": "5e9f5bb22c773b94e35dd68e8763d2549f14112a",
+  "git_branch": "master",
+  "git_status": "M CURRENT_SCIENTIFIC_STATE.md\n M NEXT_ACTION.md\n M RESEARCH_LEDGER.md\n M TASK_GRAPH.md\n M THEOREM_LEDGER.md\n M governance/CONTRACT_OWNERSHIP_LEDGER.yaml\n M governance/EPISTEMIC_TAXONOMY_v1.0.yaml\n M governance/MATHEMATICAL_RESEARCH_OPERATING_SYSTEM_v1.0.md\n M governance/PROJECT_BINDING_POLICY.md\n M literature/ANALOGUE_DEPENDENCY_GRAPH.md\n M literature/ANALOGUE_LIMITATION_MATRIX.md\n M literature/ANALOGUE_MECHANISM_MATRIX.md\n M literature/PATHWAY_MEMORY_REGISTER.md\n M literature/primary/solved_modified_analogous/PAPER-ANA-001/record.md\n M literature/primary/solved_modified_analogous/PAPER-ANA-002/record.md\n M literature/primary/solved_modified_analogous/PAPER-ANA-003/record.md\n M literature/primary/solved_modified_analogous/PAPER-ANA-004/record.md\n M literature/primary/solved_modified_analogous/PAPER-ANA-005/record.md\n M literature/primary/solved_modified_analogous/PAPER-ANA-006/record.md\n M literature/primary/solved_modified_analogous/PAPER-ANA-007/record.md\n M literature/primary/solved_modified_analogous/PAPER-ANA-008/record.md\n M literature/primary/solved_modified_analogous/PAPER-ANA-009/record.md\n M literature/primary/solved_modified_analogous/PAPER-ANA-010/record.md\n M literature/primary/solved_modified_analogous/manifest.yaml\n M scripts/verify_and_record.py\n M src/ymmg/ros.py\n M tests/test_analogous_theories.py\n M tests/test_pathway_epistemic_taxonomy.py\n M tests/test_research_operating_system.py\n?? .pytest_r3_run_2/\n?? evidence/test_runs/.pytest_r3_temp/\n?? evidence/test_runs/verify_20260829T220744Z.json\n?? evidence/test_runs/verify_20260829T220744Z.log\n?? evidence/test_runs/verify_20260829T220815Z.json\n?? evidence/test_runs/verify_20260829T220815Z.log\n?? evidence/test_runs/verify_20260829T220845Z.json\n?? evidence/test_runs/verify_20260829T220845Z.log\n?? evidence/test_runs/verify_20260829T220918Z.json\n?? evidence/test_runs/verify_20260829T220918Z.log\n?? evidence/test_runs/verify_20260829T221022Z.log\n?? governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml",
+  "commands": [
+    {
+      "command": [
+        "C:\\Users\\arqam\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "--basetemp",
+        "D:\\Comfy UI\\yang mills and the mass gap\\.pytest_r3_run_2"
+      ],
+      "exit_code": 0,
+      "stdout": "........................................................................ [ 47%]\n........................................................................ [ 94%]\n........                                                                 [100%]\n152 passed in 1.02s\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\arqam\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "scripts/check_repo.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: repository invariants and governance YAML are readable.\n",
+      "stderr": ""
+    }
+  ],
+  "log_file": "evidence\\test_runs\\verify_20260829T221022Z.log",
+  "log_sha256": "273f63f0989c6fa948e29761085ea7d79da283d71c38139f702afc844f007cca"
+}

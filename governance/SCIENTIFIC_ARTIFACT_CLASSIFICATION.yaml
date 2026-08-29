@@ -1,0 +1,54 @@
+classification_version: "1.0"
+task_id: YM-ROS-100R3
+purpose: >-
+  Closed-world discovery policy for research-shaped repository artifacts. Every
+  file is classified before the scientific fingerprint is computed; UNKNOWN is
+  terminal and fails closed.
+classes:
+  - SCIENTIFIC
+  - PROVENANCE_CRITICAL
+  - ADMINISTRATIVE
+  - GENERATED
+  - IGNORED_WITH_JUSTIFICATION
+  - UNKNOWN
+scientific_fingerprint:
+  paths:
+    - CLAIM_EVIDENCE_MATRIX.md
+    - DEFINITION_LEDGER.md
+    - NEGATIVE_EVIDENCE_REGISTER.md
+    - OFFICIAL_PROBLEM_SPECIFICATION.md
+    - RESEARCH_LEDGER.md
+    - THEOREM_LEDGER.md
+    - governance/EPISTEMIC_TAXONOMY_v1.0.yaml
+    - governance/MATHEMATICAL_RESEARCH_OPERATING_SYSTEM_v1.0.md
+    - governance/PROJECT_BINDING_POLICY.md
+    - literature/ANALOGUE_DEPENDENCY_GRAPH.md
+    - literature/ANALOGUE_LIMITATION_MATRIX.md
+    - literature/ANALOGUE_MECHANISM_MATRIX.md
+    - literature/CONSTRUCTIVE_LIMITATION_MATRIX.md
+    - literature/FOUNDATIONAL_LIMITATION_MATRIX.md
+    - literature/MODERN_LIMITATION_MATRIX.md
+    - literature/PATHWAY_MEMORY_REGISTER.md
+    - governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml
+unknown_policy:
+  research_locations:
+    - literature/
+    - proofs/
+    - derivations/
+  research_filename_markers:
+    - LEDGER
+    - THEOREM
+    - LEMMA
+    - HYPOTHESIS
+    - EVIDENCE
+    - SPECIFICATION
+    - MATRIX
+    - GRAPH
+    - PROOF
+    - SOURCE
+    - RESEARCH
+    - PATHWAY
+  action: FAIL_CLOSED
+  rule: >-
+    A newly discovered research-shaped artifact must be explicitly classified
+    and, when SCIENTIFIC, added to the canonical fingerprint in the same change.

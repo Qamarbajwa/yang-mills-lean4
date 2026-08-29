@@ -27,15 +27,15 @@ flowchart TD
     end
 
     subgraph S7["Program D7: N=4 Super Yang–Mills"]
-        MBSS_83["THM-YM-0037: Mandelstam N=4 All-Orders Finiteness<br/>[Nucl Phys B 213 / 121]<br/>(PERTURBATIVE_ALL_ORDERS_RESULT)"]
+        MBSS_83["THM-YM-0037: Mandelstam N=4 All-Orders Finiteness<br/>[Nucl Phys B 213 / 121]<br/>(SUPERCONFORMAL_QFT_WITH_EXACT_PROTECTED_AND_ALL_ORDER_RESULTS)"]
     end
 
     subgraph S8["Program D8: Gauge-Higgs Theories"]
-        FS_79["THM-YM-0038: Fradkin-Shenker Analyticity & Higgs<br/>[PRD 19 / PRL 13]<br/>(HIGGSED_QUANTUM_GAUGE_THEORY)"]
+        FS_79["THM-YM-0038: Fradkin-Shenker Analyticity & Higgs<br/>[PRD 19 / PRL 13]<br/>(GAUGE_HIGGS_LATTICE_ANALYTICITY_AND_HIGGS_MASS_RESULT)"]
     end
 
     subgraph S9["Program D9: Classical Massive Vector"]
-        PRO_36["THM-YM-0039: Proca-Stueckelberg Vector Mass<br/>[J Phys Radium 7 / HPA 11]<br/>(CLASSICAL_MASS_MECHANISM)"]
+        PRO_36["THM-YM-0039: Proca-Stueckelberg Vector Mass<br/>[J Phys Radium 7 / HPA 11]<br/>(PROCA_EXPLICIT_MASS_STUECKELBERG_GAUGE_REFORMULATION)"]
     end
 
     subgraph S10["Program D10: Holographic Conjectures"]
@@ -66,7 +66,7 @@ flowchart TD
 4. **`THM-YM-0034 -> CLAY_TARGET`**: Polyakov derives confinement in 3D Georgi–Glashow from a dilute monopole gas, but the mechanism requires an adjoint Higgs field $v \gg g^2$ and pointlike 3D instantons.
 5. **`THM-YM-0035 -> CLAY_TARGET`**: Seiberg and Witten prove dual Meissner confinement in $\mathcal{N}=2$ SYM upon $\mathcal{N}=1$ mass deformation, but the control rests entirely on extended supersymmetry and holomorphic moduli curves unavailable in pure Yang–Mills.
 6. **`THM-YM-0036 -> CLAY_TARGET`**: Novikov et al. and Witten compute the exact NSVZ beta function and gluino condensation in $\mathcal{N}=1$ SYM, but pure Yang–Mills has no gluinos, no $R$-symmetry, and zero supersymmetry.
-7. **`THM-YM-0037 -> CLAY_TARGET`**: Mandelstam proves all-orders vanishing of the beta function in $\mathcal{N}=4$ SYM, but $\mathcal{N}=4$ is strictly conformal and massless ($\Delta = 0$), failing to generate a mass gap.
-8. **`THM-YM-0038 -> CLAY_TARGET`**: Fradkin and Shenker prove analyticity connecting Higgs and confinement phases on the lattice, but mass generation in Higgs theories relies on explicit scalar fields and non-zero vacuum expectation values.
-9. **`THM-YM-0039 -> CLAY_TARGET`**: Proca and Stueckelberg formulate massive vector fields by inserting a bare mass term into the Lagrangian, which violates non-Abelian gauge invariance and destroys non-Abelian renormalizability.
+7. **`THM-YM-0037 -> CLAY_TARGET`**: N=4 SYM has exact all-order/protected results within a superconformal QFT, but its conformal massless spectrum ($\Delta = 0$) and extra supersymmetric matter do not provide a complete pure-YM solution.
+8. **`THM-YM-0038 -> CLAY_TARGET`**: Fradkin and Shenker prove analyticity along a specified path in a lattice gauge-Higgs model with fundamental scalars; this is distinct from the Higgs mass mechanism and neither supplies a pure-YM dynamical gap.
+9. **`THM-YM-0039 -> CLAY_TARGET`**: Proca inserts an explicit vector mass, while Stueckelberg provides a compensating-field Abelian reformulation. Neither is dynamical pure-YM mass generation; non-Abelian extensions require separate consistency analysis.
 10. **`THM-YM-0040 -> CLAY_TARGET`**: Witten and Polchinski–Strassler derive glueball spectra from supergravity on warped backgrounds, but the derivation relies on unproved holographic duality conjectures, $N 	o \infty$, and large 't Hooft coupling $\lambda \gg 1$.
