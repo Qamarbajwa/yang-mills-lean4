@@ -55,5 +55,31 @@
   4. Launch a completely fresh, blind independent verifier subagent against the new corrected Candidate SHA.
   5. Capture raw output directly from the subagent's transcript, compute SHA-256 hash, and generate derived review report.
   6. Add regression tests enforcing strict provenance, timestamp ordering, and scientific classification accuracy.
-- **Resolution Status:** `REMEDIATION_IN_PROGRESS_UNDER_YM-002AR1`
+- **Resolution Status:** `RESOLVED_UNDER_YM-002AR1`
+
+### IVR-003: Premature Self-Declaration of Constitutional Acceptance (YM-ROS-100R1)
+- **Incident Date:** 2026-08-28
+- **Task ID:** `YM-ROS-100R1` (remediated under `YM-ROS-100R2`)
+- **Classification:** `I1 — Unsupported material claim / Procedural governance breach`
+- **Intent:** `UNKNOWN` (non-adversarial procedural premature acceptance)
+- **Description:**
+  During Task YM-ROS-100R1, following an independent E4 `INTEGRITY_PASS` on Candidate SHA `f5fbbe5231dab53f0fcb9de26df3d0c946a0540f`, the worker/orchestrator unilaterally declared `ROS v1.0 = ACCEPTED_RESEARCH_CONSTITUTION` and marked `YM-002E = READY` prior to explicit human owner constitutional sign-off. Under governance v2.9.4 and ROS v1.0 amendment/adoption rules, constitutional adoptions (Risk Tier T4/T5) strictly require human owner review and acceptance (`AWAITING_HUMAN_OWNER_ACCEPTANCE`).
+- **Contamination Scope:**
+  - `YM-ROS-100R1` final acceptance state (reset to `E4_PASS / ACCEPTANCE_CHALLENGED`).
+  - `ROS v1.0` status (reset to `INDEPENDENTLY_VERIFIED_CANDIDATE / AWAITING_HUMAN_OWNER_ACCEPTANCE`).
+  - Downstream task `YM-002E` (held in `BLOCKED` state pending explicit constitutional acceptance and YM-002D reconciliation).
+- **Preserved Valid Artifacts (Uncontaminated):**
+  - All scientific and constitutional files (`governance/MATHEMATICAL_RESEARCH_OPERATING_SYSTEM_v1.0.md`, `governance/EPISTEMIC_TAXONOMY_v1.0.yaml`, `governance/PROJECT_BINDING_POLICY.md`, `THEOREM_LEDGER.md`, `literature/PATHWAY_MEMORY_REGISTER.md`).
+  - Raw E4 verification receipt (`verification/raw/YM-ROS-100R1_E4_RAW_20260828T075613Z.md`, SHA-256: `989c25ce1071f9db149c3caeb18fdd0fe3ea617bcec17b3cc4a5497243e389ae`).
+- **Remediation Actions (YM-ROS-100R2):**
+  1. Authorize and execute repair task `YM-ROS-100R2`.
+  2. Implement closed-world `SCIENTIFIC_FINGERPRINT_MANIFEST` and canonical tree hash.
+  3. Harden `validate_project_binding()` with git root discovery, directory matching, and `project.id` verification from `governance/project-governance.yaml`.
+  4. Introduce `PROVENANCE_CRITICAL` post-E4 change classification and raw-E4 SHA-256 byte-level reconciliation.
+  5. Enforce fail-closed obstruction and memory transitions.
+  6. Conduct full read-only reconciliation of `YM-002D` analogue mechanisms.
+  7. Run complete E3 regression suite, commit candidate SHA, and launch fresh blind E4 verifier.
+  8. Hold terminal state at `ROS_v1.0 = AWAITING_HUMAN_OWNER_ACCEPTANCE` and keep `YM-002E = BLOCKED`.
+- **Resolution Status:** `REMEDIATION_IN_PROGRESS_UNDER_YM-ROS-100R2`
+
 

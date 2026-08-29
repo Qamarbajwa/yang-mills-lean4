@@ -1,16 +1,19 @@
 import pytest
 import yaml
+import hashlib
 from pathlib import Path
 from src.ymmg.ros import (
     validate_project_binding,
+    compute_closed_world_scientific_tree_hash,
     compute_canonical_dependency_hash,
     compute_cited_source_hash,
-    compute_scientific_tree_hash,
     evaluate_post_e4_change_class,
+    verify_raw_e4_hash_integrity,
     compute_pathway_resonance,
     evaluate_obstruction_transition,
     validate_memory_partition,
     validate_constitutional_amendment,
+    SCIENTIFIC_FINGERPRINT_MANIFEST,
     ProjectBindingError,
     ConstitutionalIntegrityError
 )
@@ -32,6 +35,15 @@ def test_law_0_minimal_read_exception_and_fail_closed_gate(tmp_path):
     # Non-existent or mismatched workspace root fails closed
     with pytest.raises(ProjectBindingError):
         validate_project_binding(tmp_path, "YANG_MILLS_MASS_GAP")
+
+def test_closed_world_scientific_fingerprint_manifest():
+    assert len(SCIENTIFIC_FINGERPRINT_MANIFEST) == 16
+    tree_hash, file_hashes = compute_closed_world_scientific_tree_hash(ROOT)
+    assert len(tree_hash) == 64
+    assert len(file_hashes) == 16
+    for rel_path in SCIENTIFIC_FINGERPRINT_MANIFEST:
+        assert rel_path in file_hashes
+        assert (ROOT / rel_path).exists()
 
 def test_source_bound_official_target_fields():
     assert TAXONOMY_PATH.exists(), "EPISTEMIC_TAXONOMY_v1.0.yaml must exist"
@@ -64,7 +76,6 @@ def test_semantic_os_reflection_positivity_has_no_fragile_numbering():
     assert "FAIL-YM-REFLECTION-POSITIVITY" in lib
     entry = lib["FAIL-YM-REFLECTION-POSITIVITY"]
     assert entry["semantic_name"] == "REQUIRED_OS_REFLECTION_POSITIVITY_NOT_ESTABLISHED"
-    # Ensure source-specific numbers like OS3 are not in semantic_name
     assert "OS3" not in entry["semantic_name"]
 
 def test_euclidean_route_classified_as_reconstruction_route():
@@ -110,12 +121,9 @@ def test_resonance_schema_and_justification_requirements():
         compute_pathway_resonance(invalid_eval)
 
 def test_common_obstruction_candidate_cannot_jump_directly_to_theorem():
-    # Initial state
-    state = "CANDIDATE"
-    
-    # Cannot jump to PROVED_OBSTRUCTION_THEOREM on verification directly from CANDIDATE
-    next_state = evaluate_obstruction_transition(state, "INDEPENDENT_E4_VERIFIED", "METHOD_OBSTRUCTION")
-    assert next_state == "CANDIDATE" # No transition
+    # Attempting to jump directly from CANDIDATE to PROVED_OBSTRUCTION_THEOREM raises ConstitutionalIntegrityError
+    with pytest.raises(ConstitutionalIntegrityError, match="Illegal jump"):
+        evaluate_obstruction_transition("CANDIDATE", "INDEPENDENT_E4_VERIFIED", "METHOD_OBSTRUCTION")
     
     # Proper progression
     s1 = evaluate_obstruction_transition("CANDIDATE", "FALSIFICATION_ATTACK_SURVIVED", "METHOD_OBSTRUCTION")
@@ -184,23 +192,37 @@ def test_relevant_cited_source_mutation_invalidates_source_hash():
     assert h_old != h_new
 
 def test_post_e4_change_classification_logic():
-    sci_files_1 = {"THEOREM_LEDGER.md": "THM-YM-0001: Statement A"}
-    sci_files_2 = {"THEOREM_LEDGER.md": "THM-YM-0001: Statement A MODIFIED"}
-    
-    h_sci_1 = compute_scientific_tree_hash(sci_files_1)
-    h_sci_2 = compute_scientific_tree_hash(sci_files_2)
+    h_sci_1 = "hash_scientific_v1"
+    h_sci_2 = "hash_scientific_v2"
     
     # 1. Identical hash, no files changed
     c1, v1 = evaluate_post_e4_change_class(h_sci_1, h_sci_1, [])
     assert c1 == "NONE" and v1 is True
     
-    # 2. Identical hash, only administrative files changed
+    # 2. Identical hash, provenance/administrative files changed
     c2, v2 = evaluate_post_e4_change_class(h_sci_1, h_sci_1, ["verification/raw/E4.md", "TASK_GRAPH.md"])
-    assert c2 == "ADMINISTRATIVE_ONLY" and v2 is True
+    assert c2 == "PROVENANCE_CRITICAL" and v2 is True
     
     # 3. Scientific hash modified
     c3, v3 = evaluate_post_e4_change_class(h_sci_1, h_sci_2, ["THEOREM_LEDGER.md"])
     assert c3 == "SCIENTIFIC_MATERIAL" and v3 is False # E4 is STALE
+
+def test_raw_e4_hash_integrity_verification(tmp_path):
+    raw_file = tmp_path / "raw_e4.md"
+    raw_content = b"VERDICT: INTEGRITY_PASS\nDETAILS: Verified all 10 questions."
+    raw_file.write_bytes(raw_content)
+    raw_hash = hashlib.sha256(raw_content).hexdigest()
+    
+    # Derived review with matching hash passes
+    review_file = tmp_path / "review.md"
+    review_file.write_text(f"# REVIEW\n- RAW_SHA256: `{raw_hash}`\n", encoding="utf-8")
+    assert verify_raw_e4_hash_integrity(review_file, raw_file) is True
+    
+    # Derived review with mismatched hash fails closed
+    review_bad = tmp_path / "review_bad.md"
+    review_bad.write_text("# REVIEW\n- RAW_SHA256: `badhash123`\n", encoding="utf-8")
+    with pytest.raises(ConstitutionalIntegrityError, match="RAW_SHA256 mismatch"):
+        verify_raw_e4_hash_integrity(review_bad, raw_file)
 
 def test_quarantined_claims_cannot_enter_accepted_semantic_memory():
     with pytest.raises(ConstitutionalIntegrityError, match="Quarantined claims cannot be placed in semantic_accepted memory"):

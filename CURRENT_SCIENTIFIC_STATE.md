@@ -34,18 +34,25 @@
   - Deterministic test suite `tests/test_analogous_theories.py` and research ledger (`RES-YM-002D-001` through `003`) implemented.
   - Current status: `INDEPENDENTLY_VERIFIED` (E4 verifier `e95b9dc6-c4dc-4a3f-8d12-566a9a96da95`, `INTEGRITY_PASS`).
 
-- Mathematical Research Operating System v1.0 Hardening (`YM-ROS-100R1` - INDEPENDENTLY_VERIFIED):
-  - ROS v1.0 Constitution (`governance/MATHEMATICAL_RESEARCH_OPERATING_SYSTEM_v1.0.md`) authored with 11 Constitutional Laws (including Law 0 Reality & Project Binding with minimal-read discovery exception).
-  - Machine-checkable Epistemic Taxonomy (`governance/EPISTEMIC_TAXONOMY_v1.0.yaml`) established covering source-bound problem contract (`Spec(H) ∩ (0, Delta) = ∅`), formulation relation taxonomy, semantic failure library without fragile axiom numbering, 7D categorical resonance vector, and tripartite memory partitions (`ACCEPTED`, `NEGATIVE`, `QUARANTINED`).
-  - Project binding policy (`governance/PROJECT_BINDING_POLICY.md`) and Python ROS module (`src/ymmg/ros.py`) implemented.
-  - Deterministic test suite `tests/test_research_operating_system.py` (14 passing tests) implemented.
+- Mathematical Research Operating System v1.0 Hardening (`YM-ROS-100R1` - E4_PASS_ACCEPTANCE_CHALLENGED):
+  - ROS v1.0 Constitution (`governance/MATHEMATICAL_RESEARCH_OPERATING_SYSTEM_v1.0.md`) authored with 11 Constitutional Laws.
   - E4 independent verifier `b03d9ab2-1fb3-466f-80e5-5367f9d38825` issued `INTEGRITY_PASS` on Candidate SHA `f5fbbe5231dab53f0fcb9de26df3d0c946a0540f`.
+  - Acceptance challenged due to premature self-declaration of constitutional acceptance prior to explicit human owner sign-off (recorded as incident `IVR-003`).
+
+- ROS v1.0 Constitutional & Epistemic Hardening Repair (`YM-ROS-100R2` - IN PROGRESS):
+  - Closed-world `SCIENTIFIC_FINGERPRINT_MANIFEST` (16 canonical scientific files) and canonical tree hash $F_{\text{scientific}}$ implemented.
+  - `validate_project_binding()` hardened with Git root verification, directory matching, and `governance/project-governance.yaml` verification.
+  - `PROVENANCE_CRITICAL` post-E4 change classification and raw-E4 SHA-256 byte reconciliation implemented in `src/ymmg/ros.py`.
+  - Fail-closed obstruction transitions and memory contamination barriers enforced.
+  - Incident `IVR-003` recorded in `INTEGRITY_VIOLATION_REGISTER.md`.
+  - Full read-only reconciliation of `YM-002D` analogue mechanisms confirmed.
+  - Deterministic test suite `tests/test_research_operating_system.py` (16 passing tests; 154 repository-wide) passing cleanly.
 
 ## REPOSITORY SYNCHRONIZATION
 - `REMOTE_SYNC`: `BLOCKED_NO_REMOTE` (No remote upstream configured in local Git config; local checkpoints remain sealed and clean).
 
 ## EXTERNALLY SOURCED / TO BE ADVANCED IN YM-002E+
-- Claimed-solution adversarial audits (`YM-002E`).
+- Claimed-solution adversarial audits (`YM-002E` — BLOCKED pending YM-ROS-100R2 closeout and human constitutional acceptance).
 - Cross-era theorem and dependency synthesis (`YM-002F`).
 - Missing-bridge graph (`YM-003`).
 
@@ -58,7 +65,8 @@
 Rigorous constructive control linking ultraviolet asymptotic freedom to infrared mass generation remains open in 4D continuum spacetime across the strong-coupling transition ($g_k \sim 1$).
 
 ## NEXT ACTION
-`YM-002E`: Claimed-solution adversarial audit ledger.
+Commit candidate SHA for `YM-ROS-100R2`, conduct fresh blind independent E4 review, and hold terminal state at `ROS_v1.0 = AWAITING_HUMAN_OWNER_ACCEPTANCE`.
+
 
 
 

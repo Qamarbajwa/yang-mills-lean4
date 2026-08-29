@@ -1,12 +1,16 @@
 # NEXT ACTION
 
 ## Current action
-`YM-002E — Claimed-solution adversarial audit ledger`
+`YM-ROS-100R2 — ROS v1.0 constitutional & epistemic hardening repair`
 
 ## Scope
-- Conduct systematic adversarial audits of historical and modern claimed mathematical proofs or solutions to the 4D Yang–Mills existence and mass gap problem.
-- Extract exact mathematical failure points, gap locations, unwarranted assumptions, or heuristic substitutions across claimed proofs in the literature.
-- Record failure taxonomy in `literature/CLAIMED_SOLUTION_AUDIT_MATRIX.md` and update `literature/CLAIM_QUARANTINE_REGISTER.md`.
+- Implement closed-world `SCIENTIFIC_FINGERPRINT_MANIFEST` (16 canonical scientific files) and canonical tree hash $F_{\text{scientific}}$.
+- Harden `validate_project_binding()` with Git root discovery, directory matching, and `governance/project-governance.yaml` verification.
+- Implement `PROVENANCE_CRITICAL` post-E4 change classification and raw-E4 SHA-256 byte reconciliation.
+- Enforce fail-closed obstruction transitions and memory contamination barriers.
+- Record incident `IVR-003` in `INTEGRITY_VIOLATION_REGISTER.md`.
+- Conduct full read-only reconciliation of `YM-002D` analogue mechanisms.
+- Run complete E3 regression suite, commit candidate SHA, launch fresh blind E4 verifier, and hold terminal state at `ROS_v1.0 = AWAITING_HUMAN_OWNER_ACCEPTANCE`. Keep `YM-002E = BLOCKED`.
 
 ## Completed actions
 - `YM-000 — Local bootstrap` (DONE)
@@ -21,7 +25,8 @@
 - `YM-002BR1 — Constructive pathway-memory semantic + closeout reconciliation` (INDEPENDENTLY_VERIFIED)
 - `YM-002CR2A — Modern-source locator and theorem-wording erratum` (INDEPENDENTLY_VERIFIED)
 - `YM-002D — Solved, modified, and analogous gauge-theory mechanisms ledger` (INDEPENDENTLY_VERIFIED)
-- `YM-ROS-100R1 — ROS v1.0 constitutional semantic and acceptance hardening` (INDEPENDENTLY_VERIFIED)
+- `YM-ROS-100R1 — ROS v1.0 constitutional semantic and acceptance hardening` (E4_PASS_ACCEPTANCE_CHALLENGED)
+
 
 
 

@@ -475,7 +475,44 @@ contracts:
     - "Authoring raw E4 text directly"
     - "Self-declaring human-owner acceptance"
   candidate_id: f5fbbe5231dab53f0fcb9de26df3d0c946a0540f
-  outcome: ACCEPTED
+  outcome: E4_PASS_ACCEPTANCE_CHALLENGED
+- contract_id: CONTRACT-YM-ROS-100R2
+  task_id: YM-ROS-100R2
+  risk_tier: T4
+  base_sha: "7270d7b1f353b5e8de60ef51a8dba3646b24b50d"
+  writer:
+    environment: Antigravity
+    agent_id: primary-writer-gemini
+    execution_id: "conversation://00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    model: Gemini / Antigravity
+  reviewer:
+    environment: Antigravity
+    agent_id: independent-verifier-subagent
+    model: Gemini / Antigravity
+    independence_level: LEVEL_A_SAME_APP_SAME_MODEL_SEPARATE_SESSION
+  acceptance_authority:
+    environment: "HumanOwner + CI"
+    authority_id: human-owner-and-ci-evaluator
+    execution_id: "user-interactive-session + deterministic-ci"
+    authority_type: ENVIRONMENT_LOCAL
+  allowed_scope:
+    - "governance/MATHEMATICAL_RESEARCH_OPERATING_SYSTEM_v1.0.md"
+    - "governance/EPISTEMIC_TAXONOMY_v1.0.yaml"
+    - "governance/PROJECT_BINDING_POLICY.md"
+    - "src/ymmg/ros.py"
+    - "tests/test_research_operating_system.py"
+    - "INTEGRITY_VIOLATION_REGISTER.md"
+    - "TASK_GRAPH.md"
+    - "CURRENT_SCIENTIFIC_STATE.md"
+    - "NEXT_ACTION.md"
+  forbidden_scope:
+    - "Mutating accepted theorem statements in THEOREM_LEDGER.md"
+    - "OFFICIAL_PROBLEM_SPECIFICATION.md"
+    - "Authoring raw E4 text directly"
+    - "Self-declaring human-owner constitutional acceptance"
+  candidate_id: PENDING_CANDIDATE_COMMIT
+  outcome: IN_PROGRESS
+
 
 
 
