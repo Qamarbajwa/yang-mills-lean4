@@ -18,7 +18,7 @@
 | YM-002CR2A | Modern-source locator and theorem-wording erratum | YM-002CR2 | T2 | fresh blind E4 audit + bounded erratum verification | INDEPENDENTLY_VERIFIED |
 | YM-002D | Solved, modified, and analogous theories ledger | YM-002CR2A | T3 | primary literature + theorem extraction | INDEPENDENTLY_VERIFIED |
 | YM-ROS-100R1 | ROS v1.0 constitutional semantic and acceptance hardening | YM-002D | T4 | E3 deterministic test suite + fresh blind E4 audit | E4_PASS_ACCEPTANCE_CHALLENGED |
-| YM-ROS-100R2 | ROS v1.0 constitutional & epistemic hardening repair | YM-ROS-100R1 | T4 | E3 deterministic test suite + fresh blind E4 audit | IN_PROGRESS |
+| YM-ROS-100R2 | ROS v1.0 constitutional & epistemic hardening repair | YM-ROS-100R1 | T4 | E3 deterministic test suite + fresh blind E4 audit | INDEPENDENTLY_VERIFIED |
 | YM-002E | Claimed-solution adversarial audit ledger | YM-002D, YM-ROS-100R2 | T3 | primary claims + refutation evidence | BLOCKED |
 | YM-002F | Cross-era theorem and dependency synthesis | YM-002E | T3 | structural graph synthesis + E4 review | BLOCKED |
 | YM-003 | Construct missing-bridge graph | YM-002F | T3 | independent semantic review | BLOCKED |
