@@ -27,4 +27,4 @@ The Clay target requires a non-trivial quantum Yang–Mills theory on `R^4` for 
 - The Sky Yang row is formally dispositioned as an unresolved orphan after bounded provenance recovery; it is not silently mapped to Sky Cao or any other artifact.
 - Historical `154` versus reproducible `152` test-count records remain unchanged.
 
-This is the final E3 technical synthesis. Candidate-bound independent E4 closeout review is required before changing `YM-002E` to `INDEPENDENTLY_VERIFIED / CLOSED` or releasing `YM-002F`.
+This final E3 technical synthesis passed candidate-bound independent E4 closeout review (`EVIDENCE_LEDGER.md#EVD-002E-10`). `YM-002E` is now `INDEPENDENTLY_VERIFIED / CLOSED`; `YM-002F` is eligible to begin, while later tasks remain gated on its acceptance.
