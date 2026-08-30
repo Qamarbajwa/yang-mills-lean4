@@ -44,3 +44,12 @@ The local queue contains three quarantined claim classes in `literature/CLAIM_QU
 - `YM-002E`: remains `IN_PROGRESS`; closing requires claim-specific primary artifacts, adversarial findings, and the task’s independent review/evidence gate.
 
 External context: [Clay Mathematics Institute — Yang–Mills & the Mass Gap](https://www.claymath.org/millennium/yang-mills-the-maths-gap/).
+
+## Source-resolution addendum
+
+The 2026-08-30 source-resolution and adversarial triage pass is recorded in `verification/YM-002E_SOURCE_RESOLUTION_20260830.md`. It resolved several relevant primary-paper leads but did not establish exact identity for any of the three internal queue rows. The leads remain non-bound and quarantined; no claim was promoted.
+
+- `CLAIM-2024-001`: source identity unresolved.
+- `CLAIM-2025-001`: queue identity unresolved; DSE/gluon-propagator lead triaged as insufficient for the Clay target.
+- `CLAIM-2026-001`: queue identity unresolved; conditional single-group continuum lead triaged as insufficient for the Clay target.
+- Separate `SU(3)` proof lead: recorded as unassigned and quarantined, not silently attached to a queue row.

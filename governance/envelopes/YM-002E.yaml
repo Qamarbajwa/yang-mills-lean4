@@ -18,7 +18,7 @@ task_execution_envelope:
   base_state:
     repository_or_workspace: "D:\\Comfy UI\\yang mills and the mass gap"
     branch_or_state_channel: "master"
-    base_candidate_id: "b64957789a1feaab096e08ab0b07e5acb1acf832"
+    base_candidate_id: "5e3024b13cf531a70910956b86fcdfc9e0ad3abb"
     dirty_state: "CLEAN"
     preserved_unrelated_work: ["All historical literature, negative evidence, and verifier receipts"]
   eligibility:
