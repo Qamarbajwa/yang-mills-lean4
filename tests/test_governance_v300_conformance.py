@@ -29,6 +29,8 @@ def test_v3_state_and_envelopes_are_bound_and_typed():
     assert state["authority_policy"]["generic_approved_flag_prohibited"] is True
     assert state["risk_and_action"] == {**state["risk_and_action"], "active_risk_tier": "T4", "active_action_class": "B"}
     assert migration["base_state"]["base_candidate_id"] == "b64957789a1feaab096e08ab0b07e5acb1acf832"
+    assert "5e3024b13cf531a70910956b86fcdfc9e0ad3abb" in read("GOVERNANCE_STATE.yaml")
+    assert "5e3024b13cf531a70910956b86fcdfc9e0ad3abb" in read("governance/MIGRATION_RECEIPT_YM-GOV-300.md")
     assert objective["objective"]["exact_objective"].startswith("Adversarially audit every quarantined")
     assert objective["completion_record"]["release_eligibility_effect"] == "BLOCKS"
 

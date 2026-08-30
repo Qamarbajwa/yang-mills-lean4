@@ -21,6 +21,7 @@
 - Reproducible suite: `152 passed`
 - Active pre-migration project action: `YM-002E — Claimed-Solution Adversarial Audit Ledger`
 - Pre-migration scientific state: `YM-ROS-100R3 ACCEPTED / ACTIVE`; `YM-002DR1 CLOSED`; `YM-002E RELEASED_IN_PROGRESS`; downstream tasks blocked
+- Migration candidate under review: `5e3024b13cf531a70910956b86fcdfc9e0ad3abb`
 
 ## Packet integrity preflight
 
@@ -95,4 +96,4 @@ Migration does not promote scientific work or product release state.
 
 ## Decision
 
-`PENDING_INDEPENDENT_REVIEW` until a fresh verifier audits this candidate and the raw transcript is captured. Acceptance must be recorded only after that review and must leave YM-002E at `RELEASED_IN_PROGRESS`.
+`PENDING_INDEPENDENT_REVIEW` until a fresh verifier audits this candidate and the raw transcript is captured. The state-binding repair that points v3 state to this candidate is a bounded provenance/state update; it does not alter scientific artifacts or the scientific fingerprint. Acceptance must be recorded only after that review and must leave YM-002E at `RELEASED_IN_PROGRESS`.
