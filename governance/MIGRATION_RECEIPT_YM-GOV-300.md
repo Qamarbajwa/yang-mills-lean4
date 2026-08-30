@@ -7,7 +7,7 @@
 - Adoption mode: `MIGRATION_GOVERNED`
 - Date: `2026-08-30`
 - Migration task envelope: `governance/envelopes/YM-GOV-300.yaml`
-- Migration state: `PENDING_INDEPENDENT_REVIEW`
+- Migration state: `ACCEPTED`
 
 ## Pre-migration checkpoint
 
@@ -75,17 +75,28 @@ The repository-local suite implements checks corresponding to GC-01 through GC-3
 | Area | Result | Note |
 |---|---|---|
 | GC-01 through GC-27 | PASS | Binding, context, intent, typed authority, dependency, risk, assurance, evidence, candidate, stale evidence, self-certification, tests, negative evidence, gates, release semantics, machine candidate, history, owner boundaries, and Git safety checks pass. |
-| GC-28 | PENDING | Fresh independent migration review is required before acceptance. |
+| GC-28 | PASS | Fresh independent migration review passed at IND1. |
 | GC-29 through GC-30 | PASS | Continuity and truthful release reporting are preserved. |
 
 Declared limitations: verification is local to the Windows repository; no remote CI or external repository is configured; the required fresh reviewer is expected at `IND1` (separate session, same application/model family), not `IND2` or `IND3`.
+
+## Independent review
+
+- Verifier: `01a05258-6c50-7013-8d90-d9eed8064012`
+- Independence: `IND1` — fresh context, same application/model family
+- Audited migration candidate: `5e3024b13cf531a70910956b86fcdfc9e0ad3abb`
+- Provenance/state repair: `bac5dcda3f91dee3f96b63dae6c62b53b165a5e9`
+- Raw transcript: `verification/raw/YM-GOV-300_E4_RAW_20260830.md`
+- Raw transcript SHA-256: `4faa96511ef2c59fbffb4c810be027882e644089b337ed4ec73037897b9f87ee`
+- Verdict: `PASS — no blocking defect found`
+- The verifier confirmed the repair is state/provenance-only and leaves the 17-file scientific fingerprint unchanged.
 
 ## Release and scientific-state effect
 
 Migration does not promote scientific work or product release state.
 
 - Before: ROS v1.0 accepted/active; YM-002E released/in progress; product/research repository not release eligible.
-- After candidate installation: v3 state is installed but acceptance remains pending independent review; ROS remains active; YM-002E remains released/in progress; downstream remains blocked.
+- After acceptance: v3 is `ACTIVE`; ROS remains active; YM-002E remains released/in progress; downstream remains blocked.
 - No public release, deployment, publication, spend, or external action was performed.
 
 ## Contradictions and resolution
@@ -96,4 +107,4 @@ Migration does not promote scientific work or product release state.
 
 ## Decision
 
-`PENDING_INDEPENDENT_REVIEW` until a fresh verifier audits this candidate and the raw transcript is captured. The state-binding repair that points v3 state to this candidate is a bounded provenance/state update; it does not alter scientific artifacts or the scientific fingerprint. Acceptance must be recorded only after that review and must leave YM-002E at `RELEASED_IN_PROGRESS`.
+`ACCEPTED` after the fresh verifier audited this candidate and the raw transcript was captured. The state-binding repair that points v3 state to this candidate is a bounded provenance/state update; it does not alter scientific artifacts or the scientific fingerprint. YM-002E remains `RELEASED_IN_PROGRESS`.

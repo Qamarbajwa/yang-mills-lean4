@@ -8,6 +8,7 @@
 | YM-GOV-293 | Governance migration v2.9 -> v2.9.3 | none | T4 | E3 deterministic test suite + fresh blind E4 review | SUPERSEDED_BY_YM-GOV-294 |
 | YM-GOV-294 | Governance migration to v2.9.4 (Role-based environment-local acceptance) | none | T4 | E3 deterministic test suite + fresh blind E4 review | ACCEPTED_AFTER_ACCEPTANCE_REPAIR |
 | YM-GOV-294R1 | Acceptance-authority identity reconciliation | YM-GOV-294 | T4 | E3 identity regression + blind independent review | INDEPENDENTLY_VERIFIED |
+| YM-GOV-300 | Universal Governance v3.0.0 migration | YM-ROS-100R3, ROS v1.0 acceptance | T4 | E3 conformance + fresh blind independent review | ACCEPTED / ACTIVE |
 | YM-002 | Build theorem/literature ledger | YM-001R1 | T2 | primary literature + theorem-level extraction | IN_PROGRESS |
 | YM-002A | Foundational Yang–Mills advancement ledger (1954–1980) | YM-001R1 | T3 | primary literature + fresh blind E4 audit | INDEPENDENTLY_VERIFIED_AFTER_REPAIR |
 | YM-002AR1 | E4 provenance + foundational semantic repair | YM-002A, YM-GOV-294R1 | T3 | fresh blind E4 audit + raw receipt capture | INDEPENDENTLY_VERIFIED |

@@ -17,6 +17,7 @@
 - `YM-GOV-293 — Governance migration v2.9 -> v2.9.3` (SUPERSEDED_BY_YM-GOV-294)
 - `YM-GOV-294 — Governance migration to v2.9.4` (ACCEPTED_AFTER_ACCEPTANCE_REPAIR)
 - `YM-GOV-294R1 — Acceptance-authority identity reconciliation` (INDEPENDENTLY_VERIFIED)
+- `YM-GOV-300 — Universal Governance v3.0.0 migration` (ACCEPTED / ACTIVE; v2.9.4 historical record preserved)
 - `YM-002A — Foundational Yang–Mills advancement ledger (1954–1980)` (INDEPENDENTLY_VERIFIED_AFTER_REPAIR)
 - `YM-002AR1 — E4 provenance + foundational semantic repair` (INDEPENDENTLY_VERIFIED)
 - `YM-002B — Constructive / RG foundations ledger (1980–2000)` (INDEPENDENTLY_VERIFIED)
@@ -32,7 +33,6 @@
 - `ROS v1.0` — human-owner acceptance recorded; governing system `ACCEPTED / ACTIVE`
 - `YM-002D + YM-002DR1` — `CLOSED`
 - `YM-002E` — released and initial adversarial audit ledger opened (`RELEASED_IN_PROGRESS`)
-
 
 
 

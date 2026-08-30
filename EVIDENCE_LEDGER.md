@@ -59,7 +59,8 @@
 | EVD-ROS-100R3-02 | YM-ROS-100R3 + YM-002DR1 fresh blind delta-E4 independent audit (Verifier `01a051fe-eb15-7312-b5dd-e442b7c213b4`) | E4 | `verification/raw/YM-ROS-100R3_YM-002DR1_DELTA_E4_RAW_20260830.md` | Raw SHA-256: `b5cc9723456324a81527f8701e969cd0c95862ed15f39e305174d52deef5bcf4` (Candidate SHA audited: `8f105527e1dd06c50f44b3ab994fef096354d776`; scientific tree hash: `f30a330063b2ca0af772582e318bddd70af9f8c7d9e6d28c1c811c052d156474`) | INDEPENDENT_SUBAGENT_TRANSCRIPT; LEVEL_A_SAME_APP_SAME_MODEL_SEPARATE_SESSION | ACCEPTED |
 | EVD-ROS-100R3-03 | Human-owner constitutional acceptance of ROS v1.0 and release authorization for YM-002E | HUMAN_OWNER_ACCEPTANCE | `governance/HUMAN_OWNER_ACCEPTANCE_ROS_v1.0_20260830.md` | Scientific tree hash accepted: `f30a330063b2ca0af772582e318bddd70af9f8c7d9e6d28c1c811c052d156474` | USER_EXPLICIT_DECISION | ACCEPTED |
 | EVD-002E-01 | YM-002E initial claim-specific adversarial audit ledger | E3_INITIAL | `verification/YM-002E_CLAIMED_SOLUTION_ADVERSARIAL_AUDIT.md` | Three queued claims screened; no unsupported solution claim accepted | REPRODUCIBLE_LOCALLY (`OFFICIAL_PROBLEM_SPECIFICATION.md`, claim register, local negative evidence) | IN_PROGRESS |
-
+| EVD-GOV-300-01 | Universal Governance v3.0.0 migration conformance and schema verification | E3 | `tests/test_governance_v300_conformance.py`, `governance/MIGRATION_RECEIPT_YM-GOV-300.md` | `156 passed`; GC-01 through GC-30 structurally exercised; candidate `5e3024b13cf531a70910956b86fcdfc9e0ad3abb` | REPRODUCIBLE_LOCALLY | ACCEPTED |
+| EVD-GOV-300-02 | Universal Governance v3.0.0 fresh independent migration review | E4 | `verification/raw/YM-GOV-300_E4_RAW_20260830.md` | Raw SHA-256 `4faa96511ef2c59fbffb4c810be027882e644089b337ed4ec73037897b9f87ee`; audited candidate `5e3024b13cf531a70910956b86fcdfc9e0ad3abb`; repair `bac5dcda3f91dee3f96b63dae6c62b53b165a5e9` | INDEPENDENT_SUBAGENT_TRANSCRIPT; IND1 | ACCEPTED |
 
 
 

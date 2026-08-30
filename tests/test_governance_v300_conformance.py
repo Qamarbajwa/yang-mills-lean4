@@ -78,7 +78,7 @@ def test_gc_01_to_gc_30_conformance_boundaries():
         "GC-12": all(x in mapping["dimensions"] for x in ("strength", "independence")),
         "GC-13": state["evidence_policy"]["candidate_binding_required"] is True,
         "GC-14": state["evidence_policy"]["stale_evidence_fails_closed"] is True,
-        "GC-15": "PENDING_INDEPENDENT_REVIEW" in migration,
+        "GC-15": "ACCEPTED" in migration and "raw transcript" in migration.lower(),
         "GC-16": "owner_technical_certification_required: false" in read("GOVERNANCE_STATE.yaml").lower(),
         "GC-17": "152 passed" in migration or "152" in current,
         "GC-18": "NO_UNSUPPORTED_SOLUTION_CLAIM_ACCEPTED" in claim_audit,

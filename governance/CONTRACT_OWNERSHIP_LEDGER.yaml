@@ -514,6 +514,37 @@ contracts:
   candidate_id: 18b255d6779b0e9702fcc43305f86cc5cfc99da1
   outcome: ACCEPTED
 
+- contract_id: CONTRACT-YM-GOV-300
+  task_id: YM-GOV-300
+  risk_tier: T4
+  base_sha: "5e3024b13cf531a70910956b86fcdfc9e0ad3abb"
+  writer:
+    environment: Codex
+    agent_id: primary-worker
+    model: GPT-5
+  reviewer:
+    environment: Independent verifier required
+    agent_id: 01a05258-6c50-7013-8d90-d9eed8064012
+    independence_level: IND1
+    raw_receipt: verification/raw/YM-GOV-300_E4_RAW_20260830.md
+  acceptance_authority:
+    environment: Evidence-derived gate under accepted owner intent
+    authority_id: evidence-derived-migration-gate
+    authority_type: EVIDENCE_BASED
+  allowed_scope:
+    - GOVERNANCE_STATE.yaml
+    - PROJECT_INTENT.md
+    - ARCHITECTURE_DECISIONS.md
+    - ROADMAP.md
+    - governance/envelopes/**
+    - governance/EVIDENCE_MAPPING_v3.0.0.yaml
+    - tests/test_governance_v300_conformance.py
+  forbidden_scope:
+    - Rewriting v2.9.4 or ROS v1.0 history
+    - Promoting YM-002E or downstream scientific work
+    - Publication, deployment, spend, or force-push
+  outcome: ACCEPTED
+
 - contract_id: CONTRACT-YM-ROS-100R3
   task_id: YM-ROS-100R3
   risk_tier: T4
