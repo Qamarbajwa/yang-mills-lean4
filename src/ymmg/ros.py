@@ -382,15 +382,24 @@ def evaluate_post_e4_change_class(
         "CURRENT_SCIENTIFIC_STATE.md",
         "NEXT_ACTION.md"
     )
+    administrative_prefixes = ("governance/", "scripts/", "src/", "tests/")
+    provenance_seen = False
     
     for f in changed_files:
         # If any scientific file was changed, it is scientific material
         if f in SCIENTIFIC_FINGERPRINT_MANIFEST:
             return ("SCIENTIFIC_MATERIAL", False)
-        if not any(f.startswith(p) or f == p for p in provenance_prefixes):
-            return ("SCIENTIFIC_MATERIAL", False)
+        if f in KNOWN_PROVENANCE_CRITICAL_PATHS:
+            provenance_seen = True
+            continue
+        if any(f.startswith(p) or f == p for p in provenance_prefixes):
+            provenance_seen = True
+            continue
+        if any(f.startswith(p) or f == p for p in administrative_prefixes):
+            continue
+        return ("SCIENTIFIC_MATERIAL", False)
             
-    return ("PROVENANCE_CRITICAL", True)
+    return ("PROVENANCE_CRITICAL" if provenance_seen else "ADMINISTRATIVE_ONLY", True)
 
 def verify_raw_e4_hash_integrity(derived_review_path: Path, raw_e4_path: Path) -> bool:
     """

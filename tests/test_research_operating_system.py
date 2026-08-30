@@ -230,6 +230,10 @@ def test_post_e4_change_classification_logic():
     # 2. Identical hash, provenance/administrative files changed
     c2, v2 = evaluate_post_e4_change_class(h_sci_1, h_sci_1, ["verification/raw/E4.md", "TASK_GRAPH.md"])
     assert c2 == "PROVENANCE_CRITICAL" and v2 is True
+    c2b, v2b = evaluate_post_e4_change_class(h_sci_1, h_sci_1, ["EVIDENCE_LEDGER.md"])
+    assert c2b == "PROVENANCE_CRITICAL" and v2b is True
+    c2c, v2c = evaluate_post_e4_change_class(h_sci_1, h_sci_1, ["src/ymmg/ros.py"])
+    assert c2c == "ADMINISTRATIVE_ONLY" and v2c is True
     
     # 3. Scientific hash modified
     c3, v3 = evaluate_post_e4_change_class(h_sci_1, h_sci_2, ["THEOREM_LEDGER.md"])
