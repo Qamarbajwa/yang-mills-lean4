@@ -81,6 +81,12 @@ KNOWN_ADMINISTRATIVE_ROOT_PATHS = {
     "TEST_STRATEGY.md",
     "pyproject.toml",
     "requirements.txt",
+    # Universal Governance v3 project-control artifacts are administrative
+    # and must not silently enter the scientific fingerprint.
+    "ARCHITECTURE_DECISIONS.md",
+    "GOVERNANCE_STATE.yaml",
+    "PROJECT_INTENT.md",
+    "ROADMAP.md",
 }
 
 GENERATED_PREFIXES = ("checkpoints/", "evidence/", "experiments/", "numerical/")

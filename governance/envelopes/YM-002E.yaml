@@ -1,0 +1,102 @@
+task_execution_envelope:
+  schema_version: "3.0.0"
+  identity:
+    task_id: "YM-002E"
+    project_id: "YANG_MILLS_MASS_GAP"
+    project_name: "Yang-Mills and the Mass Gap"
+    governance_version: "3.0.0"
+    adoption_mode: "MIGRATION_GOVERNED"
+  direction:
+    intent_refs: ["PROJECT_INTENT.md", "OFFICIAL_PROBLEM_SPECIFICATION.md"]
+    roadmap_objective: "OBJ-YM-002E"
+    owner_non_goals: ["No unsupported solution claim", "No public publication"]
+    owner_reserved_boundaries: ["external publication", "legal/compliance", "external spend"]
+  objective:
+    exact_objective: "Adversarially audit every quarantined claimed-solution entry against the exact Clay Yang-Mills obligations."
+    rationale: "Prevent unsupported claims from entering accepted mathematical memory."
+    done_boundary: "Every claim has exact source identity, scope audit, failure locality, negative evidence, and independent closeout."
+  base_state:
+    repository_or_workspace: "D:\\Comfy UI\\yang mills and the mass gap"
+    branch_or_state_channel: "master"
+    base_candidate_id: "b64957789a1feaab096e08ab0b07e5acb1acf832"
+    dirty_state: "CLEAN"
+    preserved_unrelated_work: ["All historical literature, negative evidence, and verifier receipts"]
+  eligibility:
+    dependencies: [{id: "YM-ROS-100R3", state: "ACCEPTED", evidence_ref: "EVIDENCE_LEDGER.md#EVD-ROS-100R3-03"}, {id: "YM-002DR1", state: "ACCEPTED", evidence_ref: "EVIDENCE_LEDGER.md#EVD-ROS-100R3-03"}]
+    technical_inputs_available: true
+    traceable_to_intent: true
+    architecture_permits: true
+    inside_standing_mandate: true
+    candidate_state_known: true
+    risk_inside_ceiling: true
+    blocking_invariant_present: false
+    reserved_authority_required_for_technical_mutation: false
+    eligible: true
+    blocker_class: null
+    blocker_detail: null
+  classification:
+    risk_tier: "T3"
+    action_class: "B"
+    risk_reasons: ["Material mathematical evidence and provenance implications"]
+    active_modules: ["CORE-PROJECT-BINDING", "CORE-AUTHORITY", "CORE-RISK", "CORE-DEPENDENCY", "CORE-EVIDENCE", "CORE-TEST-INTEGRITY", "CORE-GIT-STATE", "AI-AUTONOMY", "RESEARCH-SCIENTIFIC", "ARTIFACT-DATA"]
+    not_activated_material_modules: [{module: "FINANCIAL", reason: "No financial scope"}, {module: "DEPLOYMENT", reason: "No deployment scope"}]
+  roles_and_authority:
+    orchestrator: "primary-worker"
+    writer: {id: "primary-worker", qualified: true, risk_ceiling: "T3"}
+    reviewer_or_verifier: {id: "PENDING_YM-002E_E4", qualified: true, expected_independence: "IND1"}
+    implementation_authority: "AUTONOMOUS_WITHIN_ENVELOPE"
+    verification_authority: "EVIDENCE_BASED"
+    release_eligibility_authority: "EVIDENCE_DERIVED_GATE"
+    reserved_external_authority: {required: false, type: "NONE", trigger: null}
+  mutation_scope:
+    allowed: ["Claim-specific audit ledger", "Source identity and limitation records", "Regression tests and evidence mappings"]
+    forbidden: ["Promoting unsupported claims", "Rewriting primary source records", "Releasing YM-002F or later"]
+    protected: ["OFFICIAL_PROBLEM_SPECIFICATION.md", "negative evidence", "quarantined claims", "historical receipts"]
+    allowed_tools_actions: ["read-only research", "local tests", "bounded internal Git checkpoint"]
+    forbidden_tools_actions: ["external publication", "destructive history action", "unbounded external spend"]
+  assurance_contract:
+    capability_or_requirement_ids: ["YM-REQ-001", "YM-REQ-002", "YM-REQ-003", "YM-REQ-007", "YM-REQ-018", "YM-REQ-019", "YM-REQ-021", "YM-REQ-022"]
+    intent: "Produce precisely scoped accepted/rejected/quarantined claim findings without overstating mathematical truth."
+    valid_inputs: ["Exact primary artifact", "Declared assumptions", "Candidate-bound local evidence", "Negative evidence"]
+    invalid_input_behavior: [{input_class: "missing source identity", expected_behavior: "remain quarantined"}, {input_class: "scope mismatch", expected_behavior: "reject as insufficient for Clay target"}, {input_class: "stale evidence", expected_behavior: "fail closed"}]
+    preconditions: ["ROS active", "YM-002D/DR1 closed", "Claim register preserved"]
+    transformation_rules: ["Audit each claim separately", "Record failure locality", "Never aggregate vague claims into proof"]
+    invariants: [{id: "INV-002E-001", statement: "NO_UNSUPPORTED_SOLUTION_CLAIM_ACCEPTED", zero_tolerance: true}, {id: "INV-002E-002", statement: "ANALOGUE_OR_LATTICE_RESULT != CLAY_SOLUTION", zero_tolerance: true}, {id: "INV-002E-003", statement: "MISSING_SOURCE_IDENTITY => QUARANTINED", zero_tolerance: true}]
+    outputs: ["Claim-specific adversarial audit ledger", "Updated negative evidence if warranted", "Independent review packet"]
+    postconditions: ["All claims retain truthful status", "Downstream eligibility remains blocked until closeout"]
+    failure_contracts: [{condition: "claim cannot be reproduced or source is ambiguous", expected_behavior: "NOT_ACCEPTED_PROVENANCE_INSUFFICIENT"}, {condition: "evidence contradicts claim", expected_behavior: "REJECTED_WITH_NEGATIVE_EVIDENCE"}]
+    retry_idempotency_concurrency: ["One ledger entry per claim", "Append findings; preserve prior statuses"]
+    persistence_restart_recovery: ["Ledger and evidence refs permit restart"]
+    security_authority: ["No credentials or external accounts"]
+    performance_capacity: ["Bounded local source review"]
+    required_real_environment: ["None beyond local repository and independent review session"]
+    intent_fidelity_review_required: true
+  acceptance:
+    hard_gates: [{id: "GATE-002E-01", condition: "Every queued claim has a separate finding", required_state: "PASS"}, {id: "GATE-002E-02", condition: "No unsupported claim promoted", required_state: "PASS"}, {id: "GATE-002E-03", condition: "Independent closeout evidence exists", required_state: "PASS"}]
+    kpis: [{id: "KPI-002E-01", metric: "Queued claims screened", threshold: "3", release_blocking: false}]
+    required_evidence: {minimum_strength: "E4", required_environments: ["STATIC", "INTEGRATED_LOCAL"], minimum_independence: "IND1", candidate_bound: true}
+  verification_plan:
+    static: ["Inspect claim register and official problem specification"]
+    unit: ["Validate claim status schema and no-promotion invariant"]
+    integration: ["Cross-check local theorem, negative-evidence, and provenance records"]
+    end_to_end: ["Produce ledger and preserve downstream block"]
+    negative_boundary: ["Unknown source, wrong dimension, lattice-only, truncation-only, and analogue claims"]
+    failure_recovery: ["Append negative evidence and retain quarantine"]
+    security: ["No external account or secret access"]
+    performance: ["Bounded review scope"]
+    real_environment: ["None"]
+    adversarial: ["Attempt to promote vague claims, historical status, or exact analogue results"]
+    independent_review: ["Fresh separate reviewer session"]
+  recovery:
+    rollback_or_forward_recovery: "Append a correction and preserve the prior ledger entry; do not delete negative history."
+    checkpoint_required_before_mutation: true
+    state_integrity_check: "Candidate SHA, scientific tree hash, source identities, and evidence refs"
+  stop_conditions: ["scope ambiguity", "risk exceeds ceiling", "unexpected destructive/external effect", "candidate identity becomes unknown", "required reserved authority is reached", "evidence contradicts fundamental contract assumption"]
+  completion_record:
+    final_candidate_id: null
+    status: "IN_PROGRESS"
+    evidence_receipts: ["EVIDENCE_LEDGER.md#EVD-002E-01"]
+    technical_acceptance: "NOT_EVALUATED"
+    release_eligibility_effect: "BLOCKS"
+    negative_evidence_refs: ["NEGATIVE_EVIDENCE_REGISTER.md", "literature/CLAIM_QUARANTINE_REGISTER.md"]
+    checkpoint_id: null

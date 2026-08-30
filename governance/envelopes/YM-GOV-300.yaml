@@ -1,0 +1,102 @@
+task_execution_envelope:
+  schema_version: "3.0.0"
+  identity:
+    task_id: "YM-GOV-300"
+    project_id: "YANG_MILLS_MASS_GAP"
+    project_name: "Yang-Mills and the Mass Gap"
+    governance_version: "3.0.0"
+    adoption_mode: "MIGRATION_GOVERNED"
+  direction:
+    intent_refs: ["PROJECT_INTENT.md"]
+    roadmap_objective: "GOV-MIGRATION-300"
+    owner_non_goals: ["No change to Clay problem identity", "No public release or deployment"]
+    owner_reserved_boundaries: ["publication", "legal", "spend", "destructive history action"]
+  objective:
+    exact_objective: "Migrate this existing governed research repository to Universal Governance v3.0.0 without rewriting historical truth."
+    rationale: "Replace ambiguous legacy authority semantics with typed authority and evidence-derived gates."
+    done_boundary: "v3 state, intent, architecture, roadmap, envelopes, mappings, conformance evidence, and migration receipt are validated and independently reviewed."
+  base_state:
+    repository_or_workspace: "D:\\Comfy UI\\yang mills and the mass gap"
+    branch_or_state_channel: "master"
+    base_candidate_id: "b64957789a1feaab096e08ab0b07e5acb1acf832"
+    dirty_state: "CLEAN"
+    preserved_unrelated_work: ["All pre-migration repository history and evidence"]
+  eligibility:
+    dependencies: [{id: "ROS v1.0", state: "ACCEPTED", evidence_ref: "governance/HUMAN_OWNER_ACCEPTANCE_ROS_v1.0_20260830.md"}]
+    technical_inputs_available: true
+    traceable_to_intent: true
+    architecture_permits: true
+    inside_standing_mandate: true
+    candidate_state_known: true
+    risk_inside_ceiling: true
+    blocking_invariant_present: false
+    reserved_authority_required_for_technical_mutation: false
+    eligible: true
+    blocker_class: null
+    blocker_detail: null
+  classification:
+    risk_tier: "T4"
+    action_class: "B"
+    risk_reasons: ["Changes future authority/evidence semantics", "Historical preservation is consequential"]
+    active_modules: ["CORE-PROJECT-BINDING", "CORE-AUTHORITY", "CORE-RISK", "CORE-DEPENDENCY", "CORE-EVIDENCE", "CORE-TEST-INTEGRITY", "CORE-GIT-STATE", "GOVERNANCE-MIGRATION", "AI-AUTONOMY", "RESEARCH-SCIENTIFIC", "ARTIFACT-DATA"]
+    not_activated_material_modules: [{module: "FINANCIAL", reason: "No financial scope"}, {module: "DEPLOYMENT", reason: "No deployment scope"}]
+  roles_and_authority:
+    orchestrator: "primary-worker"
+    writer: {id: "primary-worker", qualified: true, risk_ceiling: "T4"}
+    reviewer_or_verifier: {id: "PENDING_MIGRATION_E4", qualified: true, expected_independence: "IND1"}
+    implementation_authority: "AUTONOMOUS_WITHIN_ENVELOPE"
+    verification_authority: "EVIDENCE_BASED"
+    release_eligibility_authority: "EVIDENCE_DERIVED_GATE"
+    reserved_external_authority: {required: false, type: "NONE", trigger: null}
+  mutation_scope:
+    allowed: ["New v3 governance artifacts", "Bounded state/roadmap mappings", "Conformance tests"]
+    forbidden: ["Rewrite historical v2.9.4/ROS files", "Promote YM-002E or downstream tasks", "Author raw E4 text"]
+    protected: ["OFFICIAL_PROBLEM_SPECIFICATION.md", "negative evidence", "raw verifier transcripts", "accepted checkpoint identities"]
+    allowed_tools_actions: ["read-only inspection", "local tests", "bounded Git commit"]
+    forbidden_tools_actions: ["force-push", "destructive history rewrite", "external publication"]
+  assurance_contract:
+    capability_or_requirement_ids: ["GC-01", "GC-03", "GC-04", "GC-05", "GC-13", "GC-23", "GC-29"]
+    intent: "Install typed, evidence-derived universal governance while preserving ROS mathematical truth."
+    valid_inputs: ["Hash-verified v3 packet", "Observed repository baseline", "Explicit human-owner intent"]
+    invalid_input_behavior: [{input_class: "missing packet file", expected_behavior: "BLOCK migration"}, {input_class: "unknown candidate", expected_behavior: "FAIL CLOSED"}]
+    preconditions: ["Packet manifest verified", "Repository baseline observed", "ROS acceptance preserved"]
+    transformation_rules: ["Add v3 artifacts alongside historical files", "Map authority without rewriting history"]
+    invariants: [{id: "INV-GOV-001", statement: "GOVERNANCE_MIGRATION != SCIENTIFIC_PROGRESS", zero_tolerance: true}, {id: "INV-GOV-002", statement: "Historical evidence remains preserved", zero_tolerance: true}, {id: "INV-GOV-003", statement: "Owner intent does not prove technical correctness", zero_tolerance: true}]
+    outputs: ["GOVERNANCE_STATE.yaml", "PROJECT_INTENT.md", "ARCHITECTURE_DECISIONS.md", "ROADMAP.md", "migration receipt", "conformance evidence"]
+    postconditions: ["v3 schema validates", "old governance remains present", "release state is not promoted by migration"]
+    failure_contracts: [{condition: "conformance failure", expected_behavior: "record PARTIAL/BLOCKED and do not accept migration"}]
+    retry_idempotency_concurrency: ["One bounded migration candidate at a time", "No concurrent history rewrite"]
+    persistence_restart_recovery: ["Git checkpoint and migration receipt preserve restart state"]
+    security_authority: ["No credentials or privilege changes"]
+    performance_capacity: ["Local verification completes within normal test-run bounds"]
+    required_real_environment: ["Windows local repository"]
+    intent_fidelity_review_required: true
+  acceptance:
+    hard_gates: [{id: "GATE-GOV-300-01", condition: "Packet manifest 26/26 hashes pass", required_state: "PASS"}, {id: "GATE-GOV-300-02", condition: "GOVERNANCE_STATE validates against 06A schema", required_state: "PASS"}, {id: "GATE-GOV-300-03", condition: "Conformance checks pass or limitations are explicit", required_state: "PASS"}, {id: "GATE-GOV-300-04", condition: "Independent migration review passes", required_state: "PASS"}]
+    kpis: [{id: "KPI-GOV-300-01", metric: "Historical files preserved", threshold: "100%", release_blocking: true}]
+    required_evidence: {minimum_strength: "E4", required_environments: ["INTEGRATED_LOCAL"], minimum_independence: "IND1", candidate_bound: true}
+  verification_plan:
+    static: ["Inspect packet manifest, project identity, historical files, and state mappings"]
+    unit: ["Validate YAML/JSON schemas"]
+    integration: ["Run full existing pytest suite"]
+    end_to_end: ["Execute migration conformance checks"]
+    negative_boundary: ["Verify migration does not promote scientific or release state"]
+    failure_recovery: ["Preserve bounded Git rollback path"]
+    security: ["Confirm no new credentials, spend, or external actions"]
+    performance: ["Record local test runtime"]
+    real_environment: ["Windows repository execution"]
+    adversarial: ["Challenge ambiguous approval, stale evidence, owner-certification, and history-loss paths"]
+    independent_review: ["Fresh separate verifier session"]
+  recovery:
+    rollback_or_forward_recovery: "Revert only the bounded migration commit or forward-fix with a new receipt; never rewrite historical commits."
+    checkpoint_required_before_mutation: true
+    state_integrity_check: "Git SHA, status, packet hashes, and schema validation"
+  stop_conditions: ["scope ambiguity", "risk exceeds ceiling", "unexpected destructive/external effect", "candidate identity becomes unknown", "required reserved authority is reached", "evidence contradicts fundamental contract assumption"]
+  completion_record:
+    final_candidate_id: null
+    status: "NOT_STARTED"
+    evidence_receipts: []
+    technical_acceptance: "NOT_EVALUATED"
+    release_eligibility_effect: "NONE"
+    negative_evidence_refs: []
+    checkpoint_id: null

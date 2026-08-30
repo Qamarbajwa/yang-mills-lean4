@@ -1,0 +1,36 @@
+schema_version: "3.0.0"
+project_id: "YANG_MILLS_MASS_GAP"
+mapping_policy:
+  preserve_historical_strength_labels: true
+  add_dimensions_without_retroactive_inflation: true
+dimensions:
+  strength:
+    E1: "narrative or model self-report; never acceptance evidence"
+    E2: "direct artifact/state observation"
+    E3: "reproducible machine evidence"
+    E4: "independent reviewer/verifier evidence"
+    E5: "externally anchored or tamper-resistant evidence"
+  environment:
+    local_pytest: "INTEGRATED_LOCAL"
+    repository_static_inspection: "STATIC"
+    independent_same_app_subagent: "INTEGRATED_LOCAL"
+  independence:
+    historical_same_model_separate_session: "IND1"
+    qualified_distinct_reviewer: "IND2"
+    external_or_third_party: "IND3"
+records:
+  - evidence_ref: "EVIDENCE_LEDGER.md#EVD-ROS-100R3-01"
+    strength: "E3"
+    environment: "INTEGRATED_LOCAL"
+    independence: "IND0"
+    candidate_bound: true
+  - evidence_ref: "EVIDENCE_LEDGER.md#EVD-ROS-100R3-02"
+    strength: "E4"
+    environment: "INTEGRATED_LOCAL"
+    independence: "IND1"
+    candidate_bound: true
+  - evidence_ref: "EVIDENCE_LEDGER.md#EVD-ROS-100R3-03"
+    strength: "E2"
+    environment: "STATIC"
+    independence: "IND3"
+    candidate_bound: true

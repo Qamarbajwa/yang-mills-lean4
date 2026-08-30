@@ -1,0 +1,140 @@
+governance_state:
+  schema_version: "3.0.0"
+  governance_version: "3.0.0"
+  governance_integrity: "PACKET_HASH_VERIFIED_26_OF_26"
+
+  project_binding:
+    project_id: "YANG_MILLS_MASS_GAP"
+    project_name: "Yang-Mills and the Mass Gap"
+    adoption_mode: "MIGRATION_GOVERNED"
+    repository_or_workspace: "D:\\Comfy UI\\yang mills and the mass gap"
+    branch_or_state_channel: "master"
+    current_candidate_id: "b64957789a1feaab096e08ab0b07e5acb1acf832"
+    verified_checkpoint_id: "b64957789a1feaab096e08ab0b07e5acb1acf832"
+    dirty_state: "CLEAN"
+    active_environment: "CODEX_DESKTOP_WINDOWS_LOCAL"
+
+  direction:
+    project_intent:
+      path: "PROJECT_INTENT.md"
+      state: "OWNER_INTENT_CONFIRMED"
+      owner_intent_confirmed: true
+    architecture_decisions:
+      path: "ARCHITECTURE_DECISIONS.md"
+      state: "OBSERVED"
+    roadmap:
+      path: "ROADMAP.md"
+      state: "OBSERVED"
+    active_objective_id: "YM-002E"
+
+  standing_mandate:
+    active: true
+    autonomous_technical_work_allowed: true
+    bounded_by:
+      - "accepted project intent"
+      - "ROS v1.0 mathematical epistemic constitution"
+      - "security model"
+      - "legal/compliance constraints"
+      - "approved financial envelope"
+      - "T4 risk ceiling for migration"
+      - "tool/action permissions"
+    owner_technical_certification_required: false
+
+  bootstrap:
+    level: "HIGH_ASSURANCE"
+    risk_ceiling: "T4"
+    upgrade_required: false
+
+  authority_policy:
+    owner_intent_authority: "OWNER_INTENT_AUTHORITY"
+    business_policy_authority: "BUSINESS_POLICY_AUTHORITY"
+    legal_compliance_authority: "RESERVED_EXTERNAL_WHEN_APPLICABLE"
+    implementation_authority: "AUTONOMOUS_WITHIN_STANDING_MANDATE"
+    verification_authority: "EVIDENCE_BASED"
+    release_eligibility_authority: "EVIDENCE_DERIVED_GATE"
+    deployment_authority: "PROJECT_POLICY_DEFINED"
+    generic_approved_flag_prohibited: true
+
+  risk_and_action:
+    active_risk_tier: "T4"
+    active_action_class: "B"
+    high_risk_domains_present:
+      - "governance and acceptance semantics"
+      - "mathematical evidence provenance"
+
+  agents_and_tools:
+    orchestrator: "Codex primary worker"
+    writers:
+      - "primary-worker"
+    reviewers_verifiers:
+      - "independent verifier subagent where required"
+    available_independence_ceiling: "IND1"
+    tool_permissions_known: true
+
+  evidence_policy:
+    strength_scale: ["E1", "E2", "E3", "E4", "E5"]
+    environment_classes: ["STATIC", "ISOLATED", "FIXTURE", "MOCK", "SIMULATED", "INTEGRATED_LOCAL", "LIVE_LOCAL", "REPRESENTATIVE", "STAGING", "PRODUCTION_OBSERVED", "EXTERNAL_SYSTEM", "OTHER"]
+    independence_scale: ["IND0", "IND1", "IND2", "IND3"]
+    candidate_binding_required: true
+    stale_evidence_fails_closed: true
+
+  assurance:
+    capability_registry_path: "governance/CAPABILITY_ASSURANCE_MATRIX.md"
+    capability_count: 6
+    fully_assured_declared_scope_count: 0
+    unverified_or_partial_capabilities:
+      - "v3.0.0 migration conformance pending independent review"
+      - "YM-002E claim-specific closure pending independent review"
+    known_critical_defects: []
+    negative_evidence_register: "NEGATIVE_EVIDENCE_REGISTER.md"
+
+  release:
+    current_state: "NOT_RELEASE_ELIGIBLE"
+    exact_candidate_id: "b64957789a1feaab096e08ab0b07e5acb1acf832"
+    hard_gates_state: "MIGRATION_CONFORMANCE_PENDING"
+    release_eligible: false
+    deployment_authorized: false
+    deployed: false
+    observed: false
+    known_limitations:
+      - "This is an internal mathematical research repository, not a product deployment candidate."
+      - "No remote upstream is configured."
+
+  blockers:
+    - id: "YM-002E-E4"
+      class: "INDEPENDENT_VERIFICATION"
+      detail: "YM-002E requires independent closeout after claim-specific audit."
+    - id: "DOWNSTREAM-DEPENDENCY"
+      class: "DEPENDENCY"
+      detail: "YM-002F and later roadmap tasks remain blocked until YM-002E closes."
+
+  legacy_migration:
+    prior_governance_present: true
+    prior_governance_version:
+      - "v2.9.4"
+      - "ROS v1.0"
+    historical_evidence_preserved: true
+    migration_receipt: "governance/MIGRATION_RECEIPT_YM-GOV-300.md"
+    legacy_unverified_areas: []
+    contradictions_open:
+      - "v2.9.4 generic acceptance wording is preserved historically and mapped, not rewritten."
+
+  git_or_checkpoint:
+    version_control_present: true
+    remote_push_policy: "BLOCKED_NO_REMOTE"
+    force_push_prohibited: true
+    accepted_checkpoint_policy: "BOUND_TO_EXACT_VERIFIED_CANDIDATE"
+
+  last_checkpoint:
+    timestamp: "2026-08-30"
+    candidate_id: "b64957789a1feaab096e08ab0b07e5acb1acf832"
+    evidence_refs:
+      - "EVIDENCE_LEDGER.md#EVD-ROS-100R3-03"
+      - "evidence/test_runs/verify_20260829T221022Z.json"
+    state: "INDEPENDENTLY_VERIFIED_PRE_MIGRATION"
+
+  next_action:
+    objective_id: "YM-002E"
+    eligibility: "READY"
+    blocker_class: "INDEPENDENT_VERIFICATION_FOR_CLOSEOUT"
+    description: "Continue claim-specific adversarial audits under the v3 task envelope."
