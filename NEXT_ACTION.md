@@ -1,11 +1,11 @@
 # NEXT ACTION
 
 ## Current action
-`YM-002E_CLAIMED_SOLUTION_ADVERSARIAL_AUDIT`
+`YM-002E_FINAL_SYNTHESIS_AND_INDEPENDENT_CLOSEOUT`
 
 ## Scope
-- Audit the three quarantined claimed-solution entries in `literature/CLAIM_QUARANTINE_REGISTER.md` against the official Clay obligations.
-- Require exact primary-artifact identity, scope matching, refutation evidence, and independent review before any claim is promoted.
+- Synthesize the three byte-bound leads and the formally dispositioned legacy Sky Yang row against the official Clay obligations.
+- Require candidate-bound E3 confirmation and fresh independent E4 review before closing YM-002E.
 
 ## Blocked downstream action
 - `YM-002F` and later roadmap tasks remain BLOCKED until YM-002E is independently closed.
@@ -33,7 +33,6 @@
 - `ROS v1.0` — human-owner acceptance recorded; governing system `ACCEPTED / ACTIVE`
 - `YM-002D + YM-002DR1` — `CLOSED`
 - `YM-002E` — released and initial adversarial audit ledger opened (`RELEASED_IN_PROGRESS`)
-
 
 
 

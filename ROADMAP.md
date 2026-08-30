@@ -20,8 +20,8 @@
 - Current blocker class: INDEPENDENT_VERIFICATION_FOR_CLOSEOUT
 - Current blocker detail: Three requested artifact leads are byte-bound and claim-level audited; bounded repository provenance recovery classifies legacy CLAIM-2024-001 Sky Yang as `UNRESOLVED_ORPHANED_LEGACY_CLAIM` with no artifact assignment. Final synthesis and independent closeout remain required.
 - Candidate/checkpoint: `176606c358137ebc8a80e4129abc16c6c4b2b206` before legacy provenance recovery increment.
-- Evidence refs: `verification/YM-002E_CLAIMED_SOLUTION_ADVERSARIAL_AUDIT.md`, `verification/YM-002E_SOURCE_RESOLUTION_20260830.md`, `EVIDENCE_LEDGER.md#EVD-002E-01`, `EVIDENCE_LEDGER.md#EVD-002E-02`.
-- Notes: All three current claims remain quarantined.
+- Evidence refs: `verification/YM-002E_CLAIMED_SOLUTION_ADVERSARIAL_AUDIT.md`, `verification/YM-002E_SOURCE_RESOLUTION_20260830.md`, `verification/YM-002E_LEGACY_001_PROVENANCE_RECOVERY_20260830.md`, `verification/YM-002E_FINAL_SYNTHESIS_20260830.md`, `EVIDENCE_LEDGER.md#EVD-002E-01`, `EVIDENCE_LEDGER.md#EVD-002E-07`.
+- Notes: Four-claim final synthesis is ready for candidate-bound independent closeout; no claim is accepted as a Clay solution.
 
 ### OBJ-YM-002F — Cross-era theorem and dependency synthesis
 

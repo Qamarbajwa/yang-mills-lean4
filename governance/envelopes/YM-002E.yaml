@@ -95,7 +95,7 @@ task_execution_envelope:
   completion_record:
     final_candidate_id: null
     status: "IN_PROGRESS"
-    evidence_receipts: ["EVIDENCE_LEDGER.md#EVD-002E-01", "EVIDENCE_LEDGER.md#EVD-002E-02", "EVIDENCE_LEDGER.md#EVD-002E-03", "EVIDENCE_LEDGER.md#EVD-002E-04", "EVIDENCE_LEDGER.md#EVD-002E-05", "EVIDENCE_LEDGER.md#EVD-002E-06", "EVIDENCE_LEDGER.md#EVD-002E-07"]
+    evidence_receipts: ["EVIDENCE_LEDGER.md#EVD-002E-01", "EVIDENCE_LEDGER.md#EVD-002E-02", "EVIDENCE_LEDGER.md#EVD-002E-03", "EVIDENCE_LEDGER.md#EVD-002E-04", "EVIDENCE_LEDGER.md#EVD-002E-05", "EVIDENCE_LEDGER.md#EVD-002E-06", "EVIDENCE_LEDGER.md#EVD-002E-07", "EVIDENCE_LEDGER.md#EVD-002E-08"]
     technical_acceptance: "NOT_EVALUATED"
     release_eligibility_effect: "BLOCKS"
     negative_evidence_refs: ["NEGATIVE_EVIDENCE_REGISTER.md", "literature/CLAIM_QUARANTINE_REGISTER.md"]
