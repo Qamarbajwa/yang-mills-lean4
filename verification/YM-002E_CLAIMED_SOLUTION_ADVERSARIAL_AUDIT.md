@@ -66,4 +66,4 @@ This binding does not rewrite the legacy `CLAIM-2024-001 — Sky Yang` entry, wh
 
 ## Claim-level audit result
 
-The E3 claim-level audit is recorded in `verification/YM-002E_CLAIM_LEVEL_AUDIT_20260830.md`. Ferreira is classified as a related mechanism result rather than a solution claim; Kirk is conditional on unproved `WC1–WC3` and limited to `SU(2)`; Jacobsen v1 is quarantined after artifact-level detection of empty proof environments and empty bibliography entries, with v2 withdrawal recorded only as provenance. The legacy Sky Yang row remains unresolved. No claim was promoted.
+The E3 claim-level audit is recorded in `verification/YM-002E_CLAIM_LEVEL_AUDIT_20260830.md`. Ferreira is classified as a related mechanism result rather than a solution claim; Kirk is conditional on unproved `WC1–WC3` and limited to `SU(2)`; Jacobsen v1 is quarantined because proof completeness and source traceability remain unverified and the artifact is limited to `SU(3)`, with v2 withdrawal recorded only as provenance. The legacy Sky Yang row remains unresolved. No claim was promoted.
