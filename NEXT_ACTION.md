@@ -1,14 +1,14 @@
 # NEXT ACTION
 
 ## Current action
-`HUMAN_OWNER_CONSTITUTIONAL_ACCEPTANCE_DECISION`
+`YM-002E_CLAIMED_SOLUTION_ADVERSARIAL_AUDIT`
 
 ## Scope
-- Human owner review and explicit constitutional acceptance decision on ROS v1.0. The state must remain `AWAITING_HUMAN_OWNER_ACCEPTANCE` until that decision.
-- Following explicit human owner constitutional acceptance, release task `YM-002E` (`Claimed-solution adversarial audit ledger`).
+- Audit the three quarantined claimed-solution entries in `literature/CLAIM_QUARANTINE_REGISTER.md` against the official Clay obligations.
+- Require exact primary-artifact identity, scope matching, refutation evidence, and independent review before any claim is promoted.
 
 ## Blocked downstream action
-- `YM-002E — Claimed-solution adversarial audit ledger` (BLOCKED pending human constitutional acceptance of ROS v1.0).
+- `YM-002F` and later roadmap tasks remain BLOCKED until YM-002E is independently closed.
 
 ## Completed actions
 - `YM-000 — Local bootstrap` (DONE)
@@ -29,7 +29,9 @@
 ## E3 closure candidates
 - `YM-ROS-100R3` — discovery-based closed-world fingerprint enforcement (`INDEPENDENTLY_VERIFIED`)
 - `YM-002DR1` — ten-analogue semantic classification errata (`INDEPENDENTLY_VERIFIED`)
-
+- `ROS v1.0` — human-owner acceptance recorded; governing system `ACCEPTED / ACTIVE`
+- `YM-002D + YM-002DR1` — `CLOSED`
+- `YM-002E` — released and initial adversarial audit ledger opened (`RELEASED_IN_PROGRESS`)
 
 
 

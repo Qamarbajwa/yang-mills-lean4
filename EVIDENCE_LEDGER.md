@@ -56,10 +56,9 @@
 | EVD-002CR2A-04 | YM-002CR2A Fresh Blind E4 Independent Audit (Verifier `529d2a32-15bb-4bdf-b2b6-af422b22503e`) | E4 | `verification/raw/YM-002CR2A_E4_RAW_20260825T185749Z.md` | `d7e2b5455d411d072403d9441a0bfd12262b68d6898cce76bfb0eb2c07ef913e` (Candidate SHA: `5b7bd0adf9dbfd2e04c5a681c9fa35bc8ee25181`) | TRANSCRIPT_LOG_CAPTURED | ACCEPTED |
 | EVD-002CR2A-05 | YM-002CR2A Derived E4 Independent Review Report | E4_DERIVED | `verification/YM-002CR2A_INDEPENDENT_REVIEW.md` | Derived from raw `d7e2b5455d411d072403d9441a0bfd12262b68d6898cce76bfb0eb2c07ef913e` | TRACEABLE_TO_RAW_E4 | ACCEPTED |
 | EVD-ROS-100R3-01 | YM-ROS-100R3 + YM-002DR1 reproducible E3 closure verification | E3 | `evidence/test_runs/verify_20260829T221022Z.json` | Log SHA-256: `273f63f0989c6fa948e29761085ea7d79da283d71c38139f702afc844f007cca` | REPRODUCIBLE_LOCALLY (`scripts/verify_and_record.py`) | ACCEPTED_PENDING_FRESH_BLIND_DELTA_E4 |
-| EVD-ROS-100R3-02 | YM-ROS-100R3 + YM-002DR1 fresh blind delta-E4 independent audit (Verifier `01a051fe-eb15-7312-b5dd-e442b7c213b4`) | E4 | `verification/raw/YM-ROS-100R3_YM-002DR1_DELTA_E4_RAW_20260830.md` | Raw SHA-256: `b5cc9723456324a81527f8701e969cd0c95862ed15f39e305174d52deef5bcf4` (Candidate SHA audited: `8f105527e1dd06c50f44b3ab994fef096354d776`; scientific tree hash: `f30a330063b2ca0af772582e318bddd70af9f8c7d9e6d28c1c811c052d156474`) | INDEPENDENT_SUBAGENT_TRANSCRIPT; LEVEL_A_SAME_APP_SAME_MODEL_SEPARATE_SESSION | E4_PASS_AWAITING_HUMAN_OWNER_ACCEPTANCE |
-
-
-
+| EVD-ROS-100R3-02 | YM-ROS-100R3 + YM-002DR1 fresh blind delta-E4 independent audit (Verifier `01a051fe-eb15-7312-b5dd-e442b7c213b4`) | E4 | `verification/raw/YM-ROS-100R3_YM-002DR1_DELTA_E4_RAW_20260830.md` | Raw SHA-256: `b5cc9723456324a81527f8701e969cd0c95862ed15f39e305174d52deef5bcf4` (Candidate SHA audited: `8f105527e1dd06c50f44b3ab994fef096354d776`; scientific tree hash: `f30a330063b2ca0af772582e318bddd70af9f8c7d9e6d28c1c811c052d156474`) | INDEPENDENT_SUBAGENT_TRANSCRIPT; LEVEL_A_SAME_APP_SAME_MODEL_SEPARATE_SESSION | ACCEPTED |
+| EVD-ROS-100R3-03 | Human-owner constitutional acceptance of ROS v1.0 and release authorization for YM-002E | HUMAN_OWNER_ACCEPTANCE | `governance/HUMAN_OWNER_ACCEPTANCE_ROS_v1.0_20260830.md` | Scientific tree hash accepted: `f30a330063b2ca0af772582e318bddd70af9f8c7d9e6d28c1c811c052d156474` | USER_EXPLICIT_DECISION | ACCEPTED |
+| EVD-002E-01 | YM-002E initial claim-specific adversarial audit ledger | E3_INITIAL | `verification/YM-002E_CLAIMED_SOLUTION_ADVERSARIAL_AUDIT.md` | Three queued claims screened; no unsupported solution claim accepted | REPRODUCIBLE_LOCALLY (`OFFICIAL_PROBLEM_SPECIFICATION.md`, claim register, local negative evidence) | IN_PROGRESS |
 
 
 

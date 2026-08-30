@@ -1,0 +1,46 @@
+# YM-002E — CLAIMED-SOLUTION ADVERSARIAL AUDIT LEDGER
+
+- **TASK_ID:** `YM-002E`
+- **STATUS:** `RELEASED_IN_PROGRESS`
+- **RELEASE_AUTHORITY:** Human project owner acceptance recorded in `governance/HUMAN_OWNER_ACCEPTANCE_ROS_v1.0_20260830.md`.
+- **SCOPE:** Adversarial screening of quarantined claims against the official Yang–Mills existence and mass-gap obligations.
+- **NON-NEGOTIABLE RULE:** No claim is promoted to a solution without an identifiable primary artifact, complete scope, and evidence addressing the continuum, infinite-volume, universal-group, axiomatic-QFT, nontriviality, and positive-gap obligations.
+
+## Initial audit basis
+
+The local queue contains three quarantined claim classes in `literature/CLAIM_QUARANTINE_REGISTER.md`. The official Clay status page still states that no proof of the mass-gap property is known; this ledger therefore treats each external claim as unaccepted until its exact source and proof obligations are independently checked.
+
+## Claim findings
+
+### CLAIM-2024-001 — Sky Yang, 2024
+
+- **Local claim:** 4D continuum mass-gap proof via effective action / spectral analysis.
+- **Primary-artifact identity:** `MISSING` — no DOI, URL, version, content hash, or local full text is bound in the quarantine register.
+- **Adversarial result:** `NOT_ACCEPTED_PROVENANCE_INSUFFICIENT`.
+- **Required follow-up:** Supply the exact primary artifact and test its construction against the official axioms, universal compact-simple-group quantifier, pure-Yang–Mills field content, nontriviality, continuum/infinite-volume limits, and uniform positive spectral gap.
+
+### CLAIM-2025-001 — Various preprints
+
+- **Local claim:** Mass gap from truncated Schwinger–Dyson equations / ghost-gluon vertex ansatz.
+- **Primary-artifact identity:** `MISSING` — the register names no specific authors, title, identifier, version, or hash.
+- **Adversarial result:** `NOT_ACCEPTED_PROVENANCE_INSUFFICIENT`.
+- **Known failure condition:** A truncation or ansatz is not a proof without controlled nonperturbative error bounds and a demonstrated bridge to the exact 4D pure-Yang–Mills theory.
+- **Required follow-up:** Bind each claimed preprint separately and audit truncation closure, gauge consistency, continuum control, and spectral positivity.
+
+### CLAIM-2026-001 — Various preprints
+
+- **Local claim:** Continuum limit from finite-lattice approximations.
+- **Primary-artifact identity:** `MISSING` — the register names no specific authors, title, identifier, version, or hash.
+- **Adversarial result:** `NOT_ACCEPTED_PROVENANCE_INSUFFICIENT`.
+- **Known failure condition:** The local verified lattice records explicitly distinguish fixed-cutoff or strong-coupling lattice results from the required weak-coupling continuum limit and uniform infinite-volume spectral gap.
+- **Required follow-up:** Bind each claimed preprint separately and audit both joint limits `a → 0`, `V → ∞`, and uniform lower spectral bounds for the target theory.
+
+## Intake conclusion
+
+- `CLAIM-2024-001`: remains quarantined.
+- `CLAIM-2025-001`: remains quarantined.
+- `CLAIM-2026-001`: remains quarantined.
+- `NO_UNSUPPORTED_SOLUTION_CLAIM_ACCEPTED`: `TRUE`.
+- `YM-002E`: remains `IN_PROGRESS`; closing requires claim-specific primary artifacts, adversarial findings, and the task’s independent review/evidence gate.
+
+External context: [Clay Mathematics Institute — Yang–Mills & the Mass Gap](https://www.claymath.org/millennium/yang-mills-the-maths-gap/).

@@ -512,7 +512,7 @@ contracts:
     - "Authoring raw E4 text directly"
     - "Self-declaring human-owner constitutional acceptance"
   candidate_id: 18b255d6779b0e9702fcc43305f86cc5cfc99da1
-  outcome: E4_PASS_AWAITING_HUMAN_OWNER_ACCEPTANCE
+  outcome: ACCEPTED
 
 - contract_id: CONTRACT-YM-ROS-100R3
   task_id: YM-ROS-100R3
@@ -545,7 +545,37 @@ contracts:
     - OFFICIAL_PROBLEM_SPECIFICATION.md
     - Authoring raw E4 text directly
     - Self-declaring human-owner constitutional acceptance
-  outcome: E4_PASS_AWAITING_HUMAN_OWNER_ACCEPTANCE
+  outcome: ACCEPTED
+
+- contract_id: CONTRACT-YM-002E
+  task_id: YM-002E
+  risk_tier: T3
+  base_sha: "89b0cd72ffc3a4d6ca7ef978839184306a57cd7a"
+  writer:
+    environment: Codex
+    agent_id: primary-worker
+    model: GPT-5
+  reviewer:
+    environment: Independent verifier required
+    agent_id: PENDING_YM-002E_E4
+    independence_level: PENDING
+  acceptance_authority:
+    environment: HumanOwner + CI
+    authority_id: human-owner-and-ci-evaluator
+    authority_type: ENVIRONMENT_LOCAL
+  allowed_scope:
+    - literature/CLAIM_QUARANTINE_REGISTER.md
+    - verification/YM-002E_CLAIMED_SOLUTION_ADVERSARIAL_AUDIT.md
+    - CLAIM_EVIDENCE_MATRIX.md
+    - OFFICIAL_PROBLEM_SPECIFICATION.md
+    - REJECTION_LEDGER.md
+    - NEGATIVE_EVIDENCE_REGISTER.md
+    - HYPOTHESIS_REGISTER.md
+  forbidden_scope:
+    - Promoting an unsupported external claim to a proven solution
+    - Authoring raw E4 text directly
+    - Releasing YM-002F or later downstream tasks
+  outcome: RELEASED_IN_PROGRESS
 
 - contract_id: CONTRACT-YM-002DR1
   task_id: YM-002DR1
@@ -580,7 +610,7 @@ contracts:
     - OFFICIAL_PROBLEM_SPECIFICATION.md
     - Authoring raw E4 text directly
     - Self-declaring human-owner constitutional acceptance
-  outcome: E4_PASS_AWAITING_HUMAN_OWNER_ACCEPTANCE
+  outcome: ACCEPTED
 
 
 

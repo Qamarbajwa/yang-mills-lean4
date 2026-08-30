@@ -16,12 +16,12 @@
 | YM-002C | Modern rigorous advances (2000–2026) | YM-002BR1 | T3 | primary literature + fresh blind E4 audit | E3_VERIFIED_E4_CHALLENGED_SUPERSEDED |
 | YM-002CR1 | Modern literature scope, taxonomy & completeness repair | YM-002C | T3 | fresh blind E4 audit + epistemic taxonomy | E3_VERIFIED_E4_CHALLENGED_SUPERSEDED |
 | YM-002CR2A | Modern-source locator and theorem-wording erratum | YM-002CR2 | T2 | fresh blind E4 audit + bounded erratum verification | INDEPENDENTLY_VERIFIED |
-| YM-002D | Solved, modified, and analogous theories ledger | YM-002CR2A | T3 | primary literature + theorem extraction | INDEPENDENTLY_VERIFIED |
+| YM-002D | Solved, modified, and analogous theories ledger | YM-002CR2A | T3 | primary literature + theorem extraction | CLOSED |
 | YM-ROS-100R1 | ROS v1.0 constitutional semantic and acceptance hardening | YM-002D | T4 | E3 deterministic test suite + fresh blind E4 audit | E4_PASS_ACCEPTANCE_CHALLENGED |
 | YM-ROS-100R2 | ROS v1.0 constitutional & epistemic hardening repair | YM-ROS-100R1 | T4 | E3 deterministic test suite + fresh blind E4 audit | INDEPENDENTLY_VERIFIED |
-| YM-ROS-100R3 | ROS v1.0 discovery-based closed-world fingerprint enforcement | YM-ROS-100R2 | T4 | E3 discovery regressions + fresh blind delta-E4 audit | INDEPENDENTLY_VERIFIED |
-| YM-002DR1 | Analogue semantic classification errata and reconciliation | YM-002D | T3 | ten-row semantic regression + fresh blind delta-E4 audit | INDEPENDENTLY_VERIFIED |
-| YM-002E | Claimed-solution adversarial audit ledger | YM-002DR1, YM-ROS-100R3 | T3 | primary claims + refutation evidence | BLOCKED |
+| YM-ROS-100R3 | ROS v1.0 discovery-based closed-world fingerprint enforcement | YM-ROS-100R2 | T4 | E3 discovery regressions + fresh blind delta-E4 audit | ACCEPTED / ACTIVE |
+| YM-002DR1 | Analogue semantic classification errata and reconciliation | YM-002D | T3 | ten-row semantic regression + fresh blind delta-E4 audit | CLOSED |
+| YM-002E | Claimed-solution adversarial audit ledger | YM-002DR1, YM-ROS-100R3 | T3 | primary claims + refutation evidence | RELEASED_IN_PROGRESS |
 | YM-002F | Cross-era theorem and dependency synthesis | YM-002E | T3 | structural graph synthesis + E4 review | BLOCKED |
 | YM-003 | Construct missing-bridge graph | YM-002F | T3 | independent semantic review | BLOCKED |
 | YM-004 | Reconstruct rigorous RG/Bałaban program | YM-003 | T3 | theorem reproduction + independent review | BLOCKED |
