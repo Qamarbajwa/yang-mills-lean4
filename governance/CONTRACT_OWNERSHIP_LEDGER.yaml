@@ -517,15 +517,15 @@ contracts:
 - contract_id: CONTRACT-YM-ROS-100R3
   task_id: YM-ROS-100R3
   risk_tier: T4
-  base_sha: "18b255d6779b0e9702fcc43305f86cc5cfc99da1"
+  base_sha: "8f105527e1dd06c50f44b3ab994fef096354d776"
   writer:
     environment: Codex
     agent_id: primary-worker
     model: GPT-5
   reviewer:
     environment: Independent verifier required
-    agent_id: PENDING_FRESH_BLIND_DELTA_E4
-    independence_level: PENDING
+    agent_id: 01a051fe-eb15-7312-b5dd-e442b7c213b4
+    independence_level: LEVEL_A_SAME_APP_SAME_MODEL_SEPARATE_SESSION
   acceptance_authority:
     environment: HumanOwner + CI
     authority_id: human-owner-and-ci-evaluator
@@ -545,20 +545,20 @@ contracts:
     - OFFICIAL_PROBLEM_SPECIFICATION.md
     - Authoring raw E4 text directly
     - Self-declaring human-owner constitutional acceptance
-  outcome: E3_VERIFIED_AWAITING_FRESH_BLIND_DELTA_E4
+  outcome: E4_PASS_AWAITING_HUMAN_OWNER_ACCEPTANCE
 
 - contract_id: CONTRACT-YM-002DR1
   task_id: YM-002DR1
   risk_tier: T3
-  base_sha: "ef51b69350c8b78ad81799404fb32967266d3e16"
+  base_sha: "8f105527e1dd06c50f44b3ab994fef096354d776"
   writer:
     environment: Codex
     agent_id: primary-worker
     model: GPT-5
   reviewer:
     environment: Independent verifier required
-    agent_id: PENDING_FRESH_BLIND_DELTA_E4
-    independence_level: PENDING
+    agent_id: 01a051fe-eb15-7312-b5dd-e442b7c213b4
+    independence_level: LEVEL_A_SAME_APP_SAME_MODEL_SEPARATE_SESSION
   acceptance_authority:
     environment: HumanOwner + CI
     authority_id: human-owner-and-ci-evaluator
@@ -580,7 +580,7 @@ contracts:
     - OFFICIAL_PROBLEM_SPECIFICATION.md
     - Authoring raw E4 text directly
     - Self-declaring human-owner constitutional acceptance
-  outcome: E3_VERIFIED_AWAITING_FRESH_BLIND_DELTA_E4
+  outcome: E4_PASS_AWAITING_HUMAN_OWNER_ACCEPTANCE
 
 
 
