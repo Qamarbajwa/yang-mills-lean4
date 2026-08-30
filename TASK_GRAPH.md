@@ -22,8 +22,8 @@
 | YM-ROS-100R2 | ROS v1.0 constitutional & epistemic hardening repair | YM-ROS-100R1 | T4 | E3 deterministic test suite + fresh blind E4 audit | INDEPENDENTLY_VERIFIED |
 | YM-ROS-100R3 | ROS v1.0 discovery-based closed-world fingerprint enforcement | YM-ROS-100R2 | T4 | E3 discovery regressions + fresh blind delta-E4 audit | ACCEPTED / ACTIVE |
 | YM-002DR1 | Analogue semantic classification errata and reconciliation | YM-002D | T3 | ten-row semantic regression + fresh blind delta-E4 audit | CLOSED |
-| YM-002E | Claimed-solution adversarial audit ledger | YM-002DR1, YM-ROS-100R3 | T3 | primary claims + refutation evidence | RELEASED_IN_PROGRESS |
-| YM-002F | Cross-era theorem and dependency synthesis | YM-002E | T3 | structural graph synthesis + E4 review | BLOCKED |
+| YM-002E | Claimed-solution adversarial audit ledger | YM-002DR1, YM-ROS-100R3 | T3 | primary claims + refutation evidence | INDEPENDENTLY_VERIFIED / CLOSED |
+| YM-002F | Cross-era theorem and dependency synthesis | YM-002E | T3 | structural graph synthesis + E4 review | READY |
 | YM-003 | Construct missing-bridge graph | YM-002F | T3 | independent semantic review | BLOCKED |
 | YM-004 | Reconstruct rigorous RG/Bałaban program | YM-003 | T3 | theorem reproduction + independent review | BLOCKED |
 | YM-005 | Reconstruct rigorous lattice gap program | YM-003 | T3 | theorem reproduction + independent review | BLOCKED |

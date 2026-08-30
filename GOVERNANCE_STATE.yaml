@@ -26,7 +26,7 @@ governance_state:
     roadmap:
       path: "ROADMAP.md"
       state: "OBSERVED"
-    active_objective_id: "YM-002E"
+    active_objective_id: "YM-002F"
 
   standing_mandate:
     active: true
@@ -82,16 +82,15 @@ governance_state:
   assurance:
     capability_registry_path: "governance/CAPABILITY_ASSURANCE_MATRIX.md"
     capability_count: 6
-    fully_assured_declared_scope_count: 5
-    unverified_or_partial_capabilities:
-      - "YM-002E final claim-obligation synthesis and formal closeout pending"
+    fully_assured_declared_scope_count: 6
+    unverified_or_partial_capabilities: []
     known_critical_defects: []
     negative_evidence_register: "NEGATIVE_EVIDENCE_REGISTER.md"
 
   release:
     current_state: "NOT_RELEASE_ELIGIBLE"
     exact_candidate_id: "9fa3de7fe34ab85a4022d8cc93e3ee491764ca06"
-    hard_gates_state: "YM-002E_CLOSEOUT_PENDING"
+    hard_gates_state: "YM-002E_CLOSED_YM-002F_ELIGIBLE"
     release_eligible: false
     deployment_authorized: false
     deployed: false
@@ -101,15 +100,9 @@ governance_state:
       - "No remote upstream is configured."
 
   blockers:
-    - id: "YM-002E-SOURCE-IDENTITY"
-      class: "PROVENANCE"
-      detail: "Three requested artifact leads are byte-bound and claim-level audited; bounded repository provenance recovery classifies legacy CLAIM-2024-001 Sky Yang as UNRESOLVED_ORPHANED_LEGACY_CLAIM. No artifact is assigned; final synthesis and independent closeout remain required."
-    - id: "YM-002E-E4"
-      class: "INDEPENDENT_VERIFICATION"
-      detail: "YM-002E requires final claim-obligation synthesis and candidate-bound independent closeout after the legacy provenance disposition."
-    - id: "DOWNSTREAM-DEPENDENCY"
-      class: "DEPENDENCY"
-      detail: "YM-002F and later roadmap tasks remain blocked until YM-002E closes."
+    - id: "NO_ACTIVE_BLOCKER"
+      class: "NONE"
+      detail: "YM-002E is independently verified and closed; YM-002F is eligible to begin. YM-003 and later tasks remain gated on YM-002F acceptance."
 
   legacy_migration:
     prior_governance_present: true
@@ -133,14 +126,15 @@ governance_state:
     candidate_id: "9fa3de7fe34ab85a4022d8cc93e3ee491764ca06"
     evidence_refs:
       - "EVIDENCE_LEDGER.md#EVD-002E-08"
+      - "EVIDENCE_LEDGER.md#EVD-002E-10"
       - "evidence/test_runs/verify_20260829T221022Z.json"
-    state: "YM-002E_E4_BLOCKED_REVIEW"
+    state: "YM-002E_INDEPENDENTLY_VERIFIED_CLOSED"
 
   next_action:
-    objective_id: "YM-002E"
+    objective_id: "YM-002F"
     eligibility: "READY"
-    blocker_class: "INDEPENDENT_VERIFICATION_FOR_CLOSEOUT"
-    description: "Produce final four-claim obligation synthesis, then run candidate-bound E3 and independent E4 closeout review."
+    blocker_class: "NONE"
+    description: "Begin YM-002F cross-era theorem and dependency synthesis; keep YM-003 and later tasks gated until YM-002F closes."
 
   migration_acceptance:
     decision: "ACCEPTED"

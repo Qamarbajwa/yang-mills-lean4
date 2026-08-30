@@ -44,7 +44,7 @@ task_execution_envelope:
   roles_and_authority:
     orchestrator: "primary-worker"
     writer: {id: "primary-worker", qualified: true, risk_ceiling: "T3"}
-    reviewer_or_verifier: {id: "PENDING_YM-002E_E4", qualified: true, expected_independence: "IND1"}
+    reviewer_or_verifier: {id: "01a05251-bbcc-7712-a892-3576d2aaa103", qualified: true, expected_independence: "IND1"}
     implementation_authority: "AUTONOMOUS_WITHIN_ENVELOPE"
     verification_authority: "EVIDENCE_BASED"
     release_eligibility_authority: "EVIDENCE_DERIVED_GATE"
@@ -64,7 +64,7 @@ task_execution_envelope:
     transformation_rules: ["Audit each claim separately", "Record failure locality", "Never aggregate vague claims into proof"]
     invariants: [{id: "INV-002E-001", statement: "NO_UNSUPPORTED_SOLUTION_CLAIM_ACCEPTED", zero_tolerance: true}, {id: "INV-002E-002", statement: "ANALOGUE_OR_LATTICE_RESULT != CLAY_SOLUTION", zero_tolerance: true}, {id: "INV-002E-003", statement: "MISSING_SOURCE_IDENTITY => QUARANTINED", zero_tolerance: true}]
     outputs: ["Claim-specific adversarial audit ledger", "Updated negative evidence if warranted", "Independent review packet"]
-    postconditions: ["All claims retain truthful status", "Downstream eligibility remains blocked until closeout"]
+    postconditions: ["All claims retain truthful status", "YM-002E is independently verified and closed", "YM-002F becomes eligible; later tasks remain gated"]
     failure_contracts: [{condition: "claim cannot be reproduced or source is ambiguous", expected_behavior: "NOT_ACCEPTED_PROVENANCE_INSUFFICIENT"}, {condition: "evidence contradicts claim", expected_behavior: "REJECTED_WITH_NEGATIVE_EVIDENCE"}]
     retry_idempotency_concurrency: ["One ledger entry per claim", "Append findings; preserve prior statuses"]
     persistence_restart_recovery: ["Ledger and evidence refs permit restart"]
@@ -94,10 +94,10 @@ task_execution_envelope:
     state_integrity_check: "Candidate SHA, scientific tree hash, source identities, and evidence refs"
   stop_conditions: ["scope ambiguity", "risk exceeds ceiling", "unexpected destructive/external effect", "candidate identity becomes unknown", "required reserved authority is reached", "evidence contradicts fundamental contract assumption"]
   completion_record:
-    final_candidate_id: null
-    status: "IN_PROGRESS"
-    evidence_receipts: ["EVIDENCE_LEDGER.md#EVD-002E-01", "EVIDENCE_LEDGER.md#EVD-002E-02", "EVIDENCE_LEDGER.md#EVD-002E-03", "EVIDENCE_LEDGER.md#EVD-002E-04", "EVIDENCE_LEDGER.md#EVD-002E-05", "EVIDENCE_LEDGER.md#EVD-002E-06", "EVIDENCE_LEDGER.md#EVD-002E-07", "EVIDENCE_LEDGER.md#EVD-002E-08"]
-    technical_acceptance: "NOT_EVALUATED"
-    release_eligibility_effect: "BLOCKS"
+    final_candidate_id: "9fa3de7fe34ab85a4022d8cc93e3ee491764ca06"
+    status: "CLOSED"
+    evidence_receipts: ["EVIDENCE_LEDGER.md#EVD-002E-01", "EVIDENCE_LEDGER.md#EVD-002E-02", "EVIDENCE_LEDGER.md#EVD-002E-03", "EVIDENCE_LEDGER.md#EVD-002E-04", "EVIDENCE_LEDGER.md#EVD-002E-05", "EVIDENCE_LEDGER.md#EVD-002E-06", "EVIDENCE_LEDGER.md#EVD-002E-07", "EVIDENCE_LEDGER.md#EVD-002E-08", "EVIDENCE_LEDGER.md#EVD-002E-09", "EVIDENCE_LEDGER.md#EVD-002E-10"]
+    technical_acceptance: "INDEPENDENTLY_VERIFIED"
+    release_eligibility_effect: "UNBLOCKS_YM-002F"
     negative_evidence_refs: ["NEGATIVE_EVIDENCE_REGISTER.md", "literature/CLAIM_QUARANTINE_REGISTER.md"]
-    checkpoint_id: null
+    checkpoint_id: "YM-002E-CLOSEOUT-20260830"

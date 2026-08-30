@@ -1,14 +1,14 @@
 # NEXT ACTION
 
 ## Current action
-`YM-002E_FINAL_SYNTHESIS_AND_INDEPENDENT_CLOSEOUT`
+`YM-002F_CROSS_ERA_THEOREM_AND_DEPENDENCY_SYNTHESIS`
 
 ## Scope
-- Synthesize the three byte-bound leads and the formally dispositioned legacy Sky Yang row against the official Clay obligations.
-- Require candidate-bound E3 confirmation and fresh independent E4 review before closing YM-002E.
+- Build the cross-era theorem and dependency synthesis from the accepted foundational, constructive, modern, analogous, and YM-002E records.
+- Require candidate-bound E3 confirmation and fresh independent E4 review before advancing beyond YM-002F.
 
 ## Blocked downstream action
-- `YM-002F` and later roadmap tasks remain BLOCKED until YM-002E is independently closed.
+- `YM-003` and later roadmap tasks remain BLOCKED until YM-002F is independently closed.
 
 ## Completed actions
 - `YM-000 — Local bootstrap` (DONE)
@@ -32,8 +32,7 @@
 - `YM-002DR1` — ten-analogue semantic classification errata (`INDEPENDENTLY_VERIFIED`)
 - `ROS v1.0` — human-owner acceptance recorded; governing system `ACCEPTED / ACTIVE`
 - `YM-002D + YM-002DR1` — `CLOSED`
-- `YM-002E` — released and initial adversarial audit ledger opened (`RELEASED_IN_PROGRESS`)
-
+- `YM-002E` — final four-claim adversarial synthesis and independent closeout (`INDEPENDENTLY_VERIFIED / CLOSED`)
 
 
 

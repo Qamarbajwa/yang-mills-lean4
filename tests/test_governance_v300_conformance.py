@@ -32,7 +32,7 @@ def test_v3_state_and_envelopes_are_bound_and_typed():
     assert "5e3024b13cf531a70910956b86fcdfc9e0ad3abb" in read("GOVERNANCE_STATE.yaml")
     assert "5e3024b13cf531a70910956b86fcdfc9e0ad3abb" in read("governance/MIGRATION_RECEIPT_YM-GOV-300.md")
     assert objective["objective"]["exact_objective"].startswith("Adversarially audit every quarantined")
-    assert objective["completion_record"]["release_eligibility_effect"] == "BLOCKS"
+    assert objective["completion_record"]["release_eligibility_effect"] == "UNBLOCKS_YM-002F"
 
 
 def test_gc_01_to_gc_30_conformance_boundaries():
@@ -98,15 +98,15 @@ def test_gc_01_to_gc_30_conformance_boundaries():
     assert all(checks.values()), {key: value for key, value in checks.items() if not value}
 
 
-def test_migration_does_not_promote_scientific_state_or_downstream_tasks():
+def test_migration_and_later_closeout_preserve_release_boundaries():
     task_graph = read("TASK_GRAPH.md")
     current = read("CURRENT_SCIENTIFIC_STATE.md")
     state = yaml.safe_load(read("GOVERNANCE_STATE.yaml"))["governance_state"]
 
-    assert "YM-002E" in task_graph and "RELEASED_IN_PROGRESS" in task_graph
-    assert "YM-002F" in task_graph and "BLOCKED" in task_graph
-    assert "YM-002E" in current and "RELEASED" in current
-    assert state["direction"]["active_objective_id"] == "YM-002E"
+    assert "YM-002E" in task_graph and "INDEPENDENTLY_VERIFIED / CLOSED" in task_graph
+    assert "YM-002F" in task_graph and "READY" in task_graph
+    assert "YM-002E = INDEPENDENTLY_VERIFIED / CLOSED" in current
+    assert state["direction"]["active_objective_id"] == "YM-002F"
     assert state["release"]["current_state"] == "NOT_RELEASE_ELIGIBLE"
 
 
