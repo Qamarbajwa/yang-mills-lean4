@@ -49,6 +49,7 @@ def test_dr1_semantic_errata_preserves_scope_and_clay_non_sufficiency():
 
     pathway_text = PATHWAY_PATH.read_text(encoding="utf-8")
     assert pathway_text.count("- **COMPLETE_SOLUTION_STATUS:** `DOES_NOT_CONSTITUTE_COMPLETE_CLAY_SOLUTION`") == 10
+    assert "EXACT_RESULT != COMPLETE_SOLUTION_OF_THEORY" in pathway_text
     assert "EXACT_RESULT != COMPLETE_CLAY_SOLUTION" in pathway_text
 
 
