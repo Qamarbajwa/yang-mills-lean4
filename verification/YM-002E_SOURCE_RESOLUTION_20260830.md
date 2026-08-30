@@ -48,3 +48,15 @@
 - https://zenodo.org/records/18824739
 - https://zenodo.org/records/18825033
 - https://arxiv.org/abs/2506.00284
+
+## Byte-level binding result
+
+The three requested artifact records are now locally byte-bound:
+
+| Source ID | Local SHA-256 | Server hash/status |
+|---|---|---|
+| `SRC-YM-002E-FERREIRA-2508.20568-v1` | `7c78d18c6e6222d114a05c3852b3814f45e15261fc97d336dcd0f9df46db5c30` | arXiv server SHA not exposed |
+| `SRC-YM-002E-KIRK-ZENODO-18824739-v1.0` | `13b9fc8cb7109f8f55cca7b285417458bd9a2b99faccf11bc483f25d26fcd3e1` | MD5 reconciled: `f5c2be4b71128a384d6509747f1b7dee` |
+| `SRC-YM-002E-JACOBSEN-2506.00284-v1` | `f97569b3bd122de923d6d7a642ec24bcccb319f8e215fa1f6f4781a241efcf51` | arXiv server SHA not exposed |
+
+These records resolve the three artifact leads named in the continuation request. They do not rewrite the existing internal `CLAIM-2024-001 — Sky Yang` row, which remains a separate unresolved queue item pending its own exact source identity.

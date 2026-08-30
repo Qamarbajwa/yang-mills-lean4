@@ -18,7 +18,7 @@
 - Hard gates affected: candidate identity, source identity, no unsupported promotion, downstream dependency gate.
 - Reserved-authority trigger, if any: None for internal technical execution; external publication remains reserved.
 - Current blocker class: INDEPENDENT_VERIFICATION_FOR_CLOSEOUT
-- Current blocker detail: Exact primary-artifact identity is still missing for each queued claim; after source binding, independent closeout remains required.
+- Current blocker detail: Three requested artifact leads are byte-bound and claim-level audited; legacy CLAIM-2024-001 Sky Yang remains unresolved, and all findings still require independent closeout.
 - Candidate/checkpoint: `b64957789a1feaab096e08ab0b07e5acb1acf832` at migration baseline.
 - Evidence refs: `verification/YM-002E_CLAIMED_SOLUTION_ADVERSARIAL_AUDIT.md`, `verification/YM-002E_SOURCE_RESOLUTION_20260830.md`, `EVIDENCE_LEDGER.md#EVD-002E-01`, `EVIDENCE_LEDGER.md#EVD-002E-02`.
 - Notes: All three current claims remain quarantined.

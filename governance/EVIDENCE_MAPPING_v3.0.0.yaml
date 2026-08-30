@@ -34,6 +34,16 @@ records:
     environment: "STATIC"
     independence: "IND3"
     candidate_bound: true
+  - evidence_ref: "EVIDENCE_LEDGER.md#EVD-002E-03"
+    strength: "E3"
+    environment: "INTEGRATED_LOCAL"
+    independence: "IND0"
+    candidate_bound: true
+  - evidence_ref: "EVIDENCE_LEDGER.md#EVD-002E-04"
+    strength: "E3"
+    environment: "INTEGRATED_LOCAL"
+    independence: "IND0"
+    candidate_bound: true
   - evidence_ref: "EVIDENCE_LEDGER.md#EVD-GOV-300-01"
     strength: "E3"
     environment: "INTEGRATED_LOCAL"

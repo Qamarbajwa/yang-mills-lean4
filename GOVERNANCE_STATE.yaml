@@ -102,7 +102,7 @@ governance_state:
   blockers:
     - id: "YM-002E-SOURCE-IDENTITY"
       class: "PROVENANCE"
-      detail: "Exact primary-artifact identity is still missing for each queued claim; claim closure cannot proceed on generic descriptions."
+      detail: "Three requested artifact leads are byte-bound and claim-level audited; legacy CLAIM-2024-001 Sky Yang remains unresolved and must not be silently remapped. Independent closeout remains required."
     - id: "YM-002E-E4"
       class: "INDEPENDENT_VERIFICATION"
       detail: "YM-002E requires independent closeout after claim-specific audit."

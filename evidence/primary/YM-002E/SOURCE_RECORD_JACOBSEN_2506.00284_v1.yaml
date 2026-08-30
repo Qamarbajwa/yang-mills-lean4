@@ -1,0 +1,18 @@
+SOURCE_ID: "SRC-YM-002E-JACOBSEN-2506.00284-v1"
+TITLE: "A Constructive Proof of Existence and Mass Gap for Pure SU(3) Yang-Mills in Four-Dimensional Space-Time"
+AUTHORS:
+  - "D. C. Jacobsen"
+PRIMARY_IDENTIFIER: "arXiv:2506.00284"
+PRIMARY_VERSION: "v1"
+PUBLICATION_STATUS: "CLAIM_ARTIFACT_V1; CURRENT_ARXIV_STATE_V2_WITHDRAWN"
+PRIMARY_ARTIFACT_PATH: "evidence/primary/YM-002E/arxiv_2506.00284v1_source.tar.gz"
+PRIMARY_ARTIFACT_SHA256: "f97569b3bd122de923d6d7a642ec24bcccb319f8e215fa1f6f4781a241efcf51"
+SERVER_PROVIDED_HASH: "NOT_EXPOSED_BY_ARXIV_ENDPOINT"
+RETRIEVAL_TIMESTAMP_UTC: "2026-08-30T11:53:21Z"
+SOURCE_RELATION:
+  CLAIM_ARTIFACT: "arXiv:2506.00284v1"
+  CURRENT_ARXIV_STATE: "v2 / WITHDRAWN_BY_ARXIV_ADMIN"
+  WITHDRAWAL_REASON_RECORDED_BY_ARXIV: "does not meet arXiv research content quality standards"
+CLAIM_SCOPE: "Claimed pure SU(3) Yang–Mills existence and positive mass gap on R^4 using a five-dimensional orbifold regulator and zero-mode sector."
+AUDIT_CLASS: "QUARANTINED_CLAIM / OUTSIDE_FULL_CLAY_GROUP_SCOPE"
+PROVENANCE_NOTES: "The v1 source tarball is the claim artifact and is bound locally. The v2 withdrawn stub is not substituted for v1 and withdrawal is recorded as provenance evidence, not as a mathematical refutation."

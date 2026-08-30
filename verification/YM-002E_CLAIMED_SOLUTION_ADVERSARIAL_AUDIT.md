@@ -53,3 +53,17 @@ The 2026-08-30 source-resolution and adversarial triage pass is recorded in `ver
 - `CLAIM-2025-001`: queue identity unresolved; DSE/gluon-propagator lead triaged as insufficient for the Clay target.
 - `CLAIM-2026-001`: queue identity unresolved; conditional single-group continuum lead triaged as insufficient for the Clay target.
 - Separate `SU(3)` proof lead: recorded as unassigned and quarantined, not silently attached to a queue row.
+
+## Byte-level source binding
+
+The three artifact leads named for the next audit phase now have local source records and SHA-256 bindings in `evidence/primary/YM-002E/`:
+
+- Ferreira et al., arXiv `2508.20568v1`: `7c78d18c6e6222d114a05c3852b3814f45e15261fc97d336dcd0f9df46db5c30`.
+- Kirk, Zenodo `18824739` v1.0: `13b9fc8cb7109f8f55cca7b285417458bd9a2b99faccf11bc483f25d26fcd3e1`; Zenodo MD5 reconciled.
+- Jacobsen, arXiv `2506.00284v1` source: `f97569b3bd122de923d6d7a642ec24bccb319f8e215fa1f6f4781a241efcf51`.
+
+This binding does not rewrite the legacy `CLAIM-2024-001 — Sky Yang` entry, whose exact artifact remains unresolved.
+
+## Claim-level audit result
+
+The E3 claim-level audit is recorded in `verification/YM-002E_CLAIM_LEVEL_AUDIT_20260830.md`. Ferreira is classified as a related mechanism result rather than a solution claim; Kirk is conditional on unproved `WC1–WC3` and limited to `SU(2)`; Jacobsen v1 is quarantined after artifact-level detection of empty proof environments and empty bibliography entries, with v2 withdrawal recorded only as provenance. The legacy Sky Yang row remains unresolved. No claim was promoted.
