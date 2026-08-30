@@ -2,7 +2,7 @@
 
 - Date: `2026-08-30`
 - Task: `YM-002E`
-- Base scientific candidate: `5e3024b13cf531a70910956b86fcdfc9e0ad3abb`
+- Base scientific candidate: `f7810a4667e0bc99820bd78e4d0fdb3542335cd4`
 - Purpose: Resolve exact primary-artifact identities for the three quarantined queue entries without treating search results as proof.
 - Method: Exact-name/title and identifier searches across primary repositories and author/deposit records. No local full text was ingested in this pass; consequently this addendum records source resolution and scope triage, not theorem verification.
 

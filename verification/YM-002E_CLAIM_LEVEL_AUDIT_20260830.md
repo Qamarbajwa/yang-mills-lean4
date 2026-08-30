@@ -2,7 +2,7 @@
 
 - Date: `2026-08-30`
 - Task: `YM-002E`
-- Audit base candidate: `5e3024b13cf531a70910956b86fcdfc9e0ad3abb`
+- Audit base candidate: `f7810a4667e0bc99820bd78e4d0fdb3542335cd4`
 - Source records: `evidence/primary/YM-002E/SOURCE_RECORD_*.yaml`
 - Audit status: `E3_COMPLETE_PENDING_INDEPENDENT_CLOSEOUT`
 - Governing target: `OFFICIAL_PROBLEM_SPECIFICATION.md`
@@ -36,11 +36,11 @@ The Clay target requires, for every compact simple gauge group, a non-trivial qu
 - Claim artifact: `evidence/primary/YM-002E/arxiv_2506.00284v1_source.tar.gz`
 - SHA-256: `f97569b3bd122de923d6d7a642ec24bcccb319f8e215fa1f6f4781a241efcf51`
 - Scope claimed in artifact: pure `SU(3)` Yang–Mills on `R^4`, using a five-dimensional orbifold regulator, joint continuum/infinite-volume limits, OS reconstruction, and a positive glueball mass.
-- Direct artifact observations from `main.tex`: three `Proof sketch` environments are empty (source lines 383, 404, and 419); the bibliography contains empty `bibitem` entries for `ref1` through `ref11` (source lines 890–939); the claimed estimates and cited technical inputs are therefore not traceable to complete proof content in the supplied v1 source.
+- Direct artifact observations from `main.tex`: the three `Proof sketch` environments contain short nonempty bodies (source lines 383–385, 404–406, and 419–421), and the bibliography entries for `ref1` through `ref11` are populated (source lines 892–937). These observations do not establish complete proofs or validate the cited technical inputs; the claimed estimates and proof obligations remain unverified and are not traceable to a complete, independently checked argument in the supplied v1 source.
 - Clay obligations: universal compact-simple-group quantification is not met by an `SU(3)`-only result; the regulator-to-pure-4D target bridge and cited constructive estimates are not artifact-supported at the supplied byte level.
 - Current arXiv state: v2 is withdrawn by arXiv Admin for not meeting research-content quality standards. This is recorded as provenance evidence only and is not treated as a mathematical refutation of v1.
-- Result: `QUARANTINED_CLAIM / ARTIFACT_INCOMPLETE_AND_OUTSIDE_FULL_CLAY_GROUP_SCOPE`.
-- Failure locality: missing proof content and source traceability; universal-group scope; regulator equivalence remains unverified.
+- Result: `QUARANTINED_CLAIM / PROOF_COMPLETENESS_UNVERIFIED_AND_OUTSIDE_FULL_CLAY_GROUP_SCOPE`.
+- Failure locality: proof completeness and source traceability remain unverified; universal-group scope; regulator equivalence remains unverified.
 
 ## Legacy queue reconciliation
 
@@ -51,8 +51,7 @@ The existing internal `CLAIM-2024-001 — Sky Yang` entry remains separate and u
 - Three requested artifacts are byte-bound and individually audited at the available artifact/scope level.
 - Ferreira: mechanism result, not a solution claim.
 - Kirk: conditional SU(2) result, not an unconditional Clay solution.
-- Jacobsen v1: quarantined claim with incomplete source support and SU(3)-only scope; v2 withdrawal preserved as provenance.
+- Jacobsen v1: quarantined claim with proof completeness/traceability unverified and SU(3)-only scope; v2 withdrawal preserved as provenance.
 - Legacy Sky Yang row: source identity unresolved.
 - `NO_UNSUPPORTED_SOLUTION_CLAIM_ACCEPTED`: `TRUE`.
 - YM-002E remains `RELEASED_IN_PROGRESS`; independent closeout is still required and downstream tasks remain blocked.
-
