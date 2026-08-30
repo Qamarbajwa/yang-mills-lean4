@@ -44,7 +44,7 @@ The Clay target requires, for every compact simple gauge group, a non-trivial qu
 
 ## Legacy queue reconciliation
 
-The existing internal `CLAIM-2024-001 — Sky Yang` entry remains separate and unresolved because none of the three byte-bound artifacts matches its supplied author/year identity. It remains `NOT_ACCEPTED_PROVENANCE_INSUFFICIENT`; no historical queue row was rewritten.
+The existing internal `CLAIM-2024-001 — Sky Yang` entry remains separate and unresolved. Bounded repository provenance recovery found only its introduction as a generic internal screening row and no primary-source identity; the external `Sky Yang Cao / Sky Cao` lead remains unproven and unbound. It is now classified `UNRESOLVED_ORPHANED_LEGACY_CLAIM` with `NOT_ACCEPTED_PROVENANCE_INSUFFICIENT`; no historical queue row was rewritten.
 
 ## E3 conclusion
 
@@ -52,6 +52,6 @@ The existing internal `CLAIM-2024-001 — Sky Yang` entry remains separate and u
 - Ferreira: mechanism result, not a solution claim.
 - Kirk: conditional SU(2) result, not an unconditional Clay solution.
 - Jacobsen v1: quarantined claim with proof completeness/traceability unverified and SU(3)-only scope; v2 withdrawal preserved as provenance.
-- Legacy Sky Yang row: source identity unresolved.
+- Legacy Sky Yang row: `UNRESOLVED_ORPHANED_LEGACY_CLAIM` after bounded repository provenance recovery; no artifact assigned.
 - `NO_UNSUPPORTED_SOLUTION_CLAIM_ACCEPTED`: `TRUE`.
 - YM-002E remains `RELEASED_IN_PROGRESS`; independent closeout is still required and downstream tasks remain blocked.

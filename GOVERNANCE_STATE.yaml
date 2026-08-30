@@ -83,7 +83,7 @@ governance_state:
     capability_count: 6
     fully_assured_declared_scope_count: 5
     unverified_or_partial_capabilities:
-      - "YM-002E claim-specific closure pending independent review"
+      - "YM-002E final claim-obligation synthesis and formal closeout pending"
     known_critical_defects: []
     negative_evidence_register: "NEGATIVE_EVIDENCE_REGISTER.md"
 
@@ -102,10 +102,10 @@ governance_state:
   blockers:
     - id: "YM-002E-SOURCE-IDENTITY"
       class: "PROVENANCE"
-      detail: "Three requested artifact leads are byte-bound and claim-level audited; legacy CLAIM-2024-001 Sky Yang remains unresolved and must not be silently remapped. Independent closeout remains required."
+      detail: "Three requested artifact leads are byte-bound and claim-level audited; bounded repository provenance recovery classifies legacy CLAIM-2024-001 Sky Yang as UNRESOLVED_ORPHANED_LEGACY_CLAIM. No artifact is assigned; final synthesis and independent closeout remain required."
     - id: "YM-002E-E4"
       class: "INDEPENDENT_VERIFICATION"
-      detail: "YM-002E requires independent closeout after claim-specific audit."
+      detail: "YM-002E requires final claim-obligation synthesis and candidate-bound independent closeout after the legacy provenance disposition."
     - id: "DOWNSTREAM-DEPENDENCY"
       class: "DEPENDENCY"
       detail: "YM-002F and later roadmap tasks remain blocked until YM-002E closes."
@@ -139,7 +139,7 @@ governance_state:
     objective_id: "YM-002E"
     eligibility: "READY"
     blocker_class: "INDEPENDENT_VERIFICATION_FOR_CLOSEOUT"
-    description: "Continue claim-specific adversarial audits under the v3 task envelope."
+    description: "Produce final four-claim obligation synthesis, then run candidate-bound E3 and independent E4 closeout review."
 
   migration_acceptance:
     decision: "ACCEPTED"
