@@ -9,8 +9,8 @@ governance_state:
     adoption_mode: "MIGRATION_GOVERNED"
     repository_or_workspace: "D:\\Comfy UI\\yang mills and the mass gap"
     branch_or_state_channel: "master"
-    current_candidate_id: "299871d70d77dd37526bfd12555d090b49111980"
-    verified_checkpoint_id: "299871d70d77dd37526bfd12555d090b49111980"
+    current_candidate_id: "9fa3de7fe34ab85a4022d8cc93e3ee491764ca06"
+    verified_checkpoint_id: "9fa3de7fe34ab85a4022d8cc93e3ee491764ca06"
     dirty_state: "UNTRACKED_VERIFICATION_OUTPUTS_PRESENT"
     active_environment: "CODEX_DESKTOP_WINDOWS_LOCAL"
 
@@ -89,7 +89,7 @@ governance_state:
 
   release:
     current_state: "NOT_RELEASE_ELIGIBLE"
-    exact_candidate_id: "299871d70d77dd37526bfd12555d090b49111980"
+    exact_candidate_id: "9fa3de7fe34ab85a4022d8cc93e3ee491764ca06"
     hard_gates_state: "YM-002E_CLOSEOUT_PENDING"
     release_eligible: false
     deployment_authorized: false
@@ -129,9 +129,9 @@ governance_state:
 
   last_checkpoint:
     timestamp: "2026-08-30"
-    candidate_id: "299871d70d77dd37526bfd12555d090b49111980"
+    candidate_id: "9fa3de7fe34ab85a4022d8cc93e3ee491764ca06"
     evidence_refs:
-      - "EVIDENCE_LEDGER.md#EVD-ROS-100R3-03"
+      - "EVIDENCE_LEDGER.md#EVD-002E-08"
       - "evidence/test_runs/verify_20260829T221022Z.json"
     state: "YM-002E_E4_BLOCKED_REVIEW"
 
