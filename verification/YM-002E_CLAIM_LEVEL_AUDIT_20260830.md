@@ -2,7 +2,7 @@
 
 - Date: `2026-08-30`
 - Task: `YM-002E`
-- Audit base candidate: `f7810a4667e0bc99820bd78e4d0fdb3542335cd4`
+- Audit base candidate: `299871d70d77dd37526bfd12555d090b49111980`
 - Source records: `evidence/primary/YM-002E/SOURCE_RECORD_*.yaml`
 - Audit status: `E3_COMPLETE_PENDING_INDEPENDENT_CLOSEOUT`
 - Governing target: `OFFICIAL_PROBLEM_SPECIFICATION.md`
