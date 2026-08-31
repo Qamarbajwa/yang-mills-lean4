@@ -63,9 +63,11 @@ def test_no_unknown_or_analogue_overpromotion():
 
 
 def test_resonance_and_estimates_are_source_bound():
+    assert not any(line.startswith("+|") for line in text(RESONANCE).splitlines())
     resonance_rows = table_rows(RESONANCE)[1:]
     resonance_ids = {r.split("|")[1].strip().split(" ")[0] for r in resonance_rows}
     assert {"A-FOUNDATIONAL", "B-CONSTRUCTIVE", "C-MODERN", "D-ANALOGUE"} <= resonance_ids
+    assert "O2-CONTINUUM" in text(OBSTRUCTIONS)
     assert len(re.findall(r"\| E[1-8] \|", text(ESTIMATES))) == 8
     for row in resonance_rows:
         assert row.count("|") >= 12

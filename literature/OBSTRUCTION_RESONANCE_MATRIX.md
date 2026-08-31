@@ -36,7 +36,7 @@ YM-002E row has one categorical score for each candidate locality.
 
 | PATHWAY_ID | O2-CONTINUUM | O4-CUTOFF | O5-VOLUME | O6-IR | O7-GAP | O8-OS | O12-N | O13-TRANSFER | O14-ASSUMPTION | O15-ERROR | O17-SPECTRAL | SOURCE_BASIS |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-+| THM-YM-0001 | STRONG | STRONG | PARTIAL | STRONG | STRONG | STRONG | PARTIAL | DIRECT | NONE | STRONG | PARTIAL | CROSS_ERA_SYNTHESIS_MATRIX.md;COMMON_OBSTRUCTION_CANDIDATES.md |
+| THM-YM-0001 | STRONG | STRONG | PARTIAL | STRONG | STRONG | STRONG | PARTIAL | DIRECT | NONE | STRONG | PARTIAL | CROSS_ERA_SYNTHESIS_MATRIX.md;COMMON_OBSTRUCTION_CANDIDATES.md |
 | THM-YM-0002 | STRONG | STRONG | PARTIAL | STRONG | STRONG | STRONG | PARTIAL | DIRECT | NONE | STRONG | PARTIAL | CROSS_ERA_SYNTHESIS_MATRIX.md;COMMON_OBSTRUCTION_CANDIDATES.md |
 | THM-YM-0003 | STRONG | STRONG | PARTIAL | STRONG | STRONG | STRONG | PARTIAL | DIRECT | NONE | STRONG | PARTIAL | CROSS_ERA_SYNTHESIS_MATRIX.md;COMMON_OBSTRUCTION_CANDIDATES.md |
 | THM-YM-0004 | STRONG | STRONG | PARTIAL | STRONG | STRONG | STRONG | PARTIAL | DIRECT | NONE | STRONG | PARTIAL | CROSS_ERA_SYNTHESIS_MATRIX.md;COMMON_OBSTRUCTION_CANDIDATES.md |
@@ -82,3 +82,11 @@ YM-002E row has one categorical score for each candidate locality.
 | YM-002E-FERREIRA | DIRECT | STRONG | PARTIAL | PARTIAL | DIRECT | DIRECT | NONE | PARTIAL | NONE | DIRECT | DIRECT | CROSS_ERA_SYNTHESIS_MATRIX.md;COMMON_OBSTRUCTION_CANDIDATES.md |
 | YM-002E-KIRK | DIRECT | DIRECT | DIRECT | STRONG | STRONG | STRONG | PARTIAL | STRONG | DIRECT | STRONG | STRONG | CROSS_ERA_SYNTHESIS_MATRIX.md;COMMON_OBSTRUCTION_CANDIDATES.md |
 | YM-002E-JACOBSEN | DIRECT | STRONG | STRONG | STRONG | DIRECT | DIRECT | NONE | STRONG | DIRECT | DIRECT | DIRECT | CROSS_ERA_SYNTHESIS_MATRIX.md;COMMON_OBSTRUCTION_CANDIDATES.md |
+
+The theorem rows inherit only the explicitly recorded locality for their own
+source record: A rows point to the foundational limitation matrix, B rows to
+the constructive matrix, C rows to the modern matrix, and D rows to the
+analogue matrix plus each theorem's transfer barrier. The repeated categorical
+pattern within an era means the same interface is recorded at each theorem;
+it is not a claim that the proofs or regimes are identical. The six E rows use
+their individual YM-002E audit outcomes and remain separate from A–D.
