@@ -66,7 +66,10 @@ task_execution_envelope:
     checkpoint_required_before_mutation: true
     state_integrity_check: "Exact candidate SHA and recomputed closed-world scientific fingerprint"
   completion_record:
-    status: "E3_CANDIDATE_READY_FOR_E4"
+    status: "CLOSED"
     e3_candidate_id: "7fb5b5096beaf7e30d73166da3ff665363f8d765"
     scientific_fingerprint: "74d987faa99044d14797507e6d5c4ffbf32660b3051175920b3317f0544f0f5c"
+    e4_receipt: "verification/raw/YM-002F_E4_RAW_20260831.md"
+    e4_independence: "IND1"
+    e4_verdict: "PASS"
     release_eligibility_effect: "YM-003_READY_ONLY_AFTER_INDEPENDENT_CLOSEOUT"

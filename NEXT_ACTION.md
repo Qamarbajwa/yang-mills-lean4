@@ -1,14 +1,14 @@
 # NEXT ACTION
 
 ## Current action
-`YM-002F_E3_VERIFY_AND_INDEPENDENT_E4_REVIEW`
+`YM-003_MISSING_BRIDGE_GRAPH`
 
 ## Scope
-- Run the deterministic cross-era gates, bind the scientific fingerprint to the exact candidate, and obtain a fresh independent E4 review.
-- Keep YM-003 and later roadmap tasks blocked until YM-002F closes.
+- Construct the missing-bridge graph from the accepted YM-002F obstruction candidates and estimate forms.
+- Require candidate-bound E3 confirmation and fresh independent E4 review before advancing to YM-004.
 
 ## Blocked downstream action
-- `YM-003` and later roadmap tasks remain BLOCKED until YM-002F is independently closed.
+- `YM-004` and later roadmap tasks remain BLOCKED until YM-003 is independently closed.
 
 ## Completed actions
 - `YM-000 — Local bootstrap` (DONE)
@@ -33,7 +33,7 @@
 - `ROS v1.0` — human-owner acceptance recorded; governing system `ACCEPTED / ACTIVE`
 - `YM-002D + YM-002DR1` — `CLOSED`
 - `YM-002E` — final four-claim adversarial synthesis and independent closeout (`INDEPENDENTLY_VERIFIED / CLOSED`)
-
+- `YM-002F` — cross-era synthesis, common-obstruction candidates, and independent closeout (`INDEPENDENTLY_VERIFIED / CLOSED`)
 
 
 

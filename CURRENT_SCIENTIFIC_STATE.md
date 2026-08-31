@@ -71,7 +71,7 @@
 
 ## EXTERNALLY SOURCED / TO BE ADVANCED IN YM-002E+
 - Claimed-solution adversarial audits (`YM-002E` — INDEPENDENTLY_VERIFIED / CLOSED; final synthesis at `verification/YM-002E_FINAL_SYNTHESIS_20260830.md`).
-- Cross-era theorem and dependency synthesis (`YM-002F` — IN_PROGRESS; synthesis artifacts under review).
+  - Cross-era theorem and dependency synthesis (`YM-002F` — INDEPENDENTLY_VERIFIED / CLOSED; obstruction candidates remain non-theorem synthesis).
 - Missing-bridge graph (`YM-003`).
 
 ## UNVERIFIED
@@ -83,8 +83,7 @@
 Rigorous constructive control linking ultraviolet asymptotic freedom to infrared mass generation remains open in 4D continuum spacetime across the strong-coupling transition ($g_k \sim 1$).
 
 ## NEXT ACTION
-Run candidate-bound E3 verification and fresh independent E4 review for `YM-002F`; keep YM-003 and later tasks gated until YM-002F is accepted.
-
+Begin `YM-003` missing-bridge graph; keep YM-004 and later tasks gated until YM-003 is accepted.
 
 
 

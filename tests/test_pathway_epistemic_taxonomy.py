@@ -57,7 +57,7 @@ def test_task_graph_ym002_subtask_completeness():
     assert "YM-002 | Build theorem/literature ledger | YM-001R1 | T2 | primary literature + theorem-level extraction | IN_PROGRESS" in content
     for st in ["YM-002A", "YM-002AR1", "YM-002B", "YM-002BR1", "YM-002C", "YM-002CR1", "YM-002CR2", "YM-002CR2A", "YM-002D", "YM-002E", "YM-002F"]:
         assert st in content, f"Subtask {st} must be present in TASK_GRAPH.md"
-    assert "YM-003 | Construct missing-bridge graph | YM-002F | T3 | independent semantic review | BLOCKED" in content
+    assert "YM-003 | Construct missing-bridge graph | YM-002F | T3 | independent semantic review | READY" in content
 
 def test_analogue_pathways_epistemic_structure():
     content = PATHWAY_PATH.read_text(encoding="utf-8")

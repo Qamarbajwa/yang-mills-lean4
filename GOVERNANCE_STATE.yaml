@@ -9,8 +9,8 @@ governance_state:
     adoption_mode: "MIGRATION_GOVERNED"
     repository_or_workspace: "D:\\Comfy UI\\yang mills and the mass gap"
     branch_or_state_channel: "master"
-    current_candidate_id: "7fb5b5096beaf7e30d73166da3ff665363f8d765"
-    verified_checkpoint_id: "7fb5b5096beaf7e30d73166da3ff665363f8d765"
+    current_candidate_id: "8b24aea3bfa872128dad7a8bcad97abcc774808f"
+    verified_checkpoint_id: "8b24aea3bfa872128dad7a8bcad97abcc774808f"
     dirty_state: "DIRTY_KNOWN"
     dirty_state_detail: "Untracked pytest verification-output directories are present; tracked files are clean."
     active_environment: "CODEX_DESKTOP_WINDOWS_LOCAL"
@@ -90,7 +90,7 @@ governance_state:
   release:
     current_state: "NOT_RELEASE_ELIGIBLE"
     exact_candidate_id: "cb39175a8e2346f40649c29c95f17bee911087a6"
-    hard_gates_state: "YM-002E_CLOSED_YM-002F_IN_PROGRESS"
+    hard_gates_state: "YM-002E_CLOSED_YM-002F_CLOSED_YM-003_ELIGIBLE"
     release_eligible: false
     deployment_authorized: false
     deployed: false
@@ -102,7 +102,7 @@ governance_state:
   blockers:
     - id: "NO_ACTIVE_BLOCKER"
       class: "NONE"
-      detail: "YM-002E is independently verified and closed; YM-002F synthesis and E3/E4 are in progress. YM-003 and later tasks remain gated."
+      detail: "YM-002E and YM-002F are independently verified and closed; YM-003 is eligible to begin. YM-004 and later tasks remain gated on YM-003."
 
   legacy_migration:
     prior_governance_present: true
@@ -123,18 +123,18 @@ governance_state:
 
   last_checkpoint:
     timestamp: "2026-08-30"
-    candidate_id: "7fb5b5096beaf7e30d73166da3ff665363f8d765"
+    candidate_id: "8b24aea3bfa872128dad7a8bcad97abcc774808f"
     evidence_refs:
       - "EVIDENCE_LEDGER.md#EVD-002E-08"
       - "EVIDENCE_LEDGER.md#EVD-002E-10"
       - "evidence/test_runs/verify_20260829T221022Z.json"
-    state: "YM-002F_E3_CANDIDATE_READY_FOR_E4"
+    state: "YM-002F_INDEPENDENTLY_VERIFIED_CLOSED"
 
   next_action:
     objective_id: "YM-002F"
-    eligibility: "IN_PROGRESS"
+    eligibility: "READY"
     blocker_class: "NONE"
-    description: "Run YM-002F candidate-bound E3 verification and fresh independent E4 review; keep YM-003 and later tasks gated until closeout."
+    description: "Begin YM-003 missing-bridge graph; keep YM-004 and later tasks gated until YM-003 closes."
 
   migration_acceptance:
     decision: "ACCEPTED"

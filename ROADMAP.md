@@ -25,22 +25,22 @@
 
 ### OBJ-YM-002F — Cross-era theorem and dependency synthesis
 
-- Status: ACTIVE
+- Status: CLOSED
 - Intent trace: `PROJECT_INTENT.md` §2–§3.
 - Objective: Synthesize accepted theorem/dependency records after YM-002E closure.
 - Dependencies: `YM-002E` independently closed.
 - Current blocker class: NONE
-- Current blocker detail: YM-002E is independently verified and closed; YM-002F synthesis and E3/E4 are in progress.
+- Current blocker detail: YM-002F is independently verified and closed; no common obstruction theorem is asserted.
 - Evidence refs: `literature/CROSS_ERA_SYNTHESIS_MATRIX.md`, `literature/COMMON_OBSTRUCTION_CANDIDATES.md`, `literature/OBSTRUCTION_RESONANCE_MATRIX.md`, `literature/UV_IR_BRIDGE_GAP.md`, `literature/LOAD_BEARING_ESTIMATE_CANDIDATES.md`.
 
 ### OBJ-YM-003 — Missing-bridge graph
 
-- Status: BLOCKED
+- Status: READY
 - Intent trace: `PROJECT_INTENT.md` §2–§3.
 - Objective: Identify precise missing rigorous bridges without promoting analogues.
 - Dependencies: `YM-002F` accepted.
-- Current blocker class: DEPENDENCY
-- Current blocker detail: Upstream synthesis is not complete.
+- Current blocker class: NONE
+- Current blocker detail: YM-002F is independently verified and closed; YM-003 is eligible to construct the missing-bridge graph. YM-004 and later tasks remain gated.
 
 ## Parked/non-goal work
 
