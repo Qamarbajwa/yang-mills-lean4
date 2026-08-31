@@ -131,7 +131,7 @@ governance_state:
     state: "YM-002F_INDEPENDENTLY_VERIFIED_CLOSED"
 
   next_action:
-    objective_id: "YM-002F"
+    objective_id: "YM-003"
     eligibility: "READY"
     blocker_class: "NONE"
     description: "Begin YM-003 missing-bridge graph; keep YM-004 and later tasks gated until YM-003 closes."
