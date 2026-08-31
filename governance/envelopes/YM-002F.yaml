@@ -1,0 +1,70 @@
+task_execution_envelope:
+  schema_version: "3.0.0"
+  identity:
+    task_id: "YM-002F"
+    project_id: "YANG_MILLS_MASS_GAP"
+    project_name: "Yang-Mills and the Mass Gap"
+    governance_version: "3.0.0"
+    adoption_mode: "MIGRATION_GOVERNED"
+  direction:
+    intent_refs: ["PROJECT_INTENT.md", "OFFICIAL_PROBLEM_SPECIFICATION.md"]
+    roadmap_objective: "OBJ-YM-002F"
+    owner_non_goals: ["No proof claim", "No COMMON_OBSTRUCTION_FOUND overpromotion", "No public publication"]
+    owner_reserved_boundaries: ["external publication", "legal/compliance", "external spend"]
+  objective:
+    exact_objective: "Synthesize accepted YM-002A through YM-002E pathway evidence into a source-bound cross-era obstruction and UV–IR bridge map."
+    rationale: "Make YM-003 mathematically actionable without converting recurring limitations into impossibility theorems."
+    done_boundary: "All A–E pathways represented; obstruction candidates, resonance, bridge gaps, and estimate forms are source-traceable; deterministic E3 and fresh independent E4 pass."
+  base_state:
+    repository_or_workspace: "D:\\Comfy UI\\yang mills and the mass gap"
+    branch_or_state_channel: "master"
+    base_candidate_id: "089a579f38fa7d211ffa18b17f823b09bbaf2c25"
+    dirty_state: "DIRTY_KNOWN"
+    dirty_state_detail: "Known untracked pytest verification-output directories are excluded from scientific identity."
+    preserved_unrelated_work: ["All historical literature, negative evidence, and YM-002E receipts"]
+  eligibility:
+    dependencies: [{id: "YM-002E", state: "INDEPENDENTLY_VERIFIED / CLOSED", evidence_ref: "EVIDENCE_LEDGER.md#EVD-002E-10"}]
+    technical_inputs_available: true
+    traceable_to_intent: true
+    architecture_permits: true
+    inside_standing_mandate: true
+    candidate_state_known: true
+    risk_inside_ceiling: true
+    blocking_invariant_present: false
+    reserved_authority_required_for_technical_mutation: false
+    eligible: true
+    blocker_class: null
+    blocker_detail: null
+  classification:
+    risk_tier: "T3"
+    action_class: "B"
+    risk_reasons: ["Material scientific synthesis affects downstream research direction"]
+    active_modules: ["CORE-PROJECT-BINDING", "CORE-AUTHORITY", "CORE-RISK", "CORE-DEPENDENCY", "CORE-EVIDENCE", "CORE-ASSURANCE", "CORE-TEST-INTEGRITY", "CORE-GIT-STATE", "RESEARCH-SCIENTIFIC", "AI-AUTONOMY", "ARTIFACT-DATA"]
+  roles_and_authority:
+    orchestrator: "primary-worker"
+    writer: {id: "primary-worker", qualified: true, risk_ceiling: "T3"}
+    reviewer_or_verifier: {id: "PENDING_YM-002F_E4", qualified: true, expected_independence: "IND1"}
+    implementation_authority: "AUTONOMOUS_WITHIN_ENVELOPE"
+    verification_authority: "EVIDENCE_BASED"
+    release_eligibility_authority: "EVIDENCE_DERIVED_GATE"
+    reserved_external_authority: {required: false, type: "NONE", trigger: null}
+  mutation_scope:
+    allowed: ["Cross-era synthesis matrices", "Pathway and research memory updates", "Negative-evidence synthesis entries", "Regression tests and verification receipts"]
+    forbidden: ["Promoting unsupported claims", "Rewriting primary source records", "Starting YM-003 before YM-002F closeout"]
+    protected: ["OFFICIAL_PROBLEM_SPECIFICATION.md", "historical negative evidence", "YM-002E claim quarantine and receipts"]
+  assurance_contract:
+    intent: "Produce source-faithful cross-era synthesis with explicit uncertainty and no obstruction overclaim."
+    valid_inputs: ["Accepted A–E records", "Theorem/research ledgers", "Negative evidence", "Official Clay obligations"]
+    invalid_input_behavior: [{input_class: "missing source trace", expected_behavior: "mark UNKNOWN or omit substantive assertion"}, {input_class: "analogue scope mismatch", expected_behavior: "retain transfer barrier and CLAY_SUFFICIENT NO"}, {input_class: "stale candidate", expected_behavior: "fail closed"}]
+    invariants: [{id: "INV-002F-001", statement: "RECURRING_PATTERN != PROVED_OBSTRUCTION_THEOREM", zero_tolerance: true}, {id: "INV-002F-002", statement: "ANALOGUE_CLAY_SUFFICIENT_NO_PRESERVED", zero_tolerance: true}, {id: "INV-002F-003", statement: "ORPHANED_LEGACY_CLAIM_NOT_SILENTLY_IDENTIFIED", zero_tolerance: true}]
+  outputs: ["CROSS_ERA_SYNTHESIS_MATRIX.md", "COMMON_OBSTRUCTION_CANDIDATES.md", "OBSTRUCTION_RESONANCE_MATRIX.md", "UV_IR_BRIDGE_GAP.md", "LOAD_BEARING_ESTIMATE_CANDIDATES.md", "YM-002F verification receipt"]
+  acceptance:
+    hard_gates: [{id: "GATE-F1", condition: "All accepted YM-002A–E pathway IDs represented", required_state: "PASS"}, {id: "GATE-F2", condition: "No Clay sufficiency overpromotion", required_state: "PASS"}, {id: "GATE-F3", condition: "No lattice/continuum or analogue/pure-YM conflation", required_state: "PASS"}, {id: "GATE-F4", condition: "Every candidate has source/pathway evidence", required_state: "PASS"}, {id: "GATE-F5", condition: "Full deterministic suite and fresh independent E4 pass", required_state: "PASS"}]
+    required_evidence: {minimum_strength: "E4", required_environments: ["STATIC", "INTEGRATED_LOCAL"], minimum_independence: "IND1", candidate_bound: true}
+  recovery:
+    rollback_or_forward_recovery: "Append corrections and preserve rejected hypotheses; do not erase scientific memory."
+    checkpoint_required_before_mutation: true
+    state_integrity_check: "Exact candidate SHA and recomputed closed-world scientific fingerprint"
+  completion_record:
+    status: "IN_PROGRESS"
+    release_eligibility_effect: "YM-003_READY_ONLY_AFTER_INDEPENDENT_CLOSEOUT"

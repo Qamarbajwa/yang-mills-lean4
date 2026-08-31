@@ -104,7 +104,7 @@ def test_migration_and_later_closeout_preserve_release_boundaries():
     state = yaml.safe_load(read("GOVERNANCE_STATE.yaml"))["governance_state"]
 
     assert "YM-002E" in task_graph and "INDEPENDENTLY_VERIFIED / CLOSED" in task_graph
-    assert "YM-002F" in task_graph and "READY" in task_graph
+    assert "YM-002F" in task_graph and ("READY" in task_graph or "IN_PROGRESS" in task_graph)
     assert "YM-002E = INDEPENDENTLY_VERIFIED / CLOSED" in current
     assert state["direction"]["active_objective_id"] == "YM-002F"
     assert state["release"]["current_state"] == "NOT_RELEASE_ELIGIBLE"

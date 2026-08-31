@@ -593,3 +593,16 @@ u}^2> exact non-perturbative calculation without supersymmetry.
 - **TRANSFER_BARRIER_SIMILARITY:** 2D gauge fields have zero local propagating transverse degrees of freedom.
 - **WHY_THE_MATCH_MATTERS:** Confirms that 2D Yang–Mills measure construction is completely solved from multiple mathematical perspectives (SPDE, stochastic analysis, heat kernels, holonomy processes), firmly identifying the 4D difficulty as the propagating transverse gluon polarizations.
 
+---
+
+## SECTION 5: YM-002F CROSS-ERA SYNTHESIS
+
+### RES-YM-002F-001: Common interfaces across accepted eras
+- **DATE:** 2026-08-31
+- **EPISTEMIC_CLASSIFICATION:** `[PROJECT_SYNTHESIS]` with `[UNKNOWN]` retained for source-silent cells.
+- **INPUTS:** `literature/CROSS_ERA_SYNTHESIS_MATRIX.md`, the four era limitation/dependency matrices, `THEOREM_LEDGER.md`, `RESEARCH_LEDGER.md`, `NEGATIVE_EVIDENCE_REGISTER.md`, `CLAIM_EVIDENCE_MATRIX.md`, `literature/CLAIM_QUARANTINE_REGISTER.md`, and `verification/YM-002E_FINAL_SYNTHESIS_20260830.md`.
+- **FINDING:** Independent pathways repeatedly stop at regulator removal, cutoff/volume-uniform estimates, weak-coupling IR correlation control, spectral-gap identification and persistence, OS reconstruction from gauge-invariant observables, approximation/remainder control, or universal compact-simple-group coverage.
+- **BOUNDARY:** These are recurring method-level limitations and target obligations. They are not a theorem that no method can succeed, and `NO_KNOWN_UNIFORM_ESTIMATE` is not `UNIFORM_ESTIMATE_IMPOSSIBLE`.
+- **TRANSFER:** Analogue successes retain mechanism clues but lose dimension, matter, supersymmetry, large-N, explicit-mass, or duality hypotheses when mapped to ordinary pure 4D YM.
+- **OUTCOME:** `COMMON_OBSTRUCTION_CANDIDATES.md` remains at `FORMALIZED_CANDIDATE`/`RECURRING_PATTERN`; no `COMMON_OBSTRUCTION_FOUND` state is asserted. The synthesis is sufficient to make YM-003 a missing-bridge graph task.
+

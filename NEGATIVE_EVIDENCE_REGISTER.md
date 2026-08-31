@@ -63,3 +63,11 @@
 - **Discovery Date:** 2026-08-25
 - **Epistemic Classification:** `[PRIMARY_SOURCE_LIMITATION]` / `[PROJECT_SYNTHESIS]`
 - **Finding:** Chatterjee (2024) proved that 4D $SU(2)$ Yang–Mills–Higgs under joint parameter scaling produces a continuum field with a strictly positive mass gap $m > 0$. However, because the mass generation is driven by Higgs condensation, the resulting continuum field is a free Gaussian field (trivial $S$-matrix), which does not solve the interacting non-Abelian pure Yang–Mills problem.
+
+### NEG-YM-002F-001: Recurrent Interface Is Not a No-Go Theorem
+- **Discovery Date:** 2026-08-31
+- **Epistemic Classification:** `[PROJECT_SYNTHESIS]` / `[UNKNOWN]`
+- **Hypothesis tested:** Repeated failure of existing pathways at the UV-to-IR, limit, and spectral interfaces might prove that a common obstruction has been found.
+- **Result:** Rejected as an impossibility claim. The evidence supports only recurring method limitations and Clay obligations. Lower-dimensional exact theories, strong-coupling lattice theorems, and OS reconstruction provide counterexamples to any blanket assertion that the interfaces are mathematically impossible.
+- **Surviving insight:** The same interfaces are sufficiently recurrent and mathematically explicit to prioritize YM-003, especially joint `a→0`/`V→∞` control, gauge-invariant IR decay, and spectral-gap persistence.
+- **Regression check:** `tests/test_cross_era_synthesis.py` requires controlled candidate states, preserves `UNKNOWN`, enforces `CLAY_SUFFICIENT = NO` for analogue rows, and rejects silent orphan remapping.

@@ -90,7 +90,7 @@ governance_state:
   release:
     current_state: "NOT_RELEASE_ELIGIBLE"
     exact_candidate_id: "9fa3de7fe34ab85a4022d8cc93e3ee491764ca06"
-    hard_gates_state: "YM-002E_CLOSED_YM-002F_ELIGIBLE"
+    hard_gates_state: "YM-002E_CLOSED_YM-002F_IN_PROGRESS"
     release_eligible: false
     deployment_authorized: false
     deployed: false
@@ -102,7 +102,7 @@ governance_state:
   blockers:
     - id: "NO_ACTIVE_BLOCKER"
       class: "NONE"
-      detail: "YM-002E is independently verified and closed; YM-002F is eligible to begin. YM-003 and later tasks remain gated on YM-002F acceptance."
+      detail: "YM-002E is independently verified and closed; YM-002F synthesis and E3/E4 are in progress. YM-003 and later tasks remain gated."
 
   legacy_migration:
     prior_governance_present: true
@@ -132,9 +132,9 @@ governance_state:
 
   next_action:
     objective_id: "YM-002F"
-    eligibility: "READY"
+    eligibility: "IN_PROGRESS"
     blocker_class: "NONE"
-    description: "Begin YM-002F cross-era theorem and dependency synthesis; keep YM-003 and later tasks gated until YM-002F closes."
+    description: "Run YM-002F candidate-bound E3 verification and fresh independent E4 review; keep YM-003 and later tasks gated until closeout."
 
   migration_acceptance:
     decision: "ACCEPTED"

@@ -1,11 +1,11 @@
 # NEXT ACTION
 
 ## Current action
-`YM-002F_CROSS_ERA_THEOREM_AND_DEPENDENCY_SYNTHESIS`
+`YM-002F_E3_VERIFY_AND_INDEPENDENT_E4_REVIEW`
 
 ## Scope
-- Build the cross-era theorem and dependency synthesis from the accepted foundational, constructive, modern, analogous, and YM-002E records.
-- Require candidate-bound E3 confirmation and fresh independent E4 review before advancing beyond YM-002F.
+- Run the deterministic cross-era gates, bind the scientific fingerprint to the exact candidate, and obtain a fresh independent E4 review.
+- Keep YM-003 and later roadmap tasks blocked until YM-002F closes.
 
 ## Blocked downstream action
 - `YM-003` and later roadmap tasks remain BLOCKED until YM-002F is independently closed.
@@ -33,7 +33,6 @@
 - `ROS v1.0` — human-owner acceptance recorded; governing system `ACCEPTED / ACTIVE`
 - `YM-002D + YM-002DR1` — `CLOSED`
 - `YM-002E` — final four-claim adversarial synthesis and independent closeout (`INDEPENDENTLY_VERIFIED / CLOSED`)
-
 
 
 

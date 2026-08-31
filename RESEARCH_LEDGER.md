@@ -221,3 +221,12 @@
     4. Stochastic Quantization (`PATH-MOD-001/002`) and Driver–Sengupta–Lévy 2D YM (`PATH-ANA-001`): Confirms 2D Yang–Mills is completely solved, isolating the 4D difficulty to propagating transverse gluons.
 - **Outcome:** Recorded in `literature/PATHWAY_MEMORY_REGISTER.md`.
 
+### RES-YM-002F-001: Cross-Era Synthesis and Common-Obstruction Extraction
+- **Date:** 2026-08-31
+- **Question:** Which mathematical interfaces recur across foundational, constructive, modern, analogue, and claimed-solution pathways?
+- **Inputs:** Accepted YM-002A through YM-002E records; theorem and research ledgers; pathway memory; negative evidence; all four limitation/dependency matrices; official problem specification.
+- **Epistemic Classification:** `[PROJECT_SYNTHESIS]` / `[UNKNOWN]` for unestablished cells.
+- **Findings:** The strongest recurring interfaces are joint cutoff/volume limit control, weak-coupling nonperturbative IR correlation estimates, nontriviality, gauge-invariant spectral-gap identification and persistence, OS reconstruction, approximation/remainder bounds, and universal compact-simple-group coverage. Analogue mechanisms succeed by adding structural hypotheses (lower dimension, Abelianity, Higgs fields, supersymmetry, large `N`, explicit mass, or holographic duality) that are not present in ordinary pure 4D YM.
+- **Adversarial boundary:** Repeated failure at an interface is recorded as a project synthesis, not a proven obstruction. Strong-coupling lattice results, gauge-fixed propagator scales, finite-volume constructions, and conditional claims remain distinct from the Clay target.
+- **Outcome:** Created `literature/CROSS_ERA_SYNTHESIS_MATRIX.md`, `literature/COMMON_OBSTRUCTION_CANDIDATES.md`, `literature/OBSTRUCTION_RESONANCE_MATRIX.md`, `literature/UV_IR_BRIDGE_GAP.md`, and `literature/LOAD_BEARING_ESTIMATE_CANDIDATES.md`. YM-003 is now actionable as a missing-bridge graph after independent review; no solution or impossibility claim was promoted.
+
