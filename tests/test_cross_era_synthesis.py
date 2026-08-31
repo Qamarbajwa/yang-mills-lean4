@@ -33,6 +33,10 @@ def test_all_a_to_e_pathways_are_represented():
     matrix = text(MATRIX)
     missing = [pid for pid in EXPECTED_PATHWAYS if f"| {pid} |" not in matrix]
     assert not missing, missing
+    header = next(line for line in matrix.splitlines() if line.startswith("| PATHWAY_ID"))
+    width = len(header.strip("|").split("|"))
+    malformed = [line for line in table_rows(MATRIX)[1:] if len(line.strip("|").split("|")) != width]
+    assert not malformed, malformed[:2]
 
 
 def test_obstruction_candidates_have_evidence_and_controlled_states():
@@ -66,6 +70,9 @@ def test_resonance_and_estimates_are_source_bound():
     for row in resonance_rows:
         assert row.count("|") >= 12
         assert row.rsplit("|", 2)[1].strip()
+    estimate_header = next(line for line in text(ESTIMATES).splitlines() if line.startswith("| ID |"))
+    estimate_width = len(estimate_header.strip("|").split("|"))
+    assert all(len(row.strip("|").split("|")) == estimate_width for row in table_rows(ESTIMATES)[1:])
 
 
 def test_scientific_fingerprint_changed_from_ym002e_predecessor():
