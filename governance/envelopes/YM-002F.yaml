@@ -67,6 +67,6 @@ task_execution_envelope:
     state_integrity_check: "Exact candidate SHA and recomputed closed-world scientific fingerprint"
   completion_record:
     status: "E3_CANDIDATE_READY_FOR_E4"
-    e3_candidate_id: "1e601b6b5e438c619e5cf3596b03ec4790681825"
-    scientific_fingerprint: "97de5555e4dd0b19e630a8849a108f985d2045db92950d1f88f94a5cf1498f55"
+    e3_candidate_id: "7fb5b5096beaf7e30d73166da3ff665363f8d765"
+    scientific_fingerprint: "74d987faa99044d14797507e6d5c4ffbf32660b3051175920b3317f0544f0f5c"
     release_eligibility_effect: "YM-003_READY_ONLY_AFTER_INDEPENDENT_CLOSEOUT"

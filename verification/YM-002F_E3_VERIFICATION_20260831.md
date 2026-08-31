@@ -1,8 +1,8 @@
 # YM-002F — Candidate-Bound E3 Verification Receipt
 
 - **Date:** 2026-08-31
-- **Candidate audited:** `1e601b6b5e438c619e5cf3596b03ec4790681825`
-- **Scientific fingerprint:** `97de5555e4dd0b19e630a8849a108f985d2045db92950d1f88f94a5cf1498f55`
+- **Candidate audited:** `7fb5b5096beaf7e30d73166da3ff665363f8d765`
+- **Scientific fingerprint:** `74d987faa99044d14797507e6d5c4ffbf32660b3051175920b3317f0544f0f5c`
 - **Predecessor fingerprint:** `f30a330063b2ca0af772582e318bddd70af9f8c7d9e6d28c1c811c052d156474`
 - **Task:** `YM-002F — Cross-Era Synthesis & Common-Obstruction Extraction`
 
