@@ -1,8 +1,8 @@
 # YM-002F — Candidate-Bound E3 Verification Receipt
 
 - **Date:** 2026-08-31
-- **Candidate audited:** `cb39175a8e2346f40649c29c95f17bee911087a6`
-- **Scientific fingerprint:** `e4153e561b0c6a82ce2752759ce3920298ffe3e7ffa061b4e3ed99f727001246`
+- **Candidate audited:** `1e601b6b5e438c619e5cf3596b03ec4790681825`
+- **Scientific fingerprint:** `97de5555e4dd0b19e630a8849a108f985d2045db92950d1f88f94a5cf1498f55`
 - **Predecessor fingerprint:** `f30a330063b2ca0af772582e318bddd70af9f8c7d9e6d28c1c811c052d156474`
 - **Task:** `YM-002F — Cross-Era Synthesis & Common-Obstruction Extraction`
 
@@ -20,5 +20,5 @@
 
 ## E3 disposition
 
-The packet is **candidate-ready for fresh independent E4**. This receipt does
+The repaired packet is **candidate-ready for fresh independent E4**. This receipt does
 not declare a common obstruction theorem and does not close YM-002F.

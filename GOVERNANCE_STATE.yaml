@@ -9,8 +9,8 @@ governance_state:
     adoption_mode: "MIGRATION_GOVERNED"
     repository_or_workspace: "D:\\Comfy UI\\yang mills and the mass gap"
     branch_or_state_channel: "master"
-    current_candidate_id: "cb39175a8e2346f40649c29c95f17bee911087a6"
-    verified_checkpoint_id: "cb39175a8e2346f40649c29c95f17bee911087a6"
+    current_candidate_id: "1e601b6b5e438c619e5cf3596b03ec4790681825"
+    verified_checkpoint_id: "1e601b6b5e438c619e5cf3596b03ec4790681825"
     dirty_state: "DIRTY_KNOWN"
     dirty_state_detail: "Untracked pytest verification-output directories are present; tracked files are clean."
     active_environment: "CODEX_DESKTOP_WINDOWS_LOCAL"
@@ -123,7 +123,7 @@ governance_state:
 
   last_checkpoint:
     timestamp: "2026-08-30"
-    candidate_id: "cb39175a8e2346f40649c29c95f17bee911087a6"
+    candidate_id: "1e601b6b5e438c619e5cf3596b03ec4790681825"
     evidence_refs:
       - "EVIDENCE_LEDGER.md#EVD-002E-08"
       - "EVIDENCE_LEDGER.md#EVD-002E-10"
