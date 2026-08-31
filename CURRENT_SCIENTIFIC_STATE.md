@@ -62,7 +62,7 @@
 - Universal Governance v3.0.0 migration (`YM-GOV-300`):
   - Packet manifest verified `26/26`; v3 state and task envelopes schema-validated.
   - Fresh independent review passed at `IND1` on migration candidate `5e3024b13cf531a70910956b86fcdfc9e0ad3abb`; provenance/state repair `bac5dcda3f91dee3f96b63dae6c62b53b165a5e9` is recorded separately.
-  - Current state: `Universal Governance v3.0.0 = ACTIVE`; v2.9.4 remains historical; ROS v1.0 remains active; pre-YM-002F scientific fingerprint `f30a330063b2ca0af772582e318bddd70af9f8c7d9e6d28c1c811c052d156474`; current synthesis fingerprint is recorded in the YM-002F E3 receipt.
+  - Current state: `Universal Governance v3.0.0 = ACTIVE`; v2.9.4 remains historical; ROS v1.0 remains active; pre-YM-002F scientific fingerprint `f30a330063b2ca0af772582e318bddd70af9f8c7d9e6d28c1c811c052d156474`; current YM-002F synthesis fingerprint `e4153e561b0c6a82ce2752759ce3920298ffe3e7ffa061b4e3ed99f727001246`.
   - Migration did not promote release product state, publication, or deployment; YM-002E later closed only after its own candidate-bound E3/E4 process.
 
 
@@ -84,7 +84,6 @@ Rigorous constructive control linking ultraviolet asymptotic freedom to infrared
 
 ## NEXT ACTION
 Run candidate-bound E3 verification and fresh independent E4 review for `YM-002F`; keep YM-003 and later tasks gated until YM-002F is accepted.
-
 
 
 
