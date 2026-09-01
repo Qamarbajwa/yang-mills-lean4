@@ -9,6 +9,7 @@ evidence/test_runs/.pytest_r3_temp/
 build/
 dist/
 *.egg-info/
+.worktrees/
 .DS_Store
 Thumbs.db
 
