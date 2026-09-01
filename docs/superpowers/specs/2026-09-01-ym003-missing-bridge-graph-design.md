@@ -38,9 +38,22 @@ than editing its accepted history. Validate that obstruction dependencies are
 irreflexive: `O13-TRANSFER` may not depend on itself unless a recursive object
 is explicitly defined and tested.
 
-## Architecture
+## Architecture and authority direction
 
-The six artifacts form a bidirectional evidence packet:
+The six artifacts form a directed evidence packet. The authoritative data flow
+is:
+
+`BRIDGE_EDGE_REGISTER.md → derived graph/matrices/views`.
+
+`BRIDGE_EDGE_REGISTER.md` is the authoritative edge source. The graph,
+assumption-transfer matrix, and limit/regime matrix are consistency-bound
+projections and may not independently redefine an edge. A contradiction
+between a projection and the edge register is an E3 failure, not a choice
+between representations. `MINIMAL_SUFFICIENT_ESTIMATE_REGISTER.md` is
+authoritative for estimate-specific metadata, but every estimate points back
+to one or more bridge edges.
+
+The six artifacts are:
 
 1. `MISSING_BRIDGE_GRAPH.md` is the human-readable topology from known theorem
    to missing implication/estimate to known theorem or Clay obligation.
@@ -73,6 +86,17 @@ Every edge record contains:
 - epistemic status: `PROVED`, `KNOWN_CONSEQUENCE`, `INFERENCE`, `HYPOTHESIS`,
   or `UNKNOWN`;
 - necessity class: `TARGET_REQUIRED`, `ROUTE_REQUIRED`, or `OPTIONAL_ROUTE`.
+- `TARGET_REQUIRED` edges point to exact Clay/project requirement IDs;
+  `ROUTE_REQUIRED` edges carry a `ROUTE_ID`.
+
+Assumption transfer is formally auditable. Each entering assumption receives a
+status `PRESERVED`, `DISCHARGED`, `STRENGTHENED`, `WEAKENED`, `REPLACED`,
+`NEW`, or `UNKNOWN`. A `DISCHARGED` assumption must include `DISCHARGED_BY`
+and `DISCHARGE_EVIDENCE`; assumptions may not disappear silently.
+
+The proof-dependency subgraph is acyclic by default. Any cycle requires an
+explicit justification and classification as a simultaneous/fixed-point
+construction; ordinary proof edges may not silently form cycles.
 
 No edge is upgraded because multiple pathways resonate at one locality.
 
@@ -83,12 +107,23 @@ uniform exponential-clustering bound for renormalized gauge-invariant
 observables, under explicit OS/reconstruction hypotheses, implies a positive
 physical Hamiltonian spectral gap. YM-003 records the exact hypotheses and
 scope if such a theorem exists; otherwise the implication remains
-`UNKNOWN`/`HYPOTHESIS`.
+`UNKNOWN`/`HYPOTHESIS`. The observable algebra must be sufficiently rich to
+detect physical excitations rather than merely a selected correlator family.
+Each edge therefore records `OBSERVABLE_ALGEBRA`,
+`VACUUM_CYCLICITY_REQUIREMENT`, `DENSITY_OF_OBSERVABLE_GENERATED_STATES`,
+`CONNECTED_CORRELATOR_CLASS`, `SPECTRAL_REPRESENTATION_USED`,
+`PHYSICAL_HILBERT_SECTOR`, and `VACUUM_UNIQUENESS_ASSUMPTION`.
 
 The primary clustering candidate must use a connected/truncated correlator,
 explicit separation `x`, and renormalized observables. The spectral candidate
 must normalize energy physically, rather than treating an unscaled lattice
-eigenvalue as a continuum mass. Tightness requires all subsequential limits to
+eigenvalue as a continuum mass. Applicable edges also record
+`PHYSICAL_SCALE_SETTING`, `ENERGY_NORMALIZATION`,
+`DIMENSIONFUL_OR_DIMENSIONLESS`, `RENORMALIZATION_CONDITION`,
+`REFERENCE_PHYSICAL_SCALE`, and `CONTINUUM_SCALING_BEHAVIOR`. A candidate may
+use `m_phys = Delta_lattice(a)/a` or a rigorously defined ratio such as
+`m_gap/Lambda_YM`; neither is assumed without its scale-setting prescription.
+Tightness requires all subsequential limits to
 coincide (or an explicitly equivalent uniqueness criterion). A joint/directed
 renormalized limit is sufficient in principle; arbitrary iterated-limit
 interchange is not imposed as a Clay necessity. A non-Gaussian witness is a
@@ -97,16 +132,30 @@ bind to the repository's exact axiom convention and a specified
 gauge-invariant observable algebra. Universal group coverage means one theorem
 schema applies to every compact simple `G`; constants may depend on `G`.
 
+“Minimal” is not a visual judgment. Each estimate and unresolved bridge set
+records `MINIMALITY_CLASS` from `ASSUMPTION_MINIMAL`, `EDGE_CUT_MINIMAL`,
+`ROUTE_MINIMAL`, `LOGICAL_STRENGTH_MINIMAL`, `CURRENT_KNOWLEDGE_MINIMAL`, or
+`NOT_ESTABLISHED`, together with `COMPARISON_SET` and
+`MINIMALITY_ARGUMENT`. A project-identified bottleneck is not automatically a
+mathematically necessary bottleneck. YM-003 may validly conclude
+`NO_SINGLE_MINIMAL_ESTIMATE_IDENTIFIED` and instead record the smallest
+justified unresolved bridge cut set.
+
 ## Acceptance and verification
 
 E3 must prove deterministic structural consistency, exact candidate binding,
-irreflexive obstruction dependencies, explicit regime/limit fields, and
+irreflexive obstruction dependencies, explicit regime/limit fields, projection
+consistency, acyclic proof dependencies (or explicit cycle justification), and
 preservation of unknown/hypothesis labels. Fresh independent E4 must challenge
-source fidelity, assumption transfer, regime transitions, spectral inference,
-possible bypasses, negative memory, and YM-004 readiness. YM-003 may close only
-after every edge is either source/proof-backed or explicitly marked
-`UNKNOWN`/`HYPOTHESIS`, no assumption disappears between nodes, and at least
-one minimal load-bearing estimate is sharply isolated for YM-004.
+source fidelity, assumption transfer/discharge, regime transitions, physical
+scale setting, observable completeness, spectral inference, possible bypasses,
+negative memory, and YM-004 readiness. YM-003 may close only after every edge
+is either source/proof-backed or explicitly marked `UNKNOWN`/`HYPOTHESIS`, no
+assumption disappears between nodes without discharge evidence, and either:
+
+1. at least one sharply specified candidate estimate is isolated; or
+2. the evidence demonstrates that no unique/single load-bearing estimate is
+   justified and identifies the smallest justified unresolved bridge set.
 
 ## Non-goals
 
