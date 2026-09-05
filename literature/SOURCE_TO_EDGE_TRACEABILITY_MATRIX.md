@@ -1,0 +1,27 @@
+# SOURCE-TO-EDGE TRACEABILITY MATRIX (YM-003)
+
+Maps literature theorems in `THEOREM_LEDGER.md` directly to their instantiated graph edges.
+
+| Theorem / Source ID | Primary Literature Reference | Mapped Edge ID(s) | What Cited Source Proves | Scope / Boundary Limitation |
+|---|---|---|---|---|
+| `THM-YM-0003` | Gross & Wilczek, Phys. Rev. Lett. 30 (1973) 1343 | `E-UV-FREE` | Negative sign of leading beta-function coefficient establishing weak-coupling ultraviolet flow. | Nonperturbative existence or infrared behavior of the flow when g_k grows large. |
+| `THM-YM-0004` | Politzer, Phys. Rev. Lett. 30 (1973) 1346 | `E-UV-FREE` | Negative sign of leading beta-function coefficient establishing weak-coupling ultraviolet flow. | Nonperturbative existence or infrared behavior of the flow when g_k grows large. |
+| `THM-YM-0002` | Faddeev & Popov, Phys. Lett. B 25 (1967) 29 | `E-UV-FREE-CONT` | Perturbative renormalizability and asymptotic freedom in continuum gauge theory. | Nonperturbative continuum existence without cutoffs. |
+| `THM-YM-0003` | Gross & Wilczek (1973) | `E-UV-FREE-CONT` | Perturbative renormalizability and asymptotic freedom in continuum gauge theory. | Nonperturbative continuum existence without cutoffs. |
+| `THM-YM-0016` | Balaban, Commun. Math. Phys. 116 (1988) 1-22 | `E-UV-RG` | Rigorous constructive ultraviolet stability and partition function bounds in finite volume. | Thermodynamic infinite volume limit or continuation past the crossover scale. |
+| `THM-YM-0017` | Balaban, Commun. Math. Phys. 119 (1988) 243-285 | `E-UV-RG` | Rigorous constructive ultraviolet stability and partition function bounds in finite volume. | Thermodynamic infinite volume limit or continuation past the crossover scale. |
+| `THM-YM-0018` | Balaban, Commun. Math. Phys. 122 (1989) 175-202 | `E-UV-RG` | Rigorous constructive ultraviolet stability and partition function bounds in finite volume. | Thermodynamic infinite volume limit or continuation past the crossover scale. |
+| `THM-YM-0019` | Federbush, Commun. Math. Phys. 127 (1990) 433-457 | `E-UV-RG` | Rigorous constructive ultraviolet stability and partition function bounds in finite volume. | Thermodynamic infinite volume limit or continuation past the crossover scale. |
+| `THM-YM-0008` | Wilson, Phys. Rev. D 10 (1974) 2445 | `E-LATTICE-GAP` | Existence of infinite-volume Gibbs state, exponential clustering, and spectral gap on fixed lattice at strong coupling. | Continuum limit a -> 0 or behavior as beta -> infinity. |
+| `THM-YM-0026` | Shen, Zhu & Zhu, arXiv:2501.07720 (2025) | `E-LATTICE-GAP` | Existence of infinite-volume Gibbs state, exponential clustering, and spectral gap on fixed lattice at strong coupling. | Continuum limit a -> 0 or behavior as beta -> infinity. |
+| `THM-YM-0020` | Magnen, Rivasseau & Seneor, Commun. Math. Phys. 155 (1993) 325-383 | `E-CONT-SCHWINGER` | Construction with explicit infrared cutoff mu > 0 (MRS 1993). | Removal of the infrared cutoff without assuming a mass gap. |
+| `THM-YM-0009` | Osterwalder & Schrader, Commun. Math. Phys. 31 (1973) 83-112 | `E-SCHWINGER-OS2` | Mathematical necessity and consistency of OS2. | Unconditional existence of the continuum measure. |
+| `THM-YM-0009` | Osterwalder & Schrader (1973) | `E-SCHWINGER-OS3` | Reflection positivity is rigorously satisfied on the Wilson lattice (Osterwalder-Seiler 1978). | Unconditional existence of the continuum limit. |
+| `THM-YM-0010` | Osterwalder & Schrader, Commun. Math. Phys. 42 (1975) 281-305 | `E-SCHWINGER-OS3` | Reflection positivity is rigorously satisfied on the Wilson lattice (Osterwalder-Seiler 1978). | Unconditional existence of the continuum limit. |
+| `THM-YM-0009` | Osterwalder & Schrader, Commun. Math. Phys. 31 (1973) 83-112 | `E-OS-RECON` | Complete, rigorous mathematical theorem proving relativistic QFT reconstruction from Euclidean OS axioms. | Existence of the 4D Yang-Mills Schwinger functions satisfying the input OS hypotheses. |
+| `THM-YM-0010` | Osterwalder & Schrader, Commun. Math. Phys. 42 (1975) 281-305 | `E-OS-RECON` | Complete, rigorous mathematical theorem proving relativistic QFT reconstruction from Euclidean OS axioms. | Existence of the 4D Yang-Mills Schwinger functions satisfying the input OS hypotheses. |
+| `THM-YM-0009` | Osterwalder & Schrader (1973) | `E-WIGHTMAN-VAC` | Unique cyclic vacuum state follows rigorously from OS reconstruction when cluster decomposition holds. | Constructing 4D Yang-Mills theory satisfying the premise. |
+| `THM-YM-0009` | Osterwalder & Schrader (1973) | `E-WIGHTMAN-SPEC` | Relativistic spectrum condition Spec(P_mu) in forward light cone follows rigorously from OS reconstruction. | Existence of 4D Yang-Mills Wightman fields. |
+| `THM-YM-0010` | Osterwalder & Schrader (1975) | `E-WIGHTMAN-SPEC` | Relativistic spectrum condition Spec(P_mu) in forward light cone follows rigorously from OS reconstruction. | Existence of 4D Yang-Mills Wightman fields. |
+| `THM-YM-0009` | Osterwalder & Schrader (1973) | `E-GAP-CLUSTER` | Exact mathematical equivalence between Euclidean exponential clustering and physical Hamiltonian spectral gap. | Proving that 4D Yang-Mills exhibits exponential clustering in the continuum limit. |
+| `THM-YM-0027` | Chatterjee, Invent. Math. (2024) | `E-NONTRIV-WITNESS` | Chatterjee proved that certain naive 4D SU(2) lattice scaling limits collapse to generalized free fields (triviality warning). | Constructing an interacting, non-trivial continuum Yang-Mills theory. |

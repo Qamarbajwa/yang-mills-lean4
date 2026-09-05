@@ -34,6 +34,15 @@ scientific_fingerprint:
     - literature/OBSTRUCTION_RESONANCE_MATRIX.md
     - literature/UV_IR_BRIDGE_GAP.md
     - literature/LOAD_BEARING_ESTIMATE_CANDIDATES.md
+    - literature/ASSUMPTION_TRANSFER_MATRIX.md
+    - literature/BRIDGE_EDGE_REGISTER.md
+    - literature/CRITICAL_CUT_SET_REPORT.md
+    - literature/LIMIT_AND_REGIME_MATRIX.md
+    - literature/MINIMAL_SUFFICIENT_ESTIMATE_REGISTER.md
+    - literature/MISSING_BRIDGE_GRAPH.md
+    - literature/OPEN_EDGE_REGISTER.md
+    - literature/SOURCE_TO_EDGE_TRACEABILITY_MATRIX.md
+    - literature/YM-003_NEGATIVE_TRANSFER_TESTS.md
     - governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml
 unknown_policy:
   research_locations:

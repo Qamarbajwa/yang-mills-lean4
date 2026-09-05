@@ -643,6 +643,47 @@ contracts:
     - Self-declaring human-owner constitutional acceptance
   outcome: ACCEPTED
 
+- contract_id: CONTRACT-YM-003
+  task_id: YM-003
+  risk_tier: T3
+  base_sha: "867c664e6b528b813a48e7e17409ea68e27c11f7"
+  writer:
+    environment: Antigravity
+    agent_id: primary-worker
+    execution_id: "conversation://00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    model: Gemini / Antigravity
+  reviewer:
+    environment: Antigravity
+    agent_id: PENDING_YM-003_E4
+    independence_level: LEVEL_A_SAME_APP_SAME_MODEL_SEPARATE_SESSION
+  acceptance_authority:
+    environment: HumanOwner + CI
+    authority_id: human-owner-and-ci-evaluator
+    authority_type: ENVIRONMENT_LOCAL
+  allowed_scope:
+    - src/ymmg/bridge_graph.py
+    - scripts/build_ym003_artifacts.py
+    - literature/BRIDGE_EDGE_REGISTER.md
+    - literature/MISSING_BRIDGE_GRAPH.md
+    - literature/ASSUMPTION_TRANSFER_MATRIX.md
+    - literature/LIMIT_AND_REGIME_MATRIX.md
+    - literature/OPEN_EDGE_REGISTER.md
+    - literature/SOURCE_TO_EDGE_TRACEABILITY_MATRIX.md
+    - literature/CRITICAL_CUT_SET_REPORT.md
+    - literature/MINIMAL_SUFFICIENT_ESTIMATE_REGISTER.md
+    - literature/YM-003_NEGATIVE_TRANSFER_TESTS.md
+    - tests/test_ym003_bridge_graph.py
+    - TASK_GRAPH.md
+    - CURRENT_SCIENTIFIC_STATE.md
+    - NEXT_ACTION.md
+  forbidden_scope:
+    - OFFICIAL_PROBLEM_SPECIFICATION.md
+    - Authoring raw E4 text directly
+    - Self-declaring human-owner constitutional acceptance
+    - Claiming proof of mass gap or continuum existence
+  outcome: IN_PROGRESS
+
+
 
 
 

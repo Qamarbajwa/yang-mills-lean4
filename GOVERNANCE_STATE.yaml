@@ -26,7 +26,7 @@ governance_state:
     roadmap:
       path: "ROADMAP.md"
       state: "OBSERVED"
-    active_objective_id: "YM-002F"
+    active_objective_id: "YM-003"
 
   standing_mandate:
     active: true
@@ -90,7 +90,7 @@ governance_state:
   release:
     current_state: "NOT_RELEASE_ELIGIBLE"
     exact_candidate_id: "cb39175a8e2346f40649c29c95f17bee911087a6"
-    hard_gates_state: "YM-002E_CLOSED_YM-002F_CLOSED_YM-003_ELIGIBLE"
+    hard_gates_state: "YM-002E_CLOSED_YM-002F_CLOSED_YM-003_IN_PROGRESS"
     release_eligible: false
     deployment_authorized: false
     deployed: false
@@ -102,7 +102,7 @@ governance_state:
   blockers:
     - id: "NO_ACTIVE_BLOCKER"
       class: "NONE"
-      detail: "YM-002E and YM-002F are independently verified and closed; YM-003 is eligible to begin. YM-004 and later tasks remain gated on YM-003."
+      detail: "YM-002E and YM-002F are independently verified and closed; YM-003 is in progress. YM-004 and later tasks remain gated on YM-003."
 
   legacy_migration:
     prior_governance_present: true
@@ -132,9 +132,9 @@ governance_state:
 
   next_action:
     objective_id: "YM-003"
-    eligibility: "READY"
+    eligibility: "IN_PROGRESS"
     blocker_class: "NONE"
-    description: "Begin YM-003 missing-bridge graph; keep YM-004 and later tasks gated until YM-003 closes."
+    description: "Execute YM-003 missing-bridge graph; candidate artifacts generated and awaiting independent E4 audit."
 
   migration_acceptance:
     decision: "ACCEPTED"

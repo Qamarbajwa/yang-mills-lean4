@@ -1,0 +1,37 @@
+{
+  "task_id": "YM-000",
+  "timestamp_utc": "2026-09-05T22:05:12.866959+00:00",
+  "status": "PASS",
+  "evidence_level": "E3_REPRODUCIBLE_MACHINE_EVIDENCE",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "git_sha": "867c664b90562c5a0d140beabcd4ce202775a4c9",
+  "git_branch": "master",
+  "git_status": "M CURRENT_SCIENTIFIC_STATE.md\n M GOVERNANCE_STATE.yaml\n M TASK_GRAPH.md\n M governance/CONTRACT_OWNERSHIP_LEDGER.yaml\n M governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml\n M src/ymmg/ros.py\n M tests/test_cross_era_synthesis.py\n M tests/test_governance_v300_conformance.py\n M tests/test_pathway_epistemic_taxonomy.py\n M tests/test_research_operating_system.py\n?? evidence/test_runs/verify_20260905T215733Z.json\n?? evidence/test_runs/verify_20260905T215733Z.log\n?? evidence/test_runs/verify_20260905T220438Z.json\n?? evidence/test_runs/verify_20260905T220438Z.log\n?? evidence/test_runs/verify_20260905T220512Z.log\n?? governance/envelopes/YM-003.yaml\n?? literature/ASSUMPTION_TRANSFER_MATRIX.md\n?? literature/BRIDGE_EDGE_REGISTER.md\n?? literature/CRITICAL_CUT_SET_REPORT.md\n?? literature/LIMIT_AND_REGIME_MATRIX.md\n?? literature/MINIMAL_SUFFICIENT_ESTIMATE_REGISTER.md\n?? literature/MISSING_BRIDGE_GRAPH.md\n?? literature/OPEN_EDGE_REGISTER.md\n?? literature/SOURCE_TO_EDGE_TRACEABILITY_MATRIX.md\n?? literature/YM-003_NEGATIVE_TRANSFER_TESTS.md\n?? scripts/build_ym003_artifacts.py\n?? src/ymmg/bridge_graph.py\n?? tests/test_ym003_bridge_graph.py",
+  "commands": [
+    {
+      "command": [
+        "D:\\Comfy UI\\yang mills and the mass gap\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "--basetemp",
+        "D:\\Comfy UI\\yang mills and the mass gap\\evidence\\test_runs\\.pytest_temp_20260905T220512Z"
+      ],
+      "exit_code": 0,
+      "stdout": "........................................................................ [ 42%]\n........................................................................ [ 85%]\n........................                                                 [100%]\n168 passed in 1.33s\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "D:\\Comfy UI\\yang mills and the mass gap\\.venv\\Scripts\\python.exe",
+        "scripts/check_repo.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: repository invariants and governance YAML are readable.\n",
+      "stderr": ""
+    }
+  ],
+  "log_file": "evidence\\test_runs\\verify_20260905T220512Z.log",
+  "log_sha256": "c24ea86ce3c716b07d3e18719edeca646bfe44e355aa27e1dea208a07d69810a"
+}
