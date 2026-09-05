@@ -25,10 +25,12 @@ def main():
     log_path = OUTDIR / f"verify_{stamp}.log"
     json_path = OUTDIR / f"verify_{stamp}.json"
 
+    basetemp = OUTDIR / f".pytest_temp_{stamp}"
     commands = [
-        [sys.executable, "-m", "pytest", "-q", "--basetemp", str(ROOT / ".pytest_r3_run_2")],
+        [sys.executable, "-m", "pytest", "-q", "--basetemp", str(basetemp)],
         [sys.executable, "scripts/check_repo.py"],
     ]
+
 
     records = []
     all_ok = True

@@ -1,0 +1,383 @@
+$ D:\Comfy UI\yang mills and the mass gap\.venv\Scripts\python.exe -m pytest -q --basetemp D:\Comfy UI\yang mills and the mass gap\.pytest_r3_run_2
+.......................F................................................ [ 44%]
+............................................................EFF......... [ 89%]
+...E.............                                                        [100%]
+=================================== ERRORS ====================================
+__ ERROR at setup of test_law_0_minimal_read_exception_and_fail_closed_gate ___
+
+path = '\\\\?\\D:\\Comfy UI\\yang mills and the mass gap\\.pytest_r3_run_2'
+onexc = functools.partial(<function on_rm_rf_error at 0x0000027B0D071B20>, start_path=WindowsPath('//?/D:/Comfy UI/yang mills and the mass gap/.pytest_r3_run_2'))
+
+    def _rmtree_unsafe(path, onexc):
+        def onerror(err):
+            onexc(os.scandir, err.filename, err)
+        results = os.walk(path, topdown=False, onerror=onerror, followlinks=os._walk_symlinks_as_files)
+        for dirpath, dirnames, filenames in results:
+            for name in dirnames:
+                fullname = os.path.join(dirpath, name)
+                try:
+                    os.rmdir(fullname)
+                except OSError as err:
+                    onexc(os.rmdir, fullname, err)
+            for name in filenames:
+                fullname = os.path.join(dirpath, name)
+                try:
+                    os.unlink(fullname)
+                except OSError as err:
+                    onexc(os.unlink, fullname, err)
+        try:
+>           os.rmdir(path)
+E           PermissionError: [WinError 5] Access is denied: '\\\\?\\D:\\Comfy UI\\yang mills and the mass gap\\.pytest_r3_run_2'
+
+C:\Users\arqam\AppData\Local\Programs\Python\Python312\Lib\shutil.py:637: PermissionError
+
+During handling of the above exception, another exception occurred:
+
+path = '\\\\?\\D:\\Comfy UI\\yang mills and the mass gap\\.pytest_r3_run_2'
+ignore_errors = False, onerror = None
+onexc = functools.partial(<function on_rm_rf_error at 0x0000027B0D071B20>, start_path=WindowsPath('//?/D:/Comfy UI/yang mills and the mass gap/.pytest_r3_run_2'))
+dir_fd = None
+
+    def rmtree(path, ignore_errors=False, onerror=None, *, onexc=None, dir_fd=None):
+        """Recursively delete a directory tree.
+    
+        If dir_fd is not None, it should be a file descriptor open to a directory;
+        path will then be relative to that directory.
+        dir_fd may not be implemented on your platform.
+        If it is unavailable, using it will raise a NotImplementedError.
+    
+        If ignore_errors is set, errors are ignored; otherwise, if onexc or
+        onerror is set, it is called to handle the error with arguments (func,
+        path, exc_info) where func is platform and implementation dependent;
+        path is the argument to that function that caused it to fail; and
+        the value of exc_info describes the exception. For onexc it is the
+        exception instance, and for onerror it is a tuple as returned by
+        sys.exc_info().  If ignore_errors is false and both onexc and
+        onerror are None, the exception is reraised.
+    
+        onerror is deprecated and only remains for backwards compatibility.
+        If both onerror and onexc are set, onerror is ignored and onexc is used.
+        """
+    
+        sys.audit("shutil.rmtree", path, dir_fd)
+        if ignore_errors:
+            def onexc(*args):
+                pass
+        elif onerror is None and onexc is None:
+            def onexc(*args):
+                raise
+        elif onexc is None:
+            if onerror is None:
+                def onexc(*args):
+                    raise
+            else:
+                # delegate to onerror
+                def onexc(*args):
+                    func, path, exc = args
+                    if exc is None:
+                        exc_info = None, None, None
+                    else:
+                        exc_info = type(exc), exc, exc.__traceback__
+                    return onerror(func, path, exc_info)
+    
+        if _use_fd_functions:
+            # While the unsafe rmtree works fine on bytes, the fd based does not.
+            if isinstance(path, bytes):
+                path = os.fsdecode(path)
+            stack = [(os.lstat, dir_fd, path, None)]
+            try:
+                while stack:
+                    _rmtree_safe_fd(stack, onexc)
+            finally:
+                # Close any file descriptors still on the stack.
+                while stack:
+                    func, fd, path, entry = stack.pop()
+                    if func is not os.close:
+                        continue
+                    try:
+                        os.close(fd)
+                    except OSError as err:
+                        onexc(os.close, path, err)
+        else:
+            if dir_fd is not None:
+                raise NotImplementedError("dir_fd unavailable on this platform")
+            try:
+                if _rmtree_islink(path):
+                    # symlinks to directories are forbidden, see bug #1669
+                    raise OSError("Cannot call rmtree on a symbolic link")
+            except OSError as err:
+                onexc(os.path.islink, path, err)
+                # can't continue even if onexc hook returns
+                return
+>           return _rmtree_unsafe(path, onexc)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+C:\Users\arqam\AppData\Local\Programs\Python\Python312\Lib\shutil.py:781: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+path = '\\\\?\\D:\\Comfy UI\\yang mills and the mass gap\\.pytest_r3_run_2'
+onexc = functools.partial(<function on_rm_rf_error at 0x0000027B0D071B20>, start_path=WindowsPath('//?/D:/Comfy UI/yang mills and the mass gap/.pytest_r3_run_2'))
+
+    def _rmtree_unsafe(path, onexc):
+        def onerror(err):
+            onexc(os.scandir, err.filename, err)
+        results = os.walk(path, topdown=False, onerror=onerror, followlinks=os._walk_symlinks_as_files)
+        for dirpath, dirnames, filenames in results:
+            for name in dirnames:
+                fullname = os.path.join(dirpath, name)
+                try:
+                    os.rmdir(fullname)
+                except OSError as err:
+                    onexc(os.rmdir, fullname, err)
+            for name in filenames:
+                fullname = os.path.join(dirpath, name)
+                try:
+                    os.unlink(fullname)
+                except OSError as err:
+                    onexc(os.unlink, fullname, err)
+        try:
+            os.rmdir(path)
+        except OSError as err:
+>           onexc(os.rmdir, path, err)
+E           PermissionError: [WinError 5] Access is denied: '\\\\?\\D:\\Comfy UI\\yang mills and the mass gap\\.pytest_r3_run_2'
+
+C:\Users\arqam\AppData\Local\Programs\Python\Python312\Lib\shutil.py:639: PermissionError
+__________ ERROR at setup of test_raw_e4_hash_integrity_verification __________
+
+path = '\\\\?\\D:\\Comfy UI\\yang mills and the mass gap\\.pytest_r3_run_2'
+onexc = functools.partial(<function on_rm_rf_error at 0x0000027B0D071B20>, start_path=WindowsPath('//?/D:/Comfy UI/yang mills and the mass gap/.pytest_r3_run_2'))
+
+    def _rmtree_unsafe(path, onexc):
+        def onerror(err):
+            onexc(os.scandir, err.filename, err)
+        results = os.walk(path, topdown=False, onerror=onerror, followlinks=os._walk_symlinks_as_files)
+        for dirpath, dirnames, filenames in results:
+            for name in dirnames:
+                fullname = os.path.join(dirpath, name)
+                try:
+                    os.rmdir(fullname)
+                except OSError as err:
+                    onexc(os.rmdir, fullname, err)
+            for name in filenames:
+                fullname = os.path.join(dirpath, name)
+                try:
+                    os.unlink(fullname)
+                except OSError as err:
+                    onexc(os.unlink, fullname, err)
+        try:
+>           os.rmdir(path)
+E           PermissionError: [WinError 5] Access is denied: '\\\\?\\D:\\Comfy UI\\yang mills and the mass gap\\.pytest_r3_run_2'
+
+C:\Users\arqam\AppData\Local\Programs\Python\Python312\Lib\shutil.py:637: PermissionError
+
+During handling of the above exception, another exception occurred:
+
+path = '\\\\?\\D:\\Comfy UI\\yang mills and the mass gap\\.pytest_r3_run_2'
+ignore_errors = False, onerror = None
+onexc = functools.partial(<function on_rm_rf_error at 0x0000027B0D071B20>, start_path=WindowsPath('//?/D:/Comfy UI/yang mills and the mass gap/.pytest_r3_run_2'))
+dir_fd = None
+
+    def rmtree(path, ignore_errors=False, onerror=None, *, onexc=None, dir_fd=None):
+        """Recursively delete a directory tree.
+    
+        If dir_fd is not None, it should be a file descriptor open to a directory;
+        path will then be relative to that directory.
+        dir_fd may not be implemented on your platform.
+        If it is unavailable, using it will raise a NotImplementedError.
+    
+        If ignore_errors is set, errors are ignored; otherwise, if onexc or
+        onerror is set, it is called to handle the error with arguments (func,
+        path, exc_info) where func is platform and implementation dependent;
+        path is the argument to that function that caused it to fail; and
+        the value of exc_info describes the exception. For onexc it is the
+        exception instance, and for onerror it is a tuple as returned by
+        sys.exc_info().  If ignore_errors is false and both onexc and
+        onerror are None, the exception is reraised.
+    
+        onerror is deprecated and only remains for backwards compatibility.
+        If both onerror and onexc are set, onerror is ignored and onexc is used.
+        """
+    
+        sys.audit("shutil.rmtree", path, dir_fd)
+        if ignore_errors:
+            def onexc(*args):
+                pass
+        elif onerror is None and onexc is None:
+            def onexc(*args):
+                raise
+        elif onexc is None:
+            if onerror is None:
+                def onexc(*args):
+                    raise
+            else:
+                # delegate to onerror
+                def onexc(*args):
+                    func, path, exc = args
+                    if exc is None:
+                        exc_info = None, None, None
+                    else:
+                        exc_info = type(exc), exc, exc.__traceback__
+                    return onerror(func, path, exc_info)
+    
+        if _use_fd_functions:
+            # While the unsafe rmtree works fine on bytes, the fd based does not.
+            if isinstance(path, bytes):
+                path = os.fsdecode(path)
+            stack = [(os.lstat, dir_fd, path, None)]
+            try:
+                while stack:
+                    _rmtree_safe_fd(stack, onexc)
+            finally:
+                # Close any file descriptors still on the stack.
+                while stack:
+                    func, fd, path, entry = stack.pop()
+                    if func is not os.close:
+                        continue
+                    try:
+                        os.close(fd)
+                    except OSError as err:
+                        onexc(os.close, path, err)
+        else:
+            if dir_fd is not None:
+                raise NotImplementedError("dir_fd unavailable on this platform")
+            try:
+                if _rmtree_islink(path):
+                    # symlinks to directories are forbidden, see bug #1669
+                    raise OSError("Cannot call rmtree on a symbolic link")
+            except OSError as err:
+                onexc(os.path.islink, path, err)
+                # can't continue even if onexc hook returns
+                return
+>           return _rmtree_unsafe(path, onexc)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+C:\Users\arqam\AppData\Local\Programs\Python\Python312\Lib\shutil.py:781: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+path = '\\\\?\\D:\\Comfy UI\\yang mills and the mass gap\\.pytest_r3_run_2'
+onexc = functools.partial(<function on_rm_rf_error at 0x0000027B0D071B20>, start_path=WindowsPath('//?/D:/Comfy UI/yang mills and the mass gap/.pytest_r3_run_2'))
+
+    def _rmtree_unsafe(path, onexc):
+        def onerror(err):
+            onexc(os.scandir, err.filename, err)
+        results = os.walk(path, topdown=False, onerror=onerror, followlinks=os._walk_symlinks_as_files)
+        for dirpath, dirnames, filenames in results:
+            for name in dirnames:
+                fullname = os.path.join(dirpath, name)
+                try:
+                    os.rmdir(fullname)
+                except OSError as err:
+                    onexc(os.rmdir, fullname, err)
+            for name in filenames:
+                fullname = os.path.join(dirpath, name)
+                try:
+                    os.unlink(fullname)
+                except OSError as err:
+                    onexc(os.unlink, fullname, err)
+        try:
+            os.rmdir(path)
+        except OSError as err:
+>           onexc(os.rmdir, path, err)
+E           PermissionError: [WinError 5] Access is denied: '\\\\?\\D:\\Comfy UI\\yang mills and the mass gap\\.pytest_r3_run_2'
+
+C:\Users\arqam\AppData\Local\Programs\Python\Python312\Lib\shutil.py:639: PermissionError
+================================== FAILURES ===================================
+_________ test_scientific_fingerprint_changed_from_ym002e_predecessor _________
+
+    def test_scientific_fingerprint_changed_from_ym002e_predecessor():
+>       current, files = compute_closed_world_scientific_tree_hash(ROOT)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_cross_era_synthesis.py:81: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src\ymmg\ros.py:308: in compute_closed_world_scientific_tree_hash
+    classifications = validate_scientific_artifact_classification(workspace_root)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+workspace_root = WindowsPath('D:/Comfy UI/yang mills and the mass gap')
+
+    def validate_scientific_artifact_classification(workspace_root: Path) -> Dict[str, str]:
+        """Reject unknown or out-of-manifest research artifacts before fingerprinting."""
+        classifications = discover_repository_artifacts(workspace_root)
+        unknown = sorted(path for path, cls in classifications.items() if cls == "UNKNOWN")
+        if unknown:
+>           raise ConstitutionalIntegrityError(
+                "Unknown research artifact(s) discovered; classify and bind before acceptance: " + ", ".join(unknown)
+            )
+E           ymmg.ros.ConstitutionalIntegrityError: Unknown research artifact(s) discovered; classify and bind before acceptance: docs/superpowers/plans/2026-09-01-ym003-missing-bridge-graph.md, docs/superpowers/specs/2026-09-01-ym003-missing-bridge-graph-design.md
+
+src\ymmg\ros.py:244: ConstitutionalIntegrityError
+______________ test_closed_world_scientific_fingerprint_manifest ______________
+
+    def test_closed_world_scientific_fingerprint_manifest():
+        assert len(SCIENTIFIC_FINGERPRINT_MANIFEST) == 22
+>       tree_hash, file_hashes = compute_closed_world_scientific_tree_hash(ROOT)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_research_operating_system.py:44: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src\ymmg\ros.py:308: in compute_closed_world_scientific_tree_hash
+    classifications = validate_scientific_artifact_classification(workspace_root)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+workspace_root = WindowsPath('D:/Comfy UI/yang mills and the mass gap')
+
+    def validate_scientific_artifact_classification(workspace_root: Path) -> Dict[str, str]:
+        """Reject unknown or out-of-manifest research artifacts before fingerprinting."""
+        classifications = discover_repository_artifacts(workspace_root)
+        unknown = sorted(path for path, cls in classifications.items() if cls == "UNKNOWN")
+        if unknown:
+>           raise ConstitutionalIntegrityError(
+                "Unknown research artifact(s) discovered; classify and bind before acceptance: " + ", ".join(unknown)
+            )
+E           src.ymmg.ros.ConstitutionalIntegrityError: Unknown research artifact(s) discovered; classify and bind before acceptance: docs/superpowers/plans/2026-09-01-ym003-missing-bridge-graph.md, docs/superpowers/specs/2026-09-01-ym003-missing-bridge-graph-design.md
+
+src\ymmg\ros.py:244: ConstitutionalIntegrityError
+______ test_r3_classifies_existing_repository_without_unknown_artifacts _______
+
+    def test_r3_classifies_existing_repository_without_unknown_artifacts():
+>       classifications = validate_scientific_artifact_classification(ROOT)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_research_operating_system.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+workspace_root = WindowsPath('D:/Comfy UI/yang mills and the mass gap')
+
+    def validate_scientific_artifact_classification(workspace_root: Path) -> Dict[str, str]:
+        """Reject unknown or out-of-manifest research artifacts before fingerprinting."""
+        classifications = discover_repository_artifacts(workspace_root)
+        unknown = sorted(path for path, cls in classifications.items() if cls == "UNKNOWN")
+        if unknown:
+>           raise ConstitutionalIntegrityError(
+                "Unknown research artifact(s) discovered; classify and bind before acceptance: " + ", ".join(unknown)
+            )
+E           src.ymmg.ros.ConstitutionalIntegrityError: Unknown research artifact(s) discovered; classify and bind before acceptance: docs/superpowers/plans/2026-09-01-ym003-missing-bridge-graph.md, docs/superpowers/specs/2026-09-01-ym003-missing-bridge-graph-design.md
+
+src\ymmg\ros.py:244: ConstitutionalIntegrityError
+============================== warnings summary ===============================
+tests/test_research_operating_system.py::test_law_0_minimal_read_exception_and_fail_closed_gate
+tests/test_research_operating_system.py::test_raw_e4_hash_integrity_verification
+  D:\Comfy UI\yang mills and the mass gap\.venv\Lib\site-packages\_pytest\pathlib.py:102: PytestWarning: (rm_rf) unknown function <built-in function scandir> when removing \\?\D:\Comfy UI\yang mills and the mass gap\.pytest_r3_run_2:
+  <class 'PermissionError'>: [WinError 5] Access is denied: '\\\\?\\D:\\Comfy UI\\yang mills and the mass gap\\.pytest_r3_run_2'
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+ERROR tests/test_research_operating_system.py::test_law_0_minimal_read_exception_and_fail_closed_gate
+ERROR tests/test_research_operating_system.py::test_raw_e4_hash_integrity_verification
+FAILED tests/test_cross_era_synthesis.py::test_scientific_fingerprint_changed_from_ym002e_predecessor
+FAILED tests/test_research_operating_system.py::test_closed_world_scientific_fingerprint_manifest
+FAILED tests/test_research_operating_system.py::test_r3_classifies_existing_repository_without_unknown_artifacts
+3 failed, 156 passed, 2 warnings, 2 errors in 2.90s
+
+
+[exit_code=1]
+
+$ D:\Comfy UI\yang mills and the mass gap\.venv\Scripts\python.exe scripts/check_repo.py
+PASS: repository invariants and governance YAML are readable.
+
+
+[exit_code=0]

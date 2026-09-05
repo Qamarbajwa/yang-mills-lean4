@@ -1,8 +1,10 @@
 .venv/
 __pycache__/
 .pytest_cache/
-.pytest_r3_run_*/
-evidence/test_runs/.pytest_r3_temp/
+.pytest_*/
+*.pytest_*/
+evidence/test_runs/.pytest_*/
+
 *.pyc
 *.pyo
 *.pyd

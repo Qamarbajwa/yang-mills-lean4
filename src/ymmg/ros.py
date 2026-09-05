@@ -96,7 +96,8 @@ KNOWN_ADMINISTRATIVE_ROOT_PATHS = {
 
 GENERATED_PREFIXES = ("checkpoints/", "evidence/", "experiments/", "numerical/")
 PROVENANCE_PREFIXES = ("verification/",)
-ADMINISTRATIVE_PREFIXES = ("governance/", "scripts/", "src/", "tests/")
+ADMINISTRATIVE_PREFIXES = ("governance/", "scripts/", "src/", "tests/", "docs/")
+
 IGNORED_EXACT_PATHS = {
     "checkpoints/.gitkeep",
     "derivations/.gitkeep",
