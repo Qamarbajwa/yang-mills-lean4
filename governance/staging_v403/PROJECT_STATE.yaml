@@ -1,0 +1,152 @@
+# STAGING CANDIDATE — do not overwrite existing GOVERNANCE_STATE.yaml
+# This file becomes active only after independent review, acceptance, and cutover.
+schema_version: "4.0.3"
+revision: 1
+activation: STAGING_CANDIDATE
+
+project:
+  id: YANG_MILLS_MASS_GAP
+  root: "D:\\Comfy UI\\yang mills and the mass gap"
+  head: "eed2c1477bfb91f2579199c67fa22fefbc84907e"
+  dirty: false
+  candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
+
+governance_binding:
+  active_version: "3.0.0"
+  proposed_version: "4.0.3"
+  source_manifest_ref: "_staging_gov_v403/UNIVERSAL_GOVERNANCE_MINIMAL_v4.0.3/MANIFEST.sha256.json"
+  project_binding_ref: "governance/staging_v403/GOVERNANCE.md#section-13"
+  migration_receipt_ref: null  # populated at cutover
+
+coordination:
+  state_writer: "primary-worker"
+  serialization_method: "revision-increment-atomic-file-replace"
+  last_expected_revision: 1
+  last_updated_at: "2026-09-07T18:10:00Z"
+  active_contract: "YM-GOV-403"
+  frozen_candidate: null  # populated at freeze
+
+current_objective: YM-GOV-403
+
+objectives:
+  - id: YM-GOV-403
+    scope_in: "Governance migration from v3.0.0 to v4.0.3"
+    scope_out: "Scientific task execution; YM-003 acceptance; YM-004+ work"
+    dependencies: []
+    risk: R3
+    writer: "primary-worker"
+    reviewer_path: "fresh-blind-research-subagent-IND1"
+    acceptor: "human-owner"
+    status: IN_PROGRESS
+
+  - id: YM-003
+    scope_in: "Missing-bridge graph construction"
+    scope_out: "Proof attempts; new mechanisms"
+    dependencies: ["YM-002F"]
+    risk: R2
+    writer: "primary-worker"
+    reviewer_path: "fresh-blind-research-subagent-IND1"
+    acceptor: "human-owner"
+    status: AWAITING_HUMAN_ACCEPTANCE
+
+  - id: YM-004
+    scope_in: "Rigorous RG/Bałaban program reconstruction"
+    dependencies: ["YM-003"]
+    risk: R2
+    status: BLOCKED
+
+  - id: YM-005
+    scope_in: "Rigorous lattice gap program reconstruction"
+    dependencies: ["YM-003"]
+    risk: R2
+    status: BLOCKED
+
+  - id: YM-006
+    scope_in: "Precise non-meeting estimate identification"
+    dependencies: ["YM-004", "YM-005"]
+    risk: R2
+    status: BLOCKED
+
+capabilities:
+  CAP-001-problem-specification:
+    status: ACCEPTED_BOUNDED
+    evidence_refs: ["EVIDENCE_LEDGER.md#EVD-001-E4"]
+  CAP-002-theorem-ledger:
+    status: ACCEPTED_BOUNDED
+    evidence_refs: ["EVIDENCE_LEDGER.md#EVD-002F-E4"]
+  CAP-003-bridge-graph:
+    status: AWAITING_HUMAN_ACCEPTANCE
+    evidence_refs: ["verification/YM-003_INDEPENDENT_REVIEW.md"]
+  CAP-004-rg-reconstruction:
+    status: BLOCKED
+  CAP-005-lattice-gap:
+    status: BLOCKED
+  CAP-006-non-meeting-estimate:
+    status: BLOCKED
+
+external_systems: {}  # No external systems
+
+hard_gates:
+  YM-003-acceptance:
+    status: AWAITING_HUMAN_ACCEPTANCE
+    description: "YM-003 E4 audit INTEGRITY_PASS_WITH_LIMITATIONS; human owner acceptance required"
+  YM-GOV-403-migration:
+    status: IN_PROGRESS
+    description: "v4.0.3 governance migration in staging"
+
+evidence_refs:
+  - ref: "EVIDENCE_LEDGER.md"
+    role: "Append-only evidence receipts"
+  - ref: "governance/EVIDENCE_MAPPING_v3.0.0.yaml"
+    role: "Historical v3.0.0 evidence mapping"
+  - ref: "governance/staging_v403/EVIDENCE_MAPPING_v403.yaml"
+    role: "v3.0.0-to-v4.0.3 evidence tier mapping"
+
+negative_history_refs:
+  - ref: "NEGATIVE_EVIDENCE_REGISTER.md"
+    role: "Preserved failures and negative results"
+
+blockers:
+  - id: YM-003_HUMAN_GATE
+    class: HUMAN_GATE
+    detail: "YM-003 E4 audit complete; awaiting human owner acceptance"
+  - id: NO_REMOTE
+    class: TECHNICAL
+    detail: "No remote upstream configured"
+
+known_risks:
+  - "Evidence tier mapping from v3.0.0 to v4.0.3 requires explicit verification"
+  - "Risk tier T1-T5 to R0-R3 mapping must be validated by consequence, not mechanical lookup"
+
+reserved_actions:
+  - "Remote push (BLOCKED_NO_REMOTE)"
+  - "Force push (PROHIBITED)"
+  - "Proof claims (PROHIBITED)"
+  - "Self-acceptance (PROHIBITED)"
+  - "Overwriting active governance before cutover (PROHIBITED)"
+
+release:
+  state: NO-GO
+  eligible: false
+  deployment_authorized: false
+  candidate: null
+  evidence_refs: []
+  reason: "Internal mathematical research repository; no release target"
+
+last_verified_checkpoint:
+  sha: "eed2c1477bfb91f2579199c67fa22fefbc84907e"
+  timestamp: "2026-09-07"
+  test_result: "168 passed"
+
+overhead:
+  routine_target_fraction: 0.10
+  measurement: UNKNOWN
+  governance_active_minutes: null
+  total_active_minutes: null
+  proxy_word_fraction: null
+  exceptions:
+    - "YM-GOV-403 is a governance-only migration task; cannot truthfully meet product-work ratio"
+
+views:
+  last_validated_revision: null
+  evidence_refs: []
