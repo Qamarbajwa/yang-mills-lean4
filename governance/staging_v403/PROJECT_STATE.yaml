@@ -7,7 +7,7 @@ activation: STAGING_CANDIDATE
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "eed2c1477bfb91f2579199c67fa22fefbc84907e"
+  head: "a7d7f21f0c62e2c6a0bf280c441a97341b4be39e"
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -16,15 +16,15 @@ governance_binding:
   proposed_version: "4.0.3"
   source_manifest_ref: "_staging_gov_v403/UNIVERSAL_GOVERNANCE_MINIMAL_v4.0.3/MANIFEST.sha256.json"
   project_binding_ref: "governance/staging_v403/GOVERNANCE.md#section-13"
-  migration_receipt_ref: null  # populated at cutover
+  migration_receipt_ref: "verification/YM-GOV-403_INDEPENDENT_REVIEW.md"
 
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
   last_expected_revision: 1
-  last_updated_at: "2026-09-07T18:10:00Z"
+  last_updated_at: "2026-09-07T18:55:00Z"
   active_contract: "YM-GOV-403"
-  frozen_candidate: null  # populated at freeze
+  frozen_candidate: "a7d7f21f0c62e2c6a0bf280c441a97341b4be39e"
 
 current_objective: YM-GOV-403
 
@@ -38,6 +38,12 @@ objectives:
     reviewer_path: "fresh-blind-research-subagent-IND1"
     acceptor: "human-owner"
     status: IN_PROGRESS
+
+  - id: YM-002F
+    scope_in: "Cross-era theorem and dependency synthesis"
+    dependencies: ["YM-002E"]
+    risk: R2
+    status: CLOSED
 
   - id: YM-003
     scope_in: "Missing-bridge graph construction"
@@ -134,9 +140,9 @@ release:
   reason: "Internal mathematical research repository; no release target"
 
 last_verified_checkpoint:
-  sha: "eed2c1477bfb91f2579199c67fa22fefbc84907e"
+  sha: "a7d7f21f0c62e2c6a0bf280c441a97341b4be39e"
   timestamp: "2026-09-07"
-  test_result: "168 passed"
+  test_result: "182 passed"
 
 overhead:
   routine_target_fraction: 0.10

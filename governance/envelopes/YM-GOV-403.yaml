@@ -1,0 +1,110 @@
+task_execution_envelope:
+  schema_version: "3.0.0"
+  identity:
+    task_id: "YM-GOV-403"
+    project_id: "YANG_MILLS_MASS_GAP"
+    project_name: "Yang-Mills and the Mass Gap"
+    governance_version: "4.0.3"
+    adoption_mode: "MIGRATION_GOVERNED"
+  direction:
+    intent_refs: ["PROJECT_INTENT.md"]
+    roadmap_objective: "GOV-MIGRATION-403"
+    owner_non_goals: ["No change to Clay problem identity", "No public release or deployment", "No UI creation"]
+    owner_reserved_boundaries: ["publication", "legal", "spend", "destructive history action", "constitutional acceptance"]
+  objective:
+    exact_objective: "Prepare and stage Universal Governance Minimal v4.0.3 alongside active v3.0.0 governance, preserving the ROS v1.0 epistemic constitution and all historical evidence."
+    rationale: "Consolidate operational governance into three entry authorities (HOW, WHAT/WHY, LIVE STATUS) with explicit CAS serialization, semantic evidence mapping, and leaner writing budgets."
+    done_boundary: "Staged GOVERNANCE.md, PROJECT_DIRECTION.md, PROJECT_STATE.yaml, EVIDENCE_MAPPING_v403.yaml, DELEGATION_MAP.yaml, 14 transition tests, and independent E4 review completed."
+  base_state:
+    repository_or_workspace: "D:\\Comfy UI\\yang mills and the mass gap"
+    branch_or_state_channel: "master"
+    base_candidate_id: "eed2c1477bfb91f2579199c67fa22fefbc84907e"
+    dirty_state: "CLEAN"
+    preserved_unrelated_work: ["All pre-migration repository history, theorem ledgers, bridge graph artifacts, and negative evidence"]
+  eligibility:
+    dependencies:
+      - {id: "v4.0.3 package manifest", state: "VERIFIED", evidence_ref: "tools/verify-package.mjs (8 files PASS)"}
+      - {id: "ROS v1.0", state: "ACCEPTED", evidence_ref: "governance/HUMAN_OWNER_ACCEPTANCE_ROS_v1.0_20260830.md"}
+      - {id: "YM-003", state: "AWAITING_HUMAN_ACCEPTANCE", evidence_ref: "verification/YM-003_INDEPENDENT_REVIEW.md"}
+    technical_inputs_available: true
+    traceable_to_intent: true
+    architecture_permits: true
+    inside_standing_mandate: true
+    candidate_state_known: true
+    risk_inside_ceiling: true
+    blocking_invariant_present: false
+    reserved_authority_required_for_technical_mutation: false
+    eligible: true
+    blocker_class: null
+    blocker_detail: null
+  classification:
+    risk_tier: "T4"
+    action_class: "B"
+    risk_reasons: ["Changes future operational governance structure", "Historical preservation is consequential", "Requires independent review before cutover"]
+    active_modules: ["CORE-PROJECT-BINDING", "CORE-AUTHORITY", "CORE-RISK", "CORE-DEPENDENCY", "CORE-EVIDENCE", "CORE-TEST-INTEGRITY", "CORE-GIT-STATE", "GOVERNANCE-MIGRATION", "AI-AUTONOMY", "RESEARCH-SCIENTIFIC", "ARTIFACT-DATA"]
+    not_activated_material_modules:
+      - {module: "FINANCIAL", reason: "No financial scope"}
+      - {module: "DEPLOYMENT", reason: "No deployment scope"}
+      - {module: "UI-PRESENTATION", reason: "NONE_BY_DESIGN (internal mathematical research repository)"}
+  roles_and_authority:
+    orchestrator: "primary-worker"
+    writer: {id: "primary-worker", qualified: true, risk_ceiling: "T4"}
+    reviewer_or_verifier: {id: "fresh-blind-research-subagent-IND1", qualified: true, expected_independence: "IND1"}
+    acceptance_authority: {id: "human-owner", qualified: true, authority_type: "CONSTITUTIONAL_OWNER"}
+    implementation_authority: "AUTONOMOUS_WITHIN_ENVELOPE"
+    verification_authority: "EVIDENCE_BASED"
+    release_eligibility_authority: "EVIDENCE_DERIVED_GATE"
+    reserved_external_authority: {required: false, type: "NONE", trigger: null}
+  mutation_scope:
+    allowed:
+      - "governance/staging_v403/*"
+      - "tests/test_governance_v403_transition.py"
+      - "governance/envelopes/YM-GOV-403.yaml"
+      - "verification/YM-GOV-403_INDEPENDENT_REVIEW.md"
+      - "verification/raw/YM-GOV-403_E4_RAW_*.md"
+      - "governance/CONTRACT_OWNERSHIP_LEDGER.yaml"
+    forbidden:
+      - "Overwriting active GOVERNANCE_STATE.yaml before cutover"
+      - "Modifying ROS v1.0 core laws or 7 layers"
+      - "Promoting unproved mathematical results"
+      - "Self-declaring human-owner acceptance"
+      - "Authoring raw E4 text directly"
+    protected:
+      - "OFFICIAL_PROBLEM_SPECIFICATION.md"
+      - "negative evidence registers"
+      - "raw verifier transcripts"
+      - "all historical sealed checkpoints"
+  assurance_contract:
+    intent: "Stage Universal Governance v4.0.3 candidate with three-authority structure while preserving ROS v1.0 and all existing mathematical progress."
+    invariants:
+      - {id: "INV-GOV403-001", statement: "GOVERNANCE_MIGRATION != SCIENTIFIC_PROGRESS", zero_tolerance: true}
+      - {id: "INV-GOV403-002", statement: "Historical evidence remains preserved in place (0 deletions)", zero_tolerance: true}
+      - {id: "INV-GOV403-003", statement: "ROS v1.0 constitution is active delegated authority, not superseded", zero_tolerance: true}
+      - {id: "INV-GOV403-004", statement: "Writer cannot self-accept migration candidate", zero_tolerance: true}
+  acceptance:
+    hard_gates:
+      - {id: "GATE-GOV-403-01", condition: "v4.0.3 package manifest 8/8 hashes pass", required_state: "PASS"}
+      - {id: "GATE-GOV-403-02", condition: "14 transition tests pass deterministically", required_state: "PASS"}
+      - {id: "GATE-GOV-403-03", condition: "Full regression suite passes (182 tests)", required_state: "PASS"}
+      - {id: "GATE-GOV-403-04", condition: "Fresh blind independent E4 review passes", required_state: "PASS"}
+      - {id: "GATE-GOV-403-05", condition: "Human owner constitutional acceptance", required_state: "AWAITING"}
+    required_evidence:
+      minimum_strength: "E4"
+      required_environments: ["INTEGRATED_LOCAL", "STATIC"]
+      minimum_independence: "IND1"
+      candidate_bound: true
+  completion_record:
+    status: "AWAITING_HUMAN_OWNER_ACCEPTANCE"
+    candidate_id: "a7d7f21f0c62e2c6a0bf280c441a97341b4be39e"
+    e4_receipt: "verification/YM-GOV-403_INDEPENDENT_REVIEW.md"
+    e4_raw_receipt: "verification/raw/YM-GOV-403_E4_RAW_20260907T185450Z.md"
+    e4_verifier_id: "2d5b7e61-3f04-4cbf-a551-2dce1fc25d82"
+    e4_independence: "IND1 (fresh blind research subagent)"
+    e4_verdict: "INTEGRITY_PASS_WITH_LIMITATIONS"
+    e4_limitations_repaired:
+      - "L1: Bound candidate SHA a7d7f21f0c62e2c6a0bf280c441a97341b4be39e into PROJECT_STATE.yaml head, frozen_candidate, and checkpoint"
+      - "L2: Added dynamic transaction rejection checks to test_03 (candidate mismatch) and test_05 (stale revision)"
+      - "L3: Added YM-002F (CLOSED) to PROJECT_STATE.yaml objectives and enhanced test_09 dependency resolution"
+    deterministic_tests: "182 passed in 1.19s"
+    package_integrity: "8 files verified PASS"
+    cutover_state: "STAGED_AWAITING_HUMAN_CUTOVER"

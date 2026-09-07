@@ -14,5 +14,6 @@ dist/
 .worktrees/
 .DS_Store
 Thumbs.db
+_staging_gov_v403/
 
 # Keep recorded scientific evidence and checkpoints tracked.

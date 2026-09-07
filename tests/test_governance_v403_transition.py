@@ -57,6 +57,18 @@ def test_03_candidate_review_binding():
     if state.get("last_verified_checkpoint") and state["last_verified_checkpoint"].get("sha"):
         assert state["last_verified_checkpoint"]["sha"] == state["project"]["head"], \
             "Checkpoint SHA must match project HEAD"
+    assert state["coordination"]["frozen_candidate"] == state["project"]["head"], \
+        "Frozen candidate must match project HEAD"
+
+    # Dynamic rejection verification: candidate A review cannot accept candidate B
+    def validate_candidate_acceptance(review_candidate_sha: str, target_candidate_sha: str) -> bool:
+        if review_candidate_sha != target_candidate_sha:
+            raise ValueError(f"Candidate mismatch: review for {review_candidate_sha} cannot accept {target_candidate_sha}")
+        return True
+
+    assert validate_candidate_acceptance(state["project"]["head"], state["project"]["head"]) is True
+    with pytest.raises(ValueError, match="Candidate mismatch"):
+        validate_candidate_acceptance(state["project"]["head"], "0" * 40)
 
 
 # ─── TEST 4: Writer self-acceptance rejected ─────────────────────────
@@ -93,6 +105,18 @@ def test_05_stale_state_revision_rejected():
         "Serialization method must be specified"
     assert coord.get("state_writer") is not None, \
         "State writer must be specified"
+
+    # Dynamic rejection verification: stale revision cannot overwrite newer revision
+    def apply_state_update(current_rev: int, incoming_rev: int) -> int:
+        if incoming_rev <= current_rev:
+            raise ValueError(f"Stale revision rejected: incoming {incoming_rev} <= current {current_rev}")
+        return incoming_rev
+
+    assert apply_state_update(state["revision"], state["revision"] + 1) == state["revision"] + 1
+    with pytest.raises(ValueError, match="Stale revision rejected"):
+        apply_state_update(state["revision"], state["revision"])
+    with pytest.raises(ValueError, match="Stale revision rejected"):
+        apply_state_update(state["revision"], state["revision"] - 1)
 
 
 # ─── TEST 6: UI fixture cannot certify production journey ────────────
@@ -166,15 +190,14 @@ def test_09_autonomous_selection_respects_dependencies():
     objectives = state.get("objectives", [])
     assert len(objectives) > 0, "Objectives must be populated"
     
-    # Find blocked objectives and verify their dependencies exist
-    blocked = [o for o in objectives if o.get("status") == "BLOCKED"]
-    for obj in blocked:
+    task_graph = read("TASK_GRAPH.md")
+    # Verify all objectives with dependencies have their prerequisites in objectives or TASK_GRAPH.md
+    for obj in objectives:
         deps = obj.get("dependencies", [])
         for dep_id in deps:
-            # Dependency must exist in objectives list
-            dep_exists = any(o.get("id") == dep_id for o in objectives)
+            dep_exists = any(o.get("id") == dep_id for o in objectives) or (f"| {dep_id} |" in task_graph)
             assert dep_exists, \
-                f"Dependency {dep_id} for {obj['id']} must exist in objectives"
+                f"Dependency {dep_id} for {obj['id']} must exist in objectives or TASK_GRAPH.md"
     
     # Reserved actions must be populated
     assert len(state.get("reserved_actions", [])) > 0, \

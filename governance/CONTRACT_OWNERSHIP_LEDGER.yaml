@@ -681,7 +681,41 @@ contracts:
     - Authoring raw E4 text directly
     - Self-declaring human-owner constitutional acceptance
     - Claiming proof of mass gap or continuum existence
-  outcome: IN_PROGRESS
+  outcome: AWAITING_HUMAN_OWNER_ACCEPTANCE
+
+- contract_id: CONTRACT-YM-GOV-403
+  task_id: YM-GOV-403
+  risk_tier: T4
+  base_sha: "eed2c1477bfb91f2579199c67fa22fefbc84907e"
+  writer:
+    environment: Antigravity
+    agent_id: primary-worker
+    execution_id: "conversation://00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    model: Gemini / Antigravity
+  reviewer:
+    environment: Antigravity
+    agent_id: fresh-blind-research-subagent-IND1
+    independence_level: LEVEL_A_SAME_APP_SAME_MODEL_SEPARATE_SESSION
+  acceptance_authority:
+    environment: HumanOwner
+    authority_id: human-owner
+    authority_type: ENVIRONMENT_LOCAL
+  allowed_scope:
+    - governance/staging_v403/GOVERNANCE.md
+    - governance/staging_v403/PROJECT_DIRECTION.md
+    - governance/staging_v403/PROJECT_STATE.yaml
+    - governance/staging_v403/EVIDENCE_MAPPING_v403.yaml
+    - governance/staging_v403/DELEGATION_MAP.yaml
+    - tests/test_governance_v403_transition.py
+    - governance/envelopes/YM-GOV-403.yaml
+    - verification/YM-GOV-403_INDEPENDENT_REVIEW.md
+    - verification/raw/YM-GOV-403_E4_RAW_*.md
+  forbidden_scope:
+    - Overwriting active GOVERNANCE_STATE.yaml before cutover
+    - Modifying ROS v1.0 core laws
+    - Authoring raw E4 text directly
+    - Self-declaring human-owner constitutional acceptance
+  outcome: AWAITING_HUMAN_OWNER_ACCEPTANCE
 
 
 
