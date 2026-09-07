@@ -112,10 +112,14 @@ task_execution_envelope:
     checkpoint_required_before_mutation: true
     state_integrity_check: "Exact candidate SHA and recomputed closed-world scientific fingerprint"
   completion_record:
-    status: "IN_PROGRESS"
-    candidate_id: null
-    scientific_fingerprint: null
-    e4_receipt: null
-    e4_independence: null
-    e4_verdict: null
+    status: "AWAITING_HUMAN_OWNER_ACCEPTANCE"
+    candidate_id: "1f482f5ffdece5e140b92aff0636e89e710824b1"
+    scientific_fingerprint: "017241b8e1f426d270d844a1941cc6c5735fe84db3ca8b30c4cbba262625572d"
+    e4_receipt: "verification/YM-003_INDEPENDENT_REVIEW.md"
+    e4_independence: "IND1 — fresh blind research subagent 213525ee-ca95-4248-9c03-d91a2f07b3f5"
+    e4_verdict: "INTEGRITY_PASS_WITH_LIMITATIONS"
+    e4_limitations_repaired:
+      - "L1: phantom proof dependency E-WIGHTMAN-RECON fixed to E-OS-RECON"
+      - "L1: DAG validator hardened to reject unknown dependency IDs"
+    post_e4_test_result: "168 passed"
     release_eligibility_effect: "YM-004_THROUGH_YM-006_GATED_UNTIL_YM-003_CLOSEOUT"

@@ -192,7 +192,10 @@ def validate_proof_dependency_dag(records: List[Dict[str, Any]]) -> None:
                 raise BridgeGraphValidationError(f"Reflexive dependency detected in edge {src}")
             if dep_id in edge_ids:
                 adj[src].append(dep_id)
-                
+            else:
+                raise BridgeGraphValidationError(
+                    f"Edge {src} declares unknown proof dependency: {dep_id}"
+                )
     # Detect cycles via DFS
     visited = {}
     def dfs(node: str, path: List[str]):

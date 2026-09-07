@@ -1,14 +1,15 @@
 # NEXT ACTION
 
 ## Current action
-`YM-003_MISSING_BRIDGE_GRAPH`
+`YM-003_MISSING_BRIDGE_GRAPH — AWAITING_HUMAN_OWNER_ACCEPTANCE`
 
 ## Scope
-- Construct the missing-bridge graph from the accepted YM-002F obstruction candidates and estimate forms.
-- Require candidate-bound E3 confirmation and fresh independent E4 review before advancing to YM-004.
+- YM-003 candidate artifacts generated, E4 independent audit returned INTEGRITY_PASS_WITH_LIMITATIONS.
+- Post-E4 repairs applied: phantom proof dependency fixed (E-WIGHTMAN-RECON → E-OS-RECON), DAG validator hardened.
+- 168 tests passed. Awaiting human owner acceptance.
 
 ## Blocked downstream action
-- `YM-004` and later roadmap tasks remain BLOCKED until YM-003 is independently closed.
+- `YM-004` and later roadmap tasks remain BLOCKED until YM-003 is accepted and closed by the human owner.
 
 ## Completed actions
 - `YM-000 — Local bootstrap` (DONE)

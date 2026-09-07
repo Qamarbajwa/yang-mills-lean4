@@ -90,7 +90,7 @@ governance_state:
   release:
     current_state: "NOT_RELEASE_ELIGIBLE"
     exact_candidate_id: "cb39175a8e2346f40649c29c95f17bee911087a6"
-    hard_gates_state: "YM-002E_CLOSED_YM-002F_CLOSED_YM-003_IN_PROGRESS"
+    hard_gates_state: "YM-002E_CLOSED_YM-002F_CLOSED_YM-003_E4_PASS_AWAITING_ACCEPTANCE"
     release_eligible: false
     deployment_authorized: false
     deployed: false
@@ -100,9 +100,9 @@ governance_state:
       - "No remote upstream is configured."
 
   blockers:
-    - id: "NO_ACTIVE_BLOCKER"
-      class: "NONE"
-      detail: "YM-002E and YM-002F are independently verified and closed; YM-003 is in progress. YM-004 and later tasks remain gated on YM-003."
+    - id: "YM-003_AWAITING_HUMAN_ACCEPTANCE"
+      class: "HUMAN_GATE"
+      detail: "YM-003 E4 audit returned INTEGRITY_PASS_WITH_LIMITATIONS. Post-E4 repairs applied. Awaiting human owner acceptance. YM-004 and later tasks remain gated on YM-003 closeout."
 
   legacy_migration:
     prior_governance_present: true
@@ -132,9 +132,9 @@ governance_state:
 
   next_action:
     objective_id: "YM-003"
-    eligibility: "IN_PROGRESS"
-    blocker_class: "NONE"
-    description: "Execute YM-003 missing-bridge graph; candidate artifacts generated and awaiting independent E4 audit."
+    eligibility: "AWAITING_HUMAN_OWNER_ACCEPTANCE"
+    blocker_class: "HUMAN_GATE"
+    description: "YM-003 E4 audit returned INTEGRITY_PASS_WITH_LIMITATIONS. Post-E4 repairs applied (phantom dependency fix, validator hardening). 168 tests passed. Awaiting human owner acceptance before closing YM-003 and unblocking YM-004."
 
   migration_acceptance:
     decision: "ACCEPTED"

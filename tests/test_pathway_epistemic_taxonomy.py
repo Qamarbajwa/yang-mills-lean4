@@ -60,7 +60,8 @@ def test_task_graph_ym002_subtask_completeness():
     assert any(
         s in content for s in [
             "YM-003 | Construct missing-bridge graph | YM-002F | T3 | independent semantic review | READY",
-            "YM-003 | Construct missing-bridge graph | YM-002F | T3 | independent semantic review | IN_PROGRESS"
+            "YM-003 | Construct missing-bridge graph | YM-002F | T3 | independent semantic review | IN_PROGRESS",
+            "YM-003 | Construct missing-bridge graph | YM-002F | T3 | independent semantic review | AWAITING_HUMAN_ACCEPTANCE"
         ]
     )
 
