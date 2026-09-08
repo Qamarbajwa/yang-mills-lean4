@@ -1,0 +1,134 @@
+# Evidence and Risk Tier Mapping: v3.0.0 → v4.0.3
+# Project: YANG_MILLS_MASS_GAP
+# Migration: YM-GOV-403
+# Date: 2026-09-07
+# Policy: Preserve historical labels; map by actual evidence nature, not numerical equivalence.
+
+schema_version: "4.0.3"
+source_version: "3.0.0"
+project_id: YANG_MILLS_MASS_GAP
+
+# ─── EVIDENCE TIER MAPPING ───────────────────────────────────────────
+# v3.0.0 inherits v3.1 meanings (per EVIDENCE_MAPPING_v3.0.0.yaml).
+# v4.0.3 retains v4.0.1 meanings (per EVIDENCE_AND_MIGRATION.md).
+#
+# The v3.0.0 → v4.0.3 mapping is verified to be SEMANTICALLY ALIGNED
+# for this project because the v3.0.0 adoption already used v4.0.1-compatible
+# meanings (E1=static, E2=observation/automated, E3=machine-reproducible,
+# E4=independent, E5=anchored).
+#
+# NOTE: v3.1 E2 is "direct observation" while v4.0.3 E2 is "automated tests".
+# In this project, ALL E2 evidence records are actual automated test results
+# (pytest execution), so the mapping is safe. Any non-automated E2 observation
+# would need to be reclassified.
+
+evidence_tiers:
+  E1:
+    v300_meaning: "narrative or model self-report; never acceptance evidence"
+    v403_meaning: "static/inspection"
+    mapping: ALIGNED
+    note: "Both are non-execution inspection. Safe mapping."
+
+  E2:
+    v300_meaning: "direct artifact/state observation"
+    v403_meaning: "automated tests"
+    mapping: ALIGNED_WITH_CAVEAT
+    caveat: >
+      v3.1 E2 is broader (direct observation) than v4.0.3 E2 (automated tests).
+      In this project, all E2 evidence is pytest-based automated tests, so the
+      mapping is safe. Any future non-automated observation evidence should be
+      classified as E1 under v4.0.3, not E2.
+
+  E3:
+    v300_meaning: "reproducible machine evidence"
+    v403_meaning: "candidate-bound execution"
+    mapping: ALIGNED
+    note: "Both require deterministic reproducibility bound to exact candidate."
+
+  E4:
+    v300_meaning: "independent reviewer/verifier evidence"
+    v403_meaning: "independent verification"
+    mapping: IDENTICAL
+    note: "Same meaning across all versions."
+
+  E5:
+    v300_meaning: "externally anchored or tamper-resistant evidence"
+    v403_meaning: "externally anchored evidence"
+    mapping: IDENTICAL
+    note: "Same meaning. Not used in this project (no external anchoring available)."
+
+# ─── RISK TIER MAPPING ──────────────────────────────────────────────
+# v3.0.0 uses T1-T5; v4.0.3 uses R0-R3.
+# Map by CONSEQUENCE, not mechanical lookup.
+# Never lower protection.
+
+risk_tiers:
+  T1:
+    v300_meaning: "Trivial, no behavioral change"
+    v403_mapping: R0
+    r0_meaning: "Isolated trivial non-behavioral reversible change"
+    justification: "Same consequence class"
+
+  T2:
+    v300_meaning: "Low risk, routine scientific work"
+    v403_mapping: R1
+    r1_meaning: "Ordinary functionality or presentation"
+    justification: "Behavioral automation and affected regressions required"
+
+  T3:
+    v300_meaning: "Moderate risk, scientific task with independent gate"
+    v403_mapping: R2
+    r2_meaning: "Important workflows, persistence, integrations, migrations"
+    justification: "Integration, negative/failure/recovery tests, candidate-bound execution"
+
+  T4:
+    v300_meaning: "High risk, governance/constitutional changes"
+    v403_mapping: R3
+    r3_meaning: "Security, money, sensitive data, destructive or production effects"
+    justification: "Governance changes require qualified independent verification"
+
+  T5:
+    v300_meaning: "Reserved / critical risk"
+    v403_mapping: R3
+    r3_meaning: "Same as T4 mapping"
+    justification: "Highest protection tier maps to R3; never lowered"
+
+# ─── INDEPENDENCE MAPPING ───────────────────────────────────────────
+# Same scale used in both versions.
+
+independence:
+  IND0:
+    meaning: "Writer / same context"
+    mapping: UNCHANGED
+  IND1:
+    meaning: "Limited fresh-context separation"
+    mapping: UNCHANGED
+    note: "This is the maximum independence available in this project (fresh blind subagent)"
+  IND2:
+    meaning: "Distinct qualified verifier"
+    mapping: UNCHANGED
+    note: "Not currently available in project"
+  IND3:
+    meaning: "Materially independent external verification"
+    mapping: UNCHANGED
+    note: "Not currently available in project"
+
+# ─── ENVIRONMENT MAPPING ────────────────────────────────────────────
+
+environments:
+  v300_to_v403:
+    STATIC: STATIC
+    INTEGRATED_LOCAL: INTEGRATED_LOCAL
+  project_environments_in_use:
+    - STATIC
+    - INTEGRATED_LOCAL
+  note: "No MOCK, FIXTURE, SANDBOX, STAGING, or PRODUCTION environments used"
+
+# ─── HISTORICAL RECEIPT PRESERVATION ────────────────────────────────
+# All historical receipts retain their original scheme_version labels.
+# No retroactive relabeling.
+
+historical_preservation:
+  policy: "All receipts in EVIDENCE_LEDGER.md retain original scheme_version"
+  rewriting_prohibited: true
+  source_ref: "governance/EVIDENCE_MAPPING_v3.0.0.yaml"

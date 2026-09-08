@@ -1,0 +1,55 @@
+task_execution_envelope:
+  schema_version: "4.0.3"
+  identity:
+    task_id: "YM-LEAN-001"
+    project_id: "YANG_MILLS_MASS_GAP"
+    project_name: "Yang-Mills and the Mass Gap"
+    governance_version: "4.0.3"
+    adoption_mode: "ACTIVE_GOVERNED"
+  direction:
+    intent_refs: ["governance/PROJECT_DIRECTION.md"]
+    roadmap_objective: "CAP-007-lean-formalization"
+    owner_non_goals:
+      - "Blocking mathematical workflow"
+      - "Attempting Lean formalization of full non-existent Yang-Mills proof"
+    owner_reserved_boundaries: ["publication", "legal", "spend", "destructive history action", "constitutional acceptance"]
+  objective:
+    exact_objective: >-
+      Scope and establish Lean 4 formalization architecture for the Yang-Mills problem specification,
+      including: (1) formal statement of Jaffe-Witten Clay Millennium Problem #4, (2) formal definitions
+      of Wightman and Osterwalder-Schrader axioms, and (3) machine-checkable graph representation of the
+      YM-003 missing-bridge DAG.
+    rationale: >-
+      Navier-Stokes breakthrough transfer audit (YM-XNS-001 TR-07) demonstrated that Lean formal verification
+      of axiomatic specifications and proof decomposition prevents boundary errors with zero mathematical risk.
+    done_boundary: >-
+      Lean 4 project structure defined, formal problem statement drafted, missing-bridge graph serialized
+      to Lean-checkable format, non-blocking parallel execution verified.
+  base_state:
+    repository_or_workspace: "D:\\Comfy UI\\yang mills and the mass gap"
+    branch_or_state_channel: "master"
+    base_candidate_id: "14101b2382be502ebdf810f2796e62be0c99f134"
+    dirty_state: "CLEAN"
+  eligibility:
+    dependencies:
+      - {id: "YM-003", state: "ACCEPTED", evidence_ref: "governance/HUMAN_OWNER_ACCEPTANCE_YM-003_20260908.md"}
+    technical_inputs_available: true
+    traceable_to_intent: true
+    architecture_permits: true
+    inside_standing_mandate: true
+    candidate_state_known: true
+    risk_inside_ceiling: true
+    blocking_invariant_present: false
+    eligible: true
+  classification:
+    risk_tier: "R1"
+    action_class: "B"
+    risk_reasons: ["Formalization tooling; does not alter mathematical truth"]
+  roles_and_authority:
+    orchestrator: "primary-worker"
+    writer: {id: "primary-worker", qualified: true, risk_ceiling: "R1"}
+    reviewer_or_verifier: {id: "self-checked-and-tested", qualified: true}
+    acceptance_authority: {id: "human-owner", qualified: true}
+  completion_record:
+    status: "READY_PARALLEL"
+    candidate_id: null

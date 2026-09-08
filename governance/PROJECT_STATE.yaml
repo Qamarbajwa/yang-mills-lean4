@@ -1,0 +1,186 @@
+# LIVE PROJECT STATE — Universal Governance Minimal v4.0.3
+# Single source of truth for active project coordination.
+schema_version: "4.0.3"
+revision: 2
+activation: ACTIVE
+
+project:
+  id: YANG_MILLS_MASS_GAP
+  root: "D:\\Comfy UI\\yang mills and the mass gap"
+  head: "14101b2382be502ebdf810f2796e62be0c99f134"
+  dirty: false
+  candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
+
+governance_binding:
+  active_version: "4.0.3"
+  source_manifest_ref: "_staging_gov_v403/UNIVERSAL_GOVERNANCE_MINIMAL_v4.0.3/MANIFEST.sha256.json"
+  project_binding_ref: "governance/GOVERNANCE.md#section-13"
+  migration_receipt_ref: "verification/YM-GOV-403_INDEPENDENT_REVIEW.md"
+  human_acceptance_ref: "governance/HUMAN_OWNER_ACCEPTANCE_YM-GOV-403_20260908.md"
+
+coordination:
+  state_writer: "primary-worker"
+  serialization_method: "revision-increment-atomic-file-replace"
+  last_expected_revision: 2
+  last_updated_at: "2026-09-08T22:00:00Z"
+  active_contract: "YM-004"
+  frozen_candidate: "14101b2382be502ebdf810f2796e62be0c99f134"
+
+current_objective: YM-004
+
+objectives:
+  - id: YM-GOV-403
+    scope_in: "Governance migration from v3.0.0 to v4.0.3"
+    scope_out: "Scientific task execution"
+    dependencies: []
+    risk: R3
+    writer: "primary-worker"
+    reviewer_path: "direct-fresh-blind-e4"
+    acceptor: "human-owner"
+    status: CLOSED
+
+  - id: YM-002F
+    scope_in: "Cross-era theorem and dependency synthesis"
+    dependencies: ["YM-002E"]
+    risk: R2
+    status: CLOSED
+
+  - id: YM-003
+    scope_in: "Missing-bridge graph construction"
+    scope_out: "Proof attempts; new mechanisms"
+    dependencies: ["YM-002F"]
+    risk: R2
+    writer: "primary-worker"
+    reviewer_path: "direct-fresh-blind-e4"
+    acceptor: "human-owner"
+    status: CLOSED
+
+  - id: YM-XNS-001
+    scope_in: "Navier-Stokes breakthrough transfer audit"
+    scope_out: "Attempted proof of Yang-Mills; premature claim acceptance"
+    dependencies: ["YM-003"]
+    risk: R2
+    writer: "primary-worker"
+    reviewer_path: "fresh-blind-research-subagent-IND1"
+    acceptor: "human-owner"
+    status: CLOSED
+
+  - id: YM-004
+    scope_in: "Rigorous UV / Constructive RG Machinery Reproduction (Bałaban multiscale bounds & finite-volume stopping point)"
+    scope_out: "Attempted full Clay proof; lattice gap; infinite-volume crossover"
+    dependencies: ["YM-003"]
+    risk: R2
+    writer: "primary-worker"
+    reviewer_path: "fresh-blind-research-subagent-IND1"
+    acceptor: "human-owner"
+    status: IN_PROGRESS
+
+  - id: YM-LEAN-001
+    scope_in: "Lean 4 formalization scoping for Clay specification and Osterwalder-Schrader reconstruction chain"
+    scope_out: "Blocking mathematical workflow; attempting Lean formalization of full proof"
+    dependencies: ["YM-003"]
+    risk: R1
+    writer: "primary-worker"
+    reviewer_path: "self-checked-and-tested"
+    acceptor: "human-owner"
+    status: READY_PARALLEL
+
+  - id: YM-005
+    scope_in: "Rigorous lattice gap program reconstruction"
+    dependencies: ["YM-004"]
+    risk: R2
+    status: BLOCKED
+
+  - id: YM-006
+    scope_in: "Precise non-meeting estimate identification"
+    dependencies: ["YM-004", "YM-005"]
+    risk: R2
+    status: BLOCKED
+
+capabilities:
+  CAP-001-problem-specification:
+    status: ACCEPTED_BOUNDED
+    evidence_refs: ["EVIDENCE_LEDGER.md#EVD-001-E4"]
+  CAP-002-theorem-ledger:
+    status: ACCEPTED_BOUNDED
+    evidence_refs: ["EVIDENCE_LEDGER.md#EVD-002F-E4"]
+  CAP-003-bridge-graph:
+    status: ACCEPTED_BOUNDED
+    evidence_refs: ["verification/YM-003_INDEPENDENT_REVIEW.md", "governance/HUMAN_OWNER_ACCEPTANCE_YM-003_20260908.md"]
+  CAP-004-rg-reconstruction:
+    status: IN_PROGRESS
+    evidence_refs: []
+  CAP-005-lattice-gap:
+    status: BLOCKED
+  CAP-006-non-meeting-estimate:
+    status: BLOCKED
+  CAP-007-lean-formalization:
+    status: READY_PARALLEL
+
+external_systems: {}  # No external systems
+
+hard_gates:
+  YM-003-acceptance:
+    status: CLOSED
+    description: "Accepted by human owner 2026-09-08 based on E4 INTEGRITY_PASS"
+  YM-GOV-403-cutover:
+    status: CLOSED
+    description: "Accepted by human owner 2026-09-08; v4.0.3 ACTIVE"
+  YM-004-e4-review:
+    status: PENDING
+    description: "Fresh blind E4 review required before YM-004 closeout"
+
+evidence_refs:
+  - ref: "EVIDENCE_LEDGER.md"
+    role: "Append-only evidence receipts"
+  - ref: "governance/EVIDENCE_MAPPING_v403.yaml"
+    role: "Active v4.0.3 evidence tier mapping"
+  - ref: "governance/EVIDENCE_MAPPING_v3.0.0.yaml"
+    role: "Historical v3.0.0 evidence mapping"
+
+negative_history_refs:
+  - ref: "NEGATIVE_EVIDENCE_REGISTER.md"
+    role: "Preserved failures and negative results"
+  - ref: "INTEGRITY_VIOLATION_REGISTER.md"
+    role: "Preserved integrity incident history"
+
+blockers:
+  - id: NO_REMOTE
+    class: TECHNICAL
+    detail: "No remote upstream configured (BLOCKED_NO_REMOTE)"
+
+known_risks:
+  - "Constructive RG multiscale bounds are finite-volume only; boundary terms require exact localization"
+  - "Nonperturbative intermediate crossover window gk ~ 1 remains unbridged"
+
+reserved_actions:
+  - "Remote push (BLOCKED_NO_REMOTE)"
+  - "Force push (PROHIBITED)"
+  - "Proof claims (PROHIBITED)"
+  - "Self-acceptance (PROHIBITED)"
+
+release:
+  state: NO-GO
+  eligible: false
+  deployment_authorized: false
+  candidate: null
+  evidence_refs: []
+  reason: "Internal mathematical research repository; no release target"
+
+last_verified_checkpoint:
+  sha: "14101b2382be502ebdf810f2796e62be0c99f134"
+  timestamp: "2026-09-08"
+  test_result: "194 passed"
+
+overhead:
+  routine_target_fraction: 0.10
+  measurement: UNKNOWN
+  governance_active_minutes: null
+  total_active_minutes: null
+  proxy_word_fraction: null
+  exceptions:
+    - "YM-004 is active scientific research"
+
+views:
+  last_validated_revision: null
+  evidence_refs: []

@@ -1,0 +1,264 @@
+# Delegation Map: v3.0.0 → v4.0.3
+# Project: YANG_MILLS_MASS_GAP
+# Migration: YM-GOV-403
+# Date: 2026-09-07
+#
+# Maps every existing governance file to its role under v4.0.3.
+# Disposition:
+#   RETAINED_DELEGATED  = Kept as-is; delegated from v4.0.3 entry authorities
+#   RETAINED_HISTORICAL = Kept as-is; historical evidence, not active rules
+#   SUPERSEDED_AT_CUTOVER = Replaced by v4.0.3 equivalent at cutover
+#   RETAINED_ACTIVE     = Continues to be actively used under v4.0.3
+
+schema_version: "4.0.3"
+project_id: YANG_MILLS_MASS_GAP
+
+# ─── ROOT GOVERNANCE FILES ──────────────────────────────────────────
+
+root_files:
+  - path: "GOVERNANCE_STATE.yaml"
+    v300_role: "Live project state (single source of truth)"
+    v403_role: "Superseded by governance/PROJECT_STATE.yaml"
+    disposition: SUPERSEDED_AT_CUTOVER
+    cutover_action: "Mark inactive header; preserve content for hash integrity"
+
+  - path: "TASK_GRAPH.md"
+    v300_role: "Task dependency graph"
+    v403_role: "Delegated task registry (referenced from PROJECT_STATE.yaml objectives)"
+    disposition: RETAINED_DELEGATED
+
+  - path: "CURRENT_SCIENTIFIC_STATE.md"
+    v300_role: "Scientific state summary"
+    v403_role: "Delegated scientific state (referenced from PROJECT_DIRECTION.md)"
+    disposition: RETAINED_DELEGATED
+
+  - path: "NEXT_ACTION.md"
+    v300_role: "Next action directive"
+    v403_role: "Delegated action directive"
+    disposition: RETAINED_DELEGATED
+
+  - path: "OFFICIAL_PROBLEM_SPECIFICATION.md"
+    v300_role: "Clay problem specification (sealed)"
+    v403_role: "Delegated sealed specification"
+    disposition: RETAINED_DELEGATED
+
+  - path: "THEOREM_LEDGER.md"
+    v300_role: "Verified theorem register"
+    v403_role: "Delegated theorem registry"
+    disposition: RETAINED_DELEGATED
+
+  - path: "DEFINITION_LEDGER.md"
+    v300_role: "Mathematical definition register"
+    v403_role: "Delegated definition registry"
+    disposition: RETAINED_DELEGATED
+
+  - path: "CLAIM_EVIDENCE_MATRIX.md"
+    v300_role: "Claim-evidence traceability"
+    v403_role: "Delegated claim registry"
+    disposition: RETAINED_DELEGATED
+
+  - path: "EVIDENCE_LEDGER.md"
+    v300_role: "Evidence receipts"
+    v403_role: "Delegated evidence storage"
+    disposition: RETAINED_DELEGATED
+
+  - path: "NEGATIVE_EVIDENCE_REGISTER.md"
+    v300_role: "Preserved failures"
+    v403_role: "Mapped to negative_history_refs in PROJECT_STATE.yaml"
+    disposition: RETAINED_DELEGATED
+
+  - path: "PROJECT_INTENT.md"
+    v300_role: "Owner intent"
+    v403_role: "Input to PROJECT_DIRECTION.md"
+    disposition: RETAINED_HISTORICAL
+
+  - path: "ROADMAP.md"
+    v300_role: "Research roadmap"
+    v403_role: "Input to PROJECT_DIRECTION.md roadmap section"
+    disposition: RETAINED_HISTORICAL
+
+  - path: "ARCHITECTURE_DECISIONS.md"
+    v300_role: "Architecture decisions"
+    v403_role: "Input to PROJECT_DIRECTION.md architecture section"
+    disposition: RETAINED_HISTORICAL
+
+# ─── GOVERNANCE/ DIRECTORY ──────────────────────────────────────────
+
+governance_files:
+  # === ACTIVE DELEGATED (ROS v1.0 constitutional overlay) ===
+  - path: "governance/MATHEMATICAL_RESEARCH_OPERATING_SYSTEM_v1.0.md"
+    v403_role: "Delegated mathematical epistemic constitution"
+    disposition: RETAINED_DELEGATED
+    note: "Core project-specific strengthening; delegated from GOVERNANCE.md section 13"
+
+  - path: "governance/EPISTEMIC_TAXONOMY_v1.0.yaml"
+    v403_role: "Delegated epistemic status vocabulary"
+    disposition: RETAINED_DELEGATED
+
+  - path: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
+    v403_role: "Delegated scientific fingerprint classification"
+    disposition: RETAINED_DELEGATED
+
+  - path: "governance/ACCEPTANCE_GATE_POLICY.md"
+    v403_role: "Delegated acceptance gate policy"
+    disposition: RETAINED_DELEGATED
+
+  - path: "governance/EVALUATOR_OWNERSHIP.md"
+    v403_role: "Delegated evaluator ownership"
+    disposition: RETAINED_DELEGATED
+
+  - path: "governance/TRUTH_CONTROL_PLANE.md"
+    v403_role: "Delegated truth control semantics"
+    disposition: RETAINED_DELEGATED
+
+  - path: "governance/PROJECT_BINDING_POLICY.md"
+    v403_role: "Delegated project binding policy"
+    disposition: RETAINED_DELEGATED
+
+  - path: "governance/GOVERNANCE_LOCK_POLICY.md"
+    v403_role: "Delegated governance lock policy"
+    disposition: RETAINED_DELEGATED
+
+  - path: "governance/INTEGRITY_QUARANTINE.md"
+    v403_role: "Delegated integrity quarantine"
+    disposition: RETAINED_DELEGATED
+
+  - path: "governance/TAMPER_EVIDENT_AUDIT_POLICY.md"
+    v403_role: "Delegated audit policy"
+    disposition: RETAINED_DELEGATED
+
+  # === ACTIVE OPERATIONAL ===
+  - path: "governance/CONTRACT_OWNERSHIP_LEDGER.yaml"
+    v403_role: "Delegated contract registry"
+    disposition: RETAINED_ACTIVE
+
+  - path: "governance/CAPABILITY_ASSURANCE_MATRIX.md"
+    v403_role: "Delegated capability assurance"
+    disposition: RETAINED_ACTIVE
+
+  - path: "governance/EVIDENCE_MAPPING_v3.0.0.yaml"
+    v403_role: "Historical evidence mapping"
+    disposition: RETAINED_HISTORICAL
+
+  - path: "governance/AGENT_CAPABILITY_REGISTRY.yaml"
+    v403_role: "Delegated agent registry"
+    disposition: RETAINED_ACTIVE
+
+  - path: "governance/CODING_ENVIRONMENT_PROFILE.yaml"
+    v403_role: "Environment profile"
+    disposition: RETAINED_ACTIVE
+
+  - path: "governance/MODEL_TOOL_ROUTING.yaml"
+    v403_role: "Tool routing config"
+    disposition: RETAINED_ACTIVE
+
+  - path: "governance/TOOL_PERMISSION_MATRIX.yaml"
+    v403_role: "Tool permissions"
+    disposition: RETAINED_ACTIVE
+
+  - path: "governance/GOVERNANCE_VERSION_MANIFEST.yaml"
+    v403_role: "Version history"
+    disposition: RETAINED_HISTORICAL
+
+  - path: "governance/risk-policy.yaml"
+    v403_role: "Risk policy"
+    disposition: RETAINED_DELEGATED
+
+  - path: "governance/trust-anchor.yaml"
+    v403_role: "Trust anchor"
+    disposition: RETAINED_DELEGATED
+
+  - path: "governance/bootstrap.yaml"
+    v403_role: "Bootstrap config"
+    disposition: RETAINED_DELEGATED
+
+  - path: "governance/project-governance.yaml"
+    v403_role: "Legacy v2.9.4 project governance binding"
+    disposition: RETAINED_HISTORICAL
+    note: "Superseded by v3.0.0, preserved for historical hash integrity"
+
+  - path: "governance/project-governance.schema.json"
+    v403_role: "Legacy schema"
+    disposition: RETAINED_HISTORICAL
+
+  # === TASK ENVELOPES ===
+  - path: "governance/envelopes/YM-002E.yaml"
+    disposition: RETAINED_DELEGATED
+  - path: "governance/envelopes/YM-002F.yaml"
+    disposition: RETAINED_DELEGATED
+  - path: "governance/envelopes/YM-003.yaml"
+    disposition: RETAINED_DELEGATED
+  - path: "governance/envelopes/YM-GOV-300.yaml"
+    disposition: RETAINED_DELEGATED
+
+  # === HISTORICAL RECEIPTS AND ACCEPTANCES ===
+  - path: "governance/MIGRATION_RECEIPT_YM-GOV-300.md"
+    disposition: RETAINED_HISTORICAL
+  - path: "governance/HUMAN_OWNER_ACCEPTANCE_ROS_v1.0_20260830.md"
+    disposition: RETAINED_HISTORICAL
+  - path: "governance/ACCEPTANCE_AUTHORITY_RECONCILIATION_YM-GOV-294.md"
+    disposition: RETAINED_HISTORICAL
+  - path: "governance/GOVERNANCE_STATE_MIGRATION.md"
+    disposition: RETAINED_HISTORICAL
+  - path: "governance/OWNER_ACTION_RECLASSIFICATION_YM-GOV-300.md"
+    disposition: RETAINED_HISTORICAL
+
+  # === LEGACY v2.10.1 TEMPLATES (INACTIVE) ===
+  - path: "governance/AUTONOMOUS_PROJECT_RUNTIME_GOVERNANCE_KERNEL_v2.10.1.md"
+    disposition: RETAINED_HISTORICAL
+    note: "Inactive legacy template; preserved for hash integrity"
+  - path: "governance/AUTONOMOUS_PROJECT_WORKER_MICRO_KERNEL_v2.10.1.md"
+    disposition: RETAINED_HISTORICAL
+  - path: "governance/GOVERNANCE_OPERATOR_GUIDE_v2.10.1.md"
+    disposition: RETAINED_HISTORICAL
+  - path: "governance/GOVERNANCE_STATE_TEMPLATE_v2.10.1.yaml"
+    disposition: RETAINED_HISTORICAL
+  - path: "governance/ARCHITECTURE_DECISIONS_TEMPLATE_v2.10.1.md"
+    disposition: RETAINED_HISTORICAL
+  - path: "governance/PROJECT_INTENT_TEMPLATE_v2.10.1.md"
+    disposition: RETAINED_HISTORICAL
+  - path: "governance/ROADMAP_TEMPLATE_v2.10.1.md"
+    disposition: RETAINED_HISTORICAL
+  - path: "governance/TASK_EXECUTION_ENVELOPE_TEMPLATE_v2.10.1.md"
+    disposition: RETAINED_HISTORICAL
+  - path: "governance/UNIVERSAL_ACTIVATION_PROMPT_v2.10.1.md"
+    disposition: RETAINED_HISTORICAL
+  - path: "governance/v2.10.1_SHA256_MANIFEST.json"
+    disposition: RETAINED_HISTORICAL
+
+  # === REFERENCE DIRECTORIES ===
+  - path: "governance/reference/current"
+    disposition: RETAINED_HISTORICAL
+  - path: "governance/reference/historical"
+    disposition: RETAINED_HISTORICAL
+
+# ─── STAGING v4.0.3 (NEW FILES) ────────────────────────────────────
+
+staging_v403:
+  - path: "governance/staging_v403/GOVERNANCE.md"
+    role: "v4.0.3 HOW authority (candidate)"
+    becomes_at_cutover: "governance/GOVERNANCE.md"
+  - path: "governance/staging_v403/PROJECT_DIRECTION.md"
+    role: "v4.0.3 WHAT/WHY authority (candidate)"
+    becomes_at_cutover: "governance/PROJECT_DIRECTION.md"
+  - path: "governance/staging_v403/PROJECT_STATE.yaml"
+    role: "v4.0.3 LIVE STATUS authority (candidate)"
+    becomes_at_cutover: "governance/PROJECT_STATE.yaml"
+  - path: "governance/staging_v403/EVIDENCE_MAPPING_v403.yaml"
+    role: "v3.0.0 → v4.0.3 evidence tier mapping"
+    becomes_at_cutover: "governance/EVIDENCE_MAPPING_v403.yaml"
+  - path: "governance/staging_v403/DELEGATION_MAP.yaml"
+    role: "File disposition map for migration"
+    becomes_at_cutover: "governance/DELEGATION_MAP_v403.yaml"
+
+# ─── SUMMARY ────────────────────────────────────────────────────────
+
+summary:
+  total_existing_files: 46
+  retained_delegated: 22
+  retained_active: 7
+  retained_historical: 17
+  superseded_at_cutover: 1  # GOVERNANCE_STATE.yaml only
+  new_staging_files: 5
+  files_deleted: 0
+  note: "No files are deleted. All existing files are preserved in-place."

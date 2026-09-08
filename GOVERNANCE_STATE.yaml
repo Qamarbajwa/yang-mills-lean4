@@ -1,3 +1,6 @@
+# HISTORICAL GOVERNANCE STATE (v3.0.0)
+# SUPERSEDED AT CUTOVER (2026-09-08) by governance/PROJECT_STATE.yaml under Universal Governance v4.0.3.
+# Preserved for hash integrity and historical receipt continuity.
 governance_state:
   schema_version: "3.0.0"
   governance_version: "3.0.0"

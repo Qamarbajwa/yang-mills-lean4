@@ -1,15 +1,20 @@
 # NEXT ACTION
 
-## Current action
-`YM-GOV-403 & YM-003 — POST-REPAIR FRESH BLIND E4 REVIEWS (IN_PROGRESS)`
+## Current primary action
+`YM-004 — Rigorous UV / Constructive RG Machinery Reproduction (IN_PROGRESS)`
+
+## Current parallel action (non-blocking)
+`YM-LEAN-001 — Lean 4 Formalization Scoping (READY_PARALLEL)`
 
 ## Scope
-- `YM-XNS-001` accepted and closed by human owner on 2026-09-08 based on E4 `INTEGRITY_PASS`.
-- Execute fresh blind E4 review on the exact repaired `YM-GOV-403` candidate SHA.
-- Execute fresh blind E4 review on the exact repaired `YM-003` candidate SHA.
-- Upon clean `INTEGRITY_PASS`, present `YM-GOV-403` for owner cutover and `YM-003` for owner acceptance.
+- Focus: Mathematical reproduction of Bałaban's multiscale block-spin RG program (CMP 109, 116, 119, 122; 1987–1989).
+- Key methodology ("Euler first"): Isolate finite-volume boundary terms and determine the exact mathematical stopping point where small-field bounds cease to control effective action ($g_k \sim 1$).
+- Lean parallel track: Formalize Clay problem definition and Osterwalder–Schrader reconstruction chain in Lean 4 without blocking scientific progress.
+- Downstream tasks: `YM-005` (lattice gap program) and `YM-006` (non-meeting estimate) remain strictly blocked until YM-004 completes.
 
 ## Completed actions
+- `YM-003 — Construct missing-bridge graph` (ACCEPTED / CLOSED; owner accepted 2026-09-08)
+- `YM-GOV-403 — Universal Governance v4.0.3 migration` (ACCEPTED / ACTIVE; owner accepted 2026-09-08)
 - `YM-XNS-001 — Navier–Stokes breakthrough transfer audit` (ACCEPTED / CLOSED; owner accepted 2026-09-08)
 
 ## Completed actions

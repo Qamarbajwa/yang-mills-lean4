@@ -61,7 +61,10 @@ def test_task_graph_ym002_subtask_completeness():
         s in content for s in [
             "YM-003 | Construct missing-bridge graph | YM-002F | T3 | independent semantic review | READY",
             "YM-003 | Construct missing-bridge graph | YM-002F | T3 | independent semantic review | IN_PROGRESS",
-            "YM-003 | Construct missing-bridge graph | YM-002F | T3 | independent semantic review | AWAITING_HUMAN_ACCEPTANCE"
+            "YM-003 | Construct missing-bridge graph | YM-002F | T3 | independent semantic review | AWAITING_HUMAN_ACCEPTANCE",
+            "YM-003 | Construct missing-bridge graph | YM-002F | T3 | independent semantic review | ACCEPTED / CLOSED",
+            "YM-003 | Construct missing-bridge graph | YM-002F | T3 | independent semantic review | ACCEPTED",
+            "YM-003 | Construct missing-bridge graph | YM-002F | T3 | independent semantic review | CLOSED"
         ]
     )
 

@@ -71,9 +71,10 @@
 
 ## EXTERNALLY SOURCED / TO BE ADVANCED IN YM-002E+
 - Claimed-solution adversarial audits (`YM-002E` — INDEPENDENTLY_VERIFIED / CLOSED; final synthesis at `verification/YM-002E_FINAL_SYNTHESIS_20260830.md`).
-  - Cross-era theorem and dependency synthesis (`YM-002F` — INDEPENDENTLY_VERIFIED / CLOSED; obstruction candidates remain non-theorem synthesis).
-- Missing-bridge graph (`YM-003` — AWAITING_HUMAN_ACCEPTANCE; E4 audit returned INTEGRITY_PASS_WITH_LIMITATIONS; post-E4 repairs applied: phantom dependency fixed, validator hardened; 168 tests passed).
-- Cross-problem transfer audit (`YM-XNS-001` — ACCEPTED / CLOSED; owner accepted on 2026-09-08 based on E4 INTEGRITY_PASS; 10 canonical artifacts produced; 194 tests passed).
+- Cross-era theorem and dependency synthesis (`YM-002F` — INDEPENDENTLY_VERIFIED / CLOSED; obstruction candidates remain non-theorem synthesis).
+- Missing-bridge graph (`YM-003` — ACCEPTED / CLOSED; human owner accepted on 2026-09-08 based on fresh blind post-repair E4 INTEGRITY_PASS; 19-edge DAG and critical cut-set established; 7 tests passed).
+- Cross-problem transfer audit (`YM-XNS-001` — ACCEPTED / CLOSED; human owner accepted on 2026-09-08 based on E4 INTEGRITY_PASS; 10 canonical artifacts produced; 194 tests passed).
+- Universal Governance v4.0.3 migration (`YM-GOV-403` — ACCEPTED / ACTIVE; cutover completed 2026-09-08; 14 transition tests passed).
 
 ## UNVERIFIED
 - No original Yang–Mills lemma has been established in this repository.
@@ -84,7 +85,7 @@
 Rigorous constructive control linking ultraviolet asymptotic freedom to infrared mass generation remains open in 4D continuum spacetime across the strong-coupling transition ($g_k \sim 1$).
 
 ## NEXT ACTION
-YM-XNS-001 E4 audit complete. Awaiting human owner acceptance. YM-003 and YM-GOV-403 remain awaiting human owner acceptance. YM-004 through YM-006 remain gated on YM-003 closeout.
+Execute **`YM-004 — Rigorous UV / Constructive RG Machinery Reproduction`** with Euler-first precursor emphasis on Bałaban's finite-volume boundary terms and stopping point of small-field control ($g_k \sim 1$), alongside non-blocking parallel **`YM-LEAN-001`** (Lean 4 formalization scoping). YM-005 and YM-006 remain gated on YM-004.
 
 
 

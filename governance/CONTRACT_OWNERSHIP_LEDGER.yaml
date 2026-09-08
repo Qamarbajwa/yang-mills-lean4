@@ -681,7 +681,7 @@ contracts:
     - Authoring raw E4 text directly
     - Self-declaring human-owner constitutional acceptance
     - Claiming proof of mass gap or continuum existence
-  outcome: AWAITING_HUMAN_OWNER_ACCEPTANCE
+  outcome: ACCEPTED
 
 - contract_id: CONTRACT-YM-GOV-403
   task_id: YM-GOV-403
@@ -715,7 +715,7 @@ contracts:
     - Modifying ROS v1.0 core laws
     - Authoring raw E4 text directly
     - Self-declaring human-owner constitutional acceptance
-  outcome: AWAITING_HUMAN_OWNER_ACCEPTANCE
+  outcome: ACCEPTED
 
 - contract_id: CONTRACT-YM-XNS-001
   task_id: YM-XNS-001
@@ -750,6 +750,64 @@ contracts:
     - Authoring raw E4 text directly
     - Self-declaring human-owner constitutional acceptance
   outcome: ACCEPTED
+
+- contract_id: CONTRACT-YM-004
+  task_id: YM-004
+  risk_tier: R2
+  base_sha: "14101b2382be502ebdf810f2796e62be0c99f134"
+  writer:
+    environment: Antigravity
+    agent_id: primary-worker
+    execution_id: "conversation://00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    model: Antigravity / Gemini / Claude
+  reviewer:
+    environment: Antigravity
+    agent_id: fresh-blind-research-subagent-IND1
+    independence_level: LEVEL_A_SAME_APP_SAME_MODEL_SEPARATE_SESSION
+  acceptance_authority:
+    environment: HumanOwner
+    authority_id: human-owner
+    authority_type: ENVIRONMENT_LOCAL
+  allowed_scope:
+    - literature/primary/constructive_1980_2000/**
+    - literature/BALABAN_RG_RECONSTRUCTION.md
+    - literature/BALABAN_FINITE_VOLUME_STOPPING_POINT.md
+    - governance/envelopes/YM-004.yaml
+    - tests/test_balaban_rg_reconstruction.py
+    - TASK_GRAPH.md
+    - CURRENT_SCIENTIFIC_STATE.md
+    - NEXT_ACTION.md
+  forbidden_scope:
+    - OFFICIAL_PROBLEM_SPECIFICATION.md
+    - Claiming proof of Yang-Mills existence or mass gap
+    - Authoring raw E4 text directly
+    - Self-declaring human-owner constitutional acceptance
+  outcome: RELEASED_IN_PROGRESS
+
+- contract_id: CONTRACT-YM-LEAN-001
+  task_id: YM-LEAN-001
+  risk_tier: R1
+  base_sha: "14101b2382be502ebdf810f2796e62be0c99f134"
+  writer:
+    environment: Antigravity
+    agent_id: primary-worker
+    execution_id: "conversation://00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    model: Antigravity / Gemini / Claude
+  reviewer:
+    environment: Antigravity
+    agent_id: self-checked-and-tested
+    independence_level: LEVEL_A_SAME_APP_SAME_MODEL_SEPARATE_SESSION
+  acceptance_authority:
+    environment: HumanOwner
+    authority_id: human-owner
+    authority_type: ENVIRONMENT_LOCAL
+  allowed_scope:
+    - formal/lean4/**
+    - governance/envelopes/YM-LEAN-001.yaml
+  forbidden_scope:
+    - OFFICIAL_PROBLEM_SPECIFICATION.md
+    - Altering mathematical truth
+  outcome: READY_PARALLEL
 
 
 

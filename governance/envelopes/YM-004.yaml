@@ -1,0 +1,112 @@
+task_execution_envelope:
+  schema_version: "4.0.3"
+  identity:
+    task_id: "YM-004"
+    project_id: "YANG_MILLS_MASS_GAP"
+    project_name: "Yang-Mills and the Mass Gap"
+    governance_version: "4.0.3"
+    adoption_mode: "ACTIVE_GOVERNED"
+  direction:
+    intent_refs: ["governance/PROJECT_DIRECTION.md"]
+    roadmap_objective: "CAP-004-rg-reconstruction"
+    owner_non_goals:
+      - "Claiming full proof of 4D continuum Yang-Mills existence or mass gap"
+      - "Speculative bridges without rigorous functional bounds"
+      - "Advancing to YM-005 or YM-006 before YM-004 closeout"
+    owner_reserved_boundaries: ["publication", "legal", "spend", "destructive history action", "constitutional acceptance"]
+  objective:
+    exact_objective: >-
+      Rigorous mathematical reproduction of Bałaban's constructive multiscale renormalization group program
+      (CMP 109, 116, 119, 122; 1987-1989), with explicit Euler-first precursor emphasis on:
+      (1) multiscale small-field/large-field effective action decompositions,
+      (2) precise localization of finite-volume boundary terms,
+      (3) rigorous derivation of the scale-step stability estimate, and
+      (4) pinpointing the exact mathematical stopping point where small-field control terminates (gk ~ 1).
+    rationale: >-
+      YM-003 cut-set analysis identified the nonperturbative crossover gk ~ 1 (E-CROSSOVER) and finite-to-infinite
+      volume thermodynamic removal (E-THERMO) as the load-bearing chokepoint. YM-XNS-001 transfer audit demonstrated
+      that isolating the finite-volume/regulated precursor regime ("Euler first") prior to thermodynamic removal is the
+      highest-value methodological strategy.
+    done_boundary: >-
+      Detailed mathematical synthesis document (literature/BALABAN_RG_RECONSTRUCTION.md), explicit stopping point
+      and boundary term analysis (literature/BALABAN_FINITE_VOLUME_STOPPING_POINT.md), deterministic test suite
+      (tests/test_balaban_rg_reconstruction.py), theorem ledger updates if needed, and independent E4 review.
+  base_state:
+    repository_or_workspace: "D:\\Comfy UI\\yang mills and the mass gap"
+    branch_or_state_channel: "master"
+    base_candidate_id: "14101b2382be502ebdf810f2796e62be0c99f134"
+    dirty_state: "CLEAN"
+    preserved_unrelated_work: ["All prior accepted tasks YM-000 through YM-003, YM-XNS-001, ROS v1.0, and v4.0.3 governance"]
+  eligibility:
+    dependencies:
+      - {id: "YM-003", state: "ACCEPTED", evidence_ref: "governance/HUMAN_OWNER_ACCEPTANCE_YM-003_20260908.md"}
+      - {id: "YM-GOV-403", state: "ACCEPTED", evidence_ref: "governance/HUMAN_OWNER_ACCEPTANCE_YM-GOV-403_20260908.md"}
+      - {id: "ROS v1.0", state: "ACCEPTED", evidence_ref: "governance/HUMAN_OWNER_ACCEPTANCE_ROS_v1.0_20260830.md"}
+    technical_inputs_available: true
+    traceable_to_intent: true
+    architecture_permits: true
+    inside_standing_mandate: true
+    candidate_state_known: true
+    risk_inside_ceiling: true
+    blocking_invariant_present: false
+    reserved_authority_required_for_technical_mutation: false
+    eligible: true
+    blocker_class: null
+    blocker_detail: null
+  classification:
+    risk_tier: "R2"
+    action_class: "B"
+    risk_reasons: ["Reconstructs foundational constructive QFT machinery", "Must strictly respect finite-volume and small-field boundaries"]
+    active_modules: ["CORE-PROJECT-BINDING", "CORE-AUTHORITY", "CORE-RISK", "CORE-DEPENDENCY", "CORE-EVIDENCE", "CORE-TEST-INTEGRITY", "CORE-GIT-STATE", "RESEARCH-SCIENTIFIC", "ARTIFACT-DATA"]
+  roles_and_authority:
+    orchestrator: "primary-worker"
+    writer: {id: "primary-worker", qualified: true, risk_ceiling: "R2"}
+    reviewer_or_verifier: {id: "fresh-blind-research-subagent-IND1", qualified: true, expected_independence: "IND1"}
+    acceptance_authority: {id: "human-owner", qualified: true, authority_type: "CONSTITUTIONAL_OWNER"}
+    implementation_authority: "AUTONOMOUS_WITHIN_ENVELOPE"
+    verification_authority: "EVIDENCE_BASED"
+    release_eligibility_authority: "EVIDENCE_DERIVED_GATE"
+  mutation_scope:
+    allowed:
+      - "literature/BALABAN_RG_RECONSTRUCTION.md"
+      - "literature/BALABAN_FINITE_VOLUME_STOPPING_POINT.md"
+      - "literature/primary/constructive_1980_2000/**"
+      - "tests/test_balaban_rg_reconstruction.py"
+      - "governance/envelopes/YM-004.yaml"
+      - "TASK_GRAPH.md"
+      - "CURRENT_SCIENTIFIC_STATE.md"
+      - "NEXT_ACTION.md"
+    forbidden:
+      - "OFFICIAL_PROBLEM_SPECIFICATION.md"
+      - "Promoting finite-volume or regulated results to full 4D continuum Clay proof"
+      - "Claiming removal of cutoffs without proof"
+      - "Self-declaring human-owner acceptance"
+      - "Authoring raw E4 verifier transcripts directly"
+    protected:
+      - "OFFICIAL_PROBLEM_SPECIFICATION.md"
+      - "All prior accepted task envelopes and receipts"
+      - "Sealed historical checkpoints"
+  assurance_contract:
+    intent: "Reconstruct Bałaban's multiscale RG machinery faithfully, isolating finite-volume boundary behavior and exact stopping conditions."
+    invariants:
+      - {id: "INV-YM004-001", statement: "FINITE_VOLUME_BOUND != INFINITE_VOLUME_CONTINUUM_LIMIT", zero_tolerance: true}
+      - {id: "INV-YM004-002", statement: "SMALL_FIELD_STABILITY != NONPERTURBATIVE_CONFINEMENT", zero_tolerance: true}
+      - {id: "INV-YM004-003", statement: "Stopping point of small-field RG control must be mathematically explicit (gk ~ 1)", zero_tolerance: true}
+      - {id: "INV-YM004-004", statement: "All primary Bałaban citations and theorems must match peer-reviewed CMP publications", zero_tolerance: true}
+  acceptance:
+    hard_gates:
+      - {id: "GATE-YM004-01", condition: "Mathematical reconstruction covers multiscale step, small/large field partition, and boundary term control", required_state: "PASS"}
+      - {id: "GATE-YM004-02", condition: "Stopping point analysis rigorously bounds scale step where effective coupling reaches unity", required_state: "PASS"}
+      - {id: "GATE-YM004-03", condition: "Deterministic test suite passes with full regression suite", required_state: "PASS"}
+      - {id: "GATE-YM004-04", condition: "Fresh blind independent E4 review confirms zero overclaims", required_state: "PASS"}
+      - {id: "GATE-YM004-05", condition: "Human owner explicit acceptance", required_state: "AWAITING"}
+    required_evidence:
+      minimum_strength: "E4"
+      required_environments: ["STATIC", "INTEGRATED_LOCAL"]
+      minimum_independence: "IND1"
+      candidate_bound: true
+  completion_record:
+    status: "IN_PROGRESS"
+    candidate_id: null
+    e4_receipt: null
+    e4_verdict: null
