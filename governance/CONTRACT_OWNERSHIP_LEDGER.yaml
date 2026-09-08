@@ -782,7 +782,40 @@ contracts:
     - Claiming proof of Yang-Mills existence or mass gap
     - Authoring raw E4 text directly
     - Self-declaring human-owner constitutional acceptance
-  outcome: OWNER_REVIEW_HOLD
+  outcome: ACCEPTED
+
+- contract_id: CONTRACT-YM-005
+  task_id: YM-005
+  risk_tier: R2
+  base_sha: "e63ba697c11f7c3dc00a89d7fa02f1d2df26baea"
+  writer:
+    environment: Antigravity
+    agent_id: primary-worker
+    execution_id: "conversation://00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    model: Antigravity / Gemini / Claude
+  reviewer:
+    environment: Antigravity
+    agent_id: fresh-blind-research-subagent-IND1
+    independence_level: LEVEL_A_SAME_APP_SAME_MODEL_SEPARATE_SESSION
+  acceptance_authority:
+    environment: HumanOwner
+    authority_id: human-owner
+    authority_type: ENVIRONMENT_LOCAL
+  allowed_scope:
+    - literature/primary/constructive_1980_2000/**
+    - literature/primary/modern_2000_2026/**
+    - literature/YM-005*
+    - governance/envelopes/YM-005.yaml
+    - tests/test_lattice_gap_reconstruction.py
+    - TASK_GRAPH.md
+    - CURRENT_SCIENTIFIC_STATE.md
+    - NEXT_ACTION.md
+  forbidden_scope:
+    - OFFICIAL_PROBLEM_SPECIFICATION.md
+    - Claiming proof of Yang-Mills existence or mass gap
+    - Authoring raw E4 text directly
+    - Self-declaring human-owner constitutional acceptance
+  outcome: IN_PROGRESS
 
 - contract_id: CONTRACT-YM-LEAN-001
   task_id: YM-LEAN-001

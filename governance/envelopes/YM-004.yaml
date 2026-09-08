@@ -99,14 +99,14 @@ task_execution_envelope:
       - {id: "GATE-YM004-02", condition: "Stopping point analysis rigorously bounds scale step where effective coupling reaches unity", required_state: "PASS"}
       - {id: "GATE-YM004-03", condition: "Deterministic test suite passes with full regression suite", required_state: "PASS"}
       - {id: "GATE-YM004-04", condition: "Fresh blind independent E4 review confirms zero overclaims", required_state: "PASS"}
-      - {id: "GATE-YM004-05", condition: "Human owner explicit acceptance", required_state: "AWAITING"}
+      - {id: "GATE-YM004-05", condition: "Human owner explicit acceptance", required_state: "PASS"}
     required_evidence:
       minimum_strength: "E4"
       required_environments: ["STATIC", "INTEGRATED_LOCAL"]
       minimum_independence: "IND1"
       candidate_bound: true
   completion_record:
-    status: "OWNER_REVIEW_HOLD"
+    status: "ACCEPTED"
     previous_candidate_id: "645f2801f7bf8a15e9cb92cbcfdedf941ebc598c"
     previous_e4_receipt: "verification/YM-004_INDEPENDENT_REVIEW.md"
     previous_e4_raw_receipt: "verification/raw/YM-004_E4_RAW_20260908T215837Z.md"
@@ -122,6 +122,8 @@ task_execution_envelope:
     e4_verdict: "INTEGRITY_PASS"
     e4_provenance_status: "AUTHORITATIVE_DIRECT_CAPTURE"
     previous_manual_transcription: "verification/raw/YM-004-R1_E4_RAW_20260908T220924Z.md"
+    owner_acceptance_receipt: "governance/HUMAN_OWNER_ACCEPTANCE_YM-004_20260908.md"
+    owner_acceptance_date: "2026-09-08/2026-09-09"
     deterministic_test_result: "208 passed in 1.35s"
     uv_boundary_record: "UV-BND-YM004-001"
-    release_eligibility_effect: "GATES_YM-005_AND_YM-006_UNTIL_YM-004_OWNER_CLOSEOUT"
+    release_eligibility_effect: "YM-005_UNBLOCKED"

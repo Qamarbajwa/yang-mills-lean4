@@ -82,10 +82,14 @@ Governance version: 4.0.3. This file defines intended scope, not live progress.
 - **Journey:** Reconstruct Bałaban multi-scale RG program → verify theorem statements → isolate finite-volume stopping point and boundary terms → independent audit
 - **Entry surface:** NONE_BY_DESIGN
 - **Acceptance evidence:** E4 independent audit
-- **Status:** IN_PROGRESS (YM-004 unblocked by YM-003 acceptance)
+- **Status:** ACCEPTED / CLOSED (Accepted by human owner 2026-09-08/2026-09-09)
 
 ### CAP-005: Lattice Gap Program Reconstruction
-- **Status:** BLOCKED (gated on YM-004)
+- **Actors:** Primary worker (writer), verifier subagent (reviewer), human owner (acceptor)
+- **Journey:** Reconstruct Wilson strong-coupling expansion, cluster expansions, transfer matrix, infinite volume, modern theorems → canonical IR boundary record → independent audit
+- **Entry surface:** NONE_BY_DESIGN
+- **Acceptance evidence:** E4 independent audit
+- **Status:** IN_PROGRESS (YM-005 unblocked by YM-004 acceptance)
 
 ### CAP-006: Non-Meeting Estimate Identification
 - **Status:** BLOCKED (gated on YM-004, YM-005)
@@ -135,9 +139,9 @@ NONE_BY_DESIGN — This is a mathematical research repository with no user inter
 | YM-003: Missing-bridge graph | YM-002F | CAP-003 | ACCEPTED / CLOSED |
 | YM-XNS-001: Navier–Stokes transfer audit | YM-003 | Cross-Problem | ACCEPTED / CLOSED |
 | YM-GOV-403: Governance v4.0.3 migration | YM-003 (parallel) | Governance | ACCEPTED / CLOSED |
-| YM-004: RG program reconstruction | YM-003 | CAP-004 | **IN_PROGRESS** |
+| YM-004: RG program reconstruction | YM-003 | CAP-004 | **ACCEPTED / CLOSED** |
 | YM-LEAN-001: Lean formalization scoping | YM-003 | CAP-007 | **READY / IN_PARALLEL** |
-| YM-005: Lattice gap reconstruction | YM-004 | CAP-005 | BLOCKED |
+| YM-005: Lattice gap reconstruction | YM-004 | CAP-005 | **IN_PROGRESS** |
 | YM-006: Non-meeting estimate | YM-004, YM-005 | CAP-006 | BLOCKED |
 
 ### Key decisions

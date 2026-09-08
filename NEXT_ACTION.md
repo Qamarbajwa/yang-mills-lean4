@@ -1,23 +1,34 @@
 # NEXT ACTION
 
 ## Current primary action
-`YM-004 — Rigorous UV / Constructive RG Machinery Reproduction (OWNER_REVIEW_HOLD / REPAIR_IN_PROGRESS)`
+`YM-005 — Rigorous IR / Lattice Gap Machinery Reproduction (IN_PROGRESS)`
 
 ## Current parallel action (non-blocking)
 `YM-LEAN-001 — Lean 4 Formalization Scoping (READY_PARALLEL)`
 
 ## Scope
-- Bounded repair revision addressing human-owner review on YM-004:
-  1. Reconciled canonical obstruction IDs (`OBS-CAND-001`, `002`, `003`) with authoritative sources (`YM-002F`, `YM-003`).
-  2. Replaced derived/heuristic numerical thresholds ($0.08$, $0.05-0.15$, $0.15\text{ fm}$, $0.2-1.0\text{ fm}$, $0.5\text{ fm}$) with symbolic bounds ($g_* \ll 1$, $c_* / \Lambda_{\text{QCD}}$) and created quantitative parameter provenance audit table.
-  3. Calibrated failure language: distinguished loss of sufficient contractivity bounds from mathematical divergence; distinguished absence of finite-volume boundary obstruction in reproduced estimates from proof that volume effects cannot obstruct the thermodynamic limit.
-  4. Verified polymer inequality: documented that $\sum |\zeta| e^{|Y|} < 1/2$ and $g_*^2 < \kappa_1 / \ln(2 K_0)$ are schematic project reconstructions modeling Kotecký–Preiss bounds on lattice trees.
-  5. Separated Bałaban's finite-volume UV stability program from the MRS infrared-regulated continuum program across 6 canonical comparative dimensions.
-  6. Clarified Bałaban bibliography: verified that CMP 95, 96, 98 are gauge theory papers and excluded scalar $\phi^4_3$ papers from Yang–Mills theorem evidence.
-- Expanded deterministic test suite to 208 tests (all passing).
-- Next step: Freeze repair candidate SHA, invoke fresh blind independent E4 verifier, and capture raw review receipt.
+- Execute Task `YM-005`:
+  1. Systematic literature extraction of rigorous lattice gauge theory gap and strong-coupling machinery:
+     - Wilson strong-coupling loop expansion (Wilson 1974)
+     - Osterwalder–Seiler convergent polymer/cluster expansions (1978)
+     - Transfer matrix construction and lattice Hamiltonian spectral gap (Lüscher 1977)
+     - Infinite-volume lattice Gibbs measures and exponential decay (Gross 1979, Balaban 1980s)
+     - Log-Sobolev and Poincaré inequalities on the lattice (Shen–Zhu–Zhu 2023)
+     - Area-law scaling and dynamical string approaches (Cao–Nissim–Sheffield 2025)
+  2. Map 11-dimension parameter scope for every extracted theorem:
+     `gauge group`, `dimension`, `lattice spacing`, `volume`, `coupling parameter`, `observable`, `gap/decay property`, `uniformity`, `continuum-limit status`, `what is proved`, `what remains open`.
+  3. Formulate the Canonical IR Boundary Record:
+     `IR_BOUNDARY_ID`, `last_proved_strong_coupling_regime`, `beta_range`, `lattice_spacing_scope`, `volume_scope`, `gap_or_decay_property`, `uniformity_established`, `first_unproved_extension`, `source`, `epistemic_status`.
+  4. Preserve governing invariants:
+     - `LATTICE_SPECTRAL_GAP != CONTINUUM_4D_CLAY_MASS_GAP`
+     - `WILSON_AREA_LAW != SPECTRAL_MASS_GAP_DELTA_GT_0`
+     - No physical femtometer values unless explicitly classified as `HEURISTIC_PHYSICAL_TRANSLATION`
+     - Do not perform full UV/IR non-meeting estimate (reserved for YM-006).
+  5. Implement deterministic test suite (`tests/test_lattice_gap_reconstruction.py`).
+  6. Invoke fresh blind independent E4 verification and direct machine capture.
 
 ## Completed actions
+- `YM-004 — Rigorous UV / Constructive RG Machinery Reproduction` (ACCEPTED / CLOSED; owner accepted 2026-09-08/2026-09-09)
 - `YM-003 — Construct missing-bridge graph` (ACCEPTED / CLOSED; owner accepted 2026-09-08)
 - `YM-GOV-403 — Universal Governance v4.0.3 migration` (ACCEPTED / ACTIVE; owner accepted 2026-09-08)
 - `YM-XNS-001 — Navier–Stokes breakthrough transfer audit` (ACCEPTED / CLOSED; owner accepted 2026-09-08)

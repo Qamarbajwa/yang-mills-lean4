@@ -75,7 +75,16 @@
 - Missing-bridge graph (`YM-003` — ACCEPTED / CLOSED; human owner accepted on 2026-09-08 based on fresh blind post-repair E4 INTEGRITY_PASS; 19-edge DAG and critical cut-set established; 7 tests passed).
 - Cross-problem transfer audit (`YM-XNS-001` — ACCEPTED / CLOSED; human owner accepted on 2026-09-08 based on E4 INTEGRITY_PASS; 10 canonical artifacts produced; 194 tests passed).
 - Universal Governance v4.0.3 migration (`YM-GOV-403` — ACCEPTED / ACTIVE; cutover completed 2026-09-08; 14 transition tests passed).
-- Constructive UV RG Machinery Reproduction (`YM-004` — OWNER_REVIEW_HOLD; bounded repair revision in progress for obstruction-ID integrity, quantitative provenance, calibrated failure language, and Bałaban/MRS separation; 208 tests passed).
+- Constructive UV RG Machinery Reproduction (`YM-004` — ACCEPTED / CLOSED):
+  - Formally accepted by Human Owner on 2026-09-08/2026-09-09 based on authoritative machine-captured raw E4 receipt (`verification/raw/YM-004-R1_E4_RAW_20260908T221335Z.md`, `INTEGRITY_PASS`) on candidate `e0f49d16ed8ec97394ce2a2f06c73c95aa9c4092`.
+  - Reconstructed Bałaban's multiscale effective action sequence $S^{(k)}(A)$ in finite volume ($L_0 < \infty$) from lattice cutoff $a_0 \to 0$ up to unit scale $a_k = 1$ under symbolic bound $g_k \le g_* \ll 1$.
+  - Decoupled Bałaban finite-volume stability from Magnen–Rivasseau–Sénéor infinite-volume IR-cutoff program across 6 canonical comparative dimensions.
+  - Established method boundary: loss of known sufficient contractivity at threshold $g_* \ll 1$ does not establish physical divergence.
+  - Canonical UV Boundary Record `UV-BND-YM004-001` established with explicit parameter provenance; 208 deterministic tests passing.
+- Rigorous IR / Lattice Gap Machinery Reproduction (`YM-005` — IN_PROGRESS):
+  - Unblocked by human owner upon YM-004 closeout.
+  - Reconstructing Wilson strong-coupling expansion, convergent cluster expansions, transfer-matrix spectral gap, infinite-volume lattice Gibbs state, and modern theorems (Shen–Zhu–Zhu, Cao–Nissim–Sheffield).
+  - Target: Canonical IR Boundary Record establishing the strongest rigorously proved strong-coupling regime and the first unproved extension toward the continuum limit.
 
 ## UNVERIFIED
 - No original Yang–Mills lemma has been established in this repository.
@@ -83,10 +92,10 @@
 - No claimed external solution has been accepted.
 
 ## CURRENT BOTTLENECK
-Rigorous constructive control linking ultraviolet asymptotic freedom to infrared mass generation remains open in 4D continuum spacetime across the strong-coupling transition ($g_k \sim 1$).
+Rigorous constructive control linking ultraviolet asymptotic freedom ($g_k \le g_* \ll 1$, YM-004) to infrared mass generation (lattice strong-coupling $\beta \le \beta_0$, YM-005) remains open in 4D continuum spacetime across the intermediate-coupling transition ($g_k \sim 1$).
 
 ## NEXT ACTION
-Conduct fresh blind independent E4 verification of candidate `YM-004` reproduction artifacts. YM-005 and YM-006 remain gated on YM-004 closeout. Non-blocking parallel track `YM-LEAN-001` ready.
+Execute Task `YM-005`: reproduce rigorous lattice gap and strong-coupling machinery, formulate canonical IR Boundary Record, implement deterministic test suite (`tests/test_lattice_gap_reconstruction.py`), and invoke fresh blind E4 audit. Non-blocking parallel track `YM-LEAN-001` continues. YM-006 remains gated on YM-005.
 
 
 
