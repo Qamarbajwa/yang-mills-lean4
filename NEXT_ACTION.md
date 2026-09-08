@@ -1,19 +1,16 @@
 # NEXT ACTION
 
 ## Current action
-`YM-XNS-001 — NAVIER-STOKES BREAKTHROUGH → YANG-MILLS TRANSFER AUDIT (AWAITING_HUMAN_OWNER_ACCEPTANCE)`
+`YM-GOV-403 & YM-003 — POST-REPAIR FRESH BLIND E4 REVIEWS (IN_PROGRESS)`
 
 ## Scope
-- Conducted rigorous, conservative cross-problem transfer audit of recent September 2026 Navier-Stokes/Euler developments (Buckmaster-Alpöge, CMZ, OpenAI Lean formalization).
-- Evaluated mathematical mechanisms, proof architectures, formal verification roadmaps, and multi-agent topologies.
-- Generated 10 canonical scientific artifacts in `literature/`.
-- Subjected candidate to fresh blind E4 independent verification; verdict `INTEGRITY_PASS`.
-- 194 tests passed.
+- `YM-XNS-001` accepted and closed by human owner on 2026-09-08 based on E4 `INTEGRITY_PASS`.
+- Execute fresh blind E4 review on the exact repaired `YM-GOV-403` candidate SHA.
+- Execute fresh blind E4 review on the exact repaired `YM-003` candidate SHA.
+- Upon clean `INTEGRITY_PASS`, present `YM-GOV-403` for owner cutover and `YM-003` for owner acceptance.
 
-## Concurrent/Gated actions
-- `YM-003` remains `AWAITING_HUMAN_OWNER_ACCEPTANCE`.
-- `YM-GOV-403` remains `AWAITING_HUMAN_OWNER_ACCEPTANCE` (staged, not cut over).
-- `YM-004` and later roadmap tasks remain BLOCKED until YM-003 is accepted and closed.
+## Completed actions
+- `YM-XNS-001 — Navier–Stokes breakthrough transfer audit` (ACCEPTED / CLOSED; owner accepted 2026-09-08)
 
 ## Completed actions
 - `YM-000 — Local bootstrap` (DONE)

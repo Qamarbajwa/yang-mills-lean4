@@ -111,7 +111,8 @@ task_execution_envelope:
       minimum_independence: "IND1"
       candidate_bound: true
   completion_record:
-    status: "AWAITING_HUMAN_OWNER_ACCEPTANCE"
+    status: "ACCEPTED / CLOSED"
+    owner_acceptance_ref: "governance/HUMAN_OWNER_ACCEPTANCE_YM-XNS-001_20260908.md"
     candidate_id: "a0dce943d23bcfbd324780ca9f4915db59284ee8"
     scientific_fingerprint: "41 files tracked"
     e4_receipt: "verification/YM-XNS-001_INDEPENDENT_REVIEW.md"

@@ -73,7 +73,7 @@
 - Claimed-solution adversarial audits (`YM-002E` — INDEPENDENTLY_VERIFIED / CLOSED; final synthesis at `verification/YM-002E_FINAL_SYNTHESIS_20260830.md`).
   - Cross-era theorem and dependency synthesis (`YM-002F` — INDEPENDENTLY_VERIFIED / CLOSED; obstruction candidates remain non-theorem synthesis).
 - Missing-bridge graph (`YM-003` — AWAITING_HUMAN_ACCEPTANCE; E4 audit returned INTEGRITY_PASS_WITH_LIMITATIONS; post-E4 repairs applied: phantom dependency fixed, validator hardened; 168 tests passed).
-- Cross-problem transfer audit (`YM-XNS-001` — AWAITING_HUMAN_ACCEPTANCE; E4 audit returned INTEGRITY_PASS; 10 canonical artifacts produced; 194 tests passed).
+- Cross-problem transfer audit (`YM-XNS-001` — ACCEPTED / CLOSED; owner accepted on 2026-09-08 based on E4 INTEGRITY_PASS; 10 canonical artifacts produced; 194 tests passed).
 
 ## UNVERIFIED
 - No original Yang–Mills lemma has been established in this repository.
