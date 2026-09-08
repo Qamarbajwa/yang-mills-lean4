@@ -111,9 +111,14 @@ task_execution_envelope:
       minimum_independence: "IND1"
       candidate_bound: true
   completion_record:
-    status: "IN_PROGRESS"
-    candidate_id: null
-    scientific_fingerprint: null
-    e4_receipt: null
-    e4_independence: null
-    e4_verdict: null
+    status: "AWAITING_HUMAN_OWNER_ACCEPTANCE"
+    candidate_id: "a0dce943d23bcfbd324780ca9f4915db59284ee8"
+    scientific_fingerprint: "41 files tracked"
+    e4_receipt: "verification/YM-XNS-001_INDEPENDENT_REVIEW.md"
+    e4_raw_receipt: "verification/raw/YM-XNS-001_E4_RAW_20260908T185340Z.md"
+    e4_raw_sha256: "dc554656c34074373c640499d37f59017cd36e678704cda033e02d75d6222684"
+    e4_verifier_id: "8cd8e5d3-d7e9-4445-8c4e-e76b0dbb8e92"
+    e4_independence: "IND1 (fresh blind research subagent)"
+    e4_verdict: "INTEGRITY_PASS"
+    deterministic_tests: "194 passed in 1.49s"
+    limitations: "Zero mathematical defects found; status calibrated as PROPOSED_FORMALLY_VERIFIED_COMMUNITY_UNACCEPTED; critical cut-set remains 100% open"

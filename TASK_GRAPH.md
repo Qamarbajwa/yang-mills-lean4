@@ -28,4 +28,4 @@
 | YM-004 | Reconstruct rigorous RG/Bałaban program | YM-003 | T3 | theorem reproduction + independent review | BLOCKED |
 | YM-005 | Reconstruct rigorous lattice gap program | YM-003 | T3 | theorem reproduction + independent review | BLOCKED |
 | YM-006 | Identify the precise non-meeting estimate | YM-004, YM-005 | T3 | explicit dependency proof + adversarial review | BLOCKED |
-| YM-XNS-001 | Navier–Stokes breakthrough transfer audit | YM-003 | T3 | cross-problem transfer audit + independent review | IN_PROGRESS |
+| YM-XNS-001 | Navier–Stokes breakthrough transfer audit | YM-003 | T3 | cross-problem transfer audit + independent review | AWAITING_HUMAN_ACCEPTANCE |

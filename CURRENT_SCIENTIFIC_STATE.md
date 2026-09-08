@@ -73,7 +73,7 @@
 - Claimed-solution adversarial audits (`YM-002E` — INDEPENDENTLY_VERIFIED / CLOSED; final synthesis at `verification/YM-002E_FINAL_SYNTHESIS_20260830.md`).
   - Cross-era theorem and dependency synthesis (`YM-002F` — INDEPENDENTLY_VERIFIED / CLOSED; obstruction candidates remain non-theorem synthesis).
 - Missing-bridge graph (`YM-003` — AWAITING_HUMAN_ACCEPTANCE; E4 audit returned INTEGRITY_PASS_WITH_LIMITATIONS; post-E4 repairs applied: phantom dependency fixed, validator hardened; 168 tests passed).
-- Cross-problem transfer audit (`YM-XNS-001` — IN_PROGRESS; evaluating September 2026 Navier-Stokes/Euler breakthroughs, Lean formalization, and localized layer mechanisms against YM missing bridges).
+- Cross-problem transfer audit (`YM-XNS-001` — AWAITING_HUMAN_ACCEPTANCE; E4 audit returned INTEGRITY_PASS; 10 canonical artifacts produced; 194 tests passed).
 
 ## UNVERIFIED
 - No original Yang–Mills lemma has been established in this repository.
@@ -84,7 +84,7 @@
 Rigorous constructive control linking ultraviolet asymptotic freedom to infrared mass generation remains open in 4D continuum spacetime across the strong-coupling transition ($g_k \sim 1$).
 
 ## NEXT ACTION
-Execute YM-XNS-001 Navier-Stokes cross-problem transfer audit. YM-004 and later tasks remain gated on YM-003 closeout.
+YM-XNS-001 E4 audit complete. Awaiting human owner acceptance. YM-003 and YM-GOV-403 remain awaiting human owner acceptance. YM-004 through YM-006 remain gated on YM-003 closeout.
 
 
 
