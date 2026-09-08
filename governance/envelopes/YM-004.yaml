@@ -114,9 +114,14 @@ task_execution_envelope:
     previous_e4_verdict: "INTEGRITY_PASS"
     repair_revision: "YM-004-R1"
     repair_focus: "Obstruction-ID integrity reconciliation, quantitative parameter provenance, calibrated failure language, and Bałaban/MRS theorem separation"
-    candidate_id: null
-    e4_receipt: null
-    e4_verdict: null
-    deterministic_test_result: "208 passed in 1.47s"
+    candidate_id: "e0f49d16ed8ec97394ce2a2f06c73c95aa9c4092"
+    e4_receipt: "verification/YM-004-R1_INDEPENDENT_REVIEW.md"
+    e4_raw_receipt: "verification/raw/YM-004-R1_E4_RAW_20260908T221335Z.md"
+    e4_raw_sha256: "e2914e4d005873b474b0f458d8fcc150b81be91af072eb09dff7b243ac27b390"
+    e4_verifier: "e5c5762c-b757-4c83-bf51-29d5453f0a3f"
+    e4_verdict: "INTEGRITY_PASS"
+    e4_provenance_status: "AUTHORITATIVE_DIRECT_CAPTURE"
+    previous_manual_transcription: "verification/raw/YM-004-R1_E4_RAW_20260908T220924Z.md"
+    deterministic_test_result: "208 passed in 1.35s"
     uv_boundary_record: "UV-BND-YM004-001"
     release_eligibility_effect: "GATES_YM-005_AND_YM-006_UNTIL_YM-004_OWNER_CLOSEOUT"

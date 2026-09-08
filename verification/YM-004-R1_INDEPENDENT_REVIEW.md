@@ -1,16 +1,45 @@
-﻿# Independent Review: Task YM-004-R1 (Bounded Repair Revision)
+# Independent Review: Task YM-004-R1 (Bounded Repair Revision)
 
-- **Task ID:** `YM-004-R1`
-- **Task Name:** Rigorous UV / Constructive Renormalization-Group Machinery Reproduction (Bounded Repair Revision)
-- **Audited Repair Candidate SHA:** `e0f49d16ed8ec97394ce2a2f06c73c95aa9c4092`
-- **Previous Candidate SHA:** `645f2801f7bf8a15e9cb92cbcfdedf941ebc598c`
-- **Verifier ID:** `e5c5762c-b757-4c83-bf51-29d5453f0a3f`
-- **Verifier Role:** Fresh, Blind Independent Constructive RG Repair Verifier
-- **Independence Level:** `IND1` (separate subagent context with read-only tools)
-- **Raw Receipt Path:** `verification/raw/YM-004-R1_E4_RAW_20260908T220924Z.md`
-- **Raw Receipt SHA-256:** `d5acb158aa8cb93a10175a1b5b74ebbb114f17f50737e37e3a5560db9b00faa0`
-- **Review Date:** 2026-09-08
-- **Final Verdict:** **`INTEGRITY_PASS`**
+- **DERIVED FROM:** `verification/raw/YM-004-R1_E4_RAW_20260908T221335Z.md`
+- **RAW_SHA256:** `e2914e4d005873b474b0f458d8fcc150b81be91af072eb09dff7b243ac27b390`
+- **VERIFIER CONVERSATION ID:** `e5c5762c-b757-4c83-bf51-29d5453f0a3f`
+- **CANDIDATE GIT SHA AUDITED:** `e0f49d16ed8ec97394ce2a2f06c73c95aa9c4092`
+- **AUDIT TIMESTAMP UTC:** `2026-09-08T22:13:35Z`
+- **INDEPENDENCE CLASSIFICATION:** `IND1` (separate subagent context with read-only tools)
+- **FINAL VERDICT:** `INTEGRITY_PASS`
+
+---
+
+## Evidence Lineage & Provenance Governance
+
+```text
+Scientific candidate:
+e0f49d16ed8ec97394ce2a2f06c73c95aa9c4092
+
+Previous manual transcription:
+verification/raw/YM-004-R1_E4_RAW_20260908T220924Z.md
+status: NON_AUTHORITATIVE_DERIVED_TRANSCRIPTION
+classification: DERIVED_REVIEW_TRANSCRIPTION / NOT_RAW_E4_EVIDENCE
+sha256: d5acb158aa8cb93a10175a1b5b74ebbb114f17f50737e37e3a5560db9b00faa0
+
+Authoritative raw E4:
+verification/raw/YM-004-R1_E4_RAW_20260908T221335Z.md
+
+Verifier:
+e5c5762c-b757-4c83-bf51-29d5453f0a3f
+
+Raw SHA-256:
+e2914e4d005873b474b0f458d8fcc150b81be91af072eb09dff7b243ac27b390
+
+Direct capture command:
+python scripts/capture_verifier_output.py e5c5762c-b757-4c83-bf51-29d5453f0a3f e0f49d16ed8ec97394ce2a2f06c73c95aa9c4092 YM-004-R1
+
+Candidate binding:
+e0f49d16ed8ec97394ce2a2f06c73c95aa9c4092
+
+Verdict:
+INTEGRITY_PASS
+```
 
 ---
 
