@@ -1,15 +1,18 @@
 # NEXT ACTION
 
 ## Current action
-`YM-003_MISSING_BRIDGE_GRAPH — AWAITING_HUMAN_OWNER_ACCEPTANCE`
+`YM-XNS-001 — NAVIER-STOKES BREAKTHROUGH → YANG-MILLS TRANSFER AUDIT (IN_PROGRESS)`
 
 ## Scope
-- YM-003 candidate artifacts generated, E4 independent audit returned INTEGRITY_PASS_WITH_LIMITATIONS.
-- Post-E4 repairs applied: phantom proof dependency fixed (E-WIGHTMAN-RECON → E-OS-RECON), DAG validator hardened.
-- 168 tests passed. Awaiting human owner acceptance.
+- Conduct rigorous, conservative cross-problem transfer audit of recent September 2026 Navier-Stokes/Euler developments (Buckmaster-Alpöge, CMZ, OpenAI Lean formalization).
+- Evaluate mathematical mechanisms, proof architectures, formal verification roadmaps, and multi-agent topologies.
+- Generate 10 canonical scientific artifacts in `literature/`.
+- Subject candidate to fresh blind E4 independent verification.
 
-## Blocked downstream action
-- `YM-004` and later roadmap tasks remain BLOCKED until YM-003 is accepted and closed by the human owner.
+## Concurrent/Gated actions
+- `YM-003` remains `AWAITING_HUMAN_OWNER_ACCEPTANCE`.
+- `YM-GOV-403` remains `AWAITING_HUMAN_OWNER_ACCEPTANCE` (staged, not cut over).
+- `YM-004` and later roadmap tasks remain BLOCKED until YM-003 is accepted and closed.
 
 ## Completed actions
 - `YM-000 — Local bootstrap` (DONE)

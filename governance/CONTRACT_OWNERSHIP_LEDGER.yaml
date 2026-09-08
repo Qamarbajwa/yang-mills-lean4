@@ -717,6 +717,40 @@ contracts:
     - Self-declaring human-owner constitutional acceptance
   outcome: AWAITING_HUMAN_OWNER_ACCEPTANCE
 
+- contract_id: CONTRACT-YM-XNS-001
+  task_id: YM-XNS-001
+  risk_tier: T3
+  base_sha: "4bcba57271d388ec75a17385faede4debc3f14a3"
+  writer:
+    environment: Antigravity
+    agent_id: primary-worker
+    execution_id: "conversation://00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    model: Gemini / Antigravity
+  reviewer:
+    environment: Antigravity
+    agent_id: fresh-blind-research-subagent-IND1
+    independence_level: LEVEL_A_SAME_APP_SAME_MODEL_SEPARATE_SESSION
+  acceptance_authority:
+    environment: HumanOwner
+    authority_id: human-owner
+    authority_type: ENVIRONMENT_LOCAL
+  allowed_scope:
+    - literature/YM-XNS-001-*.md
+    - governance/envelopes/YM-XNS-001.yaml
+    - governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml
+    - src/ymmg/ros.py
+    - tests/test_ym_xns001_transfer_audit.py
+    - tests/test_research_operating_system.py
+    - verification/YM-XNS-001_INDEPENDENT_REVIEW.md
+    - verification/raw/YM-XNS-001_E4_RAW_*.md
+  forbidden_scope:
+    - OFFICIAL_PROBLEM_SPECIFICATION.md
+    - Claiming proof of Yang-Mills existence or mass gap
+    - Promoting cross-problem analogy to proved theorem
+    - Authoring raw E4 text directly
+    - Self-declaring human-owner constitutional acceptance
+  outcome: IN_PROGRESS
+
 
 
 

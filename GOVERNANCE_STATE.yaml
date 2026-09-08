@@ -26,7 +26,7 @@ governance_state:
     roadmap:
       path: "ROADMAP.md"
       state: "OBSERVED"
-    active_objective_id: "YM-003"
+    active_objective_id: "YM-XNS-001"
 
   standing_mandate:
     active: true
@@ -131,10 +131,10 @@ governance_state:
     state: "YM-002F_INDEPENDENTLY_VERIFIED_CLOSED"
 
   next_action:
-    objective_id: "YM-003"
-    eligibility: "AWAITING_HUMAN_OWNER_ACCEPTANCE"
-    blocker_class: "HUMAN_GATE"
-    description: "YM-003 E4 audit returned INTEGRITY_PASS_WITH_LIMITATIONS. Post-E4 repairs applied (phantom dependency fix, validator hardening). 168 tests passed. Awaiting human owner acceptance before closing YM-003 and unblocking YM-004."
+    objective_id: "YM-XNS-001"
+    eligibility: "IN_PROGRESS"
+    blocker_class: "NONE"
+    description: "Execute YM-XNS-001 cross-problem transfer audit of Navier-Stokes/Euler breakthroughs to Yang-Mills. YM-003 remains awaiting human acceptance."
 
   migration_acceptance:
     decision: "ACCEPTED"

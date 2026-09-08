@@ -1,0 +1,119 @@
+task_execution_envelope:
+  schema_version: "3.0.0"
+  identity:
+    task_id: "YM-XNS-001"
+    project_id: "YANG_MILLS_MASS_GAP"
+    project_name: "Yang-Mills and the Mass Gap"
+    governance_version: "3.0.0"
+    adoption_mode: "MIGRATION_GOVERNED"
+  direction:
+    intent_refs: ["PROJECT_INTENT.md"]
+    roadmap_objective: "YM-XNS-001"
+    owner_non_goals:
+      - "Claiming proof of Yang-Mills existence or mass gap"
+      - "Assuming Navier-Stokes has received final Clay or community acceptance"
+      - "Promoting speculative cross-problem analogies into theorems"
+    owner_reserved_boundaries:
+      - "publication"
+      - "legal"
+      - "spend"
+      - "constitutional acceptance"
+  objective:
+    exact_objective: >-
+      Determine rigorously and conservatively whether any mathematical mechanism,
+      proof architecture, formal-verification method, research decomposition strategy,
+      or cross-problem workflow from the September 2026 Navier-Stokes/Euler developments
+      can materially improve the Yang-Mills research programme.
+    rationale: >-
+      The recent blow-up and Lean formalization results in fluid equations (Buckmaster-Alpöge,
+      Córdoba-Martínez-Zoroa, OpenAI) represent a major milestone in PDE analysis and formalization.
+      A disciplined cross-problem transfer audit identifies transferable methodologies while
+      rigorously establishing mathematical barriers (e.g. reflection positivity, gauge invariance,
+      classical vs quantum differences).
+    done_boundary: >-
+      10 canonical scientific artifacts generated in literature/, classification policy updated,
+      test suite passing, and independent E4 verification completed.
+  base_state:
+    repository_or_workspace: "D:\\Comfy UI\\yang mills and the mass gap"
+    branch_or_state_channel: "master"
+    base_candidate_id: "4bcba57271d388ec75a17385faede4debc3f14a3"
+    dirty_state: "CLEAN"
+    preserved_unrelated_work:
+      - "All prior theorem ledgers and YM-003 missing-bridge artifacts"
+  eligibility:
+    dependencies:
+      - {id: "YM-003", state: "AWAITING_HUMAN_ACCEPTANCE", evidence_ref: "verification/YM-003_INDEPENDENT_REVIEW.md"}
+      - {id: "ROS v1.0", state: "ACCEPTED", evidence_ref: "governance/HUMAN_OWNER_ACCEPTANCE_ROS_v1.0_20260830.md"}
+    technical_inputs_available: true
+    traceable_to_intent: true
+    architecture_permits: true
+    inside_standing_mandate: true
+    candidate_state_known: true
+    risk_inside_ceiling: true
+    blocking_invariant_present: false
+    reserved_authority_required_for_technical_mutation: false
+    eligible: true
+  classification:
+    risk_tier: "T3"
+    action_class: "B"
+    risk_reasons:
+      - "Cross-problem transfer analysis requires strict non-promotion discipline"
+      - "Risk of false analogy between classical PDE blowup and quantum mass gap"
+    active_modules:
+      - "CORE-PROJECT-BINDING"
+      - "CORE-AUTHORITY"
+      - "CORE-RISK"
+      - "CORE-DEPENDENCY"
+      - "CORE-EVIDENCE"
+      - "CORE-TEST-INTEGRITY"
+      - "RESEARCH-SCIENTIFIC"
+      - "ARTIFACT-DATA"
+  roles_and_authority:
+    orchestrator: "primary-worker"
+    writer: {id: "primary-worker", qualified: true, risk_ceiling: "T3"}
+    reviewer_or_verifier: {id: "fresh-blind-research-subagent-IND1", qualified: true, expected_independence: "IND1"}
+    acceptance_authority: {id: "human-owner", qualified: true, authority_type: "CONSTITUTIONAL_OWNER"}
+    implementation_authority: "AUTONOMOUS_WITHIN_ENVELOPE"
+    verification_authority: "EVIDENCE_BASED"
+    release_eligibility_authority: "EVIDENCE_DERIVED_GATE"
+  mutation_scope:
+    allowed:
+      - "literature/YM-XNS-001-*.md"
+      - "governance/envelopes/YM-XNS-001.yaml"
+      - "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
+      - "src/ymmg/ros.py"
+      - "tests/test_ym_xns001_transfer_audit.py"
+      - "tests/test_research_operating_system.py"
+      - "verification/YM-XNS-001_INDEPENDENT_REVIEW.md"
+      - "verification/raw/YM-XNS-001_E4_RAW_*.md"
+    forbidden:
+      - "OFFICIAL_PROBLEM_SPECIFICATION.md"
+      - "Claiming proof of mass gap or continuum existence"
+      - "Promoting cross-problem analogies to PROVED theorems"
+      - "Authoring raw E4 verifier transcripts directly"
+      - "Self-declaring human-owner constitutional acceptance"
+  assurance_contract:
+    intent: "Execute thorough cross-problem transfer audit under strict epistemic safeguards."
+    invariants:
+      - {id: "INV-XNS-001", statement: "ANALOGY_GENERATES_HYPOTHESES_NOT_PROOFS", zero_tolerance: true}
+      - {id: "INV-XNS-002", statement: "FORMALIZED != COMMUNITY_ACCEPTED != CLAY_ACCEPTED", zero_tolerance: true}
+      - {id: "INV-XNS-003", statement: "NO_UNPROVED_YM_EDGE_MARKED_PROVED", zero_tolerance: true}
+      - {id: "INV-XNS-004", statement: "MAXIMUM_STATUS_CEILING_IS_CROSS_PROBLEM_TRANSFER_CANDIDATE", zero_tolerance: true}
+  acceptance:
+    hard_gates:
+      - {id: "GATE-XNS-01", condition: "10 canonical artifacts exist with complete sections", required_state: "PASS"}
+      - {id: "GATE-XNS-02", condition: "Scientific fingerprint manifest correctly includes all 10 artifacts", required_state: "PASS"}
+      - {id: "GATE-XNS-03", condition: "Deterministic test suite passes with zero regressions", required_state: "PASS"}
+      - {id: "GATE-XNS-04", condition: "Fresh blind independent E4 review passes", required_state: "PASS"}
+    required_evidence:
+      minimum_strength: "E4"
+      required_environments: ["INTEGRATED_LOCAL", "STATIC"]
+      minimum_independence: "IND1"
+      candidate_bound: true
+  completion_record:
+    status: "IN_PROGRESS"
+    candidate_id: null
+    scientific_fingerprint: null
+    e4_receipt: null
+    e4_independence: null
+    e4_verdict: null
