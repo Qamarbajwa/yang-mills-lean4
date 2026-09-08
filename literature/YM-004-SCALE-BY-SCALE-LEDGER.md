@@ -39,9 +39,9 @@ $$\| F(A_k) \|_{\infty} = \sup_{p \in \mathcal{P}(\Lambda^{(k)})} a_k^{-2} \| I 
 ### 3. Polymer Activity Norm (Cluster Expansion Convergence)
 $$\| \zeta_k \|_{\kappa, \rho} = \sup_{x \in \Lambda^{(k)}} \sum_{Y \subset \Lambda^{(k)}, Y \ni x} |\zeta_k(Y)| \cdot \exp\left( \frac{\kappa}{g_k^2} |Y| \right) \cdot \rho^{|Y|}$$
 - Controls the convergence of the Kirkwood–Salsburg / Mayer equations for the polymer gas $\Xi_k$.
-- **Convergence Theorem (Bałaban CMP 116):** If $g_k \le g_*$ and $\rho > 1$, then:
-  $$\| \zeta_k \|_{\kappa, \rho} \le C_0 g_k^2 < \frac{1}{2}$$
-  guaranteeing that $\ln \Xi_k$ is an absolutely convergent cluster expansion.
+- **Convergence Theorem (Bałaban CMP 116):** For $g_k \le g_*$ sufficiently small and $\rho > 1$:
+  $$\| \zeta_k \|_{\kappa, \rho} \le C_0 g_k^2$$
+  guaranteeing that $\ln \Xi_k$ is an absolutely convergent, contractive cluster expansion. For $g_k \ge g_*$, contractivity is no longer established.
 
 ---
 

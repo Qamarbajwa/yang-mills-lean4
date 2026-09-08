@@ -23,7 +23,7 @@ UV_BOUNDARY_RECORD:
 
   LAST_PROVED_PARAMETER_REGIME:
     COUPLING_RANGE: "0 < g_k <= g_* << 1 (strictly weak running coupling)"
-    NUMERICAL_THRESHOLD: "g_*^2 approx 0.05 - 0.15 (governed by Kirkwood-Salsburg convergence)"
+    NUMERICAL_THRESHOLD: "g_k <= g_* << 1 (symbolic small-coupling threshold; implicit/non-constructive positive constant in primary theorems satisfying polymer contractivity; no canonical numerical constant is published in CMP papers)"
     VOLUME_ASSUMPTION: "Finite flat 4-torus V = L_0^4 < infinity"
     VOLUME_RELATION: "L_0 <= a_0 * exp(1 / (2 * b_0 * g_*^2))"
     LATTICE_SPACING_ASSUMPTION: "a_0 -> 0 (continuum UV limit taken in fixed volume)"
@@ -40,12 +40,12 @@ UV_BOUNDARY_RECORD:
   FIRST_UNPROVED_EXTENSION:
     SCALE_STEP: "k = k_prov + 1"
     COUPLING_VALUE: "g_{k+1}^2 > g_*^2"
-    PHYSICAL_DISTANCE: "x >= x_* approx (1 / Lambda_QCD) * exp(-1 / (2 * b_0 * g_*^2))"
-    FAILED_PROPERTY: "Polymer cluster expansion ||zeta_{k+1}||_{kappa, rho} loses contractivity (< 1/2 fails)"
-    EPISTEMIC_STATUS: "METHOD_LIMITATION (norm diverges; QFT physical existence not disproved)"
+    PHYSICAL_DISTANCE: "x >= x_* ~ c_* / Lambda_QCD (symbolic physical scale where g_k reaches g_*)"
+    FAILED_PROPERTY: "Polymer cluster expansion ||zeta_{k+1}||_{kappa, rho} loses established contractivity bound"
+    EPISTEMIC_STATUS: "METHOD_LIMITATION (sufficient contractivity bound lost; QFT physical existence not disproved)"
 
   INPUT_FOR_YM006_NON_MEETING:
-    UV_TERMINAL_SCALE: "x_UV^* ~ (0.1 - 0.3) / Lambda_QCD (perturbative boundary)"
+    UV_TERMINAL_SCALE: "x_UV^* ~ c_* / Lambda_QCD (symbolic perturbative boundary scale; c_* is dimensionless constant)"
     UV_TERMINAL_COUPLING: "g_UV^* = g_* << 1"
     GAP_TO_IR_LATTICE_REGIME: >-
       Strong-coupling lattice expansion (Wilson THM-YM-0008, Shen-Zhu-Zhu THM-YM-0026) converges only for
@@ -58,3 +58,19 @@ UV_BOUNDARY_RECORD:
     INDEPENDENCE: "IND1"
     CANONICAL_CONSISTENCY: "100% aligned with THEOREM_LEDGER.md and YM-003 MISSING_BRIDGE_GRAPH.md"
 ```
+
+---
+
+## 2. Quantitative Parameter Provenance Audit Table
+
+| Quantity / Constant | Stated Value / Expression | Classification | Provenance & Literature Basis | Rigorous Mathematical Status |
+|---|---|---|---|---|
+| **Small-coupling threshold** | $g_*^2 \approx 0.08$ | `PROJECT_ESTIMATE` | Estimated from standard leading-order tree-graph condition $g_*^2 \approx \kappa_1 / (\ln C_4 + 1)$. | **NOT IN PRIMARY SOURCES.** Primary CMP theorems establish strictly symbolic existence: $\exists g_* > 0$ sufficiently small. |
+| **Weak-coupling domain** | $g_*^2 \sim 0.05 - 0.15$ | `PROJECT_ESTIMATE` | Typical heuristic range where small-field Gaussian Hessian dominates non-Gaussian perturbations. | **NOT IN PRIMARY SOURCES.** No numerical range is published in Bałaban's CMP series. |
+| **UV terminal physical distance** | $x_{\text{UV}}^* \approx 0.15\text{ fm}$ | `HEURISTIC_PHYSICAL_TRANSLATION` | Computed from $x \sim \hbar c / \mu$ using phenomenological $\Lambda_{\text{QCD}} \approx 250\text{ MeV}$. | **NOT A MATHEMATICAL BOUND.** The Clay problem is formulated without external physical dimensionful inputs. |
+| **Intermediate crossover scale** | $x \sim 0.2 - 1.0\text{ fm}$ | `HEURISTIC_PHYSICAL_TRANSLATION` | Phenomenological hadronic confinement scale / string tension radius ($\sim 1\text{ fm}$). | **HEURISTIC PHYSICS ESTIMATE.** Not part of constructive functional analytic bounds. |
+| **Lattice strong-coupling radius** | $a_{\text{lattice}} \ge 0.5\text{ fm}$ | `HEURISTIC_PHYSICAL_TRANSLATION` | Physical lattice spacing corresponding to $\beta \le \beta_0 \approx 0.39$ for $SU(2)$. | **PHENOMENOLOGICAL TRANSLATION.** Mathematical theorems bound $\beta \le \beta_0$, not physical length in fm. |
+
+> [!IMPORTANT]
+> **Provenance Invariant:**
+> The primary constructive literature (Bałaban CMP 95–122, Federbush CMP 107–127, MRS CMP 155) establishes strictly **symbolic bounds** ($g_k \le g_* \ll 1$, $\beta \le \beta_0 \ll 1$). All specific decimal values and femtometer lengths are project estimates or heuristic physical translations. They are strictly barred from acting as load-bearing mathematical evidence.

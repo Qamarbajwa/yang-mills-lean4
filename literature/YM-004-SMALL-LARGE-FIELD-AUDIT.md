@@ -63,13 +63,20 @@ $$S_{\Delta}(U) = \frac{1}{g_k^2} \sum_{p \subset \Delta} \mathrm{Re} \mathrm{Tr
 - The total large-field polymer activity $\zeta_k(Y)$ is bounded by:
   $$|\zeta_k(Y)| \le (C_{\text{int}})^m \cdot \exp\left( - \frac{\kappa_1}{g_k^2} m \right) = \exp\left( - \left( \frac{\kappa_1}{g_k^2} - \ln C_{\text{int}} \right) |Y| \right)$$
 
-### Cluster Expansion Convergence Criterion
-The Mayer / Kirkwood–Salsburg cluster expansion of the polymer gas $\sum_Y \zeta_k(Y)$ converges absolutely if:
-$$\sup_x \sum_{Y \ni x} |\zeta_k(Y)| \cdot e^{|Y|} < 1$$
-Substituting the suppression bound yields the convergence condition:
+### Schematic Cluster Expansion Convergence Criterion (Project Reconstruction)
+In constructive field theory, the Mayer / Kirkwood–Salsburg / Kotecký–Preiss cluster expansion of the polymer gas $\sum_Y \zeta_k(Y)$ converges absolutely if:
+$$\sup_x \sum_{Y \ni x} |\zeta_k(Y)| \cdot e^{|Y|} < 1 \quad \left(\text{or schematic condition } \sum_{Y \sim X} |\zeta_k(Y)| e^{|Y|} < \frac{1}{2}\right)$$
+Substituting the exponential suppression bound $|\zeta_k(Y)| \le e^{-\kappa_1 |Y| / g_k^2}$ into the tree-graph bound gives the schematic convergence estimate:
 $$\sum_{m=1}^\infty (C_4 C_{\text{int}} e)^m \exp\left( - \frac{\kappa_1}{g_k^2} m \right) = \frac{K_0 e^{-\kappa_1 / g_k^2}}{1 - K_0 e^{-\kappa_1 / g_k^2}} < 1$$
 This inequality holds if and only if:
 $$\frac{\kappa_1}{g_k^2} > \ln(2 K_0) \iff g_k^2 < \frac{\kappa_1}{\ln(2 K_0)} \equiv g_*^2$$
+
+> [!NOTE]
+> **Audit of Inequality Provenance:**
+> - The condition $\sum_{Y \sim X} |\zeta_k(Y)| e^{|Y|} < 1/2$ and the algebraic formula $g_*^2 = \frac{\kappa_1}{\ln(2 K_0)}$ are a **`PROJECT_RECONSTRUCTION / SCHEMATIC_ESTIMATE`** modeling the cluster expansion via standard Kotecký–Preiss polymer gas bounds.
+> - The factor $1/2$ is project-chosen (a standard uniform Kotecký–Preiss weight parameter).
+> - $C_4$ is the 4D lattice coordination/tree bound ($C_4 \le 7^4 = 2401$).
+> - Bałaban's primary CMP theorems (CMP 116, 119) do not write this exact scalar inequality, but rather formulate inductive contraction in scale-dependent Banach spaces: $\|\zeta_k\|_{\kappa, \rho} \le C g_k^2$, proving the existence of an implicit threshold $g_* > 0$ below which contraction holds.
 
 ---
 
@@ -80,11 +87,24 @@ Comparative analysis of the failure thresholds reveals:
 | Region | Primary Failure Mode | Mathematical Condition for Breakdown | Literature Status |
 |---|---|---|---|
 | **Small-Field** | Loss of strict convexity of Hessian; appearance of non-trivial saddle points (Gribov copies). | $g_k \sim g_{\text{Gribov}} \sim \mathcal{O}(1)$ | Observed in functional analysis of gauge-fixing operator. |
-| **Large-Field** | Polymer cluster expansion divergence: combinatorial entropy $(C_4)^m$ overwhelms Boltzmann suppression $e^{-\kappa_1 m / g_k^2}$. | $g_k^2 \ge \frac{\kappa_1}{\ln(2 K_0)} \equiv g_*^2 \ll 1$ | **PROVED** breakdown of Bałaban's polymer norm convergence (CMP 116, p. 18). |
+| **Large-Field** | Polymer cluster expansion contractivity loss: combinatorial entropy $(C_4)^m$ overwhelms Boltzmann suppression $e^{-\kappa_1 m / g_k^2}$. | $g_k^2 \ge \frac{\kappa_1}{\ln(2 K_0)} \equiv g_*^2 \ll 1$ | **PROVED** loss of contractivity of Bałaban's inductive polymer norms (CMP 116, p. 18). |
 
-$$\boxed{\textbf{The large-field polymer cluster expansion loses mathematical control first.}}$$
+$$\boxed{\textbf{The large-field polymer cluster expansion loses mathematical contractivity first.}}$$
 
-### Critical Epistemic Invariant
-- The divergence of the polymer cluster expansion at $g_k \ge g_*$ is a **rigorous theorem concerning Bałaban's specific functional norms**.
+---
+
+## 5. Audit of "Failure" and "Divergence" Language
+
+To maintain strict epistemic rigor under ROS v1.0 Law 1 and Law 2, statements regarding expansion breakdown must distinguish between loss of a sufficient bound and proved divergence:
+
+| Statement Under Audit | Classification | Epistemic Calibrated Restatement |
+|---|---|---|
+| *"The large-field polymer cluster expansion fails first"* | `DERIVED_WITH_EXPLICIT_ASSUMPTIONS` | The sufficient contractivity condition for large-field polymer cluster expansions ($\sum |\zeta| e^{|Y|} < 1$ or $\|\zeta_k\| \le C g_k^2$) ceases to hold at $g_k \ge g_* \ll 1$, prior to the breakdown of small-field Hessian positivity at $g_k \sim \mathcal{O}(1)$. |
+| *"The polymer cluster expansion diverges unconditionally"* | `NOT_ESTABLISHED` (as unconditional divergence) | **Weakened to `PROVED_BY_SOURCE`:** The known sufficient convergence criterion for Bałaban's polymer norm $\|\cdot\|_{\kappa,\rho}$ is no longer established for $g_k \ge g_*$. Failure of the known sufficient bound does not by itself prove mathematical divergence of the underlying functional integral. |
+| *"The sole obstruction to the continuum thermodynamic limit is scale flow exiting weak coupling"* | `NOT_ESTABLISHED` (as sole universal obstruction) | **Weakened to `PROVED_BY_SOURCE`:** No finite-volume boundary obstruction was identified in the reproduced small-field and polymer estimates. However, at terminal scale $a_k \sim L_0$, zero-mode Haar integration and infrared correlation decay remain unproved in the continuum. |
+| *"Small-field Gaussian integration remains contractive up to $g_k \sim \mathcal{O}(1)$"* | `METHOD_RECONSTRUCTION` | Within the small-field domain $\|F_p\| \le \epsilon_0 g_k^{-\gamma}$, the quadratic Hessian $\mathcal{H}(A_{\min})$ has strictly positive spectrum bounded away from zero; saddle-point perturbation theory remains formally valid until non-trivial Gribov saddle points emerge at order-one coupling. |
+
+### Critical Epistemic Invariants
+- The loss of contractivity of the polymer cluster expansion at $g_k \ge g_*$ is a **rigorous theorem concerning Bałaban's specific functional norms**.
 - It does **NOT** prove that the underlying quantum field theory ceases to exist or that large fields physically destroy confinement.
-- **Factorial Divergence & Renormalons:** The literature does not equate polymer cluster expansion breakdown with perturbative renormalon poles. Polymer divergence is a breakdown of the single-site cluster expansion method, not an intrinsic physical singularity.
+- **Factorial Divergence & Renormalons:** The literature does not equate polymer cluster expansion breakdown with perturbative renormalon poles. Polymer contractivity loss is a limitation of the single-site cluster expansion method, not an intrinsic physical singularity.

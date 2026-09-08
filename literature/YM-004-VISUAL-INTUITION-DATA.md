@@ -19,15 +19,15 @@
   Bare Coupling g_0 << 1                                                  g_k ~ 1
 
   Scale 0         Scale 1         Scale 2         Scale k_prov      Scale k_prov + 1
-  a_0             a_1 = L*a_0     a_2 = L^2*a_0   a_k ~ 1/Lambda    a > a_k
-  g_0 << 1  ───>  g_1 > g_0 ───>  g_2 > g_1 ───>  g_* ~ 0.3   ───X  g > g_* (DIVERGES)
+  a_0             a_1 = L*a_0     a_2 = L^2*a_0   a_k ~ c_*/Lambda  a > a_k
+  g_0 << 1  ───>  g_1 > g_0 ───>  g_2 > g_1 ───>  g_* << 1    ───X  g > g_* (CONTRACTIVITY LOST)
   [   CONTROLLED BY BAŁABAN UV RG MACHINERY   ]   [LAST PROVED]     [UNBRIDGED CROSSOVER]
                                                   
   ─────────────────────────────────────────────   ───────────       ─────────────────────
   - Plaquette curvature ||F_p|| <= eps * g^-gamma  Boundary of       - Small-field fails
   - Quadratic Hessian strictly positive           Polymer Cluster   - Large fields unsuppressed
-  - Large fields suppressed by exp(-c/g_k^2)      Convergence       - Non-perturbative gap
-  - Counterterms strictly local & bounded         (norm < 1/2)      - Clay target open
+  - Large fields suppressed by exp(-c/g_k^2)      Contractivity     - Non-perturbative gap
+  - Counterterms strictly local & bounded         (||zeta|| bound)  - Clay target open
 ========================================================================================
 ```
 
@@ -40,14 +40,14 @@
 | Scale k  | Lattice Spacing    | Effective Coupling  | Mathematical Status           |
 +----------+--------------------+---------------------+-------------------------------+
 | k = 0    | a_0                | g_0 << 1            | [PASS] Proved (Wilson lattice)|
-| k = 1    | a_1 = L * a_0      | g_1 = g_0 + delta   | [PASS] Proved (Bałaban step)  |
-| k = 2    | a_2 = L^2 * a_0    | g_2 = g_1 + delta   | [PASS] Proved (Bałaban step)  |
+| k = 1    | a_1 = L * a_0      | g_1 > g_0           | [PASS] Proved (Bałaban step)  |
+| k = 2    | a_2 = L^2 * a_0    | g_2 > g_1           | [PASS] Proved (Bałaban step)  |
 | ...      | ...                | ...                 | [PASS] Inductively stable     |
-| k_prov   | a_* ~ 1/Lambda_QCD | g_* ~ 0.3           | [PASS] Last mathematically    |
+| k_prov   | a_* ~ c_*/Lambda   | g_* << 1 (symbolic) | [PASS] Last mathematically    |
 |          |                    |                     |        proved scale (CMP 119) |
 +----------+--------------------+---------------------+-------------------------------+
-| k_prov+1 | a > a_*            | g > g_*             | [FAIL] Cluster expansion sum  |
-|          |                    |                     |        sum |zeta| e^|Y| >= 1/2|
+| k_prov+1 | a > a_*            | g > g_*             | [FAIL] Sufficient polymer     |
+|          |                    |                     |        contractivity lost     |
 | k_cross  | 1 / Lambda_QCD     | g ~ 1.0             | [OPEN] Intermediate crossover |
 | k -> inf | L_0 -> infty       | g_eff(phys)         | [OPEN] Continuum Mass Gap     |
 +----------+--------------------+---------------------+-------------------------------+

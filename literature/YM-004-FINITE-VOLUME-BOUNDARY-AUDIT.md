@@ -62,6 +62,14 @@ Because the torus is topologically non-trivial ($\pi_1(\mathbb{T}^4) = \mathbb{Z
    the coupling $g_k$ inevitably exceeds the polymer convergence radius $g_*$ after a finite number of steps $k_{\max} \approx \frac{1}{2 b_0 g_0^2 \ln L} \sim \frac{1}{\Lambda_{\text{QCD}}}$.
 
 ### Definite Conclusion
-$$\boxed{\textbf{No single volume-dependent boundary term prevents } L_0 \to \infty.}$$
-$$\boxed{\textbf{The thermodynamic limit is obstructed because the RG flow exits the weak-coupling regime } g_k < g_* \textbf{ before the infinite-volume limit can be taken.}}$$
-In Bałaban's finite-volume theorem, $L_0$ is constrained so that $a_k$ reaches $L_0$ while $g_k$ is still small. If $L_0 \gg 1/\Lambda_{\text{QCD}}$, the flow hits $g_k \sim 1$ at an intermediate scale $a_k \ll L_0$, where the multiscale machinery halts.
+$$\boxed{\textbf{No finite-volume boundary obstruction was identified in the reproduced small-field and polymer estimates.}}$$
+$$\boxed{\textbf{Within the reproduced RG machinery, the thermodynamic limit is obstructed because the scale flow exits the weak-coupling regime } g_k \le g_* \textbf{ before the infinite-volume limit can be reached.}}$$
+
+> [!IMPORTANT]
+> **Calibrated Epistemic Distinction:**
+> We strictly distinguish:
+> 1. *"No finite-volume boundary obstruction was identified in the reproduced estimates"* (`PROVED_BY_SOURCE` for local and wrapping polymer bounds `BND-VOL-01` through `BND-VOL-07`).
+> 2. *"Finite-volume effects cannot obstruct the thermodynamic limit"* (`NOT_ESTABLISHED`).
+>
+> In particular, at the terminal box scale $a_k \sim L_0$, global torus zero-mode integration (`BND-VOL-08`) and nonperturbative long-distance correlation decay without an infrared regulator (`BND-VOL-09`) remain unproved in the continuum. The reproduced machinery proves that local small-field bounds and boundary-wrapping polymer corrections remain extensive and uniform, but does not prove that global or infrared volume effects are universally absent in the infinite-volume continuum measure.
+In Bałaban's finite-volume theorem, $L_0$ is constrained so that $a_k$ reaches $L_0$ while $g_k$ is still small. If $L_0 \gg 1/\Lambda_{\text{QCD}}$, the flow reaches $g_k \ge g_*$ at an intermediate scale $a_k \ll L_0$, where the multiscale machinery halts.

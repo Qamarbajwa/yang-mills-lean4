@@ -105,5 +105,5 @@ $$\Xi_k(A_k) = 1 + \sum_{m=1}^{\infty} \frac{1}{m!} \sum_{Y_1, \dots, Y_m \text{
 [Scale k: a_k = L^k a_0, g_k]  <-- STABLE while g_k <= g_* << 1
          │
          ▼
-[Scale k_max: g_{k_max} ~ 1]   <-- MATHEMATICAL BOUNDARY (Cluster expansion diverges)
+[Scale k_max: g_{k_max} >= g_*]   <-- METHOD BOUNDARY (Polymer cluster expansion loses contractivity)
 ```

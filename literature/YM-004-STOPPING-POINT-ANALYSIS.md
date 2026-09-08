@@ -38,12 +38,12 @@ This document identifies with mathematical precision where the rigorous 4D const
 | Candidate Mechanism | Audited Status | Exact Mathematical Role | Supported by Source? |
 |---|---|---|---|
 | **Effective Coupling Growth** | **PRIMARY CAUSE** | Because $\beta_0 > 0$ (asymptotic freedom), $g_k$ increases monotonically under coarsening. The entire construction is perturbative in $g_k$; when $g_k > g_*$, the small parameter vanishes. | **YES** (CMP 116, p. 18; CMP 109, p. 251) |
-| **Polymer Expansion Breakdown** | **CONSEQUENCE** | Polymer weights $e^{-\kappa_1 |Y| / g_k^2}$ lose exponential suppression when $g_k \sim 1$. The sum over polymer geometries diverges combinatorially. | **YES** (CMP 116, Lemma 3.2) |
-| **Large-Field Proliferation** | **CONSEQUENCE** | Volume fraction occupied by large-field blocks $\chi_{\text{large}}(\Delta) = 1$ is no longer exponentially small. | **YES** (CMP 119, p. 260) |
+| **Polymer Expansion Breakdown** | **CONSEQUENCE** | Polymer weights $e^{-\kappa_1 |Y| / g_k^2}$ lose exponential suppression when $g_k \ge g_*$. The sufficient contractivity condition $\sum |\zeta| e^{|Y|} < 1$ is no longer established within the reproduced expansion machinery. | **YES** (CMP 116, Lemma 3.2) |
+| **Large-Field Proliferation** | **CONSEQUENCE** | Volume fraction occupied by large-field blocks $\chi_{\text{large}}(\Delta) = 1$ is no longer provably exponentially small. | **YES** (CMP 119, p. 260) |
 | **Loss of Quadratic Dominance** | **CONSEQUENCE** | $g_k V_3(q) + g_k^2 V_4(q)$ becomes of the same order as $\langle q, \mathcal{H} q \rangle$, invalidating Gaussian saddle-point integration. | **YES** (CMP 109, p. 280) |
-| **Finite-Volume Dependence ($L_0 < \infty$)** | **NOT THE CAUSE** | Volume estimates are extensive; boundary wrapping polymers vanish exponentially as $L_0 \to \infty$. Finite volume is an external constraint to keep $a_k \le L_0$ while $g_k \le g_*$. | **YES** (CMP 119, Section 4) |
+| **Finite-Volume Dependence ($L_0 < \infty$)** | **NOT THE CAUSE IN REPRODUCED BOUNDS** | Volume estimates are extensive; boundary wrapping polymers vanish exponentially as $L_0 \to \infty$. Finite volume is an external constraint to keep $a_k \le L_0$ while $g_k \le g_*$. | **YES** (CMP 119, Section 4) |
 | **Loss of Reflection Positivity** | **NOT THE CAUSE** | Wilson lattice action is reflection-positive on the lattice (`THM-YM-0009`). Bałaban's RG integration preserves reflection positivity for physical observables. | **NO** (reflection positivity intact) |
-| **Infrared Renormalons** | **DISTINCT MECHANISM** | Perturbative factorial divergence in Borel plane ($\sim n!$). Bałaban's polymer divergence is spatial/combinatorial, not identified as a Borel-plane singularity. | **NOT IDENTIFIED IN BALABAN** (identified in MRS 1993) |
+| **Infrared Renormalons** | **DISTINCT MECHANISM** | Perturbative factorial divergence in Borel plane ($\sim n!$). Bałaban's polymer breakdown is spatial/combinatorial, not identified as a Borel-plane singularity. | **NOT IDENTIFIED IN BALABAN** (identified in MRS 1993) |
 
 ---
 
@@ -62,12 +62,12 @@ $$\| R_k \| \le C g_k^2, \quad |\zeta_k(Y)| \le e^{-\kappa_0 |Y| / g_k^2}$$
 When $g_k$ exceeds $g_*$, these bounds cease to be contractive.
 
 ### Q8: What mechanism causes the stopping point?
-$$\boxed{\textbf{Direct mechanism: Polymer/cluster expansion breakdown triggered by effective coupling growth } g_k \to g_*.}$$
-It is **not** caused by boundary terms, nor by loss of reflection positivity, nor by finite-volume accumulation.
+$$\boxed{\textbf{Direct mechanism: Polymer/cluster expansion contractivity loss triggered by effective coupling growth } g_k \to g_*.}$$
+It is **not** caused by boundary terms, nor by loss of reflection positivity, nor by finite-volume accumulation in the reproduced local estimates.
 
 ### Q9: Proved barrier vs limit of method?
-- **PROVED:** Bałaban's specific functional norms ($\| \cdot \|_{\kappa, \rho}$) diverge for $g_k > g_*$. The small-field polymer expansion as formulated cannot be iterated further.
-- **NOT PROVED:** There is **no theorem** proving that 4D Yang–Mills cannot be controlled at $g_k \sim 1$. The stopping point is an epistemic boundary of the weak-coupling constructive expansion, not a proved physical singularity of the theory.
+- **PROVED LOSS OF SUFFICIENT BOUND:** Bałaban's specific functional norms ($\| \cdot \|_{\kappa, \rho}$) lose contractivity for $g_k \ge g_*$. The small-field polymer expansion as formulated cannot be iterated further because the contractivity condition is no longer established.
+- **NOT PROVED:** There is **no theorem** proving that 4D Yang–Mills cannot be controlled at $g_k \sim 1$, nor that the underlying continuum partition function mathematically diverges. The stopping point is an epistemic boundary of the weak-coupling constructive expansion, not a proved physical singularity of the theory.
 - **Classification:**
   $$\boxed{\textbf{PROOF\_TERMINATES\_HERE / METHOD\_LIMITATION}}$$
 

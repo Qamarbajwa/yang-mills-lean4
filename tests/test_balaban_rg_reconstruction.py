@@ -151,3 +151,61 @@ def test_10_source_to_claim_traceability_complete():
     assert "Bałaban" in synthesis or "Balaban" in synthesis
     assert "Magnen" in synthesis
     assert "METHOD_LIMITATION" in synthesis
+
+
+def test_11_obstruction_id_canonical_consistency():
+    """Verify that OBS-CAND-001, 002, 003 maintain canonical definitions without remapping."""
+    audit_path = LIT_DIR / "YM-004-OBSTRUCTION-CANDIDATE-AUDIT.md"
+    assert audit_path.exists()
+    content = audit_path.read_text(encoding="utf-8")
+    
+    # Must have canonical reconciliation table
+    assert "Canonical Obstruction-ID Reconciliation Table" in content
+    assert "OBS-CAND-001" in content
+    assert "OBS-CAND-002" in content
+    assert "OBS-CAND-003" in content
+    assert "O2-CONTINUUM" in content
+    assert "O8-OS" in content
+    assert "O4-CUTOFF" in content
+    assert "Intermediate Crossover Window" in content
+    assert "Gauge-Fixing / Positivity Conflict" in content
+    assert "Lattice Continuum Scaling" in content
+
+
+def test_12_quantitative_constants_provenance_explicit():
+    """Verify that quantitative constants have explicit provenance classifications and bounds remain symbolic."""
+    bnd_path = LIT_DIR / "YM-004-UV-BOUNDARY-RECORD.md"
+    content = bnd_path.read_text(encoding="utf-8")
+    
+    assert "Quantitative Parameter Provenance Audit Table" in content
+    assert "PROJECT_ESTIMATE" in content
+    assert "HEURISTIC_PHYSICAL_TRANSLATION" in content
+    assert "symbolic small-coupling threshold" in content.lower()
+    assert "NOT IN PRIMARY SOURCES" in content
+
+
+def test_13_calibrated_failure_language():
+    """Verify that failure language is calibrated (sufficient bound lost vs unconditional divergence)."""
+    audit_path = LIT_DIR / "YM-004-SMALL-LARGE-FIELD-AUDIT.md"
+    content = audit_path.read_text(encoding="utf-8")
+    
+    assert "Audit of \"Failure\" and \"Divergence\" Language" in content
+    assert "DERIVED_WITH_EXPLICIT_ASSUMPTIONS" in content
+    assert "PROVED_BY_SOURCE" in content
+    assert "METHOD_RECONSTRUCTION" in content
+    assert "sufficient contractivity" in content.lower() or "sufficient convergence" in content.lower()
+
+
+def test_14_balaban_mrs_theorem_separation():
+    """Verify that Bałaban finite-volume UV stability and MRS IR-cutoff construction are separated across 6 dimensions."""
+    source_map = (LIT_DIR / "YM-004-PRIMARY-SOURCE-MAP.md").read_text(encoding="utf-8")
+    
+    assert "Separation of Independent Programs: Bałaban vs. Magnen–Rivasseau–Sénéor" in source_map
+    assert "Construction Achieved" in source_map
+    assert "Volume Regime" in source_map
+    assert "Cutoff Regime" in source_map
+    assert "Observables / Functionals Controlled" in source_map
+    assert "Uniformity Established" in source_map
+    assert "What Remains Open" in source_map
+    assert "Bibliographic Clarification on Bałaban Sources" in source_map
+

@@ -67,10 +67,43 @@ This artifact provides the authoritative primary-source map for the mathematical
 
 ---
 
-## 3. Epistemic Status & Governance Compliance
+## 3. Separation of Independent Programs: Bałaban vs. Magnen–Rivasseau–Sénéor
+
+To prevent synthetic theorem conflation, Bałaban's finite-volume ultraviolet stability program and the Magnen–Rivasseau–Sénéor infrared-regulated continuum program are strictly distinguished across all six canonical comparative dimensions:
+
+| Canonical Dimension | Bałaban Multiscale RG Program (CMP 109, 116, 119, 122) | Magnen–Rivasseau–Sénéor Program (CMP 155, 1993) |
+|---|---|---|
+| **1. Construction Achieved** | Multiscale block-spin effective action recursion; uniform UV stability bounds on the vacuum functional. | Continuum regularized Schwinger distributions via phase-space cluster expansion; Borel summability in $g_r^2$. |
+| **2. Volume Regime** | Finite flat 4-torus $\mathbb{T}^4 = (\mathbb{R}/L_0\mathbb{Z})^4$ ($L_0 < \infty$). | Infinite volume $\mathbb{R}^4$ (thermodynamic limit taken with fixed IR mass cutoff $\Lambda_{\text{IR}} > 0$). |
+| **3. Cutoff Regime** | UV lattice cutoff removed ($a_0 \to 0$); runs down to scale $a_*$ where $g_k \le g_* \ll 1$. | UV cutoff removed ($\Lambda_{\text{UV}} \to \infty$); explicit fixed non-zero IR cutoff $\Lambda_{\text{IR}} > 0$ retained. |
+| **4. Observables / Functionals Controlled** | Vacuum functional $\Xi_k(B)$, effective action remainders $R_k(A_k)$, small/large field polymer activities. | Regularized connected Schwinger functions / gauge-invariant correlation functions $S_n^{\Lambda_{\text{IR}}}$. |
+| **5. Uniformity Established** | Uniform in UV lattice spacing $a_0 \to 0$ and scale steps $k \le k_{\text{prov}}$ at fixed finite volume $L_0$. | Uniform in UV cutoff $\Lambda_{\text{UV}} \to \infty$ at fixed non-zero infrared regulator $\Lambda_{\text{IR}} > 0$. |
+| **6. What Remains Open** | Continuum thermodynamic limit $L_0 \to \infty$; intermediate crossover $g_k \sim 1$; continuum Schwinger distributions. | Removal of IR cutoff $\Lambda_{\text{IR}} \to 0$; nonperturbative IR renormalon control; reflection positivity of gauge-invariant observables. |
+
+---
+
+## 4. Bibliographic Clarification on Bałaban Sources
+
+- **Lattice Gauge Theory Primary Sources:**
+  - CMP 95 (1984) 419–440: *Propagators and Renormalization Transformations for Lattice Gauge Theories. I*
+  - CMP 96 (1984) 223–250: *Propagators and Renormalization Transformations for Lattice Gauge Theories. II*
+  - CMP 98 (1985) 17–52: *Averaging Operations for Lattice Gauge Theories*
+  - CMP 109 (1987) 249–301: *Renormalization Group Methods in Gauge Theories: (I) Small Fields and Planar Gauges*
+  - CMP 114 (1988) 627–687: *Renormalization Group Methods in Gauge Theories: (II) Small Fields and Covariant Gauges*
+  - CMP 115 (1988) 407–483: *Renormalization Group Methods in Gauge Theories: (III) Effective Actions*
+  - CMP 116 (1988) 1–22: *Convergent Expansions for Lattice Gauge Theories*
+  - CMP 119 (1988) 243–285: *Large Field Expansions for Lattice Gauge Theories*
+  - CMP 122 (1989) 175–202: *Ultraviolet Stability for Lattice Gauge Theories*
+- **Scalar Background Precursors (Not Yang–Mills Theorem Evidence):**
+  - Bałaban's separate scalar papers (e.g. *Ultraviolet stability in field theory. The $\phi^4_3$ model*, CMP 102 (1985) 255–272; CMP 104 (1986) 357–380) are methodological precursors for scalar fields in 3 dimensions and are **NOT** cited as theorem evidence for 4D Yang–Mills theory.
+
+---
+
+## 5. Epistemic Status & Governance Compliance
 
 All sources cited are peer-reviewed mathematical physics papers published in *Communications in Mathematical Physics*.
 In accordance with ROS v1.0 Law 1:
 $$\text{Claim Strength} \le \text{Evidence Strength}$$
 - No result is promoted to an infinite-volume continuum theorem without an infrared cutoff.
 - No result is promoted to satisfying the Clay Millennium Problem requirements.
+- Bałaban's UV stability in finite volume and MRS's construction with an IR cutoff remain strictly independent theorems.
