@@ -75,6 +75,7 @@
 - Missing-bridge graph (`YM-003` — ACCEPTED / CLOSED; human owner accepted on 2026-09-08 based on fresh blind post-repair E4 INTEGRITY_PASS; 19-edge DAG and critical cut-set established; 7 tests passed).
 - Cross-problem transfer audit (`YM-XNS-001` — ACCEPTED / CLOSED; human owner accepted on 2026-09-08 based on E4 INTEGRITY_PASS; 10 canonical artifacts produced; 194 tests passed).
 - Universal Governance v4.0.3 migration (`YM-GOV-403` — ACCEPTED / ACTIVE; cutover completed 2026-09-08; 14 transition tests passed).
+- Constructive UV RG Machinery Reproduction (`YM-004` — CANDIDATE_PRODUCED; 10 canonical artifacts produced; 204 tests passed; exact stopping point $g_* \ll 1$ established; UV boundary record `UV-BND-YM004-001` sealed for YM-006; awaiting independent E4 review).
 
 ## UNVERIFIED
 - No original Yang–Mills lemma has been established in this repository.
@@ -85,7 +86,7 @@
 Rigorous constructive control linking ultraviolet asymptotic freedom to infrared mass generation remains open in 4D continuum spacetime across the strong-coupling transition ($g_k \sim 1$).
 
 ## NEXT ACTION
-Execute **`YM-004 — Rigorous UV / Constructive RG Machinery Reproduction`** with Euler-first precursor emphasis on Bałaban's finite-volume boundary terms and stopping point of small-field control ($g_k \sim 1$), alongside non-blocking parallel **`YM-LEAN-001`** (Lean 4 formalization scoping). YM-005 and YM-006 remain gated on YM-004.
+Conduct fresh blind independent E4 verification of candidate `YM-004` reproduction artifacts. YM-005 and YM-006 remain gated on YM-004 closeout. Non-blocking parallel track `YM-LEAN-001` ready.
 
 
 

@@ -1,16 +1,18 @@
 # NEXT ACTION
 
 ## Current primary action
-`YM-004 — Rigorous UV / Constructive RG Machinery Reproduction (IN_PROGRESS)`
+`YM-004 — Rigorous UV / Constructive RG Machinery Reproduction (CANDIDATE_AUDIT_READY)`
 
 ## Current parallel action (non-blocking)
 `YM-LEAN-001 — Lean 4 Formalization Scoping (READY_PARALLEL)`
 
 ## Scope
-- Focus: Mathematical reproduction of Bałaban's multiscale block-spin RG program (CMP 109, 116, 119, 122; 1987–1989).
-- Key methodology ("Euler first"): Isolate finite-volume boundary terms and determine the exact mathematical stopping point where small-field bounds cease to control effective action ($g_k \sim 1$).
-- Lean parallel track: Formalize Clay problem definition and Osterwalder–Schrader reconstruction chain in Lean 4 without blocking scientific progress.
-- Downstream tasks: `YM-005` (lattice gap program) and `YM-006` (non-meeting estimate) remain strictly blocked until YM-004 completes.
+- Reconstructed Bałaban's multiscale block-spin RG program (CMP 95, 96, 98, 109, 114, 115, 116, 119, 122).
+- Produced 10 canonical YM-004 artifacts and 10 deterministic tests (204 total passing).
+- Proved stopping point: $g_k \le g_* \ll 1$ (large-field polymer cluster expansion loses contractivity).
+- Proved finite-volume property: Boundary terms are extensive and do not obstruct $L_0 \to \infty$; the barrier is scale flow exiting weak coupling.
+- Canonical UV boundary record `UV-BND-YM004-001` sealed for YM-006.
+- Next step: Freeze candidate SHA and invoke fresh blind independent E4 verifier.
 
 ## Completed actions
 - `YM-003 — Construct missing-bridge graph` (ACCEPTED / CLOSED; owner accepted 2026-09-08)

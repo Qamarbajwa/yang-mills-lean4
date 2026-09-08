@@ -53,6 +53,16 @@ scientific_fingerprint:
     - literature/YM-XNS-001-FORMAL-VERIFICATION-ROADMAP.md
     - literature/YM-XNS-001-MULTI-AGENT-RESEARCH-TOPOLOGY.md
     - literature/YM-XNS-001-FINAL-SYNTHESIS.md
+    - literature/YM-004-PRIMARY-SOURCE-MAP.md
+    - literature/YM-004-RG-ARCHITECTURE.md
+    - literature/YM-004-SCALE-BY-SCALE-LEDGER.md
+    - literature/YM-004-SMALL-LARGE-FIELD-AUDIT.md
+    - literature/YM-004-FINITE-VOLUME-BOUNDARY-AUDIT.md
+    - literature/YM-004-STOPPING-POINT-ANALYSIS.md
+    - literature/YM-004-UV-BOUNDARY-RECORD.md
+    - literature/YM-004-OBSTRUCTION-CANDIDATE-AUDIT.md
+    - literature/YM-004-VISUAL-INTUITION-DATA.md
+    - literature/YM-004-FINAL-SYNTHESIS.md
     - governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml
 unknown_policy:
   research_locations:
