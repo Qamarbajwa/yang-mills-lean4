@@ -27,7 +27,7 @@
 | YM-003 | Construct missing-bridge graph | YM-002F | T3 | independent semantic review | ACCEPTED / CLOSED |
 | YM-GOV-403 | Universal Governance v4.0.3 migration | YM-GOV-300, ROS v1.0 | T4 | 14 transition tests + fresh blind E4 + owner cutover | ACCEPTED / ACTIVE |
 | YM-XNS-001 | Navier–Stokes breakthrough transfer audit | YM-003 | T3 | cross-problem transfer audit + independent review | ACCEPTED / CLOSED |
-| YM-004 | Reconstruct rigorous RG/Bałaban program | YM-003 | T3 | theorem reproduction + finite-volume stopping point | IN_PROGRESS |
+| YM-004 | Reconstruct rigorous RG/Bałaban program | YM-003 | T3 | theorem reproduction + finite-volume stopping point | AWAITING_HUMAN_ACCEPTANCE |
 | YM-LEAN-001 | Lean 4 formalization scoping for Clay spec and OS reconstruction | YM-003 | T2 | formalization design + non-blocking scoping | READY / IN_PARALLEL |
 | YM-005 | Reconstruct rigorous lattice gap program | YM-004 | T3 | theorem reproduction + independent review | BLOCKED |
 | YM-006 | Identify the precise non-meeting estimate | YM-004, YM-005 | T3 | explicit dependency proof + adversarial review | BLOCKED |

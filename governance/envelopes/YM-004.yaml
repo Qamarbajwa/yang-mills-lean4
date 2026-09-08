@@ -106,7 +106,14 @@ task_execution_envelope:
       minimum_independence: "IND1"
       candidate_bound: true
   completion_record:
-    status: "IN_PROGRESS"
-    candidate_id: null
-    e4_receipt: null
-    e4_verdict: null
+    status: "AWAITING_HUMAN_OWNER_ACCEPTANCE"
+    candidate_id: "645f2801f7bf8a15e9cb92cbcfdedf941ebc598c"
+    e4_receipt: "verification/YM-004_INDEPENDENT_REVIEW.md"
+    e4_raw_receipt: "verification/raw/YM-004_E4_RAW_20260908T215837Z.md"
+    e4_raw_sha256: "5a678ffbbea6c16eeed3535bbd6bc427c773363a07eecd11e67cec6ca578deec"
+    e4_verifier_id: "3b8579ff-e1aa-4584-9292-37450ae7f23f"
+    e4_verdict: "INTEGRITY_PASS"
+    e4_independence: "IND1 (fresh blind research subagent)"
+    deterministic_test_result: "204 passed in 1.35s"
+    uv_boundary_record: "UV-BND-YM004-001"
+    release_eligibility_effect: "GATES_YM-005_AND_YM-006_UNTIL_YM-004_OWNER_CLOSEOUT"

@@ -1,13 +1,13 @@
 # LIVE PROJECT STATE — Universal Governance Minimal v4.0.3
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 2
+revision: 3
 activation: ACTIVE
 
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "14101b2382be502ebdf810f2796e62be0c99f134"
+  head: "645f2801f7bf8a15e9cb92cbcfdedf941ebc598c"
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -21,10 +21,10 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 2
-  last_updated_at: "2026-09-08T22:00:00Z"
+  last_expected_revision: 3
+  last_updated_at: "2026-09-08T22:30:00Z"
   active_contract: "YM-004"
-  frozen_candidate: "14101b2382be502ebdf810f2796e62be0c99f134"
+  frozen_candidate: "645f2801f7bf8a15e9cb92cbcfdedf941ebc598c"
 
 current_objective: YM-004
 
@@ -73,7 +73,7 @@ objectives:
     writer: "primary-worker"
     reviewer_path: "fresh-blind-research-subagent-IND1"
     acceptor: "human-owner"
-    status: IN_PROGRESS
+    status: AWAITING_HUMAN_ACCEPTANCE
 
   - id: YM-LEAN-001
     scope_in: "Lean 4 formalization scoping for Clay specification and Osterwalder-Schrader reconstruction chain"
@@ -108,8 +108,8 @@ capabilities:
     status: ACCEPTED_BOUNDED
     evidence_refs: ["verification/YM-003_INDEPENDENT_REVIEW.md", "governance/HUMAN_OWNER_ACCEPTANCE_YM-003_20260908.md"]
   CAP-004-rg-reconstruction:
-    status: IN_PROGRESS
-    evidence_refs: []
+    status: INDEPENDENTLY_VERIFIED
+    evidence_refs: ["verification/YM-004_INDEPENDENT_REVIEW.md", "verification/raw/YM-004_E4_RAW_20260908T215837Z.md"]
   CAP-005-lattice-gap:
     status: BLOCKED
   CAP-006-non-meeting-estimate:
@@ -127,8 +127,8 @@ hard_gates:
     status: CLOSED
     description: "Accepted by human owner 2026-09-08; v4.0.3 ACTIVE"
   YM-004-e4-review:
-    status: PENDING
-    description: "Fresh blind E4 review required before YM-004 closeout"
+    status: CLOSED
+    description: "Fresh blind E4 review completed 2026-09-08 with INTEGRITY_PASS (Candidate 645f2801, Verifier 3b8579ff)"
 
 evidence_refs:
   - ref: "EVIDENCE_LEDGER.md"
@@ -168,9 +168,9 @@ release:
   reason: "Internal mathematical research repository; no release target"
 
 last_verified_checkpoint:
-  sha: "14101b2382be502ebdf810f2796e62be0c99f134"
+  sha: "645f2801f7bf8a15e9cb92cbcfdedf941ebc598c"
   timestamp: "2026-09-08"
-  test_result: "194 passed"
+  test_result: "204 passed"
 
 overhead:
   routine_target_fraction: 0.10

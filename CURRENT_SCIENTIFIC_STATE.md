@@ -75,7 +75,7 @@
 - Missing-bridge graph (`YM-003` — ACCEPTED / CLOSED; human owner accepted on 2026-09-08 based on fresh blind post-repair E4 INTEGRITY_PASS; 19-edge DAG and critical cut-set established; 7 tests passed).
 - Cross-problem transfer audit (`YM-XNS-001` — ACCEPTED / CLOSED; human owner accepted on 2026-09-08 based on E4 INTEGRITY_PASS; 10 canonical artifacts produced; 194 tests passed).
 - Universal Governance v4.0.3 migration (`YM-GOV-403` — ACCEPTED / ACTIVE; cutover completed 2026-09-08; 14 transition tests passed).
-- Constructive UV RG Machinery Reproduction (`YM-004` — CANDIDATE_PRODUCED; 10 canonical artifacts produced; 204 tests passed; exact stopping point $g_* \ll 1$ established; UV boundary record `UV-BND-YM004-001` sealed for YM-006; awaiting independent E4 review).
+- Constructive UV RG Machinery Reproduction (`YM-004` — INDEPENDENTLY_VERIFIED; fresh blind E4 verifier `3b8579ff-e1aa-4584-9292-37450ae7f23f` issued `INTEGRITY_PASS`; 10 canonical artifacts produced; 204 tests passed; exact stopping point $g_* \ll 1$ established; UV boundary record `UV-BND-YM004-001` sealed for YM-006; AWAITING_HUMAN_OWNER_ACCEPTANCE).
 
 ## UNVERIFIED
 - No original Yang–Mills lemma has been established in this repository.

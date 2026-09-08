@@ -1,7 +1,7 @@
 # NEXT ACTION
 
 ## Current primary action
-`YM-004 — Rigorous UV / Constructive RG Machinery Reproduction (CANDIDATE_AUDIT_READY)`
+`YM-004 — Rigorous UV / Constructive RG Machinery Reproduction (AWAITING_HUMAN_OWNER_ACCEPTANCE)`
 
 ## Current parallel action (non-blocking)
 `YM-LEAN-001 — Lean 4 Formalization Scoping (READY_PARALLEL)`
@@ -12,7 +12,8 @@
 - Proved stopping point: $g_k \le g_* \ll 1$ (large-field polymer cluster expansion loses contractivity).
 - Proved finite-volume property: Boundary terms are extensive and do not obstruct $L_0 \to \infty$; the barrier is scale flow exiting weak coupling.
 - Canonical UV boundary record `UV-BND-YM004-001` sealed for YM-006.
-- Next step: Freeze candidate SHA and invoke fresh blind independent E4 verifier.
+- Fresh blind independent E4 verifier subagent (`3b8579ff-e1aa-4584-9292-37450ae7f23f`) issued `INTEGRITY_PASS`.
+- Next step: Present completion report to human owner for acceptance decision. Upon acceptance, unblock YM-005.
 
 ## Completed actions
 - `YM-003 — Construct missing-bridge graph` (ACCEPTED / CLOSED; owner accepted 2026-09-08)
