@@ -86,6 +86,15 @@
   - Reconstructing Wilson strong-coupling expansion, convergent cluster expansions, transfer-matrix spectral gap, infinite-volume lattice Gibbs state, and modern theorems (Shen–Zhu–Zhu, Cao–Nissim–Sheffield).
   - Target: Canonical IR Boundary Record establishing the strongest rigorously proved strong-coupling regime and the first unproved extension toward the continuum limit.
 
+- Rigorous IR / Lattice Gap Machinery Reproduction (`YM-005`):
+  - 10 canonical YM-005 literature artifacts produced and fingerprinted: primary source map, lattice formalism audit, cluster expansion ledger, spectral gap/decay audit, area law vs mass gap audit, 11-dimensional theorem ledger, canonical IR boundary record (`IR-BND-YM005-001`), obstruction audit, visual intuition data, and final synthesis.
+  - Reconstructed and decoupled: Wilson strong-coupling expansion (`THM-YM-0008`), reflection positivity & transfer matrix (`THM-YM-0009`), high-temperature cluster expansions (`THM-YM-0015`), infinite-volume Gibbs measures & uniform Poincaré/log-Sobolev inequalities (Shen–Zhu–Zhu 2023, `THM-YM-0027`), and modern area law bounds (Cao–Nissim–Sheffield 2025, `THM-YM-0028`, `0029`).
+  - Governing invariants strictly enforced: `INV-YM005-001` ($\Delta_{\text{lat}} \ne \Delta_{\text{Clay}}$), `INV-YM005-002` (Area Law $\ne$ Spectral Gap, with 2D pure YM and Fradkin–Shenker counterexamples), `INV-YM005-003` (explicit `PROJECT_ESTIMATE` / `HEURISTIC_PHYSICAL_TRANSLATION` parameter taxonomy and symbolic bounds), `INV-YM005-004` (11-dimensional parameter scope mapping).
+  - Deterministic test suite `tests/test_lattice_gap_reconstruction.py` (13 tests) passing; full repository suite 222/222 PASS.
+  - Fresh blind independent E4 verification completed by subagent `41e2f61e-116b-47f9-ab0f-cc8b014f702c` (`IND1`) with verdict `INTEGRITY_PASS`.
+  - Authoritative raw receipt captured at `verification/raw/YM-005_E4_RAW_20260921T224854Z.md` (SHA-256: `ddb351769434f85cf2eb82338533938fdd8790d18b44b6c12b5640e569309b96`).
+  - Current status: `AWAITING_HUMAN_OWNER_ACCEPTANCE`.
+
 ## UNVERIFIED
 - No original Yang–Mills lemma has been established in this repository.
 - No continuum mass-gap argument has been established.
@@ -95,7 +104,7 @@
 Rigorous constructive control linking ultraviolet asymptotic freedom ($g_k \le g_* \ll 1$, YM-004) to infrared mass generation (lattice strong-coupling $\beta \le \beta_0$, YM-005) remains open in 4D continuum spacetime across the intermediate-coupling transition ($g_k \sim 1$).
 
 ## NEXT ACTION
-Execute Task `YM-005`: reproduce rigorous lattice gap and strong-coupling machinery, formulate canonical IR Boundary Record, implement deterministic test suite (`tests/test_lattice_gap_reconstruction.py`), and invoke fresh blind E4 audit. Non-blocking parallel track `YM-LEAN-001` continues. YM-006 remains gated on YM-005.
+Awaiting explicit Human Owner Acceptance of Task `YM-005` to unblock and activate Task `YM-006` (Precise Non-Meeting Estimate Identification). Non-blocking parallel track `YM-LEAN-001` continues.
 
 
 

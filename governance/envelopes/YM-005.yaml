@@ -112,8 +112,11 @@ task_execution_envelope:
       minimum_independence: "IND1"
       candidate_bound: true
   completion_record:
-    status: "IN_PROGRESS"
-    candidate_id: null
-    e4_receipt: null
-    e4_verdict: null
+    status: "AWAITING_HUMAN_OWNER_ACCEPTANCE"
+    candidate_id: "7e6fb95d857b82afcb01323ddf1cc48c777f7358"
+    e4_receipt: "verification/YM-005_INDEPENDENT_REVIEW.md"
+    raw_e4_receipt: "verification/raw/YM-005_E4_RAW_20260921T224854Z.md"
+    raw_e4_sha256: "ddb351769434f85cf2eb82338533938fdd8790d18b44b6c12b5640e569309b96"
+    verifier_id: "41e2f61e-116b-47f9-ab0f-cc8b014f702c"
+    e4_verdict: "INTEGRITY_PASS"
     release_eligibility_effect: "GATES_YM-006_UNTIL_YM-005_OWNER_CLOSEOUT"

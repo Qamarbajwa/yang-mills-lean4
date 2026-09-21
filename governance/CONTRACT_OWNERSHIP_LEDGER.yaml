@@ -815,7 +815,10 @@ contracts:
     - Claiming proof of Yang-Mills existence or mass gap
     - Authoring raw E4 text directly
     - Self-declaring human-owner constitutional acceptance
-  outcome: IN_PROGRESS
+  candidate_id: "7e6fb95d857b82afcb01323ddf1cc48c777f7358"
+  raw_e4_receipt: "verification/raw/YM-005_E4_RAW_20260921T224854Z.md"
+  e4_receipt: "verification/YM-005_INDEPENDENT_REVIEW.md"
+  outcome: INDEPENDENTLY_VERIFIED_AWAITING_OWNER_ACCEPTANCE
 
 - contract_id: CONTRACT-YM-LEAN-001
   task_id: YM-LEAN-001
