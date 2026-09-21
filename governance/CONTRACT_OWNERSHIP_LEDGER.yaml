@@ -892,7 +892,7 @@ contracts:
   reviewer:
     environment: Antigravity
     agent_id: fresh-blind-research-subagent-IND1
-    execution_id: "conversation://TBD_SUBAGENT"
+    execution_id: "conversation://3f290335-2fbc-42e2-af1a-390b6abc84ae"
     independence_level: LEVEL_A_SAME_APP_SAME_MODEL_SEPARATE_SESSION
   acceptance_authority:
     environment: HumanOwner
@@ -910,10 +910,10 @@ contracts:
     - Claiming proof of Yang-Mills existence or mass gap
     - Authoring raw E4 text directly
     - Self-declaring human-owner constitutional acceptance
-  candidate_id: null
-  raw_e4_receipt: null
-  e4_receipt: null
-  outcome: IN_PROGRESS
+  candidate_id: "da73d8dfa7aa150e7b8c72879555aa0b182cb0aa"
+  raw_e4_receipt: "verification/raw/YM-007_E4_RAW_20260921T230446Z.md"
+  e4_receipt: "verification/YM-007_INDEPENDENT_REVIEW.md"
+  outcome: INDEPENDENTLY_VERIFIED_AWAITING_OWNER_ACCEPTANCE
 
 
 

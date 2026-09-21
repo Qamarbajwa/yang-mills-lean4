@@ -346,3 +346,34 @@ def test_ym006_independent_review_provenance_if_present():
     assert m_sha, "Must record CANDIDATE GIT SHA AUDITED"
     assert len(m_sha.group(1)) >= 7
 
+
+def test_ym007_independent_review_provenance_if_present():
+    review_path = ROOT / "verification" / "YM-007_INDEPENDENT_REVIEW.md"
+    if not review_path.exists():
+        return
+    content = review_path.read_text(encoding="utf-8")
+
+    # Raw file reference
+    m_raw = re.search(r"DERIVED FROM[:\* ]*`([^`]+)`", content)
+    assert m_raw, "Must declare DERIVED FROM raw verifier file"
+    raw_rel = m_raw.group(1)
+    raw_path = ROOT / raw_rel
+    assert raw_path.exists(), f"Raw verifier artifact {raw_path} must exist on disk"
+
+    # Raw hash match
+    m_sha = re.search(r"RAW_SHA256[:\* ]*`([a-f0-9]{64})`", content)
+    assert m_sha, "Must record RAW_SHA256"
+    recorded_sha = m_sha.group(1)
+    actual_sha = hashlib.sha256(raw_path.read_bytes()).hexdigest()
+    assert recorded_sha == actual_sha, f"Raw artifact hash mismatch: {recorded_sha} != {actual_sha}"
+
+    # Verifier ID
+    m_verifier = re.search(r"VERIFIER CONVERSATION ID[:\* ]*`([^`]+)`", content)
+    assert m_verifier, "Must record VERIFIER CONVERSATION ID"
+    assert len(m_verifier.group(1)) > 5
+
+    # Candidate SHA
+    m_sha = re.search(r"CANDIDATE GIT SHA AUDITED[:\* ]*`([a-f0-9]+)`", content)
+    assert m_sha, "Must record CANDIDATE GIT SHA AUDITED"
+    assert len(m_sha.group(1)) >= 7
+

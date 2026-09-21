@@ -111,7 +111,7 @@ objectives:
     writer: "primary-worker"
     reviewer_path: "fresh-blind-research-subagent-IND1"
     acceptor: "human-owner"
-    status: IN_PROGRESS
+    status: AWAITING_HUMAN_OWNER_ACCEPTANCE
 
 capabilities:
   CAP-001-problem-specification:
