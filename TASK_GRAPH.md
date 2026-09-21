@@ -34,3 +34,4 @@
 | YM-007 | Evaluation of novel theoretical mechanisms | YM-006 | T3 | non-perturbative mechanism evaluation + E4 review | INDEPENDENTLY_VERIFIED_AWAITING_OWNER_ACCEPTANCE |
 | YM-008 | Synthesis and formulation of hybrid attack strategy | YM-007 | T3 | hybrid attack specification + adversarial falsification | INDEPENDENTLY_VERIFIED_AWAITING_OWNER_ACCEPTANCE |
 | YM-009 | Execution of hybrid attack strategy and quantitative closure | YM-008 | T3 | non-perturbative gluing + independent review | INDEPENDENTLY_VERIFIED_AWAITING_OWNER_ACCEPTANCE |
+| YM-010 | Global research monograph, axiomatic verification, and Clay synthesis | YM-009 | T3 | program monograph + global bridge closure + E4 review | IN_PROGRESS |

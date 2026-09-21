@@ -102,6 +102,10 @@ scientific_fingerprint:
     - literature/YM-009-CONTINUUM-LIMIT-ROBUSTNESS.md
     - literature/YM-009-CANONICAL-QUANTITATIVE-RECORD.md
     - literature/YM-009-FINAL-SYNTHESIS.md
+    - literature/YM-010-PROGRAM-MONOGRAPH-AND-SYNTHESIS.md
+    - literature/YM-010-GLOBAL-THEOREM-AND-BRIDGE-CLOSURE.md
+    - literature/YM-010-FORMAL-VERIFICATION-ROADMAP.md
+    - literature/YM-010-CANONICAL-PROGRAM-RECORD.md
     - governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml
 unknown_policy:
   research_locations:

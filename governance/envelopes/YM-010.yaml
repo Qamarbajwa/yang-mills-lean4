@@ -1,0 +1,115 @@
+task_execution_envelope:
+  schema_version: "4.0.3"
+  identity:
+    task_id: "YM-010"
+    project_id: "YANG_MILLS_MASS_GAP"
+    project_name: "Yang-Mills and the Mass Gap"
+    governance_version: "4.0.3"
+    adoption_mode: "ACTIVE_GOVERNED"
+  direction:
+    intent_refs: ["governance/PROJECT_DIRECTION.md"]
+    roadmap_objective: "CAP-010-program-monograph"
+    owner_non_goals:
+      - "Claiming certified external prize settlement of Clay Millennium Problem #4 prior to worldwide peer review and Clay Mathematics Institute certification"
+      - "Self-accepting scientific or program milestones without explicit Human Owner constitutional sign-off"
+      - "Conflating candidate theoretical proof architecture with external mathematical consensus"
+      - "Bypassing fresh blind independent E4 verification"
+    owner_reserved_boundaries: ["publication", "legal", "spend", "destructive history action", "constitutional acceptance"]
+  objective:
+    exact_objective: >-
+      Author the Comprehensive Program Monograph, Global Bridge Closure Matrix, Formal Verification Roadmap,
+      and Canonical Program Record for the Yang–Mills and the Mass Gap Research Programme:
+      (1) Consolidate the 30 formal Clay requirements, 17 mathematical definitions, and 40+ cataloged theorems
+          into an integrated global mathematical architecture,
+      (2) Establish the complete theorem-to-bridge traceability closure against the 19-edge missing-bridge DAG from YM-003,
+          proving that all critical cut-set chokepoints are non-perturbatively bridged,
+      (3) Document the complete Lean 4 formalization architecture in formal/lean4/ across all five modules,
+      (4) Establish the definitive epistemic assessment of Clay Millennium Problem #4, outlining the precise obligations
+          for external journal submission and worldwide mathematical peer review, while strictly enforcing
+          clay_millennium_problem_status: "OPEN_AND_UNSOLVED",
+      (5) Catalog Canonical Program Record PROG-REC-YM010-001 with full parameter provenance traceability, and
+      (6) Subject the candidate to deterministic regression testing and fresh blind independent E4 verification.
+    rationale: >-
+      Tasks YM-000 through YM-009 have systematically completed every foundational, historical, structural,
+      computational, theoretical, and formal stage of the research pipeline. Task YM-010 synthesizes the entire
+      corpus into the definitive research monograph and closed-world program ledger.
+    done_boundary: >-
+      Canonical YM-010 literature artifacts (program monograph, global bridge closure, formal roadmap, canonical program record),
+      closed-world manifest synchronization, deterministic test suite (tests/test_program_monograph.py),
+      and fresh blind independent E4 verification.
+  base_state:
+    repository_or_workspace: "D:\\Comfy UI\\yang mills and the mass gap"
+    branch_or_state_channel: "master"
+    base_candidate_id: "c4d194c"
+    dirty_state: "CLEAN"
+    preserved_unrelated_work: ["All prior accepted tasks YM-000 through YM-009, YM-LEAN-001, YM-XNS-001, ROS v1.0, and v4.0.3 governance"]
+  eligibility:
+    dependencies:
+      - {id: "YM-009", state: "INDEPENDENTLY_VERIFIED", evidence_ref: "verification/YM-009_INDEPENDENT_REVIEW.md"}
+      - {id: "YM-008", state: "INDEPENDENTLY_VERIFIED", evidence_ref: "verification/YM-008_INDEPENDENT_REVIEW.md"}
+      - {id: "YM-007", state: "INDEPENDENTLY_VERIFIED", evidence_ref: "verification/YM-007_INDEPENDENT_REVIEW.md"}
+      - {id: "YM-006", state: "INDEPENDENTLY_VERIFIED", evidence_ref: "verification/YM-006_INDEPENDENT_REVIEW.md"}
+      - {id: "YM-005", state: "INDEPENDENTLY_VERIFIED", evidence_ref: "verification/YM-005_INDEPENDENT_REVIEW.md"}
+      - {id: "YM-004", state: "ACCEPTED", evidence_ref: "governance/HUMAN_OWNER_ACCEPTANCE_YM-004_20260908.md"}
+      - {id: "YM-003", state: "ACCEPTED", evidence_ref: "governance/HUMAN_OWNER_ACCEPTANCE_YM-003_20260908.md"}
+      - {id: "ROS v1.0", state: "ACCEPTED", evidence_ref: "governance/HUMAN_OWNER_ACCEPTANCE_ROS_v1.0_20260830.md"}
+    technical_inputs_available: true
+    traceable_to_intent: true
+    architecture_permits: true
+    inside_standing_mandate: true
+    candidate_state_known: true
+    risk_inside_ceiling: true
+    blocking_invariant_present: false
+    reserved_authority_required_for_technical_mutation: false
+    eligible: true
+    blocker_class: null
+    blocker_detail: null
+  classification:
+    risk_tier: "R2"
+    action_class: "B"
+    risk_reasons: ["Synthesizes entire multi-year research programme into definitive monograph and bridge closure", "Defines external refereeing roadmap"]
+    active_modules: ["CORE-PROJECT-BINDING", "CORE-AUTHORITY", "CORE-RISK", "CORE-DEPENDENCY", "CORE-EVIDENCE", "CORE-TEST-INTEGRITY", "CORE-GIT-STATE", "RESEARCH-SCIENTIFIC", "ARTIFACT-DATA"]
+  mandate:
+    mandate_id: "MANDATE-YM-010"
+    scope_in:
+      - "literature/YM-010*"
+      - "governance/envelopes/YM-010.yaml"
+      - "tests/test_program_monograph.py"
+      - "TASK_GRAPH.md"
+      - "CURRENT_SCIENTIFIC_STATE.md"
+      - "NEXT_ACTION.md"
+    scope_out:
+      - "OFFICIAL_PROBLEM_SPECIFICATION.md"
+      - "Claiming certified external prize settlement of Clay Millennium Problem #4 prior to peer review"
+      - "Authoring raw E4 text directly"
+      - "Self-declaring human-owner constitutional acceptance"
+    authorities_granted: ["WRITE_ALLOWED_SCOPE", "RUN_TESTS", "RECORD_EVIDENCE"]
+    authorities_forbidden: ["AUTHOR_RAW_E4", "SELF_ACCEPT", "FORCE_PUSH", "REMOTE_PUSH"]
+  execution:
+    assigned_roles:
+      writer: "primary-worker"
+      reviewer: "fresh-blind-research-subagent-IND1"
+      acceptance_authority: "human-owner"
+    work_breakdown:
+      - "Step 1: Program monograph and architecture synthesis (literature/YM-010-PROGRAM-MONOGRAPH-AND-SYNTHESIS.md)"
+      - "Step 2: Global theorem and bridge closure traceability matrix (literature/YM-010-GLOBAL-THEOREM-AND-BRIDGE-CLOSURE.md)"
+      - "Step 3: Lean 4 formal verification roadmap and status (literature/YM-010-FORMAL-VERIFICATION-ROADMAP.md)"
+      - "Step 4: Canonical program record PROG-REC-YM010-001 (literature/YM-010-CANONICAL-PROGRAM-RECORD.md)"
+      - "Step 5: Closed-world manifest synchronization (90 -> 94 canonical files)"
+      - "Step 6: Deterministic verification test suite (tests/test_program_monograph.py)"
+      - "Step 7: Fresh blind independent E4 verification and direct machine capture"
+    invariants:
+      - {id: "INV-YM010-001", statement: "CLAY_MILLENNIUM_PROBLEM_STATUS_REMAINS_OPEN_AND_UNSOLVED", zero_tolerance: true}
+      - {id: "INV-YM010-002", statement: "GLOBAL_BRIDGE_CLOSURE_TRACEABILITY_REQUIRED", zero_tolerance: true}
+      - {id: "INV-YM010-003", statement: "LEAN4_FORMAL_ROADMAP_SYNCHRONIZATION_REQUIRED", zero_tolerance: true}
+      - {id: "INV-YM010-004", statement: "CLOSED_WORLD_MANIFEST_SYNCHRONIZATION_REQUIRED", zero_tolerance: true}
+  closure:
+    candidate_id: null
+    evidence_package:
+      e3_test_run: null
+      e4_review_doc: null
+      raw_e4_receipt: null
+      raw_e4_sha256: null
+    verification_verdict: null
+    closure_status: "IN_PROGRESS"
+    human_owner_acceptance: null

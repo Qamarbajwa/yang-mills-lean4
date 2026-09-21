@@ -1,13 +1,13 @@
 # LIVE PROJECT STATE — Universal Governance Minimal v4.0.3
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 9
+revision: 10
 activation: ACTIVE
 
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "5913a61"
+  head: "c4d194c"
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -21,12 +21,12 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 10
-  last_updated_at: "2026-09-22T01:15:00Z"
-  active_contract: "YM-009"
-  frozen_candidate: "70dfd3a"
+  last_expected_revision: 11
+  last_updated_at: "2026-09-22T01:20:00Z"
+  active_contract: "YM-010"
+  frozen_candidate: null
 
-current_objective: YM-009
+current_objective: YM-010
 
 objectives:
   - id: YM-GOV-403
@@ -130,6 +130,15 @@ objectives:
     reviewer_path: "fresh-blind-research-subagent-IND1"
     acceptor: "human-owner"
     status: AWAITING_HUMAN_OWNER_ACCEPTANCE
+
+  - id: YM-010
+    scope_in: "Global research monograph, axiomatic verification, and Clay synthesis"
+    dependencies: ["YM-009"]
+    risk: R2
+    writer: "primary-worker"
+    reviewer_path: "fresh-blind-research-subagent-IND1"
+    acceptor: "human-owner"
+    status: IN_PROGRESS
 
 capabilities:
   CAP-001-problem-specification:
