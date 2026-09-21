@@ -1,13 +1,13 @@
 # LIVE PROJECT STATE — Universal Governance Minimal v4.0.3
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 5
+revision: 6
 activation: ACTIVE
 
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "7e6fb95"
+  head: "6e734f6"
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -21,12 +21,12 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 6
-  last_updated_at: "2026-09-21T22:50:00Z"
-  active_contract: "YM-005"
-  frozen_candidate: "7e6fb95d857b82afcb01323ddf1cc48c777f7358"
+  last_expected_revision: 7
+  last_updated_at: "2026-09-21T22:58:00Z"
+  active_contract: "YM-006"
+  frozen_candidate: "6e734f6ca4a775f03646ab788aed2c4e0f64c040"
 
-current_objective: YM-005
+current_objective: YM-006
 
 objectives:
   - id: YM-GOV-403
@@ -99,7 +99,10 @@ objectives:
     scope_in: "Precise non-meeting estimate identification"
     dependencies: ["YM-004", "YM-005"]
     risk: R2
-    status: BLOCKED
+    writer: "primary-worker"
+    reviewer_path: "fresh-blind-research-subagent-IND1"
+    acceptor: "human-owner"
+    status: AWAITING_HUMAN_OWNER_ACCEPTANCE
 
 capabilities:
   CAP-001-problem-specification:

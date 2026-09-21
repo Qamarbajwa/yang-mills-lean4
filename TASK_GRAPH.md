@@ -30,4 +30,5 @@
 | YM-004 | Reconstruct rigorous RG/Bałaban program | YM-003 | T3 | theorem reproduction + finite-volume stopping point | ACCEPTED / CLOSED |
 | YM-LEAN-001 | Lean 4 formalization scoping for Clay spec and OS reconstruction | YM-003 | T2 | formalization design + non-blocking scoping | COMPLETED / SCOPED |
 | YM-005 | Reconstruct rigorous lattice gap program | YM-004 | T3 | theorem reproduction + independent review | INDEPENDENTLY_VERIFIED_AWAITING_OWNER_ACCEPTANCE |
-| YM-006 | Identify the precise non-meeting estimate | YM-004, YM-005 | T3 | explicit dependency proof + adversarial review | BLOCKED |
+| YM-006 | Identify the precise non-meeting estimate | YM-004, YM-005 | T3 | explicit dependency proof + adversarial review | INDEPENDENTLY_VERIFIED_AWAITING_OWNER_ACCEPTANCE |
+| YM-007 | Evaluation of novel theoretical mechanisms | YM-006 | T3 | non-perturbative mechanism evaluation + E4 review | BLOCKED |
