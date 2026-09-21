@@ -1,0 +1,126 @@
+task_execution_envelope:
+  schema_version: "4.0.3"
+  identity:
+    task_id: "YM-008"
+    project_id: "YANG_MILLS_MASS_GAP"
+    project_name: "Yang-Mills and the Mass Gap"
+    governance_version: "4.0.3"
+    adoption_mode: "ACTIVE_GOVERNED"
+  direction:
+    intent_refs: ["governance/PROJECT_DIRECTION.md"]
+    roadmap_objective: "CAP-008-hybrid-attack-strategy"
+    owner_non_goals:
+      - "Claiming full proof of 4D continuum Yang-Mills existence or mass gap"
+      - "Claiming that the hybrid strategy constitutes a closed proof"
+      - "Equating heuristic multi-scale composition with verified mathematical gluing"
+      - "Bypassing adversarial falsification stress tests"
+    owner_reserved_boundaries: ["publication", "legal", "spend", "destructive history action", "constitutional acceptance"]
+  objective:
+    exact_objective: >-
+      Formulate, specify, and adversarially stress-test a governed Multi-Scale Hybrid Attack Strategy
+      to bridge the 4D Euclidean Yang–Mills intermediate crossover window (g_k ~ 1, beta ~ 1-2):
+      (1) Define the 3-scale architecture synthesizing short-distance gradient flow smearing (x <= 0.15 fm),
+          intermediate-scale semidefinite programming loop bootstrap bounds (0.15 fm <= x <= 0.50 fm),
+          and long-distance topological center-vortex clustering (x >= 0.50 fm),
+      (2) Formulate explicit mathematical scale-interface matching equations between UV <-> Intermediate and Intermediate <-> IR,
+      (3) Execute an exhaustive adversarial falsification protocol (Track L) subjecting the hybrid architecture
+          to 5 destructive stress tests (OS3 leakage, gauge anomalies, SDP feasibility collapse, vortex thickness divergence, volume accumulation),
+      (4) Establish a Lean 4 formalization blueprint for scale partition and interface contracts,
+      (5) Catalog Canonical Strategy Record STRAT-REC-YM008-001 with explicit parameter provenance tags, and
+      (6) Provide mathematical synthesis preparing subsequent constructive execution tasks.
+    rationale: >-
+      Task YM-007 proved that no single existing non-perturbative framework in isolation can bridge the crossover window.
+      However, the complementary strengths of gradient flow (UV finiteness), loop bootstrap (non-perturbative bounds across all beta),
+      and topological center-vortex clustering (physical mass gap and area law) can be synthesized into a governed hybrid strategy.
+    done_boundary: >-
+      Canonical YM-008 literature artifacts (architecture specification, interface analysis, adversarial falsification protocol,
+      Lean formalization blueprint, canonical record, and final synthesis), deterministic test suite (tests/test_hybrid_strategy.py),
+      closed-world fingerprint synchronization, and independent E4 verification.
+  base_state:
+    repository_or_workspace: "D:\\Comfy UI\\yang mills and the mass gap"
+    branch_or_state_channel: "master"
+    base_candidate_id: "dc081bf"
+    dirty_state: "CLEAN"
+    preserved_unrelated_work: ["All prior accepted tasks YM-000 through YM-007, YM-LEAN-001, YM-XNS-001, ROS v1.0, and v4.0.3 governance"]
+  eligibility:
+    dependencies:
+      - {id: "YM-007", state: "INDEPENDENTLY_VERIFIED", evidence_ref: "verification/YM-007_INDEPENDENT_REVIEW.md"}
+      - {id: "YM-006", state: "INDEPENDENTLY_VERIFIED", evidence_ref: "verification/YM-006_INDEPENDENT_REVIEW.md"}
+      - {id: "YM-005", state: "INDEPENDENTLY_VERIFIED", evidence_ref: "verification/YM-005_INDEPENDENT_REVIEW.md"}
+      - {id: "YM-004", state: "ACCEPTED", evidence_ref: "governance/HUMAN_OWNER_ACCEPTANCE_YM-004_20260908.md"}
+      - {id: "YM-003", state: "ACCEPTED", evidence_ref: "governance/HUMAN_OWNER_ACCEPTANCE_YM-003_20260908.md"}
+      - {id: "ROS v1.0", state: "ACCEPTED", evidence_ref: "governance/HUMAN_OWNER_ACCEPTANCE_ROS_v1.0_20260830.md"}
+    technical_inputs_available: true
+    traceable_to_intent: true
+    architecture_permits: true
+    inside_standing_mandate: true
+    candidate_state_known: true
+    risk_inside_ceiling: true
+    blocking_invariant_present: false
+    reserved_authority_required_for_technical_mutation: false
+    eligible: true
+    blocker_class: null
+    blocker_detail: null
+  classification:
+    risk_tier: "R2"
+    action_class: "B"
+    risk_reasons: ["Formulates multi-scale hybrid research architecture for Yang-Mills crossover", "Subject to mandatory adversarial falsification"]
+    active_modules: ["CORE-PROJECT-BINDING", "CORE-AUTHORITY", "CORE-RISK", "CORE-DEPENDENCY", "CORE-EVIDENCE", "CORE-TEST-INTEGRITY", "CORE-GIT-STATE", "RESEARCH-SCIENTIFIC", "ARTIFACT-DATA"]
+  mandate:
+    mandate_id: "MANDATE-YM-008"
+    scope_in:
+      - "literature/YM-008*"
+      - "governance/envelopes/YM-008.yaml"
+      - "tests/test_hybrid_strategy.py"
+      - "TASK_GRAPH.md"
+      - "CURRENT_SCIENTIFIC_STATE.md"
+      - "NEXT_ACTION.md"
+    scope_out:
+      - "OFFICIAL_PROBLEM_SPECIFICATION.md"
+      - "Claiming proof of continuum Yang-Mills existence or mass gap"
+      - "Declaring hybrid architecture unconditionally proved without adversarial falsification"
+    authorities_granted: ["WRITE_ALLOWED_SCOPE", "RUN_TESTS", "RECORD_EVIDENCE"]
+    authorities_forbidden: ["AUTHOR_RAW_E4", "SELF_ACCEPT", "FORCE_PUSH", "REMOTE_PUSH"]
+  execution:
+    assigned_roles:
+      writer: "primary-worker"
+      reviewer: "fresh-blind-research-subagent-IND1"
+      acceptance_authority: "human-owner"
+    work_breakdown:
+      - "Step 1: Multi-scale hybrid architecture specification (literature/YM-008-HYBRID-ARCHITECTURE-SPECIFICATION.md)"
+      - "Step 2: Scale-interface mathematical matching analysis (literature/YM-008-SCALE-INTERFACE-ANALYSIS.md)"
+      - "Step 3: Adversarial falsification protocol and stress testing (literature/YM-008-ADVERSARIAL-FALSIFICATION-PROTOCOL.md)"
+      - "Step 4: Lean 4 formalization blueprint (literature/YM-008-LEAN-FORMALIZATION-BLUEPRINT.md)"
+      - "Step 5: Canonical strategy record STRAT-REC-YM008-001 (literature/YM-008-CANONICAL-STRATEGY-RECORD.md)"
+      - "Step 6: Mathematical synthesis and setup for downstream tasks (literature/YM-008-FINAL-SYNTHESIS.md)"
+      - "Step 7: Deterministic test suite (tests/test_hybrid_strategy.py)"
+      - "Step 8: Fresh blind independent E4 verification and direct machine capture"
+    invariants:
+      - {id: "INV-YM008-001", statement: "HYBRID_STRATEGY_FORMULATION_IS_NOT_CLAY_MILLENNIUM_PROOF", zero_tolerance: true}
+      - {id: "INV-YM008-002", statement: "EXPLICIT_SCALE_INTERFACE_MATCHING_CONDITIONS_REQUIRED", zero_tolerance: true}
+      - {id: "INV-YM008-003", statement: "MANDATORY_ADVERSARIAL_FALSIFICATION_STRESS_TESTING", zero_tolerance: true}
+      - {id: "INV-YM008-004", statement: "ROS_V10_CLOSED_WORLD_FINGERPRINT_SYNCHRONIZATION", zero_tolerance: true}
+  acceptance:
+    hard_gates:
+      - {id: "GATE-YM008-01", condition: "3-scale hybrid architecture formally specified with rigorous scale boundaries", required_state: "PASS"}
+      - {id: "GATE-YM008-02", condition: "Scale-interface matching conditions derived for both UV-to-Intermediate and Intermediate-to-IR", required_state: "PASS"}
+      - {id: "GATE-YM008-03", condition: "Adversarial falsification protocol executes 5 stress tests with explicit failure limits", required_state: "PASS"}
+      - {id: "GATE-YM008-04", condition: "Lean 4 formalization blueprint specifies machine-checkable interface contracts", required_state: "PASS"}
+      - {id: "GATE-YM008-05", condition: "Canonical strategy record STRAT-REC-YM008-001 cataloged with explicit parameter provenance", required_state: "PASS"}
+      - {id: "GATE-YM008-06", condition: "Deterministic test suite passes with full regression suite", required_state: "PASS"}
+      - {id: "GATE-YM008-07", condition: "Fresh blind independent E4 review confirms zero overclaims", required_state: "PASS"}
+      - {id: "GATE-YM008-08", condition: "Human owner explicit acceptance", required_state: "AWAITING"}
+    required_evidence:
+      minimum_strength: "E4"
+      required_environments: ["STATIC", "INTEGRATED_LOCAL"]
+      minimum_independence: "IND1"
+      candidate_bound: true
+  completion_record:
+    status: "IN_PROGRESS"
+    candidate_id: null
+    e4_receipt: null
+    raw_e4_receipt: null
+    raw_e4_sha256: null
+    verifier_id: null
+    e4_verdict: null
+    release_eligibility_effect: "GATES_YM-009_UNTIL_YM-008_OWNER_CLOSEOUT"

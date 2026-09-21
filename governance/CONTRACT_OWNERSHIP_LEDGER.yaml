@@ -915,6 +915,41 @@ contracts:
   e4_receipt: "verification/YM-007_INDEPENDENT_REVIEW.md"
   outcome: INDEPENDENTLY_VERIFIED_AWAITING_OWNER_ACCEPTANCE
 
+- contract_id: CONTRACT-YM-008
+  task_id: YM-008
+  risk_tier: R2
+  base_sha: "dc081bf"
+  writer:
+    environment: Antigravity
+    agent_id: primary-worker
+    execution_id: "conversation://00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    model: Antigravity / Gemini / Claude
+  reviewer:
+    environment: Antigravity
+    agent_id: fresh-blind-research-subagent-IND1
+    execution_id: "conversation://TBD_SUBAGENT"
+    independence_level: LEVEL_A_SAME_APP_SAME_MODEL_SEPARATE_SESSION
+  acceptance_authority:
+    environment: HumanOwner
+    authority_id: human-owner
+    authority_type: ENVIRONMENT_LOCAL
+  allowed_scope:
+    - literature/YM-008*
+    - governance/envelopes/YM-008.yaml
+    - tests/test_hybrid_strategy.py
+    - TASK_GRAPH.md
+    - CURRENT_SCIENTIFIC_STATE.md
+    - NEXT_ACTION.md
+  forbidden_scope:
+    - OFFICIAL_PROBLEM_SPECIFICATION.md
+    - Claiming proof of Yang-Mills existence or mass gap
+    - Authoring raw E4 text directly
+    - Self-declaring human-owner constitutional acceptance
+  candidate_id: null
+  raw_e4_receipt: null
+  e4_receipt: null
+  outcome: IN_PROGRESS
+
 
 
 

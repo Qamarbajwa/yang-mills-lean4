@@ -1,13 +1,13 @@
 # LIVE PROJECT STATE — Universal Governance Minimal v4.0.3
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 7
+revision: 8
 activation: ACTIVE
 
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "3d21b38"
+  head: "dc081bf"
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -21,12 +21,12 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 8
-  last_updated_at: "2026-09-22T01:01:00Z"
-  active_contract: "YM-007"
-  frozen_candidate: "3d21b38"
+  last_expected_revision: 9
+  last_updated_at: "2026-09-22T01:06:00Z"
+  active_contract: "YM-008"
+  frozen_candidate: "dc081bf"
 
-current_objective: YM-007
+current_objective: YM-008
 
 objectives:
   - id: YM-GOV-403
@@ -112,6 +112,15 @@ objectives:
     reviewer_path: "fresh-blind-research-subagent-IND1"
     acceptor: "human-owner"
     status: AWAITING_HUMAN_OWNER_ACCEPTANCE
+
+  - id: YM-008
+    scope_in: "Synthesis and formulation of hybrid attack strategy for crossover window"
+    dependencies: ["YM-007"]
+    risk: R2
+    writer: "primary-worker"
+    reviewer_path: "fresh-blind-research-subagent-IND1"
+    acceptor: "human-owner"
+    status: IN_PROGRESS
 
 capabilities:
   CAP-001-problem-specification:
