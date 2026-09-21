@@ -1,0 +1,96 @@
+# YM-005 Final Scientific Synthesis: Rigorous IR and Lattice Gap Reproduction
+
+## 1. Executive Summary and Problem Context
+
+Task `YM-005` (*Rigorous IR / Lattice Gap Machinery Reproduction*) was commissioned to determine the **infrared-side rigorous boundary** of 4D non-Abelian Yang–Mills theory with the exact same precision that Task `YM-004` established on the ultraviolet side.
+
+In accordance with the governing scientific principle:
+$$\boxed{\textbf{Locate both rigorous boundaries before trying to bridge the gap between them.}}$$
+Task `YM-005` has systematically audited, reproduced, and synthesized the entire corpus of rigorous lattice gauge theory, transfer matrix constructions, high-temperature cluster expansions, functional inequalities, and modern area-law bounds.
+
+The primary deliverable of this task is the **Canonical IR Boundary Record** ([`IR-BND-YM005-001`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/literature/YM-005-IR-BOUNDARY-RECORD.md)), which establishes the strongest rigorously proved strong-coupling regime and isolates the first unproved extension toward the continuum limit.
+
+---
+
+## 2. Core Reconstructed Mathematical Machinery
+
+Across 10 canonical artifacts, `YM-005` establishes the following mathematical conclusions:
+
+### 2.1 Reflection Positivity & Physical Transfer Matrix (Osterwalder–Seiler 1978; Lüscher 1977)
+- On hypercubic Euclidean lattices $a \mathbb{Z}^4$, the Wilson plaquette action satisfies Osterwalder–Schrader reflection positivity (OS3) across spatial hyperplanes bisecting links or sites.
+- This constructs a physical positive-definite Hilbert space $\mathcal{H}_{\text{phys}}$ of gauge-invariant wave functions and a self-adjoint, strictly positive contraction transfer matrix $\mathbb{T} = e^{-a H_{\text{lat}}} > 0$.
+- The physical lattice Hamiltonian $H_{\text{lat}} = - \frac{1}{a} \ln \mathbb{T} \ge 0$ is self-adjoint and bounded from below by zero for all bare couplings $\beta \in (0, \infty)$.
+
+### 2.2 Convergent Polymer Cluster Expansions (Gross 1979; Seiler 1982)
+- Expanding the plaquette Boltzmann factor into group characters via the Peter–Weyl theorem maps the partition function to an abstract polymer gas on the dual lattice.
+- For all couplings below the strong-coupling radius $\beta < \beta_0(d, G)$, the Kotecký–Preiss activity condition $\sum_{Y \sim X} |\zeta(Y)| e^{\mu |Y|} \le \mu |X|$ converges absolutely.
+- This establishes:
+  1. Real-analyticity of the thermodynamic free energy density $f(\beta)$ in $|\beta| < \beta_0$.
+  2. Uniqueness of the infinite-volume Gibbs measure $\mu_\infty$ on $\mathbb{Z}^4$.
+  3. Exponential decay of all truncated gauge-invariant correlation functions with dimensionless rate $m_{\text{lat}}(\beta) \sim \ln(1/\beta) > 0$.
+  4. Existence of an isolated vacuum state $|\Omega\rangle \in \mathcal{H}_{\text{phys}}$ and a strictly positive lattice spectral gap $\Delta_{\text{lat}}(\beta, a) \ge m_{\text{lat}}(\beta) / a > 0$.
+
+### 2.3 Stochastic Analysis & Uniform Functional Inequalities (Shen–Zhu–Zhu 2023)
+- Under stochastic quantization via lattice Langevin diffusions on $G^{E(\Lambda)}$, the compact Lie group manifold provides positive single-site Bakry–Émery Ricci curvature $\kappa_G > 0$.
+- For $\beta < \beta_0(d, G)$, the positive Ricci curvature dominates the interaction Hessian, yielding a **uniform Poincaré inequality** $\text{Var}_{\mu_\infty}(f) \le C_{\text{PI}}(\beta) \mathcal{E}(f, f)$ independent of volume.
+- The Markov diffusion generator $-\mathcal{L}$ and the lattice transfer operator possess a strictly positive spectral gap:
+  $$\Delta_{\text{lat}}(\beta) \ge \frac{1}{C_{\text{PI}}(\beta)} > 0$$
+
+### 2.4 Expanded Area Law Regimes (Cao–Nissim–Sheffield 2025)
+- Random surface representations and stochastic couplings rigorously expand the parameter range $\beta \in [0, \beta_1)$ exhibiting an area law for Wilson loops with strictly positive string tension $\sigma(\beta) \ge \sigma_0 > 0$.
+
+---
+
+## 3. Epistemic Invariants Strictly Preserved
+
+In accordance with **ROS v1.0** and the human-owner mandate:
+
+1. **`INV-YM005-001` Enforced:**
+   $$\boxed{\text{LATTICE_SPECTRAL_GAP } \Delta_{\text{lat}}(\beta, a) > 0 \ne \text{CONTINUUM_4D_CLAY_MASS_GAP } \Delta > 0}$$
+   The spectral gap established on the lattice at fixed $a > 0$ does not establish the existence of a continuum quantum field theory in $\mathbb{R}^4$. Taking the continuum limit requires $\beta \to \infty$ ($a \to 0$), which lies outside all known strong-coupling convergence domains.
+
+2. **`INV-YM005-002` Enforced:**
+   $$\boxed{\text{WILSON_AREA_LAW } \langle W(C) \rangle \le C e^{-\sigma \cdot \text{Area}(C)} \ne \text{SPECTRAL_MASS_GAP } \Delta > 0}$$
+   Static quark confinement (area law) and local particle excitations (spectral mass gap in the glueball sector) are mathematically independent. 2D Yang–Mills proves area law without local particle mass gaps, while Higgs/screening models prove mass gaps with perimeter laws.
+
+3. **`INV-YM005-003` Enforced:**
+   All numerical values (e.g. $\beta_0 \sim 0.1 - 0.25$, $a_{\text{strong}} \ge 0.5\text{ fm}$, $\sigma \sim 0.18\text{ GeV}^2$) are strictly classified as `PROJECT_ESTIMATE` or `HEURISTIC_PHYSICAL_TRANSLATION`. Canonical theorem boundaries remain strictly symbolic:
+   $$\beta \le \beta_* \ll 1, \quad a \ge a_{\text{strong}}^* \sim \frac{c_{\text{IR}}}{\Lambda_{\text{QCD}}}$$
+
+4. **`INV-YM005-004` Enforced:**
+   All extracted theorems are mapped across the full 11-dimensional parameter scope in `YM-005-11-DIMENSIONAL-THEOREM-LEDGER.md`.
+
+---
+
+## 4. The Dual-Boundary Synthesis: UV vs. IR
+
+With the completion of `YM-004` and `YM-005`, the repository has established both rigorous boundaries:
+
+```text
+========================================================================================
+                               THE DUAL BOUNDARY OF 4D YANG–MILLS
+========================================================================================
+  UV RIGOROUS BOUNDARY (YM-004)                    IR RIGOROUS BOUNDARY (YM-005)
+  Record: UV-BND-YM004-001                         Record: IR-BND-YM005-001
+  Regime: Asymptotic freedom, g_k <= g_* << 1      Regime: Character expansion, beta <= beta_0 << 1
+  Method: Bałaban Multiscale Effective Action      Method: Osterwalder–Seiler / Shen–Zhu–Zhu
+  Controlled: Finite-volume UV stability a -> 0   Controlled: Infinite-volume lattice gap Delta_lat > 0
+  Stopping Point: g_k -> g_* (Norm loss)          Stopping Point: beta -> beta_0 (Activity loss)
+========================================================================================
+                                           │
+                                           ▼
+               ==========================================================
+                     THE UNBRIDGED NON-PERTURBATIVE CROSSOVER WINDOW
+                             (E-CROSSOVER / OBS-CAND-001)
+                                g_k ~ 1, beta ~ 1 - 2
+               ==========================================================
+```
+
+---
+
+## 5. Transition to Task YM-006 (Precise Non-Meeting Estimate)
+
+With both boundaries located with mathematical rigor:
+- **`YM-004`:** Controlled the UV weak-coupling boundary up to $g_* \ll 1$.
+- **`YM-005`:** Controlled the IR strong-coupling boundary up to $\beta_0 \ll 1$.
+- **`YM-006`:** Is now mathematically ready to be formulated: to compute the **precise non-meeting estimate** measuring the mathematical distance between the UV stopping point ($g_*$) and the IR starting point ($\beta_0$).
