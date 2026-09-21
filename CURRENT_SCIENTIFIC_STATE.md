@@ -129,16 +129,30 @@
   - Formal review record authored at `verification/YM-007_INDEPENDENT_REVIEW.md`.
   - Current status: `AWAITING_HUMAN_OWNER_ACCEPTANCE`.
 
+- **Task `YM-008` (Synthesis and Formulation of Hybrid Attack Strategy) Independently Verified:**
+  - Formulated 3-scale hybrid architecture (UV: gradient flow + Bałaban RG; Crossover: SDP loop bootstrap; IR: center-vortex percolation + cluster expansion).
+  - Derived rigorous scale-interface matching conditions:
+    * Interface 1 ($\mathcal{I}_{\text{UV}\to\text{mid}}$): Flow-regularized Wilson loop $W_t(C)$ with joint scaling $t(a) = c_0 a^2 \to 0$, eliminating loop contact singularities while preserving OS3.
+    * Interface 2 ($\mathcal{I}_{\text{mid}\to\text{IR}}$): Matching SDP loop string tension bounds against center-vortex polymer expansion.
+  - Executed Track L adversarial falsification protocol across 5 destructive stress tests with 4 mandatory guardrails.
+  - Specified Lean 4 formalization blueprint in `literature/YM-008-LEAN-FORMALIZATION-BLUEPRINT.md`.
+  - Cataloged Canonical Strategy Record `STRAT-REC-YM008-001` with explicit parameter provenance tags.
+  - Deterministic test suite `tests/test_hybrid_strategy.py` (10 tests) passing; full repository suite 266/266 PASS.
+  - Fresh blind independent E4 verification completed by subagent `96ea542e-f072-4e9b-b357-83cffca99f05` (`IND1`) with verdict `INTEGRITY_PASS`.
+  - Authoritative raw receipt captured at `verification/raw/YM-008_E4_RAW_20260921T231006Z.md` (SHA-256: `723c87534ca2e3ac2889cc654f698291887e09a513046a9cba1e084c351a2f76`).
+  - Formal review record authored at `verification/YM-008_INDEPENDENT_REVIEW.md`.
+  - Current status: `AWAITING_HUMAN_OWNER_ACCEPTANCE`.
+
 ## UNVERIFIED
 - No original Yang–Mills lemma has been established in this repository.
 - No continuum mass-gap argument has been established.
 - No claimed external solution has been accepted.
 
 ## CURRENT BOTTLENECK
-No single existing theoretical framework in isolation bridges the intermediate crossover window. Bridging the gap requires formulating a multi-scale hybrid attack strategy synthesizing complementary mechanisms (`YM-008`).
+The multi-scale hybrid strategy is formulated, specified, and adversarially screened, but requires quantitative computational and functional-analytic execution across the crossover window (`YM-009`).
 
 ## NEXT ACTION
-Awaiting explicit Human Owner Acceptance of Tasks `YM-005`, `YM-006`, and `YM-007` to unblock and activate Task `YM-008` (Synthesis and Formulation of Hybrid Attack Strategy).
+Awaiting explicit Human Owner Acceptance of Tasks `YM-005`, `YM-006`, `YM-007`, and `YM-008` to unblock and activate Task `YM-009` (Execution of Hybrid Attack Strategy and Quantitative Closure).
 
 
 

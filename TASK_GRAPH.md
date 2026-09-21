@@ -32,5 +32,5 @@
 | YM-005 | Reconstruct rigorous lattice gap program | YM-004 | T3 | theorem reproduction + independent review | INDEPENDENTLY_VERIFIED_AWAITING_OWNER_ACCEPTANCE |
 | YM-006 | Identify the precise non-meeting estimate | YM-004, YM-005 | T3 | explicit dependency proof + adversarial review | INDEPENDENTLY_VERIFIED_AWAITING_OWNER_ACCEPTANCE |
 | YM-007 | Evaluation of novel theoretical mechanisms | YM-006 | T3 | non-perturbative mechanism evaluation + E4 review | INDEPENDENTLY_VERIFIED_AWAITING_OWNER_ACCEPTANCE |
-| YM-008 | Synthesis and formulation of hybrid attack strategy | YM-007 | T3 | hybrid attack specification + adversarial falsification | IN_PROGRESS |
+| YM-008 | Synthesis and formulation of hybrid attack strategy | YM-007 | T3 | hybrid attack specification + adversarial falsification | INDEPENDENTLY_VERIFIED_AWAITING_OWNER_ACCEPTANCE |
 | YM-009 | Execution of hybrid attack strategy and quantitative closure | YM-008 | T3 | non-perturbative gluing + independent review | BLOCKED |
