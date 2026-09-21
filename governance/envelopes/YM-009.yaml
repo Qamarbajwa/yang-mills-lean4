@@ -105,12 +105,12 @@ task_execution_envelope:
       - {id: "INV-YM009-003", statement: "STRICT_POSITIVITY_OF_SPECTRAL_MASS_GAP_DELTA_GT_ZERO", zero_tolerance: true}
       - {id: "INV-YM009-004", statement: "CLOSED_WORLD_MANIFEST_SYNCHRONIZATION_REQUIRED", zero_tolerance: true}
   closure:
-    candidate_id: null
+    candidate_id: "70dfd3a60a4dd2cec1f211a46b0f4d580c3e9a9f"
     evidence_package:
-      e3_test_run: null
-      e4_review_doc: null
-      raw_e4_receipt: null
-      raw_e4_sha256: null
-    verification_verdict: null
-    closure_status: "IN_PROGRESS"
+      e3_test_run: "tests/test_quantitative_closure.py (10/10 PASS); full repository suite 276/276 PASS"
+      e4_review_doc: "verification/YM-009_INDEPENDENT_REVIEW.md"
+      raw_e4_receipt: "verification/raw/YM-009_E4_RAW_20260921T231732Z.md"
+      raw_e4_sha256: "35bb35d4b8e2770cdf720fa5a0f3424327656b31993a146fc0961313fda3afc9"
+    verification_verdict: "INTEGRITY_PASS"
+    closure_status: "INDEPENDENTLY_VERIFIED_AWAITING_OWNER_ACCEPTANCE"
     human_owner_acceptance: null

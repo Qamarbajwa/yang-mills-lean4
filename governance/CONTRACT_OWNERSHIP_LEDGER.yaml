@@ -961,8 +961,8 @@ contracts:
     model: Antigravity / Gemini / Claude
   reviewer:
     environment: Antigravity
-    agent_id: fresh-blind-research-subagent-IND1
-    execution_id: "conversation://pending-subagent-invocation"
+    agent_id: a4e7db68-bc24-4b24-a1a5-a2bae68594e1
+    execution_id: "conversation://a4e7db68-bc24-4b24-a1a5-a2bae68594e1"
     independence_level: LEVEL_A_SAME_APP_SAME_MODEL_SEPARATE_SESSION
   acceptance_authority:
     environment: HumanOwner
@@ -982,10 +982,10 @@ contracts:
     - Claiming certified external solution of Clay Millennium Problem #4 prior to peer review
     - Authoring raw E4 text directly
     - Self-declaring human-owner constitutional acceptance
-  candidate_id: null
-  raw_e4_receipt: null
-  e4_receipt: null
-  outcome: IN_PROGRESS
+  candidate_id: "70dfd3a60a4dd2cec1f211a46b0f4d580c3e9a9f"
+  raw_e4_receipt: "verification/raw/YM-009_E4_RAW_20260921T231732Z.md"
+  e4_receipt: "verification/YM-009_INDEPENDENT_REVIEW.md"
+  outcome: INDEPENDENTLY_VERIFIED_AWAITING_OWNER_ACCEPTANCE
 
 
 
