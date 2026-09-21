@@ -104,12 +104,13 @@ task_execution_envelope:
       - {id: "INV-YM010-003", statement: "LEAN4_FORMAL_ROADMAP_SYNCHRONIZATION_REQUIRED", zero_tolerance: true}
       - {id: "INV-YM010-004", statement: "CLOSED_WORLD_MANIFEST_SYNCHRONIZATION_REQUIRED", zero_tolerance: true}
   closure:
-    candidate_id: null
+    candidate_id: "0dfc476a9f4b9e37085db203fd69d4b1a435bda9"
     evidence_package:
-      e3_test_run: null
-      e4_review_doc: null
-      raw_e4_receipt: null
-      raw_e4_sha256: null
-    verification_verdict: null
-    closure_status: "IN_PROGRESS"
+      e3_test_run: "tests/test_program_monograph.py: 8/8 PASS; full suite: 285/285 PASS"
+      e4_review_doc: "verification/YM-010_INDEPENDENT_REVIEW.md"
+      raw_e4_receipt: "verification/raw/YM-010_E4_RAW_20260921T232407Z.md"
+      raw_e4_sha256: "71ba05fcbbaf439dfc656fe562099dd8257c59e43539cd80d091ad544df1a1ea"
+    verification_verdict: "INTEGRITY_PASS"
+    closure_status: "INDEPENDENTLY_VERIFIED_AWAITING_OWNER_ACCEPTANCE"
     human_owner_acceptance: null
+

@@ -22,9 +22,9 @@ coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
   last_expected_revision: 11
-  last_updated_at: "2026-09-22T01:20:00Z"
+  last_updated_at: "2026-09-22T01:25:00Z"
   active_contract: "YM-010"
-  frozen_candidate: null
+  frozen_candidate: "0dfc476"
 
 current_objective: YM-010
 
@@ -138,7 +138,7 @@ objectives:
     writer: "primary-worker"
     reviewer_path: "fresh-blind-research-subagent-IND1"
     acceptor: "human-owner"
-    status: IN_PROGRESS
+    status: AWAITING_HUMAN_OWNER_ACCEPTANCE
 
 capabilities:
   CAP-001-problem-specification:

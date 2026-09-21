@@ -1,10 +1,10 @@
 # NEXT ACTION
 
 ## Current primary action
-`AWAITING_HUMAN_OWNER_ACCEPTANCE for Tasks YM-005, YM-006, YM-007, YM-008, and YM-009`
+`AWAITING_HUMAN_OWNER_ACCEPTANCE for Tasks YM-005, YM-006, YM-007, YM-008, YM-009, and YM-010`
 
 ## Scope
-- Tasks `YM-005` through `YM-009` are independently verified with immutable raw cryptographic machine receipts (`INTEGRITY_PASS`).
+- Tasks `YM-005` through `YM-010` are independently verified with immutable raw cryptographic machine receipts (`INTEGRITY_PASS`).
 - Awaiting explicit Human Owner constitutional acceptance decisions (`IVR-003`).
 
 ## Completed & Independently Verified Stages (Awaiting Owner Acceptance)
@@ -13,6 +13,7 @@
 - `YM-007 — Evaluation of Novel Theoretical Mechanisms` (`AWAITING_HUMAN_OWNER_ACCEPTANCE`, raw SHA-256 `9c4eceaa...`)
 - `YM-008 — Synthesis and Formulation of Hybrid Attack Strategy` (`AWAITING_HUMAN_OWNER_ACCEPTANCE`, raw SHA-256 `723c8753...`)
 - `YM-009 — Execution of Hybrid Attack Strategy and Quantitative Closure` (`AWAITING_HUMAN_OWNER_ACCEPTANCE`, raw SHA-256 `35bb35d4...`)
+- `YM-010 — Global Research Monograph, Axiomatic Verification, and Clay Synthesis` (`AWAITING_HUMAN_OWNER_ACCEPTANCE`, raw SHA-256 `71ba05fc...`)
 - `YM-GOV-403 — Universal Governance v4.0.3 migration` (ACCEPTED / ACTIVE; owner accepted 2026-09-08)
 - `YM-XNS-001 — Navier–Stokes breakthrough transfer audit` (ACCEPTED / CLOSED; owner accepted 2026-09-08)
 

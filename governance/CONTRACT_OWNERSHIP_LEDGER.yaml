@@ -1017,10 +1017,10 @@ contracts:
     - Claiming certified external prize settlement of Clay Millennium Problem #4 prior to peer review
     - Authoring raw E4 text directly
     - Self-declaring human-owner constitutional acceptance
-  candidate_id: null
-  raw_e4_receipt: null
-  e4_receipt: null
-  outcome: IN_PROGRESS
+  candidate_id: "0dfc476a9f4b9e37085db203fd69d4b1a435bda9"
+  raw_e4_receipt: "verification/raw/YM-010_E4_RAW_20260921T232407Z.md"
+  e4_receipt: "verification/YM-010_INDEPENDENT_REVIEW.md"
+  outcome: INDEPENDENTLY_VERIFIED_AWAITING_OWNER_ACCEPTANCE
 
 
 
