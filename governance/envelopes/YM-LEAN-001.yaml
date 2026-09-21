@@ -51,5 +51,13 @@ task_execution_envelope:
     reviewer_or_verifier: {id: "self-checked-and-tested", qualified: true}
     acceptance_authority: {id: "human-owner", qualified: true}
   completion_record:
-    status: "READY_PARALLEL"
-    candidate_id: null
+    status: "COMPLETED"
+    evidence_ref: "literature/YM-LEAN-001-FORMALIZATION-AUDIT.md"
+    test_suite: "tests/test_lean_formalization_scoping.py"
+    test_result: "7/7 PASS"
+    formal_modules:
+      - "formal/lean4/YangMills/ClaySpecification.lean"
+      - "formal/lean4/YangMills/WightmanAxioms.lean"
+      - "formal/lean4/YangMills/OsterwalderSchraderAxioms.lean"
+      - "formal/lean4/YangMills/MissingBridgeDAG.lean"
+      - "formal/lean4/YangMills.lean"

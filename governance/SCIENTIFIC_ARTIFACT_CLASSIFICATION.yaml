@@ -73,6 +73,7 @@ scientific_fingerprint:
     - literature/YM-005-OBSTRUCTION-CANDIDATE-AUDIT.md
     - literature/YM-005-VISUAL-INTUITION-DATA.md
     - literature/YM-005-FINAL-SYNTHESIS.md
+    - literature/YM-LEAN-001-FORMALIZATION-AUDIT.md
     - governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml
 unknown_policy:
   research_locations:

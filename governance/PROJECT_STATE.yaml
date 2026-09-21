@@ -83,7 +83,7 @@ objectives:
     writer: "primary-worker"
     reviewer_path: "self-checked-and-tested"
     acceptor: "human-owner"
-    status: READY_PARALLEL
+    status: COMPLETED
 
   - id: YM-005
     scope_in: "Rigorous IR / Lattice Gap Machinery Reproduction (Wilson strong-coupling, cluster expansions, transfer matrix, infinite volume, modern theorems)"

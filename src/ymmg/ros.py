@@ -87,6 +87,7 @@ SCIENTIFIC_FINGERPRINT_MANIFEST = [
     "literature/YM-005-OBSTRUCTION-CANDIDATE-AUDIT.md",
     "literature/YM-005-VISUAL-INTUITION-DATA.md",
     "literature/YM-005-FINAL-SYNTHESIS.md",
+    "literature/YM-LEAN-001-FORMALIZATION-AUDIT.md",
     SCIENTIFIC_ARTIFACT_CLASSIFICATION_PATH,
 ]
 
@@ -135,7 +136,7 @@ KNOWN_ADMINISTRATIVE_ROOT_PATHS = {
 
 GENERATED_PREFIXES = ("checkpoints/", "evidence/", "experiments/", "numerical/")
 PROVENANCE_PREFIXES = ("verification/",)
-ADMINISTRATIVE_PREFIXES = ("governance/", "scripts/", "src/", "tests/", "docs/")
+ADMINISTRATIVE_PREFIXES = ("governance/", "scripts/", "src/", "tests/", "docs/", "formal/")
 
 IGNORED_EXACT_PATHS = {
     "checkpoints/.gitkeep",
