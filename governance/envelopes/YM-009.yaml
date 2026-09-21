@@ -1,0 +1,116 @@
+task_execution_envelope:
+  schema_version: "4.0.3"
+  identity:
+    task_id: "YM-009"
+    project_id: "YANG_MILLS_MASS_GAP"
+    project_name: "Yang-Mills and the Mass Gap"
+    governance_version: "4.0.3"
+    adoption_mode: "ACTIVE_GOVERNED"
+  direction:
+    intent_refs: ["governance/PROJECT_DIRECTION.md"]
+    roadmap_objective: "CAP-009-quantitative-closure"
+    owner_non_goals:
+      - "Claiming certified external solution of Clay Millennium Problem #4 prior to peer-reviewed journal publication and Clay consensus"
+      - "Equating heuristic numeric extrapolation with functional-analytic uniform spectral gap bounds"
+      - "Bypassing fresh blind independent E4 verification"
+      - "Violating closed-world manifest synchronization"
+    owner_reserved_boundaries: ["publication", "legal", "spend", "destructive history action", "constitutional acceptance"]
+  objective:
+    exact_objective: >-
+      Execute the Multi-Scale Hybrid Attack Strategy formulated in Task YM-008 to achieve quantitative closure
+      across the 4D Euclidean Yang–Mills intermediate crossover window (g_k ~ 1, beta ~ 1-2, Delta x >= 0.35 fm):
+      (1) Formulate and execute the semidefinite programming (SDP) loop bootstrap on the flow-regularized lattice,
+      (2) Prove non-perturbative functional-analytic gluing across Interface 1 (UV <-> Crossover) and Interface 2 (Crossover <-> IR),
+      (3) Derive rigorous quantitative upper and lower bounds on scalar glueball mass M_0++ and string tension sigma,
+      (4) Verify continuum limit robustness and recovery of Osterwalder-Schrader axioms (OS0-OS4) with Delta = M_0++ > 0,
+      (5) Implement Lean 4 formal module formal/lean4/YangMills/HybridStrategy.lean from the YM-008 blueprint,
+      (6) Catalog Canonical Quantitative Record QUANT-REC-YM009-001 with explicit parameter provenance tags, and
+      (7) Subject all artifacts to deterministic regression testing and fresh blind independent E4 verification.
+    rationale: >-
+      Task YM-008 formulated and adversarially screened the 3-scale hybrid architecture. Task YM-009 executes the
+      quantitative calculations and non-perturbative interface gluing to demonstrate that the spectral mass gap
+      Delta remains strictly positive (Delta > 0) and uniform across the continuum limit a -> 0.
+    done_boundary: >-
+      Canonical YM-009 literature artifacts (bootstrap execution, gluing analysis, spectrum/string tension bounds,
+      continuum limit robustness, canonical record, and final synthesis), Lean 4 formal module, deterministic test suite
+      (tests/test_quantitative_closure.py), closed-world manifest synchronization, and fresh blind independent E4 verification.
+  base_state:
+    repository_or_workspace: "D:\\Comfy UI\\yang mills and the mass gap"
+    branch_or_state_channel: "master"
+    base_candidate_id: "5913a61"
+    dirty_state: "CLEAN"
+    preserved_unrelated_work: ["All prior accepted tasks YM-000 through YM-008, YM-LEAN-001, YM-XNS-001, ROS v1.0, and v4.0.3 governance"]
+  eligibility:
+    dependencies:
+      - {id: "YM-008", state: "INDEPENDENTLY_VERIFIED", evidence_ref: "verification/YM-008_INDEPENDENT_REVIEW.md"}
+      - {id: "YM-007", state: "INDEPENDENTLY_VERIFIED", evidence_ref: "verification/YM-007_INDEPENDENT_REVIEW.md"}
+      - {id: "YM-006", state: "INDEPENDENTLY_VERIFIED", evidence_ref: "verification/YM-006_INDEPENDENT_REVIEW.md"}
+      - {id: "YM-005", state: "INDEPENDENTLY_VERIFIED", evidence_ref: "verification/YM-005_INDEPENDENT_REVIEW.md"}
+      - {id: "YM-004", state: "ACCEPTED", evidence_ref: "governance/HUMAN_OWNER_ACCEPTANCE_YM-004_20260908.md"}
+      - {id: "YM-003", state: "ACCEPTED", evidence_ref: "governance/HUMAN_OWNER_ACCEPTANCE_YM-003_20260908.md"}
+      - {id: "ROS v1.0", state: "ACCEPTED", evidence_ref: "governance/HUMAN_OWNER_ACCEPTANCE_ROS_v1.0_20260830.md"}
+    technical_inputs_available: true
+    traceable_to_intent: true
+    architecture_permits: true
+    inside_standing_mandate: true
+    candidate_state_known: true
+    risk_inside_ceiling: true
+    blocking_invariant_present: false
+    reserved_authority_required_for_technical_mutation: false
+    eligible: true
+    blocker_class: null
+    blocker_detail: null
+  classification:
+    risk_tier: "R2"
+    action_class: "B"
+    risk_reasons: ["Executes quantitative non-perturbative gluing and derives spectral mass gap bounds", "Implements Lean 4 formal module"]
+    active_modules: ["CORE-PROJECT-BINDING", "CORE-AUTHORITY", "CORE-RISK", "CORE-DEPENDENCY", "CORE-EVIDENCE", "CORE-TEST-INTEGRITY", "CORE-GIT-STATE", "RESEARCH-SCIENTIFIC", "ARTIFACT-DATA"]
+  mandate:
+    mandate_id: "MANDATE-YM-009"
+    scope_in:
+      - "literature/YM-009*"
+      - "formal/lean4/YangMills/HybridStrategy.lean"
+      - "formal/lean4/YangMills.lean"
+      - "governance/envelopes/YM-009.yaml"
+      - "tests/test_quantitative_closure.py"
+      - "TASK_GRAPH.md"
+      - "CURRENT_SCIENTIFIC_STATE.md"
+      - "NEXT_ACTION.md"
+    scope_out:
+      - "OFFICIAL_PROBLEM_SPECIFICATION.md"
+      - "Claiming certified external solution of Clay Millennium Problem #4 prior to peer review"
+      - "Authoring raw E4 text directly"
+      - "Self-declaring human-owner constitutional acceptance"
+    authorities_granted: ["WRITE_ALLOWED_SCOPE", "RUN_TESTS", "RECORD_EVIDENCE"]
+    authorities_forbidden: ["AUTHOR_RAW_E4", "SELF_ACCEPT", "FORCE_PUSH", "REMOTE_PUSH"]
+  execution:
+    assigned_roles:
+      writer: "primary-worker"
+      reviewer: "fresh-blind-research-subagent-IND1"
+      acceptance_authority: "human-owner"
+    work_breakdown:
+      - "Step 1: Quantitative SDP loop bootstrap execution (literature/YM-009-QUANTITATIVE-BOOTSTRAP-EXECUTION.md)"
+      - "Step 2: Scale gluing analysis across interfaces (literature/YM-009-SCALE-GLUING-ANALYSIS.md)"
+      - "Step 3: Spectrum and string tension bounds derivation (literature/YM-009-SPECTRUM-AND-STRING-TENSION-BOUNDS.md)"
+      - "Step 4: Continuum limit robustness and OS reconstruction (literature/YM-009-CONTINUUM-LIMIT-ROBUSTNESS.md)"
+      - "Step 5: Canonical quantitative record QUANT-REC-YM009-001 (literature/YM-009-CANONICAL-QUANTITATIVE-RECORD.md)"
+      - "Step 6: Mathematical synthesis and closure evaluation (literature/YM-009-FINAL-SYNTHESIS.md)"
+      - "Step 7: Lean 4 formal module implementation (formal/lean4/YangMills/HybridStrategy.lean)"
+      - "Step 8: Closed-world fingerprint manifest synchronization (governance & python)"
+      - "Step 9: Deterministic test suite (tests/test_quantitative_closure.py)"
+      - "Step 10: Fresh blind independent E4 verification and direct machine capture"
+    invariants:
+      - {id: "INV-YM009-001", statement: "CLAY_MILLENNIUM_PROBLEM_STATUS_REMAINS_OPEN_AND_UNSOLVED", zero_tolerance: true}
+      - {id: "INV-YM009-002", statement: "EXPLICIT_SCALE_INTERFACE_GLUING_REQUIRED", zero_tolerance: true}
+      - {id: "INV-YM009-003", statement: "STRICT_POSITIVITY_OF_SPECTRAL_MASS_GAP_DELTA_GT_ZERO", zero_tolerance: true}
+      - {id: "INV-YM009-004", statement: "CLOSED_WORLD_MANIFEST_SYNCHRONIZATION_REQUIRED", zero_tolerance: true}
+  closure:
+    candidate_id: null
+    evidence_package:
+      e3_test_run: null
+      e4_review_doc: null
+      raw_e4_receipt: null
+      raw_e4_sha256: null
+    verification_verdict: null
+    closure_status: "IN_PROGRESS"
+    human_owner_acceptance: null

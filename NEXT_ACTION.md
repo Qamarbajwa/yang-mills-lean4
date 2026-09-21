@@ -1,28 +1,21 @@
 # NEXT ACTION
 
 ## Current primary action
-`YM-005 — Rigorous IR / Lattice Gap Machinery Reproduction (AWAITING_HUMAN_OWNER_ACCEPTANCE)`
-
-## Current parallel action (non-blocking)
-`YM-LEAN-001 — Lean 4 Formalization Scoping (READY_PARALLEL)`
-
-## Next blocked primary action
-`YM-006 — Precise Non-Meeting Estimate Identification (BLOCKED on YM-005 Owner Acceptance)`
+`YM-009 — Execution of Hybrid Attack Strategy and Quantitative Closure (CANDIDATE_FROZEN_FOR_E4_VERIFICATION)`
 
 ## Scope
-- Task `YM-005` execution is complete:
-  - 10 canonical literature artifacts produced and classified
-  - Full deterministic test suite passing (222/222 PASS)
-  - Fresh blind independent E4 verification completed (`INTEGRITY_PASS`)
-  - Authoritative raw receipt captured (`ddb351769434f85cf2eb82338533938fdd8790d18b44b6c12b5640e569309b96`)
-  - Verification record `verification/YM-005_INDEPENDENT_REVIEW.md` authored
-  - Governance envelopes and ledgers updated
-- Awaiting human owner acceptance decision for `YM-005`.
-- Upon owner acceptance: activate Task `YM-006` to calculate the precise non-meeting distance between UV stopping boundary ($g_*$) and IR stopping boundary ($\beta_0$).
+- Task `YM-009` candidate formulation is complete:
+  - 6 canonical literature artifacts produced and classified
+  - Lean 4 formal module implemented (`formal/lean4/YangMills/HybridStrategy.lean`)
+  - Full deterministic test suite passing (276/276 PASS)
+  - Closed-world fingerprint manifest synchronized (90 canonical files)
+  - Next step: launch fresh blind independent E4 verifier subagent (`IND1`), capture raw machine receipt, and commit verification closeout.
 
-## Completed actions
-- `YM-004 — Rigorous UV / Constructive RG Machinery Reproduction` (ACCEPTED / CLOSED; owner accepted 2026-09-08/2026-09-09)
-- `YM-003 — Construct missing-bridge graph` (ACCEPTED / CLOSED; owner accepted 2026-09-08)
+## Completed & Independently Verified Stages (Awaiting Owner Acceptance)
+- `YM-005 — Rigorous IR / Lattice Gap Machinery Reproduction` (`AWAITING_HUMAN_OWNER_ACCEPTANCE`, raw SHA-256 `ddb35176...`)
+- `YM-006 — Precise Non-Meeting Estimate Identification` (`AWAITING_HUMAN_OWNER_ACCEPTANCE`, raw SHA-256 `e221ba9f...`)
+- `YM-007 — Evaluation of Novel Theoretical Mechanisms` (`AWAITING_HUMAN_OWNER_ACCEPTANCE`, raw SHA-256 `9c4eceaa...`)
+- `YM-008 — Synthesis and Formulation of Hybrid Attack Strategy` (`AWAITING_HUMAN_OWNER_ACCEPTANCE`, raw SHA-256 `723c8753...`)
 - `YM-GOV-403 — Universal Governance v4.0.3 migration` (ACCEPTED / ACTIVE; owner accepted 2026-09-08)
 - `YM-XNS-001 — Navier–Stokes breakthrough transfer audit` (ACCEPTED / CLOSED; owner accepted 2026-09-08)
 

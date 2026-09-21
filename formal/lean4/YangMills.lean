@@ -9,6 +9,7 @@ import YangMills.ClaySpecification
 import YangMills.WightmanAxioms
 import YangMills.OsterwalderSchraderAxioms
 import YangMills.MissingBridgeDAG
+import YangMills.HybridStrategy
 
 /-!
 # Yang-Mills and the Mass Gap Formal Library
@@ -18,4 +19,5 @@ This root module aggregates the formal mathematical components of the Yang-Mills
 2. `WightmanAxioms`: Relativistic quantum field theory axioms W0–W5 on $\mathbb{R}^{1,3}$.
 3. `OsterwalderSchraderAxioms`: Euclidean axioms OS0–OS4 and the OS reconstruction theorem.
 4. `MissingBridgeDAG`: Machine-checkable formalization of the YM-003 proof-dependency DAG and acyclicity theorem.
+5. `HybridStrategy`: Formalization of the multi-scale hybrid strategy, scale partition, and interface contracts.
 -/

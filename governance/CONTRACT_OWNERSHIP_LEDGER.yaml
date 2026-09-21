@@ -950,6 +950,43 @@ contracts:
   e4_receipt: "verification/YM-008_INDEPENDENT_REVIEW.md"
   outcome: INDEPENDENTLY_VERIFIED_AWAITING_OWNER_ACCEPTANCE
 
+- contract_id: CONTRACT-YM-009
+  task_id: YM-009
+  risk_tier: R2
+  base_sha: "5913a61"
+  writer:
+    environment: Antigravity
+    agent_id: primary-worker
+    execution_id: "conversation://00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    model: Antigravity / Gemini / Claude
+  reviewer:
+    environment: Antigravity
+    agent_id: fresh-blind-research-subagent-IND1
+    execution_id: "conversation://pending-subagent-invocation"
+    independence_level: LEVEL_A_SAME_APP_SAME_MODEL_SEPARATE_SESSION
+  acceptance_authority:
+    environment: HumanOwner
+    authority_id: human-owner
+    authority_type: ENVIRONMENT_LOCAL
+  allowed_scope:
+    - literature/YM-009*
+    - formal/lean4/YangMills/HybridStrategy.lean
+    - formal/lean4/YangMills.lean
+    - governance/envelopes/YM-009.yaml
+    - tests/test_quantitative_closure.py
+    - TASK_GRAPH.md
+    - CURRENT_SCIENTIFIC_STATE.md
+    - NEXT_ACTION.md
+  forbidden_scope:
+    - OFFICIAL_PROBLEM_SPECIFICATION.md
+    - Claiming certified external solution of Clay Millennium Problem #4 prior to peer review
+    - Authoring raw E4 text directly
+    - Self-declaring human-owner constitutional acceptance
+  candidate_id: null
+  raw_e4_receipt: null
+  e4_receipt: null
+  outcome: IN_PROGRESS
+
 
 
 

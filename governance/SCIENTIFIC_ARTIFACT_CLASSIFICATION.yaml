@@ -96,6 +96,12 @@ scientific_fingerprint:
     - literature/YM-008-LEAN-FORMALIZATION-BLUEPRINT.md
     - literature/YM-008-CANONICAL-STRATEGY-RECORD.md
     - literature/YM-008-FINAL-SYNTHESIS.md
+    - literature/YM-009-QUANTITATIVE-BOOTSTRAP-EXECUTION.md
+    - literature/YM-009-SCALE-GLUING-ANALYSIS.md
+    - literature/YM-009-SPECTRUM-AND-STRING-TENSION-BOUNDS.md
+    - literature/YM-009-CONTINUUM-LIMIT-ROBUSTNESS.md
+    - literature/YM-009-CANONICAL-QUANTITATIVE-RECORD.md
+    - literature/YM-009-FINAL-SYNTHESIS.md
     - governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml
 unknown_policy:
   research_locations:
