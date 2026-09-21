@@ -81,6 +81,15 @@ scientific_fingerprint:
     - literature/YM-006-CANONICAL-NON-MEETING-RECORD.md
     - literature/YM-006-VISUAL-INTUITION-DATA.md
     - literature/YM-006-FINAL-SYNTHESIS.md
+    - literature/YM-007-EVALUATION-FRAMEWORK.md
+    - literature/YM-007-GEOMETRIC-FLOW-EVALUATION.md
+    - literature/YM-007-STOCHASTIC-QUANTIZATION-EVALUATION.md
+    - literature/YM-007-LOOP-EQUATIONS-EVALUATION.md
+    - literature/YM-007-TOPOLOGICAL-CONDENSATION-EVALUATION.md
+    - literature/YM-007-EXACT-RG-EVALUATION.md
+    - literature/YM-007-COMPARATIVE-MECHANISM-MATRIX.md
+    - literature/YM-007-CANONICAL-MECHANISM-RECORD.md
+    - literature/YM-007-FINAL-SYNTHESIS.md
     - governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml
 unknown_policy:
   research_locations:
