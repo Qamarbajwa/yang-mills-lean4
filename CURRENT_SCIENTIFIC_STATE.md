@@ -170,18 +170,39 @@
   - Fresh blind independent E4 verification completed by subagent `6abc1e4e-2b67-43a8-9ce4-61817cf50b2e` (`IND1`) with verdict `INTEGRITY_PASS`.
   - Authoritative raw receipt captured at `verification/raw/YM-010_E4_RAW_20260921T232407Z.md` (SHA-256: `71ba05fcbbaf439dfc656fe562099dd8257c59e43539cd80d091ad544df1a1ea`).
   - Formal review record authored at `verification/YM-010_INDEPENDENT_REVIEW.md`.
-  - Current status: `AWAITING_HUMAN_OWNER_ACCEPTANCE`.
+  - Current status: `SCIENTIFIC_REVIEW_HOLD / NOT_ESTABLISHED`.
+
+- **Task `YM-GOV-011` (Emergency Scientific Integrity Audit) Completed:**
+  - Owner acceptance withheld for YM-005 through YM-010 following identification of potential mathematical and governance defects.
+  - Fresh blind adversarial proof-level audit executed (subagent `e2e6cee0-d7d4-45ac-826e-ccda50a370cf`).
+  - Authoritative raw audit receipt preserved at `verification/raw/YM-GOV-011_E4_RAW_20260922T075351Z.md` (SHA-256: `f7aaf6dc13f9465f27beeda6a59a3a81acd43e0874970cf287af42ab2c90a74e`).
+  - Adversarial verdict: `SCIENTIFIC_CLAIMS_NOT_ESTABLISHED`.
+  - Audited and rejected overclaims: reflection positivity violation claim downgraded to `OS3_NOT_ESTABLISHED`; Rayleigh–Ritz upper bound corrected from claimed lower bound on spectrum; $\Delta\beta \ge 2N-1 > 0$ identified as comparison of sufficient convergence thresholds rather than physical Yang–Mills gap; Lean 4 formalization identified as incomplete and not standalone.
+
+- **Task `YM-GOV-012` (Scientific Recovery and Proof-Dependency Repair) Completed:**
+  - Preserved all historical commits, candidates, and negative findings without rewriting history.
+  - Reconciled the 19-edge missing-bridge graph (`literature/YM-012-RECONCILED-19-EDGE-GRAPH.md`): 2 PROVED (perturbative), 2 REGULATED_ONLY, 5 CONDITIONAL, 10 OPEN.
+  - Repaired hybrid research strategy (`literature/YM-012-REPAIRED-HYBRID-STRATEGY.md`): purged heuristic dimensionful units ("fm", "GeV") from mathematical definitions; disavowed $\Delta \ge 1.40\text{ GeV}$ numerical claim as an established theorem; evaluated 6 candidate directions across 10-field matrix.
+  - Isolated first missing load-bearing lemma in dependency-closed path (`literature/YM-011-FIRST-LOAD-BEARING-LEMMA-SPECIFICATION.md`): UV Scale-Transfer and Observables Mollification Lemma along Branch A with explicit $\mathcal{O}(a/|C|)$ bound and counterexample stress tests.
+  - Created Visual Intuition Companion (`literature/YM-012-VISUAL-INTUITION-COMPANION.md`).
+  - Synchronized closed-world scientific fingerprint manifest (98 canonical files) across YAML, ROS, and test suite.
+  - Authored deterministic verification suite `tests/test_scientific_recovery.py` (7 passing tests).
+  - Status: `COMPLETED`.
 
 ## UNVERIFIED
 - No original Yang–Mills lemma has been certified by an external peer-reviewed journal.
 - The Clay Millennium Problem #4 status remains strictly `OPEN_AND_UNSOLVED`.
+- Proof claims for complete bridge closure (`YM-010`) and mass gap (`YM-009`) are `NOT_ESTABLISHED`.
 - No claimed external solution has been accepted.
 
 ## CURRENT BOTTLENECK
-Tasks `YM-005`, `YM-006`, `YM-007`, `YM-008`, `YM-009`, and `YM-010` are independently verified with immutable cryptographic machine receipts (`INTEGRITY_PASS`), awaiting Human Owner constitutional acceptance decisions (`IVR-003`).
+- Tasks `YM-006` through `YM-010` are held under `SCIENTIFIC_REVIEW_HOLD`.
+- Task `YM-005` is eligible for and awaiting separate human owner acceptance (`AWAITING_HUMAN_OWNER_ACCEPTANCE`).
+- Mathematical research must proceed incrementally from proved foundations (YM-004) without assuming downstream unproved theorems.
 
 ## NEXT ACTION
-Awaiting explicit Human Owner Acceptance for Tasks `YM-005`, `YM-006`, `YM-007`, `YM-008`, `YM-009`, and `YM-010` to formally advance them to `ACCEPTED / CLOSED`.
+- Awaiting human owner acceptance decision for Task `YM-005` (`Rigorous IR / Lattice Gap Machinery Reproduction`).
+- Awaiting human owner authorization to activate bounded task `YM-011` (`First Load-Bearing Bridge Lemma: UV Scale-Transfer & Observables Mollification`).
 
 
 

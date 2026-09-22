@@ -1,13 +1,13 @@
 # LIVE PROJECT STATE — Universal Governance Minimal v4.0.3
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 10
+revision: 12
 activation: ACTIVE
 
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "c4d194c"
+  head: "4cf5999"
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -21,12 +21,12 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 11
-  last_updated_at: "2026-09-22T01:25:00Z"
-  active_contract: "YM-010"
-  frozen_candidate: "0dfc476"
+  last_expected_revision: 13
+  last_updated_at: "2026-09-22T10:20:00Z"
+  active_contract: "YM-GOV-012"
+  frozen_candidate: "4cf5999"
 
-current_objective: YM-010
+current_objective: YM-GOV-012
 
 objectives:
   - id: YM-GOV-403
@@ -102,7 +102,7 @@ objectives:
     writer: "primary-worker"
     reviewer_path: "fresh-blind-research-subagent-IND1"
     acceptor: "human-owner"
-    status: AWAITING_HUMAN_OWNER_ACCEPTANCE
+    status: SCIENTIFIC_REVIEW_HOLD
 
   - id: YM-007
     scope_in: "Evaluation of novel theoretical mechanisms for intermediate crossover"
@@ -111,7 +111,7 @@ objectives:
     writer: "primary-worker"
     reviewer_path: "fresh-blind-research-subagent-IND1"
     acceptor: "human-owner"
-    status: AWAITING_HUMAN_OWNER_ACCEPTANCE
+    status: SCIENTIFIC_REVIEW_HOLD
 
   - id: YM-008
     scope_in: "Synthesis and formulation of hybrid attack strategy for crossover window"
@@ -120,7 +120,7 @@ objectives:
     writer: "primary-worker"
     reviewer_path: "fresh-blind-research-subagent-IND1"
     acceptor: "human-owner"
-    status: AWAITING_HUMAN_OWNER_ACCEPTANCE
+    status: SCIENTIFIC_REVIEW_HOLD
 
   - id: YM-009
     scope_in: "Execution of hybrid attack strategy and quantitative closure"
@@ -129,7 +129,7 @@ objectives:
     writer: "primary-worker"
     reviewer_path: "fresh-blind-research-subagent-IND1"
     acceptor: "human-owner"
-    status: AWAITING_HUMAN_OWNER_ACCEPTANCE
+    status: SCIENTIFIC_REVIEW_HOLD
 
   - id: YM-010
     scope_in: "Global research monograph, axiomatic verification, and Clay synthesis"
@@ -138,7 +138,34 @@ objectives:
     writer: "primary-worker"
     reviewer_path: "fresh-blind-research-subagent-IND1"
     acceptor: "human-owner"
-    status: AWAITING_HUMAN_OWNER_ACCEPTANCE
+    status: SCIENTIFIC_REVIEW_HOLD
+
+  - id: YM-GOV-011
+    scope_in: "Emergency scientific integrity audit across YM-005 through YM-010"
+    dependencies: ["YM-005", "YM-006", "YM-007", "YM-008", "YM-009", "YM-010"]
+    risk: R4
+    writer: "primary-worker"
+    reviewer_path: "adversarial-blind-audit-subagent"
+    acceptor: "human-owner"
+    status: CLOSED
+
+  - id: YM-GOV-012
+    scope_in: "Scientific recovery, proof-dependency repair, 19-edge graph reconciliation, and YM-011 formulation"
+    dependencies: ["YM-GOV-011"]
+    risk: R3
+    writer: "primary-worker"
+    reviewer_path: "deterministic-recovery-suite"
+    acceptor: "human-owner"
+    status: COMPLETED
+
+  - id: YM-011
+    scope_in: "First load-bearing bridge lemma (UV scale-transfer & observables mollification)"
+    dependencies: ["YM-004"]
+    risk: R3
+    writer: "primary-worker"
+    reviewer_path: "fresh-blind-research-subagent-IND1"
+    acceptor: "human-owner"
+    status: PLANNED
 
 capabilities:
   CAP-001-problem-specification:

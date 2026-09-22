@@ -1,21 +1,25 @@
 # NEXT ACTION
 
 ## Current primary action
-`AWAITING_HUMAN_OWNER_ACCEPTANCE for Tasks YM-005, YM-006, YM-007, YM-008, YM-009, and YM-010`
+`AWAITING_HUMAN_OWNER_ACCEPTANCE for Task YM-005; AWAITING_HUMAN_OWNER_AUTHORIZATION for Task YM-011`
 
 ## Scope
-- Tasks `YM-005` through `YM-010` are independently verified with immutable raw cryptographic machine receipts (`INTEGRITY_PASS`).
-- Awaiting explicit Human Owner constitutional acceptance decisions (`IVR-003`).
+- `YM-005` (Rigorous IR / Lattice Gap Machinery Reproduction) is evaluated as eligible for independent human owner review and acceptance (`AWAITING_HUMAN_OWNER_ACCEPTANCE`).
+- `YM-006` through `YM-010` are held under `SCIENTIFIC_REVIEW_HOLD` due to identified overclaims and mathematical defects.
+- `YM-GOV-011` (Emergency Scientific Integrity Audit) completed with raw adversarial receipt captured (`SCIENTIFIC_CLAIMS_NOT_ESTABLISHED`).
+- `YM-GOV-012` (Scientific Recovery and Proof-Dependency Repair) completed: 19-edge missing-bridge graph reconciled, hybrid strategy repaired, and bounded next task `YM-011` formulated.
+- `YM-011` (First Load-Bearing Bridge Lemma: UV Scale-Transfer & Observables Mollification) is in `PLANNED` state awaiting explicit human owner activation.
 
-## Completed & Independently Verified Stages (Awaiting Owner Acceptance)
-- `YM-005 — Rigorous IR / Lattice Gap Machinery Reproduction` (`AWAITING_HUMAN_OWNER_ACCEPTANCE`, raw SHA-256 `ddb35176...`)
-- `YM-006 — Precise Non-Meeting Estimate Identification` (`AWAITING_HUMAN_OWNER_ACCEPTANCE`, raw SHA-256 `e221ba9f...`)
-- `YM-007 — Evaluation of Novel Theoretical Mechanisms` (`AWAITING_HUMAN_OWNER_ACCEPTANCE`, raw SHA-256 `9c4eceaa...`)
-- `YM-008 — Synthesis and Formulation of Hybrid Attack Strategy` (`AWAITING_HUMAN_OWNER_ACCEPTANCE`, raw SHA-256 `723c8753...`)
-- `YM-009 — Execution of Hybrid Attack Strategy and Quantitative Closure` (`AWAITING_HUMAN_OWNER_ACCEPTANCE`, raw SHA-256 `35bb35d4...`)
-- `YM-010 — Global Research Monograph, Axiomatic Verification, and Clay Synthesis` (`AWAITING_HUMAN_OWNER_ACCEPTANCE`, raw SHA-256 `71ba05fc...`)
-- `YM-GOV-403 — Universal Governance v4.0.3 migration` (ACCEPTED / ACTIVE; owner accepted 2026-09-08)
-- `YM-XNS-001 — Navier–Stokes breakthrough transfer audit` (ACCEPTED / CLOSED; owner accepted 2026-09-08)
+## Governance & Scientific Disposition
+- `YM-005 — Rigorous IR / Lattice Gap Machinery Reproduction`: `AWAITING_HUMAN_OWNER_ACCEPTANCE` (raw SHA-256 `ddb35176...`)
+- `YM-006 — Precise Non-Meeting Estimate Identification`: `SCIENTIFIC_REVIEW_HOLD`
+- `YM-007 — Evaluation of Novel Theoretical Mechanisms`: `SCIENTIFIC_REVIEW_HOLD`
+- `YM-008 — Synthesis and Formulation of Hybrid Attack Strategy`: `SCIENTIFIC_REVIEW_HOLD`
+- `YM-009 — Execution of Hybrid Attack Strategy and Quantitative Closure`: `SCIENTIFIC_REVIEW_HOLD / NOT_ESTABLISHED`
+- `YM-010 — Global Research Monograph, Axiomatic Verification, and Clay Synthesis`: `SCIENTIFIC_REVIEW_HOLD / NOT_ESTABLISHED`
+- `YM-GOV-011 — Emergency Scientific Integrity Audit`: `CLOSED / AUDIT_ACCEPTED` (raw SHA-256 `f7aaf6dc...`)
+- `YM-GOV-012 — Scientific Recovery and Proof-Dependency Repair`: `COMPLETED`
+- `YM-011 — First Load-Bearing Bridge Lemma`: `PLANNED`
 
 ## Completed actions
 - `YM-000 — Local bootstrap` (DONE)

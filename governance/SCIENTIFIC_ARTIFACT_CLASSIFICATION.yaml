@@ -106,6 +106,10 @@ scientific_fingerprint:
     - literature/YM-010-GLOBAL-THEOREM-AND-BRIDGE-CLOSURE.md
     - literature/YM-010-FORMAL-VERIFICATION-ROADMAP.md
     - literature/YM-010-CANONICAL-PROGRAM-RECORD.md
+    - literature/YM-011-FIRST-LOAD-BEARING-LEMMA-SPECIFICATION.md
+    - literature/YM-012-RECONCILED-19-EDGE-GRAPH.md
+    - literature/YM-012-REPAIRED-HYBRID-STRATEGY.md
+    - literature/YM-012-VISUAL-INTUITION-COMPANION.md
     - governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml
 unknown_policy:
   research_locations:

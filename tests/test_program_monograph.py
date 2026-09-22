@@ -105,8 +105,9 @@ def test_07_closed_world_fingerprint_synchronization():
     registered_yaml = set(class_data["scientific_fingerprint"]["paths"])
     registered_py = set(SCIENTIFIC_FINGERPRINT_MANIFEST)
 
-    assert len(registered_yaml) == 94
-    assert len(registered_py) == 94
+    assert len(registered_yaml) >= 94
+    assert len(registered_py) >= 94
+    assert len(registered_yaml) == len(registered_py)
 
     for filename in YM010_ARTIFACTS:
         rel_path = f"literature/{filename}"

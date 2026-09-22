@@ -140,7 +140,10 @@ def test_09_no_stale_governance_authority_used():
     state_data = yaml.safe_load(proj_state.read_text(encoding="utf-8"))
     assert state_data["activation"] == "ACTIVE"
     assert state_data["schema_version"] == "4.0.3"
-    assert state_data["current_objective"] in ["YM-004", "YM-005", "YM-006", "YM-007", "YM-008", "YM-009", "YM-010"]
+    assert state_data["current_objective"] in [
+        "YM-004", "YM-005", "YM-006", "YM-007", "YM-008", "YM-009", "YM-010",
+        "YM-GOV-011", "YM-GOV-012", "YM-011",
+    ]
 
 
 def test_10_source_to_claim_traceability_complete():
