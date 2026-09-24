@@ -71,3 +71,16 @@
 - **Result:** Rejected as an impossibility claim. The evidence supports only recurring method limitations and Clay obligations. Lower-dimensional exact theories, strong-coupling lattice theorems, and OS reconstruction provide counterexamples to any blanket assertion that the interfaces are mathematically impossible.
 - **Surviving insight:** The same interfaces are sufficiently recurrent and mathematically explicit to prioritize YM-003, especially joint `a→0`/`V→∞` control, gauge-invariant IR decay, and spectral-gap persistence.
 - **Regression check:** `tests/test_cross_era_synthesis.py` requires controlled candidate states, preserves `UNKNOWN`, enforces `CLAY_SUFFICIENT = NO` for analogue rows, and rejects silent orphan remapping.
+
+### NEG-YM-011-OBS-1: Singular Determinant Locus of Naive Linear Block-Spin Matrix Averaging (`YM-011-OBS-MAP`)
+- **Discovery Date:** 2026-09-24
+- **Epistemic Classification:** `[EXACT_FINITE_LATTICE_COUNTEREXAMPLE]`
+- **Hypothesis tested:** Whether naive linear staple averaging $M_\alpha^{\mathrm{lin}}(e)[U] = (1-\alpha) U(\ell_{e,1}) U(\ell_{e,2}) + \frac{\alpha}{2(d-1)} \sum_{\gamma \in \Gamma_{\mathrm{staple}}(e)} H_0(\gamma)[U]$ followed by polar projection $\Pi_{SU(N)}(M) = M(M^\dagger M)^{-1/2}(\det(\cdots))^{-1/N}$ defines a globally smooth $SU(N)$-valued blocking map $\Omega_0 \to \Omega_1$.
+- **Result:** Falsified on $\Omega_0$. For $G = SU(2)$, $\alpha = 1/2$, $U(\ell_{e,1}) U(\ell_{e,2}) = I_2 \in SU(2)$, and $H_0(\gamma)[U] = -I_2 \in SU(2)$, $M_{1/2}^{\mathrm{lin}}(e)[U] = 0_{2\times 2}$ has $\det M_{1/2}^{\mathrm{lin}} = 0$. Polar projection is undefined on the non-empty singular locus $\Sigma_\alpha \subset \Omega_0$.
+- **Surviving resolution:** Resolved in `YM-011-OBS-MAP` by constructing the midpoint-exponential blocking map $\mathcal{B}_\alpha^{\mathrm{mid}}(U)(e) = U(\ell_{e,1}) \exp(\alpha X_{\mathrm{mid}}(e)[U]) U(\ell_{e,2}) \in SU(N)$, which is everywhere $C^\infty$ on $\Omega_0$ with zero singular locus, exact orientation reversal, and exact $\mathcal{G}_0 \to \mathcal{G}_1$ gauge equivariance.
+
+### NEG-YM-011-OBS-2: Artificial Perimeter Attenuation in Finite-$\kappa$ Stochastic Markov Block-Spin Kernels (`YM-011-OBS-MAP`)
+- **Discovery Date:** 2026-09-24
+- **Epistemic Classification:** `[EXACT_REPRESENTATION_THEORETIC_OBSTRUCTION]`
+- **Hypothesis tested:** Whether a randomized Markov block-spin transition kernel $K^{(\alpha,\kappa)}_{0\to 1}(dV \mid U)$ with finite concentration parameter $\kappa < \infty$ preserves Wilson loop expectations without multiplicative perimeter distortion.
+- **Result:** Falsified for all $\kappa \in [0, \infty)$. By Schur's Lemma (`YM-011-OBS-T3`), $((K^{(\alpha,\kappa)}_{0\to 1})^* W_{\Lambda_1}(C_1))[U] = c_F(\kappa)^{|C_1|_{\Lambda_1}} ((\mathcal{B}_\alpha^{\mathrm{mid}})^* W_{\Lambda_1}(C_1))[U]$ where $c_F(\kappa) = \frac{d}{d\kappa}\ln z_N(\kappa) \in [0, 1)$, introducing an artificial perimeter-law decay factor $\exp(-\gamma(\kappa) L_{\mathrm{phys}}(C_1)/(2a))$ with $\gamma(\kappa) = -\ln c_F(\kappa) > 0$ purely from kernel noise. Only in the deterministic limit $\kappa \to \infty$ ($\mathcal{B}_\alpha^{\mathrm{mid}}$) does $c_F(\infty) = 1$ avoid artificial Markov perimeter attenuation.

@@ -81,34 +81,31 @@ $$\left| W_t^{\mathbb{R}}(C)[U] - W_0^{\mathbb{R}}(C)[U] \right| \le \left| W_t^
 
 ---
 
-## 3. Next Smallest Well-Defined Observable-Transfer Task (`YM-011-OBS-MAP`) — Probability Spaces & Observable Map Before Any Error Bound
+## 3. Verified Single-Step Observable-Transfer Map (`YM-011-OBS-MAP`) & Next Task (`YM-011-PLAQUETTE-EXP`)
 
-> **Governance Gate (`YM-GOV-015`):** The original `YM-011-L1` continuum/exponential proposal remains **`PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION`**, and the rejected exponential scale-transfer estimate $a \exp(-c/a^2)$ is permanently retired. Before any quantitative scale-transfer error bound is proposed, the next authorized task is **`YM-011-OBS-MAP` (`Single-Step Block-Spin Observable Pushforward & Pullback Domain Specification`)**, defined strictly by the following mathematical structures:
+> **Governance Gate (`YM-GOV-015` / `YM-011-OBS-MAP`):** The original `YM-011-L1` continuum/exponential proposal remains **`PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION`**, and the rejected exponential scale-transfer estimate $a \exp(-c/a^2)$ is permanently retired. The single-step finite-lattice observable-transfer map (`YM-011-OBS-MAP`) has been constructed, proved, and computationally verified in [`literature/YM-011-OBS-MAP-CONSTRUCTION.md`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/literature/YM-011-OBS-MAP-CONSTRUCTION.md) and [`src/ymmg/observable_transfer.py`](file:///d:/Comfy%20UI/yang%20mills%20and%20the%20mass%20gap/src/ymmg/observable_transfer.py).
 
-### 3.1 Probability Spaces (Domain and Codomain Measures)
-1. **Fine-Lattice Probability Space at Scale $0$ (Spacing $a$, Box $\Lambda_0$):**
-   $$\left( \Omega_0, \, \mathcal{F}_0, \, \mu_0 \right) := \left( SU(N)^{E(\Lambda_0)}, \, \mathcal{B}\!\left(SU(N)^{E(\Lambda_0)}\right), \, Z_{\Lambda_0}(\beta)^{-1} e^{-S_W(U)} \prod_{\ell \in E(\Lambda_0)} dU_\ell \right),$$
-   where $dU_\ell$ is the normalized Haar probability measure on $SU(N)$.
-2. **Coarse Block-Lattice Configuration Space at Scale $1$ (Spacing $L a = 2a$, Box $\Lambda_1 = \Lambda_0 / 2$):**
-   $$\left( \Omega_1, \, \mathcal{F}_1 \right) := \left( SU(N)^{E(\Lambda_1)}, \, \mathcal{B}\!\left(SU(N)^{E(\Lambda_1)}\right) \right),$$
-   equipped with the pushforward / block-averaged probability measure $\mu_1 := (\mathcal{B}_{0\to 1})_\# \mu_0$ induced by a gauge-covariant block-averaging map $\mathcal{B}_{0\to 1}: \Omega_0 \to \Omega_1$ (or randomized block-spin kernel $K_{0\to 1}(V \mid U)$ satisfying $\int_{\Omega_1} K_{0\to 1}(dV \mid U) = 1$).
+### 3.1 Summary of Verified Objects and Theorems in `YM-011-OBS-MAP`
+1. **Fine & Coarse Probability Spaces ($\Lambda_0$ at spacing $a$, $\Lambda_1$ at spacing $2a$):**
+   $(\Omega_0, \mathcal{F}_0, \mu_0)$ with $\Omega_0 = SU(N)^{E_+(\Lambda_0)}$ and Wilson Gibbs measure $d\mu_0 = Z_{\Lambda_0}(\beta)^{-1} e^{-S_W(U)} d\mu_{\mathrm{Haar},0}(U)$; $(\Omega_1, \mathcal{F}_1)$ with $\Omega_1 = SU(N)^{E_+(\Lambda_1)}$ and pushforward measure $\mu_1^{(\alpha,\kappa)} = (K^{(\alpha,\kappa)}_{0\to 1})_\# \mu_0$ (whose effective action $S_{\mathrm{eff}}^{(1)}(V)$ is explicitly proved not to retain the single-plaquette Wilson form).
+2. **Globally Smooth, Everywhere $SU(N)$-Valued Midpoint-Exponential Blocking Map $\mathcal{B}_\alpha^{\mathrm{mid}} : \Omega_0 \to \Omega_1$:**
+   $$\mathcal{B}_\alpha^{\mathrm{mid}}(U)(e) := U(\ell_{e,1}) \, \exp\!\left( \alpha \, X_{\mathrm{mid}}(e)[U] \right) \, U(\ell_{e,2}) \in SU(N), \qquad X_{\mathrm{mid}}(e)[U] := \mathcal{P}_{\mathfrak{su}(N)}\!\left( \frac{1}{2(d-1)} \sum_{\nu \ne \mu, \, \sigma \in \{+,-\}} U(\ell_{e,1})^\dagger H_0(\gamma_{\nu,\sigma}(e))[U] U(\ell_{e,2})^\dagger \right),$$
+   which eliminates the determinant singular locus (`NEG-YM-011-OBS-1`) and satisfies exact orientation covariance $\mathcal{B}_\alpha^{\mathrm{mid}}(U)(e^{-1}) = (\mathcal{B}_\alpha^{\mathrm{mid}}(U)(e))^{-1}$ and exact gauge equivariance $\mathcal{B}_\alpha^{\mathrm{mid}}(g_0 \cdot U) = \pi_{\mathcal{G}}(g_0) \cdot \mathcal{B}_\alpha^{\mathrm{mid}}(U)$.
+3. **Verified Finite-Lattice Comparison Theorems:**
+   - **`YM-011-OBS-T1` (Unconditional Pointwise & $L^1(\mu_0)$ Bound):** $\left| ((\mathcal{B}_\alpha^{\mathrm{mid}})^* W_{\Lambda_1}(C_1))[U] - W_{\Lambda_0,t}(\iota_{\mathrm{loop}}(C_1))[U] \right| \le |C_1|_{\Lambda_1} \left(|\alpha| + 4(d-1)\frac{t}{a^2}\right)$.
+   - **`YM-011-OBS-T2` (Exact Quadratic Plaquette Defect Identity & Small-Field Tangent Cancellation):** Under $\alpha(t) = 2(d-1)\frac{t}{a^2}$, $2(d-1) X_{\mathrm{mid}}(e)[U] - Y_{\mathrm{flow}}(e)[U] \equiv \sum_{\nu \ne \mu, \sigma \in \{+,-\}} \mathcal{P}_{\mathfrak{su}(N)}((P_{1,\nu,\sigma}^\dagger - I_N)(P_{2,\nu,\sigma}^\dagger - I_N))$, giving $|\Delta_{\mathrm{tan}}(C_1)[U]| \le 2(d-1)|C_1|_{\Lambda_1} \epsilon_{\mathrm{plaq}}^2$ on $\Omega_0(\epsilon_{\mathrm{plaq}})$.
+   - **`YM-011-OBS-T3` (Markov Kernel Schur Factorization):** $((K^{(\alpha,\kappa)}_{0\to 1})^* W_{\Lambda_1}(C_1))[U] = c_F(\kappa)^{|C_1|_{\Lambda_1}} ((\mathcal{B}_\alpha^{\mathrm{mid}})^* W_{\Lambda_1}(C_1))[U]$ for every simple coarse loop $C_1$.
 
-### 3.2 Observable Algebras and Pullback / Mollification Map
-1. **Coarse Loop Observable Algebra $\mathcal{A}_{\mathrm{loop}}(\Lambda_1) \subset C(\Omega_1, \mathbb{C})$:**
-   Generated by normalized Wilson traces $W_{\Lambda_1}^{\mathbb{R}/\mathbb{C}}(C_1)[V] = \frac{1}{N}\operatorname{Tr}\!\left(\prod_{\ell' \in C_1} V_{\ell'}\right)$ on closed coarse-lattice loops $C_1 \subset E(\Lambda_1)$ of link length $n_1 = |C_1|/(2a)$.
-2. **Pullback Observable Map $\mathcal{B}_{0\to 1}^*: \mathcal{A}_{\mathrm{loop}}(\Lambda_1) \to L^\infty(\Omega_0, \mu_0)$:**
-   $$\left( \mathcal{B}_{0\to 1}^* W_{\Lambda_1}(C_1) \right)[U] := \int_{\Omega_1} W_{\Lambda_1}(C_1)[V] \, K_{0\to 1}(dV \mid U), \qquad \text{satisfying the exact pushforward identity } \langle W_{\Lambda_1}(C_1) \rangle_{\mu_1} \equiv \left\langle \mathcal{B}_{0\to 1}^* W_{\Lambda_1}(C_1) \right\rangle_{\mu_0}.$$
-3. **Flowed Fine-Lattice Comparison Map $\mathcal{F}_t^*: \mathcal{A}_{\mathrm{loop}}(\Lambda_0) \to C(\Omega_0, [-1, 1])$:**
-   Maps the geometric embedding $\iota(C_1) \subset E(\Lambda_0)$ (a fine-lattice loop of $n_0 = 2 n_1$ links) to the flowed observable $W_t(\iota(C_1))[U] = W_0(\iota(C_1))[V_t(U)]$.
-4. **Well-Defined Target Discrepancy Functional (Prior to Claiming Any Bound):**
-   $$\mathcal{D}_{0\to 1}(C_1; t) := \left\langle \mathcal{B}_{0\to 1}^* W_{\Lambda_1}(C_1) - W_t(\iota(C_1)) \right\rangle_{\mu_0} = \int_{\Omega_0} \left( (\mathcal{B}_{0\to 1}^* W_{\Lambda_1}(C_1))[U] - W_t(\iota(C_1))[U] \right) d\mu_0(U).$$
+### 3.2 Pullback Map $\mathcal{B}_{0\to 1}^*$ and Next Smallest Authorized Research Task (`YM-011-PLAQUETTE-EXP`)
+The pullback observable map $\mathcal{B}_{0\to 1}^* : \mathcal{A}_{\mathrm{loop}}(\Lambda_1) \to L^\infty(\Omega_0, \mu_0)$ satisfies the exact measure-theoretic identity $\langle W_{\Lambda_1}(C_1) \rangle_{\mu_1} \equiv \langle \mathcal{B}_{0\to 1}^* W_{\Lambda_1}(C_1) \rangle_{\mu_0}$. Before any multi-step RG iteration or effective-action comparison (`YM-011-ACT-DEFECT`), the next smallest bounded research task is **`YM-011-PLAQUETTE-EXP` (`Finite-Lattice Gibbs Expectation Bound for the Quadratic Plaquette Tangent Defect`)**, which bounds $\langle |\Delta_{\mathrm{tan}}(C_1)| \rangle_{\mu_0}$ in terms of the finite-lattice plaquette expectation $e_{\mathrm{plaq}}(\beta, \Lambda_0) = \langle 1 - \frac{1}{N}\operatorname{Re}\operatorname{Tr}(U_p) \rangle_{\mu_0}$.
 
 ### Lemma YM-011-L1 (UV Scale-Transfer and Observables Mollification Lemma)
 
-> **Governance Gate (`YM-GOV-015`):** Lemma `YM-011-L1` remains in status **`PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION`**. This formulation assumes **no mass gap**, no infinite-volume thermodynamic limit, and no specific infrared behavior.
+> **Governance Gate (`YM-GOV-015` / `YM-011-OBS-MAP`):** Lemma `YM-011-L1` remains in status **`PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION`**. This formulation assumes **no mass gap**, no infinite-volume thermodynamic limit, and no specific infrared behavior.
 
 **Statement:**
-Any future quantitative estimate on $\mathcal{D}_{0\to 1}(C_1; t)$ must be derived directly from the explicit kernel $K_{0\to 1}(dV \mid U)$ and the fixed-lattice differential identity of `YM-011-PRE-R1` without stipulating exponential decay in $1/a^2$.
+Any future multi-step quantitative estimate on $\mathcal{D}_{0\to 1}(C_1; t)$ must be derived directly from the verified finite-lattice observable-transfer map (`YM-011-OBS-MAP`), the quadratic plaquette expectation (`YM-011-PLAQUETTE-EXP`), and the fixed-lattice differential identity of `YM-011-PRE-R1` without stipulating exponential decay in $1/a^2$.
+
 
 ---
 

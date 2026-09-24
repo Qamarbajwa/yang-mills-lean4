@@ -12,9 +12,56 @@ K = 2(d - 1) = 6 in d = 4 for all SU(N) (N >= 2) via the Hilbert-Schmidt
 orthogonal projection and Cauchy-Schwarz inequality.
 """
 
-from typing import Dict, Any, Tuple
+from typing import Dict, Any, List, Tuple
 import math
 import numpy as np
+
+
+def hilbert_schmidt_norm(matrix: np.ndarray) -> float:
+    """Compute the real Hilbert-Schmidt (Frobenius) norm sqrt(Re Tr(A^dagger A))."""
+    return float(np.sqrt(np.real(np.trace(matrix.conj().T @ matrix))))
+
+
+def project_su_n(matrix: np.ndarray) -> np.ndarray:
+    """
+    Compute the exact R-orthogonal projection onto the anti-Hermitian traceless Lie algebra su(N):
+      P_{su(N)}(M) = 1/2 (M - M^dagger) - (1 / (2N)) Tr(M - M^dagger) I_N.
+    """
+    n = matrix.shape[0]
+    anti_herm = 0.5 * (matrix - matrix.conj().T)
+    tr_part = (np.trace(anti_herm) / float(n)) * np.eye(n, dtype=np.complex128)
+    return anti_herm - tr_part
+
+
+def luscher_su_n_generators(n_colors: int) -> List[np.ndarray]:
+    """
+    Construct an anti-Hermitian traceless basis {T^a}_{a=1}^{N^2 - 1} of su(N)
+    normalized according to Lüscher (2010): Tr(T^a T^b) = -1/2 delta^{ab}.
+    """
+    if n_colors < 2:
+        raise ValueError("SU(N) requires N >= 2")
+    gens: List[np.ndarray] = []
+    # Off-diagonal generators
+    for j in range(n_colors):
+        for k in range(j + 1, n_colors):
+            m_re = np.zeros((n_colors, n_colors), dtype=np.complex128)
+            m_re[j, k] = 0.5
+            m_re[k, j] = -0.5
+            gens.append(m_re)
+
+            m_im = np.zeros((n_colors, n_colors), dtype=np.complex128)
+            m_im[j, k] = 0.5j
+            m_im[k, j] = 0.5j
+            gens.append(m_im)
+    # Diagonal Cartan generators
+    for m in range(1, n_colors):
+        diag = np.zeros((n_colors, n_colors), dtype=np.complex128)
+        norm_factor = 1.0 / math.sqrt(2.0 * m * (m + 1))
+        for j in range(m):
+            diag[j, j] = 1j * norm_factor
+        diag[m, m] = -1j * float(m) * norm_factor
+        gens.append(diag)
+    return gens
 
 
 def compute_gradient_flow_lipschitz_constant(
