@@ -18,75 +18,97 @@ Per **`YM-GOV-014` Section 5**, `YM-011` remains strictly **`PROPOSED / NOT AUTH
 
 ---
 
-## 2. Verified Precursor Lemma: `YM-011-PRE` (Fixed-Lattice Gradient-Flow Loop Perturbation)
+## 2. Verified Precursor Lemma: `YM-011-PRE` / `YM-011-PRE-R1` (Fixed-Lattice Gradient-Flow Loop Perturbation)
 
-### 2.1 Exact Mathematical Statement (`YM-011-PRE`)
+### 2.1 Exact Mathematical Statement (`YM-011-PRE-R1`)
 
-Let $\Lambda \subset a\mathbb{Z}^d$ ($d \ge 2$, specifically $d=4$) be a finite hypercubic lattice with spacing $a > 0$ and compact gauge group $G = SU(N)$ ($N \ge 2$). Let $S_W(U) = \frac{\beta}{N} \sum_{p \subset \Lambda} \operatorname{Re}\operatorname{Tr}(I_N - U_p)$ be the standard Wilson plaquette action with bare coupling $\beta = \frac{2N}{g_0^2} > 0$, and let $d\mu_\Lambda(U) = Z_\Lambda^{-1} e^{-S_W(U)} \prod_{\ell \in E(\Lambda)} dU_\ell$ be the fixed-lattice probability measure.
+Let $\Lambda \subset a\mathbb{Z}^d$ ($d \ge 2$, specifically $d=4$) be a finite hypercubic lattice with spacing $a > 0$ and compact gauge group $G = SU(N)$ ($N \ge 2$). Let $S_W(U) = \frac{\beta}{N} \sum_{p \subset \Lambda} \operatorname{Re}\operatorname{Tr}(I_N - U_p)$ be the standard Wilson plaquette action with bare coupling $\beta = \frac{2N}{g_0^2} > 0$, and let $d\mu_\Lambda(U) = Z_\Lambda^{-1} e^{-S_W(U)} \prod_{\ell \in E(\Lambda)} dU_\ell$ be the fixed-lattice probability measure on $\Omega_\Lambda = SU(N)^{E(\Lambda)}$.
 
-For any closed lattice loop $C = (\ell_1, \ell_2, \dots, \ell_n)$ composed of $n = |C|/a$ oriented lattice links, define the normalized Wilson loop observable:
-$$W_t(C)[U] := \frac{1}{N} \operatorname{Re}\operatorname{Tr}\left( \prod_{m=1}^{n} V_t(\ell_m) \right),$$
-where $t \mapsto V_t(\ell) \in SU(N)$ solves the lattice Wilson gradient flow with initial condition $V_0(\ell) = U_\ell$.
+For any closed lattice loop $C = (\ell_1, \ell_2, \dots, \ell_n)$ composed of $n = |C|/a$ oriented lattice links with holonomy $H_t(C) := \prod_{m=1}^n V_t(\ell_m) \in SU(N)$, distinguish the two normalized Wilson loop observables:
+1. **Generally Complex Normalized Wilson Trace:**
+   $$W_t^{\mathbb{C}}(C)[U] := \frac{1}{N} \operatorname{Tr}\!\left( H_t(C) \right) = \frac{1}{N} \sum_{j=1}^N e^{i\theta_j} \in \Phi_N \subset \overline{\mathbb{D}}_1 := \{z \in \mathbb{C} : |z| \le 1\},$$
+   where $\Phi_N$ is the compact $N$-cusped hypocycloid region in the closed unit disk $\overline{\mathbb{D}}_1$ (for $N=2$, $\Phi_2 = [-1, 1] \subset \mathbb{R}$ is real; for $N \ge 3$, $W_t^{\mathbb{C}}(C)$ is genuinely complex-valued with $W_t^{\mathbb{C}}(C^{-1}) = \overline{W_t^{\mathbb{C}}(C)}$).
+2. **Real Normalized Wilson Trace:**
+   $$W_t^{\mathbb{R}}(C)[U] := \operatorname{Re} W_t^{\mathbb{C}}(C)[U] = \frac{1}{N} \operatorname{Re}\operatorname{Tr}\!\left( H_t(C) \right) = \frac{1}{N} \sum_{j=1}^N \cos\theta_j \in \left[\min_{H \in SU(N)} \frac{1}{N}\operatorname{Re}\operatorname{Tr} H, \, 1\right] \subseteq [-1, 1].$$
 
-**Theorem (`YM-011-PRE`):**
-For every flow time $t \ge 0$, every lattice gauge configuration $U \in SU(N)^{E(\Lambda)}$, and every closed loop $C$ of length $n = |C|/a$ links, the flowed Wilson loop satisfies both the **pointwise configuration bound**:
-$$\boxed{\left| W_t(C)[U] - W_0(C)[U] \right| \le K(\beta, d, N) \, n \, \frac{t}{a^2}}$$
+**Theorem (`YM-011-PRE-R1`):**
+For every flow time $t \ge 0$, every lattice gauge configuration $U \in SU(N)^{E(\Lambda)}$, and every closed loop $C$ of length $n = |C|/a$ links, both the complex trace $W_t^{\mathbb{C}}(C)$ and the real trace $W_t^{\mathbb{R}}(C)$ satisfy the **pointwise configuration bound**:
+$$\boxed{\left| W_t^{\mathbb{R}}(C)[U] - W_0^{\mathbb{R}}(C)[U] \right| \le \left| W_t^{\mathbb{C}}(C)[U] - W_0^{\mathbb{C}}(C)[U] \right| \le K(\beta, d, N) \, n \, \frac{t}{a^2}}$$
 and the **expectation-level bound** with respect to $d\mu_\Lambda$:
-$$\boxed{\left| \langle W_t(C) \rangle_\Lambda - \langle W_0(C) \rangle_\Lambda \right| \le K(\beta, d, N) \, n \, \frac{t}{a^2},}$$
+$$\boxed{\left| \langle W_t^{\mathbb{R}}(C) \rangle_\Lambda - \langle W_0^{\mathbb{R}}(C) \rangle_\Lambda \right| \le \left| \langle W_t^{\mathbb{C}}(C) \rangle_\Lambda - \langle W_0^{\mathbb{C}}(C) \rangle_\Lambda \right| \le K(\beta, d, N) \, n \, \frac{t}{a^2},}$$
 where:
-1. Under **Lüscher's (2010) standard dimensionless gradient-flow convention** $a^2 \partial_t V_t(\ell) = -g_0^2 \left(\partial_\ell S_W(V_t)\right) V_t(\ell)$, the bare coupling $\beta = \frac{2N}{g_0^2}$ **cancels identically**, yielding the $\beta$-independent constant:
-   $$K(d, N) = 2(d - 1) \qquad (\text{so } K = 6 \text{ in } d = 4).$$
-2. Under the **unscaled action-gradient flow convention** $a^2 \partial_\tau V_\tau(\ell) = -\left(\partial_\ell S_W(V_\tau)\right) V_\tau(\ell)$, the factor $\beta$ remains linearly in the constant:
+1. Under **Lüscher's (2010) standard dimensionless gradient-flow convention** $a^2 \partial_t V_t(\ell) = -g_0^2 \left(\partial_\ell S_W(V_t)\right) V_t(\ell)$ with anti-Hermitian generator normalization $\operatorname{Tr}(T^a T^b) = -\frac{1}{2}\delta^{ab}$, the bare coupling $\beta = \frac{2N}{g_0^2}$ and the factor of $2$ **cancel identically**, yielding the exact $\beta$- and $N$-independent constant:
+   $$K(d, N) = 2(d - 1) \qquad (\text{so } K = 6 \text{ in } d = 4 \text{ for all } N \ge 2).$$
+2. Under the **unscaled action-gradient flow convention** $a^2 \partial_\tau V_\tau(\ell) = -\left(\partial_\ell S_W(V_\tau)\right) V_\tau(\ell)$ (with $\operatorname{Tr}(T^a T^b) = -\frac{1}{2}\delta^{ab}$), the factor $\beta$ remains linearly in the constant:
    $$K(\beta, d, N) = \frac{\beta (d - 1)}{N}.$$
 
 ---
 
-### 2.2 Complete Resolution of the Three Audit Questions (`YM-GOV-014` Section 5)
+### 2.2 Complete First-Principles Derivation Without Any Omitted Normalization Factor (`YM-GOV-015` Audit)
 
-#### Question 1: Does $\beta$ cancel under the chosen gradient-flow convention or remain in $K(\beta, d, N)$?
-- **Exact Derivation:**
-  For a single link $\ell \in E(\Lambda)$, let $S_\ell(V) = \sum_{p \ni \ell} U_p^{\text{staple}}$ be the sum of the $2(d-1)$ staple products incident on link $\ell$ ($2(4-1) = 6$ staples in $d=4$). Varying $S_W(V) = \frac{\beta}{N} \sum_p \operatorname{Re}\operatorname{Tr}(I_N - V_p)$ along $V_\ell \mapsto e^{\epsilon X} V_\ell$ ($X \in \mathfrak{su}(N)$) gives the Lie-algebra gradient:
-  $$\partial_\ell S_W(V) = -\frac{\beta}{2N} \, \mathcal{P}_{\mathfrak{su}(N)}\!\left( V_\ell S_\ell(V)^\dagger \right) = -\frac{1}{g_0^2} \, \mathcal{P}_{\mathfrak{su}(N)}\!\left( V_\ell S_\ell(V)^\dagger \right),$$
-  where $\mathcal{P}_{\mathfrak{su}(N)}(M) = \frac{1}{2}(M - M^\dagger) - \frac{1}{2N}\operatorname{Tr}(M - M^\dagger) I_N$ is the orthogonal projection onto traceless anti-Hermitian matrices $\mathfrak{su}(N)$, and we used the fundamental relation $\beta = \frac{2N}{g_0^2}$.
-  - **Under Lüscher's (2010) convention** $a^2 \partial_t V_t(\ell) = -g_0^2 (\partial_\ell S_W(V_t)) V_t(\ell)$:
-    Multiplying $\partial_\ell S_W(V_t)$ by $-g_0^2$ produces the factor $g_0^2 \cdot \frac{\beta}{2N} = \frac{2N}{\beta} \cdot \frac{\beta}{2N} \equiv 1$. Thus **$\beta$ and $g_0^2$ cancel identically**! Since each of the $2(d-1)$ staples is a product of three $SU(N)$ matrices, $\|U_p^{\text{staple}}\|_{\mathrm{op}} = 1$, and $\|\mathcal{P}_{\mathfrak{su}(N)}(M)\|_{\mathrm{op}} \le \|M\|_{\mathrm{op}} \le 2(d-1)$, we obtain for every link $\ell$ and all $t \ge 0$:
-    $$\left\| \partial_t V_t(\ell) \right\|_{\mathrm{op}} \le \frac{2(d - 1)}{a^2}.$$
-  - **Under the unscaled action-gradient flow** $a^2 \partial_\tau V_\tau(\ell) = -(\partial_\ell S_W(V_\tau)) V_\tau(\ell)$:
-    The factor $g_0^2$ is absent, so the prefactor $\frac{\beta}{2N}$ remains, giving $\|\partial_\tau V_\tau(\ell)\|_{\mathrm{op}} \le \frac{\beta(d-1)}{N a^2}$.
+#### Step 1: Exact Lie-Algebra Derivative and Lüscher Generator Normalization ($\operatorname{Tr}(T^a T^b) = -\frac{1}{2}\delta^{ab}$)
+For a single link $\ell \in E(\Lambda)$, let $S_\ell(V) = \sum_{p \ni \ell} W_p$ be the sum of the $2(d-1)$ oriented staple products ($2(4-1) = 6$ staples in $d=4$) such that $V_p = V_\ell W_p^\dagger$. The $\ell$-dependent part of $S_W(V) = \frac{\beta}{N}\sum_p \operatorname{Re}\operatorname{Tr}(I_N - V_p)$ is:
+$$S_W^{(\ell)}(V) = -\frac{\beta}{N} \operatorname{Re}\operatorname{Tr}\!\left( V_\ell S_\ell(V)^\dagger \right) = -\frac{\beta}{2N} \operatorname{Tr}\!\left( V_\ell S_\ell^\dagger + S_\ell V_\ell^\dagger \right).$$
+Let $\{T^a\}_{a=1}^{N^2-1} \subset \mathfrak{su}(N)$ be Lüscher's (2010, *JHEP* 1008:071, Eq. 1.2) basis of anti-Hermitian traceless generators satisfying:
+$$(T^a)^\dagger = -T^a, \qquad \operatorname{Tr}(T^a) = 0, \qquad \operatorname{Tr}(T^a T^b) = -\frac{1}{2}\delta^{ab}.$$
+Then the directional derivative along $T^a$ ($V_\ell(\epsilon) = e^{\epsilon T^a} V_\ell$) is:
+$$\partial_\ell^a S_W(V) := \left.\frac{d}{d\epsilon}\right|_{\epsilon=0} S_W(e^{\epsilon T^a} V_\ell) = -\frac{\beta}{2N} \operatorname{Tr}\!\left( T^a \left( V_\ell S_\ell^\dagger - S_\ell V_\ell^\dagger \right) \right) = -\frac{\beta}{N} \operatorname{Tr}\!\left( T^a \, \mathcal{P}_{\mathfrak{su}(N)}\!\left(V_\ell S_\ell^\dagger\right) \right),$$
+where $\mathcal{P}_{\mathfrak{su}(N)}(M) := \frac{1}{2}(M - M^\dagger) - \frac{1}{2N}\operatorname{Tr}(M - M^\dagger)I_N \in \mathfrak{su}(N)$.
+Because every $Y \in \mathfrak{su}(N)$ expands as $Y = \sum_{b=1}^{N^2-1} y^b T^b$ with $\operatorname{Tr}(T^a Y) = -\frac{1}{2} y^a$, contracting with $T^a$ yields the exact completeness identity:
+$$\sum_{a=1}^{N^2-1} T^a \operatorname{Tr}(T^a Y) = -\frac{1}{2} Y \qquad \forall Y \in \mathfrak{su}(N).$$
+Applying this identity to Lüscher's Lie-algebra differential operator $\partial_\ell S_W(V) := \sum_{a=1}^{N^2-1} T^a \partial_\ell^a S_W(V)$ gives:
+$$\partial_\ell S_W(V) = -\frac{\beta}{N} \sum_{a=1}^{N^2-1} T^a \operatorname{Tr}\!\left( T^a \, \mathcal{P}_{\mathfrak{su}(N)}\!\left(V_\ell S_\ell^\dagger\right) \right) = +\frac{\beta}{2N} \, \mathcal{P}_{\mathfrak{su}(N)}\!\left( V_\ell S_\ell(V)^\dagger \right) = \frac{1}{g_0^2} \, \mathcal{P}_{\mathfrak{su}(N)}\!\left( V_\ell S_\ell(V)^\dagger \right),$$
+where the factor $\frac{1}{2}$ from $\operatorname{Tr}(T^a T^b) = -\frac{1}{2}\delta^{ab}$ cancels the factor $2$ in $\beta = \frac{2N}{g_0^2}$!
+Consequently, Lüscher's (2010) gradient flow equation $a^2 \partial_t V_t(\ell) = -g_0^2 \left(\partial_\ell S_W(V_t)\right) V_t(\ell)$ simplifies with **exact unit prefactor $1$** to:
+$$\boxed{a^2 \partial_t V_t(\ell) = -\mathcal{P}_{\mathfrak{su}(N)}\!\left( V_t(\ell) S_\ell(V_t)^\dagger \right) V_t(\ell), \qquad Z_t(\ell) := (\partial_t V_t(\ell)) V_t(\ell)^{-1} = -\frac{1}{a^2} \mathcal{P}_{\mathfrak{su}(N)}\!\left( V_t(\ell) S_\ell(V_t)^\dagger \right).}$$
+*(Remark: If instead one defines the flow using the Hilbert–Schmidt Riemannian gradient $\nabla_\ell^{\mathrm{HS}} S_W = 2 \partial_\ell S_W$ corresponding to $\operatorname{Tr}(\tilde{T}^a \tilde{T}^b) = -\delta^{ab}$, then $K_{\mathrm{HS}} = 4(d-1) = 12$ in $d=4$.)*
 
-#### Question 2: Why does the normalized Wilson loop trace satisfy $W_t(C) \in [-1, 1]$, and NOT $[0, 1]$?
-- **Exact Proof:**
-  For any closed loop $C$, the holonomy $H_t(C) := \prod_{m=1}^n V_t(\ell_m)$ is a product of elements of $SU(N)$ and therefore lies in $SU(N)$. Every $U \in SU(N)$ is unitary with eigenvalues $\lambda_1, \dots, \lambda_N \in S^1 \subset \mathbb{C}$ of the form $\lambda_j = e^{i\theta_j}$ ($\theta_j \in \mathbb{R}$, $\sum_{j=1}^N \theta_j \equiv 0 \pmod{2\pi}$). Therefore:
-  $$W_t(C) = \frac{1}{N} \operatorname{Re}\operatorname{Tr}(H_t(C)) = \frac{1}{N} \sum_{j=1}^N \cos\theta_j.$$
-  Since $\cos\theta_j \in [-1, 1]$ for all $j$, we have $W_t(C) \in [-1, 1]$ (with $|\operatorname{Re}\operatorname{Tr}(M)| \le N \|M\|_{\mathrm{op}}$ for any $N \times N$ matrix $M$). Specifically:
-  - At $H_t(C) = I_N$, $W_t(C) = +1$.
-  - For even $N = 2k$, $-I_N \in SU(N)$ has $\det(-I_N) = (-1)^{2k} = +1$ and $W_t(C) = -1$.
-  - For odd $N \ge 3$, choosing $\theta_1 = \dots = \theta_{N-1} = \frac{\pi(N-1)}{N}$ and $\theta_N = -\frac{\pi(N-1)^2}{N} \equiv \frac{\pi(N-1)}{N} \pmod{2\pi}$ gives $W_t(C) = \cos\!\left(\frac{\pi(N-1)}{N}\right) < 0$ (e.g., $-\frac{1}{2}$ for $SU(3)$).
-  Hence $W_t(C)$ takes strictly negative values for every $N \ge 2$, and its universal normalized range is **$[-1, 1]$, never $[0, 1]$**.
+#### Step 2: Why the Hilbert–Schmidt Norm Gives $K = 2(d-1) = 6$ Exactly Without Spectral-Projection Inflation
+Equip $\mathbb{C}^{N\times N}$ with the real Hilbert–Schmidt (Frobenius) inner product $\langle A, B \rangle_{\mathrm{HS},\mathbb{R}} := \operatorname{Re}\operatorname{Tr}(A^\dagger B)$ and norm $\|A\|_{\mathrm{HS}} := \sqrt{\operatorname{Tr}(A^\dagger A)}$.
+- **Crucial Norm Distinction:** In the spectral/operator norm $\|\cdot\|_{\mathrm{op}}$, the trace-subtraction in $\mathcal{P}_{\mathfrak{su}(N)}(M) = \frac{1}{2}(M - M^\dagger) - \frac{1}{2N}\operatorname{Tr}(M - M^\dagger)I_N$ is *not* an orthogonal projection for $N \ge 3$ (its sharp spectral operator norm bound is $\|\mathcal{P}_{\mathfrak{su}(N)}(M)\|_{\mathrm{op}} \le \left(2 - \frac{2}{N}\right)\|M\|_{\mathrm{op}}$). However, in the **Hilbert–Schmidt inner product** $\langle \cdot, \cdot \rangle_{\mathrm{HS},\mathbb{R}}$, $\mathfrak{su}(N)$ is an $\mathbb{R}$-linear subspace of $\mathbb{C}^{N\times N}$ and $\mathcal{P}_{\mathfrak{su}(N)}$ is the **exact $\mathbb{R}$-orthogonal projection** onto $\mathfrak{su}(N)$:
+  $$\langle X, \, M - \mathcal{P}_{\mathfrak{su}(N)}(M) \rangle_{\mathrm{HS},\mathbb{R}} = 0 \quad \forall X \in \mathfrak{su}(N) \implies \left\| \mathcal{P}_{\mathfrak{su}(N)}(M) \right\|_{\mathrm{HS}} \le \|M\|_{\mathrm{HS}} \quad (\text{exact projection norm } 1 \text{ for all } N \ge 2).$$
+- Since $V_s(\ell_m) \in SU(N)$ and each of the $2(d-1)$ staples $W_p \in SU(N)$ is unitary, $\|V_s(\ell_m) W_p^\dagger\|_{\mathrm{HS}} = \sqrt{\operatorname{Tr}(I_N)} = \sqrt{N}$. By the triangle inequality for $\|\cdot\|_{\mathrm{HS}}$:
+  $$\left\| \mathcal{P}_{\mathfrak{su}(N)}\!\left( V_s(\ell_m) S_{\ell_m}(V_s)^\dagger \right) \right\|_{\mathrm{HS}} \le \left\| V_s(\ell_m) S_{\ell_m}(V_s)^\dagger \right\|_{\mathrm{HS}} \le \sum_{p \ni \ell_m} \left\| V_s(\ell_m) W_p^\dagger \right\|_{\mathrm{HS}} = 2(d - 1)\sqrt{N}.$$
 
-#### Question 3: Is the bound proved pointwise in the gauge configuration and/or in expectation?
-- **Exact Proof of Both Pointwise and Expectation Bounds:**
-  Fix any gauge configuration $U \in SU(N)^{E(\Lambda)}$. By the Leibniz product rule along the $n$ links $\ell_1, \dots, \ell_n$ of $C$:
-  $$\frac{d}{ds} H_s(C) = \sum_{m=1}^{n} V_s(\ell_1) \cdots V_s(\ell_{m-1}) \left( \partial_s V_s(\ell_m) \right) V_s(\ell_{m+1}) \cdots V_s(\ell_n).$$
-  Since each $V_s(\ell_j) \in SU(N)$ is unitary, $\|V_s(\ell_j)\|_{\mathrm{op}} = 1$. By submultiplicativity and the triangle inequality of the operator norm:
-  $$\left\| \frac{d}{ds} H_s(C) \right\|_{\mathrm{op}} \le \sum_{m=1}^{n} \left\| \partial_s V_s(\ell_m) \right\|_{\mathrm{op}} \le n \, \frac{K(\beta, d, N)}{a^2}.$$
-  Using $\left|\frac{1}{N} \operatorname{Re}\operatorname{Tr}(M)\right| \le \|M\|_{\mathrm{op}}$ and the Fundamental Theorem of Calculus for $s \in [0, t]$:
-  $$\left| W_t(C)[U] - W_0(C)[U] \right| \le \int_0^t \left| \frac{d}{ds} W_s(C)[U] \right| ds \le \int_0^t \left\| \frac{d}{ds} H_s(C) \right\|_{\mathrm{op}} ds \le K(\beta, d, N) \, n \, \frac{t}{a^2}.$$
-  This proves the bound **pointwise for every gauge configuration $U$**. Integrating against any normalized probability measure $d\mu_\Lambda(U)$ on $SU(N)^{E(\Lambda)}$ and applying Jensen's inequality $|\mathbb{E}_\Lambda[X]| \le \mathbb{E}_\Lambda[|X|]$ immediately gives the **expectation-level bound**:
-  $$\left| \langle W_t(C) \rangle_\Lambda - \langle W_0(C) \rangle_\Lambda \right| \le \int_{SU(N)^{E(\Lambda)}} \left| W_t(C)[U] - W_0(C)[U] \right| d\mu_\Lambda(U) \le K(\beta, d, N) \, n \, \frac{t}{a^2}. \quad \blacksquare$$
+#### Step 3: Leibniz Rule and Cauchy–Schwarz Along the $n$-Link Holonomy
+Differentiating $W_s^{\mathbb{C}}(C)[U] = \frac{1}{N}\operatorname{Tr}(H_s(C))$ along $s \in [0, t]$ using the Leibniz rule and cyclicity of the trace:
+$$\frac{d}{ds} W_s^{\mathbb{C}}(C)[U] = \frac{1}{N} \sum_{m=1}^{n} \operatorname{Tr}\!\left( Z_s(\ell_m) \, \tilde{H}_s^{(m)}(C) \right),$$
+where $\tilde{H}_s^{(m)}(C) := V_s(\ell_m) \cdots V_s(\ell_n) V_s(\ell_1) \cdots V_s(\ell_{m-1}) \in SU(N)$ is unitary and therefore satisfies $\|\tilde{H}_s^{(m)}(C)\|_{\mathrm{HS}} = \sqrt{N}$.
+By the Cauchy–Schwarz inequality $|\operatorname{Tr}(A^\dagger B)| \le \|A\|_{\mathrm{HS}} \|B\|_{\mathrm{HS}}$ for the Hilbert–Schmidt inner product:
+$$\left| \frac{1}{N} \operatorname{Tr}\!\left( Z_s(\ell_m) \, \tilde{H}_s^{(m)}(C) \right) \right| \le \frac{1}{N} \|Z_s(\ell_m)\|_{\mathrm{HS}} \, \|\tilde{H}_s^{(m)}(C)\|_{\mathrm{HS}} \le \frac{1}{N a^2} \left( 2(d - 1)\sqrt{N} \right) \sqrt{N} = \frac{2(d - 1)}{a^2}.$$
+Summing over $m = 1, \dots, n$ and integrating over $s \in [0, t]$ yields the exact pointwise and expectation bounds:
+$$\left| W_t^{\mathbb{R}}(C)[U] - W_0^{\mathbb{R}}(C)[U] \right| \le \left| W_t^{\mathbb{C}}(C)[U] - W_0^{\mathbb{C}}(C)[U] \right| \le \int_0^t \left| \frac{d}{ds} W_s^{\mathbb{C}}(C)[U] \right| ds \le 2(d - 1) \, n \, \frac{t}{a^2}. \quad \blacksquare$$
 
 ---
 
-## 3. Proposed Future Multiscale Lemma: `YM-011-L1` (`PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION`)
+## 3. Next Smallest Well-Defined Observable-Transfer Task (`YM-011-OBS-MAP`) — Probability Spaces & Observable Map Before Any Error Bound
+
+> **Governance Gate (`YM-GOV-015`):** The original `YM-011-L1` continuum/exponential proposal remains **`PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION`**, and the rejected exponential scale-transfer estimate $a \exp(-c/a^2)$ is permanently retired. Before any quantitative scale-transfer error bound is proposed, the next authorized task is **`YM-011-OBS-MAP` (`Single-Step Block-Spin Observable Pushforward & Pullback Domain Specification`)**, defined strictly by the following mathematical structures:
+
+### 3.1 Probability Spaces (Domain and Codomain Measures)
+1. **Fine-Lattice Probability Space at Scale $0$ (Spacing $a$, Box $\Lambda_0$):**
+   $$\left( \Omega_0, \, \mathcal{F}_0, \, \mu_0 \right) := \left( SU(N)^{E(\Lambda_0)}, \, \mathcal{B}\!\left(SU(N)^{E(\Lambda_0)}\right), \, Z_{\Lambda_0}(\beta)^{-1} e^{-S_W(U)} \prod_{\ell \in E(\Lambda_0)} dU_\ell \right),$$
+   where $dU_\ell$ is the normalized Haar probability measure on $SU(N)$.
+2. **Coarse Block-Lattice Configuration Space at Scale $1$ (Spacing $L a = 2a$, Box $\Lambda_1 = \Lambda_0 / 2$):**
+   $$\left( \Omega_1, \, \mathcal{F}_1 \right) := \left( SU(N)^{E(\Lambda_1)}, \, \mathcal{B}\!\left(SU(N)^{E(\Lambda_1)}\right) \right),$$
+   equipped with the pushforward / block-averaged probability measure $\mu_1 := (\mathcal{B}_{0\to 1})_\# \mu_0$ induced by a gauge-covariant block-averaging map $\mathcal{B}_{0\to 1}: \Omega_0 \to \Omega_1$ (or randomized block-spin kernel $K_{0\to 1}(V \mid U)$ satisfying $\int_{\Omega_1} K_{0\to 1}(dV \mid U) = 1$).
+
+### 3.2 Observable Algebras and Pullback / Mollification Map
+1. **Coarse Loop Observable Algebra $\mathcal{A}_{\mathrm{loop}}(\Lambda_1) \subset C(\Omega_1, \mathbb{C})$:**
+   Generated by normalized Wilson traces $W_{\Lambda_1}^{\mathbb{R}/\mathbb{C}}(C_1)[V] = \frac{1}{N}\operatorname{Tr}\!\left(\prod_{\ell' \in C_1} V_{\ell'}\right)$ on closed coarse-lattice loops $C_1 \subset E(\Lambda_1)$ of link length $n_1 = |C_1|/(2a)$.
+2. **Pullback Observable Map $\mathcal{B}_{0\to 1}^*: \mathcal{A}_{\mathrm{loop}}(\Lambda_1) \to L^\infty(\Omega_0, \mu_0)$:**
+   $$\left( \mathcal{B}_{0\to 1}^* W_{\Lambda_1}(C_1) \right)[U] := \int_{\Omega_1} W_{\Lambda_1}(C_1)[V] \, K_{0\to 1}(dV \mid U), \qquad \text{satisfying the exact pushforward identity } \langle W_{\Lambda_1}(C_1) \rangle_{\mu_1} \equiv \left\langle \mathcal{B}_{0\to 1}^* W_{\Lambda_1}(C_1) \right\rangle_{\mu_0}.$$
+3. **Flowed Fine-Lattice Comparison Map $\mathcal{F}_t^*: \mathcal{A}_{\mathrm{loop}}(\Lambda_0) \to C(\Omega_0, [-1, 1])$:**
+   Maps the geometric embedding $\iota(C_1) \subset E(\Lambda_0)$ (a fine-lattice loop of $n_0 = 2 n_1$ links) to the flowed observable $W_t(\iota(C_1))[U] = W_0(\iota(C_1))[V_t(U)]$.
+4. **Well-Defined Target Discrepancy Functional (Prior to Claiming Any Bound):**
+   $$\mathcal{D}_{0\to 1}(C_1; t) := \left\langle \mathcal{B}_{0\to 1}^* W_{\Lambda_1}(C_1) - W_t(\iota(C_1)) \right\rangle_{\mu_0} = \int_{\Omega_0} \left( (\mathcal{B}_{0\to 1}^* W_{\Lambda_1}(C_1))[U] - W_t(\iota(C_1))[U] \right) d\mu_0(U).$$
 
 ### Lemma YM-011-L1 (UV Scale-Transfer and Observables Mollification Lemma)
 
-> **Governance Gate (`YM-GOV-014`):** Lemma `YM-011-L1` below defines the proposed multiscale Bałaban-measure extension of `YM-011-PRE`. It remains in status **`PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION`** until separately authorized after `YM-011-PRE` closeout.
-
-Let $G = SU(N)$ with $N \ge 2$ in $d = 4$ spacetime dimensions on a finite hypercubic lattice $\Lambda = a \mathbb{Z}^4 \cap [-L_0, L_0]^4$. Let $d\mu^{(k)}[A]$ be Bałaban's $k$-th scale small-field effective measure at physical block scale $L_k = a 2^k \le L_*$ with $g_k \le g_*$. This formulation assumes **no mass gap**, no infinite-volume thermodynamic limit, and no specific infrared behavior.
+> **Governance Gate (`YM-GOV-015`):** Lemma `YM-011-L1` remains in status **`PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION`**. This formulation assumes **no mass gap**, no infinite-volume thermodynamic limit, and no specific infrared behavior.
 
 **Statement:**
-Determine whether Schwinger–Dyson integration by parts on the Bałaban effective measure $d\mu^{(k)}[A]$ improves the elementary fixed-lattice linear bound $K \cdot (|C|/a) \cdot (t/a^2)$ of `YM-011-PRE` to a block-scale estimate uniform in $a \to 0$ for fixed physical flow time $t$ and physical perimeter $|C|$.
+Any future quantitative estimate on $\mathcal{D}_{0\to 1}(C_1; t)$ must be derived directly from the explicit kernel $K_{0\to 1}(dV \mid U)$ and the fixed-lattice differential identity of `YM-011-PRE-R1` without stipulating exponential decay in $1/a^2$.
 
 ---
 

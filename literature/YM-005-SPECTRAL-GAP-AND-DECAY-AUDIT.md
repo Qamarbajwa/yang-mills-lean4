@@ -12,18 +12,25 @@ $$|\text{Cov}_\mu(A, B)| \le C(A, B) \exp(-m_{\text{lat}} r) \quad \forall r \ge
 The correlation length is defined as:
 $$\xi_{\text{lat}} = \frac{1}{m_{\text{lat}}}$$
 
-### 1.2 Transfer Matrix / Hamiltonian Spectral Gap
-On a hypercubic lattice bisected by a time reflection hyperplane, reflection positivity constructs the physical Hilbert space $\mathcal{H}_{\text{phys}}$ and the self-adjoint transfer matrix $\mathbb{T} = e^{-a H_{\text{lat}}}$.
-The **Hamiltonian spectral gap** is:
-$$\Delta_{\text{lat}}(\beta, a) = \inf \left( \text{spec}(H_{\text{lat}}) \setminus \{0\} \right) = -\frac{1}{a} \ln \lambda_1(\beta)$$
-where $\lambda_1 = \sup \{ (\psi, \mathbb{T} \psi)_{\mathcal{H}} : \|\psi\|=1, \psi \perp |\Omega\rangle \} < 1$.
+### 1.2 Transfer Matrix / Hamiltonian Spectral Gap & Vacuum Eigenvalue Normalization (`YM-005-R2`)
+On a hypercubic lattice bisected by a time reflection hyperplane, reflection positivity (OS3) constructs the physical gauge-invariant Hilbert space $\mathcal{H}_{\text{phys}}$ and the bounded, self-adjoint, strictly positive transfer operator $\mathbb{T} > 0$ (Lüscher 1977; Osterwalder–Seiler 1978).
+- Let $\lambda_0(\beta) := \|\mathbb{T}\|_{\mathrm{op}} > 0$ denote the maximal (ground-state / vacuum) eigenvalue of the unnormalized transfer operator $\mathbb{T}$, associated with the unique Poincaré/translation-invariant vacuum state $|\Omega\rangle \in \mathcal{H}_{\text{phys}}$ ($\mathbb{T}|\Omega\rangle = \lambda_0(\beta)|\Omega\rangle$).
+- Because the raw vacuum eigenvalue $\lambda_0(\beta) = e^{-a E_0}$ incorporates the extensive ground-state free-energy shift $E_0 \propto L_s^{d-1} f(\beta)$, the **vacuum-normalized transfer operator** is defined by:
+  $$\widehat{\mathbb{T}} := \frac{\mathbb{T}}{\lambda_0(\beta)} = e^{-a H_{\text{lat}}}, \qquad \text{so that } \widehat{\mathbb{T}} |\Omega\rangle = |\Omega\rangle \;\; (\widehat{\lambda}_0 = 1) \;\; \text{and} \;\; H_{\text{lat}} |\Omega\rangle = 0.$$
+- Let $\lambda_1(\beta) := \sup \{ (\psi, \mathbb{T} \psi)_{\mathcal{H}_{\text{phys}}} : \|\psi\|=1, \, \psi \perp |\Omega\rangle \}$ be the top of the spectrum of $\mathbb{T}$ on the orthogonal complement $|\Omega\rangle^\perp$, and let $\widehat{\lambda}_1(\beta) := \frac{\lambda_1(\beta)}{\lambda_0(\beta)} \in (0, 1)$ be the normalized first-excited transfer eigenvalue.
+- The **physical lattice Hamiltonian spectral gap** is:
+  $$\Delta_{\text{lat}}(\beta, a) := \inf \left( \text{spec}(H_{\text{lat}}) \setminus \{0\} \right) = -\frac{1}{a} \ln\!\left(\frac{\lambda_1(\beta)}{\lambda_0(\beta)}\right) = -\frac{1}{a} \ln \widehat{\lambda}_1(\beta) > 0.$$
+- **Exact Hypotheses Required for $\Delta_{\text{lat}}(\beta, a) > 0$:**
+  1. *Reflection Positivity (OS3) & Self-Adjoint Positivity:* $\langle \theta F, F \rangle_\mu \ge 0$ and $\mathbb{T} = \mathbb{T}^\dagger > 0$ on $\mathcal{H}_{\text{phys}}$ (proved for all $\beta \in (0, \infty)$ by Lüscher 1977 and Osterwalder–Seiler 1978);
+  2. *Unique Isolated Vacuum & Strict Spectral Ratio $\lambda_1(\beta) < \lambda_0(\beta)$:* Absolute convergence of the strong-coupling polymer cluster expansion for $0 < \beta \le \beta_0(d, G) \ll 1$, which proves uniqueness of the infinite-volume state $|\Omega\rangle$ and $\widehat{\lambda}_1(\beta) = \lambda_1(\beta)/\lambda_0(\beta) \le e^{-m_{\text{lat}}(\beta)} < 1$ (proved by Osterwalder–Seiler 1978 and Seiler 1982);
+  3. *Vacuum Normalization:* Division of $\mathbb{T}$ by $\lambda_0(\beta)$ ($\widehat{\mathbb{T}} = \mathbb{T}/\lambda_0(\beta)$) so that $\ln \widehat{\lambda}_0 = 0$.
 
-### 1.3 Mathematical Equivalence on the Discrete Lattice
-By the spectral theorem for self-adjoint operators (Osterwalder–Seiler 1978, Glimm–Jaffe 1987):
-$$\langle \theta A, T_{na} B \rangle_\mu - \langle \theta A \rangle \langle B \rangle = (A, \mathbb{T}^n B)_{\mathcal{H}} - (A, \Omega)(\Omega, B) = \int_{\Delta_{\text{lat}}}^\infty e^{-t E} d\mu_{A,B}(E)$$
+### 1.3 Mathematical Equivalence Between Normalized Transfer Gap and Temporal Clustering on the Discrete Lattice
+By the spectral theorem for the self-adjoint contraction $\widehat{\mathbb{T}} = \mathbb{T}/\lambda_0(\beta) = e^{-a H_{\text{lat}}}$ on $\mathcal{H}_{\text{phys}}$ (Osterwalder–Seiler 1978, Glimm–Jaffe 1987):
+$$\langle \theta A, T_{na} B \rangle_\mu - \langle \theta A \rangle_\mu \langle B \rangle_\mu = (A, \widehat{\mathbb{T}}^n B)_{\mathcal{H}_{\text{phys}}} - (A, \Omega)(\Omega, B) = \int_{\Delta_{\text{lat}}}^\infty e^{-t E} d\nu_{A,B}(E)$$
 where $t = na$.
-- If $\text{spec}(H_{\text{lat}}) \subseteq \{0\} \cup [\Delta_{\text{lat}}, \infty)$, then temporal correlations decay as $\exp(-t \Delta_{\text{lat}})$, yielding $m_{\text{lat}} = a \Delta_{\text{lat}}$.
-- Conversely, if all gauge-invariant Euclidean correlation functions decay exponentially with rate $m_{\text{lat}} > 0$, the transfer matrix has an isolated eigenvalue at 1, and $\Delta_{\text{lat}} \ge m_{\text{lat}} / a > 0$.
+- If $\text{spec}(H_{\text{lat}}) \subseteq \{0\} \cup [\Delta_{\text{lat}}, \infty)$ with $\Delta_{\text{lat}} = -\frac{1}{a}\ln(\lambda_1/\lambda_0) > 0$, then connected Euclidean temporal correlations decay as $\exp(-t \Delta_{\text{lat}})$, yielding $m_{\text{lat}} = a \Delta_{\text{lat}}$.
+- Conversely, if all gauge-invariant Euclidean correlation functions decay exponentially with dimensionless rate $m_{\text{lat}}(\beta) > 0$ (as proved for $0 < \beta \le \beta_0(d,G)$ by Osterwalder–Seiler 1978, Seiler 1982, and Shen–Zhu–Zhu 2023) AND reflection positivity (OS3) holds (Osterwalder–Seiler 1978), then $\widehat{\mathbb{T}} = \mathbb{T}/\lambda_0(\beta)$ has an isolated simple eigenvalue at $\widehat{\lambda}_0 = 1$, and $\Delta_{\text{lat}}(\beta, a) = -\frac{1}{a}\ln(\lambda_1/\lambda_0) \ge m_{\text{lat}}(\beta) / a > 0$.
 
 ---
 

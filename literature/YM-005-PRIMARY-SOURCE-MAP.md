@@ -42,7 +42,7 @@ The rigorous infrared and lattice gauge theory literature is mapped across five 
 ### Family D: Modern Stochastic Analysis and Uniform Functional Inequalities (2023)
 - **Primary Source:** H. Shen, R. Zhu, X. Zhu, *"A Stochastic Analysis Approach to Lattice Yang-Mills at Strong Coupling"*, *Communications in Mathematical Physics* **400** (2023), pp. 805–851 (DOI: 10.1007/s00220-022-04609-1; arXiv:2204.12737).
   - **Citation Key:** `PAPER-MOD-007` / `THM-YM-0027`
-  - **Mathematical Contribution:** Stochastic quantization via lattice Langevin/Glauber diffusions on compact Lie group manifolds $G^{|\Lambda_\ell|}$; uniform Bakry–Émery curvature bounds; proof of uniform Poincaré and log-Sobolev inequalities independent of volume for $\beta < \beta_0(d, G)$; existence and uniqueness of infinite-volume Gibbs measure on $\mathbb{Z}^d$; strictly positive spectral gap $\Delta_{\text{lat}}(\beta) \ge C_{\text{PI}}(\beta)^{-1} > 0$.
+  - **Mathematical Contribution:** Stochastic quantization via lattice Langevin/Glauber diffusions on compact Lie group manifolds $G^{|\Lambda_\ell|}$; uniform Bakry–Émery curvature bounds; proof of uniform Poincaré and log-Sobolev inequalities independent of volume for $\beta < \beta_0(d, G)$; existence and uniqueness of infinite-volume Gibbs measure on $\mathbb{Z}^d$; strictly positive **Markov / Langevin diffusion generator spectral gap** $\operatorname{gap}_{L^2(\mu_\infty)}(-\mathcal{L}) \ge C_{\text{PI}}(\beta)^{-1} > 0$ and exponential decay of Euclidean gauge-invariant correlations $m_{\text{lat}}(\beta) > 0$. *(Note: Shen–Zhu–Zhu 2023 proves the Markov generator gap on $L^2(\mu_\infty)$ and Euclidean correlation clustering; it does not construct the quantum transfer matrix $\mathbb{T}$ or quantum Hamiltonian $H_{\text{lat}}$ on $\mathcal{H}_{\text{phys}}$, which is established separately by Lüscher 1977 and Osterwalder–Seiler 1978.)*
   - **Rigorous Scope:** $d \ge 2$, compact Lie groups $SU(N)$, infinite lattice $\mathbb{Z}^d$, strong coupling $\beta < \beta_0$.
   - **Boundary Limitation:** The Poincaré constant $C_{\text{PI}}(\beta)$ blows up as $\beta \to \beta_0$; completely inapplicable to the continuum trajectory $\beta \to \infty$.
 
@@ -54,43 +54,40 @@ The rigorous infrared and lattice gauge theory literature is mapped across five 
   - **Citation Key:** `PAPER-MOD-009` / `THM-YM-0029`
   - **Mathematical Contribution:** Dynamical string and loop equation framework in the 't Hooft large-$N$ limit ($N \to \infty$, $\lambda = g^2 N$ fixed).
   - **Rigorous Scope:** Discrete lattice $a > 0$, expanded coupling domains.
-  - **Boundary Limitation:** Proves area laws for static quark loops, but does **not** prove a spectral mass gap for local glueball operators in the continuum limit.
+  - **Boundary Limitation:** Proves **only** Wilson-loop area laws ($\sigma_{\text{lat}}(\beta) > 0$) for static quark loops; does **not** prove either a quantum Hamiltonian transfer-matrix spectral gap $\Delta_{\text{lat}}(\beta, a) > 0$ or a Markov generator gap $\operatorname{gap}(-\mathcal{L}) > 0$.
 
 ---
 
-## 3. Decoupling and Classification Matrix Across Canonical Dimensions
+## 3. Decoupling and Source-to-Claim Correspondence Matrix (`YM-005-R2`)
 
-To prevent conceptual conflation, the five methodological families are decoupled across six canonical comparative dimensions:
+To prevent conceptual conflation or unsupported theorem attribution, the five methodological families are strictly mapped across their exact proved mathematical claims:
 
-| Comparative Dimension | Family A (Wilson 1974) | Family B (Osterwalder–Seiler 1978; Lüscher 1977) | Family C (Gross 1979; Seiler 1982) | Family D (Shen–Zhu–Zhu 2023) | Family E (Cao–Nissim–Sheffield 2025) |
+| Comparative Dimension | Family A (Wilson 1974, `THM-YM-0008`) | Family B (Lüscher 1977; Osterwalder–Seiler 1978, `THM-YM-0009`) | Family C (Gross 1979; Seiler 1982, `THM-YM-0015`) | Family D (Shen–Zhu–Zhu 2023, `THM-YM-0027`) | Family E (Cao–Nissim–Sheffield 2025, `THM-YM-0028`) |
 |---|---|---|---|---|---|
-| **1. Primary Objective** | Formalize lattice gauge invariance & quark confinement | Establish reflection positivity & physical transfer matrix | Prove convergence of strong-coupling polymer expansion | Establish uniform Poincaré/log-Sobolev inequalities & gap | Expand rigorous area-law parameter bounds |
-| **2. Volume Regime** | Finite and infinite box | Arbitrary volume (hyperplane bisected) | Infinite volume thermodynamic limit $\Lambda \to \mathbb{Z}^d$ | Infinite volume lattice $\mathbb{Z}^d$ | Infinite volume lattice $\mathbb{Z}^d$ |
-| **3. Coupling Range** | Strong coupling $\beta \ll 1$ ($g^2 \gg 1$) | All couplings $0 < \beta < \infty$ | Strong coupling $\beta < \beta_0(d, G)$ | Strong coupling $\beta < \beta_0(d, G)$ | Expanded strong-coupling regime $\beta < \beta_1(d, G)$ |
-| **4. Observable Controlled** | Wilson loop $\langle W(C) \rangle$ | Inner products $\langle \theta F, F \rangle$; Transfer operator $\mathbb{T}$ | Truncated correlations $\langle A B \rangle_T$; Free energy $f(\beta)$ | Variance $\text{Var}_\mu(F)$; Spectral gap $\Delta_{\text{lat}}$ | Wilson loop $\langle W(C) \rangle$; String tension $\sigma$ |
-| **5. Gap / Property Proved** | Area law decay $\sigma > 0$ | Transfer matrix self-adjointness $\mathbb{T} = e^{-a H} > 0$ | Exponential clustering $m_{\text{lat}} > 0$; Spectral gap | Poincaré gap $\Delta_{\text{lat}} \ge C_{\text{PI}}^{-1} > 0$ | Area law lower bound $\sigma(\beta) \ge \sigma_0 > 0$ |
-| **6. Terminal Open Boundary** | Expansion diverges as $\beta \to \infty$ | Does not bound gap $\Delta(a)$ as $a \to 0$ | Cluster expansion loses contractivity at $\beta_0$ | Curvature bound degenerates as $\beta \to \beta_0$ | Does not prove continuum mass gap or $a \to 0$ limit |
+| **1. Primary Objective** | Formalize lattice gauge invariance & strong-coupling confinement | Establish reflection positivity (OS3), physical Hilbert space $\mathcal{H}_{\text{phys}}$, & transfer-matrix gap | Prove polymer cluster convergence, correlation decay, & transfer-matrix gap | Establish uniform Poincaré/log-Sobolev inequalities & Langevin generator gap | Expand rigorous Wilson-loop area-law parameter bounds |
+| **2. Volume Regime** | Finite and formal infinite box | Finite spatial box (Lüscher) & infinite volume (Osterwalder–Seiler) | Infinite-volume thermodynamic limit $\Lambda \to \mathbb{Z}^d$ | Infinite-volume lattice $\mathbb{Z}^d$ | Infinite-volume lattice $\mathbb{Z}^d$ |
+| **3. Coupling Range** | Strong coupling $\beta \ll 1$ | $\mathbb{T} > 0$ for all $0 < \beta < \infty$; gap for $0 < \beta \le \beta_0(d,G)$ | Strong coupling $0 \le \beta < \beta_0(d, G)$ | Strong coupling $0 \le \beta < \beta_0(d, G)$ | Expanded strong-coupling regime $0 \le \beta < \beta_1(d, G)$ |
+| **4. Observable Controlled** | Planar Wilson loop $\langle W(C) \rangle$ | OS inner product $\langle \theta F, F \rangle$; Normalized transfer operator $\widehat{\mathbb{T}} = \mathbb{T}/\lambda_0$ | Truncated correlations $\langle A B \rangle_T$; Free energy $f(\beta)$; $\widehat{\mathbb{T}}$ | Variance $\text{Var}_\mu(F)$; Dirichlet form $\mathcal{E}(F,F)$; correlations | Wilson loop $\langle W(C) \rangle$; Dimensionless string tension $\sigma_{\text{lat}}$ |
+| **5. Exact Gap / Decay Proved** | **Area law only:** $\sigma_{\text{lat}}(\beta) > 0$ (no Hamiltonian or Markov gap) | **Hamiltonian transfer-matrix gap:** $\Delta_{\text{lat}} = -\frac{1}{a}\ln(\lambda_1/\lambda_0) > 0$ ($\beta \le \beta_0$) & clustering $m_{\text{lat}} > 0$ | **Hamiltonian transfer-matrix gap:** $\Delta_{\text{lat}} = -\frac{1}{a}\ln(\lambda_1/\lambda_0) > 0$, clustering $m_{\text{lat}} > 0$, & area law $\sigma_{\text{lat}} > 0$ | **Markov generator gap:** $\operatorname{gap}_{L^2(\mu_\infty)}(-\mathcal{L}) \ge C_{\text{PI}}^{-1} > 0$ & clustering $m_{\text{lat}} > 0$ (**NOT** $H_{\text{lat}}$ directly) | **Area law only:** $\sigma_{\text{lat}}(\beta) \ge \sigma_0 > 0$ (no Hamiltonian or Markov gap) |
+| **6. Terminal Open Boundary** | Expansion diverges as $\beta \to \infty$ | Does not bound gap $\Delta(a)$ as $a \to 0$ ($\beta \to \infty$) | Cluster expansion loses contractivity at $\beta_0$ | Curvature bound degenerates as $\beta \to \beta_0$ | Does not prove spectral mass gap or $a \to 0$ limit |
 
 ---
 
 ## 4. Governing Epistemic Invariants
 
-Under **ROS v1.0** and **Universal Governance v4.0.3**, all analyses of these primary sources must enforce four inviolable invariants:
+Under **ROS v1.0**, **Universal Governance v4.0.3**, and **`YM-GOV-015`**, all analyses of these primary sources enforce four inviolable invariants:
 
 1. **`INV-YM005-001` (Spectral Separation):**
-   $$\boxed{\text{LATTICE_SPECTRAL_GAP } \Delta_{\text{lat}}(\beta, a) > 0 \ne \text{CONTINUUM_4D_CLAY_MASS_GAP } \Delta > 0}$$
-   A spectral gap established on a discrete lattice at fixed spacing $a > 0$ is a property of a lattice Hamiltonian $H_{\text{lat}}$, not of a continuum Wightman quantum field theory.
+   $$\boxed{\text{LATTICE\_SPECTRAL\_GAP } \Delta_{\text{lat}}(\beta, a) = -\frac{1}{a}\ln\!\left(\frac{\lambda_1(\beta)}{\lambda_0(\beta)}\right) > 0 \ne \text{CONTINUUM\_4D\_CLAY\_MASS\_GAP } \Delta > 0}$$
+   A spectral gap established on a discrete lattice at fixed spacing $a > 0$ is a property of a regulated lattice Hamiltonian $H_{\text{lat}} = -\frac{1}{a}\ln(\mathbb{T}/\lambda_0)$, not of a continuum Wightman quantum field theory.
 
-2. **`INV-YM005-002` (Area Law vs. Mass Gap Separation):**
-   $$\boxed{\text{WILSON_AREA_LAW } \langle W(C) \rangle \le C e^{-\sigma \cdot \text{Area}(C)} \ne \text{SPECTRAL_MASS_GAP } \Delta > 0}$$
-   The area law for Wilson loops reflects the confinement of fundamental test charges, whereas the spectral mass gap concerns the exponential decay of gauge-invariant local field operators (e.g. glueball states). Confinement does not mathematically imply a mass gap in general gauge theories.
+2. **`INV-YM005-002` (Strict Separation of Area Law, Hamiltonian Gap, and Markov Generator Gap):**
+   $$\boxed{\langle W(C) \rangle \le C e^{-\sigma_{\text{lat}} \cdot \text{Area}(C)/a^2} \;\; \centernot\implies \;\; \Delta_{\text{lat}}(\beta, a) > 0, \qquad \operatorname{gap}_{L^2(\mu_\infty)}(-\mathcal{L}) \ne \Delta_{\text{lat}}(\beta, a)}$$
+   The area law for Wilson loops (Wilson 1974; Cao–Nissim–Sheffield 2025), the Langevin diffusion generator gap on $L^2(\mu_\infty)$ (Shen–Zhu–Zhu 2023), and the quantum Hamiltonian transfer-matrix gap on $\mathcal{H}_{\text{phys}}$ (Osterwalder–Seiler 1978; Seiler 1982) are distinct mathematical objects proved by distinct theorems.
 
 3. **`INV-YM005-003` (Quantitative Provenance Discipline):**
-   All physical length parameters (such as $\text{fm}$ lengths) or numerical coupling values must be classified with explicit provenance:
-   - `PROJECT_ESTIMATE`: Heuristic calculations within the project.
-   - `HEURISTIC_PHYSICAL_TRANSLATION`: Phenomenological conversion using experimental QCD scales ($\Lambda_{\text{QCD}} \approx 250\text{ MeV}$).
-   - `PROVED_BY_SOURCE`: Strictly confined to the explicit mathematical statements in peer-reviewed source literature.
+   All parameters are classified with explicit provenance (`PROVED_BY_SOURCE`, `PROJECT_ESTIMATE`, or `HEURISTIC_PHYSICAL_TRANSLATION`), and canonical theorem statements remain strictly dimensionless and symbolic ($\beta \le \beta_0(d, G) \ll 1$, fixed $a > 0$).
 
 4. **`INV-YM005-004` (11-Dimensional Parameter Scope):**
-   Every reconstructed theorem must be cataloged with its full 11-dimensional parameter scope:
+   Every reconstructed theorem is cataloged with its full 11-dimensional parameter scope:
    `gauge group`, `dimension`, `lattice spacing`, `volume`, `coupling parameter`, `observable`, `gap/decay property`, `uniformity`, `continuum-limit status`, `what is proved`, `what remains open`.

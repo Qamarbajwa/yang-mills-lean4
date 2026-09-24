@@ -24,12 +24,12 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 14
-  last_updated_at: "2026-09-24T05:28:00Z"
-  active_contract: "YM-GOV-014"
+  last_expected_revision: 15
+  last_updated_at: "2026-09-24T05:48:00Z"
+  active_contract: "YM-GOV-015"
   frozen_candidate: "cb06adbbd8d61eda34eb9c8ae0239196609c5c9a"
 
-current_objective: YM-GOV-014
+current_objective: YM-GOV-015
 
 objectives:
   - id: YM-GOV-403
@@ -94,9 +94,9 @@ objectives:
     dependencies: ["YM-004"]
     risk: R2
     writer: "primary-worker"
-    reviewer_path: "fresh-blind-research-subagent-YM-GOV-014"
-    acceptor: "autonomous-scientific-review-YM-GOV-014"
-    repair_id: "YM-005-R1"
+    reviewer_path: "fresh-blind-research-subagent-YM-GOV-015"
+    acceptor: "autonomous-scientific-review-YM-GOV-015"
+    repair_id: "YM-005-R2"
     scope_limitation: "WITH_REGULATED_SCOPE"
     status: SCIENTIFICALLY_ACCEPTED
 
@@ -164,17 +164,27 @@ objectives:
     status: COMPLETED
 
   - id: YM-011-PRE
-    scope_in: "Fixed-lattice gradient-flow loop perturbation precursor lemma (pointwise and expectation bounds, beta cancellation, [-1,1] trace range)"
+    scope_in: "Fixed-lattice gradient-flow loop perturbation precursor lemma (Hilbert-Schmidt orthogonal projection K=2(d-1)=6, Tr(T^a T^b)=-1/2 delta^{ab}, real vs complex trace)"
     dependencies: ["YM-004"]
     risk: R2
     writer: "primary-worker"
-    reviewer_path: "fresh-blind-research-subagent-YM-GOV-014"
-    acceptor: "autonomous-scientific-review-YM-GOV-014"
+    reviewer_path: "fresh-blind-research-subagent-YM-GOV-015"
+    acceptor: "autonomous-scientific-review-YM-GOV-015"
+    repair_id: "YM-011-PRE-R1"
     status: SCIENTIFICALLY_ACCEPTED
+
+  - id: YM-011-OBS-MAP
+    scope_in: "Single-step block-spin observable pushforward and pullback domain/codomain probability space specification (prior to any scale-transfer error bound)"
+    dependencies: ["YM-004", "YM-011-PRE"]
+    risk: R2
+    writer: "primary-worker"
+    reviewer_path: "fresh-blind-research-subagent"
+    acceptor: "autonomous-scientific-review"
+    status: PROPOSED_NEXT_AUTHORIZED_TASK
 
   - id: YM-011
     scope_in: "First load-bearing bridge lemma (UV scale-transfer & observables mollification)"
-    dependencies: ["YM-004", "YM-011-PRE"]
+    dependencies: ["YM-004", "YM-011-PRE", "YM-011-OBS-MAP"]
     risk: R3
     writer: "primary-worker"
     reviewer_path: "fresh-blind-research-subagent-IND1"
@@ -188,6 +198,15 @@ objectives:
     writer: "primary-worker"
     reviewer_path: "fresh-blind-research-subagent-YM-GOV-014"
     acceptor: "autonomous-scientific-review-YM-GOV-014"
+    status: COMPLETED
+
+  - id: YM-GOV-015
+    scope_in: "Mathematical and candidate-binding closeout audit of YM-011-PRE-R1, YM-005-R2 source correspondence, and evidence-only post-review closeout binding"
+    dependencies: ["YM-GOV-014"]
+    risk: R3
+    writer: "primary-worker"
+    reviewer_path: "fresh-blind-research-subagent-YM-GOV-015"
+    acceptor: "autonomous-scientific-review-YM-GOV-015"
     status: COMPLETED
 
 capabilities:

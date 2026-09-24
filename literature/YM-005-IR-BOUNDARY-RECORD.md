@@ -37,11 +37,11 @@ canonical_ir_boundary_record:
     uniformity: "Thermodynamic limit exists, is unique, and is independent of boundary conditions (Gross 1979, Seiler 1982, Shen–Zhu–Zhu 2023)"
 
   gap_or_decay_property:
-    hamiltonian_spectral_gap: "Delta_lat(beta, a) = -a^{-1} ln lambda_1(T) >= m_lat(beta) / a > 0 on H_phys (Osterwalder–Seiler 1978, Seiler 1982)"
+    hamiltonian_spectral_gap: "Delta_lat(beta, a) = -a^{-1} ln(lambda_1(beta) / lambda_0(beta)) = -a^{-1} ln(lambda_hat_1(beta)) >= m_lat(beta) / a > 0 on H_phys with T_hat = T / lambda_0(beta) (Osterwalder–Seiler 1978, Seiler 1982)"
     markov_generator_gap: "gap_{L^2(mu_infty)}(-L) >= 1 / C_PI(beta) > 0 on L^2(G^{E(Z^d)}, mu_infty) (Shen–Zhu–Zhu 2023)"
-    exponential_clustering: "|<A B> - <A><B>| <= C(A, B) exp(-m_lat(beta) d(A, B)) with m_lat(beta) ~ ln(1/beta) > 0"
-    functional_inequality: "Uniform Poincaré inequality on Z^d: Var_{mu_infty}(f) <= C_PI(beta) E(f, f) with C_PI(beta) < infty"
-    wilson_area_law: "Wilson loop area law <W(C)> <= C exp(-sigma_lat Area(C) / a^2) with sigma_lat(beta) ~ ln(1/beta) > 0 (Wilson 1974, Cao–Nissim–Sheffield 2025)"
+    exponential_clustering: "|<A B> - <A><B>| <= C(A, B) exp(-m_lat(beta) d(A, B)) with m_lat(beta) ~ ln(1/beta) > 0 (Gross 1979, Osterwalder–Seiler 1978, Seiler 1982, Shen–Zhu–Zhu 2023)"
+    functional_inequality: "Uniform Poincaré inequality on Z^d: Var_{mu_infty}(f) <= C_PI(beta) E(f, f) with C_PI(beta) < infty (Shen–Zhu–Zhu 2023)"
+    wilson_area_law: "Wilson loop area law <W(C)> <= C exp(-sigma_lat Area(C) / a^2) with sigma_lat(beta) ~ ln(1/beta) > 0 (Wilson 1974, Osterwalder–Seiler 1978, Cao–Nissim–Sheffield 2025)"
     non_conflation_invariant: "gap(-L) != Delta_lat(beta, a) != sigma_lat(beta); Markov generator gap on L^2(mu_infty) is never equated with Hamiltonian gap on H_phys"
 
   uniformity_established:

@@ -18,34 +18,34 @@ Across 10 canonical artifacts, `YM-005` establishes the following mathematical c
 
 ### 2.1 Reflection Positivity & Physical Transfer Matrix (Osterwalder–Seiler 1978; Lüscher 1977)
 - On hypercubic Euclidean lattices $a \mathbb{Z}^4$, the Wilson plaquette action satisfies Osterwalder–Schrader reflection positivity (OS3) across spatial hyperplanes bisecting links or sites.
-- This constructs a physical positive-definite Hilbert space $\mathcal{H}_{\text{phys}}$ of gauge-invariant wave functions and a self-adjoint, strictly positive contraction transfer matrix $\mathbb{T} = e^{-a H_{\text{lat}}} > 0$.
-- The physical lattice Hamiltonian $H_{\text{lat}} = - \frac{1}{a} \ln \mathbb{T} \ge 0$ is self-adjoint and bounded from below by zero for all bare couplings $\beta \in (0, \infty)$.
+- This constructs a physical positive-definite Hilbert space $\mathcal{H}_{\text{phys}}$ of gauge-invariant wave functions and a self-adjoint, strictly positive transfer operator $\mathbb{T} > 0$, with vacuum-normalized contraction $\widehat{\mathbb{T}} := \mathbb{T}/\lambda_0(\beta) = e^{-a H_{\text{lat}}}$ where $\lambda_0(\beta) = \|\mathbb{T}\|_{\mathrm{op}} > 0$ is the vacuum eigenvalue ($\widehat{\mathbb{T}}|\Omega\rangle = |\Omega\rangle$).
+- The physical vacuum-subtracted lattice Hamiltonian $H_{\text{lat}} = - \frac{1}{a} \ln(\mathbb{T}/\lambda_0(\beta)) \ge 0$ satisfies $H_{\text{lat}}|\Omega\rangle = 0$ and is self-adjoint and bounded from below by zero for all bare couplings $\beta \in (0, \infty)$.
 
-### 2.2 Convergent Polymer Cluster Expansions (Gross 1979; Seiler 1982)
+### 2.2 Convergent Polymer Cluster Expansions (Gross 1979; Osterwalder–Seiler 1978; Seiler 1982)
 - Expanding the plaquette Boltzmann factor into group characters via the Peter–Weyl theorem maps the partition function to an abstract polymer gas on the dual lattice.
 - For all couplings below the strong-coupling radius $\beta < \beta_0(d, G)$, the Kotecký–Preiss activity condition $\sum_{Y \sim X} |\zeta(Y)| e^{\mu |Y|} \le \mu |X|$ converges absolutely.
 - This establishes:
   1. Real-analyticity of the thermodynamic free energy density $f(\beta)$ in $|\beta| < \beta_0$.
   2. Uniqueness of the infinite-volume Gibbs measure $\mu_\infty$ on $\mathbb{Z}^4$.
   3. Exponential decay of all truncated gauge-invariant correlation functions with dimensionless rate $m_{\text{lat}}(\beta) \sim \ln(1/\beta) > 0$.
-  4. Existence of an isolated vacuum state $|\Omega\rangle \in \mathcal{H}_{\text{phys}}$ and a strictly positive lattice spectral gap $\Delta_{\text{lat}}(\beta, a) \ge m_{\text{lat}}(\beta) / a > 0$.
+  4. Existence of an isolated simple vacuum state $|\Omega\rangle \in \mathcal{H}_{\text{phys}}$ ($\lambda_1(\beta) < \lambda_0(\beta)$) and a strictly positive vacuum-normalized lattice Hamiltonian spectral gap $\Delta_{\text{lat}}(\beta, a) = -\frac{1}{a}\ln\!\left(\frac{\lambda_1(\beta)}{\lambda_0(\beta)}\right) = -\frac{1}{a}\ln \widehat{\lambda}_1(\beta) \ge m_{\text{lat}}(\beta) / a > 0$.
 
 ### 2.3 Stochastic Analysis & Uniform Functional Inequalities (Shen–Zhu–Zhu 2023)
 - Under stochastic quantization via lattice Langevin diffusions on $G^{E(\Lambda)}$, the compact Lie group manifold provides positive single-site Bakry–Émery Ricci curvature $\kappa_G > 0$.
 - For $\beta < \beta_0(d, G)$, the positive Ricci curvature dominates the interaction Hessian, yielding a **uniform Poincaré inequality** $\text{Var}_{\mu_\infty}(f) \le C_{\text{PI}}(\beta) \mathcal{E}(f, f)$ independent of volume.
 - The **Markov / Langevin diffusion generator** $-\mathcal{L}$ acting on $L^2(G^{E(\mathbb{Z}^d)}, \mu_\infty)$ possesses a strictly positive relaxation spectral gap in fictitious stochastic time:
   $$\operatorname{gap}_{L^2(\mu_\infty)}(-\mathcal{L}) \ge \frac{1}{C_{\text{PI}}(\beta)} > 0$$
-- **Strict Operator Non-Conflation (`YM-005-R1` Repair):** $\operatorname{gap}(-\mathcal{L})$ on $L^2(\mu_\infty)$ is **not** the physical Yang–Mills quantum Hamiltonian spectral gap $\Delta_{\text{lat}}(\beta, a) = \operatorname{gap}_{\mathcal{H}_{\text{phys}}}(H_{\text{lat}}) = -\frac{1}{a} \ln \lambda_1(\mathbb{T})$ on the Osterwalder–Schrader physical Hilbert space $\mathcal{H}_{\text{phys}}$. Rather, Shen–Zhu–Zhu (2023) independently proves spatial/temporal exponential decay of connected gauge-invariant correlation functions with dimensionless rate $m_{\text{lat}}(\beta) > 0$; when combined with the reflection-positive transfer matrix construction of Osterwalder–Seiler (1978), exponential temporal clustering implies $\operatorname{gap}_{\mathcal{H}_{\text{phys}}}(H_{\text{lat}}) \ge m_{\text{lat}}(\beta) / a > 0$.
+- **Strict Operator Non-Conflation (`YM-005-R1` / `YM-005-R2` Repair):** $\operatorname{gap}(-\mathcal{L})$ on $L^2(\mu_\infty)$ is **not** the physical Yang–Mills quantum Hamiltonian spectral gap $\Delta_{\text{lat}}(\beta, a) = \operatorname{gap}_{\mathcal{H}_{\text{phys}}}(H_{\text{lat}}) = -\frac{1}{a} \ln(\lambda_1(\beta)/\lambda_0(\beta))$ on the Osterwalder–Schrader physical Hilbert space $\mathcal{H}_{\text{phys}}$. Rather, Shen–Zhu–Zhu (2023) proves the Markov generator gap $\operatorname{gap}(-\mathcal{L}) \ge C_{\text{PI}}(\beta)^{-1} > 0$ and independently proves spatial/Euclidean exponential decay of connected gauge-invariant correlation functions with dimensionless rate $m_{\text{lat}}(\beta) > 0$; only when combined with the external reflection-positive transfer matrix theorem of Osterwalder–Seiler (1978, `THM-YM-0009`) does exponential temporal clustering imply $\operatorname{gap}_{\mathcal{H}_{\text{phys}}}(H_{\text{lat}}) = -\frac{1}{a}\ln(\lambda_1/\lambda_0) \ge m_{\text{lat}}(\beta) / a > 0$.
 
 ### 2.4 Expanded Area Law Regimes (Cao–Nissim–Sheffield 2025)
-- Random surface representations and stochastic couplings rigorously expand the parameter range $\beta \in [0, \beta_1)$ exhibiting an area law for Wilson loops with strictly positive dimensionless lattice string tension $\sigma_{\text{lat}}(\beta) \ge \sigma_0 > 0$.
+- Random surface representations and stochastic couplings rigorously expand the parameter range $\beta \in [0, \beta_1)$ exhibiting an area law for Wilson loops with strictly positive dimensionless lattice string tension $\sigma_{\text{lat}}(\beta) \ge \sigma_0 > 0$ (establishing **only** the Wilson-loop area law and neither a Hamiltonian transfer-matrix gap nor a Markov generator gap).
 
-### 2.5 Taxonomy of the Four Distinct Fixed-Lattice Objects (`YM-005-R1`)
-To prevent mathematical conflation, `YM-005-R1` strictly distinguishes four separate regulated quantities at fixed lattice spacing $a > 0$:
-1. **Langevin / Markov Generator Gap:** $\operatorname{gap}(-\mathcal{L}) \ge C_{\text{PI}}(\beta)^{-1} > 0$ on $L^2(G^{E(\Lambda)}, \mu_\Lambda)$ (stochastic relaxation rate in fictitious time $\tau$; Shen–Zhu–Zhu 2023).
-2. **Transfer-Matrix / Quantum Hamiltonian Mass Gap:** $\Delta_{\text{lat}}(\beta, a) = -\frac{1}{a}\ln \lambda_1(\mathbb{T}) > 0$ on $\mathcal{H}_{\text{phys}}$ (quantum energy gap between vacuum $|\Omega\rangle$ and first excited glueball state; Osterwalder–Seiler 1978, Seiler 1982).
-3. **Exponential Correlation Clustering Rate:** $m_{\text{lat}}(\beta) > 0$ governing connected gauge-invariant correlations $|\operatorname{Cov}_{\mu_\infty}(A, B)| \le C(A,B) e^{-m_{\text{lat}}(\beta) d(\operatorname{supp} A, \operatorname{supp} B)}$.
-4. **Wilson Loop Area-Law String Tension:** $\sigma_{\text{lat}}(\beta) > 0$ governing planar loop decay $\langle W(C) \rangle \le C e^{-\sigma_{\text{lat}}(\beta) \operatorname{Area}(C) / a^2}$ (Wilson 1974; Cao–Nissim–Sheffield 2025).
+### 2.5 Taxonomy of the Four Distinct Fixed-Lattice Objects (`YM-005-R1` / `YM-005-R2`)
+To prevent mathematical conflation, `YM-005-R1`/`R2` strictly distinguishes four separate regulated quantities at fixed lattice spacing $a > 0$:
+1. **Langevin / Markov Generator Gap:** $\operatorname{gap}(-\mathcal{L}) \ge C_{\text{PI}}(\beta)^{-1} > 0$ on $L^2(G^{E(\Lambda)}, \mu_\Lambda)$ (stochastic relaxation rate in fictitious time $\tau$; Shen–Zhu–Zhu 2023 `THM-YM-0027`).
+2. **Transfer-Matrix / Quantum Hamiltonian Mass Gap:** $\Delta_{\text{lat}}(\beta, a) = -\frac{1}{a}\ln(\lambda_1(\beta)/\lambda_0(\beta)) = -\frac{1}{a}\ln \widehat{\lambda}_1(\beta) > 0$ on $\mathcal{H}_{\text{phys}}$ (quantum energy gap between vacuum $|\Omega\rangle$ and first excited glueball state; Osterwalder–Seiler 1978 `THM-YM-0009`, Seiler 1982 `THM-YM-0015`).
+3. **Exponential Correlation Clustering Rate:** $m_{\text{lat}}(\beta) > 0$ governing connected gauge-invariant correlations $|\operatorname{Cov}_{\mu_\infty}(A, B)| \le C(A,B) e^{-m_{\text{lat}}(\beta) d(\operatorname{supp} A, \operatorname{supp} B)}$ (Gross 1979, Osterwalder–Seiler 1978, Seiler 1982, Shen–Zhu–Zhu 2023).
+4. **Wilson Loop Area-Law String Tension:** $\sigma_{\text{lat}}(\beta) > 0$ governing planar loop decay $\langle W(C) \rangle \le C e^{-\sigma_{\text{lat}}(\beta) \operatorname{Area}(C) / a^2}$ (Wilson 1974 `THM-YM-0008`; Osterwalder–Seiler 1978; Cao–Nissim–Sheffield 2025 `THM-YM-0028`).
 
 ---
 

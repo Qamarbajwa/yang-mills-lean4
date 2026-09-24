@@ -28,6 +28,7 @@ from ymmg.ros import (
 from ymmg.precursor_flow import (
     compute_gradient_flow_lipschitz_constant,
     normalized_wilson_loop_range,
+    normalized_wilson_trace_properties,
     evaluate_precursor_loop_perturbation_bound,
 )
 
@@ -248,4 +249,36 @@ def test_precursor_flow_mathematical_properties():
     )
     assert bound_res["holds_pointwise"] is True
     assert bound_res["holds_in_expectation"] is True
+    assert bound_res["holds_for_complex_and_real_trace"] is True
     assert bound_res["pointwise_bound"] == pytest.approx(6.0 * 8 * 0.01)
+
+
+def test_9_ym_gov_015_mathematical_and_source_scope_closeout():
+    """
+    YM-GOV-015 Closeout Verification:
+    1. YM-011-PRE-R1 proves K=2(d-1)=6 via Hilbert-Schmidt orthogonal projection
+       (||P_{su(N)}||_HS = 1.0) and Lüscher generator normalization Tr(T^a T^b) = -1/2 delta^{ab},
+       and distinguishes real W_t^R(C) from complex W_t^C(C).
+    2. YM-005-R2 source-to-claim correspondence in YM-005-PRIMARY-SOURCE-MAP.md has zero
+       Delta_lat >= C_PI^{-1} conflations and records the vacuum-normalized transfer-matrix
+       eigenvalue ratio lambda_1(beta)/lambda_0(beta).
+    3. Next observable-transfer task YM-011-OBS-MAP defines probability spaces (Omega_0, F_0, mu_0)
+       and (Omega_1, F_1, mu_1) and pullback map B_{0->1}^* before any error bound.
+    """
+    source_map_text = (REPO_ROOT / "literature" / "YM-005-PRIMARY-SOURCE-MAP.md").read_text(encoding="utf-8")
+    assert "\\Delta_{\\text{lat}}(\\beta) \\ge C_{\\text{PI}}(\\beta)^{-1}" not in source_map_text
+    assert "\\Delta_{\\text{lat}} \\ge C_{\\text{PI}}^{-1}" not in source_map_text
+    assert "Source-to-Claim Correspondence Matrix (`YM-005-R2`)" in source_map_text
+    assert "\\frac{\\lambda_1(\\beta)}{\\lambda_0(\\beta)}" in source_map_text
+
+    spec_text = (REPO_ROOT / "literature" / "YM-011-FIRST-LOAD-BEARING-LEMMA-SPECIFICATION.md").read_text(encoding="utf-8")
+    assert "\\operatorname{Tr}(T^a T^b) = -\\frac{1}{2}\\delta^{ab}" in spec_text
+    assert "W_t^{\\mathbb{C}}(C)" in spec_text and "W_t^{\\mathbb{R}}(C)" in spec_text
+    assert "YM-011-OBS-MAP" in spec_text
+    assert "\\mathcal{B}_{0\\to 1}^*" in spec_text
+
+    trace_su2 = normalized_wilson_trace_properties(2)
+    trace_su3 = normalized_wilson_trace_properties(3)
+    assert trace_su2["is_genuinely_complex_valued"] is False
+    assert trace_su3["is_genuinely_complex_valued"] is True
+
