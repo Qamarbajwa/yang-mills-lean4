@@ -28,8 +28,8 @@ For any closed lattice loop $C = (\ell_1, \ell_2, \dots, \ell_n)$ composed of $n
 1. **Generally Complex Normalized Wilson Trace:**
    $$W_t^{\mathbb{C}}(C)[U] := \frac{1}{N} \operatorname{Tr}\!\left( H_t(C) \right) = \frac{1}{N} \sum_{j=1}^N e^{i\theta_j} \in \Phi_N \subset \overline{\mathbb{D}}_1 := \{z \in \mathbb{C} : |z| \le 1\},$$
    where $\Phi_N$ is the compact $N$-cusped hypocycloid region in the closed unit disk $\overline{\mathbb{D}}_1$ (for $N=2$, $\Phi_2 = [-1, 1] \subset \mathbb{R}$ is real; for $N \ge 3$, $W_t^{\mathbb{C}}(C)$ is genuinely complex-valued with $W_t^{\mathbb{C}}(C^{-1}) = \overline{W_t^{\mathbb{C}}(C)}$).
-2. **Real Normalized Wilson Trace:**
-   $$W_t^{\mathbb{R}}(C)[U] := \operatorname{Re} W_t^{\mathbb{C}}(C)[U] = \frac{1}{N} \operatorname{Re}\operatorname{Tr}\!\left( H_t(C) \right) = \frac{1}{N} \sum_{j=1}^N \cos\theta_j \in \left[\min_{H \in SU(N)} \frac{1}{N}\operatorname{Re}\operatorname{Tr} H, \, 1\right] \subseteq [-1, 1].$$
+2. **Real Normalized Wilson Trace ($W_t(C) := W_t^{\mathbb{R}}(C)$):**
+   $$W_t(C)[U] := W_t^{\mathbb{R}}(C)[U] = \operatorname{Re} W_t^{\mathbb{C}}(C)[U] = \frac{1}{N} \operatorname{Re}\operatorname{Tr}\!\left( H_t(C) \right) = \frac{1}{N} \sum_{j=1}^N \cos\theta_j \in \left[\min_{H \in SU(N)} \frac{1}{N}\operatorname{Re}\operatorname{Tr} H, \, 1\right] \subseteq [-1, 1].$$
 
 **Theorem (`YM-011-PRE-R1`):**
 For every flow time $t \ge 0$, every lattice gauge configuration $U \in SU(N)^{E(\Lambda)}$, and every closed loop $C$ of length $n = |C|/a$ links, both the complex trace $W_t^{\mathbb{C}}(C)$ and the real trace $W_t^{\mathbb{R}}(C)$ satisfy the **pointwise configuration bound**:
