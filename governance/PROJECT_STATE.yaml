@@ -9,7 +9,7 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "e64a400"
+  head: "cb06adbbd8d61eda34eb9c8ae0239196609c5c9a"
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -25,9 +25,9 @@ coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
   last_expected_revision: 14
-  last_updated_at: "2026-09-24T05:20:00Z"
+  last_updated_at: "2026-09-24T05:28:00Z"
   active_contract: "YM-GOV-014"
-  frozen_candidate: "e64a400"
+  frozen_candidate: "cb06adbbd8d61eda34eb9c8ae0239196609c5c9a"
 
 current_objective: YM-GOV-014
 
