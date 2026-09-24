@@ -189,20 +189,27 @@
   - Authored deterministic verification suite `tests/test_scientific_recovery.py` (7 passing tests).
   - Status: `COMPLETED`.
 
+- **Task `YM-GOV-014` (Autonomous Scientific Repair and Acceptance-Authority Correction) Completed:**
+  - Replaced routine human-owner gating with the failure-driven scientific review state machine (`CANDIDATE -> INDEPENDENT_SCIENTIFIC_REVIEW -> {SCIENTIFICALLY_ACCEPTED, REPAIR_REQUIRED, REVIEW_HOLD}`) and `REPAIR_REQUIRED -> BOUNDED_REPAIR -> REVERIFICATION -> INDEPENDENT_SCIENTIFIC_REVIEW` in `src/ymmg/ros.py`.
+  - Reserved `HUMAN_OWNER_DECISION_REQUIRED` strictly for the 6 consequential owner-authority actions (mission/target change, claiming `GOAL_COMPLETE` or Clay solution, external publication, destructive history deletion, modifying external repositories, unbounded resource expenditure).
+  - Enforced candidate-bound SHA verification (`candidate_sha == reviewed_sha` or declared non-scientific metadata only) and automatic `REPAIR_REQUIRED` upon any finding of mathematical conflation, scope promotion, unit fabrication, circularity, or unproven transfer.
+  - Executed `YM-005-R1` autonomous scientific repair across `literature/YM-005-FINAL-SYNTHESIS.md`, `literature/YM-005-SPECTRAL-GAP-AND-DECAY-AUDIT.md`, `literature/YM-005-IR-BOUNDARY-RECORD.md`, and `literature/YM-005-VISUAL-INTUITION-DATA.md`: strictly separated Markov diffusion generator gap $\operatorname{gap}(-\mathcal{L})$ on $L^2(\mu_\infty)$, quantum Hamiltonian transfer-matrix gap $\operatorname{gap}_{\mathcal{H}_{\text{phys}}}(H_{\text{lat}})$, connected correlation clustering rate $m_{\text{lat}}(\beta)$, and Wilson loop area-law string tension $\sigma_{\text{lat}}(\beta)$; purged fabricated physical units (`0.5 fm`, `0.18 GeV^2`, `420 MeV`) from canonical theorem statements; transitioned `YM-005` to `SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_SCOPE)`.
+  - Proved and deterministically verified the fixed-lattice precursor lemma `YM-011-PRE` (`Fixed-Lattice Gradient-Flow Loop Perturbation` in `literature/YM-011-FIRST-LOAD-BEARING-LEMMA-SPECIFICATION.md` and `src/ymmg/precursor_flow.py`), proving identical $\beta$ cancellation under Lüscher's (2010) convention ($K = 2(d-1) = 6$ in $d=4$), normalized Wilson loop trace range $[-1, 1]$ (not $[0, 1]$), and both pointwise and expectation bounds $|W_t(C) - W_0(C)| \le K n (t/a^2)$.
+  - Maintained `YM-011` in `PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION`, `YM-006` through `YM-010` in `SCIENTIFIC_REVIEW_HOLD`, `GOAL_COMPLETE = FALSE`, and `CLAY_PROBLEM = OPEN_AND_UNSOLVED`.
+
 ## UNVERIFIED
 - No original Yang–Mills lemma has been certified by an external peer-reviewed journal.
-- The Clay Millennium Problem #4 status remains strictly `OPEN_AND_UNSOLVED`.
+- The Clay Millennium Problem #4 status remains strictly `OPEN_AND_UNSOLVED` (`GOAL_COMPLETE = FALSE`).
 - Proof claims for complete bridge closure (`YM-010`) and mass gap (`YM-009`) are `NOT_ESTABLISHED`.
 - No claimed external solution has been accepted.
 
 ## CURRENT BOTTLENECK
 - Tasks `YM-006` through `YM-010` are held under `SCIENTIFIC_REVIEW_HOLD`.
-- Task `YM-005` is eligible for and awaiting separate human owner acceptance (`AWAITING_HUMAN_OWNER_ACCEPTANCE`).
-- Mathematical research must proceed incrementally from proved foundations (YM-004) without assuming downstream unproved theorems.
+- Task `YM-005` is now `SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_SCOPE)` (`YM-005-R1`), and `YM-011-PRE` is `SCIENTIFICALLY_ACCEPTED` as the verified fixed-lattice precursor.
+- Task `YM-011` (`UV Scale-Transfer and Observables Mollification Lemma` on Bałaban's multiscale measure) remains `PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION`.
 
 ## NEXT ACTION
-- Awaiting human owner acceptance decision for Task `YM-005` (`Rigorous IR / Lattice Gap Machinery Reproduction`).
-- Awaiting human owner authorization to activate bounded task `YM-011` (`First Load-Bearing Bridge Lemma: UV Scale-Transfer & Observables Mollification`).
+- Formulate and execute bounded dependency-closed research increments building on `YM-004`, `YM-005` (`WITH_REGULATED_SCOPE`), and `YM-011-PRE` without assuming a continuum mass gap.
 
 
 

@@ -28,12 +28,15 @@ This document establishes the **authoritative, reconciled, edge-by-edge audit** 
 
 | Status Classification | Edge Count | Edge Identifiers |
 |---|---|---|
-| **`PROVED`** | **2** | `E-UV-FREE`, `E-UV-FREE-CONT` |
+| **`PROVED`** *(Strictly Perturbative Asymptotic Freedom in UV-Regularized Schemes)* | **2** | `E-UV-FREE` (`N-REG-LATTICE -> N-UV-FREE`), `E-UV-FREE-CONT` (`N-REG-CUTOFF -> N-UV-FREE`) |
 | **`REGULATED_ONLY`** | **2** | `E-UV-RG`, `E-LATTICE-GAP` |
 | **`CONDITIONAL`** | **5** | `E-SCHWINGER-OS2`, `E-OS-RECON`, `E-WIGHTMAN-VAC`, `E-WIGHTMAN-SPEC`, `E-GAP-CLUSTER` |
 | **`OPEN`** | **10** | `E-CROSSOVER`, `E-LATTICE-CONT`, `E-THERMO`, `E-CONT-SCHWINGER`, `E-SCHWINGER-OS0`, `E-SCHWINGER-OS1`, `E-SCHWINGER-OS3`, `E-SCHWINGER-OS4`, `E-NONTRIV-WITNESS`, `E-GROUP-GEN` |
 | **`UNKNOWN`** | **0** | — |
 | **TOTAL** | **19** | **Full 19-Edge Load-Bearing DAG** |
+
+> **Semantic Clarification (`YM-GOV-014` Section 6):**
+> The two `PROVED` edges (`E-UV-FREE` and `E-UV-FREE-CONT`) establish **only perturbative 1-loop/2-loop asymptotic freedom** ($\beta_0 = \frac{11N}{48\pi^2} > 0$) from regulated starting nodes (`N-REG-LATTICE` and `N-REG-CUTOFF`) to `N-UV-FREE`. In particular, `E-UV-FREE-CONT` (`N-REG-CUTOFF -> N-UV-FREE`) is **perturbative asymptotic freedom in a UV-cutoff continuum renormalization scheme**, **never** non-perturbative continuum existence (`N-INT-COUPLING -> N-CONTINUUM-LIMIT`, which is `E-CONT-SCHWINGER = OPEN`).
 
 ---
 
@@ -43,7 +46,7 @@ This document establishes the **authoritative, reconciled, edge-by-edge audit** 
 - **Source Node:** `N-REG-LATTICE`
 - **Target Node:** `N-UV-FREE`
 - **Mathematical Proposition:** Perturbative 1-loop and 2-loop beta-function coefficients are strictly negative ($\beta_0 = \frac{11N}{48\pi^2} > 0$ for $SU(N)$), establishing logarithmic asymptotic freedom on the lattice.
-- **Reconciled Status:** **`PROVED`**
+- **Reconciled Status:** **`PROVED`** (`PERTURBATIVE_ASYMPTOTIC_FREEDOM_ONLY`)
 - **Exact Hypotheses:** Compact simple Lie group $SU(N)$; bare lattice coupling $g_0 \ll 1$; formal weak-coupling perturbation expansion.
 - **Operator Scope:** Plaquette action and small-loop Wilson operators.
 - **Cutoff Scope:** Bare lattice spacing $a > 0$, weak coupling.
@@ -55,13 +58,13 @@ This document establishes the **authoritative, reconciled, edge-by-edge audit** 
 ### Edge 2: `E-UV-FREE-CONT`
 - **Source Node:** `N-REG-CUTOFF`
 - **Target Node:** `N-UV-FREE`
-- **Mathematical Proposition:** Continuum regularized non-Abelian Yang–Mills with smooth momentum cutoff $\Lambda$ exhibits asymptotic freedom governed by negative beta function in BRST-gauge-fixed perturbation theory.
-- **Reconciled Status:** **`PROVED`**
-- **Exact Hypotheses:** Smooth momentum cutoff $\Lambda$; local gauge fixing via Faddeev–Popov procedure; weak coupling $g(\Lambda) \ll 1$.
-- **Operator Scope:** Gauge-invariant polynomials of curvature $F_{\mu\nu}$.
-- **Cutoff Scope:** Continuum cutoff $\Lambda < \infty$, weak coupling.
-- **Primary Sources:** Faddeev & Popov (1967), Gross & Wilczek (1973).
-- **Limitation:** Perturbative only; does not control Gribov horizons or non-perturbative large fields.
+- **Mathematical Proposition:** Continuum UV-regularized non-Abelian Yang–Mills with smooth momentum cutoff $\Lambda < \infty$ exhibits perturbative asymptotic freedom governed by a negative beta function ($\beta(g) = -\beta_0 g^3 - \beta_1 g^5 + \mathcal{O}(g^7)$) in BRST-gauge-fixed perturbation theory.
+- **Reconciled Status:** **`PROVED`** (`PERTURBATIVE_ASYMPTOTIC_FREEDOM_ONLY` — **NOT** non-perturbative continuum existence)
+- **Exact Hypotheses:** Smooth UV momentum cutoff $\Lambda < \infty$; local gauge fixing via Faddeev–Popov/BRST procedure; formal weak-coupling expansion $g(\Lambda) \ll 1$.
+- **Operator Scope:** Perturbative renormalization group flow of gauge-fixed vertex functions at finite UV cutoff $\Lambda$.
+- **Cutoff Scope:** Continuum UV cutoff $\Lambda < \infty$, formal perturbation theory.
+- **Primary Sources:** Faddeev & Popov (1967), Gross & Wilczek (1973), Politzer (1973).
+- **Limitation:** Strictly perturbative asymptotic freedom in a UV-cutoff renormalization scheme; does **not** remove the cutoff non-perturbatively, does **not** control Gribov horizons or large fields, and does **not** establish non-perturbative continuum existence (`E-CONT-SCHWINGER = OPEN`).
 
 ---
 

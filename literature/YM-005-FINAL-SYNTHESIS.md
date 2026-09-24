@@ -33,32 +33,41 @@ Across 10 canonical artifacts, `YM-005` establishes the following mathematical c
 ### 2.3 Stochastic Analysis & Uniform Functional Inequalities (Shen–Zhu–Zhu 2023)
 - Under stochastic quantization via lattice Langevin diffusions on $G^{E(\Lambda)}$, the compact Lie group manifold provides positive single-site Bakry–Émery Ricci curvature $\kappa_G > 0$.
 - For $\beta < \beta_0(d, G)$, the positive Ricci curvature dominates the interaction Hessian, yielding a **uniform Poincaré inequality** $\text{Var}_{\mu_\infty}(f) \le C_{\text{PI}}(\beta) \mathcal{E}(f, f)$ independent of volume.
-- The Markov diffusion generator $-\mathcal{L}$ and the lattice transfer operator possess a strictly positive spectral gap:
-  $$\Delta_{\text{lat}}(\beta) \ge \frac{1}{C_{\text{PI}}(\beta)} > 0$$
+- The **Markov / Langevin diffusion generator** $-\mathcal{L}$ acting on $L^2(G^{E(\mathbb{Z}^d)}, \mu_\infty)$ possesses a strictly positive relaxation spectral gap in fictitious stochastic time:
+  $$\operatorname{gap}_{L^2(\mu_\infty)}(-\mathcal{L}) \ge \frac{1}{C_{\text{PI}}(\beta)} > 0$$
+- **Strict Operator Non-Conflation (`YM-005-R1` Repair):** $\operatorname{gap}(-\mathcal{L})$ on $L^2(\mu_\infty)$ is **not** the physical Yang–Mills quantum Hamiltonian spectral gap $\Delta_{\text{lat}}(\beta, a) = \operatorname{gap}_{\mathcal{H}_{\text{phys}}}(H_{\text{lat}}) = -\frac{1}{a} \ln \lambda_1(\mathbb{T})$ on the Osterwalder–Schrader physical Hilbert space $\mathcal{H}_{\text{phys}}$. Rather, Shen–Zhu–Zhu (2023) independently proves spatial/temporal exponential decay of connected gauge-invariant correlation functions with dimensionless rate $m_{\text{lat}}(\beta) > 0$; when combined with the reflection-positive transfer matrix construction of Osterwalder–Seiler (1978), exponential temporal clustering implies $\operatorname{gap}_{\mathcal{H}_{\text{phys}}}(H_{\text{lat}}) \ge m_{\text{lat}}(\beta) / a > 0$.
 
 ### 2.4 Expanded Area Law Regimes (Cao–Nissim–Sheffield 2025)
-- Random surface representations and stochastic couplings rigorously expand the parameter range $\beta \in [0, \beta_1)$ exhibiting an area law for Wilson loops with strictly positive string tension $\sigma(\beta) \ge \sigma_0 > 0$.
+- Random surface representations and stochastic couplings rigorously expand the parameter range $\beta \in [0, \beta_1)$ exhibiting an area law for Wilson loops with strictly positive dimensionless lattice string tension $\sigma_{\text{lat}}(\beta) \ge \sigma_0 > 0$.
+
+### 2.5 Taxonomy of the Four Distinct Fixed-Lattice Objects (`YM-005-R1`)
+To prevent mathematical conflation, `YM-005-R1` strictly distinguishes four separate regulated quantities at fixed lattice spacing $a > 0$:
+1. **Langevin / Markov Generator Gap:** $\operatorname{gap}(-\mathcal{L}) \ge C_{\text{PI}}(\beta)^{-1} > 0$ on $L^2(G^{E(\Lambda)}, \mu_\Lambda)$ (stochastic relaxation rate in fictitious time $\tau$; Shen–Zhu–Zhu 2023).
+2. **Transfer-Matrix / Quantum Hamiltonian Mass Gap:** $\Delta_{\text{lat}}(\beta, a) = -\frac{1}{a}\ln \lambda_1(\mathbb{T}) > 0$ on $\mathcal{H}_{\text{phys}}$ (quantum energy gap between vacuum $|\Omega\rangle$ and first excited glueball state; Osterwalder–Seiler 1978, Seiler 1982).
+3. **Exponential Correlation Clustering Rate:** $m_{\text{lat}}(\beta) > 0$ governing connected gauge-invariant correlations $|\operatorname{Cov}_{\mu_\infty}(A, B)| \le C(A,B) e^{-m_{\text{lat}}(\beta) d(\operatorname{supp} A, \operatorname{supp} B)}$.
+4. **Wilson Loop Area-Law String Tension:** $\sigma_{\text{lat}}(\beta) > 0$ governing planar loop decay $\langle W(C) \rangle \le C e^{-\sigma_{\text{lat}}(\beta) \operatorname{Area}(C) / a^2}$ (Wilson 1974; Cao–Nissim–Sheffield 2025).
 
 ---
 
 ## 3. Epistemic Invariants Strictly Preserved
 
-In accordance with **ROS v1.0** and the human-owner mandate:
+In accordance with **ROS v1.0** and **`YM-GOV-014` (`YM-005-R1` Autonomous Scientific Repair)**:
 
-1. **`INV-YM005-001` Enforced:**
-   $$\boxed{\text{LATTICE_SPECTRAL_GAP } \Delta_{\text{lat}}(\beta, a) > 0 \ne \text{CONTINUUM_4D_CLAY_MASS_GAP } \Delta > 0}$$
-   The spectral gap established on the lattice at fixed $a > 0$ does not establish the existence of a continuum quantum field theory in $\mathbb{R}^4$. Taking the continuum limit requires $\beta \to \infty$ ($a \to 0$), which lies outside all known strong-coupling convergence domains.
+1. **`INV-YM005-001` Enforced (Regulated Lattice Scope Only):**
+   $$\boxed{\text{LATTICE\_SPECTRAL\_GAP } \Delta_{\text{lat}}(\beta, a) > 0 \ne \text{CONTINUUM\_4D\_CLAY\_MASS\_GAP } \Delta > 0}$$
+   The spectral gap established on the lattice at fixed $a > 0$ has status `REGULATED_ONLY` and does not establish the existence of a continuum quantum field theory in $\mathbb{R}^4$. Taking the continuum limit requires $\beta \to \infty$ ($a \to 0$), which lies outside all known strong-coupling convergence domains.
 
-2. **`INV-YM005-002` Enforced:**
-   $$\boxed{\text{WILSON_AREA_LAW } \langle W(C) \rangle \le C e^{-\sigma \cdot \text{Area}(C)} \ne \text{SPECTRAL_MASS_GAP } \Delta > 0}$$
-   Static quark confinement (area law) and local particle excitations (spectral mass gap in the glueball sector) are mathematically independent. 2D Yang–Mills proves area law without local particle mass gaps, while Higgs/screening models prove mass gaps with perimeter laws.
+2. **`INV-YM005-002` Enforced (Area Law $\ne$ Hamiltonian Gap $\ne$ Markov Generator Gap):**
+   $$\boxed{\langle W(C) \rangle \le C e^{-\sigma_{\text{lat}} \cdot \text{Area}(C)/a^2} \;\; \centernot\implies \;\; \operatorname{gap}_{\mathcal{H}_{\text{phys}}}(H_{\text{lat}}) > 0, \qquad \operatorname{gap}_{L^2(\mu_\infty)}(-\mathcal{L}) \ne \operatorname{gap}_{\mathcal{H}_{\text{phys}}}(H_{\text{lat}})}$$
+   Static quark confinement (area law), quantum Hamiltonian excitation gaps, and classical Langevin generator gaps are mathematically distinct operators and properties.
 
-3. **`INV-YM005-003` Enforced:**
-   All numerical values (e.g. $\beta_0 \sim 0.1 - 0.25$, $a_{\text{strong}} \ge 0.5\text{ fm}$, $\sigma \sim 0.18\text{ GeV}^2$) are strictly classified as `PROJECT_ESTIMATE` or `HEURISTIC_PHYSICAL_TRANSLATION`. Canonical theorem boundaries remain strictly symbolic:
-   $$\beta \le \beta_* \ll 1, \quad a \ge a_{\text{strong}}^* \sim \frac{c_{\text{IR}}}{\Lambda_{\text{QCD}}}$$
+3. **`INV-YM005-003` Enforced (Strict Absence of Fabricated Physical Units in Theorems):**
+   Canonical theorem statements and mathematical boundaries are strictly dimensionless and symbolic:
+   $$\beta \le \beta_0(d, G) \ll 1, \quad a > 0 \text{ (fixed discrete lattice)}, \quad \sigma_{\text{lat}}(\beta) > 0, \quad m_{\text{lat}}(\beta) > 0$$
+   No physical QCD unit conversions or phenomenological scale estimates are permitted inside theorem statements; any heuristic physical-scale discussion is strictly quarantined in a non-authoritative heuristic appendix.
 
 4. **`INV-YM005-004` Enforced:**
-   All extracted theorems are mapped across the full 11-dimensional parameter scope in `YM-005-11-DIMENSIONAL-THEOREM-LEDGER.md`.
+   All extracted theorems are mapped across the full 11-dimensional parameter scope in `YM-005-11-DIMENSIONAL-THEOREM-LEDGER.md` with regulated fixed-lattice scope (`SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_SCOPE)`).
 
 ---
 

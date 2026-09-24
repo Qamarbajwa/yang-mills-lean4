@@ -634,3 +634,224 @@ def validate_constitutional_amendment(amendment_packet: Dict[str, Any]) -> bool:
         if field not in amendment_packet or not amendment_packet[field]:
             raise ConstitutionalIntegrityError(f"Amendment packet missing required field: {field}")
     return True
+
+
+# ==============================================================================
+# YM-GOV-014: Failure-Driven Scientific Governance & Authority Separation
+# ==============================================================================
+
+ROUTINE_SCIENTIFIC_TASK_STATES = {
+    "PROPOSED",
+    "CANDIDATE",
+    "INDEPENDENT_SCIENTIFIC_REVIEW",
+    "SCIENTIFICALLY_ACCEPTED",
+    "REPAIR_REQUIRED",
+    "BOUNDED_REPAIR",
+    "REVERIFICATION",
+    "REVIEW_HOLD",
+    "SCIENTIFIC_REVIEW_HOLD",
+}
+
+RESERVED_HUMAN_OWNER_ACTIONS = {
+    "CHANGE_PROJECT_MISSION_OR_TARGET",
+    "CLAIM_GOAL_COMPLETE_OR_CLAY_SOLUTION",
+    "EXTERNAL_PUBLICATION_OR_RELEASE",
+    "DESTRUCTIVE_DELETION_OF_HISTORY",
+    "MODIFY_EXTERNAL_REPOSITORY",
+    "UNBOUNDED_EXTERNAL_RESOURCE_EXPENDITURE",
+}
+
+DISQUALIFYING_AUDIT_FINDINGS = {
+    "MATHEMATICAL_CONFLATION",
+    "SCOPE_PROMOTION",
+    "UNIT_FABRICATION",
+    "CIRCULARITY",
+    "UNPROVEN_TRANSFER",
+}
+
+
+def validate_task_disposition_authority(
+    task_id: str,
+    proposed_state: str,
+    has_scientific_defects: bool = False,
+    reserved_owner_action: Optional[str] = None,
+) -> str:
+    """
+    Enforces YM-GOV-014 authority separation:
+    - Never use AWAITING_HUMAN_OWNER_ACCEPTANCE for a task that has identified
+      mathematical or epistemic defects or routine scientific verification.
+    - HUMAN_OWNER_DECISION_REQUIRED is permitted ONLY for reserved owner actions.
+    """
+    if proposed_state == "AWAITING_HUMAN_OWNER_ACCEPTANCE":
+        if has_scientific_defects:
+            raise ConstitutionalIntegrityError(
+                f"Task {task_id} has scientific defects and cannot enter AWAITING_HUMAN_OWNER_ACCEPTANCE; "
+                "must transition to REPAIR_REQUIRED or REVIEW_HOLD."
+            )
+        raise ConstitutionalIntegrityError(
+            f"Deprecated state AWAITING_HUMAN_OWNER_ACCEPTANCE forbidden for routine scientific task {task_id}; "
+            "use failure-driven scientific review or HUMAN_OWNER_DECISION_REQUIRED for reserved actions."
+        )
+
+    if proposed_state == "HUMAN_OWNER_DECISION_REQUIRED":
+        if reserved_owner_action not in RESERVED_HUMAN_OWNER_ACTIONS:
+            raise ConstitutionalIntegrityError(
+                f"HUMAN_OWNER_DECISION_REQUIRED for {task_id} requires a valid reserved_owner_action "
+                f"in {sorted(RESERVED_HUMAN_OWNER_ACTIONS)}, got: {reserved_owner_action!r}"
+            )
+        return "HUMAN_OWNER_DECISION_REQUIRED"
+
+    if has_scientific_defects and proposed_state == "SCIENTIFICALLY_ACCEPTED":
+        raise ConstitutionalIntegrityError(
+            f"Task {task_id} with unresolved scientific defects cannot enter SCIENTIFICALLY_ACCEPTED."
+        )
+
+    if proposed_state not in ROUTINE_SCIENTIFIC_TASK_STATES:
+        raise ConstitutionalIntegrityError(f"Unknown scientific task state: {proposed_state}")
+
+    return proposed_state
+
+
+def evaluate_scientific_review_transition(
+    current_state: str,
+    event: str,
+    audit_findings: Optional[List[str]] = None,
+) -> str:
+    """
+    Implements the YM-GOV-014 routine scientific state machine:
+    CANDIDATE -> INDEPENDENT_SCIENTIFIC_REVIEW -> {SCIENTIFICALLY_ACCEPTED, REPAIR_REQUIRED, REVIEW_HOLD}
+    REPAIR_REQUIRED -> BOUNDED_REPAIR -> REVERIFICATION -> INDEPENDENT_SCIENTIFIC_REVIEW
+    """
+    findings = set(audit_findings or [])
+    if current_state not in ROUTINE_SCIENTIFIC_TASK_STATES:
+        raise ConstitutionalIntegrityError(f"Invalid current scientific state: {current_state}")
+
+    if current_state == "CANDIDATE":
+        if event == "SUBMIT_FOR_REVIEW":
+            return "INDEPENDENT_SCIENTIFIC_REVIEW"
+        raise ConstitutionalIntegrityError(f"Illegal transition from CANDIDATE on event {event}")
+
+    if current_state == "INDEPENDENT_SCIENTIFIC_REVIEW":
+        if findings & DISQUALIFYING_AUDIT_FINDINGS:
+            return "REPAIR_REQUIRED"
+        if event in {"INTEGRITY_FAIL", "DEFECT_IDENTIFIED", "REPAIR_REQUIRED"}:
+            return "REPAIR_REQUIRED"
+        if event == "HOLD_UPSTREAM_DEPENDENCY":
+            return "REVIEW_HOLD"
+        if event in {"INTEGRITY_PASS", "INTEGRITY_PASS_WITH_LIMITATIONS"}:
+            return "SCIENTIFICALLY_ACCEPTED"
+        raise ConstitutionalIntegrityError(
+            f"Illegal transition from INDEPENDENT_SCIENTIFIC_REVIEW on event {event}"
+        )
+
+    if current_state == "REPAIR_REQUIRED":
+        if event in {"START_BOUNDED_REPAIR", "AUTO_REPAIR"}:
+            return "BOUNDED_REPAIR"
+        if event == "ROUTE_TO_OWNER_ACCEPTANCE":
+            raise ConstitutionalIntegrityError(
+                "REPAIR_REQUIRED must transition to BOUNDED_REPAIR, never to owner acceptance!"
+            )
+        raise ConstitutionalIntegrityError(f"Illegal transition from REPAIR_REQUIRED on event {event}")
+
+    if current_state == "BOUNDED_REPAIR":
+        if event == "COMPLETE_REPAIR":
+            return "REVERIFICATION"
+        raise ConstitutionalIntegrityError(f"Illegal transition from BOUNDED_REPAIR on event {event}")
+
+    if current_state == "REVERIFICATION":
+        if event == "SUBMIT_FOR_REVIEW":
+            return "INDEPENDENT_SCIENTIFIC_REVIEW"
+        if event == "VERIFICATION_FAILED":
+            return "BOUNDED_REPAIR"
+        raise ConstitutionalIntegrityError(f"Illegal transition from REVERIFICATION on event {event}")
+
+    return current_state
+
+
+def verify_candidate_bound_acceptance(
+    candidate_sha: str,
+    reviewed_sha: str,
+    review_verdict: str,
+    audit_findings: Optional[List[str]] = None,
+    limitations_reflected_in_status: bool = True,
+    post_review_changed_files: Optional[List[str]] = None,
+    audited_scientific_hash: Optional[str] = None,
+    accepted_scientific_hash: Optional[str] = None,
+) -> bool:
+    """
+    Enforces Section 3 (Candidate-Bound Review):
+    An independent scientific review is valid for acceptance ONLY if:
+    1. review_verdict is INTEGRITY_PASS, or INTEGRITY_PASS_WITH_LIMITATIONS with limitations reflected;
+    2. candidate_sha == reviewed_sha, or only explicitly declared non-scientific metadata changed after review;
+    3. no audit finding of mathematical conflation, scope promotion, unit fabrication, circularity, or unproven transfer.
+    """
+    findings = set(audit_findings or [])
+    disqualifiers = findings & DISQUALIFYING_AUDIT_FINDINGS
+    if disqualifiers:
+        raise ConstitutionalIntegrityError(
+            f"Audit findings force REPAIR_REQUIRED and forbid acceptance: {sorted(disqualifiers)}"
+        )
+
+    if review_verdict not in {"INTEGRITY_PASS", "INTEGRITY_PASS_WITH_LIMITATIONS"}:
+        raise ConstitutionalIntegrityError(
+            f"Review verdict '{review_verdict}' does not permit SCIENTIFICALLY_ACCEPTED."
+        )
+
+    if review_verdict == "INTEGRITY_PASS_WITH_LIMITATIONS" and not limitations_reflected_in_status:
+        raise ConstitutionalIntegrityError(
+            "INTEGRITY_PASS_WITH_LIMITATIONS requires all limitations to be reflected in claim status."
+        )
+
+    if candidate_sha != reviewed_sha:
+        if (
+            post_review_changed_files is not None
+            and audited_scientific_hash is not None
+            and accepted_scientific_hash is not None
+        ):
+            change_class, is_valid = evaluate_post_e4_change_class(
+                audited_scientific_hash=audited_scientific_hash,
+                accepted_scientific_hash=accepted_scientific_hash,
+                changed_files=post_review_changed_files,
+            )
+            if not is_valid or change_class == "SCIENTIFIC_MATERIAL":
+                raise ConstitutionalIntegrityError(
+                    f"Candidate SHA mismatch ({candidate_sha} != {reviewed_sha}) with scientific material modification ({change_class})."
+                )
+        else:
+            raise ConstitutionalIntegrityError(
+                f"Candidate SHA mismatch: accepted candidate_sha ({candidate_sha}) != reviewed_sha ({reviewed_sha})."
+            )
+
+    return True
+
+
+def enforce_goal_complete_bridge_gate(edge_statuses: Dict[str, str], requested_goal_complete: bool) -> bool:
+    """
+    Verifies that GOAL_COMPLETE is False whenever any required bridge edge is not PROVED.
+    """
+    non_proved = {edge_id: status for edge_id, status in edge_statuses.items() if status != "PROVED"}
+    if requested_goal_complete and non_proved:
+        raise ConstitutionalIntegrityError(
+            f"GOAL_COMPLETE cannot be True while bridge edges remain non-PROVED: {non_proved}"
+        )
+    return False if non_proved else requested_goal_complete
+
+
+def check_ym011_activation_eligibility(
+    ym011_status: str,
+    precursor_ym011_pre_verified: bool,
+) -> bool:
+    """
+    Verifies that YM-011 cannot enter active proof execution while its precursor
+    lemma (YM-011-PRE) is unverified or while YM-011 is PROPOSED.
+    """
+    if not precursor_ym011_pre_verified:
+        raise ConstitutionalIntegrityError(
+            "YM-011 cannot be activated for proof execution while precursor YM-011-PRE is unverified."
+        )
+    if "PROPOSED" in ym011_status or "NOT_AUTHORIZED" in ym011_status or "NOT AUTHORIZED" in ym011_status:
+        raise ConstitutionalIntegrityError(
+            f"YM-011 is in status '{ym011_status}' and cannot enter active proof execution."
+        )
+    return True
+

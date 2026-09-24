@@ -24,7 +24,7 @@
 +---------------------------------------+     +---------------------------------------+
 |  MAGNEN–RIVASSEAU–SÉNÉOR (1993)       |     |  SHEN–ZHU–ZHU (2023)                  |
 |  - R^4 infinite volume with IR cutoff |     |  - Uniform Poincaré inequality        |
-|  - Renormalon / BPHZ control          |     |  - Strictly positive gap Delta_lat > 0|
+|  - Renormalon / BPHZ control          |     |  - Generator gap(-L) > 0, m_lat > 0   |
 +---------------------------------------+     +---------------------------------------+
                     │                                             ▲
                     ▼                                             │
@@ -37,7 +37,7 @@
                       UNBRIDGED NON-PERTURBATIVE CROSSOVER WINDOW
                                  (E-CROSSOVER / OBS-CAND-001)
                                       g_k ~ 1, beta ~ 1 - 2
-                               x ~ 0.2 - 1.0 fm (phenomenological)
+                             (dimensionless intermediate regime)
                 =====================================================
                 - Asymptotic freedom ceases; g_k grows beyond contractivity
                 - Polymer cluster expansion activity sum diverges

@@ -1,13 +1,15 @@
 # LIVE PROJECT STATE — Universal Governance Minimal v4.0.3
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 12
+revision: 13
 activation: ACTIVE
+goal_complete: false
+clay_problem: OPEN_AND_UNSOLVED
 
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "4cf5999"
+  head: "e64a400"
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -17,16 +19,17 @@ governance_binding:
   project_binding_ref: "governance/GOVERNANCE.md#section-13"
   migration_receipt_ref: "verification/YM-GOV-403_INDEPENDENT_REVIEW.md"
   human_acceptance_ref: "governance/HUMAN_OWNER_ACCEPTANCE_YM-GOV-403_20260908.md"
+  autonomous_repair_amendment_ref: "governance/PORTABLE_AUTONOMOUS_REPAIR_AMENDMENT_v1.1.md"
 
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 13
-  last_updated_at: "2026-09-22T10:20:00Z"
-  active_contract: "YM-GOV-012"
-  frozen_candidate: "4cf5999"
+  last_expected_revision: 14
+  last_updated_at: "2026-09-24T05:20:00Z"
+  active_contract: "YM-GOV-014"
+  frozen_candidate: "e64a400"
 
-current_objective: YM-GOV-012
+current_objective: YM-GOV-014
 
 objectives:
   - id: YM-GOV-403
@@ -91,9 +94,11 @@ objectives:
     dependencies: ["YM-004"]
     risk: R2
     writer: "primary-worker"
-    reviewer_path: "fresh-blind-research-subagent-IND1"
-    acceptor: "human-owner"
-    status: AWAITING_HUMAN_OWNER_ACCEPTANCE
+    reviewer_path: "fresh-blind-research-subagent-YM-GOV-014"
+    acceptor: "autonomous-scientific-review-YM-GOV-014"
+    repair_id: "YM-005-R1"
+    scope_limitation: "WITH_REGULATED_SCOPE"
+    status: SCIENTIFICALLY_ACCEPTED
 
   - id: YM-006
     scope_in: "Precise non-meeting estimate identification"
@@ -158,14 +163,32 @@ objectives:
     acceptor: "human-owner"
     status: COMPLETED
 
+  - id: YM-011-PRE
+    scope_in: "Fixed-lattice gradient-flow loop perturbation precursor lemma (pointwise and expectation bounds, beta cancellation, [-1,1] trace range)"
+    dependencies: ["YM-004"]
+    risk: R2
+    writer: "primary-worker"
+    reviewer_path: "fresh-blind-research-subagent-YM-GOV-014"
+    acceptor: "autonomous-scientific-review-YM-GOV-014"
+    status: SCIENTIFICALLY_ACCEPTED
+
   - id: YM-011
     scope_in: "First load-bearing bridge lemma (UV scale-transfer & observables mollification)"
-    dependencies: ["YM-004"]
+    dependencies: ["YM-004", "YM-011-PRE"]
     risk: R3
     writer: "primary-worker"
     reviewer_path: "fresh-blind-research-subagent-IND1"
-    acceptor: "human-owner"
-    status: PLANNED
+    acceptor: "autonomous-scientific-review"
+    status: PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION
+
+  - id: YM-GOV-014
+    scope_in: "Autonomous scientific repair, acceptance-authority correction, YM-005-R1 repair, and YM-011-PRE precursor verification"
+    dependencies: ["YM-GOV-012"]
+    risk: R3
+    writer: "primary-worker"
+    reviewer_path: "fresh-blind-research-subagent-YM-GOV-014"
+    acceptor: "autonomous-scientific-review-YM-GOV-014"
+    status: COMPLETED
 
 capabilities:
   CAP-001-problem-specification:
@@ -181,7 +204,9 @@ capabilities:
     status: ACCEPTED_BOUNDED
     evidence_refs: ["verification/YM-004-R1_INDEPENDENT_REVIEW.md", "governance/HUMAN_OWNER_ACCEPTANCE_YM-004_20260908.md"]
   CAP-005-lattice-gap:
-    status: IN_PROGRESS
+    status: ACCEPTED_BOUNDED
+    scope: REGULATED_ONLY
+    evidence_refs: ["verification/YM-005-R1_INDEPENDENT_REVIEW.md"]
   CAP-006-non-meeting-estimate:
     status: BLOCKED
   CAP-007-lean-formalization:

@@ -62,13 +62,24 @@ By the Rothaus–Herbst theorem, $C_{\text{PI}} \le C_{\text{LSI}}$, and log-Sob
 >    The Poincaré constant is uniformly bounded independently of lattice volume $\Lambda$.
 > 2. **Infinite-Volume Gibbs Measure:**
 >    The thermodynamic limit $\mu_\infty = \lim_{\Lambda \to \mathbb{Z}^d} \mu_\Lambda$ exists, is unique on $G^{E(\mathbb{Z}^d)}$, and satisfies the infinite-volume Poincaré inequality with constant $C_{\text{PI}}(\beta)$.
-> 3. **Lattice Spectral Gap:**
->    The generator $-\mathcal{L}$ has a strictly positive spectral gap on $L^2(\mu_\infty)$:
->    $$\text{gap}(-\mathcal{L}) \ge \frac{1}{C_{\text{PI}}(\beta)} > 0$$
+> 3. **Langevin Markov Generator Spectral Gap:**
+>    The stochastic diffusion generator $-\mathcal{L}$ has a strictly positive relaxation spectral gap on $L^2(\mu_\infty)$:
+>    $$\text{gap}_{L^2(\mu_\infty)}(-\mathcal{L}) \ge \frac{1}{C_{\text{PI}}(\beta)} > 0$$
 > 4. **Exponential Correlation Decay:**
 >    For any local gauge-invariant functionals $F, G$:
 >    $$|\text{Cov}_{\mu_\infty}(F, G)| \le C(F, G) \exp\left( - m_{\text{lat}}(\beta) d(\text{supp}(F), \text{supp}(G)) \right)$$
 >    with $m_{\text{lat}}(\beta) > 0$.
+
+### 2.5 Strict Non-Equivalence of the Four Lattice Gap/Decay Objects (`YM-005-R1` Repair)
+
+To eliminate any conflation between stochastic relaxation rates and physical quantum energy spectra, `YM-005-R1` records the exact mathematical separation of the four fixed-lattice quantities:
+
+| Mathematical Object | Defining Expression | Hilbert / Function Space | Physical / Mathematical Meaning | Equivalence Status |
+|---|---|---|---|---|
+| **1. Langevin / Markov Generator Gap** | $\operatorname{gap}(-\mathcal{L}) \ge C_{\text{PI}}(\beta)^{-1} > 0$ | $L^2(G^{E(\Lambda)}, \mu_\Lambda)$ (all link variables across space-time) | Relaxation rate of stochastic Langevin diffusion in fictitious time $\tau$ toward Euclidean Gibbs equilibrium (Shen–Zhu–Zhu 2023). | **NOT equal** to $\operatorname{gap}(H_{\text{lat}})$. Acts on 4D spacetime configuration functions, not 3D quantum states. |
+| **2. Transfer-Matrix / Hamiltonian Gap** | $\Delta_{\text{lat}}(\beta, a) = -\frac{1}{a}\ln \lambda_1(\mathbb{T}) > 0$ | $\mathcal{H}_{\text{phys}} = \overline{\mathcal{A}_+ / \mathcal{N}}$ (gauge-invariant spatial time-slice Hilbert space) | Physical glueball energy excitation gap above the vacuum state $|\Omega\rangle$ constructed via Osterwalder–Schrader reflection positivity (Osterwalder–Seiler 1978). | Linked to $m_{\text{lat}}(\beta)$ via the spectral theorem for $\mathbb{T} = e^{-a H_{\text{lat}}}$, **never** via direct identification with $-\mathcal{L}$. |
+| **3. Connected Correlation Clustering Rate** | $m_{\text{lat}}(\beta) > 0$ in $|\operatorname{Cov}_{\mu_\infty}(A,B)| \le C e^{-m_{\text{lat}} r}$ | Local gauge-invariant observables on $G^{E(\mathbb{Z}^d)}$ | Inverse correlation length $\xi_{\text{lat}}^{-1}$ in lattice units. | Implies $\Delta_{\text{lat}}(\beta, a) \ge m_{\text{lat}}(\beta)/a > 0$ when combined with reflection positivity (OS3). |
+| **4. Wilson Loop Area-Law String Tension** | $\sigma_{\text{lat}}(\beta) > 0$ in $\langle W(C)\rangle \le C e^{-\sigma_{\text{lat}} \operatorname{Area}(C)/a^2}$ | Planar / rectifiable closed loop holonomies | Static fundamental quark-antiquark confinement potential slope (Wilson 1974; Cao–Nissim–Sheffield 2025). | **Mathematically independent** of $\Delta_{\text{lat}}$ and $\operatorname{gap}(-\mathcal{L})$. |
 
 ---
 

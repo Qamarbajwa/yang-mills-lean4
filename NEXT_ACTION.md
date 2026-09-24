@@ -1,25 +1,27 @@
 # NEXT ACTION
 
 ## Current primary action
-`AWAITING_HUMAN_OWNER_ACCEPTANCE for Task YM-005; AWAITING_HUMAN_OWNER_AUTHORIZATION for Task YM-011`
+`YM-005 SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_SCOPE) via YM-005-R1; YM-011-PRE SCIENTIFICALLY_ACCEPTED; YM-011 PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION`
 
 ## Scope
-- `YM-005` (Rigorous IR / Lattice Gap Machinery Reproduction) is evaluated as eligible for independent human owner review and acceptance (`AWAITING_HUMAN_OWNER_ACCEPTANCE`).
-- `YM-006` through `YM-010` are held under `SCIENTIFIC_REVIEW_HOLD` due to identified overclaims and mathematical defects.
-- `YM-GOV-011` (Emergency Scientific Integrity Audit) completed with raw adversarial receipt captured (`SCIENTIFIC_CLAIMS_NOT_ESTABLISHED`).
-- `YM-GOV-012` (Scientific Recovery and Proof-Dependency Repair) completed: 19-edge missing-bridge graph reconciled, hybrid strategy repaired, and bounded next task `YM-011` formulated.
-- `YM-011` (First Load-Bearing Bridge Lemma: UV Scale-Transfer & Observables Mollification) is in `PLANNED` state awaiting explicit human owner activation.
+- `YM-GOV-014` (Autonomous Scientific Repair and Acceptance-Authority Correction) completed: routine human-owner acceptance gates replaced by failure-driven autonomous scientific repair (`CANDIDATE -> INDEPENDENT_SCIENTIFIC_REVIEW -> {SCIENTIFICALLY_ACCEPTED, REPAIR_REQUIRED, REVIEW_HOLD}`).
+- `YM-005` (`YM-005-R1`) repaired, re-verified, and independently reviewed: `SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_SCOPE)` without conflating Markov generator gap $\operatorname{gap}(-\mathcal{L})$ and quantum Hamiltonian mass gap $\operatorname{gap}(H_{\text{lat}})$, and with zero fabricated physical units in theorem statements.
+- `YM-011-PRE` (`Fixed-Lattice Gradient-Flow Loop Perturbation`) proved and deterministically verified (`SCIENTIFICALLY_ACCEPTED`).
+- `YM-006` through `YM-010` remain in `SCIENTIFIC_REVIEW_HOLD`.
+- `YM-011` remains `PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION`.
 
 ## Governance & Scientific Disposition
-- `YM-005 — Rigorous IR / Lattice Gap Machinery Reproduction`: `AWAITING_HUMAN_OWNER_ACCEPTANCE` (raw SHA-256 `ddb35176...`)
+- `YM-005 — Rigorous IR / Lattice Gap Machinery Reproduction (YM-005-R1)`: `SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_SCOPE)`
 - `YM-006 — Precise Non-Meeting Estimate Identification`: `SCIENTIFIC_REVIEW_HOLD`
 - `YM-007 — Evaluation of Novel Theoretical Mechanisms`: `SCIENTIFIC_REVIEW_HOLD`
 - `YM-008 — Synthesis and Formulation of Hybrid Attack Strategy`: `SCIENTIFIC_REVIEW_HOLD`
 - `YM-009 — Execution of Hybrid Attack Strategy and Quantitative Closure`: `SCIENTIFIC_REVIEW_HOLD / NOT_ESTABLISHED`
 - `YM-010 — Global Research Monograph, Axiomatic Verification, and Clay Synthesis`: `SCIENTIFIC_REVIEW_HOLD / NOT_ESTABLISHED`
-- `YM-GOV-011 — Emergency Scientific Integrity Audit`: `CLOSED / AUDIT_ACCEPTED` (raw SHA-256 `f7aaf6dc...`)
+- `YM-GOV-011 — Emergency Scientific Integrity Audit`: `CLOSED / AUDIT_ACCEPTED`
 - `YM-GOV-012 — Scientific Recovery and Proof-Dependency Repair`: `COMPLETED`
-- `YM-011 — First Load-Bearing Bridge Lemma`: `PLANNED`
+- `YM-011-PRE — Fixed-Lattice Gradient-Flow Loop Perturbation Precursor`: `SCIENTIFICALLY_ACCEPTED`
+- `YM-011 — First Load-Bearing Bridge Lemma`: `PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION`
+- `YM-GOV-014 — Autonomous Scientific Repair and Acceptance-Authority Correction`: `COMPLETED`
 
 ## Completed actions
 - `YM-000 — Local bootstrap` (DONE)
