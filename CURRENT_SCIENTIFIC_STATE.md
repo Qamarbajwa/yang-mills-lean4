@@ -195,21 +195,34 @@
   - Enforced candidate-bound SHA verification (`candidate_sha == reviewed_sha` or declared non-scientific metadata only) and automatic `REPAIR_REQUIRED` upon any finding of mathematical conflation, scope promotion, unit fabrication, circularity, or unproven transfer.
   - Executed `YM-005-R1` autonomous scientific repair across `literature/YM-005-FINAL-SYNTHESIS.md`, `literature/YM-005-SPECTRAL-GAP-AND-DECAY-AUDIT.md`, `literature/YM-005-IR-BOUNDARY-RECORD.md`, and `literature/YM-005-VISUAL-INTUITION-DATA.md`: strictly separated Markov diffusion generator gap $\operatorname{gap}(-\mathcal{L})$ on $L^2(\mu_\infty)$, quantum Hamiltonian transfer-matrix gap $\operatorname{gap}_{\mathcal{H}_{\text{phys}}}(H_{\text{lat}})$, connected correlation clustering rate $m_{\text{lat}}(\beta)$, and Wilson loop area-law string tension $\sigma_{\text{lat}}(\beta)$; purged fabricated physical units (`0.5 fm`, `0.18 GeV^2`, `420 MeV`) from canonical theorem statements; transitioned `YM-005` to `SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_SCOPE)`.
   - Proved and deterministically verified the fixed-lattice precursor lemma `YM-011-PRE` (`Fixed-Lattice Gradient-Flow Loop Perturbation` in `literature/YM-011-FIRST-LOAD-BEARING-LEMMA-SPECIFICATION.md` and `src/ymmg/precursor_flow.py`), proving identical $\beta$ cancellation under Lüscher's (2010) convention ($K = 2(d-1) = 6$ in $d=4$), normalized Wilson loop trace range $[-1, 1]$ (not $[0, 1]$), and both pointwise and expectation bounds $|W_t(C) - W_0(C)| \le K n (t/a^2)$.
-  - Maintained `YM-011` in `PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION`, `YM-006` through `YM-010` in `SCIENTIFIC_REVIEW_HOLD`, `GOAL_COMPLETE = FALSE`, and `CLAY_PROBLEM = OPEN_AND_UNSOLVED`.
+- **Task `YM-011-OBS-MAP` (Two-Lattice Observable-Transfer Construction) Completed & Scientifically Accepted:**
+  - Constructed the midpoint-exponential block-spin map $\mathcal{B}_\alpha^{\mathrm{mid}}(U)(e) = U(\ell_{e,1}) \exp(\alpha X_{\mathrm{mid}}(e)[U]) U(\ell_{e,2}) \in SU(N)$ and stochastic Markov transition kernel $K^{(\alpha,\kappa)}_{0\to 1}(dV \mid U)$ between lattice spacings $a$ and $2a$.
+  - Proved unconditional observable transfer bound `YM-011-OBS-T1`, quadratic tangent plaquette defect identity `YM-011-OBS-T2` ($|\Delta_{\mathrm{tan}}(C_1)[U]| \le 2(d-1)|C_1|_{\Lambda_1}\epsilon_{\mathrm{plaq}}^2$), and exact character factorization `YM-011-OBS-T3`.
+  - Registered exact negative counterexamples `NEG-YM-011-OBS-1` (polar projection singularity of linear staple averaging) and `NEG-YM-011-OBS-2` (artificial Markov perimeter attenuation).
+  - Status: `SCIENTIFICALLY_ACCEPTED`.
+
+- **Task `YM-011-PLAQUETTE-EXP-R2` (Group-Specific Plaquette-Energy Range, Proof of Odd-$N$ Minimizer, and Expectation-Positivity Audit) Completed & Scientifically Accepted:**
+  - Proved sharp group-theoretic ranges: $h_{\max}(N) = 2.0$ for even $N$, $h_{\max}(N) = 1 + \cos(\pi/N) < 2.0$ for odd $N$ ($1.5$ for $SU(3)$), with complete Jensen concavity variational proof of the constrained minimizer $q_N^{\min} = -\cos(\pi/N)$ attained at $e^{i\pi(N-1)/N} I_N \in SU(N)$.
+  - Enforced strict three-range separation: `CONFIGURATION_RANGE(N)`, `EXPECTATION_RANGE(N)` (expectation cannot exceed configuration supremum; $e_{\mathrm{plaq}} = 2.0$ recognized and rejected as impossible for $SU(3)$), and `UNIVERSAL_ALL_N_RANGE = [0, 2]`.
+  - Audited and derived Lie-Laplacian positivity from first principles ($\sum_{p \ni \ell} \langle \operatorname{Re}\operatorname{Tr} U_p \rangle \ge 0$), classified as `PROVED_FOR_WILSON_GIBBS_MEASURE` for link-sharing sums, `PROVED_ONLY_AFTER_ADDITIONAL_SYMMETRY` for single plaquettes, and `FALSE` as a configuration bound. Fully decoupled from $T1, T2, L1$.
+  - Proved invariant expectation reduction `YM-011-PLAQUETTE-EXP-T1` ($\langle |\Delta_{\mathrm{tan}}(C_1)| \rangle_{\mu_0} \le 4(d-1)\sqrt{N} |C_1| e_{\mathrm{plaq}}$), thermodynamic derivative `YM-011-PLAQUETTE-EXP-T2`, and volume-uniform $O(\ln\beta/\beta)$ bound `YM-011-PLAQUETTE-EXP-L1`.
+  - Documented toron singular strata obstruction `NEG-YM-011-PLAQ-1`, range defect `NEG-YM-011-PLAQ-2`, and admissibility audit `NEG-YM-011-PLAQ-3`.
+  - Status: `SCIENTIFICALLY_ACCEPTED`.
 
 ## UNVERIFIED
 - No original Yang–Mills lemma has been certified by an external peer-reviewed journal.
 - The Clay Millennium Problem #4 status remains strictly `OPEN_AND_UNSOLVED` (`GOAL_COMPLETE = FALSE`).
 - Proof claims for complete bridge closure (`YM-010`) and mass gap (`YM-009`) are `NOT_ESTABLISHED`.
-- No claimed external solution has been accepted.
+- Pure $O(1/\beta)$ weak-coupling expectation bound without $\ln\beta$ on periodic torus is `NOT_ESTABLISHED` (`NEG-YM-011-PLAQ-1`).
 
 ## CURRENT BOTTLENECK
 - Tasks `YM-006` through `YM-010` are held under `SCIENTIFIC_REVIEW_HOLD`.
-- Task `YM-005` is now `SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_SCOPE)` (`YM-005-R1`), and `YM-011-PRE` is `SCIENTIFICALLY_ACCEPTED` as the verified fixed-lattice precursor.
-- Task `YM-011` (`UV Scale-Transfer and Observables Mollification Lemma` on Bałaban's multiscale measure) remains `PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION`.
+- `YM-011-PLAQUETTE-EXP-R2` is `SCIENTIFICALLY_ACCEPTED`.
+- Pure $O(1/\beta)$ requires resolving flat-connection toron zero modes via maximal-tree gauge fixing.
+- Next unblocked objective: `YM-011-TREE-GAUGE` (`READY_FOR_EXECUTION`).
 
 ## NEXT ACTION
-- Formulate and execute bounded dependency-closed research increments building on `YM-004`, `YM-005` (`WITH_REGULATED_SCOPE`), and `YM-011-PRE` without assuming a continuum mass gap.
+- Execute Task `YM-011-TREE-GAUGE`: Construct maximal spanning-tree gauge fixing, co-tree plaquette coordinates, and separate free-boundary vs. periodic-torus flat-connection strata.
 
 
 

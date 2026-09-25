@@ -29,7 +29,7 @@
 | YM-XNS-001 | Navier–Stokes breakthrough transfer audit | YM-003 | T3 | cross-problem transfer audit + independent review | ACCEPTED / CLOSED |
 | YM-004 | Reconstruct rigorous RG/Bałaban program | YM-003 | T3 | theorem reproduction + finite-volume stopping point | ACCEPTED / CLOSED |
 | YM-LEAN-001 | Lean 4 formalization scoping for Clay spec and OS reconstruction | YM-003 | T2 | formalization design + non-blocking scoping | COMPLETED / SCOPED |
-| YM-005 | Reconstruct rigorous lattice gap program | YM-004 | T3 | theorem reproduction + independent review | AWAITING_HUMAN_OWNER_ACCEPTANCE |
+| YM-005 | Reconstruct rigorous lattice gap program | YM-004 | T3 | theorem reproduction + independent review | SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_SCOPE, YM-005-R1) |
 | YM-006 | Identify the precise non-meeting estimate | YM-004, YM-005 | T3 | explicit dependency proof + adversarial review | SCIENTIFIC_REVIEW_HOLD |
 | YM-007 | Evaluation of novel theoretical mechanisms | YM-006 | T3 | non-perturbative mechanism evaluation + E4 review | SCIENTIFIC_REVIEW_HOLD |
 | YM-008 | Synthesis and formulation of hybrid attack strategy | YM-007 | T3 | hybrid attack specification + adversarial falsification | SCIENTIFIC_REVIEW_HOLD |
@@ -37,5 +37,10 @@
 | YM-010 | Global research monograph, axiomatic verification, and Clay synthesis | YM-009 | T3 | program monograph + global bridge closure + E4 review | SCIENTIFIC_REVIEW_HOLD / NOT_ESTABLISHED |
 | YM-GOV-011 | Emergency scientific integrity audit | YM-005 through YM-010 | T4 | independent adversarial audit + proof-level verification | COMPLETED / AUDIT_ACCEPTED |
 | YM-GOV-012 | Scientific recovery and proof-dependency repair | YM-GOV-011 | T3 | 19-edge graph reconciliation + YM-011 formulation | COMPLETED |
-| YM-011 | First load-bearing bridge lemma | YM-004 | T3 | UV scale-transfer lemma proof + counterexample testing | PLANNED |
+| YM-GOV-014 | Autonomous scientific repair & acceptance authority correction | YM-GOV-012 | T4 | ROS state machine repair + YM-005-R1 + E4 review | COMPLETED / AUDIT_ACCEPTED |
+| YM-011-PRE | Fixed-lattice gradient-flow loop perturbation precursor | YM-004 | T3 | differential loop flow estimate + independent review | SCIENTIFICALLY_ACCEPTED (YM-011-PRE-R1) |
+| YM-011-OBS-MAP | Two-lattice observable-transfer construction | YM-004, YM-011-PRE | T3 | midpoint-exponential blocking map + independent review | SCIENTIFICALLY_ACCEPTED |
+| YM-011-PLAQUETTE-EXP | Finite-lattice Gibbs expectation bound for plaquette defect | YM-004, YM-011-PRE, YM-011-OBS-MAP | T3 | expectation reduction + group range + independent review | SCIENTIFICALLY_ACCEPTED (YM-011-PLAQUETTE-EXP-R2) |
+| YM-011-TREE-GAUGE | Maximal spanning-tree gauge fixing & co-tree plaquette map | YM-004, YM-011-PRE, YM-011-OBS-MAP, YM-011-PLAQUETTE-EXP | T3 | tree gauge + toron moduli separation | READY_FOR_EXECUTION |
+| YM-011 | First load-bearing bridge lemma | YM-004, YM-011-PRE, YM-011-OBS-MAP, YM-011-PLAQUETTE-EXP, YM-011-TREE-GAUGE | T3 | UV scale-transfer lemma proof + counterexample testing | PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION |
 

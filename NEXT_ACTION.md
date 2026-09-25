@@ -1,12 +1,17 @@
 # NEXT ACTION
 
 ## Current primary action
-`YM-005 SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_SCOPE) via YM-005-R1; YM-011-PRE SCIENTIFICALLY_ACCEPTED; YM-011 PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION`
+`YM-011-PLAQUETTE-EXP-R2 SCIENTIFICALLY_ACCEPTED; YM-011-TREE-GAUGE READY_FOR_EXECUTION; YM-011 PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION`
 
 ## Scope
-- `YM-GOV-014` (Autonomous Scientific Repair and Acceptance-Authority Correction) completed: routine human-owner acceptance gates replaced by failure-driven autonomous scientific repair (`CANDIDATE -> INDEPENDENT_SCIENTIFIC_REVIEW -> {SCIENTIFICALLY_ACCEPTED, REPAIR_REQUIRED, REVIEW_HOLD}`).
-- `YM-005` (`YM-005-R1`) repaired, re-verified, and independently reviewed: `SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_SCOPE)` without conflating Markov generator gap $\operatorname{gap}(-\mathcal{L})$ and quantum Hamiltonian mass gap $\operatorname{gap}(H_{\text{lat}})$, and with zero fabricated physical units in theorem statements.
-- `YM-011-PRE` (`Fixed-Lattice Gradient-Flow Loop Perturbation`) proved and deterministically verified (`SCIENTIFICALLY_ACCEPTED`).
+- `YM-011-PLAQUETTE-EXP-R2` (Group-Specific Plaquette-Energy Range, Proof of Odd-$N$ Minimizer, and Expectation-Positivity Audit) completed and independently reviewed: `SCIENTIFICALLY_ACCEPTED`.
+  - Group-specific ranges proved and enforced: $h_{\max} = 2.0$ (even $N$), $h_{\max} = 1 + \cos(\pi/N) < 2.0$ (odd $N$, $1.5$ for $SU(3)$).
+  - Variational proof of odd-$N$ minimizer via coordinate shift around $\pi$ and Jensen concavity.
+  - Three distinct ranges: `CONFIGURATION_RANGE(N)`, `EXPECTATION_RANGE(N)` (convexity of expectation; $e_{\mathrm{plaq}} = 2.0$ impossible for $SU(3)$), `UNIVERSAL_ALL_N_RANGE = [0, 2]`.
+  - Lie-Laplacian positivity derived from first principles ($\sum_{p \ni \ell}\langle \operatorname{Re}\operatorname{Tr} U_p \rangle \ge 0$), classified, and decoupled from $T1, T2, L1$.
+  - Invariant expectation reduction $T1$, thermodynamic derivative $T2$, and volume-uniform $O(\ln\beta/\beta)$ bound $L1$ verified.
+  - Registered `NEG-YM-011-PLAQ-1`, `NEG-YM-011-PLAQ-2`, `NEG-YM-011-PLAQ-3`.
+- Next unblocked authorized task: `YM-011-TREE-GAUGE` (`Maximal Spanning-Tree Gauge Fixing and Co-Tree Plaquette Coordinate Map`).
 - `YM-006` through `YM-010` remain in `SCIENTIFIC_REVIEW_HOLD`.
 - `YM-011` remains `PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION`.
 
@@ -19,9 +24,11 @@
 - `YM-010 — Global Research Monograph, Axiomatic Verification, and Clay Synthesis`: `SCIENTIFIC_REVIEW_HOLD / NOT_ESTABLISHED`
 - `YM-GOV-011 — Emergency Scientific Integrity Audit`: `CLOSED / AUDIT_ACCEPTED`
 - `YM-GOV-012 — Scientific Recovery and Proof-Dependency Repair`: `COMPLETED`
-- `YM-011-PRE — Fixed-Lattice Gradient-Flow Loop Perturbation Precursor`: `SCIENTIFICALLY_ACCEPTED`
+- `YM-011-PRE — Fixed-Lattice Gradient-Flow Loop Perturbation Precursor (YM-011-PRE-R1)`: `SCIENTIFICALLY_ACCEPTED`
+- `YM-011-OBS-MAP — Two-Lattice Observable-Transfer Construction`: `SCIENTIFICALLY_ACCEPTED`
+- `YM-011-PLAQUETTE-EXP — Plaquette Expectation Bound (YM-011-PLAQUETTE-EXP-R2)`: `SCIENTIFICALLY_ACCEPTED`
+- `YM-011-TREE-GAUGE — Maximal Spanning-Tree Gauge Fixing & Co-Tree Plaquette Map`: `READY_FOR_EXECUTION`
 - `YM-011 — First Load-Bearing Bridge Lemma`: `PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION`
-- `YM-GOV-014 — Autonomous Scientific Repair and Acceptance-Authority Correction`: `COMPLETED`
 
 ## Completed actions
 - `YM-000 — Local bootstrap` (DONE)
