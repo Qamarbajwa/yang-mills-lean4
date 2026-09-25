@@ -9,7 +9,7 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "55303f777170a28e7fe57886cc07e2bc3434e50e"
+  head: "6b2c45d345a053e2e7790b3a646a2ba8a73dd214"
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -24,12 +24,12 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 17
-  last_updated_at: "2026-09-24T06:26:00Z"
-  active_contract: "YM-011-OBS-MAP"
-  frozen_candidate: "55303f777170a28e7fe57886cc07e2bc3434e50e"
+  last_expected_revision: 18
+  last_updated_at: "2026-09-25T13:55:00Z"
+  active_contract: "YM-011-PLAQUETTE-EXP"
+  frozen_candidate: "6b2c45d345a053e2e7790b3a646a2ba8a73dd214"
 
-current_objective: YM-011-OBS-MAP
+current_objective: YM-011-PLAQUETTE-EXP
 
 objectives:
   - id: YM-GOV-403
@@ -187,13 +187,22 @@ objectives:
     dependencies: ["YM-004", "YM-011-PRE", "YM-011-OBS-MAP"]
     risk: R2
     writer: "primary-worker"
+    reviewer_path: "fresh-blind-research-subagent-YM-011-PLAQUETTE-EXP"
+    acceptor: "autonomous-scientific-review-YM-011-PLAQUETTE-EXP"
+    status: SCIENTIFICALLY_ACCEPTED
+
+  - id: YM-011-TREE-GAUGE
+    scope_in: "Maximal spanning-tree gauge fixing, co-tree plaquette coordinate map, and separation of free-boundary vs periodic-torus flat-connection toron strata"
+    dependencies: ["YM-004", "YM-011-PRE", "YM-011-OBS-MAP", "YM-011-PLAQUETTE-EXP"]
+    risk: R2
+    writer: "primary-worker"
     reviewer_path: "fresh-blind-research-subagent"
     acceptor: "autonomous-scientific-review"
     status: PROPOSED_NEXT_AUTHORIZED_TASK
 
   - id: YM-011
     scope_in: "First load-bearing bridge lemma (UV scale-transfer & observables mollification)"
-    dependencies: ["YM-004", "YM-011-PRE", "YM-011-OBS-MAP", "YM-011-PLAQUETTE-EXP"]
+    dependencies: ["YM-004", "YM-011-PRE", "YM-011-OBS-MAP", "YM-011-PLAQUETTE-EXP", "YM-011-TREE-GAUGE"]
     risk: R3
     writer: "primary-worker"
     reviewer_path: "fresh-blind-research-subagent-IND1"
