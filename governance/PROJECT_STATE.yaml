@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Minimal v4.0.3
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 14
+revision: 15
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,7 +9,7 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "6b2c45d345a053e2e7790b3a646a2ba8a73dd214"
+  head: "5553891059c6501c022e716016feac38c475cc4a"
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -24,10 +24,10 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 18
-  last_updated_at: "2026-09-25T14:10:00Z"
-  active_contract: "YM-011-PLAQUETTE-EXP-R1"
-  frozen_candidate: "6b2c45d345a053e2e7790b3a646a2ba8a73dd214"
+  last_expected_revision: 19
+  last_updated_at: "2026-09-25T14:15:00Z"
+  active_contract: "YM-011-PLAQUETTE-EXP"
+  frozen_candidate: "5553891059c6501c022e716016feac38c475cc4a"
 
 current_objective: YM-011-PLAQUETTE-EXP
 
@@ -190,7 +190,7 @@ objectives:
     reviewer_path: "fresh-blind-research-subagent-YM-011-PLAQUETTE-EXP-R1"
     acceptor: "autonomous-scientific-review-YM-011-PLAQUETTE-EXP-R1"
     repair_id: "YM-011-PLAQUETTE-EXP-R1"
-    status: REPAIR_REQUIRED
+    status: SCIENTIFICALLY_ACCEPTED
 
   - id: YM-011-TREE-GAUGE
     scope_in: "Maximal spanning-tree gauge fixing, co-tree plaquette coordinate map, and separation of free-boundary vs periodic-torus flat-connection toron strata"
@@ -199,7 +199,7 @@ objectives:
     writer: "primary-worker"
     reviewer_path: "fresh-blind-research-subagent"
     acceptor: "autonomous-scientific-review"
-    status: BLOCKED_ON_YM_011_PLAQUETTE_EXP_R1
+    status: PROPOSED_NEXT_AUTHORIZED_TASK
 
   - id: YM-011
     scope_in: "First load-bearing bridge lemma (UV scale-transfer & observables mollification)"
