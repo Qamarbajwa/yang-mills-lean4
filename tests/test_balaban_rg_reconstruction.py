@@ -143,7 +143,7 @@ def test_09_no_stale_governance_authority_used():
     assert state_data["current_objective"] in [
         "YM-004", "YM-005", "YM-006", "YM-007", "YM-008", "YM-009", "YM-010",
         "YM-GOV-011", "YM-GOV-012", "YM-GOV-013", "YM-GOV-014", "YM-GOV-015",
-        "YM-011-PRE", "YM-011-OBS-MAP", "YM-011",
+        "YM-011-PRE", "YM-011-OBS-MAP", "YM-011-PLAQUETTE-EXP", "YM-011-TREE-GAUGE", "YM-011",
     ]
 
 
