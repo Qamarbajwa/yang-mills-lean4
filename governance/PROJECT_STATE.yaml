@@ -9,7 +9,7 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "f24b98436c1c5c7723777b6f02cc9a78b66cb0c0"
+  head: "55303f777170a28e7fe57886cc07e2bc3434e50e"
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -24,12 +24,12 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 16
-  last_updated_at: "2026-09-24T05:55:00Z"
-  active_contract: "YM-GOV-015"
-  frozen_candidate: "f24b98436c1c5c7723777b6f02cc9a78b66cb0c0"
+  last_expected_revision: 17
+  last_updated_at: "2026-09-24T06:26:00Z"
+  active_contract: "YM-011-OBS-MAP"
+  frozen_candidate: "55303f777170a28e7fe57886cc07e2bc3434e50e"
 
-current_objective: YM-GOV-015
+current_objective: YM-011-OBS-MAP
 
 objectives:
   - id: YM-GOV-403
@@ -174,8 +174,17 @@ objectives:
     status: SCIENTIFICALLY_ACCEPTED
 
   - id: YM-011-OBS-MAP
-    scope_in: "Single-step block-spin observable pushforward and pullback domain/codomain probability space specification (prior to any scale-transfer error bound)"
+    scope_in: "Single-step block-spin observable pushforward/pullback map B^{mid}_alpha, Markov kernel K^{(alpha,kappa)}_{0->1}, and theorems YM-011-OBS-T1/T2/T3"
     dependencies: ["YM-004", "YM-011-PRE"]
+    risk: R2
+    writer: "primary-worker"
+    reviewer_path: "fresh-blind-research-subagent-YM-011-OBS-MAP"
+    acceptor: "autonomous-scientific-review-YM-011-OBS-MAP"
+    status: SCIENTIFICALLY_ACCEPTED
+
+  - id: YM-011-PLAQUETTE-EXP
+    scope_in: "Finite-lattice Gibbs expectation bound for the quadratic plaquette tangent defect <||P_1 - I_N||_op ||P_2 - I_N||_HS>_{mu_0}"
+    dependencies: ["YM-004", "YM-011-PRE", "YM-011-OBS-MAP"]
     risk: R2
     writer: "primary-worker"
     reviewer_path: "fresh-blind-research-subagent"
@@ -184,7 +193,7 @@ objectives:
 
   - id: YM-011
     scope_in: "First load-bearing bridge lemma (UV scale-transfer & observables mollification)"
-    dependencies: ["YM-004", "YM-011-PRE", "YM-011-OBS-MAP"]
+    dependencies: ["YM-004", "YM-011-PRE", "YM-011-OBS-MAP", "YM-011-PLAQUETTE-EXP"]
     risk: R3
     writer: "primary-worker"
     reviewer_path: "fresh-blind-research-subagent-IND1"
