@@ -43,6 +43,27 @@ class PlaquetteExpectationBoundResult:
     su2_sharp_upper_bound: float | None
 
 
+def su_n_plaquette_energy_range(n: int) -> Tuple[float, float]:
+    """
+    Return the exact group-theoretic range [h_min, h_max] of the normalized plaquette energy
+      h_p(U) = 1 - (1 / N) Re Tr(U_p)
+    for U_p in SU(N) (N >= 2):
+    - h_min = 0.0, attained at U_p = I_N.
+    - For even N: -I_N in SU(N) (det(-I_N) = (-1)^N = 1), so (1 / N) Re Tr(-I_N) = -1.0,
+      giving h_max = 1.0 - (-1.0) = 2.0 exactly (attained at U_p = -I_N).
+    - For odd N: -I_N not in SU(N) (det(-I_N) = -1 != 1). The minimum of (1 / N) Re Tr(U_p)
+      occurs when all N eigenvalues equal exp(i (N - 1) pi / N), giving
+      min (1 / N) Re Tr(U_p) = -cos(pi / N) > -1.0, so
+      h_max = 1.0 + cos(pi / N) < 2.0 (e.g. 1.5 for SU(3)).
+    - Universally safe bound for all N >= 2: h_p(U) in [0.0, 2.0].
+    """
+    if n < 2:
+        raise ValueError("n must be >= 2")
+    if n % 2 == 0:
+        return 0.0, 2.0
+    return 0.0, 1.0 + math.cos(math.pi / float(n))
+
+
 def verify_su_n_plaquette_hs_identity(u_p: np.ndarray) -> Dict[str, float]:
     """
     Verify the exact identity for U_p in SU(N):
@@ -55,12 +76,15 @@ def verify_su_n_plaquette_hs_identity(u_p: np.ndarray) -> Dict[str, float]:
     diff = u_p - ident
     hs_sq = hilbert_schmidt_norm(diff) ** 2
     re_tr_norm = float(np.real(np.trace(u_p))) / float(n)
-    rhs = 2.0 * float(n) * (1.0 - re_tr_norm)
+    h_p = 1.0 - re_tr_norm
+    rhs = 2.0 * float(n) * h_p
     op_norm = float(np.linalg.norm(diff, ord=2))
     hs_norm = math.sqrt(hs_sq)
     ratio = op_norm / hs_norm if hs_norm > 1e-15 else (1.0 / math.sqrt(2.0) if n == 2 else 0.0)
     return {
         "n_colors": float(n),
+        "re_tr_norm": re_tr_norm,
+        "plaquette_energy_h_p": h_p,
         "hs_norm_squared": hs_sq,
         "rhs_2n_one_minus_retr": rhs,
         "identity_residual": abs(hs_sq - rhs),
@@ -82,6 +106,9 @@ def compute_unconditional_tangent_expectation_bound(
       <|Delta_tan(C_1)|>_{mu_0} <= 4(d - 1) sqrt(N) |C_1|_{Lambda_1} e_plaq(beta, Lambda_0).
     For SU(2), also computes the sharp bound 4(d - 1) |C_1|_{Lambda_1} e_plaq(beta, Lambda_0)
     from the exact SU(2) spectral identity ||P - I_2||_op = (1 / sqrt(2)) ||P - I_2||_HS.
+
+    The mean plaquette energy e_plaq lies in [0.0, 2.0] for general SU(N) (attained at
+    U_p = I_N (0.0) and U_p = -I_N (2.0 for even N, e.g. -I_2 in SU(2))).
     """
     if coarse_edge_count_m < 1:
         raise ValueError("coarse_edge_count_m must be >= 1")

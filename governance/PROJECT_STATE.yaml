@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Minimal v4.0.3
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 13
+revision: 14
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -25,8 +25,8 @@ coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
   last_expected_revision: 18
-  last_updated_at: "2026-09-25T13:55:00Z"
-  active_contract: "YM-011-PLAQUETTE-EXP"
+  last_updated_at: "2026-09-25T14:10:00Z"
+  active_contract: "YM-011-PLAQUETTE-EXP-R1"
   frozen_candidate: "6b2c45d345a053e2e7790b3a646a2ba8a73dd214"
 
 current_objective: YM-011-PLAQUETTE-EXP
@@ -187,9 +187,10 @@ objectives:
     dependencies: ["YM-004", "YM-011-PRE", "YM-011-OBS-MAP"]
     risk: R2
     writer: "primary-worker"
-    reviewer_path: "fresh-blind-research-subagent-YM-011-PLAQUETTE-EXP"
-    acceptor: "autonomous-scientific-review-YM-011-PLAQUETTE-EXP"
-    status: SCIENTIFICALLY_ACCEPTED
+    reviewer_path: "fresh-blind-research-subagent-YM-011-PLAQUETTE-EXP-R1"
+    acceptor: "autonomous-scientific-review-YM-011-PLAQUETTE-EXP-R1"
+    repair_id: "YM-011-PLAQUETTE-EXP-R1"
+    status: REPAIR_REQUIRED
 
   - id: YM-011-TREE-GAUGE
     scope_in: "Maximal spanning-tree gauge fixing, co-tree plaquette coordinate map, and separation of free-boundary vs periodic-torus flat-connection toron strata"
@@ -198,7 +199,7 @@ objectives:
     writer: "primary-worker"
     reviewer_path: "fresh-blind-research-subagent"
     acceptor: "autonomous-scientific-review"
-    status: PROPOSED_NEXT_AUTHORIZED_TASK
+    status: BLOCKED_ON_YM_011_PLAQUETTE_EXP_R1
 
   - id: YM-011
     scope_in: "First load-bearing bridge lemma (UV scale-transfer & observables mollification)"

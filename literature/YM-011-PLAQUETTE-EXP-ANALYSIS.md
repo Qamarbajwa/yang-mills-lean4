@@ -1,7 +1,8 @@
-# Task `YM-011-PLAQUETTE-EXP` — Finite-Lattice Gibbs Expectation Bound for the Quadratic Plaquette Tangent Defect
+# Task `YM-011-PLAQUETTE-EXP-R1` — Repair of Plaquette-Energy Range $[0, 2]$ and Finite-Lattice Gibbs Expectation Reduction
 
-- **TASK_ID:** `YM-011-PLAQUETTE-EXP`
-- **TASK_STATUS:** `SCIENTIFICALLY_VERIFIED_UNCONDITIONAL_EXPECTATION_REDUCTION`
+- **TASK_ID:** `YM-011-PLAQUETTE-EXP-R1` (Repaired Revision of `YM-011-PLAQUETTE-EXP`)
+- **TASK_STATUS:** `REPAIRED_CANDIDATE_UNCONDITIONAL_EXPECTATION_REDUCTION`
+- **PLAQUETTE_ENERGY_RANGE:** `[0, 2]` (`Universally safe bound for all SU(N); even N attains 2.0 at U_p = -I_N; odd N bounded by 1 + cos(pi/N) < 2.0 (1.5 for SU(3))`)
 - **O_1_OVER_BETA_STATUS:** `WITHHELD_AS_UNRESOLVED_DEPENDENCY` (`Claims A, B, C strictly separated; pure O(1/beta) on periodic torus obstructed by flat-connection/toron singular strata NEG-YM-011-PLAQ-1`)
 - **ORIGINAL_YM_011_CONTINUUM_PROPOSAL_STATUS:** `NOT_AUTHORIZED` (`PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION`)
 - **YM_006_THROUGH_YM_010_STATUS:** `SCIENTIFIC_REVIEW_HOLD`
@@ -22,14 +23,31 @@ satisfies the exact pointwise bound:
 $$\boxed{\left|\Delta_{\mathrm{tan}}(C_1)[U]\right| \le \frac{1}{\sqrt{N}} \sum_{k=1}^{|C_1|_{\Lambda_1}} \sum_{\nu \ne \mu_k, \, \sigma \in \{+,-\}} \left\| P_{1,\nu,\sigma}^{(k)}[U] - I_N \right\|_{\mathrm{op}} \, \left\| P_{2,\nu,\sigma}^{(k)}[U] - I_N \right\|_{\mathrm{HS}},}$$
 where $P_{1,\nu,\sigma}^{(k)}[U], P_{2,\nu,\sigma}^{(k)}[U] \in SU(N)$ are the two adjacent $a \times a$ fine plaquettes in the $(\mu_k, \nu)$-plane touching $\ell_{e_k,1}$ and $\ell_{e_k,2}$ respectively and based at the midpoint $m(e_k) = y_k + a\hat{\mu}_k$.
 
-### 1.2 Exact $SU(N)$ Hilbert–Schmidt Plaquette Identity and Spectral Ratio
+### 1.2 Exact $SU(N)$ Hilbert–Schmidt Plaquette Identity and Group-Theoretic Range
 For any unitary matrix $U_p \in SU(N)$ ($U_p^\dagger U_p = I_N$):
 $$\left\| U_p - I_N \right\|_{\mathrm{HS}}^2 = \operatorname{Tr}\!\left( (U_p^\dagger - I_N)(U_p - I_N) \right) = \operatorname{Tr}\!\left( 2 I_N - U_p - U_p^\dagger \right) = 2N - 2\operatorname{Re}\operatorname{Tr}(U_p) = 2N \left( 1 - \frac{1}{N}\operatorname{Re}\operatorname{Tr}(U_p) \right).$$
-Define for each elementary plaquette $p \in P_+(\Lambda_0)$ its individual mean plaquette energy under the Wilson Gibbs probability measure $\mu_0$:
-$$e_p(\beta, \Lambda_0) := \left\langle 1 - \frac{1}{N}\operatorname{Re}\operatorname{Tr}(U_p) \right\rangle_{\mu_0} = \frac{1}{2N} \left\langle \left\| U_p - I_N \right\|_{\mathrm{HS}}^2 \right\rangle_{\mu_0} \in [0, 2].$$
+Define for each elementary plaquette $p \in P_+(\Lambda_0)$ the normalized plaquette defect random variable:
+$$h_p(U) := 1 - \frac{1}{N}\operatorname{Re}\operatorname{Tr}(U_p) = \frac{1}{2N} \left\| U_p - I_N \right\|_{\mathrm{HS}}^2,$$
+and its expectation under the Wilson Gibbs probability measure $\mu_0$:
+$$e_p(\beta, \Lambda_0) := \langle h_p \rangle_{\mu_0} = \frac{1}{2N} \left\langle \left\| U_p - I_N \right\|_{\mathrm{HS}}^2 \right\rangle_{\mu_0}.$$
+
+**Exact Group-Theoretic Range of $h_p(U)$ and $e_p(\beta, \Lambda_0)$ across $SU(N)$:**
+Let $q_N(U) := \frac{1}{N}\operatorname{Re}\operatorname{Tr}(U) = \frac{1}{N}\sum_{j=1}^N \cos\theta_j$ where $\sum_{j=1}^N \theta_j \equiv 0 \pmod{2\pi}$.
+- **Even $N$ ($N = 2, 4, 6, \dots$):** $-I_N \in SU(N)$ because $\det(-I_N) = (-1)^N = 1$.
+  At the central element $U_p = -I_N$, $q_N(-I_N) = -1.0$, attaining the maximum:
+  $$h_p(-I_N) = 1.0 - (-1.0) = 2.0.$$
+  *(For example, in $SU(2)$, $U_p = -I_2 \in SU(2)$ gives $h_p(-I_2) = 2.0$ and $\|(-I_2) - I_2\|_{\mathrm{HS}}^2 = \|-2I_2\|_{\mathrm{HS}}^2 = 8 = 2(2)(2.0)$.)*
+- **Odd $N$ ($N = 3, 5, 7, \dots$):** $-I_N \notin SU(N)$ because $\det(-I_N) = (-1)^N = -1 \ne 1$.
+  The constrained minimum of $q_N(U)$ occurs when all $N$ eigenvalues are equal: $\theta_j = \pi - \frac{\pi}{N}$ for all $j$, so $\sum \theta_j = (N-1)\pi \equiv 0 \pmod{2\pi}$ (since $N-1$ is even).
+  Thus $\min_{U \in SU(N)} q_N(U) = \cos(\pi - \pi/N) = -\cos(\pi/N) > -1.0$, which yields:
+  $$\max_{U \in SU(N)} h_p(U) = 1 + \cos(\pi/N) < 2.0.$$
+  *(For example, in $SU(3)$, $\min q_3 = \cos(2\pi/3) = -0.5$ attained at $U_p = e^{i 2\pi/3} I_3 \in SU(3)$, giving $\max h_p = 1.5$.)*
+- **Universally Safe Range for all $N \ge 2$:**
+  $$\boxed{0 \le h_p(U) \le 2 \implies 0 \le e_p(\beta, \Lambda_0) \le 2 \implies 0 \le e_{\mathrm{plaq}}(\beta, \Lambda_0) \le 2.}$$
 Furthermore, for any matrix $A \in M_N(\mathbb{C})$ with singular values $s_1 \ge \dots \ge s_N \ge 0$, $\|A\|_{\mathrm{op}} = s_1 \le \sqrt{\sum_{j=1}^N s_j^2} = \|A\|_{\mathrm{HS}}$.
 - **Sharp $SU(2)$ Spectral Identity:** For $G = SU(2)$, every $U_p \in SU(2)$ has conjugate eigenvalues $e^{\pm i\theta}$ ($\theta \in [0, \pi]$), so $s_1(U_p - I_2) = s_2(U_p - I_2) = |e^{i\theta} - 1| = 2\sin(\theta/2)$, giving the **exact identity**:
   $$\left\| U_p - I_2 \right\|_{\mathrm{op}} \equiv \frac{1}{\sqrt{2}} \left\| U_p - I_2 \right\|_{\mathrm{HS}} \qquad (\forall U_p \in SU(2)).$$
+  *(Note: At $U_p = -I_2$, $\| -2I_2 \|_{\mathrm{op}} = 2.0$ and $\| -2I_2 \|_{\mathrm{HS}} = 2\sqrt{2}$, so $2.0 = \frac{1}{\sqrt{2}}(2\sqrt{2})$ holds identically at the extremal point $h_p = 2.0$.)*
 
 ---
 
@@ -63,7 +81,7 @@ Furthermore, for any matrix $A \in M_N(\mathbb{C})$ with singular values $s_1 \g
 
 ## 3. Exact Finite-Dimensional Statistical-Mechanics Identity for Mean Plaquette Energy (`YM-011-PLAQUETTE-EXP-T2`)
 
-**Theorem (`YM-011-PLAQUETTE-EXP-T2` — Exact Partition-Function Derivative & Schwinger–Dyson Positivity):**
+**Theorem (`YM-011-PLAQUETTE-EXP-T2` — Exact Partition-Function Derivative & Plaquette-Energy Range):**
 Write the finite-lattice Wilson Gibbs probability measure on $\Omega_0 = SU(N)^{E_+(\Lambda_0)}$ as
 $$d\mu_\beta(U) = Z_{\Lambda_0}(\beta)^{-1} \exp\!\left(-\beta H(U)\right) d\mu_{\mathrm{Haar},0}(U), \qquad Z_{\Lambda_0}(\beta) := \int_{\Omega_0} \exp\!\left(-\beta H(U)\right) d\mu_{\mathrm{Haar},0}(U),$$
 where the dimensionless total plaquette Hamiltonian $H : \Omega_0 \to [0, 2|P_+(\Lambda_0)|]$ is normalized as
@@ -75,13 +93,19 @@ Then for every finite periodic lattice $\Lambda_0 = (a\mathbb{Z}/2La\mathbb{Z})^
    $$\boxed{e_{\mathrm{plaq}}(\beta, \Lambda_0) = -\frac{1}{|P_+(\Lambda_0)|} \frac{\partial}{\partial \beta} \ln Z_{\Lambda_0}(\beta) = -\frac{1}{\binom{d}{2}(2L)^d} \frac{\partial}{\partial \beta} \ln Z_{\Lambda_0}(\beta).}$$
 2. **Exact Variance / Monotonicity Identity:**
    $$-\frac{\partial}{\partial \beta} e_{\mathrm{plaq}}(\beta, \Lambda_0) = \frac{1}{|P_+(\Lambda_0)|} \frac{\partial^2}{\partial \beta^2} \ln Z_{\Lambda_0}(\beta) = \frac{\operatorname{Var}_{\mu_0}(H)}{|P_+(\Lambda_0)|} \ge 0,$$
-   so $\beta \mapsto e_{\mathrm{plaq}}(\beta, \Lambda_0)$ is strictly decreasing on $(0, \infty)$ with $\lim_{\beta \to 0^+} e_{\mathrm{plaq}}(\beta, \Lambda_0) = 1$.
-3. **Exact Finite-Lattice Schwinger–Dyson Positivity Bound:**
-   For every $\beta > 0$ and every finite lattice $\Lambda_0$, integration by parts with respect to the left-invariant Lie Laplacian $\Delta_\ell = \sum_{a=1}^{N^2-1} (\partial_\ell^a)^2$ on $SU(N)$ gives
-   $$\frac{\beta (N^2 - 1)}{2N} \sum_{p \ni \ell} \left\langle \frac{1}{N}\operatorname{Re}\operatorname{Tr}(U_p) \right\rangle_{\mu_0} = \left\langle \Delta_\ell S_W \right\rangle_{\mu_0} = \sum_{a=1}^{N^2 - 1} \left\langle \left(\partial_\ell^a S_W\right)^2 \right\rangle_{\mu_0} \ge 0,$$
-   which proves $\left\langle \frac{1}{N}\operatorname{Re}\operatorname{Tr}(U_p) \right\rangle_{\mu_0} \ge 0$ and therefore $0 \le e_{\mathrm{plaq}}(\beta, \Lambda_0) \le 1$ for all $\beta \in (0, \infty)$.
+   so $\beta \mapsto e_{\mathrm{plaq}}(\beta, \Lambda_0)$ is strictly decreasing on $(0, \infty)$ with $\lim_{\beta \to 0^+} e_{\mathrm{plaq}}(\beta, \Lambda_0) = 1.0$ (since $\langle \operatorname{Tr} U_p \rangle_{\mathrm{Haar}} = 0$ by character orthogonality).
+3. **Exact Group-Theoretic Plaquette-Energy Range:**
+   For all configurations $U \in \Omega_0$ and all couplings $\beta \in (0, \infty)$:
+   $$\boxed{0 \le h_p(U) \le 2 \implies 0 \le e_p(\beta, \Lambda_0) \le 2 \implies 0 \le e_{\mathrm{plaq}}(\beta, \Lambda_0) \le 2,}$$
+   with the sharp configuration-wise upper bound $h_p(U) \le 1 - \frac{1}{N}\min_{U \in SU(N)}\operatorname{Re}\operatorname{Tr}(U)$, attaining $2.0$ for even $N$ (at $U_p = -I_N \in SU(N)$) and $1 + \cos(\pi/N) < 2.0$ for odd $N$ (e.g. $1.5$ for $SU(3)$ at $U_p = e^{i 2\pi/3} I_3$).
 
-*(Note: Theorem `YM-011-PLAQUETTE-EXP-T2` is recorded strictly as an exact finite-dimensional statistical-mechanics and Lie-group integration-by-parts identity, not as a weak-coupling theorem.)*
+*(Audit of the Previous $[0, 1]$ Range Claim and Status of Lie-Laplacian Positivity:
+The earlier report defined $h_p(U) = 1 - \frac{1}{N}\operatorname{Re}\operatorname{Tr}(U_p)$ and stated $0 \le e_{\mathrm{plaq}}(\beta, \Lambda_0) \le 1$.
+That upper bound is false for general $SU(N)$ configurations. For example, in $SU(2)$, $U_p = -I_2 \in SU(2)$ gives $\frac{1}{2}\operatorname{Re}\operatorname{Tr}(-I_2) = -1.0 \implies h_p(-I_2) = 2.0$.
+While integration by parts with respect to the Lie Laplacian $\Delta_\ell = \sum_{a=1}^{N^2-1}(\partial_\ell^a)^2$ yields
+$$\frac{\beta(N^2 - 1)}{2N}\sum_{p \ni \ell}\left\langle \frac{1}{N}\operatorname{Re}\operatorname{Tr}(U_p)\right\rangle_{\mu_0} = \sum_{a=1}^{N^2-1}\left\langle (\partial_\ell^a S_W)^2 \right\rangle_{\mu_0} \ge 0,$$
+which implies $\langle \frac{1}{N}\operatorname{Re}\operatorname{Tr}(U_p) \rangle_{\mu_0} \ge 0 \implies e_{\mathrm{plaq}} \le 1.0$ under the unperturbed translation-invariant bare Wilson measure, this is an expectation property under specific symmetries, NOT a valid upper bound for the random variable $h_p(U)$ or for general non-translation-invariant / perturbed measures.
+Theorem `T2` is now repaired to record the safe, universally valid range $[0, 2]$ for all finite-lattice calculations and input validation.)*
 
 ---
 
@@ -139,7 +163,7 @@ For every $\beta > 0$, every $r \in (0, \pi]$, and every finite periodic torus $
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Osterwalder & Seiler (1978)**, *Ann. Phys.* 110, 440–471; **Seiler (1982)**, *LNP* 159 | Thm. 3.1 / Ch. 3 | Compact $G \subset U(N)$ | $d \ge 2$ | Periodic / Free | Finite & Infinite | Strong coupling $0 < \beta \le \beta_0(d, G)$ | Volume-uniform analytic cluster expansion of $e_{\mathrm{plaq}}(\beta) = 1 - c_1 \beta + O(\beta^2)$ at strong coupling; does **not** cover $\beta \to \infty$. |
 | **Bałaban (1984–1985)**, *Comm. Math. Phys.* 95, 17–40; 96, 223–250; 98, 17–51 | Main Theorems | Compact $G = SU(N)$ | $d = 4$ | Periodic Torus $T_L^4$ | Finite volume $\Lambda_0$ | Weak coupling $\beta = 2N/g_0^2 \gg 1$ | Controls polymer expansions in finite volume via axial/Hodge block gauge fixing and small/large-field characteristic functions $\chi_k$, requiring the full multi-step gauge-fixing machinery (`YM-004`). |
-| **Chatterjee (2019)**, *Probab. Theory Relat. Fields* 174, 33–53; **Cao (2020)**, *Comm. Math. Phys.* 380, 1439–1505 | Thm. 1.1 (Dyson–Schwinger / Makeenko–Migdal Loop Equations) | $SO(N), SU(N), U(N)$ | $d \ge 2$ | Finite / Infinite | Finite & Infinite | General $\beta > 0$ identity & strong/axial regimes | Establishes exact finite-lattice Lie-Laplacian integration-by-parts loop identities ($\langle \Delta_\ell S_W \rangle = \sum_a \langle (\partial_\ell^a S_W)^2 \rangle \ge 0$), proving $e_{\mathrm{plaq}}(\beta, \Lambda_0) \in [0, 1]$ unconditionally. |
+| **Chatterjee (2019)**, *Probab. Theory Relat. Fields* 174, 33–53; **Cao (2020)**, *Comm. Math. Phys.* 380, 1439–1505 | Thm. 1.1 (Dyson–Schwinger / Makeenko–Migdal Loop Equations) | $SO(N), SU(N), U(N)$ | $d \ge 2$ | Finite / Infinite | Finite & Infinite | General $\beta > 0$ identity & strong/axial regimes | Establishes exact finite-lattice Lie-Laplacian integration-by-parts loop identities ($\langle \Delta_\ell S_W \rangle = \sum_a \langle (\partial_\ell^a S_W)^2 \rangle \ge 0$), showing $\langle \frac{1}{N}\operatorname{Re}\operatorname{Tr}(U_p) \rangle_{\mu_0} \ge 0 \implies e_{\mathrm{plaq}} \le 1.0$ in expectation under translation-invariant bare Wilson measure, while configuration-wise $h_p(U) \in [0, 2]$ for all $N \ge 2$. |
 | **Borgs (1984)**, *Commun. Math. Phys.* 96, 251–284; **Coste et al. (1987)**, *Nucl. Phys. B* 289, 557–588 | Sec. 2–3 / Zero-mode analysis | Compact $G = SU(N)$ | $d = 4$ | Periodic Torus vs. Free | Finite & Infinite | Weak coupling $\beta \to \infty$ | Proves that on a periodic torus $\mathbb{T}^4$, flat connections form a singular moduli space $T^4 / S_N$ with quartic zero modes at central elements, whereas free/spanning-tree boundary conditions eliminate torons. |
 
 ---
@@ -151,10 +175,10 @@ Implemented in `su2_single_plaquette_thermodynamic_identity_diagnostic` in `src/
 - Verified to `< 1e-11` agreement between $-\partial_\beta \ln Z(\beta)$ (central finite differences) and the exact Bessel character formula $e_{\mathrm{plaq}}(\beta) = 1 - I_2(\beta)/I_1(\beta)$ across $\beta \in \{0.5, 2.0, 10.0, 50.0\}$, confirming $\lim_{\beta \to \infty} \beta \, e_{\mathrm{plaq}}(\beta) = \frac{N^2 - 1}{2N} = \frac{3}{2}$ in the single-plaquette (free-tree) model where no toron moduli exist.
 - All numerical evaluations are strictly labeled `NUMERICAL_DIAGNOSTIC_ONLY` and are not used as proof of any analytical theorem.
 
-### 6.2 Accepted Result, Unresolved Dependency, and Next Smallest Research Task (`YM-011-TREE-GAUGE`)
-- **Accepted Analytical Result (`YM-011-PLAQUETTE-EXP-T1` & `T2`):**
+### 6.2 Repaired Analytical Result, Unresolved Dependency, and Next Smallest Research Task (`YM-011-TREE-GAUGE`)
+- **Repaired Analytical Result (`YM-011-PLAQUETTE-EXP-T1` & `T2`):**
   $$\left\langle \left|\Delta_{\mathrm{tan}}(C_1)\right| \right\rangle_{\mu_0} \le 4(d - 1)\sqrt{N} \, |C_1|_{\Lambda_1} \, e_{\mathrm{plaq}}(\beta, \Lambda_0) = -\frac{4(d - 1)\sqrt{N} \, |C_1|_{\Lambda_1}}{\binom{d}{2}(2L)^d} \frac{\partial}{\partial \beta} \ln Z_{\Lambda_0}(\beta),$$
-  together with the unconditional volume-independent entropy–energy bound $e_{\mathrm{plaq}}(\beta, \Lambda_0) \le \inf_{r \in (0, \pi]} \left(8 r^2 + \frac{2}{(d-1)\beta}\ln(1/v_N(r))\right) = O\!\left(\frac{\ln \beta}{\beta}\right)$ (`YM-011-PLAQUETTE-EXP-L1`).
+  where $e_{\mathrm{plaq}}(\beta, \Lambda_0) \in [0, 2]$ is the universally safe mean plaquette energy range for all $SU(N)$ ($N \ge 2$), together with the unconditional volume-independent entropy–energy bound $e_{\mathrm{plaq}}(\beta, \Lambda_0) \le \inf_{r \in (0, \pi]} \left(8 r^2 + \frac{2}{(d-1)\beta}\ln(1/v_N(r))\right) = O\!\left(\frac{\ln \beta}{\beta}\right)$ (`YM-011-PLAQUETTE-EXP-L1`).
 - **Unresolved Dependency:** Removing the $\ln \beta$ factor to establish a pure $O(1/\beta)$ bound (`Claim A` / `Claim B`) without singular toron zero-mode obstructions (`NEG-YM-011-PLAQ-1`).
 - **Next Smallest Authorized Task (`YM-011-TREE-GAUGE`):**
   Construct the explicit **Maximal Spanning-Tree Gauge Fixing and Co-Tree Plaquette Coordinate Map** on a finite lattice $\Lambda_0$ (comparing free boundary conditions where $|P_+(\Lambda_0)|$ independent plaquettes embed into $|E_{\mathrm{cotree}}(\Lambda_0)| = |E_+(\Lambda_0)| - (|V(\Lambda_0)| - 1)$ co-tree links against periodic boundary conditions with fundamental-group toron holonomies).
