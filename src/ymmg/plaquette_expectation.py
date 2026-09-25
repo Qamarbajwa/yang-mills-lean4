@@ -64,6 +64,32 @@ def su_n_plaquette_energy_range(n: int) -> Tuple[float, float]:
     return 0.0, 1.0 + math.cos(math.pi / float(n))
 
 
+def validate_universal_plaquette_energy(mean_plaquette_energy: float) -> None:
+    """
+    Validate that mean_plaquette_energy lies in the universal [0.0, 2.0] range
+    valid across all SU(N) (N >= 2).
+    """
+    if not (0.0 <= mean_plaquette_energy <= 2.0 + 1e-15):
+        raise ValueError(f"mean_plaquette_energy {mean_plaquette_energy} must lie in universal [0, 2] range")
+
+
+def validate_group_plaquette_energy(mean_plaquette_energy: float, su_n: int) -> None:
+    """
+    Validate that mean_plaquette_energy lies in the sharp group-admissible range
+    [0.0, h_max(SU(N))] where:
+      h_max(SU(N)) = 2.0 for even N,
+      h_max(SU(N)) = 1.0 + cos(pi / N) for odd N (e.g. 1.5 for SU(3)).
+    Because the Gibbs expectation is a convex combination of configuration values,
+    it cannot exceed the configuration supremum:
+      0.0 <= e_plaq <= h_max(SU(N)).
+    """
+    h_min, h_max = su_n_plaquette_energy_range(su_n)
+    if not (h_min <= mean_plaquette_energy <= h_max + 1e-15):
+        raise ValueError(
+            f"mean_plaquette_energy {mean_plaquette_energy} outside sharp SU({su_n}) range [{h_min}, {h_max}]"
+        )
+
+
 def verify_su_n_plaquette_hs_identity(u_p: np.ndarray) -> Dict[str, float]:
     """
     Verify the exact identity for U_p in SU(N):
@@ -99,6 +125,7 @@ def compute_unconditional_tangent_expectation_bound(
     mean_plaquette_energy: float,
     spacetime_dim: int = 4,
     su_n: int = 3,
+    enforce_group_admissibility: bool = True,
 ) -> PlaquetteExpectationBoundResult:
     """
     Compute the unconditional expectation reduction bound (`YM-011-PLAQUETTE-EXP-T1`)
@@ -107,8 +134,12 @@ def compute_unconditional_tangent_expectation_bound(
     For SU(2), also computes the sharp bound 4(d - 1) |C_1|_{Lambda_1} e_plaq(beta, Lambda_0)
     from the exact SU(2) spectral identity ||P - I_2||_op = (1 / sqrt(2)) ||P - I_2||_HS.
 
-    The mean plaquette energy e_plaq lies in [0.0, 2.0] for general SU(N) (attained at
-    U_p = I_N (0.0) and U_p = -I_N (2.0 for even N, e.g. -I_2 in SU(2))).
+    Range Discipline:
+    - CONFIGURATION_RANGE(N): [0.0, 2.0] for even N, [0.0, 1.0 + cos(pi/N)] for odd N (1.5 for SU(3)).
+    - EXPECTATION_RANGE(N): subset of CONFIGURATION_RANGE(N) by convexity of expectation.
+    - UNIVERSAL_ALL_N_RANGE: [0.0, 2.0] across all N >= 2.
+    When enforce_group_admissibility=True (default), validates against sharp EXPECTATION_RANGE(N).
+    When enforce_group_admissibility=False, validates against UNIVERSAL_ALL_N_RANGE.
     """
     if coarse_edge_count_m < 1:
         raise ValueError("coarse_edge_count_m must be >= 1")
@@ -116,8 +147,10 @@ def compute_unconditional_tangent_expectation_bound(
         raise ValueError("spacetime_dim must be >= 2")
     if su_n < 2:
         raise ValueError("su_n must be >= 2")
-    if not (0.0 <= mean_plaquette_energy <= 2.0):
-        raise ValueError("mean_plaquette_energy must lie in [0, 2]")
+    if enforce_group_admissibility:
+        validate_group_plaquette_energy(mean_plaquette_energy, su_n)
+    else:
+        validate_universal_plaquette_energy(mean_plaquette_energy)
 
     num_channels = 2 * (spacetime_dim - 1)
     c_universal = 4.0 * float(spacetime_dim - 1) * math.sqrt(float(su_n))

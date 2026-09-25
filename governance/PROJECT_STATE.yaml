@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Minimal v4.0.3
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 15
+revision: 16
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,7 +9,10 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "5553891059c6501c022e716016feac38c475cc4a"
+  head: "60ee9594a11b65da98d89e5fc81e4c35fb1b0a51"
+  scientific_candidate_sha: "5553891059c6501c022e716016feac38c475cc4a"
+  review_bound_sha: "5553891059c6501c022e716016feac38c475cc4a"
+  evidence_closeout_head: "60ee9594a11b65da98d89e5fc81e4c35fb1b0a51"
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -24,9 +27,9 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 19
-  last_updated_at: "2026-09-25T14:15:00Z"
-  active_contract: "YM-011-PLAQUETTE-EXP"
+  last_expected_revision: 20
+  last_updated_at: "2026-09-26T01:30:00Z"
+  active_contract: "YM-011-PLAQUETTE-EXP-R2"
   frozen_candidate: "5553891059c6501c022e716016feac38c475cc4a"
 
 current_objective: YM-011-PLAQUETTE-EXP
@@ -187,10 +190,10 @@ objectives:
     dependencies: ["YM-004", "YM-011-PRE", "YM-011-OBS-MAP"]
     risk: R2
     writer: "primary-worker"
-    reviewer_path: "fresh-blind-research-subagent-YM-011-PLAQUETTE-EXP-R1"
-    acceptor: "autonomous-scientific-review-YM-011-PLAQUETTE-EXP-R1"
-    repair_id: "YM-011-PLAQUETTE-EXP-R1"
-    status: SCIENTIFICALLY_ACCEPTED
+    reviewer_path: "fresh-blind-research-subagent-YM-011-PLAQUETTE-EXP-R2"
+    acceptor: "autonomous-scientific-review-YM-011-PLAQUETTE-EXP-R2"
+    repair_id: "YM-011-PLAQUETTE-EXP-R2"
+    status: REPAIR_REQUIRED
 
   - id: YM-011-TREE-GAUGE
     scope_in: "Maximal spanning-tree gauge fixing, co-tree plaquette coordinate map, and separation of free-boundary vs periodic-torus flat-connection toron strata"
@@ -199,7 +202,7 @@ objectives:
     writer: "primary-worker"
     reviewer_path: "fresh-blind-research-subagent"
     acceptor: "autonomous-scientific-review"
-    status: PROPOSED_NEXT_AUTHORIZED_TASK
+    status: BLOCKED_PENDING_R2_CLOSEOUT
 
   - id: YM-011
     scope_in: "First load-bearing bridge lemma (UV scale-transfer & observables mollification)"

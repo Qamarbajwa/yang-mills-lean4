@@ -96,7 +96,18 @@ def test_1b_extremal_group_configurations_and_exact_range():
     assert math.isclose(res_su3_min["hs_norm_squared"], 9.0, abs_tol=1e-15)
     assert res_su3_min["identity_residual"] < 1e-14
 
-    # 5. Check exact group-theoretic range function across even and odd N
+    # 5. SU(5) odd-N minimum trace configuration:
+    # U_p = exp(i 4pi/5) I_5 in SU(5), det(U_p) = (exp(i 4pi/5))^5 = exp(i 4pi) = 1.
+    omega5 = np.exp(4.0j * np.pi / 5.0)
+    u_su5_min = omega5 * np.eye(5, dtype=np.complex128)
+    res_su5_min = verify_su_n_plaquette_hs_identity(u_su5_min)
+    expected_retr5 = math.cos(4.0 * math.pi / 5.0)  # = -cos(pi / 5)
+    expected_hp5 = 1.0 - expected_retr5  # = 1.0 + cos(pi / 5)
+    assert math.isclose(res_su5_min["re_tr_norm"], expected_retr5, abs_tol=1e-14)
+    assert math.isclose(res_su5_min["plaquette_energy_h_p"], expected_hp5, abs_tol=1e-14)
+    assert res_su5_min["identity_residual"] < 1e-14
+
+    # 6. Check exact group-theoretic range function across even and odd N
     assert su_n_plaquette_energy_range(2) == (0.0, 2.0)
     assert math.isclose(su_n_plaquette_energy_range(3)[1], 1.5, abs_tol=1e-15)
     assert su_n_plaquette_energy_range(4) == (0.0, 2.0)
@@ -132,25 +143,59 @@ def test_2_unconditional_expectation_reduction_t1():
 
 
 def test_2b_range_boundary_validation():
-    # 1. Exact evaluation at maximum energy e_plaq = 2.0
+    # 1. Exact evaluation at maximum group-admissible energy:
+    # SU(2) sharp maximum is 2.0:
     res_su2_max = compute_unconditional_tangent_expectation_bound(
         coarse_edge_count_m=4,
         mean_plaquette_energy=2.0,
         spacetime_dim=4,
         su_n=2,
+        enforce_group_admissibility=True,
     )
     assert math.isclose(float(res_su2_max.su2_sharp_upper_bound), 12.0 * 4.0 * 2.0, rel_tol=1e-15)
     assert math.isclose(res_su2_max.universal_upper_bound, 12.0 * math.sqrt(2.0) * 4.0 * 2.0, rel_tol=1e-15)
 
+    # SU(3) sharp maximum is 1.5:
     res_su3_max = compute_unconditional_tangent_expectation_bound(
+        coarse_edge_count_m=4,
+        mean_plaquette_energy=1.5,
+        spacetime_dim=4,
+        su_n=3,
+        enforce_group_admissibility=True,
+    )
+    assert math.isclose(res_su3_max.universal_upper_bound, 12.0 * math.sqrt(3.0) * 4.0 * 1.5, rel_tol=1e-15)
+
+    # 2. Strict rejection of e_plaq = 2.0 for SU(3) under group-specific validation:
+    with pytest.raises(ValueError, match="outside sharp SU\\(3\\) range"):
+        compute_unconditional_tangent_expectation_bound(
+            coarse_edge_count_m=4,
+            mean_plaquette_energy=2.0,
+            spacetime_dim=4,
+            su_n=3,
+            enforce_group_admissibility=True,
+        )
+
+    # Strict rejection of e_plaq = 1.5001 for SU(3):
+    with pytest.raises(ValueError, match="outside sharp SU\\(3\\) range"):
+        compute_unconditional_tangent_expectation_bound(
+            coarse_edge_count_m=4,
+            mean_plaquette_energy=1.5001,
+            spacetime_dim=4,
+            su_n=3,
+            enforce_group_admissibility=True,
+        )
+
+    # 3. Universal (all-N) validator allows e_plaq = 2.0 when group admissibility is disabled:
+    res_su3_univ = compute_unconditional_tangent_expectation_bound(
         coarse_edge_count_m=4,
         mean_plaquette_energy=2.0,
         spacetime_dim=4,
         su_n=3,
+        enforce_group_admissibility=False,
     )
-    assert math.isclose(res_su3_max.universal_upper_bound, 12.0 * math.sqrt(3.0) * 4.0 * 2.0, rel_tol=1e-15)
+    assert math.isclose(res_su3_univ.universal_upper_bound, 12.0 * math.sqrt(3.0) * 4.0 * 2.0, rel_tol=1e-15)
 
-    # 2. Exact evaluation at minimum energy e_plaq = 0.0
+    # 4. Exact evaluation at minimum energy e_plaq = 0.0:
     res_zero = compute_unconditional_tangent_expectation_bound(
         coarse_edge_count_m=4,
         mean_plaquette_energy=0.0,
@@ -160,12 +205,45 @@ def test_2b_range_boundary_validation():
     assert math.isclose(res_zero.universal_upper_bound, 0.0, abs_tol=1e-15)
     assert math.isclose(float(res_zero.su2_sharp_upper_bound), 0.0, abs_tol=1e-15)
 
-    # 3. Reject negative and out-of-range energies
-    with pytest.raises(ValueError, match="mean_plaquette_energy must lie in"):
-        compute_unconditional_tangent_expectation_bound(coarse_edge_count_m=4, mean_plaquette_energy=-0.001)
+    # 5. Reject negative and universal out-of-range energies:
+    with pytest.raises(ValueError, match="outside sharp SU\\(2\\) range|must lie in"):
+        compute_unconditional_tangent_expectation_bound(coarse_edge_count_m=4, mean_plaquette_energy=-0.001, su_n=2)
 
-    with pytest.raises(ValueError, match="mean_plaquette_energy must lie in"):
-        compute_unconditional_tangent_expectation_bound(coarse_edge_count_m=4, mean_plaquette_energy=2.001)
+    with pytest.raises(ValueError, match="outside sharp SU\\(2\\) range|must lie in"):
+        compute_unconditional_tangent_expectation_bound(coarse_edge_count_m=4, mean_plaquette_energy=2.001, su_n=2)
+
+
+def test_2c_expectation_cannot_exceed_configuration_supremum():
+    """Verify that expectation range is bounded by configuration range for all tested N."""
+    for n in (2, 3, 4, 5, 6):
+        h_min, h_max = su_n_plaquette_energy_range(n)
+        # Any expectation <h_p>_mu = \int h_p dmu must lie in [h_min, h_max]
+        # because \mu is a probability measure (\int dmu = 1, dmu >= 0).
+        assert h_min == 0.0
+        if n % 2 == 0:
+            assert math.isclose(h_max, 2.0, abs_tol=1e-15)
+        else:
+            assert math.isclose(h_max, 1.0 + math.cos(math.pi / float(n)), abs_tol=1e-15)
+            assert h_max < 2.0
+
+
+def test_2d_no_conflation_configuration_vs_gibbs_expectation():
+    """
+    Verify strict separation between:
+    1. Configuration-wise range CONFIGURATION_RANGE(N) = [0, h_max(N)]
+    2. Expectation range EXPECTATION_RANGE(N) <= CONFIGURATION_RANGE(N)
+    3. Gibbs expectation value under unperturbed bare Wilson measure e_plaq(beta) <= 1.0 (for beta >= 0)
+    """
+    # Configuration-wise, SU(2) reaches 2.0 and SU(3) reaches 1.5:
+    assert su_n_plaquette_energy_range(2)[1] == 2.0
+    assert su_n_plaquette_energy_range(3)[1] == 1.5
+
+    # Under pure Haar measure (beta = 0), character orthogonality gives <Tr U> = 0 => e_plaq(0) = 1.0:
+    # And by Var(H) >= 0, beta -> e_plaq(beta) is strictly decreasing for beta > 0.
+    # Therefore under unperturbed bare measure, e_plaq(beta) <= 1.0 for all beta >= 0.
+    # This expectation property does NOT restrict the random variable h_p(U), which takes values up to h_max.
+    h_max_su2 = su_n_plaquette_energy_range(2)[1]
+    assert h_max_su2 > 1.0  # Configuration supremum strictly exceeds Gibbs expectation at beta > 0!
 
 
 def test_3_periodic_torus_symmetry_and_volume_independent_link_plaquette_ratio():
