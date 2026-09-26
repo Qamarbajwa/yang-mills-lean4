@@ -218,12 +218,11 @@
 ## CURRENT BOTTLENECK
 - Tasks `YM-006` through `YM-010` are held under `SCIENTIFIC_REVIEW_HOLD`.
 - `YM-011-PLAQUETTE-EXP-R2` is `SCIENTIFICALLY_ACCEPTED`.
-- Task `YM-GOV-ADOPT-0406R3` (Universal Governance v4.0.6-r3 Project Strengthening) is currently ACTIVE.
-- `YM-011-TREE-GAUGE` is strictly `BLOCKED_PENDING_GOVERNANCE_ADOPTION_CLOSEOUT`.
+- Task `YM-GOV-ADOPT-0406R3` (Universal Governance v4.0.6-r3 Project Strengthening) is `CLOSED`.
+- Next unblocked objective: `YM-011-TREE-GAUGE` (`READY_FOR_EXECUTION`).
 
 ## NEXT ACTION
-- Complete Task `YM-GOV-ADOPT-0406R3`: Execute independent E4 governance review and distinct technical acceptance.
-- Upon closeout, unblock and resume with `YM-011-TREE-GAUGE` (Maximal Spanning-Tree Gauge Fixing).
+- Execute Task `YM-011-TREE-GAUGE`: Construct maximal spanning-tree gauge fixing, co-tree plaquette coordinates, and separate free-boundary vs. periodic-torus flat-connection strata.
 
 
 

@@ -1,16 +1,15 @@
 # NEXT ACTION
 
 ## Current primary action
-`YM-GOV-ADOPT-0406R3 IN_PROGRESS (ACTIVE); YM-011-TREE-GAUGE BLOCKED_PENDING_GOVERNANCE_ADOPTION_CLOSEOUT; YM-011 PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION`
+`YM-GOV-ADOPT-0406R3 CLOSED; YM-011-TREE-GAUGE READY_FOR_EXECUTION; YM-011 PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION`
 
 ## Scope
-- `YM-GOV-ADOPT-0406R3` (Evaluate and Bind Universal Governance v4.0.6-r3 Controls to Yang–Mills) is currently ACTIVE.
-  - Universal baseline remains `UNIVERSAL_GOVERNANCE_MINIMAL_v4.0.4`.
-  - v4.0.6-r3 controls adopted as project-specific strengthening; universal promotion is NOT authorized.
-  - Review findings F1–F5 resolved via `governance/PROJECT_BOUND_READINESS_RULE.yaml` (12-gate hard inventory).
-  - Adopted 11 controls: stable architecture, characterize before rewrite, candidate-bound evidence, cross-agent handoff integrity, AI nondeterminism, resource bounding, prompt injection boundary, secret handling, observability, regression memory, intent fidelity.
-  - 18 adoption tests implemented in `tests/test_governance_v406r3_adoption.py`.
-- `YM-011-TREE-GAUGE` is strictly `BLOCKED_PENDING_GOVERNANCE_ADOPTION_CLOSEOUT`.
+- `YM-GOV-ADOPT-0406R3` (Evaluate and Bind Universal Governance v4.0.6-r3 Controls to Yang–Mills) is completed, independently reviewed with `INTEGRITY_PASS`, and technically accepted: `CLOSED`.
+  - Canonical universal baseline is maintained as `UNIVERSAL_GOVERNANCE_MINIMAL_v4.0.4`.
+  - Adopted 11 controls derived from v4.0.6-r3 as project-specific strengthening without universal promotion.
+  - Review findings F1–F5 fully resolved via `governance/PROJECT_BOUND_READINESS_RULE.yaml` (12-gate hard inventory).
+  - 18 adoption tests passing deterministically in `tests/test_governance_v406r3_adoption.py`.
+- Next unblocked authorized scientific task: `YM-011-TREE-GAUGE` (`Maximal Spanning-Tree Gauge Fixing and Co-Tree Plaquette Coordinate Map`).
 - `YM-006` through `YM-010` remain in `SCIENTIFIC_REVIEW_HOLD`.
 - `YM-011` remains `PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION`.
 
@@ -26,8 +25,8 @@
 - `YM-011-PRE — Fixed-Lattice Gradient-Flow Precursor (YM-011-PRE-R1)`: `SCIENTIFICALLY_ACCEPTED`
 - `YM-011-OBS-MAP — Two-Lattice Observable-Transfer Construction`: `SCIENTIFICALLY_ACCEPTED`
 - `YM-011-PLAQUETTE-EXP — Plaquette Expectation Bound (YM-011-PLAQUETTE-EXP-R2)`: `SCIENTIFICALLY_ACCEPTED`
-- `YM-GOV-ADOPT-0406R3 — Universal Governance v4.0.6-r3 Strengthening`: `IN_PROGRESS (ACTIVE)`
-- `YM-011-TREE-GAUGE — Maximal Spanning-Tree Gauge Fixing`: `BLOCKED_PENDING_GOVERNANCE_ADOPTION_CLOSEOUT`
+- `YM-GOV-ADOPT-0406R3 — Universal Governance v4.0.6-r3 Strengthening`: `CLOSED / ACCEPTED`
+- `YM-011-TREE-GAUGE — Maximal Spanning-Tree Gauge Fixing & Co-Tree Plaquette Map`: `READY_FOR_EXECUTION`
 - `YM-011 — First Load-Bearing Bridge Lemma`: `PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION`
 
 ## Completed actions

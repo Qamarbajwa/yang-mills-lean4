@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 19
+revision: 20
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,10 +9,10 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "dacb35ceb3fed4049a5ae572babb8de37bc4b2ac"
+  head: "444a4c379ccda56a426d4c832afcb08e6f6dc55d"
   scientific_candidate_sha: "9ed117fe58a39540134fb2fb2bac3691d747b884"
-  review_bound_sha: "9ed117fe58a39540134fb2fb2bac3691d747b884"
-  evidence_closeout_head: "dacb35ceb3fed4049a5ae572babb8de37bc4b2ac"
+  review_bound_sha: "444a4c379ccda56a426d4c832afcb08e6f6dc55d"
+  evidence_closeout_head: "444a4c379ccda56a426d4c832afcb08e6f6dc55d"
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -31,12 +31,12 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 19
-  last_updated_at: "2026-09-26T02:20:00Z"
-  active_contract: "YM-GOV-ADOPT-0406R3"
-  frozen_candidate: "dacb35ceb3fed4049a5ae572babb8de37bc4b2ac"
+  last_expected_revision: 20
+  last_updated_at: "2026-09-26T02:27:00Z"
+  active_contract: "YM-011-TREE-GAUGE"
+  frozen_candidate: "444a4c379ccda56a426d4c832afcb08e6f6dc55d"
 
-current_objective: YM-GOV-ADOPT-0406R3
+current_objective: YM-011-TREE-GAUGE
 
 objectives:
   - id: YM-GOV-ADOPT-0406R3
@@ -47,7 +47,7 @@ objectives:
     writer: "primary-worker (Luna)"
     reviewer_path: "fresh-blind-research-subagent-IND1"
     acceptor: "distinct-technical-acceptor"
-    status: IN_PROGRESS
+    status: CLOSED
 
   - id: YM-GOV-403
     scope_in: "Governance migration from v3.0.0 to v4.0.3"
@@ -177,7 +177,7 @@ objectives:
     writer: "primary-worker"
     reviewer_path: "fresh-blind-research-subagent"
     acceptor: "autonomous-scientific-review"
-    status: BLOCKED_PENDING_GOVERNANCE_ADOPTION_CLOSEOUT
+    status: READY_FOR_EXECUTION
 
   - id: YM-011
     scope_in: "First load-bearing bridge lemma (UV scale-transfer & observables mollification)"
@@ -212,8 +212,8 @@ capabilities:
     status: ACCEPTED_BOUNDED
     evidence_refs: ["verification/YM-011-PLAQUETTE-EXP-R2_INDEPENDENT_REVIEW.md"]
   CAP-008-governance-strengthening:
-    status: IN_PROGRESS
-    evidence_refs: ["tests/test_governance_v406r3_adoption.py"]
+    status: ACCEPTED_BOUNDED
+    evidence_refs: ["verification/YM-GOV-ADOPT-0406R3_TECHNICAL_ACCEPTANCE.md"]
 
 external_systems: {}
 
@@ -238,7 +238,7 @@ hard_gates:
     description: "Closed-world scientific tree hash verified as 18c319312f7afcd3fc4e93afa898de78b5c88500c4eee1fa04bdd08b2c08b77d."
   state_revision_freshness:
     status: PASS
-    description: "State revision is monotonically incremented to 19."
+    description: "State revision is monotonically incremented to 20."
   no_unresolved_mandatory_blocker:
     status: PASS
     description: "Zero mandatory blockers exist."
@@ -262,6 +262,8 @@ evidence_refs:
     role: "12-gate hard inventory and readiness rule"
   - ref: "tests/test_governance_v406r3_adoption.py"
     role: "18 migration/adoption tests"
+  - ref: "verification/YM-GOV-ADOPT-0406R3_TECHNICAL_ACCEPTANCE.md"
+    role: "Formal technical acceptance receipt"
 
 negative_history_refs:
   - ref: "NEGATIVE_EVIDENCE_REGISTER.md"
@@ -300,9 +302,9 @@ release:
     adapter: "NONE_BY_DESIGN / NOT_APPLICABLE"
 
 last_verified_checkpoint:
-  sha: "dacb35ceb3fed4049a5ae572babb8de37bc4b2ac"
-  timestamp: "2026-09-26T01:36:00Z"
-  test_result: "318 passed"
+  sha: "444a4c379ccda56a426d4c832afcb08e6f6dc55d"
+  timestamp: "2026-09-26T02:27:00Z"
+  test_result: "336 passed"
 
 overhead:
   routine_target_fraction: 0.10
@@ -311,5 +313,5 @@ overhead:
     - "YM-GOV-ADOPT-0406R3 is an active governance strengthening task"
 
 views:
-  last_validated_revision: 19
+  last_validated_revision: 20
   evidence_refs: []
