@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 20
+revision: 21
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -31,8 +31,8 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 20
-  last_updated_at: "2026-09-26T02:27:00Z"
+  last_expected_revision: 21
+  last_updated_at: "2026-09-26T22:27:00Z"
   active_contract: "YM-011-TREE-GAUGE"
   frozen_candidate: "444a4c379ccda56a426d4c832afcb08e6f6dc55d"
 
@@ -44,9 +44,9 @@ objectives:
     scope_out: "Scientific task execution; universal promotion to v4.0.6-r3"
     dependencies: ["YM-011-PLAQUETTE-EXP-R2"]
     risk: R3
-    writer: "primary-worker (Luna)"
-    reviewer_path: "fresh-blind-research-subagent-IND1"
-    acceptor: "distinct-technical-acceptor"
+    writer: "primary-worker (Luna: 00ffe8a3-c73a-4096-b0e7-53138b34c21a)"
+    reviewer_path: "fresh-blind-research-subagent-IND1 (d51e9749-4152-4a3e-82a4-d690a8f372a0)"
+    acceptor: "5ec2d4e3-37e5-4fac-b34c-dfb96abf0002 (distinct-technical-acceptor)"
     status: CLOSED
 
   - id: YM-GOV-403
