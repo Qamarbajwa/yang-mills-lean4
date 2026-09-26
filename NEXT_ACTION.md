@@ -1,17 +1,16 @@
 # NEXT ACTION
 
 ## Current primary action
-`YM-011-PLAQUETTE-EXP-R2 SCIENTIFICALLY_ACCEPTED; YM-011-TREE-GAUGE READY_FOR_EXECUTION; YM-011 PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION`
+`YM-GOV-ADOPT-0406R3 IN_PROGRESS (ACTIVE); YM-011-TREE-GAUGE BLOCKED_PENDING_GOVERNANCE_ADOPTION_CLOSEOUT; YM-011 PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION`
 
 ## Scope
-- `YM-011-PLAQUETTE-EXP-R2` (Group-Specific Plaquette-Energy Range, Proof of Odd-$N$ Minimizer, and Expectation-Positivity Audit) completed and independently reviewed: `SCIENTIFICALLY_ACCEPTED`.
-  - Group-specific ranges proved and enforced: $h_{\max} = 2.0$ (even $N$), $h_{\max} = 1 + \cos(\pi/N) < 2.0$ (odd $N$, $1.5$ for $SU(3)$).
-  - Variational proof of odd-$N$ minimizer via coordinate shift around $\pi$ and Jensen concavity.
-  - Three distinct ranges: `CONFIGURATION_RANGE(N)`, `EXPECTATION_RANGE(N)` (convexity of expectation; $e_{\mathrm{plaq}} = 2.0$ impossible for $SU(3)$), `UNIVERSAL_ALL_N_RANGE = [0, 2]`.
-  - Lie-Laplacian positivity derived from first principles ($\sum_{p \ni \ell}\langle \operatorname{Re}\operatorname{Tr} U_p \rangle \ge 0$), classified, and decoupled from $T1, T2, L1$.
-  - Invariant expectation reduction $T1$, thermodynamic derivative $T2$, and volume-uniform $O(\ln\beta/\beta)$ bound $L1$ verified.
-  - Registered `NEG-YM-011-PLAQ-1`, `NEG-YM-011-PLAQ-2`, `NEG-YM-011-PLAQ-3`.
-- Next unblocked authorized task: `YM-011-TREE-GAUGE` (`Maximal Spanning-Tree Gauge Fixing and Co-Tree Plaquette Coordinate Map`).
+- `YM-GOV-ADOPT-0406R3` (Evaluate and Bind Universal Governance v4.0.6-r3 Controls to Yang–Mills) is currently ACTIVE.
+  - Universal baseline remains `UNIVERSAL_GOVERNANCE_MINIMAL_v4.0.4`.
+  - v4.0.6-r3 controls adopted as project-specific strengthening; universal promotion is NOT authorized.
+  - Review findings F1–F5 resolved via `governance/PROJECT_BOUND_READINESS_RULE.yaml` (12-gate hard inventory).
+  - Adopted 11 controls: stable architecture, characterize before rewrite, candidate-bound evidence, cross-agent handoff integrity, AI nondeterminism, resource bounding, prompt injection boundary, secret handling, observability, regression memory, intent fidelity.
+  - 18 adoption tests implemented in `tests/test_governance_v406r3_adoption.py`.
+- `YM-011-TREE-GAUGE` is strictly `BLOCKED_PENDING_GOVERNANCE_ADOPTION_CLOSEOUT`.
 - `YM-006` through `YM-010` remain in `SCIENTIFIC_REVIEW_HOLD`.
 - `YM-011` remains `PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION`.
 
@@ -22,12 +21,13 @@
 - `YM-008 — Synthesis and Formulation of Hybrid Attack Strategy`: `SCIENTIFIC_REVIEW_HOLD`
 - `YM-009 — Execution of Hybrid Attack Strategy and Quantitative Closure`: `SCIENTIFIC_REVIEW_HOLD / NOT_ESTABLISHED`
 - `YM-010 — Global Research Monograph, Axiomatic Verification, and Clay Synthesis`: `SCIENTIFIC_REVIEW_HOLD / NOT_ESTABLISHED`
-- `YM-GOV-011 — Emergency Scientific Integrity Audit`: `CLOSED / AUDIT_ACCEPTED`
-- `YM-GOV-012 — Scientific Recovery and Proof-Dependency Repair`: `COMPLETED`
-- `YM-011-PRE — Fixed-Lattice Gradient-Flow Loop Perturbation Precursor (YM-011-PRE-R1)`: `SCIENTIFICALLY_ACCEPTED`
+- `YM-GOV-014 — Autonomous scientific repair and acceptance correction`: `COMPLETED`
+- `YM-GOV-015 — Mathematical and candidate-binding closeout`: `COMPLETED`
+- `YM-011-PRE — Fixed-Lattice Gradient-Flow Precursor (YM-011-PRE-R1)`: `SCIENTIFICALLY_ACCEPTED`
 - `YM-011-OBS-MAP — Two-Lattice Observable-Transfer Construction`: `SCIENTIFICALLY_ACCEPTED`
 - `YM-011-PLAQUETTE-EXP — Plaquette Expectation Bound (YM-011-PLAQUETTE-EXP-R2)`: `SCIENTIFICALLY_ACCEPTED`
-- `YM-011-TREE-GAUGE — Maximal Spanning-Tree Gauge Fixing & Co-Tree Plaquette Map`: `READY_FOR_EXECUTION`
+- `YM-GOV-ADOPT-0406R3 — Universal Governance v4.0.6-r3 Strengthening`: `IN_PROGRESS (ACTIVE)`
+- `YM-011-TREE-GAUGE — Maximal Spanning-Tree Gauge Fixing`: `BLOCKED_PENDING_GOVERNANCE_ADOPTION_CLOSEOUT`
 - `YM-011 — First Load-Bearing Bridge Lemma`: `PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION`
 
 ## Completed actions

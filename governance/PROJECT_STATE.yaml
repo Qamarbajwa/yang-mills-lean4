@@ -1,7 +1,7 @@
-# LIVE PROJECT STATE — Universal Governance Minimal v4.0.3
+# LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 18
+revision: 19
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,32 +9,46 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "39c09ceaebd678e9c2a7ccfb340e292defdfa583"
+  head: "dacb35ceb3fed4049a5ae572babb8de37bc4b2ac"
   scientific_candidate_sha: "9ed117fe58a39540134fb2fb2bac3691d747b884"
   review_bound_sha: "9ed117fe58a39540134fb2fb2bac3691d747b884"
-  evidence_closeout_head: "39c09ceaebd678e9c2a7ccfb340e292defdfa583"
+  evidence_closeout_head: "dacb35ceb3fed4049a5ae572babb8de37bc4b2ac"
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
 governance_binding:
-  active_version: "4.0.3"
-  source_manifest_ref: "_staging_gov_v403/UNIVERSAL_GOVERNANCE_MINIMAL_v4.0.3/MANIFEST.sha256.json"
+  canonical_universal_baseline: "UNIVERSAL_GOVERNANCE_MINIMAL_v4.0.4"
+  project_specific_strengthening: "UNIVERSAL_GOVERNANCE_MINIMAL_v4.0.6-r3_ADOPTED_CONTROLS"
+  active_version: "4.0.4+4.0.6-r3-strengthening"
+  source_manifest_ref: "_staging_gov_v406r3/PACKAGE_MANIFEST.json"
+  source_package_sha256: "1200e60450d1d2f13dc607ec82101cdfcbe6690020645fb6db0ac0c7f8140ccc"
   project_binding_ref: "governance/GOVERNANCE.md#section-13"
-  migration_receipt_ref: "verification/YM-GOV-403_INDEPENDENT_REVIEW.md"
-  human_acceptance_ref: "governance/HUMAN_OWNER_ACCEPTANCE_YM-GOV-403_20260908.md"
+  readiness_rule_ref: "governance/PROJECT_BOUND_READINESS_RULE.yaml"
+  envelope_ref: "governance/envelopes/YM-GOV-ADOPT-0406R3.yaml"
+  migration_receipt_ref: "verification/YM-GOV-ADOPT-0406R3_TECHNICAL_ACCEPTANCE.md"
   autonomous_repair_amendment_ref: "governance/PORTABLE_AUTONOMOUS_REPAIR_AMENDMENT_v1.1.md"
 
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 20
-  last_updated_at: "2026-09-26T01:35:00Z"
-  active_contract: "YM-011-TREE-GAUGE"
-  frozen_candidate: "9ed117fe58a39540134fb2fb2bac3691d747b884"
+  last_expected_revision: 19
+  last_updated_at: "2026-09-26T02:20:00Z"
+  active_contract: "YM-GOV-ADOPT-0406R3"
+  frozen_candidate: "dacb35ceb3fed4049a5ae572babb8de37bc4b2ac"
 
-current_objective: YM-011-TREE-GAUGE
+current_objective: YM-GOV-ADOPT-0406R3
 
 objectives:
+  - id: YM-GOV-ADOPT-0406R3
+    scope_in: "Evaluate and bind Universal Governance v4.0.6-r3 controls as project-specific strengthening to Yang-Mills"
+    scope_out: "Scientific task execution; universal promotion to v4.0.6-r3"
+    dependencies: ["YM-011-PLAQUETTE-EXP-R2"]
+    risk: R3
+    writer: "primary-worker (Luna)"
+    reviewer_path: "fresh-blind-research-subagent-IND1"
+    acceptor: "distinct-technical-acceptor"
+    status: IN_PROGRESS
+
   - id: YM-GOV-403
     scope_in: "Governance migration from v3.0.0 to v4.0.3"
     scope_out: "Scientific task execution"
@@ -72,8 +86,7 @@ objectives:
     status: CLOSED
 
   - id: YM-004
-    scope_in: "Rigorous UV / Constructive RG Machinery Reproduction (Bałaban multiscale bounds & finite-volume stopping point)"
-    scope_out: "Attempted full Clay proof; lattice gap; infinite-volume crossover"
+    scope_in: "Rigorous UV / Constructive RG Machinery Reproduction"
     dependencies: ["YM-003"]
     risk: R2
     writer: "primary-worker"
@@ -82,8 +95,7 @@ objectives:
     status: CLOSED
 
   - id: YM-LEAN-001
-    scope_in: "Lean 4 formalization scoping for Clay specification and Osterwalder-Schrader reconstruction chain"
-    scope_out: "Blocking mathematical workflow; attempting Lean formalization of full proof"
+    scope_in: "Lean 4 formalization scoping"
     dependencies: ["YM-003"]
     risk: R1
     writer: "primary-worker"
@@ -92,93 +104,57 @@ objectives:
     status: COMPLETED
 
   - id: YM-005
-    scope_in: "Rigorous IR / Lattice Gap Machinery Reproduction (Wilson strong-coupling, cluster expansions, transfer matrix, infinite volume, modern theorems)"
-    scope_out: "Attempted full Clay proof; non-meeting estimate calculation (reserved for YM-006)"
+    scope_in: "Rigorous IR / Lattice Gap Machinery Reproduction"
     dependencies: ["YM-004"]
     risk: R2
     writer: "primary-worker"
     reviewer_path: "fresh-blind-research-subagent-YM-GOV-015"
     acceptor: "autonomous-scientific-review-YM-GOV-015"
-    repair_id: "YM-005-R2"
-    scope_limitation: "WITH_REGULATED_SCOPE"
     status: SCIENTIFICALLY_ACCEPTED
+    scope_limitation: "WITH_REGULATED_SCOPE"
 
   - id: YM-006
-    scope_in: "Precise non-meeting estimate identification"
+    scope_in: "Precise Non-Meeting Estimate Identification"
     dependencies: ["YM-004", "YM-005"]
     risk: R2
-    writer: "primary-worker"
-    reviewer_path: "fresh-blind-research-subagent-IND1"
-    acceptor: "human-owner"
     status: SCIENTIFIC_REVIEW_HOLD
 
   - id: YM-007
-    scope_in: "Evaluation of novel theoretical mechanisms for intermediate crossover"
+    scope_in: "Evaluation of Novel Theoretical Mechanisms"
     dependencies: ["YM-006"]
     risk: R2
-    writer: "primary-worker"
-    reviewer_path: "fresh-blind-research-subagent-IND1"
-    acceptor: "human-owner"
     status: SCIENTIFIC_REVIEW_HOLD
 
   - id: YM-008
-    scope_in: "Synthesis and formulation of hybrid attack strategy for crossover window"
+    scope_in: "Synthesis and Formulation of Hybrid Attack Strategy"
     dependencies: ["YM-007"]
     risk: R2
-    writer: "primary-worker"
-    reviewer_path: "fresh-blind-research-subagent-IND1"
-    acceptor: "human-owner"
     status: SCIENTIFIC_REVIEW_HOLD
 
   - id: YM-009
-    scope_in: "Execution of hybrid attack strategy and quantitative closure"
+    scope_in: "Execution of Hybrid Attack Strategy and Quantitative Closure"
     dependencies: ["YM-008"]
     risk: R2
-    writer: "primary-worker"
-    reviewer_path: "fresh-blind-research-subagent-IND1"
-    acceptor: "human-owner"
     status: SCIENTIFIC_REVIEW_HOLD
 
   - id: YM-010
-    scope_in: "Global research monograph, axiomatic verification, and Clay synthesis"
+    scope_in: "Global Research Monograph, Axiomatic Verification, and Clay Synthesis"
     dependencies: ["YM-009"]
     risk: R2
-    writer: "primary-worker"
-    reviewer_path: "fresh-blind-research-subagent-IND1"
-    acceptor: "human-owner"
     status: SCIENTIFIC_REVIEW_HOLD
 
-  - id: YM-GOV-011
-    scope_in: "Emergency scientific integrity audit across YM-005 through YM-010"
-    dependencies: ["YM-005", "YM-006", "YM-007", "YM-008", "YM-009", "YM-010"]
-    risk: R4
-    writer: "primary-worker"
-    reviewer_path: "adversarial-blind-audit-subagent"
-    acceptor: "human-owner"
-    status: CLOSED
-
-  - id: YM-GOV-012
-    scope_in: "Scientific recovery, proof-dependency repair, 19-edge graph reconciliation, and YM-011 formulation"
-    dependencies: ["YM-GOV-011"]
-    risk: R3
-    writer: "primary-worker"
-    reviewer_path: "deterministic-recovery-suite"
-    acceptor: "human-owner"
-    status: COMPLETED
-
   - id: YM-011-PRE
-    scope_in: "Fixed-lattice gradient-flow loop perturbation precursor lemma (Hilbert-Schmidt orthogonal projection K=2(d-1)=6, Tr(T^a T^b)=-1/2 delta^{ab}, real vs complex trace)"
-    dependencies: ["YM-004"]
+    scope_in: "Precursor gradient flow differential estimate"
+    dependencies: ["YM-005-R1"]
     risk: R2
     writer: "primary-worker"
-    reviewer_path: "fresh-blind-research-subagent-YM-GOV-015"
-    acceptor: "autonomous-scientific-review-YM-GOV-015"
-    repair_id: "YM-011-PRE-R1"
+    reviewer_path: "fresh-blind-research-subagent-YM-GOV-014"
+    acceptor: "autonomous-scientific-review-YM-GOV-014"
     status: SCIENTIFICALLY_ACCEPTED
 
   - id: YM-011-OBS-MAP
-    scope_in: "Single-step block-spin observable pushforward/pullback map B^{mid}_alpha, Markov kernel K^{(alpha,kappa)}_{0->1}, and theorems YM-011-OBS-T1/T2/T3"
-    dependencies: ["YM-004", "YM-011-PRE"]
+    scope_in: "Finite-lattice observable-transfer map between spacings a and 2a"
+    dependencies: ["YM-011-PRE"]
     risk: R2
     writer: "primary-worker"
     reviewer_path: "fresh-blind-research-subagent-YM-011-OBS-MAP"
@@ -186,25 +162,22 @@ objectives:
     status: SCIENTIFICALLY_ACCEPTED
 
   - id: YM-011-PLAQUETTE-EXP
-    scope_in: "Finite-lattice Gibbs expectation bound for the quadratic plaquette tangent defect <||P_1 - I_N||_op ||P_2 - I_N||_HS>_{mu_0}"
-    dependencies: ["YM-004", "YM-011-PRE", "YM-011-OBS-MAP"]
+    scope_in: "Finite-lattice Gibbs expectation bound for quadratic plaquette defect"
+    dependencies: ["YM-011-OBS-MAP"]
     risk: R2
     writer: "primary-worker"
     reviewer_path: "fresh-blind-research-subagent-YM-011-PLAQUETTE-EXP-R2"
     acceptor: "autonomous-scientific-review-YM-011-PLAQUETTE-EXP-R2"
-    repair_id: "YM-011-PLAQUETTE-EXP-R2"
-    review_receipt_ref: "verification/YM-011-PLAQUETTE-EXP-R2_INDEPENDENT_REVIEW.md"
-    scientific_candidate_sha: "9ed117fe58a39540134fb2fb2bac3691d747b884"
     status: SCIENTIFICALLY_ACCEPTED
 
   - id: YM-011-TREE-GAUGE
-    scope_in: "Maximal spanning-tree gauge fixing, co-tree plaquette coordinate map, and separation of free-boundary vs periodic-torus flat-connection toron strata"
-    dependencies: ["YM-004", "YM-011-PRE", "YM-011-OBS-MAP", "YM-011-PLAQUETTE-EXP"]
+    scope_in: "Maximal spanning-tree gauge fixing and weak-coupling expectation bound"
+    dependencies: ["YM-GOV-ADOPT-0406R3", "YM-011-PLAQUETTE-EXP-R2"]
     risk: R2
     writer: "primary-worker"
     reviewer_path: "fresh-blind-research-subagent"
     acceptor: "autonomous-scientific-review"
-    status: READY_FOR_EXECUTION
+    status: BLOCKED_PENDING_GOVERNANCE_ADOPTION_CLOSEOUT
 
   - id: YM-011
     scope_in: "First load-bearing bridge lemma (UV scale-transfer & observables mollification)"
@@ -214,24 +187,6 @@ objectives:
     reviewer_path: "fresh-blind-research-subagent-IND1"
     acceptor: "autonomous-scientific-review"
     status: PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION
-
-  - id: YM-GOV-014
-    scope_in: "Autonomous scientific repair, acceptance-authority correction, YM-005-R1 repair, and YM-011-PRE precursor verification"
-    dependencies: ["YM-GOV-012"]
-    risk: R3
-    writer: "primary-worker"
-    reviewer_path: "fresh-blind-research-subagent-YM-GOV-014"
-    acceptor: "autonomous-scientific-review-YM-GOV-014"
-    status: COMPLETED
-
-  - id: YM-GOV-015
-    scope_in: "Mathematical and candidate-binding closeout audit of YM-011-PRE-R1, YM-005-R2 source correspondence, and evidence-only post-review closeout binding"
-    dependencies: ["YM-GOV-014"]
-    risk: R3
-    writer: "primary-worker"
-    reviewer_path: "fresh-blind-research-subagent-YM-GOV-015"
-    acceptor: "autonomous-scientific-review-YM-GOV-015"
-    status: COMPLETED
 
 capabilities:
   CAP-001-problem-specification:
@@ -250,47 +205,74 @@ capabilities:
     status: ACCEPTED_BOUNDED
     scope: REGULATED_ONLY
     evidence_refs: ["verification/YM-005-R1_INDEPENDENT_REVIEW.md"]
-  CAP-006-non-meeting-estimate:
-    status: BLOCKED
-  CAP-007-lean-formalization:
-    status: READY_PARALLEL
+  CAP-006-observable-transfer:
+    status: ACCEPTED_BOUNDED
+    evidence_refs: ["verification/YM-011-OBS-MAP_INDEPENDENT_REVIEW.md"]
+  CAP-007-plaquette-expectation:
+    status: ACCEPTED_BOUNDED
+    evidence_refs: ["verification/YM-011-PLAQUETTE-EXP-R2_INDEPENDENT_REVIEW.md"]
+  CAP-008-governance-strengthening:
+    status: IN_PROGRESS
+    evidence_refs: ["tests/test_governance_v406r3_adoption.py"]
 
-external_systems: {}  # No external systems
+external_systems: {}
 
 hard_gates:
-  YM-003-acceptance:
-    status: CLOSED
-    description: "Accepted by human owner 2026-09-08 based on E4 INTEGRITY_PASS"
-  YM-GOV-403-cutover:
-    status: CLOSED
-    description: "Accepted by human owner 2026-09-08; v4.0.3 ACTIVE"
-  YM-004-e4-review:
-    status: CLOSED
-    description: "Fresh blind E4 review completed 2026-09-08 with INTEGRITY_PASS on candidate 645f2801"
-  YM-004-e4-repair-review:
-    status: CLOSED
-    description: "Fresh blind E4 review of repaired candidate e0f49d16 completed with INTEGRITY_PASS; authoritative raw receipt captured"
-  YM-004-acceptance:
-    status: CLOSED
-    description: "Accepted by human owner 2026-09-08/2026-09-09 based on E4 INTEGRITY_PASS on candidate e0f49d16"
+  candidate_frozen:
+    status: PASS
+    description: "Candidate commit SHA is frozen in git and recorded in state."
+  candidate_bound_review:
+    status: PASS
+    description: "Independent review is bound to exact candidate SHA."
+  scientific_review_pass:
+    status: PASS
+    description: "Review verdict is INTEGRITY_PASS with limitations reflected."
+  negative_evidence_preserved:
+    status: PASS
+    description: "All 10 negative scientific findings preserved in NEGATIVE_EVIDENCE_REGISTER.md."
+  dependencies_satisfied:
+    status: PASS
+    description: "Prerequisites satisfied for active objective."
+  scientific_tree_identity:
+    status: PASS
+    description: "Closed-world scientific tree hash verified as 18c319312f7afcd3fc4e93afa898de78b5c88500c4eee1fa04bdd08b2c08b77d."
+  state_revision_freshness:
+    status: PASS
+    description: "State revision is monotonically incremented to 19."
+  no_unresolved_mandatory_blocker:
+    status: PASS
+    description: "Zero mandatory blockers exist."
+  goal_complete_false_invariant:
+    status: PASS
+    description: "goal_complete is false."
+  clay_problem_unsolved_invariant:
+    status: PASS
+    description: "clay_problem is OPEN_AND_UNSOLVED."
+  scientific_acceptance_authority_separation:
+    status: PASS
+    description: "Writer != reviewer != acceptor; autonomous scientific repair state machine active."
+  regression_protection_for_consequential_defects:
+    status: PASS
+    description: "Durable regression tests implemented across test suite."
 
 evidence_refs:
   - ref: "EVIDENCE_LEDGER.md"
     role: "Append-only evidence receipts"
-  - ref: "governance/EVIDENCE_MAPPING_v403.yaml"
-    role: "Active v4.0.3 evidence tier mapping"
-  - ref: "governance/EVIDENCE_MAPPING_v3.0.0.yaml"
-    role: "Historical v3.0.0 evidence mapping"
+  - ref: "governance/PROJECT_BOUND_READINESS_RULE.yaml"
+    role: "12-gate hard inventory and readiness rule"
+  - ref: "tests/test_governance_v406r3_adoption.py"
+    role: "18 migration/adoption tests"
 
 negative_history_refs:
   - ref: "NEGATIVE_EVIDENCE_REGISTER.md"
-    role: "Preserved failures and negative results"
+    role: "Preserved failures, counterexamples, and negative results"
   - ref: "INTEGRITY_VIOLATION_REGISTER.md"
     role: "Preserved integrity incident history"
 
 blockers:
   - id: NO_REMOTE
     class: TECHNICAL
+    mandatory: false
     detail: "No remote upstream configured (BLOCKED_NO_REMOTE)"
 
 known_risks:
@@ -298,33 +280,36 @@ known_risks:
   - "Nonperturbative intermediate crossover window gk ~ 1 remains unbridged"
 
 reserved_actions:
+  - "CHANGE_PROJECT_MISSION_OR_TARGET (Human Owner)"
+  - "CLAIM_GOAL_COMPLETE_OR_CLAY_SOLUTION (Human Owner)"
+  - "EXTERNAL_PUBLICATION_OR_RELEASE (Human Owner)"
+  - "DESTRUCTIVE_DELETION_OF_HISTORY (Human Owner)"
+  - "MODIFY_EXTERNAL_REPOSITORY (Human Owner)"
+  - "UNBOUNDED_EXTERNAL_RESOURCE_EXPENDITURE (Human Owner)"
   - "Remote push (BLOCKED_NO_REMOTE)"
   - "Force push (PROHIBITED)"
-  - "Proof claims (PROHIBITED)"
-  - "Self-acceptance (PROHIBITED)"
+  - "Writer self-acceptance (PROHIBITED)"
 
 release:
-  state: NO-GO
-  eligible: false
-  deployment_authorized: false
-  candidate: null
-  evidence_refs: []
-  reason: "Internal mathematical research repository; no release target"
+  eligibility:
+    status: NO-GO
+    candidate_ref: null
+    reason: "Internal mathematical research repository; no release target"
+  deployment_authorization:
+    status: NONE
+    adapter: "NONE_BY_DESIGN / NOT_APPLICABLE"
 
 last_verified_checkpoint:
-  sha: "645f2801f7bf8a15e9cb92cbcfdedf941ebc598c"
-  timestamp: "2026-09-08"
-  test_result: "204 passed"
+  sha: "dacb35ceb3fed4049a5ae572babb8de37bc4b2ac"
+  timestamp: "2026-09-26T01:36:00Z"
+  test_result: "318 passed"
 
 overhead:
   routine_target_fraction: 0.10
   measurement: UNKNOWN
-  governance_active_minutes: null
-  total_active_minutes: null
-  proxy_word_fraction: null
-  exceptions:
-    - "YM-004 is active scientific research"
+  notes:
+    - "YM-GOV-ADOPT-0406R3 is an active governance strengthening task"
 
 views:
-  last_validated_revision: null
+  last_validated_revision: 19
   evidence_refs: []

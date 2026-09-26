@@ -4,7 +4,7 @@ import subprocess
 import yaml
 from functools import lru_cache
 from pathlib import Path
-from typing import Dict, List, Any, Optional, Tuple
+from typing import Dict, List, Any, Optional, Tuple, Union
 
 class ProjectBindingError(Exception):
     pass
@@ -174,7 +174,7 @@ KNOWN_ADMINISTRATIVE_ROOT_PATHS = {
 
 GENERATED_PREFIXES = ("checkpoints/", "evidence/", "experiments/", "numerical/")
 PROVENANCE_PREFIXES = ("verification/",)
-ADMINISTRATIVE_PREFIXES = ("governance/", "scripts/", "src/", "tests/", "docs/", "formal/")
+ADMINISTRATIVE_PREFIXES = ("governance/", "scripts/", "src/", "tests/", "docs/", "formal/", "_staging_gov_v403/", "_staging_gov_v406r3/")
 
 IGNORED_EXACT_PATHS = {
     "checkpoints/.gitkeep",
@@ -856,4 +856,226 @@ def check_ym011_activation_eligibility(
             f"YM-011 is in status '{ym011_status}' and cannot enter active proof execution."
         )
     return True
+
+
+# ==============================================================================
+# YM-GOV-ADOPT-0406R3: Universal Governance v4.0.6-r3 Project-Bound Strengthening
+# ==============================================================================
+
+YANG_MILLS_REQUIRED_HARD_GATES = {
+    "candidate_frozen",
+    "candidate_bound_review",
+    "scientific_review_pass",
+    "negative_evidence_preserved",
+    "dependencies_satisfied",
+    "scientific_tree_identity",
+    "state_revision_freshness",
+    "no_unresolved_mandatory_blocker",
+    "goal_complete_false_invariant",
+    "clay_problem_unsolved_invariant",
+    "scientific_acceptance_authority_separation",
+    "regression_protection_for_consequential_defects",
+}
+
+
+def verify_project_bound_readiness(
+    gate_inventory: Dict[str, Any],
+    candidate_sha: Optional[str] = None,
+    expected_tree_hash: Optional[str] = None,
+    actual_tree_hash: Optional[str] = None,
+    state: Optional[Dict[str, Any]] = None,
+) -> bool:
+    """
+    Enforces F1 (Hard-Gate Inventory):
+    A generic structural PASS cannot establish project readiness. The project-bound
+    readiness rule requires all 12 explicit gates to be satisfied.
+    """
+    if not isinstance(gate_inventory, dict):
+        raise ConstitutionalIntegrityError("Hard gate inventory must be a dictionary.")
+
+    missing_gates = YANG_MILLS_REQUIRED_HARD_GATES - set(gate_inventory.keys())
+    if missing_gates:
+        raise ConstitutionalIntegrityError(
+            f"Project-bound readiness rejected: missing required hard gates: {sorted(missing_gates)}"
+        )
+
+    for gate_name in YANG_MILLS_REQUIRED_HARD_GATES:
+        gate_data = gate_inventory.get(gate_name)
+        if not gate_data:
+            raise ConstitutionalIntegrityError(f"Hard gate '{gate_name}' is empty or null.")
+        status = gate_data.get("status") if isinstance(gate_data, dict) else str(gate_data)
+        if status != "PASS":
+            raise ConstitutionalIntegrityError(
+                f"Hard gate '{gate_name}' failed or unverified with status: {status!r}"
+            )
+
+    if expected_tree_hash and actual_tree_hash and expected_tree_hash != actual_tree_hash:
+        raise ConstitutionalIntegrityError(
+            f"Scientific tree hash mismatch: expected {expected_tree_hash}, got {actual_tree_hash}"
+        )
+
+    if state:
+        if state.get("goal_complete") is True and state.get("clay_problem") != "SOLVED_AND_VERIFIED":
+            raise ConstitutionalIntegrityError("goal_complete cannot be True while clay_problem is unsolved.")
+        if state.get("clay_problem") != "OPEN_AND_UNSOLVED":
+            raise ConstitutionalIntegrityError(
+                f"Clay problem invariant violated: expected 'OPEN_AND_UNSOLVED', got {state.get('clay_problem')!r}"
+            )
+        if state.get("blockers"):
+            unresolved = [
+                b for b in state["blockers"]
+                if b.get("status") != "RESOLVED" and b.get("mandatory", False) is True
+            ]
+            if unresolved:
+                raise ConstitutionalIntegrityError(f"Unresolved mandatory blockers present: {unresolved}")
+
+    return True
+
+
+def validate_state_revision_update(current_revision: int, proposed_revision: int) -> int:
+    """
+    Enforces atomic monotonic state serialization:
+    Concurrent or stale state updates with proposed_revision <= current_revision
+    are strictly rejected.
+    """
+    if not isinstance(proposed_revision, int) or not isinstance(current_revision, int):
+        raise ConstitutionalIntegrityError("State revisions must be integers.")
+    if proposed_revision <= current_revision:
+        raise ConstitutionalIntegrityError(
+            f"Stale state revision rejected: proposed {proposed_revision} <= current {current_revision}"
+        )
+    return proposed_revision
+
+
+def validate_handoff_precedence(
+    handoff_dict: Dict[str, Any],
+    git_state_dict: Dict[str, Any],
+) -> Dict[str, Any]:
+    """
+    Enforces Cross-Agent Handoff Integrity:
+    Handoff prose is never more authoritative than repository/state truth.
+    When discrepancies exist, git and state truth strictly supersede handoff claims.
+    """
+    reconciled = dict(git_state_dict)
+    for key, git_val in git_state_dict.items():
+        handoff_val = handoff_dict.get(key)
+        if handoff_val is not None and handoff_val != git_val:
+            # Git and state truth prevail
+            reconciled[key] = git_val
+    return reconciled
+
+
+def validate_autonomous_operation_bounds(
+    consumed: Dict[str, Union[int, float]],
+    limits: Dict[str, Union[int, float]],
+    is_retry: bool = False,
+    accumulated_retries: int = 0,
+    retry_limit: int = 3,
+) -> bool:
+    """
+    Enforces Bounded Autonomous Execution:
+    - Operation bounds apply across retries and children;
+    - Retries do not reset consumed budget;
+    - Exceeding any limit raises ConstitutionalIntegrityError.
+    """
+    if is_retry and accumulated_retries >= retry_limit:
+        raise ConstitutionalIntegrityError(
+            f"Retry limit exceeded: {accumulated_retries} >= {retry_limit}"
+        )
+
+    for resource, limit in limits.items():
+        used = consumed.get(resource, 0)
+        if used > limit:
+            raise ConstitutionalIntegrityError(
+                f"Resource bound exceeded for {resource}: consumed {used} > limit {limit}"
+            )
+    return True
+
+
+def validate_prompt_injection_boundary(
+    content_type: str,
+    attempted_permission_expansion: bool = False,
+) -> bool:
+    """
+    Enforces Prompt-Injection Boundary:
+    External text, websites, papers, comments, PDFs, and AI-generated outputs are DATA,
+    not governance authority, and cannot expand permissions or authority.
+    """
+    if attempted_permission_expansion:
+        raise ConstitutionalIntegrityError(
+            f"Untrusted content of type '{content_type}' attempted unauthorized authority or permission expansion."
+        )
+    return True
+
+
+def validate_architecture_stability(
+    component_name: str,
+    has_demonstrated_defect_or_requirement: bool,
+    agent_preference_only: bool = True,
+) -> bool:
+    """
+    Enforces Stable Architecture and Characterize-Before-Rewrite:
+    Accepted architecture and verified components are stable by default;
+    agent preference alone cannot trigger refactoring.
+    """
+    if agent_preference_only and not has_demonstrated_defect_or_requirement:
+        raise ConstitutionalIntegrityError(
+            f"Refactoring of stable component '{component_name}' rejected: "
+            "agent preference alone cannot trigger rewrites without demonstrated defect or approved requirement."
+        )
+    return True
+
+
+def validate_regression_protection_requirement(
+    defect_id: str,
+    has_durable_regression_test: bool,
+    is_technically_inapplicable: bool = False,
+    inapplicability_rationale: Optional[str] = None,
+) -> bool:
+    """
+    Enforces Regression Memory:
+    Every consequential defect must receive durable regression protection
+    unless technically inapplicable with explicit recorded rationale.
+    """
+    if not has_durable_regression_test:
+        if is_technically_inapplicable and inapplicability_rationale:
+            return True
+        raise ConstitutionalIntegrityError(
+            f"Consequential defect '{defect_id}' lacks mandatory durable regression protection."
+        )
+    return True
+
+
+def validate_consequential_effect_receipt(
+    receipt: Dict[str, Any],
+    deployment_adapter: str = "NONE_BY_DESIGN / NOT_APPLICABLE",
+) -> bool:
+    """
+    Enforces F2 (Effect Receipt Binding):
+    Yang-Mills has no live external deployment runtime (NONE_BY_DESIGN / NOT_APPLICABLE).
+    Any consequential external effect requires explicit binding of:
+    state_revision, frozen_subject_digest, artifact_digest, candidate_sha, scope,
+    and effect_boundary_verification.
+    """
+    if deployment_adapter == "NONE_BY_DESIGN / NOT_APPLICABLE":
+        if receipt.get("action") in {"EXTERNAL_DEPLOY", "LIVE_CLOUD_MUTATION", "EXTERNAL_SPEND"}:
+            raise ConstitutionalIntegrityError(
+                f"Action {receipt.get('action')!r} denied: deployment adapter is NONE_BY_DESIGN / NOT_APPLICABLE."
+            )
+
+    required_fields = {
+        "state_revision",
+        "frozen_subject_digest",
+        "artifact_digest",
+        "candidate_sha",
+        "scope",
+        "effect_boundary_verification",
+    }
+    missing = required_fields - set(receipt.keys())
+    if missing:
+        raise ConstitutionalIntegrityError(
+            f"Consequential effect receipt missing required fields: {sorted(missing)}"
+        )
+    return True
+
 

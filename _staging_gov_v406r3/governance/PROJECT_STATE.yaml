@@ -1,0 +1,84 @@
+{
+  "schema_version": "4.0.6-r3",
+  "revision": 0,
+  "activation": "UNBOUND",
+  "project": {
+    "id": null,
+    "root": null,
+    "head": null,
+    "dirty": null
+  },
+  "governance_binding": {
+    "active_version": null,
+    "proposed_version": "4.0.6-r3",
+    "source_manifest_ref": null,
+    "project_binding_ref": null,
+    "evidence_companion_ref": null,
+    "migration_receipt_ref": null
+  },
+  "coordination": {
+    "state_writer": null,
+    "serialization_method": null,
+    "last_expected_revision": null,
+    "last_updated_at": null,
+    "active_contract": null,
+    "execution_envelope_ref": null,
+    "last_handoff_ref": null
+  },
+  "candidate_identity": {
+    "subject_ref": null,
+    "subject_digest": null,
+    "subject_scope": [],
+    "frozen_at_state_revision": null
+  },
+  "current_objective": null,
+  "objectives": [],
+  "capabilities": {},
+  "external_systems": {},
+  "hard_gates": {},
+  "evidence_refs": [],
+  "negative_history_refs": [],
+  "regression_protection_refs": [],
+  "operational_diagnostics_refs": [],
+  "blockers": [],
+  "known_risks": [],
+  "reserved_actions": [],
+  "release": {
+    "eligibility": {
+      "status": "NO-GO",
+      "candidate_ref": null,
+      "environment_ref": null,
+      "scope_ref": null,
+      "evidence_refs": [],
+      "decision_ref": null,
+      "decided_at": null,
+      "valid_until": null,
+      "freshness_ref": null,
+      "reason": "PROJECT_NOT_BOUND_OR_VERIFIED"
+    },
+    "deployment_authorization": {
+      "status": "NONE",
+      "grant_ref": null,
+      "candidate_ref": null,
+      "environment_ref": null,
+      "scope_ref": null,
+      "action": null,
+      "granted_at": null,
+      "valid_until": null,
+      "freshness_ref": null,
+      "revoked_at": null
+    },
+    "deployment_observations": []
+  },
+  "last_verified_checkpoint": null,
+  "overhead": {
+    "measurement": "UNKNOWN",
+    "last_sampled_at": null,
+    "notes": []
+  },
+  "views": {
+    "last_validated_revision": null,
+    "evidence_refs": []
+  },
+  "lifecycle_review_refs": []
+}

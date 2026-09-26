@@ -41,6 +41,7 @@
 | YM-011-PRE | Fixed-lattice gradient-flow loop perturbation precursor | YM-004 | T3 | differential loop flow estimate + independent review | SCIENTIFICALLY_ACCEPTED (YM-011-PRE-R1) |
 | YM-011-OBS-MAP | Two-lattice observable-transfer construction | YM-004, YM-011-PRE | T3 | midpoint-exponential blocking map + independent review | SCIENTIFICALLY_ACCEPTED |
 | YM-011-PLAQUETTE-EXP | Finite-lattice Gibbs expectation bound for plaquette defect | YM-004, YM-011-PRE, YM-011-OBS-MAP | T3 | expectation reduction + group range + independent review | SCIENTIFICALLY_ACCEPTED (YM-011-PLAQUETTE-EXP-R2) |
-| YM-011-TREE-GAUGE | Maximal spanning-tree gauge fixing & co-tree plaquette map | YM-004, YM-011-PRE, YM-011-OBS-MAP, YM-011-PLAQUETTE-EXP | T3 | tree gauge + toron moduli separation | READY_FOR_EXECUTION |
+| YM-GOV-ADOPT-0406R3 | Evaluate and bind Universal Governance v4.0.6-r3 controls | YM-011-PLAQUETTE-EXP | T4 | 18 adoption tests + 12-gate readiness rule + E4 review | IN_PROGRESS (ACTIVE) |
+| YM-011-TREE-GAUGE | Maximal spanning-tree gauge fixing & co-tree plaquette map | YM-GOV-ADOPT-0406R3, YM-011-PLAQUETTE-EXP | T3 | tree gauge + toron moduli separation | BLOCKED_PENDING_GOVERNANCE_ADOPTION_CLOSEOUT |
 | YM-011 | First load-bearing bridge lemma | YM-004, YM-011-PRE, YM-011-OBS-MAP, YM-011-PLAQUETTE-EXP, YM-011-TREE-GAUGE | T3 | UV scale-transfer lemma proof + counterexample testing | PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION |
 

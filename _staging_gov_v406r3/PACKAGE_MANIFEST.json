@@ -1,0 +1,20 @@
+{
+  "manifest_schema": "UGM-PACKAGE-MANIFEST-1",
+  "package": "UNIVERSAL_GOVERNANCE_MINIMAL",
+  "version": "4.0.6-r3",
+  "active_authorities": [
+    "governance/GOVERNANCE.md",
+    "governance/PROJECT_DIRECTION.md",
+    "governance/PROJECT_STATE.yaml"
+  ],
+  "files": {
+    "ADOPTION_PROMPT.md": "8cb5b99ffea371750cd677dd7cb8bfbc677e575e6547a575806a4b24ceccc981",
+    "EVIDENCE_AND_MIGRATION.md": "e7f18058854d8950c517086b7e9cba1df6ec046b6c2b06ccb85ef762c4e73df5",
+    "README.md": "5afb7bbf790ab3ccd5613154881dee742931d0ea267b96ce2e72d47bbcf92f08",
+    "governance/GOVERNANCE.md": "8f9193e3f4df88c4ed824157f838671fc60a856f12c8d87c06b6c0537d59396d",
+    "governance/PROJECT_DIRECTION.md": "824226cab73020457a940d68fd0cb30fa30abf261c7287829bd39b1540e55f8c",
+    "governance/PROJECT_STATE.yaml": "e4a6b73df74d656451bea9fd3fc42c5929136a4a8526331e0859e27cd8951961",
+    "tools/test-verify-package.mjs": "8cef66a79b1586510354dc4813ffa4176cfc4a9ab700228ffb39b2f2879aaa48",
+    "tools/verify-package.mjs": "dccff3efa13e74800860425262e19688ea95d17d240eec5581f04669fed9fc7d"
+  }
+}

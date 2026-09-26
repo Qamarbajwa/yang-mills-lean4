@@ -1,0 +1,148 @@
+task_execution_envelope:
+  schema_version: "4.0.6-r3"
+  identity:
+    task_id: "YM-GOV-ADOPT-0406R3"
+    project_id: "YANG_MILLS_MASS_GAP"
+    project_name: "Yang-Mills and the Mass Gap"
+    canonical_universal_baseline: "UNIVERSAL_GOVERNANCE_MINIMAL_v4.0.4"
+    governance_version: "4.0.6-r3-project-strengthened"
+    adoption_mode: "PROJECT_SPECIFIC_STRENGTHENING"
+  direction:
+    intent_refs: ["PROJECT_INTENT.md", "governance/PROJECT_DIRECTION.md"]
+    roadmap_objective: "YM-GOV-ADOPT-0406R3"
+    owner_non_goals:
+      - "No change to Clay problem identity"
+      - "No public release or deployment"
+      - "No UI creation (NONE_BY_DESIGN)"
+      - "No promotion of v4.0.6-r3 to canonical universal baseline"
+    owner_reserved_boundaries:
+      - "CHANGE_PROJECT_MISSION_OR_TARGET"
+      - "CLAIM_GOAL_COMPLETE_OR_CLAY_SOLUTION"
+      - "EXTERNAL_PUBLICATION_OR_RELEASE"
+      - "DESTRUCTIVE_DELETION_OF_HISTORY"
+      - "MODIFY_EXTERNAL_REPOSITORY"
+      - "UNBOUNDED_EXTERNAL_RESOURCE_EXPENDITURE"
+  objective:
+    exact_objective: >
+      Evaluate and bind Universal Governance v4.0.6-r3 controls as project-specific
+      strengthening to Yang-Mills, preserving stronger scientific governance and the
+      canonical v4.0.4 baseline.
+    rationale: >
+      Adopt 11 high-value controls (stable architecture, characterize before rewrite,
+      candidate-bound evidence, cross-agent handoff integrity, AI nondeterminism, resource
+      bounding, prompt injection boundary, secret handling, observability, regression memory,
+      intent fidelity) while resolving review findings F1-F5.
+    done_boundary: >
+      18 adoption tests passing, PROJECT_BOUND_READINESS_RULE.yaml created, GOVERNANCE.md and
+      PROJECT_DIRECTION.md updated, PROJECT_STATE.yaml incremented, candidate frozen,
+      independent review completed, distinct technical acceptance recorded.
+  base_state:
+    repository_or_workspace: "D:\\Comfy UI\\yang mills and the mass gap"
+    branch_or_state_channel: "master"
+    base_head: "dacb35ceb3fed4049a5ae572babb8de37bc4b2ac"
+    pre_adoption_state_revision: 18
+    scientific_candidate_sha: "9ed117fe58a39540134fb2fb2bac3691d747b884"
+    evidence_closeout_head: "dacb35ceb3fed4049a5ae572babb8de37bc4b2ac"
+    scientific_tree_hash: "18c319312f7afcd3fc4e93afa898de78b5c88500c4eee1fa04bdd08b2c08b77d"
+    preserved_unrelated_work:
+      - "All mathematical theorems, proofs, and literature artifacts"
+      - "All 10 negative scientific findings and counterexamples"
+      - "Failure-driven autonomous repair state machine"
+  eligibility:
+    dependencies:
+      - id: "v4.0.6-r3 candidate package"
+        state: "VERIFIED"
+        evidence_ref: "tools/verify-package.mjs (PASS) + tools/test-verify-package.mjs (114 pass, 0 fail)"
+      - id: "YM-011-PLAQUETTE-EXP-R2"
+        state: "SCIENTIFICALLY_ACCEPTED"
+        evidence_ref: "verification/YM-011-PLAQUETTE-EXP-R2_INDEPENDENT_REVIEW.md"
+    technical_inputs_available: true
+    traceable_to_intent: true
+    architecture_permits: true
+    inside_standing_mandate: true
+    candidate_state_known: true
+    risk_inside_ceiling: true
+    blocking_invariant_present: false
+    reserved_authority_required_for_technical_mutation: false
+    eligible: true
+    blocker_class: null
+    blocker_detail: null
+  classification:
+    risk_tier: "R3"
+    action_class: "B"
+    risk_reasons:
+      - "Updates active operational governance controls"
+      - "Touches constitutional role separation and readiness gates"
+      - "Requires independent E4 review before technical acceptance"
+    active_modules:
+      - "CORE-PROJECT-BINDING"
+      - "CORE-AUTHORITY"
+      - "CORE-RISK"
+      - "CORE-DEPENDENCY"
+      - "CORE-EVIDENCE"
+      - "CORE-TEST-INTEGRITY"
+      - "CORE-GIT-STATE"
+      - "GOVERNANCE-STRENGTHENING"
+      - "AI-AUTONOMY"
+      - "RESEARCH-SCIENTIFIC"
+      - "ARTIFACT-DATA"
+    not_activated_material_modules:
+      - module: "FINANCIAL"
+        reason: "No financial scope"
+      - module: "DEPLOYMENT"
+        reason: "NONE_BY_DESIGN / NOT_APPLICABLE (internal mathematical research repository)"
+      - module: "UI-PRESENTATION"
+        reason: "NONE_BY_DESIGN (internal mathematical research repository)"
+  roles_and_authority:
+    orchestrator: "primary-worker"
+    writer:
+      id: "primary-worker (Luna)"
+      qualified: true
+      risk_ceiling: "R3"
+    reviewer_or_verifier:
+      id: "fresh-blind-research-subagent-IND1"
+      qualified: true
+      expected_independence: "IND1"
+    acceptance_authority:
+      id: "distinct-technical-acceptor"
+      qualified: true
+      authority_type: "TECHNICAL_ACCEPTOR"
+    implementation_authority: "AUTONOMOUS_WITHIN_ENVELOPE"
+    verification_authority: "EVIDENCE_BASED"
+    release_eligibility_authority: "NOT_APPLICABLE"
+    reserved_external_authority:
+      required: false
+      type: "NONE"
+      trigger: null
+  mutation_scope:
+    allowed:
+      - "governance/PROJECT_BOUND_READINESS_RULE.yaml"
+      - "governance/GOVERNANCE.md"
+      - "governance/PROJECT_DIRECTION.md"
+      - "governance/PROJECT_STATE.yaml"
+      - "governance/envelopes/YM-GOV-ADOPT-0406R3.yaml"
+      - "src/ymmg/ros.py"
+      - "tests/test_governance_v406r3_adoption.py"
+      - "TASK_GRAPH.md"
+      - "CURRENT_SCIENTIFIC_STATE.md"
+      - "NEXT_ACTION.md"
+      - "verification/YM-GOV-ADOPT-0406R3_*.md"
+      - "verification/raw/YM-GOV-ADOPT-0406R3_*.md"
+    prohibited:
+      - "literature/* (mathematical artifacts sealed)"
+      - "src/ymmg/observable_transfer.py (sealed)"
+      - "src/ymmg/plaquette_expectation.py (sealed)"
+      - "src/ymmg/precursor_flow.py (sealed)"
+      - "NEGATIVE_EVIDENCE_REGISTER.md (sealed, append-only)"
+      - "THEOREM_LEDGER.md (sealed, append-only)"
+  invariants:
+    - id: "INV-YM-GOV-01"
+      statement: "CANONICAL_UNIVERSAL_BASELINE = UNIVERSAL_GOVERNANCE_MINIMAL_v4.0.4; v4.0.6-r3 is NOT promoted to canonical."
+    - id: "INV-YM-GOV-02"
+      statement: "YM-011-TREE-GAUGE is BLOCKED_PENDING_GOVERNANCE_ADOPTION_CLOSEOUT."
+    - id: "INV-YM-GOV-03"
+      statement: "GOAL_COMPLETE = FALSE and CLAY_PROBLEM = OPEN_AND_UNSOLVED."
+    - id: "INV-YM-GOV-04"
+      statement: "SCIENTIFIC_TREE_HASH remains exactly 18c319312f7afcd3fc4e93afa898de78b5c88500c4eee1fa04bdd08b2c08b77d."
+    - id: "INV-YM-GOV-05"
+      statement: "Autonomous scientific repair state machine without routine owner gates is preserved."
