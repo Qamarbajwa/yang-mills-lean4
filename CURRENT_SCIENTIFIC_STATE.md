@@ -209,20 +209,24 @@
   - Documented toron singular strata obstruction `NEG-YM-011-PLAQ-1`, range defect `NEG-YM-011-PLAQ-2`, and admissibility audit `NEG-YM-011-PLAQ-3`.
   - Status: `SCIENTIFICALLY_ACCEPTED`.
 
+- **Task `YM-011-TREE-GAUGE` & `YM-011-TREE-GAUGE-R1` (Maximal-Tree Gauge Fixing, Zero-Mode Separation, and Baseline-Provenance Reconciliation) Completed & Scientifically Accepted:**
+  - Proved comb maximal spanning-tree gauge fixing (`YM-011-TREE-T1`), exact cycle rank and cochain rank identity $\operatorname{rank}(d_1) = |E_+| - |V| + 1 - b_1 = |E_{\mathrm{co-tree}}| - b_1$ and $N_{\mathrm{constraints}}^{\mathrm{cochain}} = |P_+| - |E_{\mathrm{co-tree}}| + b_1$ (`YM-011-TREE-T2`, `LINEARIZED_COCHAIN_RANK_COUNT` vs. `NON_ABELIAN_GLOBAL_CONSTRAINT_VARIETY`), free-boundary strict Hessian positive-definiteness and fixed-volume $O_L(1/\beta)$ equipartition via direct Laplace ratio expansion (`YM-011-TREE-T3`), and periodic-torus flat toron moduli $\mathcal{M}_{\mathrm{flat}}(\Lambda_{\mathrm{per}}, SU(N)) \cong (T_{\mathrm{max}})^d / S_N$ with stabilizer jumps and $(d-1)N(N-1)$ quartic commutator zero modes (`YM-011-TREE-T4`).
+  - Reconciled the `88cc4f93282b09a71ce169352e057ba6e1b643a6` chat-prose suffix typo (`OBJECT_1_EXISTS = FALSE`) with the true Git governance closeout commit `88cc4f9de1b96204e30743c4679131871732bbc7` (`OBJECT_2_EXISTS = TRUE`), and added fail-closed baseline SHA drift protection (`verify_baseline_lineage_transition`).
+  - Status: `SCIENTIFICALLY_ACCEPTED`.
+
 ## UNVERIFIED
 - No original Yang–Mills lemma has been certified by an external peer-reviewed journal.
 - The Clay Millennium Problem #4 status remains strictly `OPEN_AND_UNSOLVED` (`GOAL_COMPLETE = FALSE`).
 - Proof claims for complete bridge closure (`YM-010`) and mass gap (`YM-009`) are `NOT_ESTABLISHED`.
-- Pure $O(1/\beta)$ weak-coupling expectation bound without $\ln\beta$ on periodic torus is `NOT_ESTABLISHED` (`NEG-YM-011-PLAQ-1`).
+- Pure $O(1/\beta)$ weak-coupling expectation bound without $\ln\beta$ on the periodic torus or volume-uniformly in $d \ge 3$ is `NOT_ESTABLISHED` (`NEG-YM-011-PLAQ-1`, `NEG-YM-011-TREE-1`).
 
 ## CURRENT BOTTLENECK
 - Tasks `YM-006` through `YM-010` are held under `SCIENTIFIC_REVIEW_HOLD`.
-- `YM-011-PLAQUETTE-EXP-R2` is `SCIENTIFICALLY_ACCEPTED`.
-- Task `YM-GOV-ADOPT-0406R3` (Universal Governance v4.0.6-r3 Project Strengthening) is `CLOSED`.
-- Next unblocked objective: `YM-011-TREE-GAUGE` (`READY_FOR_EXECUTION`).
+- `YM-011-TREE-GAUGE` and `YM-011-TREE-GAUGE-R1` are `SCIENTIFICALLY_ACCEPTED`.
+- Next unblocked objective: `YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB` (`READY_FOR_EXECUTION`).
 
 ## NEXT ACTION
-- Execute Task `YM-011-TREE-GAUGE`: Construct maximal spanning-tree gauge fixing, co-tree plaquette coordinates, and separate free-boundary vs. periodic-torus flat-connection strata.
+- Execute Task `YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB`: Analyze periodic toron quartic commutator zero modes and Brascamp–Lieb / non-Gaussian covariance bounds in $d \ge 3$.
 
 
 

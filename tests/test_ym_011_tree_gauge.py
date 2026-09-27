@@ -428,3 +428,14 @@ def test_10_baseline_lineage_transition_and_sha_drift_guardrail():
             transition_class="SEMANTIC_REVIEW_REQUIRED",
             repo_root=ROOT,
         )
+
+    # 8. Extract and validate EVERY 40-character hex SHA in the provenance reconciliation record
+    import re
+    rec_path = ROOT / "verification" / "YM-011-TREE-GAUGE-R1_PROVENANCE_RECONCILIATION.md"
+    rec_text = rec_path.read_text(encoding="utf-8")
+    all_40_hex = set(re.findall(r"(?<![0-9a-f])[0-9a-f]{40}(?![0-9a-f])", rec_text))
+    assert typo_prose_sha in all_40_hex
+    valid_commit_shas = all_40_hex - {typo_prose_sha}
+    assert len(valid_commit_shas) >= 8
+    for sha in sorted(valid_commit_shas):
+        assert verify_full_git_object_exists(sha, repo_root=ROOT, require_commit_type=True) == "commit"
