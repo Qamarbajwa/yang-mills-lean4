@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 22
+revision: 23
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,10 +9,10 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "099c883a67f07bb3576abe77cd19fce8978df651"
-  scientific_candidate_sha: "099c883a67f07bb3576abe77cd19fce8978df651"
-  review_bound_sha: "099c883a67f07bb3576abe77cd19fce8978df651"
-  evidence_closeout_head: "88cc4f9de1b96204e30743c4679131871732bbc7"
+  head: "30f564bd1bf6eb40f1942c07a5e39ac1892c935c"
+  scientific_candidate_sha: "30f564bd1bf6eb40f1942c07a5e39ac1892c935c"
+  review_bound_sha: "30f564bd1bf6eb40f1942c07a5e39ac1892c935c"
+  evidence_closeout_head: "8f9d93d7f67a2555a48a48b38e856cc8b24e43ab"
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -31,10 +31,10 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 22
-  last_updated_at: "2026-09-27T13:12:00Z"
+  last_expected_revision: 23
+  last_updated_at: "2026-09-27T13:53:00Z"
   active_contract: "YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB"
-  frozen_candidate: "099c883a67f07bb3576abe77cd19fce8978df651"
+  frozen_candidate: "30f564bd1bf6eb40f1942c07a5e39ac1892c935c"
 
 current_objective: YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB
 
@@ -179,9 +179,18 @@ objectives:
     acceptor: "6a8325e1-6f37-4db3-8bb6-34e36047d85b (distinct-technical-acceptor)"
     status: SCIENTIFICALLY_ACCEPTED
 
+  - id: YM-011-TREE-GAUGE-R1
+    scope_in: "Baseline-provenance reconciliation (88cc4f9de1b9... vs prose typo 88cc4f93282b...), periodic cochain rank identity, direct Laplace ratio expansion, and baseline SHA drift guardrails"
+    dependencies: ["YM-011-TREE-GAUGE"]
+    risk: R2
+    writer: "primary-worker (Luna: 00ffe8a3-c73a-4096-b0e7-53138b34c21a)"
+    reviewer_path: "fresh-blind-research-subagent-IND1 (92527072-4e26-4615-bf27-7e7362785394)"
+    acceptor: "7bc2f113-715c-480d-87c5-2b5cae48249a (distinct-technical-acceptor)"
+    status: SCIENTIFICALLY_ACCEPTED
+
   - id: YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB
     scope_in: "Local Brascamp-Lieb / reflection-positivity integration by parts and periodic toron quartic commutator bound"
-    dependencies: ["YM-011-TREE-GAUGE"]
+    dependencies: ["YM-011-TREE-GAUGE", "YM-011-TREE-GAUGE-R1"]
     risk: R2
     writer: "primary-worker"
     reviewer_path: "fresh-blind-research-subagent"
@@ -190,7 +199,7 @@ objectives:
 
   - id: YM-011
     scope_in: "First load-bearing bridge lemma (UV scale-transfer & observables mollification)"
-    dependencies: ["YM-004", "YM-011-PRE", "YM-011-OBS-MAP", "YM-011-PLAQUETTE-EXP", "YM-011-TREE-GAUGE", "YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB"]
+    dependencies: ["YM-004", "YM-011-PRE", "YM-011-OBS-MAP", "YM-011-PLAQUETTE-EXP", "YM-011-TREE-GAUGE", "YM-011-TREE-GAUGE-R1", "YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB"]
     risk: R3
     writer: "primary-worker"
     reviewer_path: "fresh-blind-research-subagent-IND1"
@@ -223,6 +232,9 @@ capabilities:
   CAP-008-governance-strengthening:
     status: ACCEPTED_BOUNDED
     evidence_refs: ["verification/YM-GOV-ADOPT-0406R3_TECHNICAL_ACCEPTANCE.md"]
+  CAP-009-tree-gauge:
+    status: ACCEPTED_BOUNDED
+    evidence_refs: ["verification/YM-011-TREE-GAUGE_TECHNICAL_ACCEPTANCE.md", "verification/YM-011-TREE-GAUGE-R1_TECHNICAL_ACCEPTANCE.md"]
 
 external_systems: {}
 
@@ -238,16 +250,16 @@ hard_gates:
     description: "Review verdict is INTEGRITY_PASS with limitations reflected."
   negative_evidence_preserved:
     status: PASS
-    description: "All 10 negative scientific findings preserved in NEGATIVE_EVIDENCE_REGISTER.md."
+    description: "All negative scientific findings preserved in NEGATIVE_EVIDENCE_REGISTER.md."
   dependencies_satisfied:
     status: PASS
     description: "Prerequisites satisfied for active objective."
   scientific_tree_identity:
     status: PASS
-    description: "Closed-world scientific tree hash verified as 18c319312f7afcd3fc4e93afa898de78b5c88500c4eee1fa04bdd08b2c08b77d."
+    description: "Closed-world scientific tree hash verified as 5bd96bc39ae4722a68c4d37cb7ea0e1437e34ec8f78c5c0c59cc258a3d68636d."
   state_revision_freshness:
     status: PASS
-    description: "State revision is monotonically incremented to 20."
+    description: "State revision is monotonically incremented to 23."
   no_unresolved_mandatory_blocker:
     status: PASS
     description: "Zero mandatory blockers exist."
@@ -273,6 +285,8 @@ evidence_refs:
     role: "18 migration/adoption tests"
   - ref: "verification/YM-GOV-ADOPT-0406R3_TECHNICAL_ACCEPTANCE.md"
     role: "Formal technical acceptance receipt"
+  - ref: "verification/YM-011-TREE-GAUGE-R1_TECHNICAL_ACCEPTANCE.md"
+    role: "Formal technical acceptance receipt for YM-011-TREE-GAUGE-R1"
 
 negative_history_refs:
   - ref: "NEGATIVE_EVIDENCE_REGISTER.md"
@@ -311,16 +325,16 @@ release:
     adapter: "NONE_BY_DESIGN / NOT_APPLICABLE"
 
 last_verified_checkpoint:
-  sha: "444a4c379ccda56a426d4c832afcb08e6f6dc55d"
-  timestamp: "2026-09-26T02:27:00Z"
-  test_result: "336 passed"
+  sha: "30f564bd1bf6eb40f1942c07a5e39ac1892c935c"
+  timestamp: "2026-09-27T13:53:00Z"
+  test_result: "346 passed"
 
 overhead:
   routine_target_fraction: 0.10
   measurement: UNKNOWN
   notes:
-    - "YM-GOV-ADOPT-0406R3 is an active governance strengthening task"
+    - "YM-011-TREE-GAUGE-R1 baseline-provenance reconciliation completed"
 
 views:
-  last_validated_revision: 20
+  last_validated_revision: 23
   evidence_refs: []
