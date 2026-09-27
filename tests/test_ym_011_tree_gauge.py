@@ -317,3 +317,114 @@ def test_08_literature_and_negative_evidence_artifacts_integrity():
     assert "NEG-YM-011-PLAQ-1" in neg_text
     assert "Post-Tree-Gauge Re-Evaluation (`YM-011-TREE-GAUGE`)" in neg_text
     assert "NEG-YM-011-TREE-1" in neg_text
+
+
+def test_09_cochain_rank_identity_and_linearized_scope():
+    """
+    Verifies the explicit periodic and free-boundary cochain rank identity (YM-011-TREE-GAUGE-R1):
+        rank(d_1) = |E_+| - |V| + 1 - b_1 = |E_co-tree| - b_1
+        N_constraints^cochain = |P_+| - rank(d_1) = |P_+| - |E_co-tree| + b_1
+    giving 1 (d=2), L^3 + 2 (d=3), and 3L^4 + 3 (d=4) on Lambda_per(L, d),
+    and strictly labels the count as LINEARIZED_COCHAIN_RANK_COUNT vs
+    NON_ABELIAN_GLOBAL_CONSTRAINT_VARIETY.
+    """
+    for d, L, expected_per_constraints in ((2, 3, 1), (3, 3, 29), (4, 2, 51)):
+        audit_per = audit_plaquette_coordinate_map(L=L, d=d, periodic=True, N=3)
+        assert audit_per.global_homology_rank_b1 == d
+        assert audit_per.rank_d1 == audit_per.num_edges - audit_per.num_vertices + 1 - d
+        assert audit_per.rank_d1 == audit_per.num_cotree_edges - d
+        assert audit_per.num_independent_bianchi_constraints == audit_per.num_plaquettes - audit_per.rank_d1
+        assert audit_per.num_independent_bianchi_constraints == (
+            audit_per.num_plaquettes - audit_per.num_cotree_edges + d
+        )
+        assert audit_per.num_independent_bianchi_constraints == expected_per_constraints
+        assert audit_per.cochain_constraint_count_scope == "LINEARIZED_COCHAIN_RANK_COUNT"
+        assert audit_per.non_abelian_constraint_scope == "NON_ABELIAN_GLOBAL_CONSTRAINT_VARIETY"
+
+        audit_free = audit_plaquette_coordinate_map(L=L, d=d, periodic=False, N=3)
+        assert audit_free.global_homology_rank_b1 == 0
+        assert audit_free.rank_d1 == audit_free.num_cotree_edges
+        assert audit_free.num_independent_bianchi_constraints == (
+            audit_free.num_plaquettes - audit_free.num_cotree_edges
+        )
+
+
+def test_10_baseline_lineage_transition_and_sha_drift_guardrail():
+    """
+    Verifies the YM-011-TREE-GAUGE-R1 regression protection against baseline SHA drift:
+    1. True Git governance closeout SHA `88cc4f9de1b96204e30743c4679131871732bbc7` exists in Git
+       and passes `verify_baseline_lineage_transition(..., transition_class='SAME')`.
+    2. Historical prose typo SHA `88cc4f93282b09a71ce169352e057ba6e1b643a6` does NOT exist in Git
+       and fails closed under `verify_full_git_object_exists` and `SAME` transition.
+    3. Reconciling `88cc4f93282b09a71ce169352e057ba6e1b643a6` -> `88cc4f9de1b96204e30743c4679131871732bbc7`
+       succeeds ONLY when `transition_class='SUPERSEDED_BY_AMEND'` and the explicit reconciliation
+       record `verification/YM-011-TREE-GAUGE-R1_PROVENANCE_RECONCILIATION.md` is supplied.
+    4. Unexplained baseline SHA differences and `SEMANTIC_REVIEW_REQUIRED` transitions fail closed.
+    """
+    from ymmg.ros import (
+        ConstitutionalIntegrityError,
+        verify_baseline_lineage_transition,
+        verify_full_git_object_exists,
+    )
+
+    true_gov_closeout_sha = "88cc4f9de1b96204e30743c4679131871732bbc7"
+    typo_prose_sha = "88cc4f93282b09a71ce169352e057ba6e1b643a6"
+    tree_gauge_candidate_sha = "099c883a67f07bb3576abe77cd19fce8978df651"
+
+    # 1. True SHA exists in Git as a commit; typo SHA does not exist in Git
+    assert verify_full_git_object_exists(true_gov_closeout_sha, repo_root=ROOT) == "commit"
+    assert verify_full_git_object_exists(tree_gauge_candidate_sha, repo_root=ROOT) == "commit"
+    with pytest.raises(ConstitutionalIntegrityError, match="does not exist in the Git object database"):
+        verify_full_git_object_exists(typo_prose_sha, repo_root=ROOT)
+
+    # 2. Abbreviated SHA fails closed
+    with pytest.raises(ConstitutionalIntegrityError, match="40-character"):
+        verify_full_git_object_exists("88cc4f9", repo_root=ROOT)
+
+    # 3. Exact SAME transition on the true Git commit passes
+    res_same = verify_baseline_lineage_transition(
+        prior_closeout_sha=true_gov_closeout_sha,
+        next_baseline_sha=true_gov_closeout_sha,
+        transition_class="SAME",
+        repo_root=ROOT,
+    )
+    assert res_same["status"] == "BASELINE_LINEAGE_VERIFIED"
+
+    # 4. Unexplained drift under SAME fails closed
+    with pytest.raises(ConstitutionalIntegrityError):
+        verify_baseline_lineage_transition(
+            prior_closeout_sha=typo_prose_sha,
+            next_baseline_sha=true_gov_closeout_sha,
+            transition_class="SAME",
+            repo_root=ROOT,
+            verify_git_existence=False,
+        )
+
+    # 5. Reconciled transition with explicit provenance reconciliation record passes
+    res_reconciled = verify_baseline_lineage_transition(
+        prior_closeout_sha=typo_prose_sha,
+        next_baseline_sha=true_gov_closeout_sha,
+        transition_class="SUPERSEDED_BY_AMEND",
+        reconciliation_record_path="verification/YM-011-TREE-GAUGE-R1_PROVENANCE_RECONCILIATION.md",
+        repo_root=ROOT,
+    )
+    assert res_reconciled["status"] == "BASELINE_LINEAGE_VERIFIED"
+
+    # 6. Missing reconciliation record fails closed
+    with pytest.raises(ConstitutionalIntegrityError, match="requires an explicit reconciliation_record_path"):
+        verify_baseline_lineage_transition(
+            prior_closeout_sha=typo_prose_sha,
+            next_baseline_sha=true_gov_closeout_sha,
+            transition_class="SUPERSEDED_BY_AMEND",
+            reconciliation_record_path=None,
+            repo_root=ROOT,
+        )
+
+    # 7. SEMANTIC_REVIEW_REQUIRED always fails closed
+    with pytest.raises(ConstitutionalIntegrityError, match="SEMANTIC_REVIEW_REQUIRED"):
+        verify_baseline_lineage_transition(
+            prior_closeout_sha=true_gov_closeout_sha,
+            next_baseline_sha=tree_gauge_candidate_sha,
+            transition_class="SEMANTIC_REVIEW_REQUIRED",
+            repo_root=ROOT,
+        )

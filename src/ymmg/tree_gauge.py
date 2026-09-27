@@ -119,6 +119,9 @@ class PlaquetteCoordinateAudit:
     is_global_bijection: bool
     decouples_wilson_action: bool
     haar_jacobian_on_selected_cotree_subset: str
+    rank_d1: int = 0
+    cochain_constraint_count_scope: str = "LINEARIZED_COCHAIN_RANK_COUNT"
+    non_abelian_constraint_scope: str = "NON_ABELIAN_GLOBAL_CONSTRAINT_VARIETY"
 
 
 @dataclass(frozen=True)
@@ -376,6 +379,11 @@ def audit_plaquette_coordinate_map(
         is_bijection = False
         decouples = False
 
+    rank_d1 = graph.num_edges - graph.num_vertices + 1 - b1
+    assert rank_d1 == graph.num_cotree_edges - b1
+    assert indep_bianchi == graph.num_plaquettes - rank_d1
+    assert indep_bianchi == graph.num_plaquettes - graph.num_cotree_edges + b1
+
     return PlaquetteCoordinateAudit(
         L=L,
         d=d,
@@ -393,6 +401,9 @@ def audit_plaquette_coordinate_map(
         is_global_bijection=is_bijection,
         decouples_wilson_action=decouples,
         haar_jacobian_on_selected_cotree_subset="UNIT_HAAR_JACOBIAN_ON_TRIANGULAR_SPANNING_SUBSET_ONLY",
+        rank_d1=rank_d1,
+        cochain_constraint_count_scope="LINEARIZED_COCHAIN_RANK_COUNT",
+        non_abelian_constraint_scope="NON_ABELIAN_GLOBAL_CONSTRAINT_VARIETY",
     )
 
 

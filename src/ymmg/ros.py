@@ -1080,3 +1080,158 @@ def validate_consequential_effect_receipt(
     return True
 
 
+ALLOWED_BASELINE_TRANSITION_CLASSES = {
+    "SAME",
+    "DESCENDANT_EVIDENCE_ONLY",
+    "DESCENDANT_STATE_ONLY",
+    "SUPERSEDED_BY_AMEND",
+    "SEMANTIC_REVIEW_REQUIRED",
+}
+
+
+def verify_full_git_object_exists(
+    sha: str,
+    repo_root: Optional[Path] = None,
+    require_commit_type: bool = True,
+) -> str:
+    """
+    Verifies that `sha` is a valid 40-character hexadecimal Git object ID
+    and exists in the Git object database of `repo_root`.
+    Fails closed via ConstitutionalIntegrityError if abbreviated, malformed,
+    or absent from the Git object store.
+    """
+    import re
+    import subprocess
+
+    if not isinstance(sha, str) or not re.fullmatch(r"[0-9a-f]{40}", sha):
+        raise ConstitutionalIntegrityError(
+            f"Recorded SHA {sha!r} is not a full 40-character lowercase hex Git object ID."
+        )
+
+    cwd = str(repo_root) if repo_root is not None else str(Path(__file__).resolve().parents[2])
+    res = subprocess.run(
+        ["git", "cat-file", "-t", sha],
+        cwd=cwd,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    obj_type = res.stdout.strip()
+    if res.returncode != 0 or not obj_type:
+        raise ConstitutionalIntegrityError(
+            f"Recorded SHA {sha!r} does not exist in the Git object database (git cat-file -t failed)."
+        )
+    if require_commit_type and obj_type != "commit":
+        raise ConstitutionalIntegrityError(
+            f"Recorded SHA {sha!r} exists in Git as {obj_type!r}, expected 'commit'."
+        )
+    return obj_type
+
+
+def verify_baseline_lineage_transition(
+    prior_closeout_sha: str,
+    next_baseline_sha: str,
+    transition_class: str,
+    changed_files: Optional[List[str]] = None,
+    reconciliation_record_path: Optional[str] = None,
+    repo_root: Optional[Path] = None,
+    verify_git_existence: bool = True,
+) -> Dict[str, Any]:
+    """
+    Enforces YM-011-TREE-GAUGE-R1 Regression Protection Against Baseline SHA Drift:
+    1. Both `prior_closeout_sha` and `next_baseline_sha` must be 40-char hex strings
+       (and exist in Git when `verify_git_existence=True`, except that `SUPERSEDED_BY_AMEND`
+       allows `prior_closeout_sha` to be a documented historical/superseded SHA if and only if
+       `reconciliation_record_path` is provided and exists).
+    2. `transition_class` must be in ALLOWED_BASELINE_TRANSITION_CLASSES:
+       - SAME: `prior_closeout_sha == next_baseline_sha`.
+       - DESCENDANT_EVIDENCE_ONLY: `prior_closeout_sha != next_baseline_sha` and all
+         `changed_files` classify as EVIDENCE_ONLY or DOCUMENTATION_ONLY.
+       - DESCENDANT_STATE_ONLY: `prior_closeout_sha != next_baseline_sha` and all
+         `changed_files` classify as STATE_ONLY, EVIDENCE_ONLY, or DOCUMENTATION_ONLY.
+       - SUPERSEDED_BY_AMEND: `prior_closeout_sha != next_baseline_sha` and an explicit
+         `reconciliation_record_path` is provided and exists on disk.
+       - SEMANTIC_REVIEW_REQUIRED: blocks automatic transition and raises
+         ConstitutionalIntegrityError requiring a fresh candidate-bound review.
+    3. Any unexplained difference between `prior_closeout_sha` and `next_baseline_sha`
+       fails closed.
+    """
+    import re
+
+    for label, val in [("prior_closeout_sha", prior_closeout_sha), ("next_baseline_sha", next_baseline_sha)]:
+        if not isinstance(val, str) or not re.fullmatch(r"[0-9a-f]{40}", val):
+            raise ConstitutionalIntegrityError(
+                f"{label}={val!r} violates 40-character hexadecimal SHA requirement."
+            )
+
+    if transition_class not in ALLOWED_BASELINE_TRANSITION_CLASSES:
+        raise ConstitutionalIntegrityError(
+            f"Invalid baseline transition_class {transition_class!r}; must be one of "
+            f"{sorted(ALLOWED_BASELINE_TRANSITION_CLASSES)}."
+        )
+
+    if transition_class == "SEMANTIC_REVIEW_REQUIRED":
+        raise ConstitutionalIntegrityError(
+            f"Baseline transition from {prior_closeout_sha} to {next_baseline_sha} is marked "
+            "SEMANTIC_REVIEW_REQUIRED: automatic baseline acceptance is blocked."
+        )
+
+    root_dir = repo_root if repo_root is not None else Path(__file__).resolve().parents[2]
+
+    if verify_git_existence:
+        verify_full_git_object_exists(next_baseline_sha, repo_root=root_dir, require_commit_type=True)
+        if transition_class != "SUPERSEDED_BY_AMEND":
+            verify_full_git_object_exists(prior_closeout_sha, repo_root=root_dir, require_commit_type=True)
+
+    if transition_class == "SAME":
+        if prior_closeout_sha != next_baseline_sha:
+            raise ConstitutionalIntegrityError(
+                f"Baseline SHA drift detected under transition_class='SAME': "
+                f"prior_closeout_sha={prior_closeout_sha} != next_baseline_sha={next_baseline_sha}."
+            )
+    elif transition_class in {"DESCENDANT_EVIDENCE_ONLY", "DESCENDANT_STATE_ONLY"}:
+        if prior_closeout_sha == next_baseline_sha:
+            raise ConstitutionalIntegrityError(
+                f"transition_class={transition_class!r} requires distinct SHAs, got identical {prior_closeout_sha}."
+            )
+        if not changed_files:
+            raise ConstitutionalIntegrityError(
+                f"transition_class={transition_class!r} requires non-empty changed_files list for audit."
+            )
+        allowed_cats = (
+            {"EVIDENCE_ONLY", "DOCUMENTATION_ONLY"}
+            if transition_class == "DESCENDANT_EVIDENCE_ONLY"
+            else {"STATE_ONLY", "EVIDENCE_ONLY", "DOCUMENTATION_ONLY"}
+        )
+        for path in changed_files:
+            cat = classify_post_review_change(path)
+            if cat not in allowed_cats:
+                raise ConstitutionalIntegrityError(
+                    f"File {path!r} classified as {cat!r} is forbidden in {transition_class!r} baseline transition."
+                )
+    elif transition_class == "SUPERSEDED_BY_AMEND":
+        if prior_closeout_sha == next_baseline_sha:
+            raise ConstitutionalIntegrityError(
+                "transition_class='SUPERSEDED_BY_AMEND' requires distinct prior and replacement SHAs."
+            )
+        if not reconciliation_record_path:
+            raise ConstitutionalIntegrityError(
+                "transition_class='SUPERSEDED_BY_AMEND' requires an explicit reconciliation_record_path."
+            )
+        rec_file = Path(reconciliation_record_path)
+        if not rec_file.is_absolute():
+            rec_file = root_dir / rec_file
+        if not rec_file.is_file():
+            raise ConstitutionalIntegrityError(
+                f"Reconciliation record {str(rec_file)!r} does not exist on disk."
+            )
+
+    return {
+        "status": "BASELINE_LINEAGE_VERIFIED",
+        "prior_closeout_sha": prior_closeout_sha,
+        "next_baseline_sha": next_baseline_sha,
+        "transition_class": transition_class,
+        "reconciliation_record_path": reconciliation_record_path,
+    }
+
+
