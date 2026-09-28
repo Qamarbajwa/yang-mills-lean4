@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 23
+revision: 24
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,10 +9,10 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "30f564bd1bf6eb40f1942c07a5e39ac1892c935c"
-  scientific_candidate_sha: "30f564bd1bf6eb40f1942c07a5e39ac1892c935c"
-  review_bound_sha: "30f564bd1bf6eb40f1942c07a5e39ac1892c935c"
-  evidence_closeout_head: "8f9d93d7f67a2555a48a48b38e856cc8b24e43ab"
+  head: "de11450f23497fc444571e6bdcba92a962535170"
+  scientific_candidate_sha: "de11450f23497fc444571e6bdcba92a962535170"
+  review_bound_sha: "de11450f23497fc444571e6bdcba92a962535170"
+  evidence_closeout_head: "9aec40b170415ba94fee65cb8d27df76ecd4aeaf"
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -31,10 +31,10 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 23
-  last_updated_at: "2026-09-27T13:53:00Z"
+  last_expected_revision: 24
+  last_updated_at: "2026-09-28T00:35:00Z"
   active_contract: "YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB"
-  frozen_candidate: "30f564bd1bf6eb40f1942c07a5e39ac1892c935c"
+  frozen_candidate: "de11450f23497fc444571e6bdcba92a962535170"
 
 current_objective: YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB
 
@@ -192,6 +192,16 @@ objectives:
     scope_in: "Local Brascamp-Lieb / reflection-positivity integration by parts and periodic toron quartic commutator bound"
     dependencies: ["YM-011-TREE-GAUGE", "YM-011-TREE-GAUGE-R1"]
     risk: R2
+    writer: "primary-worker (Luna: 00ffe8a3-c73a-4096-b0e7-53138b34c21a)"
+    reviewer_path: "fresh-blind-research-subagent-IND1 (e0458aff-ded7-42e2-b0e6-657daff42dbe)"
+    acceptor: "54d6ae9e-d3f0-4675-a935-92b6f574d32c (distinct-technical-acceptor)"
+    status: SCIENTIFICALLY_ACCEPTED
+    scope_limitation: "P1_PROVED_P2_OPEN_P3_OPEN"
+
+  - id: YM-011-DYADIC-FREE-ENERGY-UNIFORMITY
+    scope_in: "Non-asymptotic volume uniformity of the periodic dyadic free-energy increment (1/|P_+|) ln(Z_per(beta/2)/Z_per(beta)) across O(L^{-2}) infrared modes and 3-cube Bianchi constraints"
+    dependencies: ["YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB"]
+    risk: R2
     writer: "primary-worker"
     reviewer_path: "fresh-blind-research-subagent"
     acceptor: "distinct-technical-acceptor"
@@ -199,7 +209,7 @@ objectives:
 
   - id: YM-011
     scope_in: "First load-bearing bridge lemma (UV scale-transfer & observables mollification)"
-    dependencies: ["YM-004", "YM-011-PRE", "YM-011-OBS-MAP", "YM-011-PLAQUETTE-EXP", "YM-011-TREE-GAUGE", "YM-011-TREE-GAUGE-R1", "YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB"]
+    dependencies: ["YM-004", "YM-011-PRE", "YM-011-OBS-MAP", "YM-011-PLAQUETTE-EXP", "YM-011-TREE-GAUGE", "YM-011-TREE-GAUGE-R1", "YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB", "YM-011-DYADIC-FREE-ENERGY-UNIFORMITY"]
     risk: R3
     writer: "primary-worker"
     reviewer_path: "fresh-blind-research-subagent-IND1"
@@ -235,6 +245,10 @@ capabilities:
   CAP-009-tree-gauge:
     status: ACCEPTED_BOUNDED
     evidence_refs: ["verification/YM-011-TREE-GAUGE_TECHNICAL_ACCEPTANCE.md", "verification/YM-011-TREE-GAUGE-R1_TECHNICAL_ACCEPTANCE.md"]
+  CAP-010-toron-quartic-brascamp-lieb:
+    status: ACCEPTED_BOUNDED
+    scope: FIXED_VOLUME_PERIODIC_P1_PROVED_P2_OPEN
+    evidence_refs: ["verification/YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB_TECHNICAL_ACCEPTANCE.md"]
 
 external_systems: {}
 
@@ -247,7 +261,7 @@ hard_gates:
     description: "Independent review is bound to exact candidate SHA."
   scientific_review_pass:
     status: PASS
-    description: "Review verdict is INTEGRITY_PASS with limitations reflected."
+    description: "Review verdict is INTEGRITY_PASS_WITH_LIMITATIONS with limitations reflected."
   negative_evidence_preserved:
     status: PASS
     description: "All negative scientific findings preserved in NEGATIVE_EVIDENCE_REGISTER.md."
@@ -256,10 +270,10 @@ hard_gates:
     description: "Prerequisites satisfied for active objective."
   scientific_tree_identity:
     status: PASS
-    description: "Closed-world scientific tree hash verified as 5bd96bc39ae4722a68c4d37cb7ea0e1437e34ec8f78c5c0c59cc258a3d68636d."
+    description: "Closed-world scientific tree hash verified as 0ad88e618086d4278b7dcf8141baed940d23f7ec1ccc33f9b86670aac072c399."
   state_revision_freshness:
     status: PASS
-    description: "State revision is monotonically incremented to 23."
+    description: "State revision is monotonically incremented to 24."
   no_unresolved_mandatory_blocker:
     status: PASS
     description: "Zero mandatory blockers exist."
@@ -287,6 +301,8 @@ evidence_refs:
     role: "Formal technical acceptance receipt"
   - ref: "verification/YM-011-TREE-GAUGE-R1_TECHNICAL_ACCEPTANCE.md"
     role: "Formal technical acceptance receipt for YM-011-TREE-GAUGE-R1"
+  - ref: "verification/YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB_TECHNICAL_ACCEPTANCE.md"
+    role: "Formal technical acceptance receipt for YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB"
 
 negative_history_refs:
   - ref: "NEGATIVE_EVIDENCE_REGISTER.md"
@@ -325,16 +341,16 @@ release:
     adapter: "NONE_BY_DESIGN / NOT_APPLICABLE"
 
 last_verified_checkpoint:
-  sha: "30f564bd1bf6eb40f1942c07a5e39ac1892c935c"
-  timestamp: "2026-09-27T13:53:00Z"
-  test_result: "346 passed"
+  sha: "de11450f23497fc444571e6bdcba92a962535170"
+  timestamp: "2026-09-28T00:35:00Z"
+  test_result: "356 passed"
 
 overhead:
   routine_target_fraction: 0.10
   measurement: UNKNOWN
   notes:
-    - "YM-011-TREE-GAUGE-R1 baseline-provenance reconciliation completed"
+    - "YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB completed and scientifically accepted (P1=PROVED, P2=OPEN, P3=OPEN)"
 
 views:
-  last_validated_revision: 23
+  last_validated_revision: 24
   evidence_refs: []

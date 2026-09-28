@@ -1,12 +1,13 @@
 # NEXT ACTION
 
 ## Current primary action
-`YM-011-TREE-GAUGE & YM-011-TREE-GAUGE-R1 SCIENTIFICALLY_ACCEPTED; YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB READY_FOR_EXECUTION; YM-011 PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION`
+`YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB SCIENTIFICALLY_ACCEPTED (P1=PROVED, P2=OPEN, P3=OPEN); YM-011-DYADIC-FREE-ENERGY-UNIFORMITY READY_FOR_EXECUTION; YM-011 PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION`
 
 ## Scope
 - `YM-GOV-ADOPT-0406R3` / `YM-GOV-ADOPT-0406R3-R1` is `CLOSED` at true Git commit `88cc4f9de1b96204e30743c4679131871732bbc7` (reconciled with chat-prose typo `88cc4f93282b09a71ce169352e057ba6e1b643a6` in `verification/YM-011-TREE-GAUGE-R1_PROVENANCE_RECONCILIATION.md`).
-- `YM-011-TREE-GAUGE` & `YM-011-TREE-GAUGE-R1` (Maximal-Tree Gauge Fixing, Zero-Mode Separation, and Baseline-Provenance Reconciliation) are completed, independently reviewed, and technically accepted: `SCIENTIFICALLY_ACCEPTED`.
-- Next unblocked authorized scientific task: `YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB`.
+- `YM-011-TREE-GAUGE` & `YM-011-TREE-GAUGE-R1` are `SCIENTIFICALLY_ACCEPTED`.
+- `YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB` (Periodic-Torus Uniform Plaquette Bound Audit, Toron Quartic Commutator Variety, Brascamp–Lieb Applicability, and Stratified Laplace Resolution of Fixed-Volume $O_L(1/\beta)$) is completed, independently reviewed (`e0458aff-ded7-42e2-b0e6-657daff42dbe`, `INTEGRITY_PASS_WITH_LIMITATIONS`), and technically accepted (`54d6ae9e-d3f0-4675-a935-92b6f574d32c`, `TECHNICAL_ACCEPTANCE_GRANTED`) on Candidate `de11450f23497fc444571e6bdcba92a962535170`: `SCIENTIFICALLY_ACCEPTED` (`P1 = PROVED`, `P2 = OPEN`, `P3 = OPEN`).
+- Next unblocked authorized scientific task: `YM-011-DYADIC-FREE-ENERGY-UNIFORMITY`.
 - `YM-006` through `YM-010` remain in `SCIENTIFIC_REVIEW_HOLD`.
 - `YM-011` remains `PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION`.
 
@@ -24,7 +25,8 @@
 - `YM-011-PLAQUETTE-EXP — Plaquette Expectation Bound (YM-011-PLAQUETTE-EXP-R2)`: `SCIENTIFICALLY_ACCEPTED`
 - `YM-GOV-ADOPT-0406R3 — Universal Governance v4.0.6-r3 Strengthening`: `CLOSED / ACCEPTED`
 - `YM-011-TREE-GAUGE — Maximal Spanning-Tree Gauge Fixing & Co-Tree Plaquette Map (YM-011-TREE-GAUGE-R1)`: `SCIENTIFICALLY_ACCEPTED`
-- `YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB — Periodic Toron Quartic Modes & Brascamp–Lieb Analysis`: `READY_FOR_EXECUTION`
+- `YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB — Periodic Toron Quartic Modes & Brascamp–Lieb Analysis`: `SCIENTIFICALLY_ACCEPTED (P1=PROVED, P2=OPEN, P3=OPEN)`
+- `YM-011-DYADIC-FREE-ENERGY-UNIFORMITY — Non-Asymptotic Volume Uniformity of Periodic Dyadic Free-Energy Increment`: `READY_FOR_EXECUTION`
 - `YM-011 — First Load-Bearing Bridge Lemma`: `PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION`
 
 ## Completed actions
