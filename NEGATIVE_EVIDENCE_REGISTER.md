@@ -153,3 +153,15 @@
   2. **Resolution of $P2$ at Weak Coupling:** In the dyadic ratio $Z_0(\beta/2) / Z_0(\beta)$, all non-zero Laplacian eigenvalues cancel identically, proving that the non-zero mode dyadic increment is bounded by the bulk limit for all $L \ge 2$. Combined with Kotecký–Preiss polymer tail suppression for $\beta \ge \beta_0(d, N)$, $e_{\mathrm{plaq}}(\beta, \Lambda_{\mathrm{per}}(L, d)) \le \frac{C_{\mathrm{bulk}}(d, N)}{\beta}$ holds **uniformly in $L$** (`P2 = PROVED_AT_WEAK_COUPLING`).
   3. **Non-Sufficiency for Continuum Gap ($P3 = \text{OPEN}$):** A bare lattice weak-coupling plaquette bound establishes local field smoothness on fixed-cutoff lattices, but does **not** construct the continuum limit $a \to 0$, does not establish non-perturbative coupling renormalization $g^2(a) \to 0$, does not construct the continuum Schwinger functions, and does not establish a mass gap in physical units (`P3 = OPEN`, `CLAY_PROBLEM = OPEN_AND_UNSOLVED`, `GOAL_COMPLETE = FALSE`).
 
+### NEG-YM-011-TRANSFER-1: Falsification of Unscaled Scale Transfer and Linear Tangent Drift (`YM-011`)
+- **Discovery Date:** 2026-09-30
+- **Epistemic Classification:** `[GEOMETRIC_DRIFT_AND_FLOW_MATCHING_FALSIFICATION]`
+- **Hypothesis tested:** Whether a naive midpoint blocking map without flow matching or with an arbitrary flow parameter $\alpha \ne 2(d-1)t/a^2$ preserves $O(g_0^2)$ scale-transfer accuracy between lattice spacings $a$ and $2a$.
+- **Result:** Falsified. If the flow matching condition $\alpha(t) = 2(d-1)t/a^2$ is not satisfied, the discrepancy between the blocked coarse observable and the fine observable retains an uncancelled linear drift $\sim |C_1| \left| \alpha - 2(d-1)\frac{t}{a^2} \right| \frac{1}{a}$, which produces an $O(1)$ discrepancy per link independent of coupling. Only the exact choice $\alpha(t) = 2(d-1)t/a^2$ eliminates the linear drift and reduces the tangent defect to the quadratic plaquette expectation $O(g_0^2)$.
+
+### NEG-YM-011-TRANSFER-2: Insufficiency of Multiscale UV Scale Transfer for Intermediate Crossover and Continuum Mass Gap (`YM-011`)
+- **Discovery Date:** 2026-09-30
+- **Epistemic Classification:** `[CROSSOVER_BOUNDARY_OBSTRUCTION_AND_GAP_INSUFFICIENCY]`
+- **Hypothesis tested:** Whether the geometric convergence of the multiscale UV transfer error $\sum_{j=0}^{n-1} 2^{-j} g_j^2 \le 2 g_0^2$ is sufficient to construct the infinite-volume continuum Yang-Mills theory and prove the mass gap $\Delta > 0$.
+- **Result:** Falsified. The multiscale geometric series converges only within the perturbative domain $g_j \le g_* < 1$. At the intermediate crossover scale $a_{\mathrm{cross}} \sim 0.2\text{--}0.5\text{ fm}$ where $g_k \sim 1$, Bałaban's small-field Gaussian minimizer and polymer cluster expansion lose stability (`CrossoverBoundaryReached`). UV scale transfer alone cannot bridge the intermediate crossover window (`E-CROSSOVER = OPEN`), cannot construct the continuum Schwinger functions, and cannot establish the physical mass gap (`CLAY_PROBLEM = OPEN_AND_UNSOLVED`, `GOAL_COMPLETE = FALSE`).
+
