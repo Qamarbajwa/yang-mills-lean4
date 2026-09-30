@@ -229,22 +229,28 @@
   - Resolved `P2` (`VOLUME_UNIFORM_PERIODIC_O_1_OVER_BETA = PROVED_AT_WEAK_COUPLING`) via Theorem `YM-011-DYADIC-T1`: $e_{\mathrm{plaq}}(\beta, \Lambda_{\mathrm{per}}(L, d)) \le \frac{C_{\mathrm{bulk}}(d, N)}{\beta}$ uniformly in $L \ge 2$ for all $\beta \ge \beta_0(d, N)$, with $C_{\mathrm{bulk}}(4, N) = \frac{N^2-1}{4}$.
   - Enforced strict non-sufficiency for $P3$ (`CONTINUUM_UNIFORM_CONTROL = OPEN`): bare lattice weak-coupling plaquette bounds establish local link smoothness on fixed lattices, but do not construct the continuum limit $a \to 0$ or establish the non-perturbative Wightman/OS spectral mass gap.
   - Independently audited by E4 Reviewer `669634f5-8065-48c8-91af-cb92c7e32365` (`INTEGRITY_PASS_WITH_LIMITATIONS`) and accepted by Distinct Technical Acceptor `b282550d-1e42-4f27-b351-6f575fae3f92` (`TECHNICAL_ACCEPTANCE_GRANTED`) on Candidate `f478b5e73aad3aa9f3670803816f95695391aac9`.
-  - Status: `SCIENTIFICALLY_ACCEPTED`.
+- **Task `YM-011` (First Load-Bearing Bridge Lemma: Multiscale UV Scale-Transfer and Observables Mollification, Theorem `YM-011-L1`) Completed & Scientifically Accepted:**
+  - Proved exact optimal flow matching $\alpha(t) = 2(d-1)\frac{t}{a^2}$ ($6\frac{t}{a^2}$ in $d=4$) canceling the leading $O(t/a^2)$ linear drift identically via $\mathcal{P}_{\mathfrak{su}(N)}((P_1^\dagger - I)(P_2^\dagger - I))$, decomposing the discrepancy into quadratic plaquette tangent defects and second-order remainders bounded by $C_{\mathrm{rem}}(t/a^2)^2 \frac{|C_1|}{2a}$ ($C_{\mathrm{rem}} = 36$ in $d=4$) (`YM-011-T1`).
+  - Proved single-scale Gibbs expectation transfer bound $\langle |(\mathcal{B}_\alpha^{\mathrm{mid}})^* W_{\Lambda_1}(C_1) - W_{\Lambda_0, t}(\iota(C_1))| \rangle_{\mu_0} \le (\frac{C_{\mathrm{tan}}}{\beta_0} + C_{\mathrm{rem}}(\frac{t}{a^2})^2)\frac{|C_1|}{2a}$ with $C_{\mathrm{tan}}(4, N) = 3\sqrt{N}(N^2-1)$ ($24\sqrt{3} \approx 41.569$ for $SU(3)$; sharp $9.0$ for $SU(2)$). Under Lüscher scaling $t = c_0 a^2$ ($c_0 = \sqrt{2N}/\beta_0$), the bound scales as $O(g_0^2 |C|/a)$ (`YM-011-T2`).
+  - Proved Bałaban renormalized effective measure comparison $\mu_1^{\mathrm{eff}}$ vs pushforward $\mu_1^{\mathrm{push}}$ via polymer cluster expansion localization intersecting $C_1$, establishing complete scale-transfer bound $|\langle W_{\Lambda_1}(C_1) \rangle_{\mu_1^{\mathrm{eff}}} - \langle W_{\Lambda_0, t}(\iota(C_1)) \rangle_{\mu_0}| \le C_{\mathrm{bridge}} \frac{|C_1|}{a} g_0^2$ (`YM-011-T3`).
+  - Proved multiscale geometric convergence $\sum_{j=0}^{k-1} 2^{-j} g_j^2 \le 4 g_0^2$ across the UV hierarchy $a_j = 2^j a_0$ for $g_j \le g_*$, establishing that accumulated UV transfer error is strictly geometrically bounded by $2 C_{\mathrm{bridge}} \frac{|C|}{a_0} g_0^2$ (`YM-011-T4`).
+  - Documented negative evidence `NEG-YM-011-TRANSFER-1` (linear drift under unscaled transfer) and `NEG-YM-011-TRANSFER-2` (insufficiency for crossover window and continuum mass gap; $P3 = \text{OPEN}$, `CLAY_PROBLEM = OPEN_AND_UNSOLVED`, `GOAL_COMPLETE = FALSE`).
+  - Independently audited by E4 Reviewer `a03a4083-092d-46ea-8cb2-b208f979f556` (`INTEGRITY_PASS_WITH_LIMITATIONS`) and accepted by Distinct Technical Acceptor `a27c8a9c-255d-4302-abc9-02e95a9f4f34` (`TECHNICAL_ACCEPTANCE_GRANTED`) on Candidate `aea612a9a128727ad7bf9de92e071c704c4e5760`.
+  - Status: `SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_UV_SCOPE)`.
 
 ## UNVERIFIED
 - No original Yang–Mills lemma has been certified by an external peer-reviewed journal.
 - The Clay Millennium Problem #4 status remains strictly `OPEN_AND_UNSOLVED` (`GOAL_COMPLETE = FALSE`).
 - Proof claims for complete bridge closure (`YM-010`) and mass gap (`YM-009`) are `NOT_ESTABLISHED`.
-- Continuum-useful uniform control (`P3`) and non-perturbative continuum limit construction remain `OPEN`.
+- Continuum-useful uniform control (`P3`), intermediate crossover non-perturbative matching (`E-CROSSOVER`), and continuum limit construction remain `OPEN`.
 
 ## CURRENT BOTTLENECK
 - Tasks `YM-006` through `YM-010` are held under `SCIENTIFIC_REVIEW_HOLD`.
-- `YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB` and `YM-011-DYADIC-FREE-ENERGY-UNIFORMITY` are `SCIENTIFICALLY_ACCEPTED` (`P1 = PROVED`, `P2 = PROVED_AT_WEAK_COUPLING`, `P3 = OPEN`).
-- All prerequisites for the first load-bearing bridge lemma (`YM-011`) across the precursor (`YM-011-PRE-R1`), observable transfer map (`YM-011-OBS-MAP`), plaquette expectation bound (`YM-011-PLAQUETTE-EXP-R2`), tree-gauge zero-mode separation (`YM-011-TREE-GAUGE-R1`), toron quartic commutator analysis (`YM-011-TORON`), and dyadic free energy uniformity (`YM-011-DYADIC`) are complete and scientifically accepted.
-- Next objective: `YM-011` (First Load-Bearing Bridge Lemma: UV Scale-Transfer & Observables Mollification along Branch A).
+- Task `YM-011` (First Load-Bearing Bridge Lemma) is completed and `SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_UV_SCOPE)`.
+- Next unbridged structural objective: `E-CROSSOVER` (Intermediate Coupling Crossover Window $g_k \sim 1$ between UV asymptotic freedom and IR confinement).
 
 ## NEXT ACTION
-- Authorize and execute Task `YM-011`: Construct and prove the first load-bearing UV scale-transfer and observables mollification lemma connecting lattice spacing $a$ and $2a$ under non-perturbative flow mollification with exact $\mathcal{O}(a/|C|)$ error bounds.
+- Formulate and analyze the intermediate coupling crossover boundary `E-CROSSOVER` ($g_k \sim 1$) to investigate non-perturbative scale-matching mechanisms between UV multiscale RG and IR non-perturbative regimes.
 
 
 

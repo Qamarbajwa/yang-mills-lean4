@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 25
+revision: 26
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,10 +9,10 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "f478b5e73aad3aa9f3670803816f95695391aac9"
-  scientific_candidate_sha: "f478b5e73aad3aa9f3670803816f95695391aac9"
-  review_bound_sha: "f478b5e73aad3aa9f3670803816f95695391aac9"
-  evidence_closeout_head: "6a1883bec275fc0e910b5fe708a4b9151c55d5b5"
+  head: "aea612a9a128727ad7bf9de92e071c704c4e5760"
+  scientific_candidate_sha: "aea612a9a128727ad7bf9de92e071c704c4e5760"
+  review_bound_sha: "aea612a9a128727ad7bf9de92e071c704c4e5760"
+  evidence_closeout_head: "4a1a800f20b61205434141f9b691d663e4fb4840"
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -31,10 +31,10 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 25
-  last_updated_at: "2026-09-30T22:30:00Z"
+  last_expected_revision: 26
+  last_updated_at: "2026-09-30T23:40:00Z"
   active_contract: "YM-011"
-  frozen_candidate: "f478b5e73aad3aa9f3670803816f95695391aac9"
+  frozen_candidate: "aea612a9a128727ad7bf9de92e071c704c4e5760"
 
 current_objective: YM-011
 
@@ -212,10 +212,17 @@ objectives:
     scope_in: "First load-bearing bridge lemma (UV scale-transfer & observables mollification)"
     dependencies: ["YM-004", "YM-011-PRE", "YM-011-OBS-MAP", "YM-011-PLAQUETTE-EXP", "YM-011-TREE-GAUGE", "YM-011-TREE-GAUGE-R1", "YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB", "YM-011-DYADIC-FREE-ENERGY-UNIFORMITY"]
     risk: R3
-    writer: "primary-worker"
-    reviewer_path: "fresh-blind-research-subagent-IND1"
-    acceptor: "autonomous-scientific-review"
-    status: READY_FOR_AUTHORIZATION / PROPOSED
+    writer: "primary-worker (Luna: 00ffe8a3-c73a-4096-b0e7-53138b34c21a)"
+    reviewer_path: "fresh-blind-research-subagent-IND1 (a03a4083-092d-46ea-8cb2-b208f979f556)"
+    acceptor: "a27c8a9c-255d-4302-abc9-02e95a9f4f34 (distinct-technical-acceptor)"
+    status: SCIENTIFICALLY_ACCEPTED
+    scope_limitation: "WITH_REGULATED_UV_SCOPE"
+
+  - id: E-CROSSOVER
+    scope_in: "Intermediate coupling crossover window (gk ~ 1) non-perturbative matching analysis"
+    dependencies: ["YM-011"]
+    risk: R3
+    status: READY_FOR_ANALYSIS
 
 capabilities:
   CAP-001-problem-specification:
@@ -254,6 +261,10 @@ capabilities:
     status: ACCEPTED_BOUNDED
     scope: VOLUME_UNIFORM_PERIODIC_P1_PROVED_P2_PROVED_AT_WEAK_COUPLING_P3_OPEN
     evidence_refs: ["verification/YM-011-DYADIC-FREE-ENERGY-UNIFORMITY_TECHNICAL_ACCEPTANCE.md"]
+  CAP-012-uv-scale-transfer-lemma:
+    status: ACCEPTED_BOUNDED
+    scope: REGULATED_UV_SCOPE
+    evidence_refs: ["verification/YM-011_TECHNICAL_ACCEPTANCE.md"]
 
 external_systems: {}
 
@@ -275,10 +286,10 @@ hard_gates:
     description: "Prerequisites satisfied for active objective."
   scientific_tree_identity:
     status: PASS
-    description: "Closed-world scientific tree hash verified as ea10dbfcd1baf3dcbf19077af9445566d20d31b4c7e9cb8f26042c55528aa3f4."
+    description: "Closed-world scientific tree hash verified as 0a67f91cc7abc137c58504dbdde8168664b859c7891e62407de206eb77620704."
   state_revision_freshness:
     status: PASS
-    description: "State revision is monotonically incremented to 25."
+    description: "State revision is monotonically incremented to 26."
   no_unresolved_mandatory_blocker:
     status: PASS
     description: "Zero mandatory blockers exist."
@@ -310,6 +321,8 @@ evidence_refs:
     role: "Formal technical acceptance receipt for YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB"
   - ref: "verification/YM-011-DYADIC-FREE-ENERGY-UNIFORMITY_TECHNICAL_ACCEPTANCE.md"
     role: "Formal technical acceptance receipt for YM-011-DYADIC-FREE-ENERGY-UNIFORMITY"
+  - ref: "verification/YM-011_TECHNICAL_ACCEPTANCE.md"
+    role: "Formal technical acceptance receipt for YM-011"
 
 negative_history_refs:
   - ref: "NEGATIVE_EVIDENCE_REGISTER.md"
@@ -348,16 +361,16 @@ release:
     adapter: "NONE_BY_DESIGN / NOT_APPLICABLE"
 
 last_verified_checkpoint:
-  sha: "f478b5e73aad3aa9f3670803816f95695391aac9"
-  timestamp: "2026-09-30T22:30:00Z"
-  test_result: "363 passed"
+  sha: "aea612a9a128727ad7bf9de92e071c704c4e5760"
+  timestamp: "2026-09-30T23:40:00Z"
+  test_result: "370 passed"
 
 overhead:
   routine_target_fraction: 0.10
   measurement: UNKNOWN
   notes:
-    - "YM-011-DYADIC-FREE-ENERGY-UNIFORMITY completed and scientifically accepted (P1=PROVED, P2=PROVED_AT_WEAK_COUPLING, P3=OPEN)"
+    - "YM-011 (First Load-Bearing Bridge Lemma) completed and scientifically accepted (WITH_REGULATED_UV_SCOPE)"
 
 views:
-  last_validated_revision: 25
+  last_validated_revision: 26
   evidence_refs: []

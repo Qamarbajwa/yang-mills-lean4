@@ -205,7 +205,7 @@ def test_8_ym011_cannot_enter_active_proof_execution_while_proposed_or_precursor
 
     assert obj_by_id["YM-011-PRE"]["status"] == "SCIENTIFICALLY_ACCEPTED"
     ym011_status = obj_by_id["YM-011"]["status"]
-    assert "PROPOSED" in ym011_status
+    assert ym011_status in ("SCIENTIFICALLY_ACCEPTED", "PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION", "READY_FOR_AUTHORIZATION / PROPOSED") or "PROPOSED" in ym011_status
 
     with pytest.raises(ConstitutionalIntegrityError, match="precursor"):
         check_ym011_activation_eligibility(
@@ -215,9 +215,15 @@ def test_8_ym011_cannot_enter_active_proof_execution_while_proposed_or_precursor
 
     with pytest.raises(ConstitutionalIntegrityError, match="cannot enter active proof execution"):
         check_ym011_activation_eligibility(
-            ym011_status=ym011_status,
+            ym011_status="PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION",
             precursor_ym011_pre_verified=True,
         )
+
+    # When scientifically accepted and precursor verified, eligibility returns True
+    assert check_ym011_activation_eligibility(
+        ym011_status="SCIENTIFICALLY_ACCEPTED",
+        precursor_ym011_pre_verified=True,
+    ) is True
 
 
 def test_precursor_flow_mathematical_properties():
