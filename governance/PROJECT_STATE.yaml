@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 24
+revision: 25
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,10 +9,10 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "de11450f23497fc444571e6bdcba92a962535170"
-  scientific_candidate_sha: "de11450f23497fc444571e6bdcba92a962535170"
-  review_bound_sha: "de11450f23497fc444571e6bdcba92a962535170"
-  evidence_closeout_head: "9aec40b170415ba94fee65cb8d27df76ecd4aeaf"
+  head: "f478b5e73aad3aa9f3670803816f95695391aac9"
+  scientific_candidate_sha: "f478b5e73aad3aa9f3670803816f95695391aac9"
+  review_bound_sha: "f478b5e73aad3aa9f3670803816f95695391aac9"
+  evidence_closeout_head: "6a1883bec275fc0e910b5fe708a4b9151c55d5b5"
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -31,12 +31,12 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 24
-  last_updated_at: "2026-09-28T00:35:00Z"
-  active_contract: "YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB"
-  frozen_candidate: "de11450f23497fc444571e6bdcba92a962535170"
+  last_expected_revision: 25
+  last_updated_at: "2026-09-30T22:30:00Z"
+  active_contract: "YM-011"
+  frozen_candidate: "f478b5e73aad3aa9f3670803816f95695391aac9"
 
-current_objective: YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB
+current_objective: YM-011
 
 objectives:
   - id: YM-GOV-ADOPT-0406R3
@@ -202,10 +202,11 @@ objectives:
     scope_in: "Non-asymptotic volume uniformity of the periodic dyadic free-energy increment (1/|P_+|) ln(Z_per(beta/2)/Z_per(beta)) across O(L^{-2}) infrared modes and 3-cube Bianchi constraints"
     dependencies: ["YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB"]
     risk: R2
-    writer: "primary-worker"
-    reviewer_path: "fresh-blind-research-subagent"
-    acceptor: "distinct-technical-acceptor"
-    status: READY_FOR_EXECUTION
+    writer: "primary-worker (Luna: 00ffe8a3-c73a-4096-b0e7-53138b34c21a)"
+    reviewer_path: "fresh-blind-research-subagent-IND1 (669634f5-8065-48c8-91af-cb92c7e32365)"
+    acceptor: "b282550d-1e42-4f27-b351-6f575fae3f92 (distinct-technical-acceptor)"
+    status: SCIENTIFICALLY_ACCEPTED
+    scope_limitation: "P1_PROVED_P2_PROVED_AT_WEAK_COUPLING_P3_OPEN"
 
   - id: YM-011
     scope_in: "First load-bearing bridge lemma (UV scale-transfer & observables mollification)"
@@ -214,7 +215,7 @@ objectives:
     writer: "primary-worker"
     reviewer_path: "fresh-blind-research-subagent-IND1"
     acceptor: "autonomous-scientific-review"
-    status: PROPOSED / NOT AUTHORIZED FOR PROOF EXECUTION
+    status: READY_FOR_AUTHORIZATION / PROPOSED
 
 capabilities:
   CAP-001-problem-specification:
@@ -249,6 +250,10 @@ capabilities:
     status: ACCEPTED_BOUNDED
     scope: FIXED_VOLUME_PERIODIC_P1_PROVED_P2_OPEN
     evidence_refs: ["verification/YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB_TECHNICAL_ACCEPTANCE.md"]
+  CAP-011-dyadic-free-energy-uniformity:
+    status: ACCEPTED_BOUNDED
+    scope: VOLUME_UNIFORM_PERIODIC_P1_PROVED_P2_PROVED_AT_WEAK_COUPLING_P3_OPEN
+    evidence_refs: ["verification/YM-011-DYADIC-FREE-ENERGY-UNIFORMITY_TECHNICAL_ACCEPTANCE.md"]
 
 external_systems: {}
 
@@ -270,10 +275,10 @@ hard_gates:
     description: "Prerequisites satisfied for active objective."
   scientific_tree_identity:
     status: PASS
-    description: "Closed-world scientific tree hash verified as 0ad88e618086d4278b7dcf8141baed940d23f7ec1ccc33f9b86670aac072c399."
+    description: "Closed-world scientific tree hash verified as ea10dbfcd1baf3dcbf19077af9445566d20d31b4c7e9cb8f26042c55528aa3f4."
   state_revision_freshness:
     status: PASS
-    description: "State revision is monotonically incremented to 24."
+    description: "State revision is monotonically incremented to 25."
   no_unresolved_mandatory_blocker:
     status: PASS
     description: "Zero mandatory blockers exist."
@@ -303,6 +308,8 @@ evidence_refs:
     role: "Formal technical acceptance receipt for YM-011-TREE-GAUGE-R1"
   - ref: "verification/YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB_TECHNICAL_ACCEPTANCE.md"
     role: "Formal technical acceptance receipt for YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB"
+  - ref: "verification/YM-011-DYADIC-FREE-ENERGY-UNIFORMITY_TECHNICAL_ACCEPTANCE.md"
+    role: "Formal technical acceptance receipt for YM-011-DYADIC-FREE-ENERGY-UNIFORMITY"
 
 negative_history_refs:
   - ref: "NEGATIVE_EVIDENCE_REGISTER.md"
@@ -341,16 +348,16 @@ release:
     adapter: "NONE_BY_DESIGN / NOT_APPLICABLE"
 
 last_verified_checkpoint:
-  sha: "de11450f23497fc444571e6bdcba92a962535170"
-  timestamp: "2026-09-28T00:35:00Z"
-  test_result: "356 passed"
+  sha: "f478b5e73aad3aa9f3670803816f95695391aac9"
+  timestamp: "2026-09-30T22:30:00Z"
+  test_result: "363 passed"
 
 overhead:
   routine_target_fraction: 0.10
   measurement: UNKNOWN
   notes:
-    - "YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB completed and scientifically accepted (P1=PROVED, P2=OPEN, P3=OPEN)"
+    - "YM-011-DYADIC-FREE-ENERGY-UNIFORMITY completed and scientifically accepted (P1=PROVED, P2=PROVED_AT_WEAK_COUPLING, P3=OPEN)"
 
 views:
-  last_validated_revision: 24
+  last_validated_revision: 25
   evidence_refs: []

@@ -222,19 +222,29 @@
   - Independently audited by E4 Reviewer `e0458aff-ded7-42e2-b0e6-657daff42dbe` (`INTEGRITY_PASS_WITH_LIMITATIONS`) and accepted by Distinct Technical Acceptor `54d6ae9e-d3f0-4675-a935-92b6f574d32c` (`TECHNICAL_ACCEPTANCE_GRANTED`) on Candidate `de11450f23497fc444571e6bdcba92a962535170`.
   - Status: `SCIENTIFICALLY_ACCEPTED`.
 
+- **Task `YM-011-DYADIC-FREE-ENERGY-UNIFORMITY` (Non-Asymptotic Volume Uniformity of Periodic Dyadic Free-Energy Increment, Thermodynamic Suppression of Toron Zero Modes, and Resolution of Volume-Uniform Periodic Plaquette Bound $P2$) Completed & Scientifically Accepted:**
+  - Proved thermodynamic $O(L^{-d}) \to 0$ suppression of flat toron moduli and quartic zero modes in the specific free energy density, demonstrating that toron zero modes are thermodynamically irrelevant as $L \to \infty$.
+  - Proved exact lattice Fourier cancellation of all non-zero Laplacian eigenvalues $\hat{\Delta}(k) > 0$ in the dyadic partition ratio $Z_0(\beta/2)/Z_0(\beta) = \sqrt{2}$, establishing monotonic volume convergence and eliminating infrared eigenvalue divergences.
+  - Proved strict monotonicity of the stratified Laplace slope: $C_{\mathrm{per}}(L, 4, N) = \frac{N^2-1}{4}(1 - \frac{1}{3L^4}) < C_{\mathrm{bulk}}(4, N) = \frac{N^2-1}{4}$ for all finite $L \ge 2$, with deficit $\frac{N^2-1}{12L^4} > 0$, confirming that toron zero modes strictly reduce the mean plaquette energy on every finite lattice.
+  - Resolved `P2` (`VOLUME_UNIFORM_PERIODIC_O_1_OVER_BETA = PROVED_AT_WEAK_COUPLING`) via Theorem `YM-011-DYADIC-T1`: $e_{\mathrm{plaq}}(\beta, \Lambda_{\mathrm{per}}(L, d)) \le \frac{C_{\mathrm{bulk}}(d, N)}{\beta}$ uniformly in $L \ge 2$ for all $\beta \ge \beta_0(d, N)$, with $C_{\mathrm{bulk}}(4, N) = \frac{N^2-1}{4}$.
+  - Enforced strict non-sufficiency for $P3$ (`CONTINUUM_UNIFORM_CONTROL = OPEN`): bare lattice weak-coupling plaquette bounds establish local link smoothness on fixed lattices, but do not construct the continuum limit $a \to 0$ or establish the non-perturbative Wightman/OS spectral mass gap.
+  - Independently audited by E4 Reviewer `669634f5-8065-48c8-91af-cb92c7e32365` (`INTEGRITY_PASS_WITH_LIMITATIONS`) and accepted by Distinct Technical Acceptor `b282550d-1e42-4f27-b351-6f575fae3f92` (`TECHNICAL_ACCEPTANCE_GRANTED`) on Candidate `f478b5e73aad3aa9f3670803816f95695391aac9`.
+  - Status: `SCIENTIFICALLY_ACCEPTED`.
+
 ## UNVERIFIED
 - No original Yang–Mills lemma has been certified by an external peer-reviewed journal.
 - The Clay Millennium Problem #4 status remains strictly `OPEN_AND_UNSOLVED` (`GOAL_COMPLETE = FALSE`).
 - Proof claims for complete bridge closure (`YM-010`) and mass gap (`YM-009`) are `NOT_ESTABLISHED`.
-- Volume-uniform $O(1/\beta)$ periodic plaquette bound (`P2`) and continuum-useful uniform control (`P3`) in $d \ge 3$ remain `OPEN` (`NEG-YM-011-TORON-1`, blocked by `YM-011-DYADIC-FREE-ENERGY-UNIFORMITY`).
+- Continuum-useful uniform control (`P3`) and non-perturbative continuum limit construction remain `OPEN`.
 
 ## CURRENT BOTTLENECK
 - Tasks `YM-006` through `YM-010` are held under `SCIENTIFIC_REVIEW_HOLD`.
-- `YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB` is `SCIENTIFICALLY_ACCEPTED` (`P1 = PROVED`, `P2 = OPEN`, `P3 = OPEN`).
-- Next unblocked objective: `YM-011-DYADIC-FREE-ENERGY-UNIFORMITY` (`READY_FOR_EXECUTION`).
+- `YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB` and `YM-011-DYADIC-FREE-ENERGY-UNIFORMITY` are `SCIENTIFICALLY_ACCEPTED` (`P1 = PROVED`, `P2 = PROVED_AT_WEAK_COUPLING`, `P3 = OPEN`).
+- All prerequisites for the first load-bearing bridge lemma (`YM-011`) across the precursor (`YM-011-PRE-R1`), observable transfer map (`YM-011-OBS-MAP`), plaquette expectation bound (`YM-011-PLAQUETTE-EXP-R2`), tree-gauge zero-mode separation (`YM-011-TREE-GAUGE-R1`), toron quartic commutator analysis (`YM-011-TORON`), and dyadic free energy uniformity (`YM-011-DYADIC`) are complete and scientifically accepted.
+- Next objective: `YM-011` (First Load-Bearing Bridge Lemma: UV Scale-Transfer & Observables Mollification along Branch A).
 
 ## NEXT ACTION
-- Execute Task `YM-011-DYADIC-FREE-ENERGY-UNIFORMITY`: Investigate whether the non-asymptotic dyadic partition-ratio increment $\frac{1}{|P_+|} \ln \frac{Z_{\mathrm{per}}(\beta/2)}{Z_{\mathrm{per}}(\beta)}$ can be bounded uniformly in $L$ at fixed $\beta$ across $O(L^{-2})$ infrared modes and 3-cube Bianchi constraints (`P2`).
+- Authorize and execute Task `YM-011`: Construct and prove the first load-bearing UV scale-transfer and observables mollification lemma connecting lattice spacing $a$ and $2a$ under non-perturbative flow mollification with exact $\mathcal{O}(a/|C|)$ error bounds.
 
 
 
