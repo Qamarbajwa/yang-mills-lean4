@@ -47,4 +47,5 @@
 | YM-011-DYADIC-FREE-ENERGY-UNIFORMITY | Non-asymptotic volume uniformity of periodic dyadic free-energy increment | YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB | T3 | volume-uniform bound on (1/|P_+|) ln(Z(beta/2)/Z(beta)) or Peierls/RG block localization | SCIENTIFICALLY_ACCEPTED (P1=PROVED, P2=PROVED_AT_WEAK_COUPLING, P3=OPEN) |
 | YM-011 | First load-bearing bridge lemma | YM-004, YM-011-PRE, YM-011-OBS-MAP, YM-011-PLAQUETTE-EXP, YM-011-TREE-GAUGE, YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB, YM-011-DYADIC-FREE-ENERGY-UNIFORMITY | T3 | UV scale-transfer lemma proof + counterexample testing | SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_UV_SCOPE) |
 | E-CROSSOVER / YM-012 | Intermediate coupling crossover window ($g_k \sim 1$) analysis & obstruction | YM-011 | T3 | DAG decomposition + YM-012-TARGET + obstruction proofs + E4 review | SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN) |
+| YM-013 | Certified finite-N loop-bootstrap crossover bounds | YM-012 | T3 | YM-013-TARGET + finite-N hierarchy + certified SDP + continuum truncation barrier | SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN) |
 

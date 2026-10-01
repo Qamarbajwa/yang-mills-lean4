@@ -248,6 +248,17 @@
   - Independently audited by E4 Reviewer `f8eb2cd1-153e-4b9d-85a9-d69a6fc8a234` (`INTEGRITY_PASS_WITH_LIMITATIONS`) and accepted by Distinct Technical Acceptor `5f77db90-1f10-4af3-94ec-6bf5db91bbfc` (`TECHNICAL_ACCEPTANCE_GRANTED`) on Candidate `903c6962b921167e67832064c6193f0e6137cd11`.
   - Status: `SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN)`.
 
+- **Task `YM-013` (Certified Finite-N Loop-Bootstrap Crossover Bounds, YM-013-TARGET, Theorems YM-013-T1 through T4, and Continuum Truncation Barrier) Completed & Scientifically Accepted:**
+  - Formulated the minimum crossover target `YM-013-TARGET` (`literature/YM-013-LOOP-BOOTSTRAP-TARGET.md`) across all 16 formal fields with explicit non-claims.
+  - Reconstructed exact finite-$N$ lattice loop equations (Schwinger–Dyson / Makeenko–Migdal) on $\mathbb{Z}^4$ for $SU(N)$ and specialized to $SU(2)$ (`literature/YM-013-FINITE-N-LOOP-HIERARCHY.md`).
+  - Proved Theorem `YM-013-T1`: exact finite-$N$ multi-trace proliferation couples $m$-loop expectations to $(m+1)$-loop expectations, forming an infinite, underdetermined BBGKY-type hierarchy.
+  - Proved Theorem `YM-013-T2`: $SU(2)$ Mandelstam trace elimination $w(A)w(B) = \frac{1}{2}w(AB) + \frac{1}{2}w(AB^{-1})$ forces loop perimeter addition $|AB| = |A| + |B|$, converting multi-trace proliferation into exponential perimeter explosion $\sum |L_k|$.
+  - Proved Theorem `YM-013-T3`: moment matrix positive semidefiniteness $\mathcal{M} \succeq 0$, Level-4 quadratic bounds, Level-6 reflection-positivity tightened bounds ($w_p \in [0.245, 0.785]$ at $\beta=2.0$), and deterministic interval Cholesky verification of dual slack matrices $\mathcal{S}^* \succeq 0$ with strictly positive pivots, independent of solver status (`literature/YM-013-CERTIFIED-SDP-ANALYSIS.md`).
+  - Proved Theorem `YM-013-T4`: continuum finite-perimeter truncation barrier proving that for any fixed $L_{\max} < \infty$, the physical reach $R_{\max}(a) = L_{\max} a \to 0$ as $a \to 0$, while the non-perturbative crossover scale requires $L_{\mathrm{cross}}(a) = R_{\mathrm{cross}}/a \to \infty$. Thus, finite-level loop bootstrapping cannot close `E-CROSSOVER` in the continuum limit.
+  - Registered negative evidence `NEG-YM-013-BOOTSTRAP-1` and `NEG-YM-013-BOOTSTRAP-2` in `NEGATIVE_EVIDENCE_REGISTER.md`.
+  - Independently audited by E4 Reviewer `e6bc9f99-4a65-4c33-8335-8222892de4a3` (`INTEGRITY_PASS_WITH_LIMITATIONS`) and accepted by Distinct Technical Acceptor `736315c1-b09b-46d0-a3db-bc1c4c284878` (`TECHNICAL_ACCEPTANCE_GRANTED`) on Candidate `f81eb27087159fb165b2aab9a728d40f984d4f8d`.
+  - Status: `SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN)`.
+
 ## UNVERIFIED
 - No original Yang–Mills lemma has been certified by an external peer-reviewed journal.
 - The Clay Millennium Problem #4 status remains strictly `OPEN_AND_UNSOLVED` (`GOAL_COMPLETE = FALSE`).
@@ -258,11 +269,12 @@
 - Tasks `YM-006` through `YM-010` are held under `SCIENTIFIC_REVIEW_HOLD`.
 - Task `YM-011` (First Load-Bearing Bridge Lemma) is completed and `SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_UV_SCOPE)`.
 - Task `YM-012` (Intermediate Coupling Crossover Analysis) is completed and `SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN)`.
-- The crossover window $g_k \sim 1$ is proved to be an irreducible structural obstruction: all five candidate mechanisms fail to cross $g \sim 1$ into the continuum limit.
+- Task `YM-013` (Certified Finite-N Loop Bootstrap) is completed and `SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN)`.
+- The crossover window $g_k \sim 1$ is proved to be an irreducible structural obstruction: series expansions, flow continuation, and finite-perimeter loop bootstrap all fail to bridge $g \sim 1$ into the continuum limit.
 
 ## NEXT ACTION
 - Maintain `E-CROSSOVER = OPEN`, `P3 = OPEN`, and `CLAY_PROBLEM = OPEN_AND_UNSOLVED`.
-- Explore non-perturbative avenues for `E-CROSSOVER` that bypass series expansions (e.g. certified semidefinite programming loop bootstrap bounds, or random surface percolation) or pursue complementary edges in the 19-edge missing-bridge DAG.
+- Per Phase 12 of the mandate, activate the backup branch: `YM-014 — RANDOM-SURFACE / DUALITY CROSSOVER REPRESENTATION` to investigate non-perturbative random surface percolation and dual representations, or pursue complementary edges in the 19-edge missing-bridge DAG (`E-UV-FREE-CONT`).
 
 
 
