@@ -233,7 +233,7 @@ def test_14_scientific_candidate_and_evidence_closeout_head_remain_distinct():
     assert candidate_sha is not None
     # Material change invalidates review, but non-scientific closeout preserves tree hash
     tree_hash, _ = compute_closed_world_scientific_tree_hash(ROOT)
-    assert tree_hash == "0a67f91cc7abc137c58504dbdde8168664b859c7891e62407de206eb77620704"
+    assert tree_hash == "9d9b39628156b1925b36e9d34126ead9f6eb52a788f0e9944bae4e58e17462f4"
 
 
 # ─── TEST 15: v4.0.6-r3 structural release validation != project readiness ────

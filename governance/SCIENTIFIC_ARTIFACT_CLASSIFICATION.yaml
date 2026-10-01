@@ -116,6 +116,8 @@ scientific_fingerprint:
     - literature/YM-012-RECONCILED-19-EDGE-GRAPH.md
     - literature/YM-012-REPAIRED-HYBRID-STRATEGY.md
     - literature/YM-012-VISUAL-INTUITION-COMPANION.md
+    - literature/YM-012-CROSSOVER-ANALYSIS.md
+    - literature/YM-012-CROSSOVER-DEPENDENCY-DAG.md
     - governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml
 unknown_policy:
   research_locations:

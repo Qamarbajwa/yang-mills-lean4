@@ -165,3 +165,19 @@
 - **Hypothesis tested:** Whether the geometric convergence of the multiscale UV transfer error $\sum_{j=0}^{n-1} 2^{-j} g_j^2 \le 2 g_0^2$ is sufficient to construct the infinite-volume continuum Yang-Mills theory and prove the mass gap $\Delta > 0$.
 - **Result:** Falsified. The multiscale geometric series converges only within the perturbative domain $g_j \le g_* < 1$. At the intermediate crossover scale $a_{\mathrm{cross}} \sim 0.2\text{--}0.5\text{ fm}$ where $g_k \sim 1$, Bałaban's small-field Gaussian minimizer and polymer cluster expansion lose stability (`CrossoverBoundaryReached`). UV scale transfer alone cannot bridge the intermediate crossover window (`E-CROSSOVER = OPEN`), cannot construct the continuum Schwinger functions, and cannot establish the physical mass gap (`CLAY_PROBLEM = OPEN_AND_UNSOLVED`, `GOAL_COMPLETE = FALSE`).
 
+### NEG-YM-012-CROSSOVER-1: Falsification of Unconditional Flow-Mollified Crossover Continuation (`YM-012`)
+- **Discovery Date:** 2026-10-02
+- **Epistemic Classification:** `[NON_PERTURBATIVE_CROSSOVER_OBSTRUCTION_AND_TV_DIVERGENCE]`
+- **Hypothesis tested:** Whether flow mollification and midpoint-exponential blocking can unconditionally continue the UV effective measure $\mu_{\mathrm{UV}}$ through the intermediate crossover window $g_k \sim 1$ into the strong-coupling polymer domain without measure-variation divergences.
+- **Result:** Falsified. By Theorem `YM-012-T4`, the total variation distance $\mathcal{D}_{\mathrm{TV}}(\mu_{k+1}, (\mathcal{B}_\alpha^{\mathrm{mid}})_* \mu_k)$ between the interacting crossover measure and the pushed-forward measure is $\Omega(1)$ per scale step when $g_k \sim 1$ due to non-Gaussian effective action contributions of order $O(1)$. Summed over $K_{\mathrm{cross}} = \Omega(1/g_*^2 - 1/g_{\mathrm{strong}}^2)$ scale steps, the accumulated discrepancy is bounded away from zero and cannot be made arbitrarily small by flow matching alone. Edge `E-CROSSOVER` remains strictly `OPEN`.
+
+### NEG-YM-012-CROSSOVER-2: Simultaneous Failure of Gaussian and Polymer Expansions in the Crossover Window (`YM-012`)
+- **Discovery Date:** 2026-10-02
+- **Epistemic Classification:** `[SIMULTANEOUS_EXPANSION_CONVERGENCE_BREAKDOWN]`
+- **Hypothesis tested:** Whether either Bałaban's small-field Gaussian contractivity or the Osterwalder–Seiler character polymer expansion converges in the intermediate inverse coupling window $\beta \in (\beta_0, \beta_{\mathrm{UV}}^*)$ ($\beta \in (0.25, 6.25)$ for $SU(2)$).
+- **Result:** Falsified. By Theorem `YM-012-T2`, for any $\beta \in (\beta_0, \beta_{\mathrm{UV}}^*)$:
+  1. The Bałaban Gaussian contractivity parameter $\kappa_{\mathrm{BF}}(g) = C_{\mathrm{fluc}} g^2 \exp(c_1 g^2) \ge 1.0$ fails to contract, as non-Gaussian fluctuations exceed the Gaussian variance.
+  2. The Kotecký–Preiss polymer criterion $\sum_{Y \sim X} |\zeta(Y)| e^{\mu |Y|} \le \mu |X|$ fails for the plaquette activity $\zeta(p) = \beta/(2N)$ on $\mathbb{Z}^4$ where coordination number $C_{\mathrm{geom}} \ge 6$.
+  3. The Shen–Zhu–Zhu Langevin Ricci curvature lower bound degenerates to zero due to near-zero modes on the gauge orbit space.
+  Thus, the crossover window is a genuine mathematical barrier unbridged by any known constructive expansion.
+
