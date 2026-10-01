@@ -195,4 +195,21 @@
 - **Hypothesis tested:** Whether a finite-level semidefinite programming (SDP) loop bootstrap (at fixed truncation depth $L_{\max} < \infty$) can establish non-perturbative bounds on the intermediate coupling crossover window in the continuum limit $a \to 0$.
 - **Result:** Falsified. By Theorem `YM-013-T4`, for any fixed $L_{\max} < \infty$, the physical perimeter of the bootstrap dictionary vanishes as $a \to 0$: $R_{\max}(a) = L_{\max} a \to 0$. Conversely, the physical crossover scale requires a fixed non-zero physical distance $R_{\mathrm{cross}} \sim \Lambda_{\mathrm{QCD}}^{-1} \approx 0.5\text{ fm}$, corresponding to lattice perimeter $L_{\mathrm{cross}}(a) = R_{\mathrm{cross}}/a \to \infty$. Thus, $\lim_{a \to 0} R_{\max}(a) / R_{\mathrm{cross}} = 0$. Any finite-level bootstrap is strictly blind to the non-perturbative crossover scale in the continuum limit. Edge `E-CROSSOVER` remains strictly `OPEN`, `P3 = OPEN`, `CLAY_PROBLEM = OPEN_AND_UNSOLVED`, and `GOAL_COMPLETE = FALSE`.
 
+### NEG-YM-014-SURFACE-1: Random-Surface Roughening and Entropy-Energy Divergence in the Crossover Regime (`YM-014`)
+- **Discovery Date:** 2026-10-02
+- **Epistemic Classification:** `[ENTROPY_ENERGY_DEFICIT_AND_ROUGHENING_DIVERGENCE]`
+- **Hypothesis tested:** Whether the exact character-expansion random-surface representation converges and provides an un-inverted area-law lower bound throughout the intermediate crossover window $\beta \in [1.5, 2.5]$ ($g \sim 1$).
+- **Result:** Falsified. By Theorem `YM-014-T1`, the 4D surface entropy connectivity constant satisfies $\mu_4 \ge 3.5$ ($\ln \mu_4 \ge 1.2528$, with physical hypercubic value $\mu_4 \approx 6.0$, $\ln \mu_4 \approx 1.7918$). The bare character-expansion surface tension $\tau_0(\beta) = -\ln a_{1/2}(\beta)$ satisfies $\tau_0(2.0) \approx 1.5298 < \ln \mu_4$. For all $\beta \ge \beta_c^{\mathrm{rough}} \approx 1.56$ (and even under the conservative lower bound $\mu_4 \ge 5.0$, for all $\beta \ge 1.88$), the growth factor $\mu_4 e^{-\tau_0(\beta)} > 1$. The random-surface partition sum $\sum_A N(A) e^{-\tau_0 A}$ undergoes a Hagedorn / roughening divergence, bare surfaces proliferate uncontrollably, and strong-coupling surface localization is destroyed.
+
+### NEG-YM-014-SURFACE-2: Non-Abelian Dual Spin-Foam Sign Oscillation Barrier and Continuum Scaling Defect (`YM-014`)
+- **Discovery Date:** 2026-10-02
+- **Epistemic Classification:** `[NON_ABELIAN_SIGN_PROBLEM_AND_CONTINUUM_SCALING_DEFECT]`
+- **Hypothesis tested:** Whether non-Abelian dual cell-complex / spin-foam representations or center-vortex decompositions can bypass the roughening divergence and provide an un-inverted confinement bound in the continuum limit.
+- **Result:** Falsified.
+  1. By Theorem `YM-014-T2`, 4D non-Abelian dual spin foams contain vertex weights formed by contractions of intertwiners (Wigner $6j$ / $15j$ symbols) that take indefinite signs (e.g. $\left\{\begin{matrix} 1 & 1 & 1 \\ 1/2 & 1/2 & 1/2 \end{matrix}\right\} = -1/3 < 0$). Dual weights are not strictly non-negative; the average sign decays exponentially with volume $\langle \operatorname{sign} \rangle \le e^{-c V}$, destroying probabilistic interpretation, Peierls contour percolation, and cluster expansions.
+  2. By Theorem `YM-014-T3`, center-vortex decompositions $U_e = z_e V_e$ suffer from divergent non-local effective interactions when the $SO(3)$ coset degrees of freedom are integrated out at $\beta > \beta_0 \approx 0.35$.
+  3. By Theorem `YM-014-T4`, physical continuum string tension requires $\tau(a) = \sigma_{\mathrm{phys}} a^2 \to 0$, which strictly forces $\tau(a) < \ln \mu_4$ into the rough phase as $a \to 0$. Fixed bare lattice surface models are structurally incompatible with continuum asymptotic freedom.
+  Edge `E-CROSSOVER` remains strictly `OPEN`, `P3 = OPEN`, `CLAY_PROBLEM = OPEN_AND_UNSOLVED`, and `GOAL_COMPLETE = FALSE`.
+
+
 
