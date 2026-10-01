@@ -181,3 +181,18 @@
   3. The Shen–Zhu–Zhu Langevin Ricci curvature lower bound degenerates to zero due to near-zero modes on the gauge orbit space.
   Thus, the crossover window is a genuine mathematical barrier unbridged by any known constructive expansion.
 
+### NEG-YM-013-BOOTSTRAP-1: Finite-$N$ Multi-Trace Proliferation and Mandelstam Perimeter Explosion Obstruction (`YM-013`)
+- **Discovery Date:** 2026-10-02
+- **Epistemic Classification:** `[ALGEBRAIC_HIERARCHY_NON_CLOSURE_AND_PERIMETER_EXPLOSION]`
+- **Hypothesis tested:** Whether finite-$N$ lattice loop equations (Schwinger–Dyson / Makeenko–Migdal) can self-close at a finite trace truncation degree $m < \infty$ or via Mandelstam trace reductions without generating infinite-degree or infinite-perimeter unknowns.
+- **Result:** Falsified.
+  1. By Theorem `YM-013-T1`, at any finite $N < \infty$, the absence of large-$N$ planar factorization ($\langle w(C_1) w(C_2) \rangle \ne \langle w(C_1) \rangle \langle w(C_2) \rangle$) causes the action variation $\sum_{p \ni \ell} \dots$ to couple $m$-loop correlators to $(m+1)$-loop correlators, producing an infinite, underdetermined BBGKY-type hierarchy.
+  2. By Theorem `YM-013-T2`, while the $SU(2)$ Mandelstam identity $w(A)w(B) = \frac{1}{2}w(AB) + \frac{1}{2}w(AB^{-1})$ eliminates multi-trace operators, it sums loop perimeters: $|AB| = |A| + |B|$. This converts multi-trace proliferation into an exponential perimeter explosion $L \to \infty$, preventing closure at any finite loop cutoff $L_{\max} < \infty$.
+
+### NEG-YM-013-BOOTSTRAP-2: Finite-Perimeter Truncation Barrier in the Continuum Limit (`YM-013`)
+- **Discovery Date:** 2026-10-02
+- **Epistemic Classification:** `[CONTINUUM_LIMIT_DECOUPLING_AND_TRUNCATION_BARRIER]`
+- **Hypothesis tested:** Whether a finite-level semidefinite programming (SDP) loop bootstrap (at fixed truncation depth $L_{\max} < \infty$) can establish non-perturbative bounds on the intermediate coupling crossover window in the continuum limit $a \to 0$.
+- **Result:** Falsified. By Theorem `YM-013-T4`, for any fixed $L_{\max} < \infty$, the physical perimeter of the bootstrap dictionary vanishes as $a \to 0$: $R_{\max}(a) = L_{\max} a \to 0$. Conversely, the physical crossover scale requires a fixed non-zero physical distance $R_{\mathrm{cross}} \sim \Lambda_{\mathrm{QCD}}^{-1} \approx 0.5\text{ fm}$, corresponding to lattice perimeter $L_{\mathrm{cross}}(a) = R_{\mathrm{cross}}/a \to \infty$. Thus, $\lim_{a \to 0} R_{\max}(a) / R_{\mathrm{cross}} = 0$. Any finite-level bootstrap is strictly blind to the non-perturbative crossover scale in the continuum limit. Edge `E-CROSSOVER` remains strictly `OPEN`, `P3 = OPEN`, `CLAY_PROBLEM = OPEN_AND_UNSOLVED`, and `GOAL_COMPLETE = FALSE`.
+
+
