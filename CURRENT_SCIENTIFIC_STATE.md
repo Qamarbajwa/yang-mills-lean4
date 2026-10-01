@@ -238,6 +238,16 @@
   - Independently audited by E4 Reviewer `a03a4083-092d-46ea-8cb2-b208f979f556` (`INTEGRITY_PASS_WITH_LIMITATIONS`) and accepted by Distinct Technical Acceptor `a27c8a9c-255d-4302-abc9-02e95a9f4f34` (`TECHNICAL_ACCEPTANCE_GRANTED`) on Candidate `aea612a9a128727ad7bf9de92e071c704c4e5760`.
   - Status: `SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_UV_SCOPE)`.
 
+- **Task `YM-012` (Intermediate Coupling Crossover Window Analysis, E-CROSSOVER Fine-Grained Dependency DAG, Minimum Crossover Theorem YM-012-TARGET, and Crossover Continuation Obstruction Theorems) Completed & Scientifically Accepted:**
+  - Constructed the fine-grained `E-CROSSOVER` dependency DAG (`literature/YM-012-CROSSOVER-DEPENDENCY-DAG.md`) decomposing the transition from YM-011 UV control to the continuum mass gap into 8 distinct nodes (`N-UV-RG-BOUNDS` to `N-MASS-GAP`) and 7 directed edges without compounding.
+  - Formulated the minimum crossover theorem `YM-012-TARGET` (`literature/YM-012-CROSSOVER-ANALYSIS.md`) across all 10 formal fields, with explicit non-claims disclaiming continuum Schwinger functions, reflection positivity, or Clay completion.
+  - Proved Theorem `YM-012-T1`: the analytical non-meeting metric $\Delta\beta \equiv \beta_{\mathrm{UV}}^* - \beta_0 \ge 2N - 1 > 0$ for all $N \ge 2$ in $d=4$, requiring a non-zero RG scale ratio $\mathcal{R}_{\mathrm{RG}} = \frac{12\pi^2}{11 N^2} \Delta\beta$ ($K_{\mathrm{cross}} \approx 24$ dyadic steps for $SU(2)$).
+  - Proved Theorem `YM-012-T2`: simultaneous failure of expansions throughout the crossover window $\beta \in (\beta_0, \beta_{\mathrm{UV}}^*)$ (Bałaban Gaussian contractivity $\kappa_{\mathrm{BF}} \ge 1$, Kotecký–Preiss polymer criterion diverges, and Shen–Zhu–Zhu Ricci curvature degenerates).
+  - Formulated Lemma `YM-012-L1` (bounded flow-mollified crossover comparison decomposition) and proved Theorem `YM-012-T4` (crossover continuation obstruction: total variation distance $\mathcal{D}_{\mathrm{TV}} = \Omega(1)$ per step, yielding an accumulated error of $\Omega(K_{\mathrm{cross}})$ that falsifies unconditional flow-mollified crossover continuation).
+  - Registered negative evidence `NEG-YM-012-CROSSOVER-1` and `NEG-YM-012-CROSSOVER-2` in `NEGATIVE_EVIDENCE_REGISTER.md`.
+  - Independently audited by E4 Reviewer `f8eb2cd1-153e-4b9d-85a9-d69a6fc8a234` (`INTEGRITY_PASS_WITH_LIMITATIONS`) and accepted by Distinct Technical Acceptor `5f77db90-1f10-4af3-94ec-6bf5db91bbfc` (`TECHNICAL_ACCEPTANCE_GRANTED`) on Candidate `903c6962b921167e67832064c6193f0e6137cd11`.
+  - Status: `SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN)`.
+
 ## UNVERIFIED
 - No original Yang–Mills lemma has been certified by an external peer-reviewed journal.
 - The Clay Millennium Problem #4 status remains strictly `OPEN_AND_UNSOLVED` (`GOAL_COMPLETE = FALSE`).
@@ -247,10 +257,13 @@
 ## CURRENT BOTTLENECK
 - Tasks `YM-006` through `YM-010` are held under `SCIENTIFIC_REVIEW_HOLD`.
 - Task `YM-011` (First Load-Bearing Bridge Lemma) is completed and `SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_UV_SCOPE)`.
-- Next unbridged structural objective: `E-CROSSOVER` (Intermediate Coupling Crossover Window $g_k \sim 1$ between UV asymptotic freedom and IR confinement).
+- Task `YM-012` (Intermediate Coupling Crossover Analysis) is completed and `SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN)`.
+- The crossover window $g_k \sim 1$ is proved to be an irreducible structural obstruction: all five candidate mechanisms fail to cross $g \sim 1$ into the continuum limit.
 
 ## NEXT ACTION
-- Formulate and analyze the intermediate coupling crossover boundary `E-CROSSOVER` ($g_k \sim 1$) to investigate non-perturbative scale-matching mechanisms between UV multiscale RG and IR non-perturbative regimes.
+- Maintain `E-CROSSOVER = OPEN`, `P3 = OPEN`, and `CLAY_PROBLEM = OPEN_AND_UNSOLVED`.
+- Explore non-perturbative avenues for `E-CROSSOVER` that bypass series expansions (e.g. certified semidefinite programming loop bootstrap bounds, or random surface percolation) or pursue complementary edges in the 19-edge missing-bridge DAG.
+
 
 
 
