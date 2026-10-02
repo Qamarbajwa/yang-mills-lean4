@@ -245,6 +245,8 @@
 - **Epistemic Classification:** `[METHOD_SPECIFIC_OBSTRUCTION]`
 - **Hypothesis tested:** Whether 4D gradient flow or 4D block averaging automatically preserves Osterwalder–Schrader reflection positivity (OS2) across the Euclidean time hyperplane $x_4 = 0$.
 - **Result:** Falsified without support buffer. 4D gradient flow is isotropic parabolic diffusion with physical radius $R_{\mathrm{diff}} = \sqrt{8 t_{\mathrm{phys}}}$. An observable placed within distance $\delta \le \sqrt{8 t_{\mathrm{phys}}}$ of $x_4 = 0$ diffuses links into the negative time half-space $x_4 < 0$, violating the strict positive-time algebra condition $A \in \mathcal{A}_+$. Reflection positivity is preserved if and only if test functions satisfy the strict support buffer $\operatorname{dist}(\operatorname{supp}(f), \{x_4 = 0\}) > \sqrt{8 t_{\mathrm{phys}}}$.
+- **Post-Reconciliation Amendment Note (`YM-015R`):**  
+  *Correction:* The assertion that reflection positivity is restored by the support buffer $\delta > \sqrt{8t}$ is **REFUTED**. The quantity $\sqrt{8t}$ is only the root-mean-square diffusion length, not a compact support boundary. Parabolic heat diffusion has non-compact support ($K_t(x-y) > 0$ strictly everywhere for any $t > 0$), so flowed observables at $x_4 > 0$ depend on bare links in $x_4 < 0$ for all finite $\delta < \infty$. The exact RP defect is $\Delta_{\mathrm{RP}} \sim O(e^{-\delta^2/(4t)}) > 0$. Exact reflection positivity fails for all 4D gradient-flowed observables at finite flow time. Exact OS2 can only be recovered via a two-stage limit $t \downarrow 0$ (Route C). Classified as `REFUTED_FOR_EXACT_RP_AT_FINITE_FLOW_TIME`.
 
 ### NEG-YM-015-POWER-1: Ultraviolet Power Divergences of Unsmeared Lattice Curvature Jets (`YM-015`)
 - **Discovery Date:** 2026-10-02
@@ -257,3 +259,28 @@
 - **Epistemic Classification:** `[STRUCTURAL_EDGE_SEPARATION]`
 - **Hypothesis tested:** Whether constructing continuum Schwinger distributions and proving $SO(4)$ restoration in a fixed finite physical volume $V = L_{\mathrm{phys}}^4 < \infty$ suffices to establish the infinite-volume Yang–Mills mass gap.
 - **Result:** Falsified (order of limits separation). In a finite physical volume $V < \infty$, the Hamiltonian spectrum is discrete and isolated by finite-size box quantization, producing an apparent discrete gap $\sim 1/L_{\mathrm{phys}}$ even in free massless gauge theories. Proving the true physical mass gap strictly requires taking the thermodynamic limit $L_{\mathrm{phys}} \to \infty$ across the non-perturbative crossover window ($g \sim 1$) and proving that the spectral gap remains strictly positive ($\lim_{L \to \infty} \Delta(L) \ge m > 0$). Task `YM-015` remains strictly upstream of the thermodynamic limit. `CLAY_PROBLEM = OPEN_AND_UNSOLVED`, `goal_complete = false`, and `P3 = OPEN`.
+
+### NEG-YM-015R-RP-1: Parabolic Heat-Kernel Support Non-Compactness and Exact OS Reflection Positivity Breakdown (`YM-015R`)
+- **Discovery Date:** 2026-10-02
+- **Epistemic Classification:** `[METHOD_SPECIFIC_OBSTRUCTION]`
+- **Hypothesis tested:** Whether 4D gradient flow with support buffer $\delta > \sqrt{8t}$ satisfies exact Osterwalder–Schrader reflection positivity (OS2) at finite flow time $t > 0$.
+- **Result:** Refuted. Parabolic heat diffusion has non-compact support ($K_t(x-y) \propto e^{-|x-y|^2/(4t)} > 0$ strictly everywhere for any $t > 0$). Flowed fields at positive Euclidean time receive analytic contributions from bare links at negative Euclidean time. The positive-time algebra condition $\mathcal{O}_t(f) \in \mathcal{A}_+$ fails identically for all finite $\delta < \infty$. The reflection positivity defect $\Delta_{\mathrm{RP}} \sim O(e^{-\delta^2/(4t)})$ is strictly positive at finite $t$. Exact OS2 can only be recovered via a two-stage limit $t \downarrow 0$ (Route C).
+
+### NEG-YM-015R-SO4-1: Insufficiency of Perturbative Symanzik Expansion for Non-Perturbative SO(4) Restoration (`YM-015R`)
+- **Discovery Date:** 2026-10-02
+- **Epistemic Classification:** `[METHOD_SPECIFIC_OBSTRUCTION]`
+- **Hypothesis tested:** Whether representation-theoretic classification of dimension-6 hypercubic operators and perturbative Symanzik effective field theory rigorously prove non-perturbative continuous $SO(4)$ rotational covariance on the lattice path integral.
+- **Result:** Falsified as a non-perturbative theorem. Symanzik improvement is an asymptotic expansion in powers of $g_0^2$. Proving that the non-perturbative lattice functional integral restores continuous $SO(4)$ rotational covariance requires uniform non-perturbative control over rough/large-field configurations, which is unproved. Classified as `PERTURBATIVE_SUPPORT_ONLY`.
+
+### NEG-YM-015R-TOPOLOGY-1: Topological Non-Equivalence of Multilinear Dual Space with Product Sobolev Space (`YM-015R`)
+- **Discovery Date:** 2026-10-02
+- **Epistemic Classification:** `[METHOD_SPECIFIC_OBSTRUCTION]`
+- **Hypothesis tested:** Whether a multilinear bound $|\Phi(f_1, \dots, f_k)| \le C \prod \|f_i\|_{H^3}$ places the functional in the product Sobolev space $H^{-3}((\mathbb{T}^4)^k)$.
+- **Result:** Falsified. The tensor product $H^s \otimes_2 H^s \cong H^{s, s}_{\mathrm{mix}}$ has strictly dominating mixed derivatives and is strictly contained in $H^s(M \times M)$. A bounded multilinear functional belongs to the dual of the projective Banach tensor product $(H^3)^{\hat{\otimes}_\pi k}$, not to $H^{-3}((\mathbb{T}^4)^k)$. By the Schwartz kernel theorem on the nuclear space $C^\infty(\mathbb{T}^4)$, it defines a distribution in $\mathcal{D}'((\mathbb{T}^4)^k)$, but weak-* compactness of multilinear forms does not automatically constitute a physical Schwinger function system.
+
+### NEG-YM-015R-NONTRIVIALITY-1: Non-Inference of Continuum Non-Degeneracy from Finite-Cutoff Variance (`YM-015R`)
+- **Discovery Date:** 2026-10-02
+- **Epistemic Classification:** `[METHOD_SPECIFIC_OBSTRUCTION]`
+- **Hypothesis tested:** Whether strictly positive variance $\operatorname{Var}_{\mu_a}(\mathcal{O}_a(f)) > 0$ at finite lattice spacing $a > 0$ guarantees a non-zero lower bound $\inf_a \operatorname{Var}_{\mu_a}(\mathcal{O}_a(f)) > 0$ surviving the continuum limit.
+- **Result:** Falsified. Finite-cutoff non-degeneracy $\operatorname{Var}_a > 0$ is a trivial consequence of Haar measure support on compact $SU(N)$. Proving that the variance does not vanish in the continuum limit requires non-perturbative remainder bounds. Lüscher's perturbative formula $\operatorname{Var} \sim g^4(t)/t^4$ is perturbative and presupposes the continuum limit. Non-triviality is proved only as `FINITE_CUTOFF_NONDEGENERACY_ONLY`.
+

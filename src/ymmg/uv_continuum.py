@@ -214,14 +214,32 @@ def evaluate_hypercubic_anisotropy_scaling(
     }
 
 
+def compute_heat_kernel_rp_defect(dist_to_hyperplane: float, t_phys: float) -> float:
+    """
+    Computes the exact heat-kernel probability mass leaking across the Euclidean time
+    reflection hyperplane x_4 = 0:
+    
+    P_leak(delta, t) = (1/2) * erfc(delta / sqrt(4 * t_phys)).
+    """
+    if t_phys <= 0.0:
+        raise ValueError(f"Flow time t_phys must be positive, got {t_phys}")
+    if dist_to_hyperplane < 0.0:
+        raise ValueError(f"Distance delta must be non-negative, got {dist_to_hyperplane}")
+    
+    arg = dist_to_hyperplane / math.sqrt(4.0 * t_phys)
+    return 0.5 * math.erfc(arg)
+
+
 def verify_reflection_positivity_support_buffer(
     dist_to_hyperplane: float,
     t_phys: float,
 ) -> Dict[str, Any]:
     """
-    Evaluates Theorem YM-015-L3: Support-Buffer Condition for Reflection Positivity.
+    Evaluates Theorem YM-015-L3 / YM-015R Re-Audit: Support-Buffer Condition for Reflection Positivity.
     
-    Requires dist_to_hyperplane > sqrt(8 * t_phys).
+    Re-audit finding (YM-015R): While dist_to_hyperplane > sqrt(8 * t_phys) defines the
+    root-mean-square diffusion buffer, heat diffusion has non-compact support.
+    Exact OS reflection positivity fails at finite t_phys > 0 with defect P_leak > 0.
     """
     if t_phys <= 0.0:
         raise ValueError(f"Flow time t_phys must be positive, got {t_phys}")
@@ -232,14 +250,89 @@ def verify_reflection_positivity_support_buffer(
     is_buffered = dist_to_hyperplane > r_diff
     buffer_margin = dist_to_hyperplane - r_diff
     
+    leakage = compute_heat_kernel_rp_defect(dist_to_hyperplane, t_phys)
+    
     return {
         "dist_to_hyperplane": dist_to_hyperplane,
         "t_phys": t_phys,
         "diffusion_radius": r_diff,
         "is_buffered": is_buffered,
         "buffer_margin": buffer_margin,
-        "rp_inheritance_valid": is_buffered,
+        "rp_inheritance_valid": is_buffered,  # Historical YM-015 buffer check
+        "exact_rp_preserved": False,  # YM-015R: Parabolic heat kernel tails violate A in A_+
+        "heat_kernel_leakage": leakage,
+        "rp_defect": leakage,
+        "theorem_status": "REFUTED_FOR_EXACT_RP_AT_FINITE_FLOW_TIME",
         "theorem_ref": "YM-015-L3",
+    }
+
+
+def evaluate_locality_replacement_routes(
+    t_phys: float,
+    delta: float,
+) -> Dict[str, Any]:
+    """
+    Evaluates the 4 competing routes to restore exact reflection positivity:
+    Route A: Spatial-only gradient flow
+    Route B: Zero-flow-time bare local observables
+    Route C: Two-stage limit (a -> 0 at t > 0, then t -> 0)
+    Route D: Half-space Dirichlet cylinder flow
+    """
+    if t_phys <= 0.0 or delta <= 0.0:
+        raise ValueError("Parameters t_phys and delta must be strictly positive")
+        
+    leakage = compute_heat_kernel_rp_defect(delta, t_phys)
+    
+    return {
+        "t_phys": t_phys,
+        "delta": delta,
+        "route_A_spatial_flow": {
+            "exact_rp": True,
+            "so4_invariance": False,  # Breaks to SO(3)
+            "multiplicative_renormalization_Z_is_1": False,  # Contact singularities in time
+            "status": "BACKUP_ALTERNATIVE",
+        },
+        "route_B_zero_flow": {
+            "exact_rp": True,
+            "so4_invariance": True,
+            "multiplicative_renormalization_Z_is_1": False,  # Severe a^{-4} power divergences
+            "status": "CONSTRUCTIVELY_BLOCKED",
+        },
+        "route_C_two_stage_limit": {
+            "exact_rp_at_finite_t": False,
+            "exact_rp_as_t_to_0": True,  # lim_{t -> 0} leakage -> 0
+            "rp_defect_at_finite_t": leakage,
+            "so4_invariance": True,
+            "multiplicative_renormalization_Z_is_1": True,  # At t > 0
+            "status": "PRIMARY_RECOMMENDED_ARCHITECTURE",
+        },
+        "route_D_half_space_flow": {
+            "exact_rp": True,
+            "so4_invariance": False,  # Breaks translation in x_4
+            "multiplicative_renormalization_Z_is_1": False,  # Boundary counterterms on Sigma_0
+            "status": "STRUCTURALLY_FLAWED",
+        },
+    }
+
+
+def verify_tensor_product_topology(k: int, sobolev_s: float = 3.0) -> Dict[str, Any]:
+    r"""
+    Verifies the functional analysis topology for k-point multilinear functionals.
+    Demonstrates that bounded multilinear forms on (H^s)^k define elements of
+    (H^s \hat{\otimes}_\pi ... \hat{\otimes}_\pi H^s)*, NOT H^{-s}((T^4)^k).
+    """
+    if k < 1:
+        raise ValueError(f"Moment k must be >= 1, got {k}")
+        
+    return {
+        "k": k,
+        "sobolev_s": sobolev_s,
+        "correct_dual_space": f"(H^{sobolev_s} tensor_pi ... tensor_pi H^{sobolev_s})*",
+        "schwartz_distribution_space": f"D'((T^4)^{k})",
+        "is_product_sobolev_space": False,  # Non-isomorphism with H^{-s}((T^4)^k)
+        "weak_star_compactness_valid": True,
+        "constitutes_full_schwinger_system": False,  # OS2 broken, clustering open
+        "epistemic_status": "REPAIRED_PROJECTIVE_TENSOR_DUALITY",
     }
 
 
@@ -252,7 +345,8 @@ def evaluate_nontriviality_witness(
     """
     Evaluates Theorem YM-015-W1: Nontriviality Witness for the Continuum 2-Point Function.
     
-    Proves S_2^c(t, t)(f x f) > 0 for non-zero non-negative test functions.
+    Re-audit finding (YM-015R): Finite-cutoff non-degeneracy Var_a(O) > 0 holds, but
+    a non-perturbative continuum lower bound surviving a -> 0 is unproved.
     """
     if t_phys <= 0.0 or L_phys <= 0.0 or f_L1_norm <= 0.0:
         raise ValueError("Physical parameters must be strictly positive")
@@ -276,6 +370,8 @@ def evaluate_nontriviality_witness(
         "s2_connected_lower_bound": lower_bound,
         "is_strictly_positive": lower_bound > 0.0,
         "is_nontrivial": True,
+        "is_continuum_uniform_lower_bound_proved": False,  # Perturbative remainder unproved nonperturbatively
+        "status": "FINITE_CUTOFF_NONDEGENERACY_ONLY",
         "theorem_ref": "YM-015-W1",
     }
 
@@ -291,6 +387,7 @@ def audit_kirk_2026_lemmas() -> List[Dict[str, Any]]:
             "audit_verdict": "REJECTED_ON_LARGE_FIELDS",
             "defect": "Karcher mean hits cut loci and caustic branching outside injectivity radius r_inj = pi/sqrt(2N).",
             "imported": False,
+            "reconciled_status": "REJECTED_ON_LARGE_FIELDS",
         },
         {
             "lemma_id": "KIRK-LEMMA-2",
@@ -298,6 +395,7 @@ def audit_kirk_2026_lemmas() -> List[Dict[str, Any]]:
             "audit_verdict": "INCOMPLETE",
             "defect": "Non-trivial curvature Jacobians produce non-local interactions requiring cluster expansion.",
             "imported": False,
+            "reconciled_status": "INCOMPLETE",
         },
         {
             "lemma_id": "KIRK-LEMMA-3",
@@ -305,6 +403,7 @@ def audit_kirk_2026_lemmas() -> List[Dict[str, Any]]:
             "audit_verdict": "FLAWED_POWER_DIVERGENCE",
             "defect": "Unsmeared finite differences diverge as a -> 0 without gradient-flow mollification.",
             "imported": False,
+            "reconciled_status": "FLAWED_POWER_DIVERGENCE",
         },
         {
             "lemma_id": "KIRK-LEMMA-4",
@@ -312,6 +411,7 @@ def audit_kirk_2026_lemmas() -> List[Dict[str, Any]]:
             "audit_verdict": "VALID_UNDER_MOLLIFICATION",
             "defect": "Valid strictly when mollified by gradient flow (Theorem YM-015-L1/L2).",
             "imported": True,
+            "reconciled_status": "CONDITIONALLY_PRECOMPACT_ONLY",
         },
         {
             "lemma_id": "KIRK-LEMMA-5",
@@ -319,6 +419,7 @@ def audit_kirk_2026_lemmas() -> List[Dict[str, Any]]:
             "audit_verdict": "INCOMPLETE",
             "defect": "Fails at intermediate crossover window g ~ 1 without large-field cluster expansion.",
             "imported": False,
+            "reconciled_status": "INCOMPLETE",
         },
         {
             "lemma_id": "KIRK-LEMMA-6",
@@ -326,6 +427,7 @@ def audit_kirk_2026_lemmas() -> List[Dict[str, Any]]:
             "audit_verdict": "VALID_STANDARD",
             "defect": "None (standard perturbative beta function).",
             "imported": True,
+            "reconciled_status": "VALID_STANDARD",
         },
         {
             "lemma_id": "KIRK-LEMMA-7",
@@ -333,26 +435,31 @@ def audit_kirk_2026_lemmas() -> List[Dict[str, Any]]:
             "audit_verdict": "CONFIRMED_AND_IMPORTED",
             "defect": "None (incorporated into Theorem YM-015-L4).",
             "imported": True,
+            "reconciled_status": "CONFIRMED_CONDITIONALLY_ON_L1",
         },
         {
             "lemma_id": "KIRK-LEMMA-8",
             "topic": "Dimension-6 Hypercubic Anisotropy Suppression",
             "audit_verdict": "CONFIRMED_AND_IMPORTED",
-            "defect": "None (incorporated into Theorem YM-015-L5).",
+            "defect": "Symanzik expansion is perturbative; non-perturbative spacing-uniform bound unproved.",
             "imported": True,
+            "reconciled_status": "PERTURBATIVE_SUPPORT_ONLY",
         },
         {
             "lemma_id": "KIRK-LEMMA-9",
             "topic": "Continuous SO(4) Restoration in Finite Volume",
             "audit_verdict": "CONFIRMED_AND_IMPORTED",
-            "defect": "None (incorporated into Theorem YM-015-L5).",
+            "defect": "Symanzik expansion is perturbative; non-perturbative spacing-uniform bound unproved.",
             "imported": True,
+            "reconciled_status": "PERTURBATIVE_SUPPORT_ONLY",
         },
         {
             "lemma_id": "KIRK-LEMMA-10",
             "topic": "Unbuffered Reflection Positivity",
             "audit_verdict": "REJECTED_UNBUFFERED",
-            "defect": "4D flow diffuses across x_4 = 0; requires support buffer delta > sqrt(8*t) (Theorem YM-015-L3).",
+            "defect": "4D flow diffuses across x_4 = 0; heat-kernel tails violate exact RP for all finite delta.",
             "imported": False,
+            "reconciled_status": "REFUTED_ALL_VERSIONS",
         },
     ]
+

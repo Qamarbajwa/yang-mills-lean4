@@ -139,6 +139,10 @@ scientific_fingerprint:
     - literature/CLAIM-AUDIT-KIRK-2026.md
     - literature/YM-015-NONTRIVIALITY-WITNESS.md
     - literature/YM-015-SOURCE-EVIDENCE-MATRIX.md
+    - literature/YM-015R-CONTINUUM-RECONCILIATION.md
+    - literature/YM-015R-LOCALITY-REPLACEMENT-ANALYSIS.md
+    - literature/YM-015R-EVIDENCE-MATRIX.md
+    - literature/YM-015R-CORRECTED-DAG.md
     - governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml
 unknown_policy:
   research_locations:
