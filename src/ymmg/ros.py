@@ -143,6 +143,16 @@ SCIENTIFIC_FINGERPRINT_MANIFEST = [
     "literature/CLAIM-AUDIT-FAIZAL-SHABIR-2026.md",
     "literature/YM-014R-SOURCE-EVIDENCE-MATRIX.md",
     "literature/YM-014R-CORRECTED-DAG.md",
+    "literature/YM-015-UV-CONTINUUM-TARGET.md",
+    "literature/YM-015-BALABAN-UV-LEDGER.md",
+    "literature/YM-015-OBSERVABLE-RENORMALIZATION.md",
+    "literature/YM-015-DISTRIBUTIONAL-COMPACTNESS.md",
+    "literature/YM-015-REFLECTION-POSITIVITY.md",
+    "literature/YM-015-O4-TARGET.md",
+    "literature/YM-015-O4-RESTORATION.md",
+    "literature/CLAIM-AUDIT-KIRK-2026.md",
+    "literature/YM-015-NONTRIVIALITY-WITNESS.md",
+    "literature/YM-015-SOURCE-EVIDENCE-MATRIX.md",
     SCIENTIFIC_ARTIFACT_CLASSIFICATION_PATH,
 ]
 

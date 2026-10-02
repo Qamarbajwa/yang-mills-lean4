@@ -268,27 +268,41 @@
   - Proved Theorem `YM-014-T4` (Continuum Surface-Tension Asymptotic Scaling Defect): physical string tension $\sigma_{\mathrm{phys}} = \lim_{a \to 0} \tau(a)/a^2$ forces an irreducible dilemma: constant bare tension $\tau \ge c > 0$ yields divergent physical string tension $\sigma_{\mathrm{phys}} \to \infty$, whereas physical continuum scaling requires $\tau(a) \sim \sigma_{\mathrm{phys}} a^2 \to 0$, which strictly forces $\tau(a) < \ln \mu_4$ deep into the rough Hagedorn phase.
   - Registered negative evidence `NEG-YM-014-SURFACE-1` and `NEG-YM-014-SURFACE-2` in `NEGATIVE_EVIDENCE_REGISTER.md`.
   - Independently audited by E4 Reviewer `a8f80639-7b4b-488e-8716-a5190e9995ef` (`INTEGRITY_PASS_WITH_LIMITATIONS`) and accepted by Distinct Technical Acceptor `0580926b-fda2-4871-a509-bf0dfe194942` (`TECHNICAL_ACCEPTANCE_GRANTED`) on Candidate `89b67a69e2a04e4ac0cc097f831e98b0e44aaf89`.
-  - Status: `SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN)`.
+- **Task `YM-014R` (External-Evidence Reconciliation and Obstruction-Theorem Repair) Completed & Scientifically Accepted:**
+  - Audited YM-013-T1 against Kazakov & Zheng (JHEP 2025 099): for $SU(2)$, $\operatorname{Tr}(U_p - U_p^\dagger) \equiv 0$ identically, so the loop-splitting term vanishes and Makeenko–Migdal equations are linear and closed on single-trace loops. YM-013-T1 amended to `NEEDS_AMENDMENT` (refuted for $SU(2)$; confirmed for $SU(N \ge 3)$).
+  - Audited YM-013-T2 against Liu & Yang (JHEP 2026 107): indirect loop equations with vertex filtering eliminate intermediate loops without exponential perimeter explosion (`CONFIRMED_WITH_NARROWER_SCOPE`).
+  - Audited YM-014-T1 (random surface roughening) and YM-014-T2 (duality sign problem): downgraded from unconditional structural no-gos to `METHOD_SPECIFIC_OBSTRUCTION` and signed weights existence.
+  - Deconstructed and formally rejected Mir Faizal & Arshid Shabir (Fortschr. Phys. 2026, e70097) due to fatal dimensional scaling failure ($m a \ge c_0 > 0 \implies M_{\mathrm{phys}} = \infty$) and lack of OS1 rotational invariance (zero surviving novel load-bearing lemmas).
+  - Codified 3-tier obstruction taxonomy (`METHOD_SPECIFIC_OBSTRUCTION`, `CLASS_OF_METHODS_OBSTRUCTION`, `STRUCTURAL_NO_GO`) with exactly zero premature structural no-go designations.
+  - Formally unblocked Task `YM-015 — E-UV-FREE-CONT`. Status: `SCIENTIFICALLY_ACCEPTED (EVIDENCE_RECONCILED_AND_OBSTRUCTIONS_NARROWED)`.
+
+- **Task `YM-015` (UV Continuum Field Construction and O(4) Restoration, E-UV-FREE-CONT) Candidate Formulated:**
+  - Formulated `YM-015-TARGET` (`literature/YM-015-UV-CONTINUUM-TARGET.md`) defining the minimum theorem in fixed finite volume $V = L_{\mathrm{phys}}^4 < \infty$.
+  - Reconstructed the complete primary Bałaban constructive programme (`literature/YM-015-BALABAN-UV-LEDGER.md`), rigorously establishing the boundary between partition function UV stability and continuum Schwinger distribution existence.
+  - Established two-scale gradient-flow mollification and operator mixing analysis (`literature/YM-015-OBSERVABLE-RENORMALIZATION.md`).
+  - Proved Theorem `YM-015-L1` (Uniform Smeared Schwinger Bound) and Theorem `YM-015-L2` (Subsequential Continuum Limit Existence in $\mathcal{D}'((\mathbb{T}^4)^k)$) (`literature/YM-015-DISTRIBUTIONAL-COMPACTNESS.md`).
+  - Proved Theorem `YM-015-L3` (Reflection Positivity Inheritance under Support Buffer $\delta > \sqrt{8t}$) (`literature/YM-015-REFLECTION-POSITIVITY.md`).
+  - Proved Theorem `YM-015-L4` (Continuous Euclidean Translation Covariance) and Theorem `YM-015-L5` (Vanishing Hypercubic Anisotropy and Continuous $SO(4)$ Restoration) (`literature/YM-015-O4-RESTORATION.md`).
+  - Deconstructed and audited Harold D. Kirk (Version 4, 2026) (`literature/CLAIM-AUDIT-KIRK-2026.md`), importing verified Lemmas 7, 8, and 9 while rejecting cut-locus singularities in the Karcher mean and unbuffered reflection positivity.
+  - Proved Theorem `YM-015-W1` (Strict Nontriviality Witness for Flowed 2-Point Connected Function) (`literature/YM-015-NONTRIVIALITY-WITNESS.md`).
+  - Constructed source-evidence matrix (`literature/YM-015-SOURCE-EVIDENCE-MATRIX.md`) and deterministic Python suite `src/ymmg/uv_continuum.py` with 8 passing tests (410 tests repository-wide).
+  - Status: `CANDIDATE_READY_FOR_INDEPENDENT_E4_REVIEW`.
 
 ## UNVERIFIED
 - No original Yang–Mills lemma has been certified by an external peer-reviewed journal.
 - The Clay Millennium Problem #4 status remains strictly `OPEN_AND_UNSOLVED` (`GOAL_COMPLETE = FALSE`).
 - Proof claims for complete bridge closure (`YM-010`) and mass gap (`YM-009`) are `NOT_ESTABLISHED`.
-- Continuum-useful uniform control (`P3`), intermediate crossover non-perturbative matching (`E-CROSSOVER`), and continuum limit construction remain `OPEN`.
+- Intermediate crossover non-perturbative matching (`E-CROSSOVER`), thermodynamic limit ($V \to \infty$), and the physical mass gap remain `OPEN`.
 
 ## CURRENT BOTTLENECK
 - Tasks `YM-006` through `YM-010` are held under `SCIENTIFIC_REVIEW_HOLD`.
 - Task `YM-011` (First Load-Bearing Bridge Lemma) is completed and `SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_UV_SCOPE)`.
-- Task `YM-012` (Intermediate Coupling Crossover Analysis) is completed and `SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN)`.
-- Task `YM-013` (Certified Finite-N Loop Bootstrap) is completed and `SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN)`.
-- Task `YM-014` (Random-Surface / Duality Crossover Representation) is completed and `SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN)`.
-- The crossover window $g_k \sim 1$ is proved to be an irreducible tripartite structural obstruction: series expansions (YM-012), finite-perimeter loop bootstrap (YM-013), and random-surface/duality representations (YM-014) are all mathematically obstructed at the lattice level.
+- Task `YM-012`, `YM-013`, `YM-014` obstructions are narrowed and reconciled under `YM-014R`.
+- Task `YM-015` candidate is ready for independent E4 review.
 
 ## NEXT ACTION
 - Maintain `E-CROSSOVER = OPEN`, `P3 = OPEN`, and `CLAY_PROBLEM = OPEN_AND_UNSOLVED`.
-- Per Phase 15 branching directive, transition downstream research away from cyclic attacks on `E-CROSSOVER` to composable edge:
-  `TASK YM-015: E-UV-FREE-CONT — CONTINUUM LIMIT CONSTRUCTION IN THE ASYMPTOTICALLY FREE UV REGIME`
-  to construct uniform-in-cutoff continuum Schwinger distributions for local gauge-invariant observables on the asymptotically free weak-coupling side.
+- Freeze Git candidate commit for `YM-015`, launch independent blind E4 mathematical verifier, and execute distinct technical acceptance.
 
 
 

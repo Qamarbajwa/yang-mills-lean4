@@ -127,7 +127,7 @@ In Section J of the mandate, we evaluate six competing pathways for the next aut
 | **Option 3: UV Continuum Construction (`YM-015`)** | Rigorous cutoff removal $a \to 0$ in finite volume $V < \infty$ in UV basin, proving continuum OS axioms and $SO(4)$ restoration. | **Smallest rigorously composable load-bearing bridge** directly connected to YM-011. | **High** (builds directly on Bałaban's accepted UV multiscale estimates; resolves the exact gap exposed in Faizal–Shabir audit). | **AUTHORIZED FOR TASK YM-015**. |
 | **Option 4: Direct Spectral Gap Bootstrap** | Formulate transfer-matrix SDP bounds directly for the Hamiltonian mass gap. | Large (requires non-local transfer matrix constraints). | Medium. | Deferred. |
 | **Option 5: Dual Tensor Network / Spin Foam** | Formulate block-hypercube coarse-graining to eliminate local $6j$ sign oscillations. | Very Large (requires non-Abelian tensor network renormalization). | Medium. | Deferred. |
-| **Option 6: Import from Faizal–Shabir (2026)** | Adopt surviving lemmas from claimed proof. | None (audit proved zero lemmas survive independently). | Zero (fatal dimensional scaling defects). | **REJECTED**. |
+| **Option 6: Import from Faizal–Shabir (2026)** | Adopt surviving lemmas from claimed proof. | ZERO SURVIVING NOVEL LOAD-BEARING LEMMAS CLOSING A MISSING-BRIDGE EDGE (standard lattice RP and fixed-cutoff transfer matrix statements remain standard valid facts, but close no missing-bridge edge). | Zero (fatal dimensional scaling defects). | **REJECTED**. |
 
 ### Conclusion and Decision
 **Task `YM-015 — E-UV-FREE-CONT / UV CONTINUUM CONSTRUCTION EDGE` is the authorized next scientific task.**  

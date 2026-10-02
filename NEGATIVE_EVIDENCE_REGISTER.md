@@ -232,4 +232,28 @@
   1. **Dimensional Scaling Defect:** The paper asserts a scale-independent lower bound on the dimensionless transfer matrix gap $\mu(a) \ge c_0 > 0$ as $a \to 0$. In physical units, this implies $M_{\mathrm{phys}} = \mu(a)/a \to +\infty$ (divergent physical mass, empty physical Hilbert space). A finite physical mass strictly requires $\mu(a) \sim a M_{\mathrm{phys}} \to 0$, which is a critical point where polymer expansions lose convergence.
   2. **Coupling Domain Conflation:** The authors assume the polymer expansion remains convergent as $a \to 0$, ignoring the fact that asymptotic freedom requires the bare coupling to run to weak coupling $\beta(a) \to \infty$, far outside the polymer convergence domain $\beta < \beta_0 \approx 0.35$.
   3. **Lack of Euclidean Rotational Invariance (OS1):** The authors do not prove that discrete hyperoctahedral lattice symmetry restores continuous $SO(4)$ rotational invariance in the continuum limit.
-  No lemma from the paper survives independently to close any missing-bridge edge. `CLAY_PROBLEM = OPEN_AND_UNSOLVED`, `goal_complete = false`, and `P3 = OPEN`.
+  - **Surviving Novel Lemmas:** ZERO SURVIVING NOVEL LOAD-BEARING LEMMAS CLOSING A MISSING-BRIDGE EDGE. Standard foundational facts (lattice reflection positivity OS2 on hypercubic lattice, and finite-volume transfer-matrix spectral gap at fixed cutoff $a > 0$) remain valid standard facts, but close no missing-bridge edge across crossover or the continuum limit. `CLAY_PROBLEM = OPEN_AND_UNSOLVED`, `goal_complete = false`, and `P3 = OPEN`.
+
+### NEG-YM-015-KIRK-1: Cut-Locus Singularity in Global Karcher Riemannian Blocking on Large-Field Sectors (`YM-015`)
+- **Discovery Date:** 2026-10-02
+- **Epistemic Classification:** `[EXTERNAL_CLAIM_DEFECT]`
+- **Hypothesis tested:** Whether Harold D. Kirk (Version 4, 2026, Lemma 1) establishes an everywhere smooth, non-singular right inverse for Karcher Riemannian center-of-mass blocking on $SU(N)$ lattice gauge configurations.
+- **Result:** Refuted for large fields. The Karcher mean on compact Lie groups $SU(N)$ possesses a unique smooth minimizer strictly within the injectivity radius $r_{\mathrm{inj}} = \pi/\sqrt{2N}$. On large-field configurations where link eigenvalues approach $-1$, the Karcher energy functional hits cut loci, bifurcations, and caustic singularities. Asserting a globally smooth blocking right inverse without a Bałaban-style small/large-field partition of unity is mathematically invalid on the full non-perturbative configuration space.
+
+### NEG-YM-015-RP-1: Reflection Positivity Violation for 4D Mollified Observables Without Support Buffer (`YM-015`)
+- **Discovery Date:** 2026-10-02
+- **Epistemic Classification:** `[METHOD_SPECIFIC_OBSTRUCTION]`
+- **Hypothesis tested:** Whether 4D gradient flow or 4D block averaging automatically preserves Osterwalder–Schrader reflection positivity (OS2) across the Euclidean time hyperplane $x_4 = 0$.
+- **Result:** Falsified without support buffer. 4D gradient flow is isotropic parabolic diffusion with physical radius $R_{\mathrm{diff}} = \sqrt{8 t_{\mathrm{phys}}}$. An observable placed within distance $\delta \le \sqrt{8 t_{\mathrm{phys}}}$ of $x_4 = 0$ diffuses links into the negative time half-space $x_4 < 0$, violating the strict positive-time algebra condition $A \in \mathcal{A}_+$. Reflection positivity is preserved if and only if test functions satisfy the strict support buffer $\operatorname{dist}(\operatorname{supp}(f), \{x_4 = 0\}) > \sqrt{8 t_{\mathrm{phys}}}$.
+
+### NEG-YM-015-POWER-1: Ultraviolet Power Divergences of Unsmeared Lattice Curvature Jets (`YM-015`)
+- **Discovery Date:** 2026-10-02
+- **Epistemic Classification:** `[METHOD_SPECIFIC_OBSTRUCTION]`
+- **Hypothesis tested:** Whether unsmeared higher lattice curvature jets $J^{(k)}(x) = \nabla^{k-2} F(x)$ (Kirk 2026, Lemma 3) possess uniform, cutoff-independent $L^2$ bounds on discrete lattices.
+- **Result:** Falsified. Discrete finite differences $\nabla_\mu$ on unflowed lattice fields scale as $a^{-1}$, inducing severe ultraviolet power divergences $O(a^{-k})$ as $a \to 0$ without multiscale subtractions or continuous flow mollification. Pointwise curvature jets do not define distribution-valued fields without explicit smoothing.
+
+### NEG-YM-015-THERMO-1: Non-Sufficiency of Finite-Volume Continuum Limits for the Physical Mass Gap (`YM-015`)
+- **Discovery Date:** 2026-10-02
+- **Epistemic Classification:** `[STRUCTURAL_EDGE_SEPARATION]`
+- **Hypothesis tested:** Whether constructing continuum Schwinger distributions and proving $SO(4)$ restoration in a fixed finite physical volume $V = L_{\mathrm{phys}}^4 < \infty$ suffices to establish the infinite-volume Yang–Mills mass gap.
+- **Result:** Falsified (order of limits separation). In a finite physical volume $V < \infty$, the Hamiltonian spectrum is discrete and isolated by finite-size box quantization, producing an apparent discrete gap $\sim 1/L_{\mathrm{phys}}$ even in free massless gauge theories. Proving the true physical mass gap strictly requires taking the thermodynamic limit $L_{\mathrm{phys}} \to \infty$ across the non-perturbative crossover window ($g \sim 1$) and proving that the spectral gap remains strictly positive ($\lim_{L \to \infty} \Delta(L) \ge m > 0$). Task `YM-015` remains strictly upstream of the thermodynamic limit. `CLAY_PROBLEM = OPEN_AND_UNSOLVED`, `goal_complete = false`, and `P3 = OPEN`.

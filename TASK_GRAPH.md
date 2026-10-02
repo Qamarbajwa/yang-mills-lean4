@@ -49,4 +49,5 @@
 | E-CROSSOVER / YM-012 | Intermediate coupling crossover window ($g_k \sim 1$) analysis & obstruction | YM-011 | T3 | DAG decomposition + YM-012-TARGET + obstruction proofs + E4 review | SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN) |
 | YM-013 | Certified finite-N loop-bootstrap crossover bounds | YM-012 | T3 | YM-013-TARGET + finite-N hierarchy + certified SDP + continuum truncation barrier | SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN) |
 | YM-014 | Random-surface / duality crossover representation analysis | YM-013 | T3 | YM-014-TARGET + entropy-energy barrier + dual sign problem + continuum scaling defect | SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN) |
-| YM-015 | Continuum limit construction in the asymptotically free UV regime | YM-011, YM-014 | T3 | E-UV-FREE-CONT formulation + uniform-in-cutoff Schwinger distributions + E4 review | READY |
+| YM-014R | External-evidence reconciliation & obstruction repair | YM-014 | T3 | Re-audit YM-013/014 against literature + Faizal-Shabir audit + E4 review | SCIENTIFICALLY_ACCEPTED (EVIDENCE_RECONCILED_AND_OBSTRUCTIONS_NARROWED) |
+| YM-015 | UV continuum field construction and O(4) restoration (E-UV-FREE-CONT) | YM-011, YM-014R | T3 | YM-015-TARGET + Theorems YM-015-L1 through L5 + Kirk audit + E4 review | CANDIDATE_READY |

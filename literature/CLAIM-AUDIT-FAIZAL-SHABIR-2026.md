@@ -127,7 +127,7 @@ While Lemmas 1 and 2 reproduce valid historical results (reflection positivity a
 ## 4. Final Claim Audit Disposition
 
 1. **Global Claim Acceptance:** **`REJECTED`**. The claimed proof of the Yang–Mills mass gap in Faizal & Shabir (2026) is mathematically invalid due to fatal dimensional scaling errors and unproved continuum hypotheses.
-2. **Importable Lemmas:** **`NONE`**. None of the novel lemmas survive scrutiny to close any edge in the missing-bridge DAG.
+2. **Surviving Novel Load-Bearing Lemmas:** **`ZERO SURVIVING NOVEL LOAD-BEARING LEMMAS CLOSING A MISSING-BRIDGE EDGE`**. Standard foundational lemmas (lattice reflection positivity OS2 on hypercubic lattice, and finite-volume transfer-matrix spectral gap at fixed cutoff $a > 0$) are standard valid facts, but provide zero novel bridge across the intermediate coupling or continuum limit.
 3. **Repository Impact:**
    - `goal_complete = false`
    - `clay_problem = OPEN_AND_UNSOLVED`
