@@ -185,31 +185,51 @@
 - **Discovery Date:** 2026-10-02
 - **Epistemic Classification:** `[ALGEBRAIC_HIERARCHY_NON_CLOSURE_AND_PERIMETER_EXPLOSION]`
 - **Hypothesis tested:** Whether finite-$N$ lattice loop equations (Schwinger–Dyson / Makeenko–Migdal) can self-close at a finite trace truncation degree $m < \infty$ or via Mandelstam trace reductions without generating infinite-degree or infinite-perimeter unknowns.
-- **Result:** Falsified.
-  1. By Theorem `YM-013-T1`, at any finite $N < \infty$, the absence of large-$N$ planar factorization ($\langle w(C_1) w(C_2) \rangle \ne \langle w(C_1) \rangle \langle w(C_2) \rangle$) causes the action variation $\sum_{p \ni \ell} \dots$ to couple $m$-loop correlators to $(m+1)$-loop correlators, producing an infinite, underdetermined BBGKY-type hierarchy.
-  2. By Theorem `YM-013-T2`, while the $SU(2)$ Mandelstam identity $w(A)w(B) = \frac{1}{2}w(AB) + \frac{1}{2}w(AB^{-1})$ eliminates multi-trace operators, it sums loop perimeters: $|AB| = |A| + |B|$. This converts multi-trace proliferation into an exponential perimeter explosion $L \to \infty$, preventing closure at any finite loop cutoff $L_{\max} < \infty$.
+- **Result:** Falsified for $N \ge 3$ (and under naive Mandelstam concatenation).
+  1. By Theorem `YM-013-T1`, at finite $N \ge 3$, non-factorization couples $m$-loop correlators to $(m+1)$-loop correlators via non-vanishing $\operatorname{Tr}(U_p - U_p^\dagger) \ne 0$.
+  2. By Theorem `YM-013-T2`, Mandelstam multiplication sums perimeters: $|AB| = |A| + |B|$.
+- **Post-Reconciliation Amendment Note (`YM-014R`):**  
+  *Correction:* For $SU(2)$, $\operatorname{Tr}(U_p - U_p^\dagger) \equiv 0$ identically as an operator identity; the loop-splitting term vanishes, and the single-trace loop equations are **linear and closed on single-trace loops** (Kazakov & Zheng 2025). Furthermore, Liu & Yang (2026) showed that indirect loop equations eliminate intermediate loops without perimeter explosion. Theorem `YM-013-T1` is **REFUTED for $SU(2)$** (`NEEDS_AMENDMENT`), and Theorem `YM-013-T2` is confirmed with narrower scope (`METHOD_SPECIFIC_OBSTRUCTION`).
 
 ### NEG-YM-013-BOOTSTRAP-2: Finite-Perimeter Truncation Barrier in the Continuum Limit (`YM-013`)
 - **Discovery Date:** 2026-10-02
 - **Epistemic Classification:** `[CONTINUUM_LIMIT_DECOUPLING_AND_TRUNCATION_BARRIER]`
 - **Hypothesis tested:** Whether a finite-level semidefinite programming (SDP) loop bootstrap (at fixed truncation depth $L_{\max} < \infty$) can establish non-perturbative bounds on the intermediate coupling crossover window in the continuum limit $a \to 0$.
-- **Result:** Falsified. By Theorem `YM-013-T4`, for any fixed $L_{\max} < \infty$, the physical perimeter of the bootstrap dictionary vanishes as $a \to 0$: $R_{\max}(a) = L_{\max} a \to 0$. Conversely, the physical crossover scale requires a fixed non-zero physical distance $R_{\mathrm{cross}} \sim \Lambda_{\mathrm{QCD}}^{-1} \approx 0.5\text{ fm}$, corresponding to lattice perimeter $L_{\mathrm{cross}}(a) = R_{\mathrm{cross}}/a \to \infty$. Thus, $\lim_{a \to 0} R_{\max}(a) / R_{\mathrm{cross}} = 0$. Any finite-level bootstrap is strictly blind to the non-perturbative crossover scale in the continuum limit. Edge `E-CROSSOVER` remains strictly `OPEN`, `P3 = OPEN`, `CLAY_PROBLEM = OPEN_AND_UNSOLVED`, and `GOAL_COMPLETE = FALSE`.
+- **Result:** Falsified for fixed $L_{\max} < \infty$. By Theorem `YM-013-T4`, for any fixed $L_{\max} < \infty$, the physical perimeter of the bootstrap dictionary vanishes as $a \to 0$: $R_{\max}(a) = L_{\max} a \to 0$. Thus, $\lim_{a \to 0} R_{\max}(a) / R_{\mathrm{cross}} = 0$.
+- **Post-Reconciliation Amendment Note (`YM-014R`):**  
+  *Correction:* This proves a **method-specific fixed-truncation limitation** (`METHOD_SPECIFIC_OBSTRUCTION`), not an impossibility theorem for the bootstrap framework. An adaptive hierarchy $L_{\max}(a) \sim R_* / a \to \infty$ with fixed physical reach $R_* > 0$ remains open and is not ruled out by Theorem `YM-013-T4`. Classified as `CONFIRMED_WITH_NARROWER_SCOPE`.
 
 ### NEG-YM-014-SURFACE-1: Random-Surface Roughening and Entropy-Energy Divergence in the Crossover Regime (`YM-014`)
 - **Discovery Date:** 2026-10-02
 - **Epistemic Classification:** `[ENTROPY_ENERGY_DEFICIT_AND_ROUGHENING_DIVERGENCE]`
 - **Hypothesis tested:** Whether the exact character-expansion random-surface representation converges and provides an un-inverted area-law lower bound throughout the intermediate crossover window $\beta \in [1.5, 2.5]$ ($g \sim 1$).
-- **Result:** Falsified. By Theorem `YM-014-T1`, the 4D surface entropy connectivity constant satisfies $\mu_4 \ge 3.5$ ($\ln \mu_4 \ge 1.2528$, with physical hypercubic value $\mu_4 \approx 6.0$, $\ln \mu_4 \approx 1.7918$). The bare character-expansion surface tension $\tau_0(\beta) = -\ln a_{1/2}(\beta)$ satisfies $\tau_0(2.0) \approx 1.5298 < \ln \mu_4$. For all $\beta \ge \beta_c^{\mathrm{rough}} \approx 1.56$ (and even under the conservative lower bound $\mu_4 \ge 5.0$, for all $\beta \ge 1.88$), the growth factor $\mu_4 e^{-\tau_0(\beta)} > 1$. The random-surface partition sum $\sum_A N(A) e^{-\tau_0 A}$ undergoes a Hagedorn / roughening divergence, bare surfaces proliferate uncontrollably, and strong-coupling surface localization is destroyed.
+- **Result:** Falsified for bare non-interacting ribbon surfaces. The bare character-expansion surface tension $\tau_0(\beta) = -\ln a_{1/2}(\beta)$ satisfies $\tau_0(2.0) \approx 1.5298 < \ln \mu_4$ (with $\mu_4 \approx 6.0$, $\ln \mu_4 \approx 1.7918$).
+- **Post-Reconciliation Amendment Note (`YM-014R`):**  
+  *Correction:* The estimate $\tau_0 < \ln \mu_4$ is an unweighted single-surface heuristic. In the full non-Abelian gauge theory, self-avoidance, intertwiner contractions, representation multiplicities, and severe sign cancellations intervene. The threshold $\beta_c^{\mathrm{rough}} \approx 1.44\text{--}1.80$ is an internally derived heuristic threshold, NOT a mathematically proved divergence of interacting 4D Yang–Mills. Classified as `CONFIRMED_WITH_NARROWER_SCOPE` (`METHOD_SPECIFIC_OBSTRUCTION`).
 
 ### NEG-YM-014-SURFACE-2: Non-Abelian Dual Spin-Foam Sign Oscillation Barrier and Continuum Scaling Defect (`YM-014`)
 - **Discovery Date:** 2026-10-02
 - **Epistemic Classification:** `[NON_ABELIAN_SIGN_PROBLEM_AND_CONTINUUM_SCALING_DEFECT]`
 - **Hypothesis tested:** Whether non-Abelian dual cell-complex / spin-foam representations or center-vortex decompositions can bypass the roughening divergence and provide an un-inverted confinement bound in the continuum limit.
-- **Result:** Falsified.
-  1. By Theorem `YM-014-T2`, 4D non-Abelian dual spin foams contain vertex weights formed by contractions of intertwiners (Wigner $6j$ / $15j$ symbols) that take indefinite signs (e.g. $\left\{\begin{matrix} 1 & 1 & 1 \\ 1/2 & 1/2 & 1/2 \end{matrix}\right\} = -1/3 < 0$). Dual weights are not strictly non-negative; the average sign decays exponentially with volume $\langle \operatorname{sign} \rangle \le e^{-c V}$, destroying probabilistic interpretation, Peierls contour percolation, and cluster expansions.
-  2. By Theorem `YM-014-T3`, center-vortex decompositions $U_e = z_e V_e$ suffer from divergent non-local effective interactions when the $SO(3)$ coset degrees of freedom are integrated out at $\beta > \beta_0 \approx 0.35$.
-  3. By Theorem `YM-014-T4`, physical continuum string tension requires $\tau(a) = \sigma_{\mathrm{phys}} a^2 \to 0$, which strictly forces $\tau(a) < \ln \mu_4$ into the rough phase as $a \to 0$. Fixed bare lattice surface models are structurally incompatible with continuum asymptotic freedom.
-  Edge `E-CROSSOVER` remains strictly `OPEN`, `P3 = OPEN`, `CLAY_PROBLEM = OPEN_AND_UNSOLVED`, and `GOAL_COMPLETE = FALSE`.
+- **Result:** Falsified for bare lattice models.
+  1. Wigner $6j$ symbols take indefinite signs (e.g. $\left\{\begin{matrix} 1 & 1 & 1 \\ 1/2 & 1/2 & 1/2 \end{matrix}\right\} = -1/3 < 0$), establishing `SIGNED_WEIGHTS_EXIST`.
+  2. Coset polymer expansion on $SO(3)$ diverges at $\beta > \beta_0 \approx 0.35$.
+  3. Bare lattice string tension requires $\tau(a) \sim \sigma_{\mathrm{phys}} a^2 \to 0 < \ln \mu_4$, collapsing into the rough phase.
+- **Post-Reconciliation Amendment Note (`YM-014R`):**  
+  *Correction:* While signed weights exist, the claim of an exponential-in-volume average sign decay $\langle \operatorname{sign} \rangle \le e^{-c V}$ is an **unproved extrapolation** in 4D Yang–Mills (downgraded under `NEEDS_AMENDMENT`). Furthermore, failure of the bare lattice string model does not rule out renormalized continuum strings (Polyakov, Lüscher–Weisz). Classified as `CONFIRMED_WITH_NARROWER_SCOPE` (`METHOD_SPECIFIC_OBSTRUCTION`).
 
+### NEG-YM-014R-RECON-1: False Universality of Multi-Trace Proliferation in $SU(2)$ Lattice Loop Equations and Review Blind Spot (`YM-014R`)
+- **Discovery Date:** 2026-10-02
+- **Epistemic Classification:** `[GOVERNANCE_AND_LITERATURE_RECONCILIATION_FINDING]`
+- **Hypothesis tested:** Whether the accepted Theorem `YM-013-T1` accurately captured the mathematical structure of $SU(2)$ lattice Makeenko–Migdal loop equations.
+- **Result:** Refuted for $SU(2)$. By the operator identity $\operatorname{Tr}(U_p - U_p^\dagger) \equiv 0$ on $SU(2)$, the trace-splitting term in the Makeenko–Migdal equation vanishes identically. The loop equations for single-trace Wilson loops on $SU(2)$ are strictly linear and closed within the single-trace sector (Kazakov & Zheng 2025). The previous project claim that multi-trace proliferation universally prevents closure at finite $N$ was an error arising from conflating $SU(2)$ with general $SU(N \ge 3)$. Theorem `YM-013-T1` is formally amended.
 
-
+### NEG-YM-014R-CLAIM-1: Dimensional Scaling Defect and Lack of Rotational Invariance in Faizal–Shabir (2026) Claimed Proof (`YM-014R`)
+- **Discovery Date:** 2026-10-02
+- **Epistemic Classification:** `[EXTERNAL_CLAIM_FALSIFICATION]`
+- **Hypothesis tested:** Whether the claimed construction of four-dimensional $SU(N)$ Yang–Mills theory with mass gap and confinement by Mir Faizal and Arshid Shabir (Fortschritte der Physik 74 (2026), e70097) provides a mathematically valid solution to the Clay Millennium problem.
+- **Result:** Falsified. The claimed proof contains fatal mathematical defects:
+  1. **Dimensional Scaling Defect:** The paper asserts a scale-independent lower bound on the dimensionless transfer matrix gap $\mu(a) \ge c_0 > 0$ as $a \to 0$. In physical units, this implies $M_{\mathrm{phys}} = \mu(a)/a \to +\infty$ (divergent physical mass, empty physical Hilbert space). A finite physical mass strictly requires $\mu(a) \sim a M_{\mathrm{phys}} \to 0$, which is a critical point where polymer expansions lose convergence.
+  2. **Coupling Domain Conflation:** The authors assume the polymer expansion remains convergent as $a \to 0$, ignoring the fact that asymptotic freedom requires the bare coupling to run to weak coupling $\beta(a) \to \infty$, far outside the polymer convergence domain $\beta < \beta_0 \approx 0.35$.
+  3. **Lack of Euclidean Rotational Invariance (OS1):** The authors do not prove that discrete hyperoctahedral lattice symmetry restores continuous $SO(4)$ rotational invariance in the continuum limit.
+  No lemma from the paper survives independently to close any missing-bridge edge. `CLAY_PROBLEM = OPEN_AND_UNSOLVED`, `goal_complete = false`, and `P3 = OPEN`.
