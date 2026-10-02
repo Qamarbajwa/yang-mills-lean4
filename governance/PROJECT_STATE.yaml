@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 29
+revision: 30
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,10 +9,10 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "89b67a69e2a04e4ac0cc097f831e98b0e44aaf89"
-  scientific_candidate_sha: "89b67a69e2a04e4ac0cc097f831e98b0e44aaf89"
-  review_bound_sha: "89b67a69e2a04e4ac0cc097f831e98b0e44aaf89"
-  evidence_closeout_head: "2dfa2df477db508c12934370d96a57e940bf3b61"
+  head: "7f1bd8b31cf838e62baa95baccfcaa37a720b1f2"
+  scientific_candidate_sha: "7f1bd8b31cf838e62baa95baccfcaa37a720b1f2"
+  review_bound_sha: "7f1bd8b31cf838e62baa95baccfcaa37a720b1f2"
+  evidence_closeout_head: "25278d655f45f9c57d76f8c7ad4f7aa7aa21cfa5"
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -31,10 +31,10 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 29
-  last_updated_at: "2026-10-02T11:30:00Z"
+  last_expected_revision: 30
+  last_updated_at: "2026-10-02T13:35:00Z"
   active_contract: "YM-015"
-  frozen_candidate: "89b67a69e2a04e4ac0cc097f831e98b0e44aaf89"
+  frozen_candidate: "7f1bd8b31cf838e62baa95baccfcaa37a720b1f2"
 
 current_objective: YM-015
 
@@ -248,6 +248,16 @@ objectives:
     status: SCIENTIFICALLY_ACCEPTED
     scope_limitation: "OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN"
 
+  - id: YM-014R
+    scope_in: "External-evidence reconciliation and obstruction-theorem repair against Kazakov-Zheng (2025), Liu-Yang (2026), Oeckl-Pfeiffer (2001), and Faizal-Shabir (2026)"
+    dependencies: ["YM-014"]
+    risk: R3
+    writer: "primary-worker (Luna: 00ffe8a3-c73a-4096-b0e7-53138b34c21a)"
+    reviewer_path: "fresh-blind-research-subagent-IND1 (0da17ce3-773a-489f-ac3d-866d9f703d27)"
+    acceptor: "8b178255-cb40-4e86-a727-3c262589c66b (distinct-technical-acceptor)"
+    status: SCIENTIFICALLY_ACCEPTED
+    scope_limitation: "EVIDENCE_RECONCILED_AND_OBSTRUCTIONS_NARROWED"
+
 capabilities:
   CAP-001-problem-specification:
     status: ACCEPTED_BOUNDED
@@ -301,6 +311,10 @@ capabilities:
     status: ACCEPTED_BOUNDED
     scope: OBSTRUCTION_PROVED_CROSSOVER_OPEN
     evidence_refs: ["verification/YM-014_TECHNICAL_ACCEPTANCE.md"]
+  CAP-016-evidence-reconciliation:
+    status: ACCEPTED_BOUNDED
+    scope: EVIDENCE_RECONCILED_AND_OBSTRUCTIONS_NARROWED
+    evidence_refs: ["verification/YM-014R_TECHNICAL_ACCEPTANCE.md"]
 
 external_systems: {}
 
@@ -313,7 +327,7 @@ hard_gates:
     description: "Independent review is bound to exact candidate SHA."
   scientific_review_pass:
     status: PASS
-    description: "Review verdict is INTEGRITY_PASS_WITH_LIMITATIONS with limitations reflected."
+    description: "Review verdict is INTEGRITY_PASS."
   negative_evidence_preserved:
     status: PASS
     description: "All negative scientific findings preserved in NEGATIVE_EVIDENCE_REGISTER.md."
@@ -322,10 +336,10 @@ hard_gates:
     description: "Prerequisites satisfied for active objective."
   scientific_tree_identity:
     status: PASS
-    description: "Closed-world scientific tree hash verified as 39bfd1b5355056e879d3d3df3349eed07692fd6ba9ad8d22b5baa2d45472d522."
+    description: "Closed-world scientific tree hash verified as be7900d311c53dcc0f4e55cc281dd889b7f6f82c6ffc120682138c07ab4ea724."
   state_revision_freshness:
     status: PASS
-    description: "State revision is monotonically incremented to 29."
+    description: "State revision is monotonically incremented to 30."
   no_unresolved_mandatory_blocker:
     status: PASS
     description: "Zero mandatory blockers exist."
@@ -365,6 +379,8 @@ evidence_refs:
     role: "Formal technical acceptance receipt for YM-013"
   - ref: "verification/YM-014_TECHNICAL_ACCEPTANCE.md"
     role: "Formal technical acceptance receipt for YM-014"
+  - ref: "verification/YM-014R_TECHNICAL_ACCEPTANCE.md"
+    role: "Formal technical acceptance receipt for YM-014R"
 
 negative_history_refs:
   - ref: "NEGATIVE_EVIDENCE_REGISTER.md"
@@ -403,9 +419,9 @@ release:
     adapter: "NONE_BY_DESIGN / NOT_APPLICABLE"
 
 last_verified_checkpoint:
-  sha: "89b67a69e2a04e4ac0cc097f831e98b0e44aaf89"
-  timestamp: "2026-10-02T11:30:00Z"
-  test_result: "394 passed"
+  sha: "7f1bd8b31cf838e62baa95baccfcaa37a720b1f2"
+  timestamp: "2026-10-02T13:35:00Z"
+  test_result: "402 passed"
 
 overhead:
   routine_target_fraction: 0.10
@@ -414,7 +430,8 @@ overhead:
     - "YM-012 (Intermediate Coupling Crossover Window Analysis) completed and scientifically accepted (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN)"
     - "YM-013 (Certified Finite-N Loop-Bootstrap Crossover Bounds) completed and scientifically accepted (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN)"
     - "YM-014 (Random-Surface / Duality Crossover Representation) completed and scientifically accepted (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN)"
+    - "YM-014R (External-Evidence Reconciliation and Obstruction-Theorem Repair) completed and scientifically accepted (EVIDENCE_RECONCILED_AND_OBSTRUCTIONS_NARROWED)"
 
 views:
-  last_validated_revision: 29
+  last_validated_revision: 30
   evidence_refs: []
