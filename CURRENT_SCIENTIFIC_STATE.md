@@ -259,6 +259,17 @@
   - Independently audited by E4 Reviewer `e6bc9f99-4a65-4c33-8335-8222892de4a3` (`INTEGRITY_PASS_WITH_LIMITATIONS`) and accepted by Distinct Technical Acceptor `736315c1-b09b-46d0-a3db-bc1c4c284878` (`TECHNICAL_ACCEPTANCE_GRANTED`) on Candidate `f81eb27087159fb165b2aab9a728d40f984d4f8d`.
   - Status: `SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN)`.
 
+- **Task `YM-014` (Random-Surface / Duality Crossover Representation Analysis, YM-014-TARGET, Theorems YM-014-T1 through T4, Roughening Barrier, and Continuum Scaling Defect) Completed & Scientifically Accepted:**
+  - Formulated the minimum crossover target `YM-014-TARGET` (`literature/YM-014-RANDOM-SURFACE-DUALITY-TARGET.md`) across all 16 formal fields with explicit non-claims.
+  - Audited five canonical non-perturbative representation families (`literature/YM-014-REPRESENTATION-LANDSCAPE.md`): character expansion random surfaces (A), non-Abelian dual spin foams (B), center-vortex decompositions (C), fermionic/Polyakov strings (D), and lower-dimensional/Abelian analogues (E).
+  - Proved Theorem `YM-014-T1` (Random-Surface Roughening / Entropy-Energy Barrier): exact $SU(2)$ character expansion yields bare surface tension $\tau_0(\beta) = -\ln a_{1/2}(\beta)$ where $\tau_0(2.0) \approx 1.5299$ drops below the 4D lattice surface entropy constant $\ln \mu_4 \approx 1.7918$ ($\mu_4 \approx 6.0$; conservative $\mu_4 \ge 5.0$, $\ln \mu_4 \ge 1.6094$). The random-surface sum diverges, causing a Hagedorn / roughening transition that destroys strong-coupling surface localization throughout the crossover window (`literature/YM-014-SURFACE-ENTROPY-ENERGY.md`).
+  - Proved Theorem `YM-014-T2` (Non-Abelian Duality Sign-Oscillation Barrier): exact 4D non-Abelian dual cell-complex / spin-foam vertex amplitudes evaluate to Wigner $6j$ / $15j$ symbols that take indefinite signs (e.g. $\{1, 1, 1; 1/2, 1/2, 1/2\} = -1/3 < 0$), generating an extensive sign problem $\langle \operatorname{sign} \rangle = Z/Z_{\mathrm{abs}} \le e^{-c V} \to 0$ that invalidates probabilistic interpretation, Peierls contour percolation, and cluster expansions.
+  - Proved Theorem `YM-014-T3` (Center-Vortex / Flux Representation Breakdown in Crossover Regime): integrating out $SO(3)$ coset degrees of freedom generates divergent non-local multi-plaquette interactions for $\beta > \beta_0 \approx 0.35$, preventing uniform lower bounds on 't Hooft electric flux free energy (`literature/YM-014-CONTINUUM-SCALING.md`).
+  - Proved Theorem `YM-014-T4` (Continuum Surface-Tension Asymptotic Scaling Defect): physical string tension $\sigma_{\mathrm{phys}} = \lim_{a \to 0} \tau(a)/a^2$ forces an irreducible dilemma: constant bare tension $\tau \ge c > 0$ yields divergent physical string tension $\sigma_{\mathrm{phys}} \to \infty$, whereas physical continuum scaling requires $\tau(a) \sim \sigma_{\mathrm{phys}} a^2 \to 0$, which strictly forces $\tau(a) < \ln \mu_4$ deep into the rough Hagedorn phase.
+  - Registered negative evidence `NEG-YM-014-SURFACE-1` and `NEG-YM-014-SURFACE-2` in `NEGATIVE_EVIDENCE_REGISTER.md`.
+  - Independently audited by E4 Reviewer `a8f80639-7b4b-488e-8716-a5190e9995ef` (`INTEGRITY_PASS_WITH_LIMITATIONS`) and accepted by Distinct Technical Acceptor `0580926b-fda2-4871-a509-bf0dfe194942` (`TECHNICAL_ACCEPTANCE_GRANTED`) on Candidate `89b67a69e2a04e4ac0cc097f831e98b0e44aaf89`.
+  - Status: `SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN)`.
+
 ## UNVERIFIED
 - No original Yang–Mills lemma has been certified by an external peer-reviewed journal.
 - The Clay Millennium Problem #4 status remains strictly `OPEN_AND_UNSOLVED` (`GOAL_COMPLETE = FALSE`).
@@ -270,15 +281,14 @@
 - Task `YM-011` (First Load-Bearing Bridge Lemma) is completed and `SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_UV_SCOPE)`.
 - Task `YM-012` (Intermediate Coupling Crossover Analysis) is completed and `SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN)`.
 - Task `YM-013` (Certified Finite-N Loop Bootstrap) is completed and `SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN)`.
-- The crossover window $g_k \sim 1$ is proved to be an irreducible structural obstruction: series expansions, flow continuation, and finite-perimeter loop bootstrap all fail to bridge $g \sim 1$ into the continuum limit.
+- Task `YM-014` (Random-Surface / Duality Crossover Representation) is completed and `SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN)`.
+- The crossover window $g_k \sim 1$ is proved to be an irreducible tripartite structural obstruction: series expansions (YM-012), finite-perimeter loop bootstrap (YM-013), and random-surface/duality representations (YM-014) are all mathematically obstructed at the lattice level.
 
 ## NEXT ACTION
 - Maintain `E-CROSSOVER = OPEN`, `P3 = OPEN`, and `CLAY_PROBLEM = OPEN_AND_UNSOLVED`.
-- Per Phase 12 of the mandate, activate the backup branch: `YM-014 — RANDOM-SURFACE / DUALITY CROSSOVER REPRESENTATION` to investigate non-perturbative random surface percolation and dual representations, or pursue complementary edges in the 19-edge missing-bridge DAG (`E-UV-FREE-CONT`).
-
-
-
-
+- Per Phase 15 branching directive, transition downstream research away from cyclic attacks on `E-CROSSOVER` to composable edge:
+  `TASK YM-015: E-UV-FREE-CONT — CONTINUUM LIMIT CONSTRUCTION IN THE ASYMPTOTICALLY FREE UV REGIME`
+  to construct uniform-in-cutoff continuum Schwinger distributions for local gauge-invariant observables on the asymptotically free weak-coupling side.
 
 
 

@@ -48,4 +48,5 @@
 | YM-011 | First load-bearing bridge lemma | YM-004, YM-011-PRE, YM-011-OBS-MAP, YM-011-PLAQUETTE-EXP, YM-011-TREE-GAUGE, YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB, YM-011-DYADIC-FREE-ENERGY-UNIFORMITY | T3 | UV scale-transfer lemma proof + counterexample testing | SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_UV_SCOPE) |
 | E-CROSSOVER / YM-012 | Intermediate coupling crossover window ($g_k \sim 1$) analysis & obstruction | YM-011 | T3 | DAG decomposition + YM-012-TARGET + obstruction proofs + E4 review | SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN) |
 | YM-013 | Certified finite-N loop-bootstrap crossover bounds | YM-012 | T3 | YM-013-TARGET + finite-N hierarchy + certified SDP + continuum truncation barrier | SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN) |
-
+| YM-014 | Random-surface / duality crossover representation analysis | YM-013 | T3 | YM-014-TARGET + entropy-energy barrier + dual sign problem + continuum scaling defect | SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN) |
+| YM-015 | Continuum limit construction in the asymptotically free UV regime | YM-011, YM-014 | T3 | E-UV-FREE-CONT formulation + uniform-in-cutoff Schwinger distributions + E4 review | READY |

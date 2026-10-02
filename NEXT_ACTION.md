@@ -1,7 +1,7 @@
 # NEXT ACTION
 
 ## Current primary action
-`YM-013 SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN); P3 OPEN; CLAY_PROBLEM OPEN_AND_UNSOLVED; YM-006 through YM-010 SCIENTIFIC_REVIEW_HOLD; NEXT: YM-014`
+`YM-014 SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN); P3 OPEN; CLAY_PROBLEM OPEN_AND_UNSOLVED; YM-006 through YM-010 SCIENTIFIC_REVIEW_HOLD; NEXT: YM-015`
 
 ## Scope
 - `YM-GOV-ADOPT-0406R3` / `YM-GOV-ADOPT-0406R3-R1` is `CLOSED` at true Git commit `88cc4f9de1b96204e30743c4679131871732bbc7`.
@@ -10,7 +10,8 @@
 - `YM-011-DYADIC-FREE-ENERGY-UNIFORMITY` is `SCIENTIFICALLY_ACCEPTED` (`P1 = PROVED`, `P2 = PROVED_AT_WEAK_COUPLING`, `P3 = OPEN`).
 - `YM-011` (First Load-Bearing Bridge Lemma: Multiscale UV Scale-Transfer and Observables Mollification, Theorem `YM-011-L1`) is `SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_UV_SCOPE)`.
 - `YM-012` / `E-CROSSOVER` (Intermediate Coupling Crossover Window Analysis) is `SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN)`.
-- `YM-013` (Certified Finite-N Loop-Bootstrap Crossover Bounds, YM-013-TARGET, Theorems YM-013-T1 through T4, and Continuum Truncation Barrier) is completed, independently reviewed (`e6bc9f99-4a65-4c33-8335-8222892de4a3`, `INTEGRITY_PASS_WITH_LIMITATIONS`), and technically accepted (`736315c1-b09b-46d0-a3db-bc1c4c284878`, `TECHNICAL_ACCEPTANCE_GRANTED`) on Candidate `f81eb27087159fb165b2aab9a728d40f984d4f8d`: `SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN)`.
+- `YM-013` (Certified Finite-N Loop-Bootstrap Crossover Bounds) is `SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN)`.
+- `YM-014` (Random-Surface / Duality Crossover Representation Analysis, YM-014-TARGET, Theorems YM-014-T1 through T4, and Continuum Scaling Defect) is completed, independently reviewed (`a8f80639-7b4b-488e-8716-a5190e9995ef`, `INTEGRITY_PASS_WITH_LIMITATIONS`), and technically accepted (`0580926b-fda2-4871-a509-bf0dfe194942`, `TECHNICAL_ACCEPTANCE_GRANTED`) on Candidate `89b67a69e2a04e4ac0cc097f831e98b0e44aaf89`: `SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN)`.
 - `YM-006` through `YM-010` remain in `SCIENTIFIC_REVIEW_HOLD`.
 
 ## Governance & Scientific Disposition
@@ -32,6 +33,7 @@
 - `YM-011 — First Load-Bearing Bridge Lemma (UV Scale-Transfer & Observables Mollification)`: `SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_UV_SCOPE)`
 - `YM-012 / E-CROSSOVER — Intermediate Coupling Crossover Window Analysis`: `SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN)`
 - `YM-013 — Certified Finite-N Loop-Bootstrap Crossover Bounds`: `SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN)`
+- `YM-014 — Random-Surface / Duality Crossover Representation Analysis`: `SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN)`
 
 ## Completed actions
 - `YM-000 — Local bootstrap` (DONE)
