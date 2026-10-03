@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 31
+revision: 32
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,10 +9,10 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "e7edb4b57ec5feb9fd4d73f92290b819da35befd"
-  scientific_candidate_sha: "e7edb4b57ec5feb9fd4d73f92290b819da35befd"
-  review_bound_sha: "e7edb4b57ec5feb9fd4d73f92290b819da35befd"
-  evidence_closeout_head: "ab802f2f3b5dba7d77cdc0b64524a33e4b385eff"
+  head: "7190adfec3993efe8e30aafac5ac175c1be7c265"
+  scientific_candidate_sha: "7190adfec3993efe8e30aafac5ac175c1be7c265"
+  review_bound_sha: "7190adfec3993efe8e30aafac5ac175c1be7c265"
+  evidence_closeout_head: "0b96377484df24a3cff972b22ecdf5607da19c08"
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -31,12 +31,12 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 31
-  last_updated_at: "2026-10-02T18:00:00Z"
-  active_contract: "YM-015"
-  frozen_candidate: "e7edb4b57ec5feb9fd4d73f92290b819da35befd"
+  last_expected_revision: 32
+  last_updated_at: "2026-10-03T04:12:00Z"
+  active_contract: "YM-015R"
+  frozen_candidate: "7190adfec3993efe8e30aafac5ac175c1be7c265"
 
-current_objective: YM-015
+current_objective: YM-015R
 
 objectives:
   - id: YM-GOV-ADOPT-0406R3
@@ -269,6 +269,16 @@ objectives:
     status: SCIENTIFICALLY_ACCEPTED
     scope_limitation: "SUBSEQUENTIAL_CONTINUUM_LIMIT_PROVED_FINITE_VOLUME"
 
+  - id: YM-015R
+    scope_in: "Continuum-construction stress test, formal refutation of exact RP for 4D flow, projective tensor topology repair, Kirk (2026) audit repair, and locality-preserving replacement architecture (Route C)"
+    dependencies: ["YM-015"]
+    risk: R3
+    writer: "primary-worker (Luna: 00ffe8a3-c73a-4096-b0e7-53138b34c21a)"
+    reviewer_path: "fresh-blind-research-subagent-IND1 (0463e12b-7f53-4571-93da-6a60512d8771)"
+    acceptor: "3d777540-d864-4273-93be-c4be38783f3a (distinct-technical-acceptor)"
+    status: SCIENTIFICALLY_ACCEPTED
+    scope_limitation: "CONTINUUM_CONSTRUCTION_STRESS_TESTED_AND_OBSTRUCTIONS_NARROWED"
+
 capabilities:
   CAP-001-problem-specification:
     status: ACCEPTED_BOUNDED
@@ -328,8 +338,12 @@ capabilities:
     evidence_refs: ["verification/YM-014R_TECHNICAL_ACCEPTANCE.md"]
   CAP-017-uv-continuum-construction:
     status: ACCEPTED_BOUNDED
-    scope: SUBSEQUENTIAL_CONTINUUM_LIMIT_PROVED_FINITE_VOLUME
+    scope: PRECOMPACT_FLOWED_MULTILINEAR_LIMIT_WITH_UNRESOLVED_RP_AND_SO4
     evidence_refs: ["verification/YM-015_TECHNICAL_ACCEPTANCE.md"]
+  CAP-018-continuum-stress-test:
+    status: ACCEPTED_BOUNDED
+    scope: CONTINUUM_CONSTRUCTION_STRESS_TESTED_AND_OBSTRUCTIONS_NARROWED
+    evidence_refs: ["verification/YM-015R_TECHNICAL_ACCEPTANCE.md"]
 
 external_systems: {}
 
@@ -351,10 +365,10 @@ hard_gates:
     description: "Prerequisites satisfied for active objective."
   scientific_tree_identity:
     status: PASS
-    description: "Closed-world scientific tree hash verified as 144d8d5a818826f1ffa12f6b97af9d4b57ec3454a36b788e38a43d5e8f3981c0."
+    description: "Closed-world scientific tree hash verified as e11216bf0059b8248c021295a0dafee27fa9202e6738f253afd9c9970667506a."
   state_revision_freshness:
     status: PASS
-    description: "State revision is monotonically incremented to 31."
+    description: "State revision is monotonically incremented to 32."
   no_unresolved_mandatory_blocker:
     status: PASS
     description: "Zero mandatory blockers exist."
@@ -398,6 +412,8 @@ evidence_refs:
     role: "Formal technical acceptance receipt for YM-014R"
   - ref: "verification/YM-015_TECHNICAL_ACCEPTANCE.md"
     role: "Formal technical acceptance receipt for YM-015"
+  - ref: "verification/YM-015R_TECHNICAL_ACCEPTANCE.md"
+    role: "Formal technical acceptance receipt for YM-015R"
 
 negative_history_refs:
   - ref: "NEGATIVE_EVIDENCE_REGISTER.md"
@@ -436,9 +452,9 @@ release:
     adapter: "NONE_BY_DESIGN / NOT_APPLICABLE"
 
 last_verified_checkpoint:
-  sha: "e7edb4b57ec5feb9fd4d73f92290b819da35befd"
-  timestamp: "2026-10-02T18:00:00Z"
-  test_result: "410 passed"
+  sha: "7190adfec3993efe8e30aafac5ac175c1be7c265"
+  timestamp: "2026-10-03T04:12:00Z"
+  test_result: "418 passed"
 
 overhead:
   routine_target_fraction: 0.10
@@ -449,7 +465,8 @@ overhead:
     - "YM-014 (Random-Surface / Duality Crossover Representation) completed and scientifically accepted (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN)"
     - "YM-014R (External-Evidence Reconciliation and Obstruction-Theorem Repair) completed and scientifically accepted (EVIDENCE_RECONCILED_AND_OBSTRUCTIONS_NARROWED)"
     - "YM-015 (UV Continuum Field Construction and O(4) Restoration, E-UV-FREE-CONT) completed and scientifically accepted (SUBSEQUENTIAL_CONTINUUM_LIMIT_PROVED_FINITE_VOLUME)"
+    - "YM-015R (Continuum-Construction Stress Test and Scientific Repair) completed and scientifically accepted (CONTINUUM_CONSTRUCTION_STRESS_TESTED_AND_OBSTRUCTIONS_NARROWED)"
 
 views:
-  last_validated_revision: 31
+  last_validated_revision: 32
   evidence_refs: []
