@@ -1,14 +1,15 @@
 # NEXT ACTION
 
 ## Current primary action
-`YM-015 CANDIDATE_READY_FOR_INDEPENDENT_E4_REVIEW; P3 OPEN; CLAY_PROBLEM OPEN_AND_UNSOLVED; YM-006 through YM-010 SCIENTIFIC_REVIEW_HOLD; NEXT: YM-015 E4 REVIEW`
+`YM-015R2 CANDIDATE_READY_FOR_INDEPENDENT_E4_REVIEW; P3 OPEN; CLAY_PROBLEM OPEN_AND_UNSOLVED; YM-016 BLOCKED; NEXT: YM-015R2 E4 REVIEW`
 
 ## Scope
 - `YM-011` is `SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_UV_SCOPE)`.
 - `YM-012`, `YM-013`, `YM-014` are `SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN)`.
 - `YM-014R` (External-Evidence Reconciliation and Obstruction-Theorem Repair) is `SCIENTIFICALLY_ACCEPTED (EVIDENCE_RECONCILED_AND_OBSTRUCTIONS_NARROWED)`.
-- `YM-015` (UV Continuum Field Construction and O(4) Restoration, E-UV-FREE-CONT) candidate formulated with Theorems `YM-015-L1` through `L5` and Witness `YM-015-W1`.
-- `YM-006` through `YM-010` remain in `SCIENTIFIC_REVIEW_HOLD`.
+- `YM-015` (UV Continuum Field Construction and O(4) Restoration) is `SCIENTIFICALLY_ACCEPTED (SUBSEQUENTIAL_CONTINUUM_LIMIT_PROVED_FINITE_VOLUME)`.
+- `YM-015R` (Continuum-Construction Stress Test and Scientific Repair) is `SCIENTIFICALLY_ACCEPTED (CONTINUUM_CONSTRUCTION_STRESS_TESTED_AND_OBSTRUCTIONS_NARROWED)`.
+- `YM-015R2` (Exact RP Status Repair and Nonperturbative Flowed-Continuum Bridge) formulated with 4-tier RP distinction, spatial flow exact RP proof (`YM-015-SPF1/2`), `YM-015F-TARGET`, and route decision matrix.
 
 ## Governance & Scientific Disposition
 - `YM-011 — First Load-Bearing Bridge Lemma`: `SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_UV_SCOPE)`
@@ -16,7 +17,9 @@
 - `YM-013 — Certified Finite-N Loop-Bootstrap Crossover Bounds`: `SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN)`
 - `YM-014 — Random-Surface / Duality Crossover Representation Analysis`: `SCIENTIFICALLY_ACCEPTED (OBSTRUCTION_FORMALIZED_E_CROSSOVER_OPEN)`
 - `YM-014R — External-Evidence Reconciliation & Obstruction Repair`: `SCIENTIFICALLY_ACCEPTED (EVIDENCE_RECONCILED_AND_OBSTRUCTIONS_NARROWED)`
-- `YM-015 — UV Continuum Field Construction & O(4) Restoration`: `CANDIDATE_READY`
+- `YM-015 — UV Continuum Field Construction & O(4) Restoration`: `SCIENTIFICALLY_ACCEPTED`
+- `YM-015R — Continuum-Construction Stress Test`: `SCIENTIFICALLY_ACCEPTED`
+- `YM-015R2 — Exact RP Status Repair & Flowed Bridge`: `CANDIDATE_READY`
 
 ## Completed actions
 - `YM-000 — Local bootstrap` (DONE)

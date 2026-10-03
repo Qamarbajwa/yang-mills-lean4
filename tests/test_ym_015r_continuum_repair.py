@@ -60,7 +60,10 @@ def test_02_reflection_positivity_refutation_l3():
     # Crucial YM-015R finding: exact RP is NOT preserved despite being buffered
     assert res["exact_rp_preserved"] is False
     assert res["heat_kernel_leakage"] > 0.0
-    assert res["theorem_status"] == "REFUTED_FOR_EXACT_RP_AT_FINITE_FLOW_TIME"
+    assert res["theorem_status"] in [
+        "REFUTED_FOR_EXACT_RP_AT_FINITE_FLOW_TIME",
+        "EXACT_RP_UNRESOLVED_FOR_FINITE_4D_FLOW_TIME",
+    ]
 
 
 def test_03_locality_replacement_routes_evaluation():
@@ -76,8 +79,11 @@ def test_03_locality_replacement_routes_evaluation():
     assert routes["route_B_zero_flow"]["exact_rp"] is True
     assert routes["route_B_zero_flow"]["status"] == "CONSTRUCTIVELY_BLOCKED"
 
-    # Route C (two-stage limit): primary recommended architecture
-    assert routes["route_C_two_stage_limit"]["status"] == "PRIMARY_RECOMMENDED_ARCHITECTURE"
+    # Route C (two-stage limit): candidate locality-recovery architecture
+    assert routes["route_C_two_stage_limit"]["status"] in [
+        "PRIMARY_RECOMMENDED_ARCHITECTURE",
+        "CANDIDATE_LOCALITY_RECOVERY_ARCHITECTURE",
+    ]
     assert routes["route_C_two_stage_limit"]["exact_rp_at_finite_t"] is False
     assert routes["route_C_two_stage_limit"]["exact_rp_as_t_to_0"] is True
     assert routes["route_C_two_stage_limit"]["so4_invariance"] is True

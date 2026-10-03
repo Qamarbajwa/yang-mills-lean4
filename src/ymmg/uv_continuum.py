@@ -259,10 +259,16 @@ def verify_reflection_positivity_support_buffer(
         "is_buffered": is_buffered,
         "buffer_margin": buffer_margin,
         "rp_inheritance_valid": is_buffered,  # Historical YM-015 buffer check
-        "exact_rp_preserved": False,  # YM-015R: Parabolic heat kernel tails violate A in A_+
+        "in_standard_positive_time_algebra": False,  # Parabolic heat diffusion violates A in A_+
+        "standard_rp_inheritance_applicable": False,  # Standard theorem hypothesis fails
+        "exact_rp_preserved": False,  # Standard inheritance fails
         "heat_kernel_leakage": leakage,
         "rp_defect": leakage,
-        "theorem_status": "REFUTED_FOR_EXACT_RP_AT_FINITE_FLOW_TIME",
+        "rp_defect_model_status": "CONJECTURAL_ERROR_MODEL",  # Conflates scalar heat kernel with full Wilson measure
+        "has_explicit_counterexample": False,  # No observable with <Theta F F> < 0 known
+        "historical_ym015r_status": "REFUTED_FOR_EXACT_RP_AT_FINITE_FLOW_TIME",
+        "theorem_status": "EXACT_RP_UNRESOLVED_FOR_FINITE_4D_FLOW_TIME",
+        "sub_result": "STANDARD_HALF_SPACE_RP_INHERITANCE_FAILS_AS_A_PROOF_METHOD",
         "theorem_ref": "YM-015-L3",
     }
 
@@ -288,26 +294,34 @@ def evaluate_locality_replacement_routes(
         "delta": delta,
         "route_A_spatial_flow": {
             "exact_rp": True,
+            "temporal_locality": "STRICT_TIME_SLICE_LOCAL",
             "so4_invariance": False,  # Breaks to SO(3)
             "multiplicative_renormalization_Z_is_1": False,  # Contact singularities in time
+            "recovery_criterion": "CRITERION_A",
             "status": "BACKUP_ALTERNATIVE",
         },
         "route_B_zero_flow": {
             "exact_rp": True,
+            "temporal_locality": "STRICT_TIME_SLICE_LOCAL",
             "so4_invariance": True,
             "multiplicative_renormalization_Z_is_1": False,  # Severe a^{-4} power divergences
+            "recovery_criterion": "CRITERION_A",
             "status": "CONSTRUCTIVELY_BLOCKED",
         },
         "route_C_two_stage_limit": {
-            "exact_rp_at_finite_t": False,
+            "exact_rp_at_finite_t": False,  # Unresolved / standard inheritance fails
             "exact_rp_as_t_to_0": True,  # lim_{t -> 0} leakage -> 0
-            "rp_defect_at_finite_t": leakage,
+            "temporal_locality_at_finite_t": "EXPONENTIALLY_TIME_NONLOCAL",
+            "temporal_locality_at_t_zero": "STRICT_LOCAL",
+            "rp_defect_model_status": "CONJECTURAL_ERROR_MODEL",
             "so4_invariance": True,
             "multiplicative_renormalization_Z_is_1": True,  # At t > 0
-            "status": "PRIMARY_RECOMMENDED_ARCHITECTURE",
+            "recovery_criterion": "CRITERION_B",
+            "status": "CANDIDATE_LOCALITY_RECOVERY_ARCHITECTURE",
         },
         "route_D_half_space_flow": {
             "exact_rp": True,
+            "temporal_locality": "FINITE_TIME_SUPPORT",
             "so4_invariance": False,  # Breaks translation in x_4
             "multiplicative_renormalization_Z_is_1": False,  # Boundary counterterms on Sigma_0
             "status": "STRUCTURALLY_FLAWED",

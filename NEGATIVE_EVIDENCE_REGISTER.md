@@ -247,6 +247,8 @@
 - **Result:** Falsified without support buffer. 4D gradient flow is isotropic parabolic diffusion with physical radius $R_{\mathrm{diff}} = \sqrt{8 t_{\mathrm{phys}}}$. An observable placed within distance $\delta \le \sqrt{8 t_{\mathrm{phys}}}$ of $x_4 = 0$ diffuses links into the negative time half-space $x_4 < 0$, violating the strict positive-time algebra condition $A \in \mathcal{A}_+$. Reflection positivity is preserved if and only if test functions satisfy the strict support buffer $\operatorname{dist}(\operatorname{supp}(f), \{x_4 = 0\}) > \sqrt{8 t_{\mathrm{phys}}}$.
 - **Post-Reconciliation Amendment Note (`YM-015R`):**  
   *Correction:* The assertion that reflection positivity is restored by the support buffer $\delta > \sqrt{8t}$ is **REFUTED**. The quantity $\sqrt{8t}$ is only the root-mean-square diffusion length, not a compact support boundary. Parabolic heat diffusion has non-compact support ($K_t(x-y) > 0$ strictly everywhere for any $t > 0$), so flowed observables at $x_4 > 0$ depend on bare links in $x_4 < 0$ for all finite $\delta < \infty$. The exact RP defect is $\Delta_{\mathrm{RP}} \sim O(e^{-\delta^2/(4t)}) > 0$. Exact reflection positivity fails for all 4D gradient-flowed observables at finite flow time. Exact OS2 can only be recovered via a two-stage limit $t \downarrow 0$ (Route C). Classified as `REFUTED_FOR_EXACT_RP_AT_FINITE_FLOW_TIME`.
+- **Post-Reconciliation Amendment Note (`YM-015R2`):**  
+  *Correction:* Heat-kernel leakage rigorously proves `NOT_IN_STANDARD_POSITIVE_TIME_ALGEBRA` and `STANDARD_HALF_SPACE_RP_INHERITANCE_FAILS_AS_A_PROOF_METHOD`. However, this does **NOT** prove that the Osterwalder–Schrader quadratic form is negative ($\langle \Theta F_t F_t \rangle_{\mu_a} < 0$). In the absence of an explicit counterexample observable, claiming that exact RP is mathematically false is a non-sequitur. Authoritative status amended to **`EXACT_RP_UNRESOLVED_FOR_FINITE_4D_FLOW_TIME`**. Furthermore, identifying scalar heat-kernel tails with an OS quadratic-form defect is an unproved heuristic extrapolation, classified as `CONJECTURAL_ERROR_MODEL`.
 
 ### NEG-YM-015-POWER-1: Ultraviolet Power Divergences of Unsmeared Lattice Curvature Jets (`YM-015`)
 - **Discovery Date:** 2026-10-02
@@ -260,11 +262,13 @@
 - **Hypothesis tested:** Whether constructing continuum Schwinger distributions and proving $SO(4)$ restoration in a fixed finite physical volume $V = L_{\mathrm{phys}}^4 < \infty$ suffices to establish the infinite-volume Yang–Mills mass gap.
 - **Result:** Falsified (order of limits separation). In a finite physical volume $V < \infty$, the Hamiltonian spectrum is discrete and isolated by finite-size box quantization, producing an apparent discrete gap $\sim 1/L_{\mathrm{phys}}$ even in free massless gauge theories. Proving the true physical mass gap strictly requires taking the thermodynamic limit $L_{\mathrm{phys}} \to \infty$ across the non-perturbative crossover window ($g \sim 1$) and proving that the spectral gap remains strictly positive ($\lim_{L \to \infty} \Delta(L) \ge m > 0$). Task `YM-015` remains strictly upstream of the thermodynamic limit. `CLAY_PROBLEM = OPEN_AND_UNSOLVED`, `goal_complete = false`, and `P3 = OPEN`.
 
-### NEG-YM-015R-RP-1: Parabolic Heat-Kernel Support Non-Compactness and Exact OS Reflection Positivity Breakdown (`YM-015R`)
+### NEG-YM-015R-RP-1: Parabolic Heat-Kernel Support Non-Compactness and Proof Method Breakdown (`YM-015R` / `YM-015R2`)
 - **Discovery Date:** 2026-10-02
 - **Epistemic Classification:** `[METHOD_SPECIFIC_OBSTRUCTION]`
-- **Hypothesis tested:** Whether 4D gradient flow with support buffer $\delta > \sqrt{8t}$ satisfies exact Osterwalder–Schrader reflection positivity (OS2) at finite flow time $t > 0$.
-- **Result:** Refuted. Parabolic heat diffusion has non-compact support ($K_t(x-y) \propto e^{-|x-y|^2/(4t)} > 0$ strictly everywhere for any $t > 0$). Flowed fields at positive Euclidean time receive analytic contributions from bare links at negative Euclidean time. The positive-time algebra condition $\mathcal{O}_t(f) \in \mathcal{A}_+$ fails identically for all finite $\delta < \infty$. The reflection positivity defect $\Delta_{\mathrm{RP}} \sim O(e^{-\delta^2/(4t)})$ is strictly positive at finite $t$. Exact OS2 can only be recovered via a two-stage limit $t \downarrow 0$ (Route C).
+- **Hypothesis tested:** Whether 4D gradient flow with support buffer $\delta > \sqrt{8t}$ satisfies exact Osterwalder–Schrader reflection positivity (OS2) at finite flow time $t > 0$ via standard half-space algebra inheritance.
+- **Result:** Refuted as a proof method. Parabolic heat diffusion has non-compact support ($K_t(x-y) \propto e^{-|x-y|^2/(4t)} > 0$ strictly everywhere for any $t > 0$). Flowed fields at positive Euclidean time receive analytic contributions from bare links at negative Euclidean time. The positive-time algebra condition $\mathcal{O}_t(f) \in \mathcal{A}_+$ fails identically for all finite $\delta < \infty$. Standard half-space reflection positivity inheritance fails as a proof method.
+- **Post-Reconciliation Amendment Note (`YM-015R2`):**  
+  *Correction:* While standard half-space inheritance fails, no explicit gauge-invariant observable with $\langle \Theta F_t F_t \rangle < 0$ has been demonstrated. Exact reflection positivity at finite flow time is **`EXACT_RP_UNRESOLVED_FOR_FINITE_4D_FLOW_TIME`**, NOT definitively falsified.
 
 ### NEG-YM-015R-SO4-1: Insufficiency of Perturbative Symanzik Expansion for Non-Perturbative SO(4) Restoration (`YM-015R`)
 - **Discovery Date:** 2026-10-02
@@ -283,4 +287,25 @@
 - **Epistemic Classification:** `[METHOD_SPECIFIC_OBSTRUCTION]`
 - **Hypothesis tested:** Whether strictly positive variance $\operatorname{Var}_{\mu_a}(\mathcal{O}_a(f)) > 0$ at finite lattice spacing $a > 0$ guarantees a non-zero lower bound $\inf_a \operatorname{Var}_{\mu_a}(\mathcal{O}_a(f)) > 0$ surviving the continuum limit.
 - **Result:** Falsified. Finite-cutoff non-degeneracy $\operatorname{Var}_a > 0$ is a trivial consequence of Haar measure support on compact $SU(N)$. Proving that the variance does not vanish in the continuum limit requires non-perturbative remainder bounds. Lüscher's perturbative formula $\operatorname{Var} \sim g^4(t)/t^4$ is perturbative and presupposes the continuum limit. Non-triviality is proved only as `FINITE_CUTOFF_NONDEGENERACY_ONLY`.
+
+### NEG-YM-015R2-RP-DEFECT-1: Unproved Equivalence of Scalar Heat-Kernel Leakage with OS Quadratic-Form Defect (`YM-015R2`)
+- **Discovery Date:** 2026-10-03
+- **Epistemic Classification:** `[CONJECTURAL_ERROR_MODEL]`
+- **Hypothesis tested:** Whether the linear heat-kernel tail probability $\frac{1}{2}\operatorname{erfc}(\delta/\sqrt{4t}) \sim e^{-\delta^2/(4t)}$ rigorously bounds the reflection-positivity quadratic-form defect $\Delta_{\mathrm{OS}}(F_t) \equiv \max(0, -\langle \Theta(F_t) F_t \rangle_{\mu_a} / \|F_t\|^2)$ on the full non-linear lattice Yang–Mills functional integral.
+- **Result:** Falsified as a proved mathematical theorem. Connecting linear scalar diffusion tails to non-linear Wilson flow requires controlling non-Abelian Lie algebra derivatives, non-Gaussian measure correlations, large-field polymer sectors, and thermodynamic uniformity. In the absence of an independent mathematical proof, the estimate $\Delta_{\mathrm{RP}} \lesssim e^{-\delta^2/(4t)}$ is an unproved conjectural extrapolation and is formally excised from all theorem-level proofs.
+
+### NEG-YM-015R2-SPATIAL-FLOW-1: Explicit Hypercubic Symmetry Breaking and Temporal Contact Singularities in Spatial Gradient Flow (`YM-015R2`)
+- **Discovery Date:** 2026-10-03
+- **Epistemic Classification:** `[METHOD_SPECIFIC_OBSTRUCTION]`
+- **Hypothesis tested:** Whether purely spatial gradient flow $\partial_t B_i = \sum_{j=1}^3 D_j G_{ji}$ provides a complete replacement for 4D gradient flow that simultaneously preserves exact reflection positivity (OS2), 4D Euclidean rotational invariance (OS1), and universal ultraviolet finiteness ($Z \equiv 1$).
+- **Result:** Falsified for simultaneous closure. Spatial gradient flow strictly preserves exact reflection positivity on time slices (Criterion A, `SPATIAL_FLOW_RP_COMPATIBILITY_PROVED`), but:
+  1. Explicitly breaks the 4D hypercubic lattice symmetry $H_4$ down to cubic $H_3 \times \mathbb{Z}_2$, leaving non-perturbative $SO(4)$ restoration as an unsolved downstream challenge;
+  2. Leaves the Euclidean time direction $x_4$ unsmoothed, resulting in surviving temporal contact divergences and requiring non-trivial operator renormalization ($Z \ne 1$).
+
+### NEG-YM-015R2-FIXED-T-BOUND-1: Absence of Published Non-Perturbative Multiscale Observable Insertion Bounds (`YM-015R2`)
+- **Discovery Date:** 2026-10-03
+- **Epistemic Classification:** `[PRIMARY_SOURCE_LIMITATION]`
+- **Hypothesis tested:** Whether Bałaban's published constructive renormalization group programme (CMP 1984–1989) directly provides cutoff-independent uniform bounds on correlation functions of gradient-flowed field-strength operators $\mathcal{O}_{a,t}(f)$.
+- **Result:** Falsified as an off-the-shelf citation. Bałaban's published theorems establish ultraviolet stability of the partition function and free energy density, but do not construct or bound local flowed observable insertions. Extending Bałaban's polymer expansions to include flowed field-strength insertions requires controlling the non-local flow Jacobian $\delta V_t / \delta U$ across multiscale block-spin transformations, which is mathematically plausible but remains unproved in the literature. Theorem `YM-015F-L1` is classified as `PARTIAL_PROGRESS — CONDITIONAL_ON_BALABAN_OBSERVABLE_FLOW`.
+
 

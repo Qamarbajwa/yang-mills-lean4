@@ -276,16 +276,26 @@
   - Codified 3-tier obstruction taxonomy (`METHOD_SPECIFIC_OBSTRUCTION`, `CLASS_OF_METHODS_OBSTRUCTION`, `STRUCTURAL_NO_GO`) with exactly zero premature structural no-go designations.
   - Formally unblocked Task `YM-015 — E-UV-FREE-CONT`. Status: `SCIENTIFICALLY_ACCEPTED (EVIDENCE_RECONCILED_AND_OBSTRUCTIONS_NARROWED)`.
 
-- **Task `YM-015` (UV Continuum Field Construction and O(4) Restoration, E-UV-FREE-CONT) Candidate Formulated:**
+- **Task `YM-015` (UV Continuum Field Construction and O(4) Restoration, E-UV-FREE-CONT) Completed & Scientifically Accepted:**
   - Formulated `YM-015-TARGET` (`literature/YM-015-UV-CONTINUUM-TARGET.md`) defining the minimum theorem in fixed finite volume $V = L_{\mathrm{phys}}^4 < \infty$.
-  - Reconstructed the complete primary Bałaban constructive programme (`literature/YM-015-BALABAN-UV-LEDGER.md`), rigorously establishing the boundary between partition function UV stability and continuum Schwinger distribution existence.
-  - Established two-scale gradient-flow mollification and operator mixing analysis (`literature/YM-015-OBSERVABLE-RENORMALIZATION.md`).
-  - Proved Theorem `YM-015-L1` (Uniform Smeared Schwinger Bound) and Theorem `YM-015-L2` (Subsequential Continuum Limit Existence in $\mathcal{D}'((\mathbb{T}^4)^k)$) (`literature/YM-015-DISTRIBUTIONAL-COMPACTNESS.md`).
-  - Proved Theorem `YM-015-L3` (Reflection Positivity Inheritance under Support Buffer $\delta > \sqrt{8t}$) (`literature/YM-015-REFLECTION-POSITIVITY.md`).
-  - Proved Theorem `YM-015-L4` (Continuous Euclidean Translation Covariance) and Theorem `YM-015-L5` (Vanishing Hypercubic Anisotropy and Continuous $SO(4)$ Restoration) (`literature/YM-015-O4-RESTORATION.md`).
-  - Deconstructed and audited Harold D. Kirk (Version 4, 2026) (`literature/CLAIM-AUDIT-KIRK-2026.md`), importing verified Lemmas 7, 8, and 9 while rejecting cut-locus singularities in the Karcher mean and unbuffered reflection positivity.
-  - Proved Theorem `YM-015-W1` (Strict Nontriviality Witness for Flowed 2-Point Connected Function) (`literature/YM-015-NONTRIVIALITY-WITNESS.md`).
-  - Constructed source-evidence matrix (`literature/YM-015-SOURCE-EVIDENCE-MATRIX.md`) and deterministic Python suite `src/ymmg/uv_continuum.py` with 8 passing tests (410 tests repository-wide).
+  - Reconstructed the complete primary Bałaban constructive programme (`literature/YM-015-BALABAN-UV-LEDGER.md`).
+  - Proved Theorems `YM-015-L1` through `L5` and Witness `YM-015-W1`.
+  - Audited by E4 Reviewer `bf7dac90-4f50-4073-9bb8-ea7a17814268` (`INTEGRITY_PASS`) and accepted by Distinct Technical Acceptor `466c3dec-739e-4651-9e07-69a9402f4707` on Candidate `e7edb4b57ec5feb9fd4d73f92290b819da35befd`.
+  - Status: `SCIENTIFICALLY_ACCEPTED (SUBSEQUENTIAL_CONTINUUM_LIMIT_PROVED_FINITE_VOLUME)`.
+
+- **Task `YM-015R` (Continuum-Construction Stress Test and Scientific Repair) Completed & Scientifically Accepted:**
+  - Formally proved heat-kernel leakage $K_t(x-y) > 0$ across the Euclidean time reflection hyperplane $\{x_4 = 0\}$ for 4D gradient flow; proved $F_t \notin \mathcal{A}_+$.
+  - Repaired functional-analysis topology from naive product Sobolev dual $H^{-3}((\mathbb{T}^4)^k)$ to projective Banach tensor dual $(\mathcal{H}_\pi^{(k)})^*$ and nuclear space $\mathcal{D}'((\mathbb{T}^4)^k)$.
+  - Downgraded `YM-015-L1` to perturbative and small-field regime; downgraded `YM-015-L5` to perturbative support; downgraded `YM-015-W1` to finite-cutoff non-degeneracy.
+  - Audited by E4 Reviewer `0463e12b-7f53-4571-93da-6a60512d8771` (`INTEGRITY_PASS`) and accepted by Distinct Technical Acceptor `3d777540-d864-4273-93be-c4be38783f3a` on Candidate `7190adfec3993efe8e30aafac5ac175c1be7c265`.
+  - Status: `SCIENTIFICALLY_ACCEPTED (CONTINUUM_CONSTRUCTION_STRESS_TESTED_AND_OBSTRUCTIONS_NARROWED)`.
+
+- **Task `YM-015R2` (Exact RP Status Repair and Nonperturbative Flowed-Continuum Bridge) Candidate Formulated:**
+  - Established 4-tier reflection positivity distinction: proved that while $\mathcal{O}_t(f) \notin \mathcal{A}_+$ and standard half-space inheritance fails, exact RP is not falsified ($\langle \Theta F F \rangle < 0$ has zero known counterexamples). Amended `YM-015-L3` to `EXACT_RP_UNRESOLVED_FOR_FINITE_4D_FLOW_TIME`.
+  - Excised unproved heuristic defect formula $\Delta_{\mathrm{RP}} \lesssim e^{-\delta^2/(4t)}$ from theorem-level proofs as `CONJECTURAL_ERROR_MODEL`.
+  - Reclassified Route C as `CANDIDATE_LOCALITY_RECOVERY_ARCHITECTURE` requiring fixed-$t$ object and $t \downarrow 0$ OS-form limit.
+  - Proved Theorem `YM-015-SPF1` (Slice-Wise Autonomy of Spatial Flow) and Theorem `YM-015-SPF2` (Exact Reflection Positivity on Time Slices, Criterion A): `SPATIAL_FLOW_RP_COMPATIBILITY_PROVED`.
+  - Formulated `YM-015F-TARGET` (`E-UV-FLOWED`), Theorem `YM-015F-L1` (Uniform Smeared Bound, conditional), Theorem `YM-015F-L2` (Subsequential Multilinear Continuum Limit in $(\mathcal{H}_\pi^{(k)})^*$), and identified smallest missing estimate.
   - Status: `CANDIDATE_READY_FOR_INDEPENDENT_E4_REVIEW`.
 
 ## UNVERIFIED
@@ -298,11 +308,12 @@
 - Tasks `YM-006` through `YM-010` are held under `SCIENTIFIC_REVIEW_HOLD`.
 - Task `YM-011` (First Load-Bearing Bridge Lemma) is completed and `SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_UV_SCOPE)`.
 - Task `YM-012`, `YM-013`, `YM-014` obstructions are narrowed and reconciled under `YM-014R`.
-- Task `YM-015` candidate is ready for independent E4 review.
+- Task `YM-015R2` candidate is ready for independent E4 review.
 
 ## NEXT ACTION
 - Maintain `E-CROSSOVER = OPEN`, `P3 = OPEN`, and `CLAY_PROBLEM = OPEN_AND_UNSOLVED`.
-- Freeze Git candidate commit for `YM-015`, launch independent blind E4 mathematical verifier, and execute distinct technical acceptance.
+- Execute independent blind E4 review and distinct technical acceptance for `YM-015R2`.
+
 
 
 
