@@ -1,0 +1,11 @@
+{
+  "task": "YM-034",
+  "candidate_sha": "8a8ce9018624c376421fd6e5bc17e205b2dcf7fe",
+  "scientific_tree_hash": "8569240bffa426e1fdeca452c23d0457ec4080b823e9106c033c37cc9147dac4",
+  "scientific_files": 146,
+  "tests": "427 passed in 4.33s",
+  "command": ".venv/Scripts/python.exe -m pytest -q",
+  "producer": "/root",
+  "evidence_scope": "Deterministic regression checks only; no continuum theorem proof",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+}

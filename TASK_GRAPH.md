@@ -54,10 +54,14 @@
 | YM-015R | Continuum-construction stress test and scientific repair | YM-015 | T3 | Re-audit L1–L5 + heat kernel leakage proof + projective tensor topology + replacement routes | SCIENTIFICALLY_ACCEPTED (CONTINUUM_CONSTRUCTION_STRESS_TESTED_AND_OBSTRUCTIONS_NARROWED) |
 | YM-015R2 | Exact RP status repair and nonperturbative flowed-continuum bridge | YM-015R | T3 | Four-tier RP distinction + conjectural model excision + spatial flow proof + YM-015F-TARGET | SCIENTIFICALLY_ACCEPTED (REVISION_33) |
 
-| YM-034 | Architecture adoption, reconciliation, synchronized discovery cycle | YM-015R2 | T3 | Frozen candidate, deterministic checks, blind independent review, distinct acceptor | CANDIDATE |
-| YM-015F-JET-001 | Conditional finite-source coefficient reduction | YM-015R2 | T3 | Exact algebra and independent mathematical review | CANDIDATE |
+| YM-034 | Architecture adoption, reconciliation, synchronized discovery cycle | YM-015R2 | T3 | Frozen candidate, deterministic checks, blind independent review, distinct acceptor | SCIENTIFICALLY_ACCEPTED_WITH_LIMITATIONS |
+| YM-015F-JET-001 | Conditional finite-source coefficient reduction | YM-015R2 | T3 | Exact algebra and independent mathematical review | ACCEPTED_CONDITIONAL |
 | YM-015F-JET-002 | Actual RG marked insertion, all sectors and terminal normalization | YM-015F-JET-001 | T3 | Cutoff-uniform source coefficient estimates | OPEN / PRIMARY |
 | YM-3D4D-FAILURE-MAP-001 | Exact first failing 3D proof lemma | YM-015R2 | T3 | Primary proof extraction | ACTIVE / PARTIAL_SOURCE_MAP |
 | YM-DISCOVERY-TRANSFER-001 | Mechanism and hypothesis transfers | YM-015R2 | T3 | Source bindings and bounded experiments | ACTIVE / PROPOSED_XFERS |
 
 No edge closure: JET-002 -> L1 -> conditional fixed-time multilinear extraction; local OS remains a separate open bridge. All XFER objects are proposals. Downstream order follows canonical architecture; independent atlas and proof-extraction tasks can progress alongside JET-002.
+
+
+## Revision-34 bounded closeout (2026-10-04)
+YM-034 SCIENTIFICALLY_ACCEPTED_WITH_LIMITATIONS at frozen candidate 8a8ce9018624c376421fd6e5bc17e205b2dcf7fe. Reviewer /root/review_034_resume; distinct acceptor /root/accept_034. Raw receipt and acceptance scope are binding; no scientific edge closes. Prior candidate/pending paragraphs are historical. Next automatically active: YM-015F-JET-002A exact degree-one transport and plaquette-source compatibility audit; its investigation is unreviewed and cannot serve as an accepted premise. Independent numbered 3D proof-failure extraction remains active. Hourly continuation is registered.

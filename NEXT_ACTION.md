@@ -1,7 +1,7 @@
 # NEXT ACTION
 
 ## Current primary action
-`YM-015F ACTIVE; YM-034 DISCOVERY CYCLE CANDIDATE; P3 OPEN; CLAY_PROBLEM OPEN_AND_UNSOLVED; YM-016 BLOCKED`
+`YM-015F ACTIVE; YM-034 ACCEPTED_WITH_LIMITATIONS; YM-015F-JET-002A ACTIVE; P3 OPEN; CLAY_PROBLEM OPEN_AND_UNSOLVED; YM-016 BLOCKED`
 
 ## Scope
 - `YM-011` is `SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_UV_SCOPE)`.
@@ -61,3 +61,7 @@
 
 ## Autonomous continuation (2026-10-04)
 YM-015R2 was accepted at revision 33; earlier planning labels were stale. Three tracks are initialized under governance/YM_AUTONOMOUS_DISCOVERY_ARCHITECTURE.md. Candidate YM-034 contains source audits, a partial Failure Atlas, proposed XFER objects and conditional elementary source-jet/correction lemmas; no scientific edge closes. Next: fresh blind candidate review and distinct acceptance, then automatically execute YM-015F-JET-002 degree-one marked transport/full-source extraction and the first numbered 3D proof-failure audit. YM-016 remains BLOCKED.
+
+
+## Revision-34 bounded closeout (2026-10-04)
+YM-034 SCIENTIFICALLY_ACCEPTED_WITH_LIMITATIONS at frozen candidate 8a8ce9018624c376421fd6e5bc17e205b2dcf7fe. Reviewer /root/review_034_resume; distinct acceptor /root/accept_034. Raw receipt and acceptance scope are binding; no scientific edge closes. Prior candidate/pending paragraphs are historical. Next automatically active: YM-015F-JET-002A exact degree-one transport and plaquette-source compatibility audit; its investigation is unreviewed and cannot serve as an accepted premise. Independent numbered 3D proof-failure extraction remains active. Hourly continuation is registered.
