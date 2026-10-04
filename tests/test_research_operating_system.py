@@ -40,10 +40,10 @@ def test_law_0_minimal_read_exception_and_fail_closed_gate(tmp_path):
         validate_project_binding(tmp_path, "YANG_MILLS_MASS_GAP")
 
 def test_closed_world_scientific_fingerprint_manifest():
-    assert len(SCIENTIFIC_FINGERPRINT_MANIFEST) == 137
+    assert len(SCIENTIFIC_FINGERPRINT_MANIFEST) == 146
     tree_hash, file_hashes = compute_closed_world_scientific_tree_hash(ROOT)
     assert len(tree_hash) == 64
-    assert len(file_hashes) == 137
+    assert len(file_hashes) == 146
     for rel_path in SCIENTIFIC_FINGERPRINT_MANIFEST:
         assert rel_path in file_hashes
         assert (ROOT / rel_path).exists()
@@ -70,6 +70,16 @@ def test_r3_new_scientific_locations_fail_closed():
     try:
         with pytest.raises(ConstitutionalIntegrityError, match="Unknown research artifact"):
             discover_repository_artifacts(ROOT) and validate_scientific_artifact_classification(ROOT)
+    finally:
+        new_path.unlink()
+
+def test_untracked_research_registry_artifact_fails_closed():
+    new_path = ROOT / "research" / "unclassified_candidate.md"
+    assert not new_path.exists()
+    new_path.write_text("Unreviewed candidate\n", encoding="utf-8")
+    try:
+        with pytest.raises(ConstitutionalIntegrityError, match="Unknown research artifact"):
+            validate_scientific_artifact_classification(ROOT)
     finally:
         new_path.unlink()
 

@@ -1,0 +1,78 @@
+# YM 3D4D FAILURE ATLAS
+
+Status: CANDIDATE RESEARCH MAP / NO RESULTS PROMOTED. Access date: 2026-10-04.
+
+YM-3D4D-FAILURE-MAP-001: source theorem, proof dependency chain, dimension-dependent exponents, first failing lemma, missing gain, repair mechanism, and DAG compatibility. Entries require source-level verification; no failure implies a structural no-go.
+
+Policy: governance/YM_AUTONOMOUS_DISCOVERY_ARCHITECTURE.md. Primary dependency remains YM-015F. E-UV-FLOWED PARTIAL_PROGRESS; E-UV-LOCAL-OS, E-UV-FREE-CONT OPEN_AND_UNSOLVED; P3 and E-CROSSOVER OPEN; YM-016 BLOCKED; STRUCTURAL_NO_GO_COUNT = 0.
+
+## Source bindings and access limits
+
+- **S1:** Chandra, Chevyrev, Hairer, Shen, *Stochastic quantisation of Yang–Mills–Higgs in 3D*, Invent. Math. 237 (2024), 541–696, [publisher full text](https://link.springer.com/article/10.1007/s00222-024-01264-2), [author record](https://arxiv.org/abs/2201.03487). Access: publisher HTML opening, abstract and introduction through equation (1.7) inspected; subsequent targeted opens failed. No PDF downloaded or line-by-line proof reconstruction completed. Verified locators: abstract; introduction, trivial-bundle assumption; (1.4), (1.7). Later theorem numbers are not represented as directly inspected here.
+- **S2:** Cao, Chatterjee, *A State Space for 3D Euclidean Yang–Mills Theories*, CMP 405, article 3 (2024), [publisher](https://link.springer.com/article/10.1007/s00220-023-04870-y). Access: full HTML available; introduction through Theorem 1.6 and surrounding discussion inspected. Verified locators: §1.1 group restriction, §1.5 state space, Lemma 1.4, Theorem 1.6, Remark 1.7, Conjecture 1.8. Proof §3 not reconstructed.
+- **S3:** Chevyrev, Shen, *Uniqueness of Gauge Covariant Renormalisation of Stochastic 3D Yang–Mills–Higgs*, ARMA 250, article 11 (2026), published 13 January 2026, [publisher](https://link.springer.com/article/10.1007/s00205-025-02163-3), [preprint](https://arxiv.org/abs/2503.03060). Access: publisher HTML introduction through §1.1 inspected; search returned main Theorem 1.6 but its complete quantifiers and proof were not inspected. Verified locators: (1.1), introduction (1.2), §1.1 mollifier scaling. Search snippets are discovery aids only.
+
+The source record supports a local stochastic dynamic and conditional state-space compactness, not a solved 3D continuum measure or mass gap. S3 explicitly leaves invariant-measure existence and 3D lattice Langevin scaling-limit identification open. This audit found a newer uniqueness result; it does not establish an exhaustive ranking of all 2026 literature.
+
+## FA-001: local stochastic flow / singular SPDE / regularity structures
+
+**Source theorem and scope (SOURCE_SUPPORTED):** S1 abstract supplies a renormalised local-in-time stochastic YMH flow and a gauge-orbit Markov process allowing explosion. Dimension is three, on a torus and trivial bundles. The proof dependency skeleton to audit is DeTurck parabolicisation → enhanced noise/model convergence → renormalised fixed point → state-space continuity → gauge covariance in law → orbit dynamic. This is a skeleton, not a verified lemma-by-lemma dependency chain.
+
+**Critical estimate (ALGEBRAICALLY_VERIFIED scaling diagnostic; not a source theorem):** parabolic scaling gives white-noise homogeneity below −(d+2)/2 and stochastic heat-convolution homogeneity
+
+\[
+\alpha=(2-d)/2-\kappa,\qquad \kappa>0.
+\]
+
+The YM coordinate equation contains a quadratic derivative term and a cubic term. In formal model homogeneities, heat integration gives respectively 2α+1 and 3α+2. Their improvements over α are α+1 and 2α+2. These labels concern renormalised model terms; they do not assert that ordinary multiplication of distributions exists.
+
+| Quantity | d=3 | d=4 |
+|---|---|---|
+| Linear α | −1/2−κ | −1−κ |
+| Quadratic derivative output 2α+1 | −2κ | −1−2κ |
+| Quadratic improvement | 1/2−κ | −κ |
+| Cubic output 3α+2 | 1/2−3κ | −1−3κ |
+| Cubic improvement | 1−2κ | −2κ |
+
+**First diagnosed failure:** strict positive improvement required by the usual locally subcritical recursive expansion disappears at d=4. At κ=0 both margins are zero; below the endpoint both are negative. This is the first failure of this *power-counting test*, not an identified first failing numbered lemma in S1. That stronger requested reconstruction remains PENDING_SOURCE_PROOF_AUDIT. A naive unrenormalised product test already fails in d=3 and therefore cannot be used as the d=3→4 separator.
+
+**Classification:** METHOD_SPECIFIC_OBSTRUCTION for direct use of this subcritical construction. No structural no-go and no claim about all critical-SPDE methods.
+
+**Missing gain:** if a corrected bound adds regularity δ₂ to the quadratic output and δ₃ to the cubic output, strict improvement requires δ₂>κ and δ₃>2κ at d=4. The endpoint has infimum missing positive power zero, not a fixed half derivative. Recovering the entire d=3 margin would require δ₂=1/2 and δ₃=1. These are distinct targets. Endpoint logarithmic control might replace a power gain only after a new contraction/model-convergence theorem is proved.
+
+**Bounded missing 4D estimate:** construct a gauge-compatible renormalised bilinear derivative operator with an endpoint norm and a scale-uniform convergence/iteration bound, then do the corresponding cubic bound. Do not infer convergence from the homogeneity table. Ward identities, curvature/Bianchi cancellations, and asymptotic-freedom damping are candidate hypotheses, currently HEURISTIC; none was verified here as supplying δ.
+
+**DAG compatibility:** exploratory support for E-UV-FLOWED and representation search only. A successful stochastic endpoint estimate still needs measure existence, lattice matching, gauge-invariant observable bounds, positivity and local OS bridges. It does not close YM-015F.
+
+## FA-002: state-space compactness / energy / concentration
+
+**Source theorem (SOURCE_SUPPORTED):** S2 Theorem 1.6 says that tight action values at every positive heat-flow time imply a weakly convergent subsequence of orbit-valued laws. Its introduction names Uhlenbeck compactness, heat-flow properties and Sobolev embedding as proof ingredients. Establishing that actual YM approximants meet the action-tightness premise remains Conjecture 1.8. The group restriction in §1.1 must be retained.
+
+**Independent scaling diagnostic (ALGEBRAICALLY_VERIFIED):** for a rescaled smooth connection Aλ(x)=λA(λx), curvature is Fλ=λ²F(λx), and ∫|Fλ|²=λ^(4−d)∫|F|² on the corresponding rescaled domain. Thus the energy exponent is 1 in d=3 and 0 in d=4. Local concentration at shrinking scales is energetically marginal in four dimensions. This computation is not a substitute for the exact compactness proof or a bubbling theorem.
+
+**First failing lemma:** UNKNOWN_PENDING_PROOF_AUDIT of S2 §3. The action-scaling margin vanishes, but this alone neither proves Theorem 1.6 false in d=4 nor identifies where additional positive flow time could repair compactness.
+
+**Classification:** METHOD_SPECIFIC_OBSTRUCTION candidate, with failure itself unverified. **Missing gain:** no numerical δ can yet be assigned to S2's actual compactness estimate. A proposed local anti-concentration hypothesis is uniform integrability of curvature energy in balls, sup_n sup_x ∫B_r(x)|F_n(t)|²→0 as r→0 at each fixed t>0, with suitable probability control; sufficiency for the required orbit topology must be proved. Candidate repairs: concentration-compactness, gauge-covariant norms, flow-time smoothing. **DAG:** informs continuum tightness; cannot replace the missing nonperturbative insertion bound.
+
+## FA-003: counterterm uniqueness / gauge covariance
+
+**Source-supported result:** S3 strengthens the intrinsic uniqueness of gauge-covariant mass renormalisation. Introduction (1.2) detects a different limiting renormalisation through regularised Wilson-loop expectations separated by order t^(10/9), replaceable by an exponent greater than one. This is a short-time detection exponent, not a spectral gap or a d-dependent power-counting margin. Its proof uses stochastic and flowed-observable expansions.
+
+**3D value:** detection exponent 10/9 in the introductory formulation. **4D value:** UNKNOWN; dimensional substitution into 10/9 is invalid. **Critical estimate / first failure / missing gain:** PENDING complete Theorem 1.6 and §1.3/proof audit; local construction FA-001 is already a prerequisite. **Classification:** METHOD_SPECIFIC_OBSTRUCTION of a proposed transfer, not a proved obstruction. **Repair:** gauge-invariant defect detection is a concrete mechanism to examine in the defect-correction ledger. **DAG:** possible observable/counterterm diagnostic; uniqueness cannot provide existence, invariant measure or nonperturbative lattice matching.
+
+## Coverage registry: required categories not silently promoted
+
+| Category | Entry / source theorem | 3D value | 4D value | First failure / missing gain | Mechanism / DAG compatibility |
+|---|---|---|---|---|---|
+| Stochastic quantisation | FA-001 / S1 local flow | α<−1/2 | α<−1 | scaling diagnostic above; numbered lemma pending | Gauge cancellations; exploratory UV support |
+| Singular SPDE | FA-001 | margins 1/2−κ, 1−2κ | −κ, −2κ | strict improvement lost; δ₂>κ, δ₃>2κ | Endpoint/log norms; no closure |
+| Regularity structures | FA-001 | positive recursive margins | critical endpoint | source rule/model theorem audit pending | Critical model convergence; no closure |
+| Paracontrolled methods | PENDING_SOURCE_SELECTION | UNKNOWN | UNKNOWN | UNKNOWN; no obstruction assigned | Compensated products; UV exploratory |
+| Energy estimates | FA-002 diagnostic / S2 | action exponent 1 | 0 | actual estimate pending; δ unknown | Local anti-concentration; tightness |
+| Compactness | FA-002 / S2 Thm. 1.6 | conditional tightness | no transferred theorem | §3 first lemma pending; δ unknown | Gauge-covariant compactness; tightness |
+| Concentration/bubbling | FA-002 diagnostic only | subcritical energy scaling | energy critical | bubbling source theorem pending | Concentration-compactness; tightness |
+| RG contraction | PENDING_SOURCE_SELECTION | UNKNOWN | UNKNOWN | no validated 3D comparison; δ unknown | RG damping; main YM-015F dependency retained |
+| Mass-scale generation | PENDING_SOURCE_SELECTION | UNKNOWN | UNKNOWN | no verified theorem; δ unknown | Massive-basin stability; YM-016 blocked |
+| Spectral estimates | PENDING_SOURCE_SELECTION | UNKNOWN | UNKNOWN | no verified physical gap; δ unknown | Transfer-matrix norms; downstream only |
+
+For pending rows, no failure classification is awarded until an actual approach is analysed. UNKNOWN is not negative evidence. The completed algebra is explicitly separated from source theorem claims. The next task is to inspect S1's state-space definition, admissible exponents, regularity-structure rule and first model/fixed-point lemma, bind exact locators, and replace the diagnostic with an actual proof-local failure map. No XFER is promoted and STRUCTURAL_NO_GO_COUNT remains zero.

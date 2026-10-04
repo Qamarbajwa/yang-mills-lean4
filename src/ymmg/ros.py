@@ -163,6 +163,15 @@ SCIENTIFIC_FINGERPRINT_MANIFEST = [
     "literature/YM-015R2-OBSERVABLE-ROUTE-MATRIX.md",
     "literature/YM-015R2-EVIDENCE-MATRIX.md",
     "literature/YM-015R2-CORRECTED-DAG.md",
+    "governance/YM_AUTONOMOUS_DISCOVERY_ARCHITECTURE.md",
+    "research/YM_3D4D_FAILURE_ATLAS.md",
+    "research/YM_DISCOVERY_TRANSFER_ENGINE.md",
+    "research/YM_REPRESENTATION_SEARCH_REGISTRY.md",
+    "research/YM_CONSTRUCTION_DEFECT_CORRECTION_LEDGER.md",
+    "research/YM_CROSS_DOMAIN_TRANSFER_REGISTRY.md",
+    "research/YM_015F_INSERTION_SOURCE_AUDIT.md",
+    "research/YM_015F_SOURCE_JET_REDUCTION.md",
+    "research/YM_SCIENTIFIC_RECONCILIATION_034.md",
     SCIENTIFIC_ARTIFACT_CLASSIFICATION_PATH,
 ]
 
@@ -337,10 +346,12 @@ def discover_repository_artifacts(workspace_root: Path) -> Dict[str, str]:
     except (OSError, subprocess.CalledProcessError):
         paths.update(path for path in workspace_root.iterdir() if path.is_file())
 
-    for search_root in (workspace_root / "literature", workspace_root / "proofs", workspace_root / "derivations"):
+    for search_root in (workspace_root / "literature", workspace_root / "proofs", workspace_root / "derivations", workspace_root / "research"):
         if search_root.exists():
             paths.update(path for path in search_root.rglob("*") if path.is_file())
     paths.update(path for path in workspace_root.iterdir() if path.is_file())
+    # Explicit canonical files must be discovered before they enter Git as well.
+    paths.update(workspace_root / rel for rel in SCIENTIFIC_FINGERPRINT_MANIFEST)
     policy_path = workspace_root / SCIENTIFIC_ARTIFACT_CLASSIFICATION_PATH
     if policy_path.exists():
         paths.add(policy_path)

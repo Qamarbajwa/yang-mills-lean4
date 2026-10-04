@@ -321,3 +321,9 @@
 
 
 
+
+## YM-034 synchronized discovery cycle — candidate 2026-10-04
+Authoritative accepted baseline: revision 33, HEAD 64f040c, frozen candidate 55c35472ddcb4be86cfb4efdab5e8b5dafbf3f37. YM-015R2 was accepted; preceding ready-for-review labels are historical stale planning text.
+Architecture persisted before further research. Source audit and SCIENTIFIC_RECONCILIATION_034 exclude unsupported global bad-sector suppression, linear-to-nonlinear smoothing, and mismatched bibliography as new premises. Conditional source-jet, integration and defect-correction lemmas are candidates, not a uniform insertion theorem. Failure Atlas records scaling diagnostics and explicitly pending proof-local failures. Five XFER proposals supply no transferred continuum conclusion.
+E-UV-FLOWED PARTIAL_PROGRESS; E-UV-LOCAL-OS and E-UV-FREE-CONT OPEN_AND_UNSOLVED; E-SPATIAL-FLOW SPATIAL_FLOW_RP_COMPATIBILITY_PROVED; E-CROSSOVER and P3 OPEN; thermodynamic limit, OS reconstruction and physical spectral gap OPEN; YM-016 BLOCKED; STRUCTURAL_NO_GO_COUNT=0; goal_complete=false; CLAY_PROBLEM OPEN_AND_UNSOLVED.
+Smallest selected missing theorem: YM-015F-JET-002 cutoff-uniform physically normalized marked flowed-energy transport through actual RG integration, including bad-field and terminal sectors. Next independent edge: numbered proof-local 3D failure reconstruction. No theorem status promotion before independent review and distinct acceptance.

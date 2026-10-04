@@ -52,4 +52,12 @@
 | YM-014R | External-evidence reconciliation & obstruction repair | YM-014 | T3 | Re-audit YM-013/014 against literature + Faizal-Shabir audit + E4 review | SCIENTIFICALLY_ACCEPTED (EVIDENCE_RECONCILED_AND_OBSTRUCTIONS_NARROWED) |
 | YM-015 | UV continuum field construction and O(4) restoration (E-UV-FREE-CONT) | YM-011, YM-014R | T3 | YM-015-TARGET + Theorems YM-015-L1 through L5 + Kirk audit + E4 review | SCIENTIFICALLY_ACCEPTED (SUBSEQUENTIAL_CONTINUUM_LIMIT_PROVED_FINITE_VOLUME) |
 | YM-015R | Continuum-construction stress test and scientific repair | YM-015 | T3 | Re-audit L1–L5 + heat kernel leakage proof + projective tensor topology + replacement routes | SCIENTIFICALLY_ACCEPTED (CONTINUUM_CONSTRUCTION_STRESS_TESTED_AND_OBSTRUCTIONS_NARROWED) |
-| YM-015R2 | Exact RP status repair and nonperturbative flowed-continuum bridge | YM-015R | T3 | Four-tier RP distinction + conjectural model excision + spatial flow proof + YM-015F-TARGET | CANDIDATE_READY |
+| YM-015R2 | Exact RP status repair and nonperturbative flowed-continuum bridge | YM-015R | T3 | Four-tier RP distinction + conjectural model excision + spatial flow proof + YM-015F-TARGET | SCIENTIFICALLY_ACCEPTED (REVISION_33) |
+
+| YM-034 | Architecture adoption, reconciliation, synchronized discovery cycle | YM-015R2 | T3 | Frozen candidate, deterministic checks, blind independent review, distinct acceptor | CANDIDATE |
+| YM-015F-JET-001 | Conditional finite-source coefficient reduction | YM-015R2 | T3 | Exact algebra and independent mathematical review | CANDIDATE |
+| YM-015F-JET-002 | Actual RG marked insertion, all sectors and terminal normalization | YM-015F-JET-001 | T3 | Cutoff-uniform source coefficient estimates | OPEN / PRIMARY |
+| YM-3D4D-FAILURE-MAP-001 | Exact first failing 3D proof lemma | YM-015R2 | T3 | Primary proof extraction | ACTIVE / PARTIAL_SOURCE_MAP |
+| YM-DISCOVERY-TRANSFER-001 | Mechanism and hypothesis transfers | YM-015R2 | T3 | Source bindings and bounded experiments | ACTIVE / PROPOSED_XFERS |
+
+No edge closure: JET-002 -> L1 -> conditional fixed-time multilinear extraction; local OS remains a separate open bridge. All XFER objects are proposals. Downstream order follows canonical architecture; independent atlas and proof-extraction tasks can progress alongside JET-002.

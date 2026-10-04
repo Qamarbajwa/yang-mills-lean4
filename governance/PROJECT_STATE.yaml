@@ -487,3 +487,14 @@ overhead:
 views:
   last_validated_revision: 33
   evidence_refs: []
+
+# In-progress cycle; baseline hard gates above bind revision-33 acceptance only.
+autonomous_discovery_cycle:
+  id: YM-034
+  status: CANDIDATE
+  architecture_ref: governance/YM_AUTONOMOUS_DISCOVERY_ARCHITECTURE.md
+  primary_task: YM-015F-JET-002
+  parallel_tracks: [YM-3D4D-FAILURE-MAP-001, YM-DISCOVERY-TRANSFER-001]
+  reconciliation_ref: research/YM_SCIENTIFIC_RECONCILIATION_034.md
+  candidate_scientific_tree_hash: 25e59dfedeff125078270df28dc29fbddf513a61d5c87ac5778c830ca95bfb68
+  scientific_edge_closures: []
