@@ -236,7 +236,7 @@ def test_14_scientific_candidate_and_evidence_closeout_head_remain_distinct():
     assert tree_hash in [
         "e11216bf0059b8248c021295a0dafee27fa9202e6738f253afd9c9970667506a",
         "7d5ba2cd67964dce354bd1a733cfc2012925f2d5dfcb131d5d4dec21c26aadfc",
-        "25e59dfedeff125078270df28dc29fbddf513a61d5c87ac5778c830ca95bfb68",
+        "8569240bffa426e1fdeca452c23d0457ec4080b823e9106c033c37cc9147dac4",
     ]
 
 

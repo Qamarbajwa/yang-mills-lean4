@@ -309,3 +309,14 @@
 - **Result:** Falsified as an off-the-shelf citation. Bałaban's published theorems establish ultraviolet stability of the partition function and free energy density, but do not construct or bound local flowed observable insertions. Extending Bałaban's polymer expansions to include flowed field-strength insertions requires controlling the non-local flow Jacobian $\delta V_t / \delta U$ across multiscale block-spin transformations, which is mathematically plausible but remains unproved in the literature. Theorem `YM-015F-L1` is classified as `PARTIAL_PROGRESS — CONDITIONAL_ON_BALABAN_OBSERVABLE_FLOW`.
 
 
+
+
+## YM-034 / 2026-10-04: insertion shortcut reconciliation
+
+- METHOD_SPECIFIC_OBSTRUCTION: per-polymer bad-field suppression does not imply a probability exp(-c beta V/a^4) for occurrence of any bad polymer. Independent Bernoulli countermodel and exact scope: research/YM_015F_INSERTION_SOURCE_AUDIT.md. No counterexample to the physical Wilson measure asserted.
+- METHOD_SPECIFIC_OBSTRUCTION: linear heat smoothing alone does not prove nonlinear gauge-flow curvature bounds or conversion of lattice coordinates to physical norms. Required estimate remains OPEN.
+- METHOD_SPECIFIC_OBSTRUCTION: uniform zero-source partition values do not imply uniform source derivatives; exp(s/a) is an elementary countermodel. Finite cutoff analyticity gives no uniform radius or bound.
+- All-moment finiteness need not imply exponential integrability (lognormal countermodel); finite nilpotent source jets avoid an unnecessary hypothesis.
+- Critical SPDE homogeneity gains vanish under d=3 to d=4 substitution. This is an algebraic method diagnostic; first numbered proof-local failure remains pending.
+- Bałaban source labels require correction: CMP102 is 3D; final 4D stability publisher abstract is CMP122. Exact source activity estimates remain unverified.
+- No structural no-go or scientific edge closure follows. STRUCTURAL_NO_GO_COUNT=0. Candidate mathematical reconciliation is pending independent review.
