@@ -69,3 +69,7 @@ YM-034 SCIENTIFICALLY_ACCEPTED_WITH_LIMITATIONS at frozen candidate 8a8ce9018624
 
 ## YM-035 candidate continuation
 Exact vacuum-normalized conditional source transport, connected second-source defect and finite rational countermodels are candidates only. The plaquette compatibility audit corrects the physical-diagonal boundary inference; observable, coupling and SU(N) mappings remain unresolved. The 3D atlas now binds rule(5.6) and its subcritical-completion assertion; first numbered failing lemma remains pending. Next: freeze and independent review with distinct acceptance. Main JET-002 uniform RG insertion theorem remains OPEN; all scientific edge statuses unchanged.
+
+
+## Revision-35 bounded closeout (2026-10-05)
+YM-035 SCIENTIFICALLY_ACCEPTED_WITH_LIMITATIONS at frozen candidate f61c5a05608a5ee960d581e0854fd3c8efd23ab3. Reviewer /root/review_035; distinct acceptor /root/accept_035. Exact finite source transport and second-order connected correction accepted within hypotheses; source compatibility algebra and rule-level atlas remain bounded partial audits. No required scientific edge closes. Next active YM-015F-JET-002B: exact marked recurrence for a specified RG map and quadratic-source/SU(N) extraction. Author-PDF reconnaissance executed and preserved as RAW UNREVIEWED. Uniform physical insertion and all-sector/terminal bounds remain OPEN; all Clay/OS/crossover/volume invariants unchanged.

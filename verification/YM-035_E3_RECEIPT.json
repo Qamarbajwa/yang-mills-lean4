@@ -1,0 +1,12 @@
+{
+  "task": "YM-035",
+  "candidate_sha": "f61c5a05608a5ee960d581e0854fd3c8efd23ab3",
+  "scientific_tree_hash": "cd210dd4346a7322724f6bda594d7cc71e3830a58f75e4fdc9974d49e9b1a907",
+  "scientific_files": 149,
+  "tests": "430 passed in 4.35s",
+  "command": ".venv/Scripts/python.exe -m pytest -q",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "producer": "/root",
+  "scope": "Deterministic regression tests and exact finite rational countermodels; not proof of continuum estimates",
+  "initial_failure": "429 passed / one stale objective allowlist failure, repaired before final candidate freeze"
+}

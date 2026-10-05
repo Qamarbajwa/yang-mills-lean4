@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 34
+revision: 35
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,9 +9,9 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "8a8ce9018624c376421fd6e5bc17e205b2dcf7fe"
-  scientific_candidate_sha: "8a8ce9018624c376421fd6e5bc17e205b2dcf7fe"
-  review_bound_sha: "8a8ce9018624c376421fd6e5bc17e205b2dcf7fe"
+  head: "f61c5a05608a5ee960d581e0854fd3c8efd23ab3"
+  scientific_candidate_sha: "f61c5a05608a5ee960d581e0854fd3c8efd23ab3"
+  review_bound_sha: "f61c5a05608a5ee960d581e0854fd3c8efd23ab3"
   evidence_closeout_head: "295918e96689207269c0e1301b7fd4f939d024dd"
   closeout_resolution: "evidence_closeout_head binds the completed YM-034 receipt/state commit; later metadata commits preserve it. Resolve current authoritative HEAD from Git."
   dirty: false
@@ -32,14 +32,30 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 34
-  last_updated_at: "2026-10-04T19:52:53Z"
-  active_contract: "YM-015F-JET-002A"
-  frozen_candidate: "8a8ce9018624c376421fd6e5bc17e205b2dcf7fe"
+  last_expected_revision: 35
+  last_updated_at: "2026-10-05T01:28:42Z"
+  active_contract: "YM-015F-JET-002B"
+  frozen_candidate: "f61c5a05608a5ee960d581e0854fd3c8efd23ab3"
 
-current_objective: YM-015F-JET-002A
+current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-035
+    scope_in: "Exact finite source transport, connected coefficient defect, plaquette compatibility algebra and partial rule-local atlas"
+    scope_out: "Uniform physical insertion theorem, full source completion proof and continuum closure"
+    dependencies: ["YM-034"]
+    risk: R3
+    writer: "/root"
+    reviewer_path: "/root/review_035"
+    acceptor: "/root/accept_035"
+    status: SCIENTIFICALLY_ACCEPTED
+    scope_limitation: "FINITE_IDENTITIES_AND_PARTIAL_SOURCE_AUDITS_NO_EDGE_CLOSURE"
+  - id: YM-015F-JET-002B
+    scope_in: "Actual RG marked coefficient recurrence and independent quadratic-source PDF/SU(N) hypothesis extraction"
+    scope_out: "Unproved uniform activity bounds and continuum edge closure"
+    dependencies: ["YM-035"]
+    risk: R3
+    status: ACTIVE
   - id: YM-034
     scope_in: "Architecture adoption, scientific reconciliation, partial source audits and conditional elementary algebra"
     scope_out: "Continuum theorem closure, full proof-local failure map, acceptance of XFER conclusions"
@@ -55,7 +71,8 @@ objectives:
     scope_out: "Unproved cutoff-uniform RG norm and continuum edge closure"
     dependencies: ["YM-034"]
     risk: R3
-    status: ACTIVE
+    status: SCIENTIFICALLY_ACCEPTED
+    scope_limitation: "FINITE_CONDITIONAL_TRANSPORT_ONLY"
   - id: YM-GOV-ADOPT-0406R3
     scope_in: "Evaluate and bind Universal Governance v4.0.6-r3 controls as project-specific strengthening to Yang-Mills"
     scope_out: "Scientific task execution; universal promotion to v4.0.6-r3"
@@ -387,7 +404,7 @@ hard_gates:
     description: "Independent review is bound to exact candidate SHA."
   scientific_review_pass:
     status: PASS
-    description: "Review verdict is INTEGRITY_PASS_WITH_LIMITATIONS; limitations are reflected in YM-034 bounded scope."
+    description: "Review verdict is INTEGRITY_PASS_WITH_LIMITATIONS; limitations are reflected in YM-035 bounded scope."
   negative_evidence_preserved:
     status: PASS
     description: "All negative scientific findings preserved in NEGATIVE_EVIDENCE_REGISTER.md."
@@ -396,10 +413,10 @@ hard_gates:
     description: "Prerequisites satisfied for active objective."
   scientific_tree_identity:
     status: PASS
-    description: "Closed-world scientific tree hash verified as 8569240bffa426e1fdeca452c23d0457ec4080b823e9106c033c37cc9147dac4."
+    description: "Closed-world scientific tree hash verified as cd210dd4346a7322724f6bda594d7cc71e3830a58f75e4fdc9974d49e9b1a907."
   state_revision_freshness:
     status: PASS
-    description: "State revision is monotonically incremented to 34."
+    description: "State revision is monotonically incremented to 35."
   no_unresolved_mandatory_blocker:
     status: PASS
     description: "Zero mandatory blockers exist."
@@ -411,7 +428,7 @@ hard_gates:
     description: "clay_problem is OPEN_AND_UNSOLVED."
   scientific_acceptance_authority_separation:
     status: PASS
-    description: "Writer /root != reviewer /root/review_034_resume != acceptor /root/accept_034; internal process-role separation only."
+    description: "Writer /root != reviewer /root/review_035 != acceptor /root/accept_035; internal process-role separation only."
   regression_protection_for_consequential_defects:
     status: PASS
     description: "Durable regression tests implemented across test suite."
@@ -485,9 +502,9 @@ release:
     adapter: "NONE_BY_DESIGN / NOT_APPLICABLE"
 
 last_verified_checkpoint:
-  sha: "8a8ce9018624c376421fd6e5bc17e205b2dcf7fe"
-  timestamp: "2026-10-04T19:52:53Z"
-  test_result: "427 passed"
+  sha: "f61c5a05608a5ee960d581e0854fd3c8efd23ab3"
+  timestamp: "2026-10-05T01:28:42Z"
+  test_result: "430 passed"
 
 overhead:
   routine_target_fraction: 0.10
@@ -502,7 +519,7 @@ overhead:
     - "YM-015R2 (Exact RP Status Repair and Nonperturbative Flowed-Continuum Bridge) completed and scientifically accepted (RP_STATUS_REPAIRED_SPATIAL_FLOW_RP_PROVED_AND_FLOWED_TARGET_BOUNDED)"
 
 views:
-  last_validated_revision: 34
+  last_validated_revision: 35
   evidence_refs: []
 
 # Accepted bounded YM-034 cycle; hard gates bind its explicit acceptance scope.
@@ -524,10 +541,17 @@ autonomous_discovery_cycle:
   next_automatic_task: YM-015F-JET-002A
   continuation_automation: continue-governed-yang-mills-discovery
 
-# Pending material candidate; accepted YM-034 hard gates do not cover this cycle.
+# Accepted bounded YM-035 cycle; live hard gates bind its explicit scope.
 source_transport_cycle:
   id: YM-035
-  status: CANDIDATE
+  status: SCIENTIFICALLY_ACCEPTED_WITH_LIMITATIONS
   scientific_tree_hash: cd210dd4346a7322724f6bda594d7cc71e3830a58f75e4fdc9974d49e9b1a907
   primary_task: YM-015F-JET-002A
   scientific_edge_closures: []
+  review_ref: verification/raw/YM-035_E4_RAW_20261005.md
+  review_verdict: INTEGRITY_PASS_WITH_LIMITATIONS
+  acceptance_ref: verification/YM-035_TECHNICAL_ACCEPTANCE.md
+  milestone_ref: verification/YM-035_MILESTONE.md
+  hash_scope: LOCAL_RAW_CHECKOUT_BYTES_WITH_DECLARED_EOL_LIMITATION
+  git_blob_scientific_hash: 1535510e011a2025e0971ed450369e6542d3b0054b771e97506415bea7b8b4a7
+  next_automatic_task: YM-015F-JET-002B
