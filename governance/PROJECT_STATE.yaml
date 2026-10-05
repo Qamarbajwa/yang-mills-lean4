@@ -12,8 +12,8 @@ project:
   head: "c85fbce234528fe93840d68b6fd6f083984584c3"
   scientific_candidate_sha: "c85fbce234528fe93840d68b6fd6f083984584c3"
   review_bound_sha: "c85fbce234528fe93840d68b6fd6f083984584c3"
-  evidence_closeout_head: null
-  closeout_resolution: "YM-043 acceptance/state closeout pending commit binding; current authoritative HEAD resolves from Git."
+  evidence_closeout_head: "5a4492bf9f8de4204da5e71dd0efcbe3d06c63fc"
+  closeout_resolution: "evidence_closeout_head binds the completed YM-043 receipt/state commit; later metadata commits preserve it. Resolve current authoritative HEAD from Git."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
