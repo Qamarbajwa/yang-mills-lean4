@@ -1,14 +1,14 @@
 {
   "task": "YM-040",
   "baseline_sha": "baf887d60d32dbe9e5fc62c001e3f476f0c5546d",
-  "candidate_sha": "1dc7a7ec20b4edd23f49e810b4c107505cf0cf04",
+  "candidate_sha": "5db65494e659791cd4f84abf97bee5c5848ef7a1",
   "producer": "/root",
-  "scientific_tree_hash": "cbfc4be0b2017b29095d131936357ff2289d25d406692907747e4f2373821a5c",
+  "scientific_tree_hash": "897ea50bd5c67d5a8400af978970dca8b30e09848144e3b20f8938461dc42540",
   "scientific_files": 158,
-  "git_blob_scientific_hash": "cd10ec917632b5d37127f92f7ba652e6d3fae4c61f43de6817a83c2c56a874bb",
+  "git_blob_scientific_hash": "ce9869bf10af65c9a930a22deae559bdede6669b6686894039f1b9d4c768a224",
   "eol_only_differences": 15,
   "substantive_scientific_differences": 0,
-  "tests": "433 passed in 4.80s",
+  "tests": "433 passed in 4.50s",
   "command": ".venv/Scripts/python.exe -m pytest -q",
   "scope": "Regression/inventory and finite exact arithmetic; not source-operator or continuum proof",
   "rational_check": {
@@ -65,5 +65,6 @@
     ],
     "result": "PASS; finite diagnostics only; general proof remains reviewer obligation"
   },
-  "negative_history": "baseline raw Git bytes literal prefix of current register"
+  "negative_history": "baseline raw Git bytes literal prefix of current register",
+  "repair": "Initial covariance wording required individual factor and product absolute integrability. Root/reviewer identified; repaired before acceptance; original E3 and review preserved as superseded. Rational computations unaffected by premise clarification."
 }

@@ -88,3 +88,7 @@ Candidate 5ac15bf89bd3dd0ed183bc5ac1e8de0cfa4f5470; E3 verification/YM-038_E3_RE
 
 ## YM-039 bounded acceptance / revision39
 Candidate 4cb7d777b0bab16502b5019f73b3457ffab2241a; E3 verification/YM-039_E3_RECEIPT.json433passed; E4 verification/raw/YM-039_E4_RAW_20261005.md finalbyteSHA256 56f6d0088ddae78a93b61875b70c55e4a40cfeaa12c6059c08441d2821cf4a46; separate acceptance verification/YM-039_TECHNICAL_ACCEPTANCE.md. Local scientific hash b1379d5b348e563524483b2baad40938d257359fabbd6903d442f05b0db55234158files. Arithmetic error and usage interruption provenance preserved; all analytic/continuum edges remain open.
+
+
+## YM-040 bounded acceptance / revision40
+Amended candidate 5db65494e659791cd4f84abf97bee5c5848ef7a1; E3 verification/YM-040_E3_RECEIPT.json433passed4.50s; final E4 verification/raw/YM-040_E4_RAW_20261005.md actualbyteSHA256 866d0347a4762ac28dab5c3481fbe760c372c1da49522a353cc2eaef8641e23c; distinct acceptance verification/YM-040_TECHNICAL_ACCEPTANCE.md. Local scientific hash 897ea50bd5c67d5a8400af978970dca8b30e09848144e3b20f8938461dc42540;158files; Gitblob ce9869bf10af65c9a930a22deae559bdede6669b6686894039f1b9d4c768a224. Initial covariance-premise challenge and E3 preserved; separate-factor/product integrability repaired before acceptance. Finite conditional interface only, no source/atlas/continuum edge closure.
