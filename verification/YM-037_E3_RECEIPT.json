@@ -1,0 +1,12 @@
+{
+  "task": "YM-037",
+  "candidate_sha": "e844082c3549b137f8d20dee92f3b680daa344b0",
+  "scientific_tree_hash": "7489669c8481279efae665c3e4cfaa3f8cd90dc2a35b9e5f220a46c6e3959b12",
+  "scientific_files": 154,
+  "tests": "433 passed in 3.83s",
+  "command": ".venv/Scripts/python.exe -m pytest -q",
+  "producer": "/root",
+  "scope": "Regression suite and exact finite normalization/rare-event countermodels, not physical or continuum proofs",
+  "initial_failure": null,
+  "amendment": "Explicit absolute marked-integral summability before closeout; previous candidate1b3560f receipts preserved as superseded history."
+}

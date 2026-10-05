@@ -76,3 +76,7 @@
 
 ## YM-036 bounded acceptance / revision36
 E3: verification/YM-036_E3_RECEIPT.json (431 passed). E4: verification/raw/YM-036_E4_RAW_20261005.md; finalbyteSHA256 691f67a187cc66069631572d9039c10dee6f7cdb3fa196befb27dbbadbf06571. Distinct acceptance: verification/YM-036_TECHNICAL_ACCEPTANCE.md. Candidate b45f300c41f99509defa91336e0f7a894f4fda41; local scientific SHA256 f48be8d659d01f5a6c5add9aa59a1bc8553d3b859e5c3501265178a65521dc39 (152files). Limited conditional algebra/local group estimates; no continuum edge closure.
+
+
+## YM-037 bounded acceptance / revision37
+Candidate e844082c3549b137f8d20dee92f3b680daa344b0; E3 verification/YM-037_E3_RECEIPT.json433passed; E4 verification/raw/YM-037_E4_RAW_20261005.md finalbyteSHA256 23eebd99ec40c092a024a300566374f826d0a842e68eaed54774a6310676c189; distinct acceptance verification/YM-037_TECHNICAL_ACCEPTANCE.md. Local scientific hash 7489669c8481279efae665c3e4cfaa3f8cd90dc2a35b9e5f220a46c6e3959b12154files. Historical firstcandidate receipts preserved and superseded. No scientific edge closure.
