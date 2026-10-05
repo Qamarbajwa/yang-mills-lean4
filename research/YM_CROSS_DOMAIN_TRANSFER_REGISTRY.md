@@ -133,3 +133,12 @@ R-I187–189 links earlier delta removal to fluctuation coordinates, C-eliminati
 
 ## XFER-YM-EQUATION-GRAMMAR-043
 Own ordered scalar grammar anchored to primary unextended rule(5.6), not its normal extension/completion. Leaf/vertex identities give r_D=(2-D/2)q-3. For0<kappa<1/38, exactly207 ordered syntax templates with q<=6 are negative in3D; M16 permits conditional certificate042 on this supplied family. In4D binary-chain degrees under the stipulated assignment are unbounded below. Actual completed families, decorated/subtree/type/gauge mappings and analytic model norms are unmatched. Status CONDITIONAL_RESTRICTED_GRAMMAR_CERTIFICATE; no full regularity-structure, Wilson insertion or continuum conclusion.
+
+
+## XFER-YM-INHERITED-SPLIT-044
+
+Primary source-bound dictionary: [III] CMP119243–285, printed258(2.21),267–268(3.15),270(3.23)–(3.25), audited in YM_015F_R_OPERATION_SOURCE_AUDIT_039.md. Own transfer condition: conditional Lambda integration and residual T integration must each carry their actual support, retained constants and source coefficients through fixed-vacuum marked transport. Probability reference identification, measure/Jacobian conventions, full history matching and terminal estimates remain unmatched. Status PARTIAL_SOURCE_DICTIONARY; no uniform flowed insertion or continuum conclusion.
+
+
+## XFER-YM-SLOT-PRUNING-044
+Own comparison grammar allows finite subsets of B/C slots; retained derivative edges only. Noise-free trees have nonnegative degrees. In3D for0<kappa<1/38 negative membership equals q>=1,r<=0, giving total vertices<=11 and M<=16; certificate042 applies to this supplied finite family. Actual normal-extension/completion, decorations, polynomial nodes and model hypotheses remain unmatched. Status CONDITIONAL_PRUNED_GRAMMAR_CERTIFICATE; no positive4D gain, Wilson insertion or continuum conclusion.

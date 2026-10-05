@@ -393,3 +393,11 @@ YM-042 parallel root atlas limitation: finite noise-slack regrading requires q>=
 
 
 YM-043 root atlas limitation:207-template enumeration exhausts only the expressly defined full-arity ordered scalar syntax, not the authors' normal extension/completion, decorations, type labels or all required subtrees. Under the stated4D comparison, binary chains have degrees-3-(3q-2)kappa and are unbounded below; this is a method-specific power-counting diagnostic, not a universal4D obstruction or earliest proof-local numbered failure. Actual completion/model mapping remains open; structural no-go0.
+
+
+## YM-044 — inherited integral is not yet a probability reference
+
+Primary [III] inherited operator dictionary places conditional Lambda integration separately from residual T integration and retains constants/bond factors. This defeats the inference that merely calling an integral conditional establishes the positive unit-mass history reference H042. No source theorem is falsified. Exact measures/Jacobians, component supports, source decorations, history positivity, normalization and terminal control remain OPEN. Initial publisher PDF URL returned3038 bytes HTML; guessed Euclid identifier was inaccessible; successful public issue-derived Euclid PDF supplied the evidence. Source access limits are not mathematical negative results. No typography from043 is retrospectively certified. Classification METHOD_SPECIFIC_OBSTRUCTION; structural no-go count0; no continuum edge closes.
+
+
+YM-044 root atlas boundary: slot pruning extends only the own scalar comparison. Empty roots have degree0 and strict assignment gap0; excluded from negative certificate, not ignored. Admissible full-arity4D binary chains persist and remain unbounded below under the stipulated assignment; pruning does not restore a positive margin. No actual author completion or earliest numbered4Dfailure established. METHOD_SPECIFIC_OBSTRUCTION; structural no-go0.

@@ -81,3 +81,32 @@ Thus negative membership in this restricted grammar is exactly q=1,...,6. The al
 At D=4 the same comparison gives r_4=-3 for every q; each binary-chain template exists for arbitrary q and has m=2q-2, a_4=-3-(3q-2)kappa. Under this stipulated grammar and assignment the degrees are unbounded below for kappa>0. This records loss of finite negative-template power counting, not a theorem forbidding4D Yang-Mills or a prescribed completed4D regularity structure.
 
 Normal-extension lower-arity terms, completion, decorated subtrees, polynomial nodes, type/component labels, gauge cancellations and actual model-norm/cumulant hypotheses are not audited by this207-template list. No claim of exhausting either authors' generated family, applying Theorem2.33, or locating the first numbered failure of the complete4D proof follows. Those source/completion mappings remain OPEN. Classification METHOD_SPECIFIC_OBSTRUCTION; structural no-go0; all continuum edges remain open.
+
+
+## YM-044: slot-pruned comparison grammar and noise-free exclusion
+
+Primary [Edinburgh manuscript](https://www.pure.ed.ac.uk/ws/portalfiles/portal/435998276/YangMills.pdf), printed59 rule(5.6), explicitly separates its initial multisets from the smallest normal extension and subsequent completion. This motivates the following OWN pruning comparison; it does not identify either author's extension/completion. Source text checked through public PDF; no new visual inspection claimed.
+
+Retain any subset of ordered slots of a binary B or ternary C vertex, including none; at B its one differentiated slot contributes one derivative exactly when retained. Each retained slot has a child solution template and one heat edge, differentiated if that slot requires it. Equation roots have no extra heat edge. Noise N is a distinct leaf. Nullary B/C vertices stand for constants within THIS syntax; they are not asserted to be author symbols. No polynomial/decorated nodes, component labels, extra productions or derivative orders are included.
+
+Let q count noises, v2,v3 all B/C vertices, d retained differentiated B slots, and delta=sum_B(2-retained_slots)+sum_C(3-retained_slots). Counting retained edges m gives
+
+    m=q+v2+v3-1,
+    q=1+v2+2v3-delta,
+    e=v2-d>=0,
+    r_D=2m-(D+2)q/2-d=(2-D/2)q-3+delta+e.
+
+The tree is connected and every derivative is on a retained heat edge, hence d<=m. Assign a_D=r_D-(m+q)kappa and b_D=r_D-q*kappa/2. For q=0, r_D=2m-d>=m; consequently a_D>=m(1-kappa)>=0 and b_D=r_D>=0 when0<kappa<1. The nullary root has m=d=0 and both degrees zero. Thus this grammar's noise-free trees are never negative; the positive strict-gap certificate cannot apply to the zero tree (gap0), and we do not include it in the negative family.
+
+For D=3 and q>=1, put r=q/2-3+delta+e and choose0<kappa<1/38. Since v2+2v3=q-1+delta, m+q<=3q-2+delta. For q>=7,
+
+    a_3 >= (1/2-3kappa)q-3+2kappa+(1-kappa)delta+e >0,
+    b_3 >= (1/2-kappa/2)q-3 >0.
+
+For1<=q<=6 with r>0, half-integrality gives r>=1/2. Since delta<=r+3-q/2, m+q<=5q/2+1+r<=16+r. Therefore a_3>=r(1-kappa)-16kappa>=1/2-33kappa/2>0; b_3>=1/2-3kappa>0. When r<=0, both a_3,b_3 are strictly negative. This proves equality of negative membership throughout the stipulated pruned grammar: q>=1 and r<=0.
+
+For that family, q<=6 and delta+e<=3-q/2. In particular delta<=2 forq1/2, <=1 forq3/4, and0 forq5/6; v2+v3<=q-1+delta. Total vertices q+v2+v3<=11 and M=m+q<=16. Each vertex has finitely many labels/retained-slot choices, so this is a finite family WITHOUT claiming its cardinality. The supplied-family042 certificate applies: q>=1, r half-integral and kappa<1/38<1/32=1/(2M), yielding equal floors, negative signs and b-a=(m+q/2)kappa>=kappa/2. Root deterministic checks exhaust all algebraically admissible count tuples with q<=6,v2+v3<=5, all retained derivative counts and pruning counts; those tuples are a superset, not an AST enumeration.
+
+At4D r_4=-3+delta+e. The full-arity differentiated binary chains (delta=e=0) remain admissible for arbitraryq and retain a_4=-3-(3q-2)kappa. Adding slot pruning therefore cannot remove the unbounded-below diagnostic for THIS stipulated assignment. This is METHOD_SPECIFIC_OBSTRUCTION only; no universal no-go, actual4D model result or earliest numbered author proof failure follows.
+
+This advances the lower-arity arithmetic boundary beyond043 but leaves actual normal-extension/completion correspondence, decorated subtrees, polynomial nodes, type labels, gauge cancellations and analytic/cumulant/kernel hypotheses OPEN. No continuum edge closes; structural no-go0.
