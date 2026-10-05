@@ -1,7 +1,7 @@
 # NEXT ACTION
 
 ## Current primary action
-`YM-015F ACTIVE; YM-035 ACCEPTED_WITH_LIMITATIONS; YM-015F-JET-002B ACTIVE; P3 OPEN; CLAY_PROBLEM OPEN_AND_UNSOLVED; YM-016 BLOCKED`
+`YM-015F ACTIVE; YM-036 ACCEPTED_WITH_LIMITATIONS; YM-015F-JET-002B ACTIVE; P3 OPEN; CLAY_PROBLEM OPEN_AND_UNSOLVED; YM-016 BLOCKED`
 
 ## Scope
 - `YM-011` is `SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_UV_SCOPE)`.
@@ -73,3 +73,7 @@ Exact vacuum-normalized conditional source transport, connected second-source de
 
 ## Revision-35 bounded closeout (2026-10-05)
 YM-035 SCIENTIFICALLY_ACCEPTED_WITH_LIMITATIONS at frozen candidate f61c5a05608a5ee960d581e0854fd3c8efd23ab3. Reviewer /root/review_035; distinct acceptor /root/accept_035. Exact finite source transport and second-order connected correction accepted within hypotheses; source compatibility algebra and rule-level atlas remain bounded partial audits. No required scientific edge closes. Next active YM-015F-JET-002B: exact marked recurrence for a specified RG map and quadratic-source/SU(N) extraction. Author-PDF reconnaissance executed and preserved as RAW UNREVIEWED. Uniform physical insertion and all-sector/terminal bounds remain OPEN; all Clay/OS/crossover/volume invariants unchanged.
+
+
+## YM-036 accepted bounded continuation
+Frozen candidate b45f300c41f99509defa91336e0f7a894f4fda41; revision36. Exact finite connected recurrence and local compact-group finite source disks accepted within hypotheses; 431 tests pass. CMP109 map extraction is writer-backed and not independently primary-verified; constrained-measure H, full Wilson/all-sector map, flowed norm and terminal control remain open. Distinct review/root/review_036 and acceptance/root/accept_036 with raw receipts preserved. No scientific edge closure; Clay unsolved, goal_complete=false, structural no-go count0 and YM-016 BLOCKED. Next automatic bounded task under ACTIVE YM-015F-JET-002B: measure/cutoff dictionary and all-sector source normalization; independent atlas and lattice/flow transfer obligations retained. Full report: verification/YM-036_MILESTONE.md.

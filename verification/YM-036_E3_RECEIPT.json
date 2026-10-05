@@ -1,0 +1,11 @@
+{
+  "task": "YM-036",
+  "candidate_sha": "b45f300c41f99509defa91336e0f7a894f4fda41",
+  "scientific_tree_hash": "f48be8d659d01f5a6c5add9aa59a1bc8553d3b859e5c3501265178a65521dc39",
+  "scientific_files": 152,
+  "tests": "431 passed in 3.92s",
+  "command": ".venv/Scripts/python.exe -m pytest -q",
+  "producer": "/root",
+  "scope": "Regression suite and exact finite third-connected certificate; no continuum proof",
+  "initial_failure": "Hash helper omitted src path; test14 stale hash allowlist failed (430 passed). Repaired before freeze; final full suite passed."
+}
