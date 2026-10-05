@@ -1,0 +1,69 @@
+{
+  "task": "YM-040",
+  "baseline_sha": "baf887d60d32dbe9e5fc62c001e3f476f0c5546d",
+  "candidate_sha": "1dc7a7ec20b4edd23f49e810b4c107505cf0cf04",
+  "producer": "/root",
+  "scientific_tree_hash": "cbfc4be0b2017b29095d131936357ff2289d25d406692907747e4f2373821a5c",
+  "scientific_files": 158,
+  "git_blob_scientific_hash": "cd10ec917632b5d37127f92f7ba652e6d3fae4c61f43de6817a83c2c56a874bb",
+  "eol_only_differences": 15,
+  "substantive_scientific_differences": 0,
+  "tests": "433 passed in 4.80s",
+  "command": ".venv/Scripts/python.exe -m pytest -q",
+  "scope": "Regression/inventory and finite exact arithmetic; not source-operator or continuum proof",
+  "rational_check": {
+    "arithmetic": "fractions.Fraction",
+    "source_labels": 3,
+    "weights": [
+      "1/3",
+      "2/3"
+    ],
+    "L_rows": [
+      [
+        2,
+        1,
+        -2,
+        3,
+        4,
+        -1,
+        2,
+        5
+      ],
+      [
+        3,
+        -1,
+        1,
+        2,
+        -2,
+        3,
+        1,
+        -4
+      ]
+    ],
+    "mask_order": "0..7, bits source labels",
+    "norm_radii": [
+      "1/2",
+      "2",
+      "3"
+    ],
+    "verified": [
+      "DQ=L all8coefficients",
+      "integral Q vacuum1/nonempty0",
+      "degree2 formula including coefficient2",
+      "denominator restoration",
+      "nilpotent inverse and submultiplicative norm bound"
+    ],
+    "local_countermodel": [
+      "1/2",
+      "1/4",
+      "1/2"
+    ],
+    "exterior_countermodel": [
+      "1",
+      "1/2",
+      "1/2"
+    ],
+    "result": "PASS; finite diagnostics only; general proof remains reviewer obligation"
+  },
+  "negative_history": "baseline raw Git bytes literal prefix of current register"
+}

@@ -362,3 +362,6 @@
 - A normalized local quotient jet integrates to zero in every nonempty degree; it therefore cannot replace the raw conditional marked jet without the denominator jet. Exact two-point example L=1+zx, x in {0,1} equiprobable, F=x gives raw marked coefficient1/2 versus quotient coefficient1/4; restoration recovers1/2. Finite shortcut countermodel only, not a physical Wilson or author-theorem counterexample.
 - Exterior-dependent local normalizations must remain inside exterior integration; source-dependent gauges, maps and cutoff measures require their own coefficient rules. Vacuum R-prime equality does not identify these rules.
 - A finite algebraic inverse has no smallness requirement, but its norm cost and marked input norms can grow with cutoff and scale count. No uniform-flow estimate, operator reconstruction, atlas earliest failure or continuum edge closes. METHOD_SPECIFIC_OBSTRUCTION; structural no-go count0.
+
+
+YM-040 pre-acceptance covariance-premise repair: both individual factors and their products must be absolutely integrable. Product integrability alone does not define separate means; C=1/y,T=0 on uniform(0,1) is a countermodel to that shortcut. Initial candidate challenged and retained in Git/raw receipt; no accepted state relied on it. METHOD_SPECIFIC_OBSTRUCTION; structural no-go count0.

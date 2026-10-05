@@ -76,7 +76,7 @@ The exterior dependence creates an exact covariance defect already at two labels
     Cov_nu(C_empty,T_12)+Cov_nu(C_1,T_2)
       +Cov_nu(C_2,T_1)+Cov_nu(C_12,T_empty).
 
-Here C_empty=1, so the first term vanishes. Covariance uses bilinear multiplication, without conjugation. It is valid when all indicated products are integrable. At any degree S the defect is sum_(B subset S) Cov_nu(C_B,T_(S\B)). This identifies the error from replacing a background-dependent jet by its exterior mean even when the mean is accurately computed.
+Here C_empty=1, so the first term vanishes. Covariance uses bilinear multiplication, without conjugation. For every indicated B, assume C_B, T_(S\B), and their product are individually absolutely integrable under nu; this makes both separate means and the product mean finite. Product integrability alone is insufficient: on y in (0,1) with uniform nu, C_1(y)=1/y and T_empty(y)=0 have integrable product but an undefined separate mean nu(C_1). The initial candidate wording was challenged before acceptance and is superseded by this explicit hypothesis. At any degree S the defect is sum_(B subset S) Cov_nu(C_B,T_(S\B)). This identifies the error from replacing a background-dependent jet by its exterior mean even when the mean is accurately computed.
 
 Own finite diagnostic: exterior y=0,1 equiprobable; local x=0,1 equiprobable under m_y; let h(0)=0,h(1)=2 and m(0)=0,m(1)=1. Set
 
