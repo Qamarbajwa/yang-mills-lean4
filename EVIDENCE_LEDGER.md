@@ -92,3 +92,7 @@ Candidate 4cb7d777b0bab16502b5019f73b3457ffab2241a; E3 verification/YM-039_E3_RE
 
 ## YM-040 bounded acceptance / revision40
 Amended candidate 5db65494e659791cd4f84abf97bee5c5848ef7a1; E3 verification/YM-040_E3_RECEIPT.json433passed4.50s; final E4 verification/raw/YM-040_E4_RAW_20261005.md actualbyteSHA256 866d0347a4762ac28dab5c3481fbe760c372c1da49522a353cc2eaef8641e23c; distinct acceptance verification/YM-040_TECHNICAL_ACCEPTANCE.md. Local scientific hash 897ea50bd5c67d5a8400af978970dca8b30e09848144e3b20f8938461dc42540;158files; Gitblob ce9869bf10af65c9a930a22deae559bdede6669b6686894039f1b9d4c768a224. Initial covariance-premise challenge and E3 preserved; separate-factor/product integrability repaired before acceptance. Finite conditional interface only, no source/atlas/continuum edge closure.
+
+
+## YM-041 bounded acceptance / revision41
+Candidate 1bad7e6bc83676a937db9fa9d9f718704835e3b7;E3 verification/YM-041_E3_RECEIPT.json433passed15.79s; E4 verification/raw/YM-041_E4_RAW_20261005.md actualbyteSHA256 0dede8c200a092eb56f8e670730291ed963122dabfc5d0812b94ef4ce0933bb3; distinct acceptance verification/YM-041_TECHNICAL_ACCEPTANCE.md. Local sciencehash ff3d101f2955c9ef1508a31af7bf1131a0cd98d6f8dbdc95fbc7ec1978690398;158files;Gitblob 099a519ce45df69d7d011a942d78856f4a0d5632ef261c56ff131f6b0ada9350. Bounded primary locators and conditional two-assignment diagnostic; no scientific edge closure.

@@ -1,0 +1,51 @@
+{
+  "task": "YM-041",
+  "baseline_sha": "20adef5029537f639ec400cce43caf571f089ac5",
+  "candidate_sha": "1bad7e6bc83676a937db9fa9d9f718704835e3b7",
+  "producer": "/root",
+  "scientific_tree_hash": "ff3d101f2955c9ef1508a31af7bf1131a0cd98d6f8dbdc95fbc7ec1978690398",
+  "git_blob_scientific_hash": "099a519ce45df69d7d011a942d78856f4a0d5632ef261c56ff131f6b0ada9350",
+  "scientific_files": 158,
+  "eol_only_differences": 15,
+  "substantive_differences": 0,
+  "tests": "433 passed in 15.79s",
+  "command": ".venv/Scripts/python.exe -m pytest -q",
+  "negative_history": "baseline Git bytes literal prefix retained",
+  "exact_checks": {
+    "binary_reference_weights": [
+      "1/2",
+      "1/2"
+    ],
+    "fine_density": [
+      0,
+      2
+    ],
+    "test": [
+      0,
+      1
+    ],
+    "replacement_density": [
+      1,
+      1
+    ],
+    "fine_vacuum": 1,
+    "replacement_vacuum": 1,
+    "fine_mark": 1,
+    "replacement_untransported_mark": "1/2",
+    "proper_transported_test": 1,
+    "heat_only_gap": {
+      "kappa": "1/100",
+      "bare_noise_degree": "-5/2-kappa",
+      "heat_edge_counts": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "gap": "m*kappa",
+      "bare_noise_gap": 0,
+      "strict_gap_failure": "conditional on actual inclusion; no author-theorem or 4D-failure claim"
+    }
+  },
+  "scope": "Inventory/regression and finite diagnostics, not source typography, operator correspondence or continuum proof"
+}

@@ -1,7 +1,7 @@
 # NEXT ACTION
 
 ## Current primary action
-`YM-015F ACTIVE; YM-040 ACCEPTED_WITH_LIMITATIONS; YM-015F-JET-002B ACTIVE; P3 OPEN; CLAY_PROBLEM OPEN_AND_UNSOLVED; YM-016 BLOCKED`
+`YM-015F ACTIVE; YM-041 ACCEPTED_WITH_LIMITATIONS; YM-015F-JET-002B ACTIVE; P3 OPEN; CLAY_PROBLEM OPEN_AND_UNSOLVED; YM-016 BLOCKED`
 
 ## Scope
 - `YM-011` is `SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_UV_SCOPE)`.
@@ -93,3 +93,7 @@ Revision39; frozen candidate4cb7d777b0bab16502b5019f73b3457ffab2241a. R-I introd
 
 ## YM-040 accepted bounded continuation
 Revision40; frozen amended candidate 5db65494e659791cd4f84abf97bee5c5848ef7a1; local science hash 897ea50bd5c67d5a8400af978970dca8b30e09848144e3b20f8938461dc42540;158files. Conditional local quotient recurrence, denominator restoration inside exterior/terminal integration, covariance defect with separate-factor/product absolute integrability and finite inverse-norm cost accepted within stated premises.433tests pass. Initial covariance premise challenge/raw E3 retained; no state relied on the defective wording. Fresh reviewer/root/review_040 and distinct acceptor/root/accept_040; raw receipt digest 866d0347a4762ac28dab5c3481fbe760c372c1da49522a353cc2eaef8641e23c. No new primary source claim or actual R-prime/R-II operator reconstruction. No scientific edge closes. Actual all-sector marked equality, cutoff-uniform physical flowed norms, terminal ratios and earliest4Dfailure remain OPEN. goal_complete=false; Clay unsolved; structural no-go count0; YM-016 BLOCKED. ACTIVE JET-002B next reconstructs the complete actual local/sector/source/terminal dictionary before analytical estimates. Report verification/YM-040_MILESTONE.md.
+
+
+## YM-041 accepted bounded continuation
+Revision41; frozen candidate 1bad7e6bc83676a937db9fa9d9f718704835e3b7;158files; local science hash ff3d101f2955c9ef1508a31af7bf1131a0cd98d6f8dbdc95fbc7ec1978690398. Numbered R-prime predecessors and retained-branch/density-vs-integral source locators independently corroborated. Conditional two-assignment norm gate and finite changed-mark countermodel accepted within scope; actual operator/regrading mapping remain OPEN. Root433tests15.79s; fresh review/root/review_041 and distinct acceptance/root/accept_041 with finalrawdigest 0dede8c200a092eb56f8e670730291ed963122dabfc5d0812b94ef4ce0933bb3. No scientific edge closes; full marked Wilson equality, uniform physical flowed estimates, terminal ratios and earliest4Dfailure remain open. goal_complete=false; Clay unsolved; structural no-go count0; YM-016 BLOCKED. ACTIVE JET-002B next reconstructs source transport through first density-changing integration(1.76), complementary histories and terminal law; independent actual two-assignment/tree/norm correspondence remains active. Report verification/YM-041_MILESTONE.md.
