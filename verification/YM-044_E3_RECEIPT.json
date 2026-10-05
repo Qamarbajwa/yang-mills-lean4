@@ -1,0 +1,28 @@
+{
+  "task": "YM-044",
+  "baseline_sha": "edd335907bf39b94234e73283aad9579dbfc7f15",
+  "candidate_sha": "ff1cd27c05eddf8506e4d76c2581106eb2e7d748",
+  "scientific_tree_hash": "15da6019607160be1d05ff5bfd79e8a0139e82dbe90d2e7d1f9b1b9db810cc2f",
+  "git_blob_scientific_hash": "87a9ad39c215bd3dc83f88a198f9c3e2447fabe7d0273e4c24e130de60d18b12",
+  "scientific_files": 158,
+  "eol_only_differences": 15,
+  "substantive_differences": 0,
+  "tests": "433 passed in6.16s",
+  "workflow": "SERIALIZED_SHARED_WORKSPACE_PYTEST",
+  "negative_prefix": "literal Git bytes preserved",
+  "own_diagnostic": {
+    "kappa": "1/100",
+    "q_range": [
+      0,
+      6
+    ],
+    "v2_v3_range": [
+      0,
+      20
+    ],
+    "admissible_count_tuples": 33890,
+    "negative_count_tuple_superset": 30,
+    "M": 16,
+    "scope": "count superset NOT AST cardinality; general proof separate"
+  }
+}
