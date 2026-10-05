@@ -161,6 +161,9 @@ scientific_fingerprint:
     - research/YM_015F_EXACT_SOURCE_TRANSPORT_035.md
     - research/YM_015F_PLAQUETTE_SOURCE_COMPATIBILITY_035.md
     - research/YM_3D4D_PROOF_LOCAL_AUDIT_035.md
+    - research/YM_015F_MARKED_RECURRENCE_036.md
+    - research/YM_015F_QUADRATIC_SOURCE_AUDIT_036.md
+    - research/YM_015F_BALABAN_MAP_EXTRACTION_036.md
     - governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml
 unknown_policy:
   research_locations:

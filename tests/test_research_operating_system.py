@@ -40,10 +40,10 @@ def test_law_0_minimal_read_exception_and_fail_closed_gate(tmp_path):
         validate_project_binding(tmp_path, "YANG_MILLS_MASS_GAP")
 
 def test_closed_world_scientific_fingerprint_manifest():
-    assert len(SCIENTIFIC_FINGERPRINT_MANIFEST) == 149
+    assert len(SCIENTIFIC_FINGERPRINT_MANIFEST) == 152
     tree_hash, file_hashes = compute_closed_world_scientific_tree_hash(ROOT)
     assert len(tree_hash) == 64
-    assert len(file_hashes) == 149
+    assert len(file_hashes) == 152
     for rel_path in SCIENTIFIC_FINGERPRINT_MANIFEST:
         assert rel_path in file_hashes
         assert (ROOT / rel_path).exists()

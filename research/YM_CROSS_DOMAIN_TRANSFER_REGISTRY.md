@@ -86,3 +86,7 @@ Future collective-phenomena transfers (spectral-gap stability, phase transitions
 
 
 Cross-track synthesis: the analytic-polydisc route is sufficient but stronger than the finite-moment target. The selected main route is the finite nilpotent source-jet formulation in YM_015F_SOURCE_JET_REDUCTION.md, especially OPEN lemma YM-015F-JET-002. XFER-YM-DTE-0005 remains conditional; no scalar polymer theorem supplies its gauge, flow, normalization, or terminal-scale assumptions.
+
+
+## XFER-YM-QUADRATIC-036
+Conditional proposal: compact-group shifted-coupling domination on a finite source disk. Detailed source audit, exact normalization and SU(N) local proof: YM_015F_QUADRATIC_SOURCE_AUDIT_036.md. Lattice reflection/factorization, denominator, physical-flow/clover comparison and support amplification are missing hypotheses. No flowed uniform bound or continuum edge closes.

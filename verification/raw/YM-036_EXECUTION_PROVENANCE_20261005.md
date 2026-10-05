@@ -1,0 +1,3 @@
+# YM-036 execution provenance
+
+Initial primary-source writer attempts /root/balaban_map_036 and /root/quadratic_source_036 returned usage-limit errors. The reported reset was Oct 10, 2026 5:58 AM (timezone unspecified). No paid operation was attempted. A subsequent live app usage check reported ordinaryUsageAllowed=true; a fresh /root/availability_probe_036 completed a read-only availability probe. That role was then assigned the bounded primary-map extraction, and the quadratic writer was successfully resumed. The errors are preserved as transient execution evidence, not a scientific falsification or continuing execution hold. Raw scientific candidate work remained unaccepted until fresh review and distinct acceptance.

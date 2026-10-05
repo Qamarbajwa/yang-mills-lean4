@@ -329,3 +329,10 @@
 - Correction: the source boundary factor tends to one on the fixed-physical-volume AF diagonal; fixed-site weak-coupling nonuniformity is not an obstruction to that diagonal.
 - Atlas source rule(5.6) and its subcritical-completion assertion have now been located. A first failing numbered lemma and a critical 4D replacement theorem remain unproved.
 - All entries METHOD_SPECIFIC_OBSTRUCTION; STRUCTURAL_NO_GO_COUNT=0. No continuum edge closes. Candidate artifacts require fresh review.
+
+
+## YM-036: marked recurrence and quadratic-source limitations
+- Dropping conditional covariance sectors loses the full third connected coefficient in the exact rational 9/8 countermodel. Source-dependent factors require disjoint-subset convolution, not source-free transport.
+- Compact group single-matrix quadratic domination is uniform on its stated finite source disk. It does not identify an interacting plaquette marginal or prove a flowed clover bound; reflected lattice factorization, support growth, denominators and signed activity norms remain open.
+- Literal PDF normalization, absolute-sine equality and constants discrepancies remain recorded without silently repairing or declaring the physical theorem false.
+- A verified small-field map is not an all-sector map. Unknown source extraction is not falsification. All findings are METHOD_SPECIFIC_OBSTRUCTION; no continuum edge closes and STRUCTURAL_NO_GO_COUNT=0.
