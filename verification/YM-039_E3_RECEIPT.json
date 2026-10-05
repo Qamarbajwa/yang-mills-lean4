@@ -1,0 +1,26 @@
+{
+  "task": "YM-039",
+  "candidate_sha": "4cb7d777b0bab16502b5019f73b3457ffab2241a",
+  "scientific_tree_hash": "b1379d5b348e563524483b2baad40938d257359fabbd6903d442f05b0db55234",
+  "scientific_files": 158,
+  "tests": "433 passed in 4.63s",
+  "command": ".venv/Scripts/python.exe -m pytest -q",
+  "producer": "/root",
+  "scope": "Source inventory/regression checks and explicit rational branch arithmetic, not continuum or full source proof",
+  "initial_failure": "Exact rational check rejected root general-D cubic expression6-3D/2 before freeze; corrected to4-D. Superseded draft preserved. Earlier full pytest433pass did not catch this mathematical error.",
+  "arithmetic_check": {
+    "kappa": "1/100",
+    "D": [
+      3,
+      4
+    ],
+    "heat_assignments": [
+      "2",
+      "2-kappa"
+    ],
+    "noise": "-(D+2)/2-kappa",
+    "third_margin": "2-D/2-(2or4)kappa",
+    "cubic_first_expression": "4-D-(4or7)kappa",
+    "result": "Exact rational definitions agree with expressions; both3D positive and both4D negative. No admissible4D rule theorem inferred."
+  }
+}
