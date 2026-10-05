@@ -135,3 +135,42 @@ The selected union is not a permanent label attached only to the initial geometr
 The source's distinction between representation equality before the later integration and equal-integral equivalence after it identifies a separate marked gate even before adding local denominator jets. Suppose an integration replaces a density by a function independent of integrated variables. Vacuum equality alone cannot justify retaining the original observable unchanged. Our finite diagnostic: on x=0,1 with reference probabilities1/2, take density rho(0)=0,rho(1)=2. Integrating its only variable gives constant density1. Both vacuum integrals equal1, but the original test F(x)=x has marked integral1 under rho and1/2 under the replacement. This falsifies an unchanged-observable shortcut, not the source operation. Correct conditional transport of F gives constant1 in this example and restores the marked integral. An actual gauge source lift must derive that transport jointly with every changed operation, source-dependent map, gauge restriction, cutoff and compensated denominator, rather than infer it from (1.102).
 
 This stage locates a finite part of the actual dictionary. It does not reconstruct all admissible histories, domain intersections, boundary bond conventions, reference measures, backgrounds or source-decorated operations in (1.100). The n=0 convention ensures no selected component is required; it does not prove positivity or summability of complementary terms. R-II localization, all-sector marked equality, terminal law and cutoff-uniform analytic estimates remain OPEN. Atlas regrading/all-subtree hypotheses and the earliest numbered4Dfailure are unchanged. No scientific edge closes and structural no-go count remains zero.
+
+
+## YM-042 candidate: first density-changing integration and its degree-one gate
+
+Ordinary public PowerShell HTTP again acquired the same 28-page R-I PDF on 2026-10-05; host Python fitz read printed193–196 in memory and rendered printed193/194. Writer visually inspected printed194, including (1.76). Printed193 is text-inspected only. No primary PDF is stored in the scientific tree. New source-derived dictionary below is under200 words, without direct quotation; exact boundary/intersection typography outside these bounded descriptions is not certified.
+
+| Locator | Newly bounded operation dictionary |
+|---|---|
+| 193,(1.75) | Exterior configuration on Z intersect Lambda-complement is tested for a regular extension; rejected components join the retained complement. |
+| 194,(1.76) | For each summand Lambda variables are integrated. The resulting function is independent of them; integration regions can differ between summands. |
+| 194,(1.76) | First integral uses V_h on Z_h and retains its cutoff and T_h operation. Second integral uses V-double-prime on its specified B-double-prime_k subset intersecting Lambda and Z_h-complement; it retains chi-prime_k and exp(A-prime_k). The integrals have disjoint regions; the first remains unchanged. |
+| 194,(1.76)–(1.78) | Delta constraints have already been integrated out here. The variational problem uses regularity restrictions; the minimizing orbit depends on exterior fields. |
+| 195,(1.79)–(1.81) | U_0 is built from that exterior-dependent minimum; fluctuations use V-double-prime=V-prime V_0 on B_0. |
+| 195–196,(1.81)–(1.82) | Tree gauge is imposed later on B_0, then a fluctuation unity split rejects additional components. |
+
+### Own finite premise, tied to (1.76) rather than inferred from it
+
+The newly distinguished integration is before the later tree gauge delta; treating that later delta as already part of the (1.76) measure would misorder the source lift. The first, unchanged integral and omitted complementary T_k operations remain in the outer bookkeeping. Neither reading supplies positivity of every term or reconstruction of its effective action.
+
+For one fixed admissible history alpha, let x denote precisely its Lambda variables eliminated by this density replacement; let y retain the exterior variables, V_h variables of the unchanged first integral, and all unintegrated variables. This is a proposed finite dictionary, not a completed bond-by-bond transcription of (1.76). Hypothesis H042 requires a source-independent measurable assignment of these coordinates and product positive probability reference m_alpha(dy) h_(alpha,y)(dx), with the actual support indicators placed in the integrand. If a constrained reference replaces product Haar, its measure interpretation and total mass must first be proved. Domain variations with alpha are retained; no single common domain is assumed. Fixed physical Wilson-flow marking changes the density on a fixed finite lattice, but its representation through these histories/coordinates has not been verified.
+
+Assume rho_(alpha,0)(x,y)>=0 is measurable and integrable, X_alpha is a finite complex-valued measurable function, and rho_(alpha,1)=rho_(alpha,0) X_alpha is absolutely integrable jointly. Define
+
+    R_(alpha,0)(y)=integral rho_(alpha,0)(x,y) h_(alpha,y)(dx),
+    R_(alpha,1)(y)=integral rho_(alpha,1)(x,y) h_(alpha,y)(dx).
+
+On fibers with 0<R_(alpha,0)<infinity set X_eff=R_(alpha,1)/R_(alpha,0); set it zero on zero fibers. Fubini gives R_(alpha,1)=0 almost everywhere on zero fibers, since rho_(alpha,0)>=0 and rho_(alpha,1)=rho_(alpha,0)X_alpha. Exceptional infinite fibers have m_alpha-measure zero by joint vacuum integrability. The displayed identities hold almost everywhere; exceptional fibers may be modified to zero without changing either integral. Thus
+
+    R_(alpha,0)(1+z X_eff)=R_(alpha,0)+z R_(alpha,1), z^2=0,
+    integral R_(alpha,1) dm_alpha=integral rho_(alpha,1) dm_alpha dh_alpha,
+    integral |R_(alpha,1)| dm_alpha<=integral |rho_(alpha,1)| dm_alpha dh_alpha.
+
+Proof: integrate both coefficients and use triangle inequality. Reference probability mass is essential when the integrated result is lifted back to a function of x; a nonunit fiber mass produces an extra factor. A merely signed vacuum summand has no positive conditional-kernel interpretation and may have zero R_0 but nonzero R_1. Direct coefficient integration still makes sense under absolute integrability; division or Jensen then needs separate justification. This is a conditional first-degree lift of the specified elimination, not the actual source-decorated R-prime operation.
+
+For finitely/countably many actual histories require sum_alpha integral (rho_(alpha,0)+|rho_(alpha,1)|) dm_alpha dh_alpha<infinity in the positive formulation, or absolute values of both coefficients for signed representations. All rejected and n=0 histories are included. Divide the summed marked coefficient by the actual global vacuum denominator, not a history denominator or source-dependent partition. Remaining T operations, the later background/fluctuation coordinate change, gauges/cutoffs and terminal law must transport this jet in turn; source derivatives of changed maps or domains cannot be discarded. The displayed L1 estimate carries existing integrability and gives no cutoff-uniform flowed input bound or terminal change-of-measure control.
+
+### Failure record and next load-bearing obligation
+
+Positive finite disintegration from stage035 applies to the physical Wilson law with a specified Borel coarse map. It does not establish H042 for each effective-action history in (1.76). This audit has not verified the exact reference domains, all effective-action terms, positivity or finite masses needed for that identification. The marked lift is therefore conditional. Next reconstruct those actual reference variables and complementary operations, prove their source-decorated equal-integral identity, and retain all terminal/sector coefficients before seeking uniform estimates. Vacuum equivalence alone does not discharge that gate. No source operation, continuum edge or earliest numbered4Dfailure is closed; structural no-go count remains zero.

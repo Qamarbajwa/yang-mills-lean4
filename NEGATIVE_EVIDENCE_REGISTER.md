@@ -373,3 +373,13 @@ YM-040 pre-acceptance covariance-premise repair: both individual factors and the
 - Complete all-sector marked/source/terminal dictionary and uniform bounds remain OPEN. No atlas failure or continuum edge closes. METHOD_SPECIFIC_OBSTRUCTION; structural no-go count0.
 
 YM-041 parallel atlas limitation (root source audit): CH16 Theorem2.33 requires strict two-assignment degree gap for every negative tree. Conditional heat-only regrading gives no gap to a bare-noise tree with zero heat edges if that tree belongs to the quantified negative family. Actual rule/tree/norm and Definition2.32 typography remain OPEN. This is a hypothesis gate, not earliest4Dfailure, an author counterexample or no-go; structural no-go count0.
+
+
+## YM-042: first changed-density integration premise gap
+
+- R-I (1.76) integrates disjoint regions; its first integral stays unchanged, delta constraints are already eliminated there, and tree gauge is introduced later. A source lift that merges these stages or drops the first integral/complement is not supported by the numbered chain.
+- Positive Wilson disintegration does not verify positivity or probability-reference normalization of individual effective-action histories. The conditional degree-one ratio needs nonnegative vacuum density, absolutely integrable marked coefficient absolutely continuous with respect to it, and the actual reference/domain dictionary. For signed terms, zero vacuum integral can coexist with nonzero marked integral; coefficient integration remains available but division/Jensen need separate proof.
+- History-dependent supports, source-decorated maps, all complementary-sector sums and terminal estimates remain unmatched. METHOD_SPECIFIC_OBSTRUCTION; structural no-go count0; no continuum closure.
+
+
+YM-042 parallel root atlas limitation: finite noise-slack regrading requires q>=1, half-integer baseline degrees, finite counted family and kappa<1/(2M). The supplied-family floor/sign/gap certificate does not exhaust the actual generated family or verify R-consistency/theorem/model-norm correspondence. Zero-noise case q=0,r=0,m=1 violates floor/sign matching; separate treatment is required. Alternative analytic-degree branch margins2-D/2-kappa and4-D-2kappa remain negative at D=4 for positivekappa, so this certificate is no critical repair, earliest4Dfailure or structural no-go.

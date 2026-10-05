@@ -114,3 +114,13 @@ Additional numbered basic R-prime predecessors are audited in YM_015F_R_OPERATIO
 ## XFER-YM-REGRADING-GATE-041
 
 Root bounded CH16 Eq2.3 / Def2.32 / Theorem2.33 locator audit in YM_3D4D_TREE_SLACK_AUDIT_039.md: strict degree separation for all negative trees is a conditional two-assignment norm gate. A heat-only gain needs separate control for zero-heat negative trees. Exact target rule, both assignments and model norm are unmatched; Definition2.32 typography is explicitly unaudited. Status CONDITIONAL_HYPOTHESIS_GATE; no Wilson insertion mapping or continuum closure.
+
+
+## XFER-YM-LAMBDA-MARK-042 — first changed-density integration
+
+Source binding: R-I printed193–196, chiefly (1.76), distinguishes unchanged V_h integral, disjoint eliminated Lambda variables and later background/tree-gauge operations; detailed dictionary in YM_015F_R_OPERATION_SOURCE_AUDIT_039.md. Own degree-one lift integrates rho_0 and rho_0 X jointly; positive probability reference fibers and absolute marked integrability yield R_1=R_0 X_eff and preserved marked integral. Zero fibers require absolute continuity; signed histories do not inherit conditional positivity. Actual history-coordinate/reference measure identification, source-independent domain mapping, effective-action positivity, complementary-sector summability, subsequent source jets and terminal law are unmatched hypotheses. Stage035 physical Wilson disintegration does not prove these history hypotheses. Status CONDITIONAL_FINITE_TRANSPORT_INTERFACE; no cutoff-uniform insertion or continuum conclusion.
+
+
+## XFER-YM-NOISE-SLACK-042 — finite two-assignment certificate
+
+Root own algebra anchored to accepted041 numbered regrading/model-norm gate, not a new primary-source claim. For a supplied finite family with integer heat/noise counts m>=0,q>=1 and half-integer baseline r, let M=max(m+q) and 0<kappa<1/(2M). Bookkeeping degree a=r-(m+q)kappa and alternative b=r-q kappa/2 have matching floors/sign and strict gap (m+q/2)kappa>=kappa/2. Actual generated tree family, its exhaustion, R-consistency and theorem/model-norm mapping are unverified. Zero-noise trees need separate treatment. Status CONDITIONAL_FINITE_ALGEBRA_CERTIFICATE; no critical4D gain or Wilson insertion conclusion. Detailed root certificate in YM_3D4D_TREE_SLACK_AUDIT_039.md.

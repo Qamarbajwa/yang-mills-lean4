@@ -1,0 +1,14 @@
+# YM-042 candidate — first changed-density integration gate
+
+Status CANDIDATE_PENDING_FREEZE_REVIEW_ACCEPTANCE. Accepted authority remains revision41 /67421c4. Scientific source writer /root/writer_042; state and commits reserved to root.
+
+Main physical target remains all-sector normalized flowed-observable moments uniform along the AF trajectory. Bounded primary R-I printed193–196 audit separates the changed-density Lambda integration (1.76), unchanged first integral, earlier eliminated deltas and later background/tree-gauge operations. Public ordinary PowerShell HTTP plus host fitz extraction; writer visually inspected printed194. New source-derived paraphrase under200words, no directquote. Complete bond/reference/effective-action/source dictionary remains OPEN.
+
+Own conditional first-degree lift assumes an actual positive source-independent probability reference, nonnegative integrable vacuum term and jointly absolutely integrable marked term rho_0 X. Fubini gives R_1=R_0 X_eff including zero-fiber treatment and preserved marked integral; L1 carries existing integrability only. Countable actual histories require absolute summability, all complementary/n=0 sectors, global vacuum normalization and subsequent terminal/source transport. Physical Wilson disintegration does not establish the effective-history premise. Signed pieces cannot silently supply positive kernels.
+
+Artifacts: appended R-operation audit039, XFER-YM-LAMBDA-MARK-042 registry and append-only negative evidence. Existing science manifest unchanged by source writer. Independent atlas progress reserved to root. Proposed bounded DAG child remains below OPEN JET-002B; no scientific edge closes. Next actual history/reference/source identity and terminal control remain load-bearing.
+
+Invariants goal_complete=false; Clay OPEN_AND_UNSOLVED; P3/crossover OPEN; E-UV-FLOWED PARTIAL_PROGRESS; local OS/free continuum OPEN_AND_UNSOLVED; spatial-flow RP compatibility PROVED; structural no-go0; YM-016BLOCKED. Tests, freeze/hash and fresh review/distinct acceptance remain pending and are not invented here.
+
+
+Parallel root atlas progress: own finite noise-slack certificate, anchored to accepted041 numbered two-assignment gate rather than new primary extraction. Supplied finite family with integer m>=0,q>=1, half-integer r and 0<kappa<1/(2max(m+q)) has matching bookkeeping/alternative floors and signs, and strict degree gap at least kappa/2. Root reports45 exact Fraction checks at kappa=.01 plus zero-noise counterexample. These checks are candidate writer evidence, not independent acceptance. Actual family exhaustion, R-consistency and complete theorem/model-norm map remain OPEN. Modified analytic3D/4D margins2-D/2-kappa and4-D-2kappa stay negative in4D; no critical gain or earliestfailure is established. Transfer XFER-YM-NOISE-SLACK-042 remains CONDITIONAL_FINITE_ALGEBRA_CERTIFICATE. This source writer did not independently audit root's atlas derivation.
