@@ -102,3 +102,7 @@ Source locator verified: Chandra-Hairer Theorem2.15 complete/subcritical rule, a
 
 ## XFER-YM-RLOCAL-039
 Primary local quotient of basic R-prime operation and vacuum identity(1.102) located in R-I CMP122175-202. CONDITIONAL_SOURCE_INTERFACE: all nested sums/gauges/support, local source denominators, marked integral identities and terminal normalization must be reconstructed. Introductory(0.3) uses schematic full densities; actual denominators use localized parts. Detailed YM_015F_R_OPERATION_SOURCE_AUDIT_039.md; no uniform flowed insertion conclusion.
+
+## XFER-YM-RLOCAL-JET-040 — conditional local normalization transfer
+
+Our finite nilpotent-algebra derivation extends the stage039 local quotient interface: Q=L/D has zero integrated nonempty coefficients, exact denominator-jet compensation L/D_empty=(D/D_empty)Q, and a finite inverse-norm cost sum_(j=0)^k ||D/D_empty-1||_r^j. Source mapping is conditional on an actual verified local numerator/denominator pair with a source-independent positive reference measure and integrable coefficients. Exterior-dependent denominator jets stay inside exterior integration. The full basic R-prime/R-II operator, all-sector Wilson marked identity, source-dependent measures/maps and cutoff-uniform terminal estimates are unmatched hypotheses. The finite two-point countermodel records the error from omitting a denominator derivative. Status CONDITIONAL_ELEMENTARY_INTERFACE; no continuum transfer or uniform insertion theorem.

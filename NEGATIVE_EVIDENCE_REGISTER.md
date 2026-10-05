@@ -356,3 +356,9 @@
 - R-I printed177 explicitly qualifies introductory(0.3): actual denominators use localized parts rather than full densities. Extracted(1.100) quotient is one factor of basic R-prime, not a reconstructed all-sector operator. Vacuum equality(1.102) does not establish marked coefficient equality.
 - Literal initial heat degree2-kappa and later heat-gain2 tree counting give different slack coefficients. Both displayed3D margins remain positive; full assignment/regrading dictionary is pending, not an author-theorem counterexample. Neither scheme produces a positive displayed4D gain.
 - All actual uniform source/terminal estimates and earliest proof-local4Dfailure remain open. METHOD_SPECIFIC_OBSTRUCTION; structural no-go count0; no continuum edge closure.
+
+## YM-040: localized source-denominator compensation
+
+- A normalized local quotient jet integrates to zero in every nonempty degree; it therefore cannot replace the raw conditional marked jet without the denominator jet. Exact two-point example L=1+zx, x in {0,1} equiprobable, F=x gives raw marked coefficient1/2 versus quotient coefficient1/4; restoration recovers1/2. Finite shortcut countermodel only, not a physical Wilson or author-theorem counterexample.
+- Exterior-dependent local normalizations must remain inside exterior integration; source-dependent gauges, maps and cutoff measures require their own coefficient rules. Vacuum R-prime equality does not identify these rules.
+- A finite algebraic inverse has no smallness requirement, but its norm cost and marked input norms can grow with cutoff and scale count. No uniform-flow estimate, operator reconstruction, atlas earliest failure or continuum edge closes. METHOD_SPECIFIC_OBSTRUCTION; structural no-go count0.
