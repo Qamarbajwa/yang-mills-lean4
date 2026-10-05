@@ -350,3 +350,9 @@
 - A minimum-degree margin alone does not verify Theorem2.15: every quantified subtree/leaf test, complete-subcritical rule and uniformly compatible Gaussian inputs are required. Formal4D branch diagnostics do not identify an admissible tree in a verified4D rule.
 - Extracted small-field coordinate cutoffs, Haar/constraint factors and normalization must remain in the marked representation; no all-sector Wilson disintegration or uniform flowed-source estimate is inferred.
 - Missing source/coordinate dictionaries are pending obligations, not falsified theorems. METHOD_SPECIFIC_OBSTRUCTION; structural no-go count0 and all continuum edges remain open.
+
+
+## YM-039: basic R-step and degree convention limitations
+- R-I printed177 explicitly qualifies introductory(0.3): actual denominators use localized parts rather than full densities. Extracted(1.100) quotient is one factor of basic R-prime, not a reconstructed all-sector operator. Vacuum equality(1.102) does not establish marked coefficient equality.
+- Literal initial heat degree2-kappa and later heat-gain2 tree counting give different slack coefficients. Both displayed3D margins remain positive; full assignment/regrading dictionary is pending, not an author-theorem counterexample. Neither scheme produces a positive displayed4D gain.
+- All actual uniform source/terminal estimates and earliest proof-local4Dfailure remain open. METHOD_SPECIFIC_OBSTRUCTION; structural no-go count0; no continuum edge closure.

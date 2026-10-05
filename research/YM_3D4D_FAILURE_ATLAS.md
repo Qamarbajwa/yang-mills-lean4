@@ -84,3 +84,7 @@ Primary author manuscript now inspected at Lemma5.17 (pp69-70) and downstream fi
 
 ## FA-001 cited theorem hypotheses / stage038
 Theorem2.15 of Chandra-Hairer arxiv1612.08138v5, printed18-19, directly inspected: complete/subcritical rule, alltree/subtree strict tests and compatible Gaussian approximation conditions. Detailed audit YM_3D4D_BPHZ_HYPOTHESIS_AUDIT_038.md. One numerical minimum-degree margin cannot discharge the full quantified theorem. First failing numbered lemma and actual4D replacement remain unestablished.
+
+
+## FA-001 attaining trees and slack dictionary / stage039
+Visually inspected printed70 drawings; independent fulltext pp63-64 gives later heat-gain2 counting, while p59 assigns2-kappa. Detailed two-assignment audit YM_3D4D_TREE_SLACK_AUDIT_039.md. Both displayed3D margins are positive for smallkappa; both4D diagnostics lose strictmargin. A globalreset/regrading/modelnorm dictionary and earliest numbered failure remain unresolved. No authortheorem falsification or structural no-go.

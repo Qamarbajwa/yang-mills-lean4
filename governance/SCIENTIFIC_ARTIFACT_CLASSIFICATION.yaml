@@ -168,6 +168,8 @@ scientific_fingerprint:
     - research/YM_3D4D_NUMBERED_LEMMA_AUDIT_037.md
     - research/YM_3D4D_BPHZ_HYPOTHESIS_AUDIT_038.md
     - research/YM_015F_CONSTRAINED_COORDINATES_AUDIT_038.md
+    - research/YM_015F_R_OPERATION_SOURCE_AUDIT_039.md
+    - research/YM_3D4D_TREE_SLACK_AUDIT_039.md
     - governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml
 unknown_policy:
   research_locations:

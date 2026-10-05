@@ -98,3 +98,7 @@ Elementary conditional change-of-measure/Holder transfer, derived in YM_015F_TER
 
 ## XFER-YM-BPHZ-GATE-038
 Source locator verified: Chandra-Hairer Theorem2.15 complete/subcritical rule, alltree/subtree inequalities and Gaussian compatibility. Conditional transfer not established; exact4D rule, source homogeneity/tree dictionary and uniform input covariance bounds missing. Model convergence is not normalized Wilson insertion control or an invariant measure theorem. Details YM_3D4D_BPHZ_HYPOTHESIS_AUDIT_038.md.
+
+
+## XFER-YM-RLOCAL-039
+Primary local quotient of basic R-prime operation and vacuum identity(1.102) located in R-I CMP122175-202. CONDITIONAL_SOURCE_INTERFACE: all nested sums/gauges/support, local source denominators, marked integral identities and terminal normalization must be reconstructed. Introductory(0.3) uses schematic full densities; actual denominators use localized parts. Detailed YM_015F_R_OPERATION_SOURCE_AUDIT_039.md; no uniform flowed insertion conclusion.
