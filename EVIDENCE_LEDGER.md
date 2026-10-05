@@ -96,3 +96,7 @@ Amended candidate 5db65494e659791cd4f84abf97bee5c5848ef7a1; E3 verification/YM-0
 
 ## YM-041 bounded acceptance / revision41
 Candidate 1bad7e6bc83676a937db9fa9d9f718704835e3b7;E3 verification/YM-041_E3_RECEIPT.json433passed15.79s; E4 verification/raw/YM-041_E4_RAW_20261005.md actualbyteSHA256 0dede8c200a092eb56f8e670730291ed963122dabfc5d0812b94ef4ce0933bb3; distinct acceptance verification/YM-041_TECHNICAL_ACCEPTANCE.md. Local sciencehash ff3d101f2955c9ef1508a31af7bf1131a0cd98d6f8dbdc95fbc7ec1978690398;158files;Gitblob 099a519ce45df69d7d011a942d78856f4a0d5632ef261c56ff131f6b0ada9350. Bounded primary locators and conditional two-assignment diagnostic; no scientific edge closure.
+
+
+## YM-042 bounded acceptance / revision42
+Candidate 2d49eec4485a5bcc47bfaf757b566909f0f16583;E3 verification/YM-042_E3_RECEIPT.json433passed4.17s;E4 verification/raw/YM-042_E4_RAW_20261005.md actualbyteSHA256 0656b174fdbcad13e6a643da1b3af21e233a5115ab28bd7a43fb0ad5a183efb3;distinct acceptance verification/YM-042_TECHNICAL_ACCEPTANCE.md. Local sciencehash 7c2ca263fa7e78c1873d251a1d08ab2ec43fd3cd6dab6c0705eac96c31e792a8;158files;Gitblob 4d0fe428c654672d2c3801d236e84c42763274ad922b749859c748cce4befae2. Conditional finite marked lift and supplied-family grading proof only; no scientific-edge closure.

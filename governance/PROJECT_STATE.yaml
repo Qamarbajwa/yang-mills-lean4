@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 41
+revision: 42
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "1bad7e6bc83676a937db9fa9d9f718704835e3b7"
-  scientific_candidate_sha: "1bad7e6bc83676a937db9fa9d9f718704835e3b7"
-  review_bound_sha: "1bad7e6bc83676a937db9fa9d9f718704835e3b7"
-  evidence_closeout_head: "b88ba8560a596da9aeabbf2225467035f15f8746"
-  closeout_resolution: "evidence_closeout_head binds the completed YM-041 receipt/state commit; later metadata commits preserve it. Resolve current authoritative HEAD from Git."
+  head: "2d49eec4485a5bcc47bfaf757b566909f0f16583"
+  scientific_candidate_sha: "2d49eec4485a5bcc47bfaf757b566909f0f16583"
+  review_bound_sha: "2d49eec4485a5bcc47bfaf757b566909f0f16583"
+  evidence_closeout_head: null
+  closeout_resolution: "YM-042 receipt/state closeout head will be bound after commit; authoritative HEAD resolves from Git."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,14 +32,25 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 41
-  last_updated_at: "2026-10-05T18:49:38Z"
+  last_expected_revision: 42
+  last_updated_at: "2026-10-05T19:50:12Z"
   active_contract: "YM-015F-JET-002B"
-  frozen_candidate: "1bad7e6bc83676a937db9fa9d9f718704835e3b7"
+  frozen_candidate: "2d49eec4485a5bcc47bfaf757b566909f0f16583"
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-042
+    scope_in: "First density-changing integration locator/conditional degree-one lift and finite noise-slack grading certificate"
+    scope_out: "Actual history/reference or generated-tree correspondence, uniform insertion, earliest 4D failure and continuum closure"
+    dependencies: ["YM-041"]
+    risk: R3
+    writer: "/root/writer_042"
+    atlas_writer_and_coordinator: "/root"
+    reviewer_path: "/root/review_042"
+    acceptor: "/root/accept_042"
+    status: SCIENTIFICALLY_ACCEPTED
+    scope_limitation: "BOUNDED_LOCATORS_AND_FINITE_PROOFS_WITH_EXPLICIT_PREMISES_NO_EDGE_CLOSURE"
   - id: YM-041
     scope_in: "Numbered basic R-prime predecessor/retained-branch dictionary and conditional two-assignment BPHZ gate"
     scope_out: "Full marked operator, actual regrading theorem, earliest 4D failure, uniform insertion and continuum closure"
@@ -468,7 +479,7 @@ hard_gates:
     description: "Independent review is bound to exact candidate SHA."
   scientific_review_pass:
     status: PASS
-    description: "Review verdict is INTEGRITY_PASS_WITH_LIMITATIONS; limitations are reflected in YM-041 bounded scope."
+    description: "Review verdict is INTEGRITY_PASS_WITH_LIMITATIONS; limitations are reflected in YM-042 bounded scope."
   negative_evidence_preserved:
     status: PASS
     description: "All negative scientific findings preserved in NEGATIVE_EVIDENCE_REGISTER.md."
@@ -477,10 +488,10 @@ hard_gates:
     description: "Accepted upstream scope supports the bounded conditional algebra only; actual analytical insertion prerequisites remain open."
   scientific_tree_identity:
     status: PASS
-    description: "Closed-world scientific tree hash verified as ff3d101f2955c9ef1508a31af7bf1131a0cd98d6f8dbdc95fbc7ec1978690398."
+    description: "Closed-world scientific tree hash verified as 7c2ca263fa7e78c1873d251a1d08ab2ec43fd3cd6dab6c0705eac96c31e792a8."
   state_revision_freshness:
     status: PASS
-    description: "State revision is monotonically incremented to 41."
+    description: "State revision is monotonically incremented to 42."
   no_unresolved_mandatory_blocker:
     status: PASS
     description: "Zero mandatory blockers exist."
@@ -492,7 +503,7 @@ hard_gates:
     description: "clay_problem is OPEN_AND_UNSOLVED."
   scientific_acceptance_authority_separation:
     status: PASS
-    description: "Writer /root/writer_041 and atlas writer/coordinator /root != reviewer /root/review_041 != acceptor /root/accept_041; internal execution-context separation only."
+    description: "Writer /root/writer_042 and atlas writer/coordinator /root != reviewer /root/review_042 != acceptor /root/accept_042; internal execution-context separation only."
   regression_protection_for_consequential_defects:
     status: PASS
     description: "Durable regression tests implemented across test suite."
@@ -566,8 +577,8 @@ release:
     adapter: "NONE_BY_DESIGN / NOT_APPLICABLE"
 
 last_verified_checkpoint:
-  sha: "1bad7e6bc83676a937db9fa9d9f718704835e3b7"
-  timestamp: "2026-10-05T18:49:38Z"
+  sha: "2d49eec4485a5bcc47bfaf757b566909f0f16583"
+  timestamp: "2026-10-05T19:50:12Z"
   test_result: "433 passed"
 
 overhead:
@@ -583,7 +594,7 @@ overhead:
     - "YM-015R2 (Exact RP Status Repair and Nonperturbative Flowed-Continuum Bridge) completed and scientifically accepted (RP_STATUS_REPAIRED_SPATIAL_FLOW_RP_PROVED_AND_FLOWED_TARGET_BOUNDED)"
 
 views:
-  last_validated_revision: 41
+  last_validated_revision: 42
   evidence_refs: []
 
 # Accepted bounded YM-034 cycle; hard gates bind its explicit acceptance scope.
@@ -737,3 +748,23 @@ r_predecessor_cycle:
   atlas_status: NUMBERED_TWO_ASSIGNMENT_GATE_CONDITIONAL_ACTUAL_MAPPING_AND_EARLIEST_FAILURE_OPEN
   next_automatic_task: YM-015F-JET-002B
   next_bounded_obligation: "Source-decorated first density-changing integration (1.76), retained complementary histories and terminal law; independent actual grading correspondence"
+
+# Accepted bounded YM-042; neither conditional mapping closes a continuum edge.
+first_lambda_mark_cycle:
+  id: YM-042
+  status: SCIENTIFICALLY_ACCEPTED_WITH_LIMITATIONS
+  scientific_candidate_sha: 2d49eec4485a5bcc47bfaf757b566909f0f16583
+  scientific_tree_hash: 7c2ca263fa7e78c1873d251a1d08ab2ec43fd3cd6dab6c0705eac96c31e792a8
+  git_blob_scientific_hash: 4d0fe428c654672d2c3801d236e84c42763274ad922b749859c748cce4befae2
+  hash_scope: LOCAL_RAW_CHECKOUT_BYTES_WITH_DECLARED_EOL_LIMITATION
+  primary_task: YM-015F-JET-002B
+  scientific_edge_closures: []
+  review_ref: verification/raw/YM-042_E4_RAW_20261005.md
+  review_sha256: 0656b174fdbcad13e6a643da1b3af21e233a5115ab28bd7a43fb0ad5a183efb3
+  review_verdict: INTEGRITY_PASS_WITH_LIMITATIONS
+  acceptance_ref: verification/YM-042_TECHNICAL_ACCEPTANCE.md
+  milestone_ref: verification/YM-042_MILESTONE.md
+  source_status: LAMBDA_LOCATOR_VERIFIED_ACTUAL_HISTORY_REFERENCE_AND_MARKED_IDENTITY_OPEN
+  atlas_status: FINITE_NOISE_SLACK_CERTIFICATE_ACTUAL_GENERATED_FAMILY_AND_MODEL_MAPPING_OPEN
+  next_automatic_task: YM-015F-JET-002B
+  next_bounded_obligation: "Actual (1.76) history reference/domain/normalization and source identity; independent exhaustive negative-tree family/count audit"

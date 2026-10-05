@@ -1,0 +1,96 @@
+{
+  "task": "YM-042",
+  "baseline_sha": "67421c4ddb7547d3ada85e2b72445752b9c44177",
+  "candidate_sha": "2d49eec4485a5bcc47bfaf757b566909f0f16583",
+  "producer": "/root",
+  "scientific_tree_hash": "7c2ca263fa7e78c1873d251a1d08ab2ec43fd3cd6dab6c0705eac96c31e792a8",
+  "git_blob_scientific_hash": "4d0fe428c654672d2c3801d236e84c42763274ad922b749859c748cce4befae2",
+  "scientific_files": 158,
+  "eol_only_differences": 15,
+  "substantive_differences": 0,
+  "tests": "433 passed in 4.17s",
+  "command": ".venv/Scripts/python.exe -m pytest -q",
+  "negative_history": "baseline Git bytes literal prefix preserved",
+  "finite_transport_diagnostic": {
+    "y_weights": [
+      "1/2",
+      "1/2"
+    ],
+    "x_weights": [
+      "1/2",
+      "1/2"
+    ],
+    "rho_rows": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "X_rows": [
+      [
+        5,
+        7
+      ],
+      [
+        -2,
+        4
+      ]
+    ],
+    "R0": [
+      0,
+      2
+    ],
+    "R1": [
+      0,
+      5
+    ],
+    "X_eff": [
+      0,
+      "5/2"
+    ],
+    "preserved_mark": "5/2",
+    "marked_L1_upper": "7/2",
+    "signed_fiber": {
+      "rho0": [
+        1,
+        -1
+      ],
+      "X": [
+        1,
+        0
+      ],
+      "R0": 0,
+      "R1": "1/2"
+    }
+  },
+  "finite_grading_diagnostic": {
+    "arithmetic": "fractions.Fraction",
+    "kappa": "1/100",
+    "m": [
+      0,
+      1,
+      2
+    ],
+    "q": [
+      1,
+      2,
+      3
+    ],
+    "r": [
+      "-3/2",
+      "-1",
+      "0",
+      "1/2",
+      "2"
+    ],
+    "cases": 45,
+    "result": "floors/sign/gap PASS",
+    "q_zero_premise_counterexample": "r0,m1,q0:a=-kappa,b=0",
+    "branch_identity": "2-D/2-kappa and4-D-2kappa verified D3/D4;4Dnegative"
+  },
+  "scope": "Finite diagnostics and regression/inventory only; general proof and source correspondence independently reviewed; continuum remains open"
+}
