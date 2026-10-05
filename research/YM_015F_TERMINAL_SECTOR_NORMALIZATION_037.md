@@ -18,7 +18,7 @@ Every mixed coefficient is the disjoint-subset convolution of these two normaliz
 
 ## Positive all-sector mixture, not positive polymer activities
 
-At a fixed cutoff suppose the actual positive unnormalized measure has an exact finite or countable decomposition rho=sum_alpha rho_alpha into positive finite measures. For countably many sectors assume absolute summability of every selected marked integral. Let Z_alpha=rho_alpha(1), Z=sum_alpha Z_alpha>0, and discard zero-mass sectors (their positive measures are zero). Let P(z)=product_i(1+z_i X_i). Define sector jets J_alpha=rho_alpha(P)/Z_alpha and p_alpha=Z_alpha/Z. Then
+At a fixed cutoff suppose the actual positive unnormalized measure has an exact finite or countable decomposition rho=sum_alpha rho_alpha into positive finite measures. For countably many sectors assume sum_alpha rho_alpha(|product_(i in S) X_i|)<infinity for every selected subset S, including the empty subset (vacuum). Summability merely of |rho_alpha(product X_i)| is insufficient. Let Z_alpha=rho_alpha(1), Z=sum_alpha Z_alpha>0, and discard zero-mass sectors (their positive measures are zero). Let P(z)=product_i(1+z_i X_i). Define sector jets J_alpha=rho_alpha(P)/Z_alpha and p_alpha=Z_alpha/Z. Then
 
     rho(P)/Z=sum_alpha p_alpha J_alpha,
     |[z_S]rho(P)/Z| <= sum_alpha rho_alpha(|product_(i in S) X_i|)/Z.
