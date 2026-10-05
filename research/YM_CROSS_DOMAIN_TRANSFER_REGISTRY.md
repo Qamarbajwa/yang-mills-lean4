@@ -90,3 +90,7 @@ Cross-track synthesis: the analytic-polydisc route is sufficient but stronger th
 
 ## XFER-YM-QUADRATIC-036
 Conditional proposal: compact-group shifted-coupling domination on a finite source disk. Detailed source audit, exact normalization and SU(N) local proof: YM_015F_QUADRATIC_SOURCE_AUDIT_036.md. Lattice reflection/factorization, denominator, physical-flow/clover comparison and support amplification are missing hypotheses. No flowed uniform bound or continuum edge closes.
+
+
+## XFER-YM-TERMINAL-037
+Elementary conditional change-of-measure/Holder transfer, derived in YM_015F_TERMINAL_SECTOR_NORMALIZATION_037.md. Terminal positive law and full sector decomposition must be reconstructed; density ratios, marked moment numerators, source factors and actual vacuum denominator need uniform control. Status CONDITIONAL_PROPOSAL; no actual flowed insertion estimate or continuum edge closes.

@@ -76,3 +76,7 @@ The YM coordinate equation contains a quadratic derivative term and a cubic term
 | Spectral estimates | PENDING_SOURCE_SELECTION | UNKNOWN | UNKNOWN | no verified physical gap; δ unknown | Transfer-matrix norms; downstream only |
 
 For pending rows, no failure classification is awarded until an actual approach is analysed. UNKNOWN is not negative evidence. The completed algebra is explicitly separated from source theorem claims. The next task is to inspect S1's state-space definition, admissible exponents, regularity-structure rule and first model/fixed-point lemma, bind exact locators, and replace the diagnostic with an actual proof-local failure map. No XFER is promoted and STRUCTURAL_NO_GO_COUNT remains zero.
+
+
+## FA-001 numbered locator / stage037
+Primary author manuscript now inspected at Lemma5.17 (pp69-70) and downstream fixed-point use (p73). Its displayed minimum-degree criterion has 3D margin1/2-2kappa. The separate physical-homogeneity derivative-branch diagnostic gives4D margin-2kappa; this does not yet reconcile the printed attaining tree, reduced source degrees or full CH16 hypotheses. Detailed audit: YM_3D4D_NUMBERED_LEMMA_AUDIT_037.md. First failing numbered lemma of the whole proof remains UNESTABLISHED; no4D impossibility or structural no-go follows.

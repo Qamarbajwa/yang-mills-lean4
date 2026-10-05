@@ -336,3 +336,11 @@
 - Compact group single-matrix quadratic domination is uniform on its stated finite source disk. It does not identify an interacting plaquette marginal or prove a flowed clover bound; reflected lattice factorization, support growth, denominators and signed activity norms remain open.
 - Literal PDF normalization, absolute-sine equality and constants discrepancies remain recorded without silently repairing or declaring the physical theorem false.
 - A verified small-field map is not an all-sector map. Unknown source extraction is not falsification. All findings are METHOD_SPECIFIC_OBSTRUCTION; no continuum edge closes and STRUCTURAL_NO_GO_COUNT=0.
+
+
+## YM-037: terminal and all-sector normalization defects
+- A vanishing bad-sector probability does not control marked moments: epsilon^2 probability with epsilon^-3 insertion has expectation epsilon^-1. Finite probability countermodel only, not a physical Wilson counterexample.
+- Terminal reweighting changes the coarse measure and incurs the explicit normalized density-ratio/Holder cost. Constant-one conditional transport in the prior measure does not remove it.
+- Extracted scalar source jets must be restored by subset convolution. Vacuum-only equalities do not establish marked terminal functional identities. Signed activities require total variation and the actual reconstructed denominator.
+- All estimates for actual physically normalized flowed sources, all-sector RG and terminal law remain open. METHOD_SPECIFIC_OBSTRUCTION; STRUCTURAL_NO_GO_COUNT=0; no continuum edge closure.
+- Atlas037 locates Lemma5.17 model convergence and a strict sufficient criterion; a physical-degree4D diagnostic loses margin, but exact source-tree/convention transfer and earliest failure remain unresolved. Sufficient-criterion failure does not prove convergence impossible.
