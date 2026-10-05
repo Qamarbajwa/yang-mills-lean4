@@ -365,3 +365,11 @@
 
 
 YM-040 pre-acceptance covariance-premise repair: both individual factors and their products must be absolutely integrable. Product integrability alone does not define separate means; C=1/y,T=0 on uniform(0,1) is a countermodel to that shortcut. Initial candidate challenged and retained in Git/raw receipt; no accepted state relied on it. METHOD_SPECIFIC_OBSTRUCTION; structural no-go count0.
+
+## YM-041: retained branch and changed density marked gates
+
+- Numbered basic R-prime predecessors distinguish successive selected-class reductions from complementary operations, and density-preserving preliminary representation changes from later equal-integral replacements. Omitting rejected branches or assuming marked equality from vacuum equivalence is unsupported.
+- Own finite reference probabilities1/2 on x=0,1, density(0,2), averaged density1: both vacuum integrals1; unchanged test x gives1 versus1/2. Proper transported conditional test1 restores the mark. This falsifies only an unchanged-observable shortcut, not Bałaban's construction.
+- Complete all-sector marked/source/terminal dictionary and uniform bounds remain OPEN. No atlas failure or continuum edge closes. METHOD_SPECIFIC_OBSTRUCTION; structural no-go count0.
+
+YM-041 parallel atlas limitation (root source audit): CH16 Theorem2.33 requires strict two-assignment degree gap for every negative tree. Conditional heat-only regrading gives no gap to a bare-noise tree with zero heat edges if that tree belongs to the quantified negative family. Actual rule/tree/norm and Definition2.32 typography remain OPEN. This is a hypothesis gate, not earliest4Dfailure, an author counterexample or no-go; structural no-go count0.

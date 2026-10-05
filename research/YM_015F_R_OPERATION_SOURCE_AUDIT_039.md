@@ -110,3 +110,28 @@ Hence replacing the source-decorated local density by its normalized quotient an
 ### Remaining operator dictionary / smallest next obligation
 
 For every quotient actually occurring in the complete (1.100), determine its integration variables and reference measure; graph weights; axial constraint and gauge transformation; cutoffs and localized action; background dependence; source numerator; source denominator; source dependence of coordinate maps; sector selection and retained unselected components; outer factors and terminal functional. Prove the resulting all-sector marked integral identity against the original normalized Wilson jet. The formulas above specify the coefficient obligations for a verified local pair (L,D), not that entire dictionary. R-II localization and any uniform marked/terminal estimates remain OPEN. No numbered 4D Failure Atlas edge advances in this section; its source-tree/regrading and all-subtree hypothesis obligations remain independent. Structural no-go count stays zero and no continuum edge closes.
+
+## YM-041 candidate: predecessor-chain and retained-branch dictionary
+
+Ordinary PowerShell public HTTP access succeeded again on 2026-10-05. Host Python fitz extracted printed177,190–202 in memory; printed201 was independently visually inspected at C:/Users/arqam/AppData/Local/Temp/YM041_RI_p201.png. No PDF denial page, subscription preview or OCR-only reading was substituted for that visual check. Same R-I public source and DOI as039. This adds numbered predecessors, not a full transcription of (1.100).
+
+New primary-derived paraphrase/table below is under200 words; no additional direct quotation:
+
+| Locator | Bounded dictionary |
+|---|---|
+| 177,(1.1) | Selected components factorize; the complementary operation is retained, usually omitted from intermediate displays. |
+| 192,(1.71)–(1.73) | After N preliminary integrations, Lambda is a one-layer enlargement of the new region; its variables are integrated out. |
+| 193,(1.75) | A unity split imposes exterior-extension regularity; failing components leave the selected class. Transformations so far preserve the density. |
+| 194,(1.76) | Subsequent Lambda integration replaces density equality by equal-integral equivalence. The two integration regions are disjoint; the first is left unchanged. |
+| 195,(1.81)–196,(1.82) | Fluctuation coordinates use the background; tree gauge and another unity split restrict surviving components. |
+| 197,(1.88)–198,(1.89) | Additional large-field branches further shrink the selected union; cutoff removal uses the resulting restrictions. |
+| 200–201,(1.99) | Complementary operations include all intermediate branch forms. Component integrations factorize; histories are localized to each component. |
+| 201,(1.100) | Outer sum retains complementary regions/operations; selected-component sum includes n=0. Each product factor retains graph averaging, local quotient, remaining integrations and cutoffs. |
+
+### Own marked-transport consequence
+
+The selected union is not a permanent label attached only to the initial geometric conditions. A reconstruction must track its successive changes and carry each rejected branch into the complementary operations. Reading the displayed selected formula while forgetting the author's convention of omitting the complementary operation loses sectors. These are bookkeeping obligations; no quantitative suppression of those branches is inferred here.
+
+The source's distinction between representation equality before the later integration and equal-integral equivalence after it identifies a separate marked gate even before adding local denominator jets. Suppose an integration replaces a density by a function independent of integrated variables. Vacuum equality alone cannot justify retaining the original observable unchanged. Our finite diagnostic: on x=0,1 with reference probabilities1/2, take density rho(0)=0,rho(1)=2. Integrating its only variable gives constant density1. Both vacuum integrals equal1, but the original test F(x)=x has marked integral1 under rho and1/2 under the replacement. This falsifies an unchanged-observable shortcut, not the source operation. Correct conditional transport of F gives constant1 in this example and restores the marked integral. An actual gauge source lift must derive that transport jointly with every changed operation, source-dependent map, gauge restriction, cutoff and compensated denominator, rather than infer it from (1.102).
+
+This stage locates a finite part of the actual dictionary. It does not reconstruct all admissible histories, domain intersections, boundary bond conventions, reference measures, backgrounds or source-decorated operations in (1.100). The n=0 convention ensures no selected component is required; it does not prove positivity or summability of complementary terms. R-II localization, all-sector marked equality, terminal law and cutoff-uniform analytic estimates remain OPEN. Atlas regrading/all-subtree hypotheses and the earliest numbered4Dfailure are unchanged. No scientific edge closes and structural no-go count remains zero.

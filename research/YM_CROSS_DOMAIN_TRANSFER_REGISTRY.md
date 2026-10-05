@@ -106,3 +106,11 @@ Primary local quotient of basic R-prime operation and vacuum identity(1.102) loc
 ## XFER-YM-RLOCAL-JET-040 — conditional local normalization transfer
 
 Our finite nilpotent-algebra derivation extends the stage039 local quotient interface: Q=L/D has zero integrated nonempty coefficients, exact denominator-jet compensation L/D_empty=(D/D_empty)Q, and a finite inverse-norm cost sum_(j=0)^k ||D/D_empty-1||_r^j. Source mapping is conditional on an actual verified local numerator/denominator pair with a source-independent positive reference measure and integrable coefficients. Exterior-dependent denominator jets stay inside exterior integration. The full basic R-prime/R-II operator, all-sector Wilson marked identity, source-dependent measures/maps and cutoff-uniform terminal estimates are unmatched hypotheses. The finite two-point countermodel records the error from omitting a denominator derivative. Status CONDITIONAL_ELEMENTARY_INTERFACE; no continuum transfer or uniform insertion theorem.
+
+## XFER-YM-RBRANCH-041 — branch-preserving conditional transport
+
+Additional numbered basic R-prime predecessors are audited in YM_015F_R_OPERATION_SOURCE_AUDIT_039.md. Own transfer interpretation: each successive selected-class reduction must retain rejected branches; equal-integral density replacement requires its separately derived marked transport. Exact binary diagnostic preserves vacuum1 but changes an untransported marked integral from1 to1/2. Mapping to actual source-decorated gauge integrations is OPEN; all admissible histories, constraints, local denominators and terminal law remain missing hypotheses. Status CONDITIONAL_SOURCE_INTERFACE; no uniform flowed insertion or continuum theorem.
+
+## XFER-YM-REGRADING-GATE-041
+
+Root bounded CH16 Eq2.3 / Def2.32 / Theorem2.33 locator audit in YM_3D4D_TREE_SLACK_AUDIT_039.md: strict degree separation for all negative trees is a conditional two-assignment norm gate. A heat-only gain needs separate control for zero-heat negative trees. Exact target rule, both assignments and model norm are unmatched; Definition2.32 typography is explicitly unaudited. Status CONDITIONAL_HYPOTHESIS_GATE; no Wilson insertion mapping or continuum closure.
