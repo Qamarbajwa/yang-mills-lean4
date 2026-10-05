@@ -523,3 +523,11 @@ autonomous_discovery_cycle:
   git_blob_scientific_hash: f0110b46539dada25b7cc2e5060c45908db47486208a50beb40868a6f3187cfc
   next_automatic_task: YM-015F-JET-002A
   continuation_automation: continue-governed-yang-mills-discovery
+
+# Pending material candidate; accepted YM-034 hard gates do not cover this cycle.
+source_transport_cycle:
+  id: YM-035
+  status: CANDIDATE
+  scientific_tree_hash: cd210dd4346a7322724f6bda594d7cc71e3830a58f75e4fdc9974d49e9b1a907
+  primary_task: YM-015F-JET-002A
+  scientific_edge_closures: []

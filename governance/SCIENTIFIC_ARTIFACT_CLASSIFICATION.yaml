@@ -158,6 +158,9 @@ scientific_fingerprint:
     - research/YM_015F_INSERTION_SOURCE_AUDIT.md
     - research/YM_015F_SOURCE_JET_REDUCTION.md
     - research/YM_SCIENTIFIC_RECONCILIATION_034.md
+    - research/YM_015F_EXACT_SOURCE_TRANSPORT_035.md
+    - research/YM_015F_PLAQUETTE_SOURCE_COMPATIBILITY_035.md
+    - research/YM_3D4D_PROOF_LOCAL_AUDIT_035.md
     - governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml
 unknown_policy:
   research_locations:

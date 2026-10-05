@@ -320,3 +320,12 @@
 - Critical SPDE homogeneity gains vanish under d=3 to d=4 substitution. This is an algebraic method diagnostic; first numbered proof-local failure remains pending.
 - Bałaban source labels require correction: CMP102 is 3D; final 4D stability publisher abstract is CMP122. Exact source activity estimates remain unverified.
 - No structural no-go or scientific edge closure follows. STRUCTURAL_NO_GO_COUNT=0. Candidate mathematical reconciliation is pending independent review.
+
+
+## YM-035: exact source transport and method-specific limitations
+- Signed mass-one pieces need not contract norms; the exact finite 2delta_u-delta_v countermodel is recorded in research/YM_015F_EXACT_SOURCE_TRANSPORT_035.md.
+- Positive conditional integration preserves existing integrability with constant one; it supplies no cutoff-uniform input or strict RG contraction. Dropping conditional connected source coefficients can erase mixed moments (Rademacher countermodel).
+- The plaquette-source field is scaled and unflowed; SU(N), quadratic normalization and flow/smearing hypotheses remain unmatched. Literal source constants require PDF/proof extraction; no theorem is falsified by an upper-bound discrepancy.
+- Correction: the source boundary factor tends to one on the fixed-physical-volume AF diagonal; fixed-site weak-coupling nonuniformity is not an obstruction to that diagonal.
+- Atlas source rule(5.6) and its subcritical-completion assertion have now been located. A first failing numbered lemma and a critical 4D replacement theorem remain unproved.
+- All entries METHOD_SPECIFIC_OBSTRUCTION; STRUCTURAL_NO_GO_COUNT=0. No continuum edge closes. Candidate artifacts require fresh review.

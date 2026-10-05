@@ -65,3 +65,7 @@ No edge closure: JET-002 -> L1 -> conditional fixed-time multilinear extraction;
 
 ## Revision-34 bounded closeout (2026-10-04)
 YM-034 SCIENTIFICALLY_ACCEPTED_WITH_LIMITATIONS at frozen candidate 8a8ce9018624c376421fd6e5bc17e205b2dcf7fe. Reviewer /root/review_034_resume; distinct acceptor /root/accept_034. Raw receipt and acceptance scope are binding; no scientific edge closes. Prior candidate/pending paragraphs are historical. Next automatically active: YM-015F-JET-002A exact degree-one transport and plaquette-source compatibility audit; its investigation is unreviewed and cannot serve as an accepted premise. Independent numbered 3D proof-failure extraction remains active. Hourly continuation is registered.
+
+
+## YM-035 candidate continuation
+Exact vacuum-normalized conditional source transport, connected second-source defect and finite rational countermodels are candidates only. The plaquette compatibility audit corrects the physical-diagonal boundary inference; observable, coupling and SU(N) mappings remain unresolved. The 3D atlas now binds rule(5.6) and its subcritical-completion assertion; first numbered failing lemma remains pending. Next: freeze and independent review with distinct acceptance. Main JET-002 uniform RG insertion theorem remains OPEN; all scientific edge statuses unchanged.
