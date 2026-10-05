@@ -12,8 +12,8 @@ project:
   head: "f61c5a05608a5ee960d581e0854fd3c8efd23ab3"
   scientific_candidate_sha: "f61c5a05608a5ee960d581e0854fd3c8efd23ab3"
   review_bound_sha: "f61c5a05608a5ee960d581e0854fd3c8efd23ab3"
-  evidence_closeout_head: "295918e96689207269c0e1301b7fd4f939d024dd"
-  closeout_resolution: "evidence_closeout_head binds the completed YM-034 receipt/state commit; later metadata commits preserve it. Resolve current authoritative HEAD from Git."
+  evidence_closeout_head: "315fccd88197ce9a3900cb8f18ff39dcd798abc0"
+  closeout_resolution: "evidence_closeout_head binds the completed YM-035 receipt/state commit; later metadata commits preserve it. Resolve current authoritative HEAD from Git."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -33,7 +33,7 @@ coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
   last_expected_revision: 35
-  last_updated_at: "2026-10-05T01:28:42Z"
+  last_updated_at: "2026-10-05T01:30:24Z"
   active_contract: "YM-015F-JET-002B"
   frozen_candidate: "f61c5a05608a5ee960d581e0854fd3c8efd23ab3"
 
@@ -503,7 +503,7 @@ release:
 
 last_verified_checkpoint:
   sha: "f61c5a05608a5ee960d581e0854fd3c8efd23ab3"
-  timestamp: "2026-10-05T01:28:42Z"
+  timestamp: "2026-10-05T01:30:24Z"
   test_result: "430 passed"
 
 overhead:
