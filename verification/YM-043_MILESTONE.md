@@ -1,0 +1,13 @@
+# YM-043 candidate — inherited-reference and normalization audit
+
+Status CANDIDATE_PENDING_FREEZE_REVIEW_ACCEPTANCE. Accepted authority remains revision42 /75b4b69. Scientific source writer /root/writer_043; root owns state, atlas, checks and commits.
+
+Primary target remains all-sector physically normalized positive-flow insertion moments uniform along the AF trajectory. New bounded R-I187–189 source evidence locates preliminary delta linearization/C-elimination/coupling scaling with surviving A integration, Gaussian/normalization/interaction/background factors. Printed195 supplies asymmetric boundary-bond convention and pre-tree-gauge invariance. Source writer ordinary public PowerShell HTTP, host fitz text extraction and visual188(1.60); exact normalization-symbol typography and full inherited [III] definitions remain unaudited. No new source-dependent probability kernel or positivity theorem is inferred.
+
+H042 remains conditional: the original positive compact-group Wilson probability law does not identify effective-action-history references. Source audit adds actual predecessor factors rather than another generic algebra stage. Next reconstruct [III](2.21),(3.15),(3.25)/[I]Sect2 measures, constants, Jacobians and domains, then match history-by-history to(1.72)/(1.76), retaining complementary sectors and terminal normalization.
+
+Artifacts appended existing R-operation audit039, transfer registry XFER-YM-RREFERENCE-043 and append-only negative evidence. Manifest cardinality unchanged by this writer. Parallel atlas progress reserved to root. No scientific edge closes. Source word budget under200 new source-derived words across audit/transfer; no direct quotes.
+
+Invariants goal_complete=false;Clay OPEN_AND_UNSOLVED;P3/crossover OPEN;E-UV-FLOWED PARTIAL_PROGRESS;local OS/free continuum OPEN_AND_UNSOLVED;spatial-flow RP compatibility PROVED;structural no-go0;YM-016BLOCKED. Freeze/hash/tests/fresh independent review/distinct acceptance pending; no verdict fabricated.
+
+Root parallel atlas candidate: reacquired Edinburgh primary rule(5.6) text, no new visualclaim. Own ordered comparison syntax N/B/C, full-arity only, yields q=1+v2+2v3, m=q+v2+v3-1, r_D=(2-D/2)q-3. For0<kappa<1/38, negative3D template counts q1..6 are1,1,3,10,38,154,total207,M16. Root exhaustively enumerated this syntax and exact Fraction floors/sign/gap at kappa1/100. Certificate042 applies on this supplied family; actual completed family is not exhausted.4Dbinarychains lose bounded-below degree under this comparison, not a universal obstruction. XFER-YM-EQUATION-GRAMMAR-043 conditional; source completion/subtree/type/gauge/model mapping and earliest numbered4Dfailure remain OPEN.

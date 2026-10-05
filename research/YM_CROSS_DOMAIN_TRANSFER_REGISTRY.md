@@ -124,3 +124,12 @@ Source binding: R-I printed193–196, chiefly (1.76), distinguishes unchanged V_
 ## XFER-YM-NOISE-SLACK-042 — finite two-assignment certificate
 
 Root own algebra anchored to accepted041 numbered regrading/model-norm gate, not a new primary-source claim. For a supplied finite family with integer heat/noise counts m>=0,q>=1 and half-integer baseline r, let M=max(m+q) and 0<kappa<1/(2M). Bookkeeping degree a=r-(m+q)kappa and alternative b=r-q kappa/2 have matching floors/sign and strict gap (m+q/2)kappa>=kappa/2. Actual generated tree family, its exhaustion, R-consistency and theorem/model-norm mapping are unverified. Zero-noise trees need separate treatment. Status CONDITIONAL_FINITE_ALGEBRA_CERTIFICATE; no critical4D gain or Wilson insertion conclusion. Detailed root certificate in YM_3D4D_TREE_SLACK_AUDIT_039.md.
+
+
+## XFER-YM-RREFERENCE-043 — inherited-reference audit
+
+R-I187–189 links earlier delta removal to fluctuation coordinates, C-elimination and coupling scaling; normalization and boundary-action factors remain. Status PARTIAL_SOURCE_DICTIONARY. Own transfer condition: actual probability-reference identification for H042 still needs inherited integration conventions, full prefactors/Jacobians, positivity and every history/domain. Gauge invariance is insufficient. Detailed appendix in YM_015F_R_OPERATION_SOURCE_AUDIT_039.md. No uniform flowed or continuum transfer.
+
+
+## XFER-YM-EQUATION-GRAMMAR-043
+Own ordered scalar grammar anchored to primary unextended rule(5.6), not its normal extension/completion. Leaf/vertex identities give r_D=(2-D/2)q-3. For0<kappa<1/38, exactly207 ordered syntax templates with q<=6 are negative in3D; M16 permits conditional certificate042 on this supplied family. In4D binary-chain degrees under the stipulated assignment are unbounded below. Actual completed families, decorated/subtree/type/gauge mappings and analytic model norms are unmatched. Status CONDITIONAL_RESTRICTED_GRAMMAR_CERTIFICATE; no full regularity-structure, Wilson insertion or continuum conclusion.

@@ -174,3 +174,26 @@ For finitely/countably many actual histories require sum_alpha integral (rho_(al
 ### Failure record and next load-bearing obligation
 
 Positive finite disintegration from stage035 applies to the physical Wilson law with a specified Borel coarse map. It does not establish H042 for each effective-action history in (1.76). This audit has not verified the exact reference domains, all effective-action terms, positivity or finite masses needed for that identification. The marked lift is therefore conditional. Next reconstruct those actual reference variables and complementary operations, prove their source-decorated equal-integral identity, and retain all terminal/sector coefficients before seeking uniform estimates. Vacuum equivalence alone does not discharge that gate. No source operation, continuum edge or earliest numbered4Dfailure is closed; structural no-go count remains zero.
+
+
+## YM-043 candidate: inherited reference and normalization obligations
+
+Ordinary public PowerShell access obtained the same R-I PDF on 2026-10-05. Host fitz extracted printed177–195/202; writer visually inspected printed188, including the first portion of (1.60). Initial extraction failed only from stdout encoding, then succeeded with UTF-8. No source PDF was stored. Exact normalization-symbol typography and full inherited definitions are unaudited; the preliminary notification's tentative prefactor symbol is not certified.
+
+New primary-derived dictionary (under200 words total with the transfer entry; no direct quotation):
+
+| Locator | Bounded reference/factor evidence |
+|---|---|
+| 182,(1.25) | Preliminary integration retains fluctuation A variables, a Gaussian quadratic form, constrained V variables and gauge-fixing factors. |
+| 187,(1.53)–188,(1.60) | V fluctuations are logarithmic; delta constraints are linearized, removed using C, then variables are coupling-rescaled. An additional A integration remains. The displayed transformed integral retains a normalization prefactor, two Gaussian integrations, interaction terms and background action. |
+| 189,(1.60)–(1.62) | Constant E refers to [III](3.15); new boundary terms collect successive integration contributions and Wilson-action renormalization. |
+| 195,(1.81) | Boundary-intersecting bonds belong to B_0 at the Lambda boundary, but not at the other stated boundary. Measure and integrand are gauge invariant before the later tree gauge. |
+| 202,References | [III] is CMP119243–285; [I] is CMP109249–301. |
+
+### Own disposition of H042
+
+This advances the predecessor dictionary: the already-eliminated constraints in (1.76) are connected to an explicit earlier linearization/C-elimination/coupling-scaling chain, with surviving A integration and normalization/background factors. It does not make those fluctuation references probability measures. A Gaussian quadratic factor alone supplies neither its normalization nor the total mass after cutoffs and interactions; those factors cannot be erased merely because the final density is considered independent of eliminated variables.
+
+The physical compact-group Wilson probability reference established in035 is still a different identification from H042 for effective-action histories. We searched the entire extracted R-I text for Haar/measure/normalization terminology; that search did not locate an explicit unit-total-mass Haar convention for the reference of (1.76). This is a bounded search limitation, not proof the convention is absent in the source series. Gauge invariance on195 is affirmative evidence for the stated symmetry, not positivity, unit mass or source-independent disintegration. Exact prefactor/Jacobian reconstruction and inherited [III] integration conventions remain OPEN, as do each history's support, nonnegative effective density, summability and all complementary operations. The noted boundary convention prevents identifying the integrated coordinate set solely by interior sites.
+
+Next load-bearing source task: reconstruct [III](2.21),(3.15),(3.25) and [I] Sect2 measures, constants and C-elimination maps, then match them history-by-history to (1.72)/(1.76). Preserve all prefactors in the global fixed-vacuum marked identity. No actual source-decorated R operation, cutoff-uniform insertion estimate, terminal bound or continuum edge is proved; structural no-go count0.

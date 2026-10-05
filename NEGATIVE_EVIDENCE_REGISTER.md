@@ -383,3 +383,13 @@ YM-041 parallel atlas limitation (root source audit): CH16 Theorem2.33 requires 
 
 
 YM-042 parallel root atlas limitation: finite noise-slack regrading requires q>=1, half-integer baseline degrees, finite counted family and kappa<1/(2M). The supplied-family floor/sign/gap certificate does not exhaust the actual generated family or verify R-consistency/theorem/model-norm correspondence. Zero-noise case q=0,r=0,m=1 violates floor/sign matching; separate treatment is required. Alternative analytic-degree branch margins2-D/2-kappa and4-D-2kappa remain negative at D=4 for positivekappa, so this certificate is no critical repair, earliest4Dfailure or structural no-go.
+
+
+## YM-043: inherited-reference normalization gate
+
+- The actual predecessor fluctuation representation keeps Gaussian integrations, normalization and interaction/background factors. A Gaussian-looking integrand cannot silently be promoted to a probability reference; constrained-variable removal and coupling scaling require their inherited constants/Jacobians.
+- H042 is conditional: physical Wilson positivity and later gauge invariance do not establish positivity or unit reference mass of each effective-action history. Full R-I text terminology search did not identify the needed explicit Haar convention; this is a bounded audit limitation, not an assertion of source absence.
+- Source-decorated all-sector/terminal mapping and uniform estimates remain OPEN. METHOD_SPECIFIC_OBSTRUCTION; structural no-go count0; no continuum closure.
+
+
+YM-043 root atlas limitation:207-template enumeration exhausts only the expressly defined full-arity ordered scalar syntax, not the authors' normal extension/completion, decorations, type labels or all required subtrees. Under the stated4D comparison, binary chains have degrees-3-(3q-2)kappa and are unbounded below; this is a method-specific power-counting diagnostic, not a universal4D obstruction or earliest proof-local numbered failure. Actual completion/model mapping remains open; structural no-go0.

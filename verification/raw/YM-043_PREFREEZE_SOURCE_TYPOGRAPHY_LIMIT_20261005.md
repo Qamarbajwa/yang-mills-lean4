@@ -1,0 +1,3 @@
+# YM-043 prefreeze source typography limitation
+
+Scientific writer /root/writer_043 initially notified root that (1.60) showed a nonunit "2^{j sigma}" prefactor. That tentative exact glyph was subsequently withdrawn from certification; no frozen candidate or accepted state used it as a verified formula. The scientific candidate retains only the existence of a normalization prefactor, with exact typography and inherited normalization definitions explicitly unaudited. This record preserves the provisional reading rather than erasing it. It is not evidence that the author formula is wrong, or that the provisional symbol is correct. Writer independently inspected printed188; later primary review must retain its actual scope. No continuum edge closes.
