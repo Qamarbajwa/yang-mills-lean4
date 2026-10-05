@@ -344,3 +344,9 @@
 - Extracted scalar source jets must be restored by subset convolution. Vacuum-only equalities do not establish marked terminal functional identities. Signed activities require total variation and the actual reconstructed denominator.
 - All estimates for actual physically normalized flowed sources, all-sector RG and terminal law remain open. METHOD_SPECIFIC_OBSTRUCTION; STRUCTURAL_NO_GO_COUNT=0; no continuum edge closure.
 - Atlas037 locates Lemma5.17 model convergence and a strict sufficient criterion; a physical-degree4D diagnostic loses margin, but exact source-tree/convention transfer and earliest failure remain unresolved. Sufficient-criterion failure does not prove convergence impossible.
+
+
+## YM-038: source gates and constrained coordinates
+- A minimum-degree margin alone does not verify Theorem2.15: every quantified subtree/leaf test, complete-subcritical rule and uniformly compatible Gaussian inputs are required. Formal4D branch diagnostics do not identify an admissible tree in a verified4D rule.
+- Extracted small-field coordinate cutoffs, Haar/constraint factors and normalization must remain in the marked representation; no all-sector Wilson disintegration or uniform flowed-source estimate is inferred.
+- Missing source/coordinate dictionaries are pending obligations, not falsified theorems. METHOD_SPECIFIC_OBSTRUCTION; structural no-go count0 and all continuum edges remain open.

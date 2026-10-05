@@ -94,3 +94,7 @@ Conditional proposal: compact-group shifted-coupling domination on a finite sour
 
 ## XFER-YM-TERMINAL-037
 Elementary conditional change-of-measure/Holder transfer, derived in YM_015F_TERMINAL_SECTOR_NORMALIZATION_037.md. Terminal positive law and full sector decomposition must be reconstructed; density ratios, marked moment numerators, source factors and actual vacuum denominator need uniform control. Status CONDITIONAL_PROPOSAL; no actual flowed insertion estimate or continuum edge closes.
+
+
+## XFER-YM-BPHZ-GATE-038
+Source locator verified: Chandra-Hairer Theorem2.15 complete/subcritical rule, alltree/subtree inequalities and Gaussian compatibility. Conditional transfer not established; exact4D rule, source homogeneity/tree dictionary and uniform input covariance bounds missing. Model convergence is not normalized Wilson insertion control or an invariant measure theorem. Details YM_3D4D_BPHZ_HYPOTHESIS_AUDIT_038.md.

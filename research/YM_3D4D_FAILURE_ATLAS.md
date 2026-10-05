@@ -80,3 +80,7 @@ For pending rows, no failure classification is awarded until an actual approach 
 
 ## FA-001 numbered locator / stage037
 Primary author manuscript now inspected at Lemma5.17 (pp69-70) and downstream fixed-point use (p73). Its displayed minimum-degree criterion has 3D margin1/2-2kappa. The separate physical-homogeneity derivative-branch diagnostic gives4D margin-2kappa; this does not yet reconcile the printed attaining tree, reduced source degrees or full CH16 hypotheses. Detailed audit: YM_3D4D_NUMBERED_LEMMA_AUDIT_037.md. First failing numbered lemma of the whole proof remains UNESTABLISHED; no4D impossibility or structural no-go follows.
+
+
+## FA-001 cited theorem hypotheses / stage038
+Theorem2.15 of Chandra-Hairer arxiv1612.08138v5, printed18-19, directly inspected: complete/subcritical rule, alltree/subtree strict tests and compatible Gaussian approximation conditions. Detailed audit YM_3D4D_BPHZ_HYPOTHESIS_AUDIT_038.md. One numerical minimum-degree margin cannot discharge the full quantified theorem. First failing numbered lemma and actual4D replacement remain unestablished.

@@ -166,6 +166,8 @@ scientific_fingerprint:
     - research/YM_015F_BALABAN_MAP_EXTRACTION_036.md
     - research/YM_015F_TERMINAL_SECTOR_NORMALIZATION_037.md
     - research/YM_3D4D_NUMBERED_LEMMA_AUDIT_037.md
+    - research/YM_3D4D_BPHZ_HYPOTHESIS_AUDIT_038.md
+    - research/YM_015F_CONSTRAINED_COORDINATES_AUDIT_038.md
     - governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml
 unknown_policy:
   research_locations:
