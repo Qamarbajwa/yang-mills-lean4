@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 37
+revision: 38
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,9 +9,9 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "e844082c3549b137f8d20dee92f3b680daa344b0"
-  scientific_candidate_sha: "e844082c3549b137f8d20dee92f3b680daa344b0"
-  review_bound_sha: "e844082c3549b137f8d20dee92f3b680daa344b0"
+  head: "5ac15bf89bd3dd0ed183bc5ac1e8de0cfa4f5470"
+  scientific_candidate_sha: "5ac15bf89bd3dd0ed183bc5ac1e8de0cfa4f5470"
+  review_bound_sha: "5ac15bf89bd3dd0ed183bc5ac1e8de0cfa4f5470"
   evidence_closeout_head: "8280a59f1880c32100b5abb6d48d326de7374b3b"
   closeout_resolution: "evidence_closeout_head binds the completed YM-037 receipt/state commit; later metadata commits preserve it. Resolve current authoritative HEAD from Git."
   dirty: false
@@ -32,14 +32,24 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 37
-  last_updated_at: "2026-10-05T04:36:08Z"
+  last_expected_revision: 38
+  last_updated_at: "2026-10-05T08:41:11Z"
   active_contract: "YM-015F-JET-002B"
-  frozen_candidate: "e844082c3549b137f8d20dee92f3b680daa344b0"
+  frozen_candidate: "5ac15bf89bd3dd0ed183bc5ac1e8de0cfa4f5470"
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-038
+    scope_in: "Primary small-field constrained-coordinate audit and complete cited BPHZ hypothesis locator audit"
+    scope_out: "Measure H proof, all-sector uniform flowed estimates, earliest 4D failure and continuum closure"
+    dependencies: ["YM-037"]
+    risk: R3
+    writer: "/root"
+    reviewer_path: "/root/review_038"
+    acceptor: "/root/accept_038"
+    status: SCIENTIFICALLY_ACCEPTED
+    scope_limitation: "BOUNDED_PRIMARY_SOURCE_LOCATORS_CONDITIONAL_INTERPRETATION_NO_EDGE_CLOSURE"
   - id: YM-037
     scope_in: "Conditional terminal/sector normalization estimates and numbered model-convergence locator audit"
     scope_out: "Actual all-sector uniform flowed estimates, earliest failing 4D lemma and continuum closure"
@@ -426,7 +436,7 @@ hard_gates:
     description: "Independent review is bound to exact candidate SHA."
   scientific_review_pass:
     status: PASS
-    description: "Review verdict is INTEGRITY_PASS_WITH_LIMITATIONS; limitations are reflected in YM-037 bounded scope."
+    description: "Review verdict is INTEGRITY_PASS_WITH_LIMITATIONS; limitations are reflected in YM-038 bounded scope."
   negative_evidence_preserved:
     status: PASS
     description: "All negative scientific findings preserved in NEGATIVE_EVIDENCE_REGISTER.md."
@@ -435,10 +445,10 @@ hard_gates:
     description: "Prerequisites satisfied for active objective."
   scientific_tree_identity:
     status: PASS
-    description: "Closed-world scientific tree hash verified as 7489669c8481279efae665c3e4cfaa3f8cd90dc2a35b9e5f220a46c6e3959b12."
+    description: "Closed-world scientific tree hash verified as b8a04b73d928c5ec450cb544a298f84fca42434697a0b836a758204fbc2c74d9."
   state_revision_freshness:
     status: PASS
-    description: "State revision is monotonically incremented to 37."
+    description: "State revision is monotonically incremented to 38."
   no_unresolved_mandatory_blocker:
     status: PASS
     description: "Zero mandatory blockers exist."
@@ -450,7 +460,7 @@ hard_gates:
     description: "clay_problem is OPEN_AND_UNSOLVED."
   scientific_acceptance_authority_separation:
     status: PASS
-    description: "Writer /root != reviewer /root/review_037 != acceptor /root/accept_037; internal process-role separation only."
+    description: "Writer /root != reviewer /root/review_038 != acceptor /root/accept_038; internal process-role separation only."
   regression_protection_for_consequential_defects:
     status: PASS
     description: "Durable regression tests implemented across test suite."
@@ -524,8 +534,8 @@ release:
     adapter: "NONE_BY_DESIGN / NOT_APPLICABLE"
 
 last_verified_checkpoint:
-  sha: "e844082c3549b137f8d20dee92f3b680daa344b0"
-  timestamp: "2026-10-05T04:36:08Z"
+  sha: "5ac15bf89bd3dd0ed183bc5ac1e8de0cfa4f5470"
+  timestamp: "2026-10-05T08:41:11Z"
   test_result: "433 passed"
 
 overhead:
@@ -541,7 +551,7 @@ overhead:
     - "YM-015R2 (Exact RP Status Repair and Nonperturbative Flowed-Continuum Bridge) completed and scientifically accepted (RP_STATUS_REPAIRED_SPATIAL_FLOW_RP_PROVED_AND_FLOWED_TARGET_BOUNDED)"
 
 views:
-  last_validated_revision: 37
+  last_validated_revision: 38
   evidence_refs: []
 
 # Accepted bounded YM-034 cycle; hard gates bind its explicit acceptance scope.
@@ -613,3 +623,22 @@ terminal_sector_cycle:
   atlas_status: NUMBERED_LOCATOR_VERIFIED_EARLIEST_4D_FAILURE_UNESTABLISHED
   next_automatic_task: YM-015F-JET-002B
   next_bounded_obligation: "Actual constrained-measure/source-factor/terminal dictionary and marked density-ratio estimate"
+
+# Accepted bounded YM-038 source audits; analytical obligations remain open.
+constrained_source_cycle:
+  id: YM-038
+  status: SCIENTIFICALLY_ACCEPTED_WITH_LIMITATIONS
+  scientific_tree_hash: b8a04b73d928c5ec450cb544a298f84fca42434697a0b836a758204fbc2c74d9
+  primary_task: YM-015F-JET-002B
+  scientific_edge_closures: []
+  review_ref: verification/raw/YM-038_E4_RAW_20261005.md
+  review_sha256: 1364175901f40f691b16cfbb68e22f5454796cbd1c13250745a46e609f7af9c6
+  review_verdict: INTEGRITY_PASS_WITH_LIMITATIONS
+  acceptance_ref: verification/YM-038_TECHNICAL_ACCEPTANCE.md
+  milestone_ref: verification/YM-038_MILESTONE.md
+  hash_scope: LOCAL_RAW_CHECKOUT_BYTES_WITH_DECLARED_EOL_LIMITATION
+  git_blob_scientific_hash: 8022de33c840f3ebaabdffeabd4361bb19a698bc7103f042836883c8a85e1747
+  coordinate_source_status: SPECIFIED_PRIMARY_LOCATORS_INDEPENDENTLY_CORROBORATED_MEASURE_H_OPEN
+  atlas_status: CITED_THEOREM_HYPOTHESIS_GATES_VERIFIED_EARLIEST_4D_FAILURE_UNESTABLISHED
+  next_automatic_task: YM-015F-JET-002B
+  next_bounded_obligation: "Basic R-operation and coordinate predecessors; actual marked all-sector and terminal dictionary"

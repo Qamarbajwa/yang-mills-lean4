@@ -1,0 +1,11 @@
+{
+  "task": "YM-038",
+  "candidate_sha": "5ac15bf89bd3dd0ed183bc5ac1e8de0cfa4f5470",
+  "scientific_tree_hash": "b8a04b73d928c5ec450cb544a298f84fca42434697a0b836a758204fbc2c74d9",
+  "scientific_files": 156,
+  "tests": "433 passed in 15.50s",
+  "command": ".venv/Scripts/python.exe -m pytest -q",
+  "producer": "/root",
+  "scope": "Scientific inventory and regression checks; source statements require independent primary inspection, not tests",
+  "initial_failure": null
+}

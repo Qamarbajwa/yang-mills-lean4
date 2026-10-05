@@ -1,7 +1,7 @@
 # NEXT ACTION
 
 ## Current primary action
-`YM-015F ACTIVE; YM-037 ACCEPTED_WITH_LIMITATIONS; YM-015F-JET-002B ACTIVE; P3 OPEN; CLAY_PROBLEM OPEN_AND_UNSOLVED; YM-016 BLOCKED`
+`YM-015F ACTIVE; YM-038 ACCEPTED_WITH_LIMITATIONS; YM-015F-JET-002B ACTIVE; P3 OPEN; CLAY_PROBLEM OPEN_AND_UNSOLVED; YM-016 BLOCKED`
 
 ## Scope
 - `YM-011` is `SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_UV_SCOPE)`.
@@ -81,3 +81,7 @@ Frozen candidate b45f300c41f99509defa91336e0f7a894f4fda41; revision36. Exact fin
 
 ## YM-037 accepted bounded continuation
 Revision37; frozen amended candidate e844082c3549b137f8d20dee92f3b680daa344b0. Conditional terminal-functional, all-sector mixture/source-factor and normalized density-ratio estimates accepted within explicit marked absolute-integrability hypotheses;433tests pass. Primary Lemma5.17 model-convergence criterion and downstream locator independently text-verified; attaining tree/source conventions/full CH16/earliest4Dfailure remain open. Final review/root/review_037 and distinct acceptance/root/accept_037; superseded receipts preserved. Historical objectiveYM036 omission reconciled from existing accepted receipt/cycle. No scientific edge closes; goal_complete=false, Clay unsolved, no-go count0, YM-016 BLOCKED. ACTIVE YM-015F-JET-002B continues exact constrained-measure, source factors, all sectors and terminal dictionary before uniform marked bounds. Full report: verification/YM-037_MILESTONE.md.
+
+
+## YM-038 accepted bounded continuation
+Revision38; frozen candidate5ac15bf89bd3dd0ed183bc5ac1e8de0cfa4f5470. CMP109 specified cutoff/constrained-coordinate locators and Chandra-Hairer Theorem2.15 full hypothesis gates independently primary-text corroborated. Alternate threshold multiplication reading corrected to division before freeze with raw provenance preserved.433tests pass,156scientific files. Reviewer/root/review_038 and distinct acceptor/root/accept_038. MeasureH, all-sector/source/terminal representation, uniform physical flowed moments, attaining tree/full4D transfer and earliest proof failure remain open. No scientific edge closes; goal_complete=false, Clay unsolved, no-go count0, YM-016 BLOCKED. ACTIVE JET-002B next examines basic R-operation and coordinate predecessors while atlas transfer remains conditional. Full report verification/YM-038_MILESTONE.md.
