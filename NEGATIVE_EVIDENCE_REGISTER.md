@@ -438,3 +438,16 @@ All-sector/source/normalization/terminal uniform obligations remain OPEN; no con
 
 ## YM-048 bounded negative evidence
 Own positive linear maps T=(1,1),A=(2,0) agree on vacuum(1/2,1/2), but on marked(1/2,-1/2) give0 and1. Equality of one vacuum integral therefore does not establish the marked adjoint identity; source R-I vacuum formulas are not falsified. Own full finite-jet covariance needs combined source/observable parity, not a vacuum-only filter: centered Gaussian q=1 with one odd mark has coefficient1. For q=2/two repeated odd marks the fixed-vacuum mixed coefficient3 becomes2 under source normalization, despite identical parity selection. No author model/flowed observable is identified with these witnesses. Classification METHOD_SPECIFIC_OBSTRUCTION; no structural no-go, dimensional gain or scientific edge closure. Actual all-sector, normalization, terminal and cutoff-uniform source estimates remain OPEN.
+
+
+## YM-049 candidate: disjoint-domain and gauge-orbit marking limitations
+
+Primary inspection provenance and locators: research/YM_015F_R_OPERATION_SOURCE_AUDIT_039.md, YM-049. Initial PDF page-offset guess returned printed headers two pages earlier; corrected by verified headers before attribution. No new HTTP access or exact full formula transcription is claimed.
+
+METHOD_SPECIFIC_OBSTRUCTION: disjoint integration regions in R-I(1.76) do not imply independent normalized fibers. The unchanged Zh integral cannot be discarded when treating the fluctuation integral. Unmarked gauge invariance and Faddeev-Popov insertion do not identify the original flowed observable's coordinate pullback; an actual inserted gauge-orbit identity with retained boundary conventions is required. The supported cutoff replacement(1.89) cannot replace complementary branches or normalize every effective-history term. These are missing premises, not source theorem falsifications or proof of an actual Yang-Mills obstruction.
+
+No actual nontrivial history, termwise marked adjoint or cutoff-uniform terminal bound has been identified. All-sector/source/normalization/continuum obligations remain OPEN; structural no-go count0.
+
+
+## YM-049 own observability and orbit-normalization limits
+Positive T_epsilon fixes normalized vacuum but a contrast target recovered from unmarked reduced data has unique adjoint norm1/epsilon; at epsilon0 kernel loss forbids that particular descent. The same column-stochastic map exactly preserves masses of preinserted marked coefficients, so this is not an obstruction to the selected full source-jet route or Yang–Mills. Toy even projection preserves vacuum yet loses odd-source/odd-probe pairing1; no BPHZ lemma is identified with that projection. Signed orbit kernel2 delta_identity-delta_swap fixes invariant marks but amplifies noninvariant contrast by3, so massone does not imply probability contraction. Actual Faddeev-Popov measure/original physical gauge pullback are unverified; abstract invariance does not close them. Classification METHOD_SPECIFIC_OBSTRUCTION; structural no-go0, no cutoff-uniform gain or scientific edge closure.
