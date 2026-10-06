@@ -409,3 +409,11 @@ Primary [I] small-field normalization and Jacobian placement are audited in rese
 
 
 YM-045 root parity-only transfer limit: the necessary odd-noise/odd-decoration exclusion in numberedLemma5.5 is not a finiteness theorem. Own pruned evenq/even-derivative chains remain negative in4D with unbounded-below degrees for positivekappa. Passing the filter does not assert nonzero BPHZ value or actual author membership. No source theorem falsified; earliest numbered4Dfailure remains unestablished. Fixed root gain cannot repair this comparison; a quantified per-noise gain still needs actual analytic proof. METHOD_SPECIFIC_OBSTRUCTION; structural no-go0.
+
+
+## YM-046 — history identification remains incomplete
+
+Primary [III]257(2.18) suppresses S-sequence/action dependencies;267 before(3.15) retains a resummed zeta at fixed Omega and states that reused formulas act on different domain-dependent operators. Therefore identifying a history from Omega alone or equating C measures by symbol reuse is unverified. Complete admissibility/weights and mapping to R-I transformed supports are missing; no arbitrary empty/full history was invented. This is a bounded source-dictionary gap, not a source contradiction or impossibility theorem. Local normalized Gaussian evidence045 does not close H042 or all-sector marked transport. PrimaryPDF reuse and visual/text scope recorded in audit039. All continuum statuses retained, structural no-go0.
+
+
+YM-046 root numbered proof-local limit: source5.12 uses a positive order coefficient to exclude n>=6. Own stipulated4D heat2 comparison has coefficient0 and even-order necessary-count witnesses of unbounded negative degree, including marginal cubic external patterns. These counts need not be realizable symbols or nonzero characters. No source3Dlemma falsified; earliest global4Dfailure remains unestablished. Grading-specific gains are not interchangeable across unresolved initial/later assignments. METHOD_SPECIFIC_OBSTRUCTION; structural no-go0.

@@ -151,3 +151,12 @@ Source binding: [I] CMP109249–301, printed260(1.4),267–268(2.10)–(2.14); d
 
 ## XFER-YM-PARITY-GATE-045
 Source YMH Lemma4.5 -> Lemma5.5 provides a necessary invariance/parity support gate. Own polynomial-free slot-pruned comparison has evenq/even derivative unary-root binary chains with4D degree-2-(3q-1)kappa. Parity passes imply neither nonzero characters nor actual completed-rule membership. A fixed root gain cannot bound this chain sector; assumed per-noise gain gamma>3kappa is required for finite negative membership (gamma>0 at kappa0). Status CONDITIONAL_SYMMETRY_AND_COMPARISON_DIAGNOSTIC; full4D existence/model hypotheses and actual gauge cancellation gain unmatched. No Wilson/continuum transfer.
+
+
+## XFER-YM-HISTORY-LABEL-046
+
+Source binding: [III]257(2.18),267 before(3.15),270(3.25), and R-I192–194(1.71)–(1.76), detailed in YM_015F_R_OPERATION_SOURCE_AUDIT_039.md. Own transfer gate: retain hidden sums or reconstruct their elementary histories before identifying a fiber; domain-dependent C/backgrounds require actual matching. Status PARTIAL_SOURCE_DEPENDENCY_DICTIONARY. Admissibility, weights, references, source marking, rejected sectors and terminal bounds remain unmatched. No uniform flowed insertion or continuum conclusion.
+
+
+## XFER-YM-ORDER-CLASSIFICATION-046
+Numbered source5.11->5.12 motivates own necessary-count certificate: exactly two negative3D monomial patterns for0<kappa<1/14, not two trees. Stipulated heat2 dimensional balance loses positive lambda-order coefficient1/2 atD4; linear and cubic necessary-count witnesses persist. Actual author-symbol/model existence, nonzero characters, completion/subtrees and initial2-kappa regrading remain unmatched. Diagnostic order gain delta>kappa is grading-specific, not045 equivalence or an analytic estimate. Status CONDITIONAL_COUNT_CLASSIFICATION_AND_FORMAL_DIMENSION_DIAGNOSTIC; no Wilson/continuum transfer.
