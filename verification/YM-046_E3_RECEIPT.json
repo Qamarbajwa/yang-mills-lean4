@@ -1,0 +1,45 @@
+{
+  "task": "YM-046",
+  "baseline_sha": "ff98786383f23274a25bb6927cef256d3fd70ebf",
+  "candidate_sha": "33011290320ca8a58fff96c9d1b8272b53fbd522",
+  "scientific_tree_hash": "d6505956f594d0d7c3fc63a1109950372abb4ea8e3e3896d2c0323e00c3d6869",
+  "git_blob_scientific_hash": "0b7e52f624ee3abf4dc95fbef8c38c25a87e6c7e1b18b117ad429a033b4e9a13",
+  "scientific_files": 158,
+  "eol_only_differences": 15,
+  "substantive_differences": 0,
+  "tests": "433 passed in5.66s",
+  "workflow": "SERIALIZED_SHARED_WORKSPACE_PYTEST",
+  "negative_prefix": "literal Git bytes preserved",
+  "own_diagnostic": {
+    "necessary_count_checks": 8130,
+    "n_range": [
+      1,
+      60
+    ],
+    "p_range": "0..n-1",
+    "t_range": [
+      0,
+      8
+    ],
+    "k_even_representative": 0,
+    "kappas": [
+      "1/100",
+      "1/15"
+    ],
+    "negative_D3_count_patterns": [
+      [
+        2,
+        1,
+        0,
+        2
+      ],
+      [
+        4,
+        1,
+        0,
+        4
+      ]
+    ],
+    "scope": "necessary aggregate counts, not symbols/nonzero characters; general interval proof separate"
+  }
+}
