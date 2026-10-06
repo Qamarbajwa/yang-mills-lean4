@@ -1,0 +1,24 @@
+{
+  "task": "YM-047",
+  "baseline_sha": "d985fe85667f66d5809723dafa8b0febd35b709d",
+  "candidate_sha": "308059bbeb4989b949a7917b4bf15b6bec14bc64",
+  "scientific_tree_hash": "a131866b5efa5a1fa16a3e0cd80d0b209d910c30a32585355305824552513c81",
+  "git_blob_scientific_hash": "48392647d36d853c6e8f5a911eca46194ec29824fb5bb00b28b424225d00c169",
+  "scientific_files": 158,
+  "eol_only_differences": 15,
+  "substantive_differences": 0,
+  "tests": "433 passed in4.78s",
+  "workflow": "SERIALIZED_SHARED_WORKSPACE_PYTEST",
+  "negative_prefix": "literal Git bytes preserved",
+  "own_diagnostic": {
+    "nested_indicator_partition_configurations": 729,
+    "statistics": "two triples in {-1,0,1},threshold0",
+    "P_dependent_Q_universe": "[0] if |P| odd, [0,2] otherwise",
+    "single_moving_fiber_Q1": "1/2",
+    "complementary_global_Q1": 0,
+    "conditional_only_defect": "1/2",
+    "weight_mark_correction": "-1/2",
+    "involution_jet": "2x2 exact integer identities passed",
+    "scope": "own finite supports/linear operators, not actual RG source-cutoff/model correspondence"
+  }
+}
