@@ -160,3 +160,12 @@ Source binding: [III]257(2.18),267 before(3.15),270(3.25), and R-I192–194(1.71
 
 ## XFER-YM-ORDER-CLASSIFICATION-046
 Numbered source5.11->5.12 motivates own necessary-count certificate: exactly two negative3D monomial patterns for0<kappa<1/14, not two trees. Stipulated heat2 dimensional balance loses positive lambda-order coefficient1/2 atD4; linear and cubic necessary-count witnesses persist. Actual author-symbol/model existence, nonzero characters, completion/subtrees and initial2-kappa regrading remain unmatched. Diagnostic order gain delta>kappa is grading-specific, not045 equivalence or an analytic estimate. Status CONDITIONAL_COUNT_CLASSIFICATION_AND_FORMAL_DIMENSION_DIAGNOSTIC; no Wilson/continuum transfer.
+
+
+## XFER-YM-PARTITION-SUPPORT-047
+
+Source binding: [III]265(3.2)–(3.5),267 before(3.15); detailed dictionary in YM_015F_R_OPERATION_SOURCE_AUDIT_039.md. Own transfer gate: retain summed zeta/T or reconstruct their P-dependent relative-complement support before elementary source marking. Complete gauge weights, admissibility, source/map dependence, all sectors, fixed-vacuum normalization and terminal bounds remain unmatched. Status PARTIAL_SOURCE_SUPPORT_DICTIONARY; no uniform flowed insertion or continuum conclusion.
+
+
+## XFER-YM-SUPPORT-SYMMETRY-MARK-047
+Own moving-interval quotient derivative includes endpoint marks; complementary sector derivatives cancel only with matched global integrands and sector-weight marks. A moving sharp indicator lacks an L1 source derivative in the countermodel. Fixed vacuum supports are an alternative only after actual marked pushforward equality. Source-anchored Lemma4.5/5.5 vacuum parity does not imply first-jet invariance: L1J0+L0J1=L1 is an additional gate; positive Gaussian odd insertion witnesses a nonzero odd mark. Actual RG cutoff motion, flowed-observable parity, marked BPHZ/operator/source/terminal mapping and uniform bounds remain unverified. Status CONDITIONAL_SUPPORT_AND_MARKED_SYMMETRY_GATE; no positive4D gain/continuum transfer.

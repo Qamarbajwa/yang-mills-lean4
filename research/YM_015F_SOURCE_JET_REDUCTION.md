@@ -35,3 +35,34 @@ This formulation organizes the original moment target; it does not claim that ar
 Next automatic bounded task: test whether single-scale integration preserves this jet norm for a specified normalized positive measure. Conditional lemma J3: if every coefficient P_S(U) is integrable, ||E P||_r <= E ||P||_r, by the triangle inequality coefficient by coefficient. This contraction in an L1 norm is exact but does not imply RG contraction q<1, control of division by partition functions, or cutoff-uniform input integrability. It identifies input coefficient integrability and normalization as the first load-bearing requirements, rather than supplying them.
 
 DAG: YM-015F-JET-002 -> YM-015F-L1 -> conditional fixed-time multilinear extraction. The analytic-polydisc route remains an alternative with stronger hypotheses. E-UV-FLOWED stays PARTIAL_PROGRESS; all local-OS and mass-gap edges stay open.
+
+
+## YM-047 conditional moving-support and marked-symmetry gates
+
+### Moving-support derivative (own elementary theorem)
+Let real s vary near0, b(s)>0 be C1, and f(s,x),X(s,x) be C1 on a common compact neighborhood of all intervals[0,b(s)]. Real or complex values are allowed. Define Z(s)=integral_0^b(s) f(s,x)dx and N(s)=integral_0^b(s) f(s,x)X(s,x)dx. For Z(0)!=0, Q=N/Z is differentiable near0 and
+
+    Q'(0) = [integral_0^b0 (f_s(0,x)(X(0,x)-Q0)+f(0,x)X_s(0,x))dx
+              + b'(0) f(0,b0)(X(0,b0)-Q0)]/Z0.
+
+Proof: rescale x=b(s)y to the fixed interval[0,1], differentiate its C1 integrand, integrate the x derivative by parts, and apply the quotient rule. This exposes the endpoint term without treating an indicator's almost-everywhere derivative as its integral derivative. For a FIXED vacuum denominator the marked numerator N(s)/Z0 instead has derivative N'(0)/Z0, including its own endpoint term but no source-dependent denominator subtraction. These two ratios must not be interchanged.
+
+Countermodel: f=1,b=1+s,X=x gives Z=1+s,N=(1+s)^2/2,Q=(1+s)/2, hence Q'=1/2. Interior marks f_s=X_s=0 would incorrectly give0. In fact the quotient (1_[0,1+s]-1_[0,1])/s tends to0 pointwise a.e. but has L1 norm1 for every small nonzero s. It has no L1 limit: any such limit would be0 a.e., contradicting norm1. Its weak distributional limit is delta at1. Thus a moving sharp cutoff need not have an ordinary L1 source coefficient, and a nilpotent source label alone does not authorize differentiating it pointwise inside an integral.
+
+All-sector repair diagnostic: partition the fixed interval[0,2] into[0,1+s] and its complement, with f=1,X=x in both. The moving interface terms in their N derivatives are +1 and-1; Z derivatives are+1 and-1. The global normalized expectation remains1. Each separately normalized conditional mean has derivative1/2. Its source-dependent sector probability weights have derivatives+1/2,-1/2 and cancel the spurious1/2 obtained by retaining only conditional-mean marks. This exact two-sector example requires both complementary branches and their weight marks; it asserts no actual RG moving cutoff or norm bound.
+
+If the actual selected vacuum coordinate map/partition is kept source independent, these moving-support terms are absent. That is a permissible audit route ONLY after proving that it pushes the entire original fixed-vacuum marked observable through all sectors with the correct Jacobians/normalization/terminal functional. Alternatively a moving map needs its support/shape marks and their justified cancellation. Actual Bałaban cutoffs are NOT asserted to move with the source, and this theorem does not supply their required regularity or global equality.
+
+### First source jet of a symmetry (own algebra; numbered source anchor)
+The primary [YMH manuscript](https://www.pure.ed.ac.uk/ws/portalfiles/portal/435998276/YangMills.pdf), printed53 Definition4.4,54 Lemma4.5 and60 Lemma5.5, uses actual kernel/noise invariance to obtain a vacuum support filter. Root inspected public PDF text, no new visual claim. Vacuum invariance alone does not establish invariance of inserted functionals.
+
+Work in z^2=0. Let L_z=L0+zL1 be linear functionals and J_z=J0+zJ1 operators on a real/complex vector space, with J0^2=I. If L_z J_z=L_z then
+
+    L0 J0=L0,
+    L1 J0+L0 J1=L1.
+
+For J0 tau=-tau this gives 2L1(tau)=L0 J1(tau). If J_z is an involution to first order it additionally requires J0 J1+J1 J0=0; neither condition follows from vacuum invariance. With fixed J0, define D1=L1-L1 J0: on an odd tau, 2L1(tau)=D1(tau). The odd source mark vanishes only when the corresponding marked defect is zero. These are exact finite-jet coefficient identities, not existence of a source-dependent BPHZ character.
+
+Positive countermodel: a centered unit-variance Gaussian G has invariant vacuum law under G->-G. Put L_s(f)=E[e^(sG)f(G)] and Jf(G)=f(-G). Then L_s J=L_-s, not L_s for general s. L0(G)=0 but L1(G)=E[G^2]=1. Since Z(s)=e^(s^2/2), the normalized inserted mean is s and has derivative1 at0 as well. The finite jet1+zG already witnesses this coefficient; the positive exponential family confirms it is not a signed-measure artifact. A source transforming covariantly by s->-s is consistent with the nonzero odd marked coefficient. No flowed Wilson observable is identified with G and no cutoff-uniform exponential moment is imported.
+
+FA-001/YM-015F cross-track consequence: source parity and boundary cancellations must be audited at each selected jet coefficient, including transformed source labels/operator marks or fixed vacuum-map hypotheses. Source Lemmas4.5/5.5 are not falsified; actual marked covariance and all-sector/support/terminal identities remain OPEN. No positive4D gain or actual model is constructed. Classification METHOD_SPECIFIC_OBSTRUCTION for omission of required marks; structural no-go0; no continuum closure.

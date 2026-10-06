@@ -417,3 +417,11 @@ Primary [III]257(2.18) suppresses S-sequence/action dependencies;267 before(3.15
 
 
 YM-046 root numbered proof-local limit: source5.12 uses a positive order coefficient to exclude n>=6. Own stipulated4D heat2 comparison has coefficient0 and even-order necessary-count witnesses of unbounded negative degree, including marginal cubic external patterns. These counts need not be realizable symbols or nonzero characters. No source3Dlemma falsified; earliest global4Dfailure remains unestablished. Grading-specific gains are not interchangeable across unresolved initial/later assignments. METHOD_SPECIFIC_OBSTRUCTION; structural no-go0.
+
+
+## YM-047 source support limitation
+
+[III]265(3.2)–(3.3) supplies strict/complementary local cube indicators with a P-dependent Q universe. Treating P/Q as independent subsets of a common domain or treating zeta as an unweighted probability history is unsupported. Gauge-fixing factors and remaining admissibility conditions have not been reconstructed in full. R-I source dependence of these vacuum cutoff supports is unverified, not asserted. Classification METHOD_SPECIFIC_OBSTRUCTION; full marked history and continuum edges remain OPEN; structural no-go count0.
+
+
+YM-047 root mark-omission countermodels: moving sharp support has no ordinary L1 source coefficient despite pointwise a.e. derivative0; endpoint and complementary sector-weight marks are essential in the stated interval example. Vacuum parity alone does not annihilate a first source mark; a positive Gaussian insertion has L0(G)=0,L1(G)=1. These falsify only unrestricted omission rules, not source theorems. ActualRGcutoff motion/observableparity are not asserted. METHOD_SPECIFIC_OBSTRUCTION; structural no-go0; no continuum closure.
