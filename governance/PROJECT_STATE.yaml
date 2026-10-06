@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 44
+revision: 45
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "ff1cd27c05eddf8506e4d76c2581106eb2e7d748"
-  scientific_candidate_sha: "ff1cd27c05eddf8506e4d76c2581106eb2e7d748"
-  review_bound_sha: "ff1cd27c05eddf8506e4d76c2581106eb2e7d748"
-  evidence_closeout_head: "3b76a4fdf5d83455a3a431e9fc214b25676b337e"
-  closeout_resolution: "evidence_closeout_head binds the completed YM-044 receipt/state commit; later metadata commits preserve it. Resolve current authoritative HEAD from Git."
+  head: "f8aca8a0cec9237eabe2f1552e7f7bd36946a223"
+  scientific_candidate_sha: "f8aca8a0cec9237eabe2f1552e7f7bd36946a223"
+  review_bound_sha: "f8aca8a0cec9237eabe2f1552e7f7bd36946a223"
+  evidence_closeout_head: null
+  closeout_resolution: "YM-045 evidence closeout pending commit binding; authoritative HEAD resolves from Git."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,14 +32,25 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 44
-  last_updated_at: "2026-10-05T23:57:04Z"
+  last_expected_revision: 45
+  last_updated_at: "2026-10-06T00:57:57Z"
   active_contract: "YM-015F-JET-002B"
-  frozen_candidate: "ff1cd27c05eddf8506e4d76c2581106eb2e7d748"
+  frozen_candidate: "f8aca8a0cec9237eabe2f1552e7f7bd36946a223"
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-045
+    scope_in: "Gaussian/background/Jacobian source dictionary and numbered symmetry gate with own chain arithmetic"
+    scope_out: "Actual all-sector marked identity, completed model mapping, uniform insertion and continuum closure"
+    dependencies: ["YM-044"]
+    risk: R3
+    writer: "/root/writer_045"
+    atlas_writer_and_coordinator: "/root"
+    reviewer_path: "/root/review_045"
+    acceptor: "/root/accept_045"
+    status: SCIENTIFICALLY_ACCEPTED
+    scope_limitation: "BOUNDED_SOURCE_CONDITIONAL_PARITY_AND_COMPARISON_NO_EDGE_CLOSURE"
   - id: YM-044
     scope_in: "Inherited conditional/residual integration placement and own slot-pruned grammar certificate"
     scope_out: "Actual positive history reference, completed rule mapping, uniform insertion and continuum closure"
@@ -501,7 +512,7 @@ hard_gates:
     description: "Independent review is bound to exact candidate SHA."
   scientific_review_pass:
     status: PASS
-    description: "Review verdict is INTEGRITY_PASS_WITH_LIMITATIONS; limitations are reflected in YM-044 bounded scope."
+    description: "Review verdict is INTEGRITY_PASS_WITH_LIMITATIONS; limitations are reflected in YM-045 bounded scope."
   negative_evidence_preserved:
     status: PASS
     description: "All negative scientific findings preserved in NEGATIVE_EVIDENCE_REGISTER.md."
@@ -510,10 +521,10 @@ hard_gates:
     description: "Accepted upstream scope supports the bounded conditional algebra only; actual analytical insertion prerequisites remain open."
   scientific_tree_identity:
     status: PASS
-    description: "Closed-world scientific tree hash verified as 15da6019607160be1d05ff5bfd79e8a0139e82dbe90d2e7d1f9b1b9db810cc2f."
+    description: "Closed-world scientific tree hash verified as 89148f97f345ba6e18c547913d98e4d0e1e3c740bd9058d745cc99fcfc3c7980."
   state_revision_freshness:
     status: PASS
-    description: "State revision is monotonically incremented to 44."
+    description: "State revision is monotonically incremented to 45."
   no_unresolved_mandatory_blocker:
     status: PASS
     description: "Zero mandatory blockers exist."
@@ -525,7 +536,7 @@ hard_gates:
     description: "clay_problem is OPEN_AND_UNSOLVED."
   scientific_acceptance_authority_separation:
     status: PASS
-    description: "Writer /root/writer_044 and atlas writer/coordinator /root != reviewer /root/review_044 != acceptor /root/accept_044; internal execution-context separation only."
+    description: "Writer /root/writer_045 and atlas writer/coordinator /root != reviewer /root/review_045 != acceptor /root/accept_045; internal execution-context separation only."
   regression_protection_for_consequential_defects:
     status: PASS
     description: "Durable regression tests implemented across test suite."
@@ -599,8 +610,8 @@ release:
     adapter: "NONE_BY_DESIGN / NOT_APPLICABLE"
 
 last_verified_checkpoint:
-  sha: "ff1cd27c05eddf8506e4d76c2581106eb2e7d748"
-  timestamp: "2026-10-05T23:57:04Z"
+  sha: "f8aca8a0cec9237eabe2f1552e7f7bd36946a223"
+  timestamp: "2026-10-06T00:57:57Z"
   test_result: "433 passed"
 
 overhead:
@@ -616,7 +627,7 @@ overhead:
     - "YM-015R2 (Exact RP Status Repair and Nonperturbative Flowed-Continuum Bridge) completed and scientifically accepted (RP_STATUS_REPAIRED_SPATIAL_FLOW_RP_PROVED_AND_FLOWED_TARGET_BOUNDED)"
 
 views:
-  last_validated_revision: 44
+  last_validated_revision: 45
   evidence_refs: []
 
 # Accepted bounded YM-034 cycle; hard gates bind its explicit acceptance scope.
@@ -834,3 +845,24 @@ inherited_split_pruning_cycle:
   verification_workflow: SERIALIZED_SHARED_WORKSPACE_PYTEST
   next_automatic_task: YM-015F-JET-002B
   next_bounded_obligation: "Reconstruct [I]Sect2 measures/C/Jacobians, then actual history fixed-vacuum marked identity including residual operations/terminal law; independently audit completed-rule correspondence"
+
+# Accepted bounded YM-045; normalization/model/continuum prerequisites remain open.
+gaussian_reference_parity_cycle:
+  id: YM-045
+  status: SCIENTIFICALLY_ACCEPTED_WITH_LIMITATIONS
+  scientific_candidate_sha: f8aca8a0cec9237eabe2f1552e7f7bd36946a223
+  scientific_tree_hash: 89148f97f345ba6e18c547913d98e4d0e1e3c740bd9058d745cc99fcfc3c7980
+  git_blob_scientific_hash: 8f5f18f9d3413ee4c9337dfc5cc3ca313af1bb96fdbec45bd34f1dff12858206
+  hash_scope: LOCAL_RAW_CHECKOUT_BYTES_WITH_DECLARED_EOL_LIMITATION
+  primary_task: YM-015F-JET-002B
+  scientific_edge_closures: []
+  review_ref: verification/raw/YM-045_E4_RAW_20261006.md
+  review_sha256: 2f7bcbe0a66fead0460908f3ad12985c75a585cd9e0864d9d859a8f9d87b8b7e
+  review_verdict: INTEGRITY_PASS_WITH_LIMITATIONS
+  acceptance_ref: verification/YM-045_TECHNICAL_ACCEPTANCE.md
+  milestone_ref: verification/YM-045_MILESTONE.md
+  source_status: GAUSSIAN_REFERENCE_LOCATED_ALL_SECTOR_HISTORY_MATCH_OPEN
+  atlas_status: NUMBERED_PARITY_GATE_CONDITIONAL_ACTUAL_COMPLETION_AND_MODEL_OPEN
+  verification_workflow: SERIALIZED_SHARED_WORKSPACE_PYTEST
+  next_automatic_task: YM-015F-JET-002B
+  next_bounded_obligation: "Match one actual admissible R-I(1.76) history to [III](3.15)/(3.25) with retained normalizations, bond factors, nonlinear Jacobian/residual variables, then degree-one marked identity; independent actual gauge/model correspondence"

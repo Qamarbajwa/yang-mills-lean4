@@ -1,0 +1,28 @@
+{
+  "task": "YM-045",
+  "baseline_sha": "ac4968781d41fbcd756b646e512d793dd0883ca0",
+  "candidate_sha": "f8aca8a0cec9237eabe2f1552e7f7bd36946a223",
+  "scientific_tree_hash": "89148f97f345ba6e18c547913d98e4d0e1e3c740bd9058d745cc99fcfc3c7980",
+  "git_blob_scientific_hash": "8f5f18f9d3413ee4c9337dfc5cc3ca313af1bb96fdbec45bd34f1dff12858206",
+  "scientific_files": 158,
+  "eol_only_differences": 15,
+  "substantive_differences": 0,
+  "tests": "433 passed in4.80s",
+  "workflow": "SERIALIZED_SHARED_WORKSPACE_PYTEST",
+  "negative_prefix": "literal Git bytes preserved",
+  "own_diagnostic": {
+    "constructed_chains_even_q_2_to_100": 50,
+    "rational_checks": 100,
+    "kappas": [
+      "1/100",
+      "1/39"
+    ],
+    "q_v2_d_m": "q,q,q,2q-1",
+    "D3_negative_chain_parameters": [
+      2,
+      4
+    ],
+    "D4_degree": "-2-(3q-1)kappa",
+    "scope": "own pruned syntax; parity necessary only; general proof separate"
+  }
+}
