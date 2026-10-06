@@ -425,3 +425,16 @@ YM-046 root numbered proof-local limit: source5.12 uses a positive order coeffic
 
 
 YM-047 root mark-omission countermodels: moving sharp support has no ordinary L1 source coefficient despite pointwise a.e. derivative0; endpoint and complementary sector-weight marks are essential in the stated interval example. Vacuum parity alone does not annihilate a first source mark; a positive Gaussian insertion has L0(G)=0,L1(G)=1. These falsify only unrestricted omission rules, not source theorems. ActualRGcutoff motion/observableparity are not asserted. METHOD_SPECIFIC_OBSTRUCTION; structural no-go0; no continuum closure.
+
+
+## YM-048 candidate: gauge/support and vacuum-equivalence limitations
+
+Primary-source locators and provenance: research/YM_015F_R_OPERATION_SOURCE_AUDIT_039.md, YM-048. Host-Python extraction succeeded after repository-venv fitz absence; no new network acquisition or complete prefactor typography claimed. The exact S/R boundary/complement formulas remain unaudited as formulas despite the certified prose restrictions. No complete nontrivial admissible R-I history is instantiated.
+
+METHOD_SPECIFIC_OBSTRUCTION: vacuum-integral equivalence after term-dependent Lambda integration does not itself establish an arbitrary observable insertion identity. An inserted or adjoint transport must be derived with the actual measures, domains and retained T/zeta components. This is a missing premise, not falsification of the source's vacuum equivalence, a proof of actual flowed parity, or a structural Yang-Mills no-go. Likewise gauge-averaging normalization does not identify every effective-history fiber with a probability measure, and one cutoff's invariance under an excluded-coordinate linearization does not establish invariance of all cutoffs or source insertions.
+
+All-sector/source/normalization/terminal uniform obligations remain OPEN; no continuum edge closes; structural no-go count0.
+
+
+## YM-048 bounded negative evidence
+Own positive linear maps T=(1,1),A=(2,0) agree on vacuum(1/2,1/2), but on marked(1/2,-1/2) give0 and1. Equality of one vacuum integral therefore does not establish the marked adjoint identity; source R-I vacuum formulas are not falsified. Own full finite-jet covariance needs combined source/observable parity, not a vacuum-only filter: centered Gaussian q=1 with one odd mark has coefficient1. For q=2/two repeated odd marks the fixed-vacuum mixed coefficient3 becomes2 under source normalization, despite identical parity selection. No author model/flowed observable is identified with these witnesses. Classification METHOD_SPECIFIC_OBSTRUCTION; no structural no-go, dimensional gain or scientific edge closure. Actual all-sector, normalization, terminal and cutoff-uniform source estimates remain OPEN.

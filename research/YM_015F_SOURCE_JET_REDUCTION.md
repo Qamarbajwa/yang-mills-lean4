@@ -66,3 +66,24 @@ For J0 tau=-tau this gives 2L1(tau)=L0 J1(tau). If J_z is an involution to first
 Positive countermodel: a centered unit-variance Gaussian G has invariant vacuum law under G->-G. Put L_s(f)=E[e^(sG)f(G)] and Jf(G)=f(-G). Then L_s J=L_-s, not L_s for general s. L0(G)=0 but L1(G)=E[G^2]=1. Since Z(s)=e^(s^2/2), the normalized inserted mean is s and has derivative1 at0 as well. The finite jet1+zG already witnesses this coefficient; the positive exponential family confirms it is not a signed-measure artifact. A source transforming covariantly by s->-s is consistent with the nonzero odd marked coefficient. No flowed Wilson observable is identified with G and no cutoff-uniform exponential moment is imported.
 
 FA-001/YM-015F cross-track consequence: source parity and boundary cancellations must be audited at each selected jet coefficient, including transformed source labels/operator marks or fixed vacuum-map hypotheses. Source Lemmas4.5/5.5 are not falsified; actual marked covariance and all-sector/support/terminal identities remain OPEN. No positive4D gain or actual model is constructed. Classification METHOD_SPECIFIC_OBSTRUCTION for omission of required marks; structural no-go0; no continuum closure.
+
+
+## YM-048: full subset source covariance rather than a vacuum-only parity filter
+
+Own conditional finite-jet theorem. Let (Omega,mu) be a probability space, J a measurable measure-preserving involution, tau(Jx)=eta*tau(x), and X_i(Jx)=epsilon_i*X_i(x), with eta,epsilon_i in{+1,-1}. Assume every tau*product_(i in S)X_i and every product_(i in S)X_i is absolutely integrable. For distinct commuting labels z_i^2=0 put
+
+    N_tau(z)=integral tau(x) product_i(1+z_i X_i(x))dmu(x),
+    Z(z)=integral product_i(1+z_i X_i(x))dmu(x).
+
+The substitution x->Jx gives N_tau(epsilon*z)=eta*N_tau(z) and Z(epsilon*z)=Z(z). Since Z_empty=1, it is invertible in the finite algebra; multiplication by its finite inverse yields the same covariance for M_tau=N_tau/Z. Therefore both unnormalized and source-normalized coefficients satisfy
+
+    (epsilon_S-eta)[z_S]N_tau = (epsilon_S-eta)[z_S]M_tau = 0,
+    epsilon_S=product_(i in S)epsilon_i.
+
+This is a selection rule for the combined observable/source parity, not the vacuum parity of tau alone. Even source products cannot couple to odd tau under these hypotheses; odd source products can. Repeated physical X_i may use distinct nilpotent labels. No ordinary exponential moments are required for this finite theorem. For the original fixed-vacuum target N_tau, division by Z(z) changes the marked observable; source-normalized M_tau is included only to show that the covariance rule survives the correct denominator convolution, not to authorize changing the target.
+
+Positive own witness: mu is a centered unit Gaussian, tau=G^q, X_i=G, JG=-G, q>=0. Then [z_S]N_tau=E G^(q+|S|), equal0 for odd q+|S| and (q+|S|-1)!! for even positive q+|S|, with E G^0=1. Integration by parts against the Gaussian density gives m_(n+2)=(n+1)m_n and odd moments vanish by symmetry; all polynomial products are integrable. For q=1 and two labels, N_tau=z1+z2, Z=1+z1*z2 and M_tau=z1+z2. For q=2, N_tau=1+3z1*z2, M_tau=1+2z1*z2. The source-normalized mixed coefficient differs even though both obey the same selection rule. Hence parity covariance cannot replace exact source normalization or mark transport.
+
+Primary numbered anchor, text rechecked from the public YMH manuscript on2026-10-06, printed54 Lemma4.5 ->60 Lemma5.5 ->65 Lemma5.12: the vacuum BPHZ filter uses invariant kernels/noise and later counting invokes it. Our theorem assumes an actual positive invariant probability law with identified insertion parities, not a BPHZ character; no marked author character/model is constructed or identified with these moments. Reference: https://www.pure.ed.ac.uk/ws/portalfiles/portal/435998276/YangMills.pdf . Root made no new visual-inspection claim.
+
+Before using that numbered vacuum filter on any actual source jet, audit all source-label transformation signs and the corresponding coefficient action, or prove full marked invariance. Neither an even total parity nor a finite nonzero Gaussian moment certifies tree membership, BPHZ character nonvanishing, actual flowed parity or a completed4D model. No dimension-dependent gain or new homogeneity assignment follows. This extends the047 first-jet gate to all subsets, while actual Yang–Mills source/model and terminal adjoint identities remain OPEN.

@@ -169,3 +169,16 @@ Source binding: [III]265(3.2)–(3.5),267 before(3.15); detailed dictionary in Y
 
 ## XFER-YM-SUPPORT-SYMMETRY-MARK-047
 Own moving-interval quotient derivative includes endpoint marks; complementary sector derivatives cancel only with matched global integrands and sector-weight marks. A moving sharp indicator lacks an L1 source derivative in the countermodel. Fixed vacuum supports are an alternative only after actual marked pushforward equality. Source-anchored Lemma4.5/5.5 vacuum parity does not imply first-jet invariance: L1J0+L0J1=L1 is an additional gate; positive Gaussian odd insertion witnesses a nonzero odd mark. Actual RG cutoff motion, flowed-observable parity, marked BPHZ/operator/source/terminal mapping and uniform bounds remain unverified. Status CONDITIONAL_SUPPORT_AND_MARKED_SYMMETRY_GATE; no positive4D gain/continuum transfer.
+
+
+## XFER-YM-ADMISSIBILITY-INTEGRAL-EQUIVALENCE-048
+
+Source-bound discovery transfer: primary [III]247-249,254-258 and R-I179-180,193-194; inspection/provenance in research/YM_015F_R_OPERATION_SOURCE_AUDIT_039.md. Source paraphrases are confined to that audit table; this entry records our own transfer obligations.
+
+Candidate: retain normalized gauge averaging with its cutoff/weight; keep constraint-bond exclusions and actual S/R geometry inside the summed T/zeta operation. Differentiate neither an invented independent-label history nor a purported unit-mass effective fiber. The R-I vacuum-integral equivalence requires a separate inserted/adjoint identity at each term's actual eliminated domain, including retained complementary operators. A source-independent physical insertion by itself does not prove invariance under the reconstructed eliminated-coordinate operation.
+
+Unmatched hypotheses: exact original and transformed measures, full admissible histories and hidden sums, gauge Jacobians/normalization, marked insertion pullback/adjoint, all-sector summability, terminal functional and cutoff-uniform norm. Transfer status: PARTIAL_SOURCE_DICTIONARY / CONDITIONAL_INTERFACE_ONLY. No actual Wilson flowed identity or continuum closure; structural no-go count0.
+
+
+## XFER-YM-ADJOINT-SOURCE-COVARIANCE-048
+Source mechanisms: backward adjoint residual accounting in finite linear transport (own CDC-048 theorem), and joint observable/source symmetry selection (own finite-jet theorem). Source-bound triggers: R-I integrated-equivalence transition193/194 and YMH numbered4.5->5.5->5.12, separately audited. Target: selected fixed-vacuum physical flowed jet in actual all-sector RG and marked symmetry completion in FA-001. Verified mapping: abstract finite coefficient telescope and positive Gaussian selection examples only. Required hypotheses: actual source-independent bounded integration maps or separately completed source jets, exact backward terminal functional, absolute integrability/all sectors and correct source signs/normalization. Allowed conclusion: conditional completion criteria and finite countermodels to vacuum-only substitution/filter reuse. Unresolved: actual operators/domains/Jacobians, positive reference/model correspondence, physical mark parity, terminal norm/residual summability and cutoff uniformity. No continuum transfer or positive4D gain.
