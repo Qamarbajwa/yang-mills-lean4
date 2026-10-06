@@ -88,3 +88,7 @@ Theorem2.15 of Chandra-Hairer arxiv1612.08138v5, printed18-19, directly inspecte
 
 ## FA-001 attaining trees and slack dictionary / stage039
 Visually inspected printed70 drawings; independent fulltext pp63-64 gives later heat-gain2 counting, while p59 assigns2-kappa. Detailed two-assignment audit YM_3D4D_TREE_SLACK_AUDIT_039.md. Both displayed3D margins are positive for smallkappa; both4D diagnostics lose strictmargin. A globalreset/regrading/modelnorm dictionary and earliest numbered failure remain unresolved. No authortheorem falsification or structural no-go.
+
+
+## FA-001 numbered symmetry filter / YM-045
+Source YMH Lemma4.5 p54 -> Lemma5.5 p60, decoration definition(4.3)p53 and parity set(5.9)p60. Under invariant kernel/noise law the odd-decoration/noise exclusion has a dimension-independent algebraic core; actual4D existence is unproved. Own044 pruned comparison has even-noise/even-derivative unary-root binary chains:3D a=(1/2-3kappa)q-2+kappa, negative q2/4;4D a=-2-(3q-1)kappa, unbounded below. Fixed root gain cannot repair this comparison; assumed per-noise gain requires gamma>3kappa (gamma>0 at kappa0) to make this chain sector finite. Parity passes are necessary only, not nonzero-character or author-membership claims. METHOD_SPECIFIC_OBSTRUCTION; candidate repair search: quantified gauge cancellations or improved analytic degrees plus full completed-rule/model correspondence. YM-015F receives no estimate from parity alone. Earliest numbered4Dfailure remains UNESTABLISHED, structural no-go0. Detailed proof and limits in TREE_SLACK_AUDIT_039.

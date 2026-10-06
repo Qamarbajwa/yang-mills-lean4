@@ -142,3 +142,12 @@ Primary source-bound dictionary: [III] CMP119243–285, printed258(2.21),267–2
 
 ## XFER-YM-SLOT-PRUNING-044
 Own comparison grammar allows finite subsets of B/C slots; retained derivative edges only. Noise-free trees have nonnegative degrees. In3D for0<kappa<1/38 negative membership equals q>=1,r<=0, giving total vertices<=11 and M<=16; certificate042 applies to this supplied finite family. Actual normal-extension/completion, decorations, polynomial nodes and model hypotheses remain unmatched. Status CONDITIONAL_PRUNED_GRAMMAR_CERTIFICATE; no positive4D gain, Wilson insertion or continuum conclusion.
+
+
+## XFER-YM-GAUSSIAN-REFERENCE-045
+
+Source binding: [I] CMP109249–301, printed260(1.4),267–268(2.10)–(2.14); detailed dictionary in YM_015F_R_OPERATION_SOURCE_AUDIT_039.md. Own transfer condition: distinguish the reference Gaussian from its cutoff/interaction density, retained background normalization and coordinate Jacobian. Mapping these objects to every R-I history, source-dependent maps/support, signed complements, absolute integrability, global fixed-vacuum denominator and terminal law remains unmatched. Status PARTIAL_SOURCE_DICTIONARY; no uniform flowed insertion or continuum conclusion.
+
+
+## XFER-YM-PARITY-GATE-045
+Source YMH Lemma4.5 -> Lemma5.5 provides a necessary invariance/parity support gate. Own polynomial-free slot-pruned comparison has evenq/even derivative unary-root binary chains with4D degree-2-(3q-1)kappa. Parity passes imply neither nonzero characters nor actual completed-rule membership. A fixed root gain cannot bound this chain sector; assumed per-noise gain gamma>3kappa is required for finite negative membership (gamma>0 at kappa0). Status CONDITIONAL_SYMMETRY_AND_COMPARISON_DIAGNOSTIC; full4D existence/model hypotheses and actual gauge cancellation gain unmatched. No Wilson/continuum transfer.

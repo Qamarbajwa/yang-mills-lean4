@@ -401,3 +401,11 @@ Primary [III] inherited operator dictionary places conditional Lambda integratio
 
 
 YM-044 root atlas boundary: slot pruning extends only the own scalar comparison. Empty roots have degree0 and strict assignment gap0; excluded from negative certificate, not ignored. Admissible full-arity4D binary chains persist and remain unbounded below under the stipulated assignment; pruning does not restore a positive margin. No actual author completion or earliest numbered4Dfailure established. METHOD_SPECIFIC_OBSTRUCTION; structural no-go0.
+
+
+## YM-045 — normalized Gaussian does not identify the all-sector history reference
+
+Primary [I] small-field normalization and Jacobian placement are audited in research/YM_015F_R_OPERATION_SOURCE_AUDIT_039.md. Own inference: a normalized reference Gaussian does not make its cutoff/interaction-weighted integral unit mass; a unit-background normalization does not establish fiber normalization at every exterior background. Exact history/domain/boundary matching to [III]/R-I, positivity or signed absolute control, source mapping and terminal uniformity remain unverified. This is a missing-premise record, not a source theorem counterexample. Web-tool PDF retrieval failed; ordinary public PowerShell acquisition succeeded, and no denial content was used as evidence. Full formulas and the tentative043 prefactor glyph remain uncertified. METHOD_SPECIFIC_OBSTRUCTION; structural no-go0; no continuum edge closure.
+
+
+YM-045 root parity-only transfer limit: the necessary odd-noise/odd-decoration exclusion in numberedLemma5.5 is not a finiteness theorem. Own pruned evenq/even-derivative chains remain negative in4D with unbounded-below degrees for positivekappa. Passing the filter does not assert nonzero BPHZ value or actual author membership. No source theorem falsified; earliest numbered4Dfailure remains unestablished. Fixed root gain cannot repair this comparison; a quantified per-noise gain still needs actual analytic proof. METHOD_SPECIFIC_OBSTRUCTION; structural no-go0.

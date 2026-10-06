@@ -110,3 +110,24 @@ For that family, q<=6 and delta+e<=3-q/2. In particular delta<=2 forq1/2, <=1 fo
 At4D r_4=-3+delta+e. The full-arity differentiated binary chains (delta=e=0) remain admissible for arbitraryq and retain a_4=-3-(3q-2)kappa. Adding slot pruning therefore cannot remove the unbounded-below diagnostic for THIS stipulated assignment. This is METHOD_SPECIFIC_OBSTRUCTION only; no universal no-go, actual4D model result or earliest numbered author proof failure follows.
 
 This advances the lower-arity arithmetic boundary beyond043 but leaves actual normal-extension/completion correspondence, decorated subtrees, polynomial nodes, type labels, gauge cancellations and analytic/cumulant/kernel hypotheses OPEN. No continuum edge closes; structural no-go0.
+
+
+## YM-045 numbered symmetry gate: Lemma5.5 and surviving comparison chains
+
+Primary [Edinburgh YMH manuscript](https://www.pure.ed.ac.uk/ws/portalfiles/portal/435998276/YangMills.pdf), printed53(4.3),54 Lemma4.5,59 kernel symmetries,60(5.9)/Lemma5.5. Root inspected public PDF text, not new visual drawings. Bounded primary paraphrase: (4.3) counts both edge and polynomial decorations. Lemma4.5 assumes invariant kernels and invariant smooth-noise law and transfers invariance to the canonical lift/BPHZ character. Lemma5.5 uses spatial inversion and noise sign reversal to exclude odd total spatial decoration and odd noise-edge counts; values outside the negative root-polynomial-free family vanish by convention. This is a necessary support filter, not a sufficient condition for nonzero coefficients.
+
+Own algebraic reconstruction: let L be a real/complex linear functional, S spatial inversion and J noise sign reversal on a symbol tau, with S tau=(-1)^n tau and J tau=(-1)^q tau. If L S=L and L J=L, then L(tau)=0 when n or q is odd, since scalar2 is invertible. This implication has no dimension-dependent positive exponent. In any dimension it is conditional on actual existence of L and both involutions, their symbol action, and invariance. Source Lemma4.5's hypotheses cannot be obtained merely by formal substitution D=4. No4D BPHZ/model construction is supplied.
+
+Apply ONLY this necessary algebraic filter to our polynomial-free slot-pruned comparison from044, taking n=d, the number of retained derivative slots (all chosen in one spatial direction). This is not identification with author symbols, where n includes polynomial labels and all derivatives. For the full-arity own equation trees, q+d=1+2v2+2v3 is odd: the two necessary parity tests cannot both pass. That observation does not prove absence of actual counterterms; the authors' completed/decorated/coherent family is different and remains unmapped.
+
+There is nevertheless an infinite family within our pruned syntax passing both tests. Let q>=2 be EVEN. Build a full binary solution subtree with q noise leaves, v2=q-1 derivatives, and wrap it in an equation-root unary B retaining ONLY its differentiated slot. Now v2=q,v3=0,delta=1,e=0,d=q and m=2q-1. The root counts as an equation vertex and has no extra outer heat edge. Thus both q and d are even and
+
+    r_D=(2-D/2)q-2,
+    a_D=(2-D/2)q-2-(3q-1)kappa,
+    b_D=(2-D/2)q-2-q*kappa/2.
+
+In3D with0<kappa<1/38, this family is negative exactly at q=2,4; q>=6 gives a_3>=1-17kappa>0 and b_3>0. These are TWO count parameters for the chain construction, not a total count of all parity-compatible trees. In4D a_4=-2-(3q-1)kappa tends to minus infinity and b_4=-2-q*kappa/2 does too. At kappa=0 both are constant -2 and infinitely many syntactic chains still have negative degree. Passing parity supplies no nonzero BPHZ value and no actual completed-rule membership; it only shows that these two necessary count tests cannot exclude all bad chains of this comparison.
+
+Quantified repair diagnostic: adding any fixed root gain g leaves a_4+g unbounded below at kappa>0. Adding an assumed per-noise gain gamma*q gives (-2+kappa)+(gamma-3kappa)q; for evenq>=2 it leaves only finitely many negative members iff gamma>3kappa (at equality, constant-2+kappa remains negative). At kappa=0 the analogous condition is gamma>0. This is an arithmetic requirement for this chain family only, not an identified analytic gain theorem. Even such a gain would not discharge subtrees, rule consistency, model cumulants or cutoff-uniform Wilson insertion estimates.
+
+Classification METHOD_SPECIFIC_OBSTRUCTION: parity-only transfer cannot establish a finite negative sector in the stipulated4D pruned comparison. Source Lemma5.5 is NOT falsified and is not designated the first failed4Dlemma; its invariance reasoning has a conditional dimension-independent core. Actual4D existence/analytic hypotheses and earliest numbered proof failure remain OPEN; structural no-go0; no continuum edge closes.
