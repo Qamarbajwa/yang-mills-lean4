@@ -1,0 +1,27 @@
+{
+  "task": "YM-049",
+  "baseline_revision": 48,
+  "baseline_sha": "92974959749a638765657d5694a79b6b1b90951b",
+  "candidate_sha": "6f47627e03b18b08f841e009d0079cdba29d0e1b",
+  "scientific_tree_hash": "4093b67c5d94fcd74f96ffdb5e66616b1caf7353066b58b38445a1c3a54fd9e4",
+  "git_blob_scientific_hash": "f64801fad5e7472340e3548bff67da93d6683abc183f7ef73220956fed3b943d",
+  "scientific_files": 158,
+  "eol_only_differences": 15,
+  "substantive_differences": 0,
+  "tests": "433 passed in17.95s",
+  "workflow": "SERIALIZED_SHARED_WORKSPACE_PYTEST",
+  "negative_prefix": "literal Git bytes preserved",
+  "own_diagnostic": {
+    "descent_configuration": "all2x2matrices in{-1,0,1},allrows in{-1,0,1}^2,exact rational nullspace and transposed-system certificates",
+    "descent_cases": 729,
+    "lift_certificates": 529,
+    "kernel_witnesses": 200,
+    "epsilon_configuration": "epsilon1/n,n1..16; each9inputvectors in{-1,0,1}^2",
+    "epsilon_lift_norm_cases": 16,
+    "forward_marked_mass_and_l1_cases": 144,
+    "projection_pairing": "1 versus0",
+    "signed_orbit_witness": "massone,TV3,invariant(3,3)fixed,contrast(1,-1)amplified3",
+    "scope": "own finite matrices and abstract orbit action; no actual RG/gauge/model or uniform estimates"
+  },
+  "source_provenance_correction": "Writer initial guessed R-I PDF index printed-177 returned headers2pages earlier; corrected to printed-175 before relying on locators. Actual194/196 inspected. No new acquisition or full prefactor/bond typography claimed."
+}
