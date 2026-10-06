@@ -1,0 +1,96 @@
+{
+  "task": "YM-048",
+  "baseline_revision": 47,
+  "baseline_sha": "151e26c57a0c7269950ae965dcfb023466800566",
+  "candidate_sha": "cc5c7343b67a3e3d6e2b2868e956525c7d75c29e",
+  "scientific_tree_hash": "286c301d1fb6222a8460d4a33967b885642ee8546c362961caeb1fe23912afdc",
+  "git_blob_scientific_hash": "5718916bf5d6d2d9bcb59d94dcab52ff238f517ba56862ddee5d2a208ccac9d8",
+  "scientific_files": 158,
+  "eol_only_differences": 15,
+  "substantive_differences": 0,
+  "tests": "433 passed in5.15s",
+  "workflow": "SERIALIZED_SHARED_WORKSPACE_PYTEST",
+  "negative_prefix": "literal Git bytes preserved",
+  "own_diagnostic": {
+    "adjoint_telescope_and_dual_bound_cases": 256,
+    "gaussian_subset_selection_coefficients": 2304,
+    "gaussian_configuration": "four labels with insertion powers1 or2;16 exponent assignments; q0..8;16 subsets",
+    "vacuum_only_substitution": "0 versus1 on marked input",
+    "source_normalized_mixed_coefficient": "3 versus2",
+    "scope": "own finite linear maps and Gaussian polynomials, no actual RG/model/uniform bound",
+    "adjoint_configuration": {
+      "M": 2,
+      "E0_E1_E2": "R^2 with l1 vector norm",
+      "matrix_choices": [
+        [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            -1
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      ],
+      "approximate_vector_choices": [
+        [
+          "1/2",
+          "-1/2"
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "initial_vector": [
+        "1/2",
+        "-1/2"
+      ],
+      "terminal_row": [
+        2,
+        -1
+      ],
+      "count": "4^4=256"
+    }
+  },
+  "pre_review_correction": "Initial freeze e8ddaddffcf9f901ec6233ac247e5b2a0c43c8d2 passed433tests4.82s but diff--check found CRLF insertion trailing whitespace in test allowlist. Newline normalized in later immutable commit cc5c734; science hash unchanged; final433tests5.15s. History preserved."
+}
