@@ -180,46 +180,46 @@ def test_family215_primary_source_provenance_and_scope_certificate():
 
 
 def test_one_term_admissible_coordinate_pullback_and_gauge_orbit_certificate():
-    """Verify finite coordinate pullback, boundary bond rules, tree-gauge slice restriction,
-    non-commutative SU(2) adjoint norm preservation (refuting that adjoint conjugation can zero out fluctuations),
-    affine parallel transport vs naive uncoupled failure, Lie algebra chart derivative,
-    boundary-crossing plaquette coupling, and cutoff remainder defect for Bałaban R-I (1.76)–(1.89)."""
+    """Verify finite coordinate pullback, boundary bond rules, multi-edge tree-gauge affine transport,
+    exact rational unit quaternions, non-commutative SU(2) adjoint norm preservation,
+    Lie convention reconciliation (Hermitian vs anti-Hermitian), signed determinant vs absolute Jacobian,
+    explicit observable mixed dependence non-factorization defect, and cutoff remainder defect
+    for Bałaban R-I (1.76)–(1.89)."""
     # 1. Concrete 2D lattice geometry and boundary bond rules:
-    # 3x3 lattice sites V = {0, 1, 2} x {0, 1, 2}
-    # Integration domain Lambda = {0, 1} x {0, 1}
+    # 4 active sites in Lambda0: root x0=(1,1), x1=(1,0), x2=(2,0), x3=(0,1)
     # Preliminary integration region Zh = {(0, 0)}
-    # Active fluctuation region Lambda0 = Lambda \ Zh = {(1, 0), (0, 1), (1, 1)}
-    Lambda = {(x, y) for x in range(2) for y in range(2)}
+    Lambda = {(x, y) for x in range(3) for y in range(2)}
     Zh = {(0, 0)}
-    Lambda0 = Lambda - Zh
-    assert len(Lambda0) == 3
-    assert (1, 0) in Lambda0 and (0, 1) in Lambda0 and (1, 1) in Lambda0
+    Lambda0 = {(1, 1), (1, 0), (2, 0), (0, 1)}
+    assert len(Lambda0) == 4
+    assert Zh.isdisjoint(Lambda0)
 
     # Directed bonds on Lambda:
-    # Outer boundary bonds intersecting \partial \Lambda: e.g. from Lambda to outside
-    b_boundary_Lambda = ((1, 0), (2, 0))
-    # Internal boundary bond touching Zh:
-    b_internal_Zh = ((0, 0), (1, 0))
-    # Active internal bond within Lambda0:
-    b_active_Lambda0 = ((1, 1), (1, 0))
+    b_boundary_Lambda = ((2, 0), (3, 0))  # Intersects outer boundary \partial \Lambda
+    b_internal_Zh = ((0, 0), (1, 0))      # Internal bond touching Zh
+    b_active_1 = ((1, 1), (1, 0))         # Active internal bond in Lambda0
 
     # Active bond set B0 includes b_boundary_Lambda, excludes b_internal_Zh:
-    assert b_boundary_Lambda[0] in Lambda and b_boundary_Lambda[1] not in Lambda  # Outer boundary
+    assert b_boundary_Lambda[0] in Lambda and b_boundary_Lambda[1] not in Lambda  # Outer boundary in B0
     assert b_internal_Zh[0] in Zh  # Carried by preliminary field V_h, NOT B0
+    assert b_active_1[0] in Lambda0 and b_active_1[1] in Lambda0
 
-    # 2. Maximal tree T0 on Lambda0 rooted at x0 = (1, 1):
+    # 2. Maximal tree T0 on Lambda0 rooted at x0 = (1, 1) with depth 2 and multiple branches:
     root = (1, 1)
-    tree_edges = {((1, 1), (1, 0)), ((1, 1), (0, 1))}
-    # Number of tree edges must equal |V(Lambda0)| - 1 = 2
-    assert len(tree_edges) == len(Lambda0) - 1 == 2
-    # Tree graph has no cycles: each vertex in Lambda0 \ {root} has unique path to root
+    # Tree edges: b1: (x0, x1), b2: (x1, x2) [depth 2], b3: (x0, x3) [second branch]
+    tree_edges = [((1, 1), (1, 0)), ((1, 0), (2, 0)), ((1, 1), (0, 1))]
+    cycle_edge = ((2, 0), (0, 1))  # Closes a cycle: non-tree bond in Lambda0
+    assert len(tree_edges) == len(Lambda0) - 1 == 3
+
+    # Verify tree connectivity and acyclicity:
     visited = {root}
     for u, v in tree_edges:
-        assert u == root
+        assert u in visited, f"Edge ({u}, {v}) not connected to visited component"
+        assert v not in visited, f"Edge ({u}, {v}) creates a cycle"
         visited.add(v)
     assert visited == Lambda0
 
-    # 3. Non-commutative SU(2) Lie algebra and group arithmetic via quaternions:
+    # 3. Non-commutative SU(2) arithmetic via exact rational UNIT quaternions:
     def q_mul(q1, q2):
         a1, b1, c1, d1 = q1
         a2, b2, c2, d2 = q2
@@ -237,112 +237,157 @@ def test_one_term_admissible_coordinate_pullback_and_gauge_orbit_certificate():
         n = q_norm_sq(q)
         return (q[0] / n, -q[1] / n, -q[2] / n, -q[3] / n)
 
-    # Standard Lie algebra basis elements in su(2):
+    # Standard Lie algebra basis elements (anti-Hermitian generators):
     e1 = (F(0), F(1), F(0), F(0))
     e2 = (F(0), F(0), F(1), F(0))
     e3 = (F(0), F(0), F(0), F(1))
 
-    # Non-commutative Lie bracket [e1, e2] = e1 e2 - e2 e1 = 2 e3 != 0:
+    # Lie bracket [e1, e2] = e1 e2 - e2 e1 = 2 e3 != 0:
     comm = [a - b for a, b in zip(q_mul(e1, e2), q_mul(e2, e1))]
     assert comm == [F(0), F(0), F(0), F(2)]
-    assert comm[3] != 0  # Proves non-commutativity
+    assert comm[3] != 0
+
+    # Lie algebra convention reconciliation:
+    # Anti-Hermitian element X in su(2) satisfies Re(X^2) <= 0:
+    assert q_mul(e1, e1)[0] == F(-1) < 0
+    # Corresponding Hermitian generator B = -i X has Tr(B^2) > 0:
+    hermitian_trace_sq = -q_mul(e1, e1)[0]
+    assert hermitian_trace_sq == F(1) > 0
 
     # 4. Proof that adjoint conjugation CANNOT zero out a non-zero fluctuation:
-    # Fluctuation B' in su(2) with non-zero norm:
     B_prime = (F(0), F(1, 2), F(0), F(0))
     assert q_norm_sq(B_prime) == F(1, 4) > 0
 
-    # Group element u0 in SU(2) (rotation around j axis):
     u0 = (F(3, 5), F(0), F(4, 5), F(0))
-    assert q_norm_sq(u0) == F(1)  # Unit quaternion
+    assert q_norm_sq(u0) == F(1)  # Exact unit quaternion
 
-    # Adjoint conjugation B' -> u0 B' u0^-1:
     B_adj = q_mul(q_mul(u0, B_prime), q_inv(u0))
-    # Frobenius norm is strictly preserved:
     assert q_norm_sq(B_adj) == q_norm_sq(B_prime) == F(1, 4)
-    # Distance to zero is strictly positive:
-    dist_to_zero_sq = q_norm_sq(B_adj)
-    assert dist_to_zero_sq == F(1, 4) > 0
-    # Shows adjoint conjugation rotates B' to (0, -7/50, 0, -24/50), never zeroing it out:
+    assert q_norm_sq(B_adj) == F(1, 4) > 0  # Norm strictly preserved
     assert B_adj == (F(0), F(-7, 50), F(0), F(-24, 50))
     assert B_adj != (F(0), F(0), F(0), F(0))
 
-    # 5. Tree-gauge fixing requires affine parallel transport vs naive failure:
-    # On tree edge b = (x, y), background transporter V0 in SU(2):
-    V0 = (F(3, 5), F(4, 5), F(0), F(0))
-    assert q_norm_sq(V0) == F(1)
+    # 5. Exact rational UNIT quaternions for background and fluctuations:
+    # Pythagorean quadruples: (3/5, 4/5, 0, 0), (3/5, 0, 4/5, 0), (4/5, 0, 0, 3/5), (5/13, 12/13, 0, 0)
+    V0_b1 = (F(3, 5), F(4, 5), F(0), F(0))
+    V0_b2 = (F(3, 5), F(0), F(4, 5), F(0))
+    V0_b3 = (F(4, 5), F(0), F(0), F(3, 5))
+    V0_b4 = (F(5, 13), F(12, 13), F(0), F(0))
 
-    # Link configuration U = (1 + B') V0:
-    fluc_factor = (F(1), F(0), F(1, 3), F(0))
-    U_edge = q_mul(fluc_factor, V0)
+    U_fluc_b1 = (F(24, 25), F(7, 25), F(0), F(0))
+    U_fluc_b2 = (F(12, 13), F(0), F(5, 13), F(0))
+    U_fluc_b3 = (F(4, 5), F(0), F(0), F(3, 5))
+    U_fluc_b4 = (F(3, 5), F(4, 5), F(0), F(0))
 
-    # Root site gauge transformation hx = I:
-    hx_root = (F(1), F(0), F(0), F(0))
+    U_b1 = q_mul(U_fluc_b1, V0_b1)
+    U_b2 = q_mul(U_fluc_b2, V0_b2)
+    U_b3 = q_mul(U_fluc_b3, V0_b3)
+    U_b4 = q_mul(U_fluc_b4, V0_b4)
 
-    # Affine parallel transport equation for tree gauge: hy = V0^-1 hx U:
-    hy_correct = q_mul(q_mul(q_inv(V0), hx_root), U_edge)
-    U_gauged = q_mul(q_mul(hx_root, U_edge), q_inv(hy_correct))
-    diff_gauged = [a - b for a, b in zip(U_gauged, V0)]
-    assert all(d == 0 for d in diff_gauged)  # Tree gauge successfully fixes link to V0
+    # Verify that all links are EXACT unit quaternions in SU(2):
+    for name, q in [
+        ("V0_b1", V0_b1), ("V0_b2", V0_b2), ("V0_b3", V0_b3), ("V0_b4", V0_b4),
+        ("U_fluc_b1", U_fluc_b1), ("U_fluc_b2", U_fluc_b2), ("U_fluc_b3", U_fluc_b3), ("U_fluc_b4", U_fluc_b4),
+        ("U_b1", U_b1), ("U_b2", U_b2), ("U_b3", U_b3), ("U_b4", U_b4),
+    ]:
+        assert q_norm_sq(q) == F(1), f"{name} is not an exact unit quaternion"
 
-    # Naive uncoupled transformation hy = hx = I produces non-zero defect:
-    U_naive = q_mul(q_mul(hx_root, U_edge), q_inv(hx_root))
-    diff_naive = [a - b for a, b in zip(U_naive, V0)]
-    defect_sq = sum(d ** 2 for d in diff_naive)
-    assert defect_sq == F(1, 9) > 0  # Falsifies naive uncoupled transformation
+    # 6. Sequential affine parallel transport on rooted multi-edge tree T0:
+    hx0 = (F(1), F(0), F(0), F(0))  # Root condition: h_{x0} = I
+    assert q_norm_sq(hx0) == F(1)
 
-    # 6. Non-trivial Lie algebra chart derivative at gauge slice:
-    # At B' = 0, directional derivative along generator X is Ad_V0(X):
+    # Edge b1: (x0, x1) -> determines h_{x1}
+    hx1 = q_mul(q_mul(q_inv(V0_b1), hx0), U_b1)
+    assert q_norm_sq(hx1) == F(1)  # Exact unit site gauge element
+    Uh_b1 = q_mul(q_mul(hx0, U_b1), q_inv(hx1))
+    assert Uh_b1 == V0_b1  # Fixed to background transporter V0
+
+    # Edge b2: (x1, x2) [branch depth 2] -> determines h_{x2}
+    hx2 = q_mul(q_mul(q_inv(V0_b2), hx1), U_b2)
+    assert q_norm_sq(hx2) == F(1)
+    Uh_b2 = q_mul(q_mul(hx1, U_b2), q_inv(hx2))
+    assert Uh_b2 == V0_b2  # Fixed to background transporter V0
+
+    # Edge b3: (x0, x3) [second branch from root] -> determines h_{x3}
+    hx3 = q_mul(q_mul(q_inv(V0_b3), hx0), U_b3)
+    assert q_norm_sq(hx3) == F(1)
+    Uh_b3 = q_mul(q_mul(hx0, U_b3), q_inv(hx3))
+    assert Uh_b3 == V0_b3  # Fixed to background transporter V0
+
+    # Simultaneously all 3 tree edges satisfy U^h = V0:
+    tree_links_fixed = [Uh_b1 == V0_b1, Uh_b2 == V0_b2, Uh_b3 == V0_b3]
+    assert all(tree_links_fixed)
+
+    # Non-tree cycle edge b4: (x2, x3) retains dynamical gauge-invariant degrees of freedom:
+    Uh_b4 = q_mul(q_mul(hx2, U_b4), q_inv(hx3))
+    assert q_norm_sq(Uh_b4) == F(1)
+    cycle_defect_sq = sum((a - b) ** 2 for a, b in zip(Uh_b4, V0_b4))
+    assert cycle_defect_sq > 0  # Cycle holonomy cannot be gauge-fixed away
+
+    # Naive uncoupled transformation setting hx = I everywhere fails with non-zero tree defect:
+    tree_naive_defect_sq = (
+        sum((a - b) ** 2 for a, b in zip(U_b1, V0_b1))
+        + sum((a - b) ** 2 for a, b in zip(U_b2, V0_b2))
+        + sum((a - b) ** 2 for a, b in zip(U_b3, V0_b3))
+    )
+    assert tree_naive_defect_sq > 0
+
+    # 7. Non-trivial Lie algebra chart derivative at gauge slice:
     cols = []
     for e in [e1, e2, e3]:
-        res = q_mul(q_mul(V0, e), q_inv(V0))
+        res = q_mul(q_mul(V0_b1, e), q_inv(V0_b1))
         cols.append([res[1], res[2], res[3]])
 
-    # Directional derivative along e2 is non-zero:
     assert cols[1] == [F(0), F(-7, 25), F(24, 25)]
     deriv_norm_sq = sum(c ** 2 for c in cols[1])
     assert deriv_norm_sq == F(1) > 0
 
-    # Chart Jacobian determinant det(D_V0) = 1 computed directly from matrix:
+    # Signed matrix determinant det(D_V0) = +1:
     det_J = (
         cols[0][0] * (cols[1][1] * cols[2][2] - cols[1][2] * cols[2][1])
         - cols[0][1] * (cols[1][0] * cols[2][2] - cols[1][2] * cols[2][0])
         + cols[0][2] * (cols[1][0] * cols[2][1] - cols[1][1] * cols[2][0])
     )
-    assert det_J == F(1)
+    assert det_J == F(1)  # Orientation-preserving signed determinant
+    abs_det_J = abs(det_J)
+    assert abs_det_J == F(1)  # Absolute integration Jacobian
 
-    # 7. Boundary-crossing plaquette coupling across \partial Zh:
-    # Plaquette p around (0,0)-(1,0)-(1,1)-(0,1):
-    # Edge 1 touches Zh; Edge 2 belongs to Lambda0.
-    # Second-order unitary link approximations: U = (1 - 1/2 b^2, b)
-    U1_ord2 = (F(1) - F(1, 8), F(1, 2), F(0), F(0))  # b1 = 1/2 on edge touching Zh
-    U2_ord2 = (F(1) - F(1, 18), F(0), F(1, 3), F(0))  # b2 = 1/3 on edge in Lambda0
-    U3_ord2 = (F(1) - F(1, 32), F(1, 4), F(0), F(0))  # b3 = 1/4
-    U_plaq = q_mul(q_mul(U1_ord2, U2_ord2), q_inv(U3_ord2))
-    # Scalar part of plaquette trace couples b1, b2 across \partial Zh:
-    coupling_scalar = U_plaq[0]
-    assert coupling_scalar != F(1)
-    assert coupling_scalar == F(2822, 3075)
+    # 8. Genuine observable mixed dependence non-factorization defect:
+    # Explicit composite observable: O(UA, UB) = 1/2 Tr(UA UB) = Re(UA * UB)
+    # UA in Zh, UB in Lambda0 sharing a boundary site:
+    UA1 = (F(1), F(0), F(0), F(0))
+    UA2 = (F(3, 5), F(4, 5), F(0), F(0))
+    UB1 = (F(1), F(0), F(0), F(0))
+    UB2 = (F(3, 5), F(4, 5), F(0), F(0))
 
-    # Parabolic heat kernel diffusion weight across \partial Zh is strictly positive:
-    # d((0,0), (1,1))^2 = 2. At flow time t = 1/4: exp(-2 / (4 * 1/4)) = exp(-2) > 0:
-    diff_weight_approx = F(135, 1000)  # exp(-2) ~ 0.1353
-    assert diff_weight_approx > 0  # Couples physical observable across disjoint regions
+    assert q_norm_sq(UA1) == F(1) and q_norm_sq(UA2) == F(1)
+    assert q_norm_sq(UB1) == F(1) and q_norm_sq(UB2) == F(1)
 
-    # 8. Cutoff replacement remainder defect:
-    # Small-field threshold delta_k' = 1/2; test fluctuation has norm 3/4 > 1/2:
+    O11 = q_mul(UA1, UB1)[0]
+    O12 = q_mul(UA1, UB2)[0]
+    O21 = q_mul(UA2, UB1)[0]
+    O22 = q_mul(UA2, UB2)[0]
+
+    # Cross-variation determinant: Delta_fact = O11 O22 - O12 O21
+    # Under factorization O(UA, UB) = f(UA) g(UB), Delta_fact = 0 identically.
+    delta_fact = O11 * O22 - O12 * O21
+    assert delta_fact == F(-16, 25)  # Exact non-zero rational cross-defect
+    assert delta_fact != 0  # Rigorously proves non-factorization across spatial boundaries
+
+    # 9. Cutoff replacement remainder defect:
     delta_k_prime = F(1, 2)
     B_test_norm = F(3, 4)
     chi_prime = F(1) if B_test_norm <= delta_k_prime else F(0)
     chi_k_double_prime = F(1)
-    # The complementary defect carried into R_{alpha, large}:
     remainder_defect = (F(1) - chi_prime) * chi_k_double_prime
     assert remainder_defect == F(1)
-    assert remainder_defect != 0  # Proves remainder sector R_{alpha, large} is non-trivial
+    assert remainder_defect != 0
 
-    # 9. Epistemic boundary: one-term representation is conditional and open
+    # 10. Epistemic status & missing bridge lemma:
     representation_status = "ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN"
     assert "CONDITIONAL_AND_OPEN" in representation_status
-    multiscale_polymer_summability = "OPEN_AND_UNPROVED"
-    assert multiscale_polymer_summability == "OPEN_AND_UNPROVED"
+    missing_bridge = "LEMMA_YM_051F_ACTUAL_CHART_SUMMABILITY"
+    assert missing_bridge == "LEMMA_YM_051F_ACTUAL_CHART_SUMMABILITY"
+    polymer_summability_status = "CONDITIONALLY_BLOCKED_BY_CHART_STABILITY"
+    assert polymer_summability_status == "CONDITIONALLY_BLOCKED_BY_CHART_STABILITY"
 

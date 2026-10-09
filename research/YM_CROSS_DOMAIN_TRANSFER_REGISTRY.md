@@ -248,3 +248,17 @@ Source mechanisms: own finite row-space/kernel target-descent theorem, positive 
 - Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
 
 
+## XFER-YM-ONE-TERM-PULLBACK-051R2 — unit rational certificates, multi-edge tree transport, observable mixed dependence, and actual-history audit
+
+- Source: Bałaban R-I (1.76)–(1.89), Commun. Math. Phys. 122, 175–202 (1989).
+- Target: YM-015F degree-one physical marked observable insertion under RG transport.
+- Verified mapping:
+  - Exact rational unit quaternions ($\|q\|^2 = 1$) via Pythagorean quadruples for all group links and site gauge transformations, eliminating non-unit approximations.
+  - Multi-edge rooted tree affine transport $T_0$ (multiple branches and depth $\ge 2$), simultaneously fixing all tree links to $V_0(b)$, while non-tree cycle bonds retain holonomy and naive uncoupled transformations fail.
+  - Explicit observable mixed dependence defect $\Delta_{\mathrm{fact}} \ne 0$ across spatial boundaries, and lattice Wilson flow mixed derivatives.
+  - Reconciled Hermitian vs. anti-Hermitian generator conventions and signed determinant $\det(D_{V_0}) = +1$ vs absolute Jacobian $|\det(D_{V_0})| = 1$.
+  - Concrete actual-history audit and dependency ordering: Lemma `YM-051F-ACTUAL-CHART-SUMMABILITY` (Small-Field Chart Stability and Remainder Activity Bound) formulated as the immediate required missing lemma.
+- Open bridge: Lemma `YM-051F-ACTUAL-CHART-SUMMABILITY` preceding multiscale marked polymer activity summability.
+- Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
+
+

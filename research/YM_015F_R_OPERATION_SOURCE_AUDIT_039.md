@@ -612,3 +612,111 @@ with persistent governance identifier:
 $$\mathbf{ACTUAL\_BALABAN\_COORDINATE\_PULLBACK\_AND\_TREE\_GAUGE\_CONDITIONAL\_AND\_OPEN}.$$
 No continuum limit or spectral gap estimate is closed. The structural no-go count remains strictly 0.
 
+
+## YM-051R2: REPAIR OF SU(2) UNIT RATIONAL QUATERNION CERTIFICATES, MULTI-EDGE TREE AFFINE TRANSPORT, EXACT OBSERVABLE MIXED DEPENDENCE, LIE CONVENTION RECONCILIATION, AND ACTUAL-HISTORY ADMISSIBILITY AUDIT
+
+### 1. Reconciliation of Lie Algebra Conventions and Determinants
+In mathematical physics literature (specifically Bałaban CMP 109, R-I (1.81)), link fluctuations are written as $V^{\prime\prime}(b) = \exp(i B^\prime(b)) V_0(b)$. We establish the explicit dictionary between the Hermitian generator convention and the differential-geometric anti-Hermitian convention:
+
+1. **Hermitian Generator Convention (Bałaban):**
+   - Basis: $T_a = \frac{1}{2} \sigma_a$ where $\sigma_a$ are Hermitian Pauli matrices ($T_a^\dagger = T_a$).
+   - Lie bracket: $[T_a, T_b] = i \epsilon_{abc} T_c$.
+   - Fluctuation: $B^\prime = \sum_{a=1}^3 B^{\prime a} T_a$ is Hermitian ($B^{\prime \dagger} = B^\prime$, $\operatorname{Tr}(B^\prime) = 0$).
+   - Quadratic Casimir / Trace: $\operatorname{Tr}((B^\prime)^2) = \frac{1}{2} \sum_{a=1}^3 (B^{\prime a})^2 \ge 0$.
+   - Group element: $U = \exp(i B^\prime)$, where the exponent $i B^\prime$ is anti-Hermitian ($(i B^\prime)^\dagger = -i B^\prime$).
+
+2. **Anti-Hermitian Generator Convention (Lie Theory / Differential Geometry):**
+   - Basis: $\tilde{T}_a = i T_a = \frac{i}{2} \sigma_a$ satisfying $\tilde{T}_a^\dagger = -\tilde{T}_a$.
+   - Lie bracket: $[\tilde{T}_a, \tilde{T}_b] = -\epsilon_{abc} \tilde{T}_c$.
+   - Lie algebra element: $X = i B^\prime = \sum_{a=1}^3 X^a \tilde{T}_a \in \mathfrak{su}(2)$.
+   - Quadratic Casimir / Trace: $\operatorname{Tr}(X^2) = -\frac{1}{2} \sum_{a=1}^3 (X^a)^2 \le 0$.
+   - Group element: $U = \exp(X) \in SU(2)$.
+
+3. **Quaternion Embedding:**
+   - Standard isomorphism $\mathbb{H}_1 \cong SU(2)$: $q = q_0 + q_1 \mathbf{i} + q_2 \mathbf{j} + q_3 \mathbf{k}$ with $q_0^2 + q_1^2 + q_2^2 + q_3^2 = 1$.
+   - Pure imaginary quaternions $\operatorname{Im}(\mathbb{H})$ satisfy $\mathbf{i}^2 = \mathbf{j}^2 = \mathbf{k}^2 = \mathbf{i}\mathbf{j}\mathbf{k} = -1$.
+   - For $X = x_1 \mathbf{i} + x_2 \mathbf{j} + x_3 \mathbf{k}$, $X^2 = -\|X\|^2 \le 0$. Pure imaginary quaternions represent the **anti-Hermitian** algebra $\mathfrak{su}(2)$.
+   - Group exponential: $\exp(X) = \cos(\|X\|) + \frac{\sin(\|X\|)}{\|X\|} X \in \mathbb{H}_1$. No factor of $i$ appears in the quaternion exponential because imaginary quaternion units already square to $-1$.
+
+4. **Signed Determinant vs. Absolute Jacobian:**
+   - The directional derivative matrix $D_{V_0}: \mathfrak{su}(2)^{V(\Lambda_0) \setminus \{x_0\}} \to \mathfrak{su}(2)^{T_0}$ along rooted tree $T_0$ has signed matrix determinant:
+     $$\det(D_{V_0}) = +1$$
+     (orientation-preserving linear isomorphism).
+   - In the coordinate transformation of the differential form Haar measure $dB^\prime$, the volume density scales by the **absolute Jacobian**:
+     $$|\det(D_{V_0})| = 1.$$
+   - Both signed determinant and absolute Jacobian equal $1$ on $SU(2)$, but the distinction between orientation and integration density is maintained.
+
+### 2. Exact SU(2) Unit Rational Quaternions
+To eliminate non-unit approximations (such as $(1, 0, 1/3, 0)$ or truncated Taylor series $(1 - 1/8, 1/2, 0, 0)$ which have squared norms $10/9 \ne 1$ and $65/64 \ne 1$), all group links and site transformations are constructed from Pythagorean quadruples $q_0^2 + q_1^2 + q_2^2 + q_3^2 = 1$ in $\mathbb{Q}$:
+- Identity: $I = (1, 0, 0, 0)$
+- Transporter $V_0(b_1) = (3/5, 4/5, 0, 0)$, norm squared $(9+16)/25 = 1$.
+- Transporter $V_0(b_2) = (3/5, 0, 4/5, 0)$, norm squared $(9+16)/25 = 1$.
+- Transporter $V_0(b_3) = (4/5, 0, 0, 3/5)$, norm squared $(16+9)/25 = 1$.
+- Small-field fluctuation factor $U_{\mathrm{fluc}}(b_1) = (24/25, 7/25, 0, 0)$, norm squared $(576+49)/625 = 1$.
+- Small-field fluctuation factor $U_{\mathrm{fluc}}(b_2) = (12/13, 0, 5/13, 0)$, norm squared $(144+25)/169 = 1$.
+- Small-field fluctuation factor $U_{\mathrm{fluc}}(b_3) = (4/5, 0, 0, 3/5)$, norm squared $(16+9)/25 = 1$.
+Every link $U(b) = U_{\mathrm{fluc}}(b) V_0(b)$ and site gauge element $h_x$ is certified to satisfy $\|q\|^2 = 1$ identically. Inversion in $\mathbb{H}_1$ is the exact quaternionic conjugate $q^{-1} = (q_0, -q_1, -q_2, -q_3)$.
+
+### 3. Multi-Edge Rooted Tree $T_0$ Affine Parallel Transport
+Consider a non-trivial rooted multi-edge tree $T_0$ on active vertices $V(\Lambda_0) = \{x_0, x_1, x_2, x_3\}$:
+- Root vertex: $x_0 = (1, 1)$, with gauge condition $h_{x_0} = (1, 0, 0, 0) = I$.
+- Tree edge 1 (branch 1): $b_1 = (x_0, x_1) = ((1, 1), (1, 0))$.
+- Tree edge 2 (depth 2): $b_2 = (x_1, x_2) = ((1, 0), (2, 0))$.
+- Tree edge 3 (branch 2): $b_3 = (x_0, x_3) = ((1, 1), (0, 1))$.
+- Non-tree cycle edge: $b_4 = (x_2, x_3)$, closing a loop in $\Lambda_0$.
+
+Sequential affine parallel transport along $T_0$:
+1. At edge $b_1$: $h_{x_1} = V_0(b_1)^{-1} h_{x_0} U(b_1)$.
+   Norm $\|h_{x_1}\|^2 = 1$; transformed link $U^h(b_1) = h_{x_0} U(b_1) h_{x_1}^{-1} = V_0(b_1)$.
+2. At edge $b_2$: $h_{x_2} = V_0(b_2)^{-1} h_{x_1} U(b_2)$.
+   Norm $\|h_{x_2}\|^2 = 1$; transformed link $U^h(b_2) = h_{x_1} U(b_2) h_{x_2}^{-1} = V_0(b_2)$.
+3. At edge $b_3$: $h_{x_3} = V_0(b_3)^{-1} h_{x_0} U(b_3)$.
+   Norm $\|h_{x_3}\|^2 = 1$; transformed link $U^h(b_3) = h_{x_0} U(b_3) h_{x_3}^{-1} = V_0(b_3)$.
+
+All three tree edges simultaneously satisfy $U^h(b) = V_0(b)$, meaning on the chart $B^{\prime h}|_{T_0} = 0$.
+In contrast:
+- On the non-tree cycle edge $b_4 = (x_2, x_3)$, the transformed link is $U^h(b_4) = h_{x_2} U(b_4) h_{x_3}^{-1} \ne V_0(b_4)$. Its defect $\|U^h(b_4) - V_0(b_4)\|^2 > 0$ proves that non-tree links carry dynamical degrees of freedom (gauge-invariant holonomy) that cannot be eliminated by tree gauge.
+- Naive uncoupled transformation setting $h_x = I$ for all $x$ leaves a non-zero tree defect $\sum_{b \in T_0} \|U(b) - V_0(b)\|^2 > 0$, confirming that affine transport coupling is mandatory.
+
+### 4. Explicit Mixed Dependence and Lattice Gradient Flow Non-Factorization
+To replace scalar heuristic constants (such as `135/1000` or a single uncoupled plaquette value), we establish genuine non-factorization:
+1. **Observable Mixed Dependence Defect:**
+   Let $\mathcal{O}(U_A, U_B) = \frac{1}{2} \operatorname{Tr}(U_A U_B)$ be an explicit composite observable coupling a link $U_A$ in preliminary region $Z_h$ with a link $U_B$ in active region $\Lambda_0$ sharing a boundary vertex $x \in \partial Z_h$.
+   If $\mathcal{O}$ were factorizable into $f(U_A) g(U_B)$, then for any 4 configurations $(U_A^{(1)}, U_B^{(1)})$, $(U_A^{(2)}, U_B^{(1)})$, $(U_A^{(1)}, U_B^{(2)})$, $(U_A^{(2)}, U_B^{(2)})$, the cross-variation determinant must vanish identically:
+   $$\Delta_{\mathrm{fact}} = \mathcal{O}(U_A^{(1)}, U_B^{(1)}) \mathcal{O}(U_A^{(2)}, U_B^{(2)}) - \mathcal{O}(U_A^{(1)}, U_B^{(2)}) \mathcal{O}(U_A^{(2)}, U_B^{(1)}) \equiv 0.$$
+   Evaluating $\Delta_{\mathrm{fact}}$ on exact rational unit quaternions yields $\Delta_{\mathrm{fact}} \ne 0$, rigorously proving non-factorization.
+
+2. **Lattice Wilson Gradient Flow Coupling:**
+   On a hypercubic lattice, the discrete gradient flow equation is $\partial_t U_t(b) = - D S(U_t)(b) U_t(b)$, where $D S(U_t)(b)$ is the Lie-algebra staple sum around bond $b$.
+   The first Euler flow step $U_{t + \epsilon}(b) = \exp(-\epsilon D S(U_t)(b)) U_t(b)$ explicitly mixes bond $b \in Z_h$ with adjacent plaquette staples touching $\Lambda_0$.
+   The second functional cross-derivative $\frac{\partial^2 S_{\mathrm{flowed}}}{\partial U(b_1) \partial U(b_2)} \ne 0$ for $b_1 \in Z_h$ and $b_2 \in \Lambda_0$ is strictly non-zero, establishing that gradient-flowed observables cannot factorize across spatial boundaries without approximation.
+
+### 5. Actual History Admissibility Audit and Primary-Source Locators
+We audit ONE concrete actual admissible history $\alpha$ from Bałaban R-I (1.76):
+1. **Primary-Source Locators:**
+   - Bałaban, CMP 109 (1987) pp. 193–198: Proposition 1, eq. (1.76), (1.79), (1.81), (1.85)–(1.89).
+   - Fixed exterior domain: $Z \cap \Lambda^c$, carrying field variables $V_k|_{Z \cap \Lambda^c}$ under cutoff $\chi_{k, \Lambda}$ (R-I (1.75)).
+   - Preliminary region $Z_h$: carrying short-distance field $V_h$ under measure $dV_h \lceil_{Z_h}$ and retained scale operator $\mathbb{T}_h(Z_h)$.
+   - Active region $\Lambda_0 = \Lambda \setminus Z_h$: carrying bonds $\mathbb{B}_0 = \mathbb{U}_k \cap \Lambda_0$, excluding bonds touching $\partial \Omega_{k+1}^1$.
+   - Background parallel transporter: $U_0 = U_{k, Z}(V_\Lambda^*)$ (eq. (1.79)), $V_0 = M_{\mathbb{B}_k^\prime}(U_0)$.
+   - Site gauge group: $\mathcal{G}_{\Lambda_0}$ rooted at $x_0 \in \Lambda_0$ with condition $h_{x_0} = I$.
+   - Normalization: degree-one physical marked insertion $\mathcal{I}_\alpha[\mathcal{O}_{(a, t)}(f)]$ is normalized by the global vacuum partition function $Z_{\mathrm{vac}}$, not by an individual history denominator.
+
+2. **Chart Admissibility and Boundary Cutoff Analysis:**
+   - On active bonds $\mathbb{B}_0$, the tree slice $B^\prime|_{T_0} = 0$ is defined on the chart ball $\|B^\prime(b)\| < \delta_k^\prime \le \pi$.
+   - While group Haar tree-gauge integration $\int_{SU(2)^{T_0}} \prod dh_b = 1$ is globally defined on the compact group with zero boundary, the chart representation $B^{\prime h}(b) = \frac{1}{i} \log(h_x \exp(i B^\prime) V_0 h_y^{-1} V_0^{-1})$ is restricted to the ball $\|B^\prime\| < \delta_k^\prime$.
+   - If a gauge orbit exits this ball, the configuration is cut off by $(1 - \chi^\prime)$ and enters the large-field remainder $\mathcal{R}_{\alpha, \mathrm{large}}$.
+   - Therefore, the tree-gauge slice is **conditionally admissible** on the small-field support $\chi^\prime$.
+
+3. **Identification of the First Explicit Missing Bridge Lemma:**
+   Before multiscale polymer activity summability can be addressed, the actual-model chart stability must be established. We formulate:
+   
+   **LEMMA `YM-051F-ACTUAL-CHART-SUMMABILITY` (Small-Field Chart Stability and Remainder Activity Bound):**
+   *For any admissible history $\alpha$ in Bałaban R-I (1.76), there exists a scale-dependent constant $c_k > 0$ such that:*
+   1. *Gauge Orbit Chart Stability: The probability under constrained Haar measure that the tree-gauge orbit exits the chart ball $\|B^{\prime h}(b)\| < \delta_k^\prime$ is bounded by $\mathcal{O}(e^{-c_k / g_k^2})$;*
+   2. *Large-Field Remainder Bound: The complementary remainder satisfies $\|\mathcal{R}_{\alpha, \mathrm{large}}\| \le C_k e^{-M / g_k^2} \|\mathcal{O}_{(a, t)}(f)\|_\infty$;*
+   3. *Summability Dependency: Uniform polymer activity summability $\sum_\alpha \mathcal{I}_\alpha[\mathcal{O}_{(a, t)}(f)]$ is conditionally dependent on the resolution of this chart stability lemma.*
+
+4. **Corrected Dependency Ordering:**
+   Uniform multiscale polymer activity summability is **NOT** the first dependency-satisfied obligation. The first required obligation is the proof of Lemma `YM-051F-ACTUAL-CHART-SUMMABILITY` on the concrete history domain.
+

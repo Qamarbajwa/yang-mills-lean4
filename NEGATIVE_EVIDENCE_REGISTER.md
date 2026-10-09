@@ -525,3 +525,17 @@ Positive T_epsilon fixes normalized vacuum but a contrast target recovered from 
   3. The actual-model Bałaban coordinate pullback and tree-gauge representation are formally reclassified as `CONDITIONAL_AND_OPEN` (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`).
   4. Classification: `METHOD_SPECIFIC_OBSTRUCTION`; structural no-go count remains 0; no continuum edge closes.
 
+
+## NEG-YM-051R2-UNIT-QUATERNION-AND-OBSERVABLE-DEFECT: Non-Unit Quaternion Approximations, Single-Edge Tree Inadequacy, Scalar Heuristics, and Premature Summability Scope (`YM-051R2`)
+
+- **Discovery Date:** 2026-10-09
+- **Epistemic Classification:** `[METHOD_SPECIFIC_OBSTRUCTION]`
+- **Hypothesis tested:** Whether non-unit quaternion approximations, single-edge parallel transport, scalar plaquette values, or unconditioned continuum heuristics can certify SU(2) lattice gauge invariance, tree gauge on rooted trees, and physical observable non-factorization; and whether uniform polymer activity summability can be pursued before resolving the conditional chart-admissibility lemma for actual Bałaban histories.
+- **Result:** Falsified.
+  1. Non-unit quaternions such as $(1, 0, 1/3, 0)$ (norm squared 10/9) and second-order Taylor truncations $(1 - 1/8, 1/2, 0, 0)$ (norm squared 65/64) do not belong to $SU(2)$. Inversion algebra in non-zero quaternions cannot certify an allowed site gauge transformation. Certification requires exact rational unit quaternions ($\|q\|^2 = 1$) via Pythagorean quadruples.
+  2. Single-link parallel transport fails to certify tree-gauge fixing across a multi-edge tree; tree-gauge fixing must be sequentially resolved across a non-trivial rooted multi-edge tree $T_0$, proving that all tree links simultaneously fix to background transporters $V_0(b)$, while non-tree cycle bonds retain non-trivial holonomy and naive uncoupled transformations fail.
+  3. A scalar plaquette value $\ne 1$ or hardcoded heuristic (e.g. 135/1000) does not prove observable non-factorization across spatial boundaries; non-factorization requires demonstrating a non-zero cross-variation determinant $\Delta_{\mathrm{fact}} \ne 0$ for an explicit observable coupling regions $Z_h$ and $\Lambda_0$, and establishing discrete lattice gradient-flow mixing.
+  4. Hermitian vs. anti-Hermitian Lie algebra conventions must be rigorously reconciled: Hermitian generators ($B^\prime$, $\operatorname{Tr}((B^\prime)^2) \ge 0$, $\exp(i B^\prime)$) versus anti-Hermitian generators ($X$, $\operatorname{Tr}(X^2) \le 0$, $\exp(X)$), and signed determinant $\det(D_{V_0}) = +1$ versus absolute Jacobian $|\det(D_{V_0})| = 1$.
+  5. The actual R-I pullback remains `CONDITIONAL_AND_OPEN`. Uniform multiscale polymer activity summability is conditionally blocked by Lemma `YM-051F-ACTUAL-CHART-SUMMABILITY` (Small-Field Chart Stability and Remainder Activity Bound) and cannot be claimed as the immediate next dependency-satisfied obligation.
+  6. Classification: `METHOD_SPECIFIC_OBSTRUCTION`; structural no-go count remains 0; no continuum edge closes.
+

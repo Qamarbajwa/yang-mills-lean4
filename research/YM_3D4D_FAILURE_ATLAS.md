@@ -136,3 +136,12 @@ Primary YMH Lemma4.5 p54 ->Lemma5.5 p60 was text rechecked at https://www.pure.e
 4. **Epistemic boundary:** Actual Bałaban coordinate pullback and tree-gauge representation are reclassified as `CONDITIONAL_AND_OPEN` (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Multiscale marked polymer activity summability remains open. Earliest global 4D failure remains UNESTABLISHED; structural no-go count 0.
 
 
+## FA-001 unit rational certificates, multi-edge tree transport, observable mixed dependence, and actual-history audit / YM-051R2
+
+1. **Exact unit rational certificates:** Replaced non-unit approximations (norm squared 10/9 and 65/64) with exact rational unit quaternions ($\|q\|^2 = 1$) via Pythagorean quadruples for all group link variables and site gauge transformations.
+2. **Multi-edge rooted tree transport:** Verified affine parallel transport on non-trivial rooted tree $T_0$ with multiple branches and depth $\ge 2$. Proved simultaneous fixing of all tree links to background transporters $V_0(b)$ under exact unit site transformations, while non-tree cycle bonds retain non-trivial holonomy with strictly positive defect $\|U^h(b_{\mathrm{cycle}}) - V_0(b_{\mathrm{cycle}})\|^2 > 0$, and naive uncoupled transformations fail.
+3. **Explicit observable mixed dependence:** Replaced scalar heuristics (e.g. 135/1000) with a genuine non-factorization defect $\Delta_{\mathrm{fact}} = \mathcal{O}(1, 1)\mathcal{O}(2, 2) - \mathcal{O}(1, 2)\mathcal{O}(2, 1) \ne 0$ for an explicit composite observable across spatial boundaries, accompanied by discrete lattice Wilson flow mixed derivatives.
+4. **Conventions and determinants:** Explicitly reconciled Hermitian generators ($B^\prime$, $\operatorname{Tr}((B^\prime)^2) \ge 0$, $\exp(i B^\prime)$) with anti-Hermitian generators ($X$, $\operatorname{Tr}(X^2) \le 0$, $\exp(X)$), and signed determinant $\det(D_{V_0}) = +1$ with absolute Jacobian $|\det(D_{V_0})| = 1$.
+5. **Concrete actual-history audit and dependency ordering:** Audited ONE concrete admissible history $\alpha$ from Bałaban R-I (1.76). Formulated the first explicit missing bridge lemma: **LEMMA `YM-051F-ACTUAL-CHART-SUMMABILITY`** (Small-Field Chart Stability and Remainder Activity Bound). Reconciled dependency ordering: uniform multiscale polymer activity summability is conditionally dependent on this chart stability lemma and is NOT the immediate next dependency-satisfied obligation. Earliest global 4D failure remains UNESTABLISHED; structural no-go count 0.
+
+

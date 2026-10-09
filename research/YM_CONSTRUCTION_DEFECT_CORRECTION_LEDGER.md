@@ -98,3 +98,26 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
 4. **Classification:** Reclassified as `CONDITIONAL_AND_OPEN` with identifier `ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`. Structural no-go count remains 0. Multiscale marked polymer activity summability remains the first unresolved bridge lemma.
 
 
+## CDC-051R2: repair of SU(2) unit rational quaternion certificates, multi-edge tree affine transport, observable mixed dependence, convention reconciliation, and actual-history admissibility audit
+
+1. **Reconciliation of Lie algebra conventions and Jacobian determinants:**
+   - Hermitian vs. anti-Hermitian generator conventions: in Bałaban R-I (1.81), $B^\prime$ is Hermitian ($\operatorname{Tr}((B^\prime)^2) \ge 0$), and the group link is $\exp(i B^\prime)$ with anti-Hermitian exponent $i B^\prime$. In differential geometric / quaternion representation, pure imaginary quaternions represent the anti-Hermitian Lie algebra $\mathfrak{su}(2)$ ($q^2 = -\|q\|^2 \le 0$, $\operatorname{Tr}(X^2) \le 0$), and group exponential is $\exp(X)$ without the imaginary unit $i$.
+   - Matrix orientation vs. integration volume density: directional derivative matrix $D_{V_0}$ along tree $T_0$ has signed determinant $\det(D_{V_0}) = +1$ (orientation-preserving), while Haar volume density scales by the absolute Jacobian $|\det(D_{V_0})| = 1$.
+2. **Elimination of non-unit approximations:**
+   - Non-unit elements such as $(1, 0, 1/3, 0)$ (norm squared $10/9$) and second-order Taylor truncations $(1 - 1/8, 1/2, 0, 0)$ (norm squared $65/64$) are strictly eliminated from test certificates.
+   - All group link variables and site gauge transformations are constructed as exact rational unit quaternions ($\|q\|^2 = 1$) via Pythagorean quadruples, with exact unit norms verified in certificate tests.
+3. **Multi-edge rooted tree affine transport:**
+   - In place of a single-edge test, affine parallel transport is verified across a non-trivial rooted multi-edge tree $T_0$ with multiple branches and depth $\ge 2$ ($x_0 \to x_1 \to x_2$ and $x_0 \to x_3$).
+   - All tree edges simultaneously satisfy $U^h(b) = V_0(b)$ under exact unit site transformations, while non-tree cycle bonds retain non-trivial holonomy with strictly positive defect $\|U^h(b_{\mathrm{cycle}}) - V_0(b_{\mathrm{cycle}})\|^2 > 0$.
+   - Naive uncoupled transformation setting $h_x = I$ everywhere fails with non-zero tree defect $\sum_{b \in T_0} \|U(b) - V_0(b)\|^2 > 0$.
+4. **Explicit observable mixed dependence vs. scalar heuristics:**
+   - Hardcoded positive constants (such as `135/1000`) and uncoupled plaquette scalar checks are replaced by a genuine non-factorization defect:
+     $$\Delta_{\mathrm{fact}} = \mathcal{O}(U_A^{(1)}, U_B^{(1)}) \mathcal{O}(U_A^{(2)}, U_B^{(2)}) - \mathcal{O}(U_A^{(1)}, U_B^{(2)}) \mathcal{O}(U_A^{(2)}, U_B^{(1)}) \ne 0$$
+     for explicit composite observable $\mathcal{O}(U_A, U_B) = \frac{1}{2} \operatorname{Tr}(U_A U_B)$ across boundary $\partial Z_h$.
+   - Lattice Wilson gradient flow mixing $\frac{\partial^2 S_{\mathrm{flowed}}}{\partial U(b_1) \partial U(b_2)} \ne 0$ is explicitly documented as the physical lattice mechanism.
+5. **Concrete actual-history audit and dependency ordering reconciliation:**
+   - Audited ONE concrete admissible history $\alpha$ from Bałaban R-I (1.76): exterior domain $Z \cap \Lambda^c$, preliminary region $Z_h$, active region $\Lambda_0 = \Lambda \setminus Z_h$, external bonds $\mathbb{B}_0$, and rooted gauge group $\mathcal{G}_{\Lambda_0}$ with $h_{x_0} = I$.
+   - Formulated the first explicit missing bridge lemma: **LEMMA `YM-051F-ACTUAL-CHART-SUMMABILITY`** (Small-Field Chart Stability and Remainder Activity Bound), proving that gauge orbit chart exit is bounded by $\mathcal{O}(e^{-c_k / g_k^2})$ and remainder activity satisfies $\|\mathcal{R}_{\alpha, \mathrm{large}}\| \le C_k e^{-M / g_k^2} \|\mathcal{O}\|_\infty$.
+   - Reconciled dependency ordering: cutoff-uniform polymer activity summability is conditionally dependent on Lemma `YM-051F-ACTUAL-CHART-SUMMABILITY` and is NOT the immediate next dependency-satisfied obligation.
+
+
