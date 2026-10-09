@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 57
+revision: 58
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "bc32b6903ea7dbd7d3b02b22009745e7c3c93a35"
-  scientific_candidate_sha: "bc32b6903ea7dbd7d3b02b22009745e7c3c93a35"
-  review_bound_sha: "bc32b6903ea7dbd7d3b02b22009745e7c3c93a35"
-  evidence_closeout_head: "bc32b6903ea7dbd7d3b02b22009745e7c3c93a35"
-  closeout_resolution: "evidence_closeout_head binds the completed YM-052 receipt/state commit; later metadata commits preserve it. Resolve current authoritative HEAD from Git."
+  head: "6bc5e564aa7f754b8507eac04d141f5eb7a6d579"
+  scientific_candidate_sha: "6bc5e564aa7f754b8507eac04d141f5eb7a6d579"
+  review_bound_sha: "6bc5e564aa7f754b8507eac04d141f5eb7a6d579"
+  evidence_closeout_head: "6bc5e564aa7f754b8507eac04d141f5eb7a6d579"
+  closeout_resolution: "evidence_closeout_head binds the completed YM-053 receipt/state commit; later metadata commits preserve it. Resolve current authoritative HEAD from Git."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,14 +32,25 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 57
-  last_updated_at: "2026-10-09T15:40:00Z"
+  last_expected_revision: 58
+  last_updated_at: "2026-10-09T17:25:00Z"
   active_contract: "YM-015F-JET-002B"
-  frozen_candidate: "bc32b6903ea7dbd7d3b02b22009745e7c3c93a35"
+  frozen_candidate: "6bc5e564aa7f754b8507eac04d141f5eb7a6d579"
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-053
+    scope_in: "Group-valued augmented gauge map Phi globally on group variables via sequential tree solver, explicit smooth inverse Phi^{-1}, sequential normalized Haar pushforward with unit integration Jacobian, non-invariance of boundary links U(b) -> h_x U(b) != U(b), inseparable effective fiber density W_eff retaining all factors in fiber integral, Bałaban CMP 122 pp. 194-198 concrete history admissibility audit, Test 12 arithmetic reconciliation, and compact Lie group U(1)/SU(2) orbit weight defects"
+    scope_out: "Integration of non-trivial fiber weights across gauge orbits, proof of deterministic chart overlap lemma, weighted-measure tail estimates under Wilson action, multiscale marked polymer activity summability under Bałaban RG, cutoff-uniform estimates, and continuum closure"
+    dependencies: ["YM-052"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-053_E4_RAW_20261009.md"
+    acceptor: "verification/YM-053_TECHNICAL_ACCEPTANCE.md"
+    status: SCIENTIFICALLY_ACCEPTED
+    scope_limitation: "GROUP_AUGMENTED_MAP_ESTABLISHED_HAAR_PUSHFORWARD_UNIT_JACOBIAN_PROVED_EFFECTIVE_DENSITY_INSEPARABLE"
   - id: YM-052
     scope_in: "Printed-page mapping repair to Bałaban CMP 122 (1989) (pp. 197, 198), exact geometric collar difference identity (Lambda \\ Zh) \\ Lambda0 = Lambda cap (Zh_prime_tilde \\ Zh) and strictness precision, refutation of tree pushforward unweighted slice assumption and proof of non-trivial fiber weights W(B_hat_prime), finite toy regression certificate for measure loss / fiber weights, single root sequential boundary admissibility vs multi-site overconstraint"
     scope_out: "Integration of non-trivial fiber weights across gauge orbits, proof of deterministic chart overlap lemma, weighted-measure tail estimates under Wilson action, multiscale marked polymer activity summability under Bałaban RG, cutoff-uniform estimates, and continuum closure"

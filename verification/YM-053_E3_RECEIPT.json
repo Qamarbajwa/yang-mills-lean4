@@ -1,0 +1,22 @@
+{
+  "task": "YM-053",
+  "baseline_revision": 57,
+  "baseline_sha": "9603c0ca3e93d505dd5d92e4f391508960c30ccb",
+  "candidate_sha": "6bc5e564aa7f754b8507eac04d141f5eb7a6d579",
+  "scientific_tree_hash": "a8b27d46c85d232ee69e6bdea6b8d11a70390bdf0b82ab1d554231c6e8b48a54",
+  "git_blob_scientific_hash": "56fd2fec83b1c2f759ce420add05448b0ba3377e90a5f6373b96bc2dd64066d4",
+  "scientific_files": 158,
+  "tests": "443 passed in 6.71s",
+  "workflow": "SERIALIZED_SHARED_WORKSPACE_PYTEST",
+  "negative_prefix": "literal Git bytes preserved",
+  "own_diagnostic": {
+    "finite_certificates": 13,
+    "group_augmented_map": "Phi: G^{B_0} -> G^{B_0 \\ T_0} x G_{Lambda_0, x_0} globally well-defined on group variables via sequential tree solver; explicit inverse Phi^{-1} satisfies Phi o Phi^{-1} = id and Phi^{-1} o Phi = id unconditionally",
+    "sequential_haar_pushforward": "sequential translation along tree T0 and non-tree bonds proves product normalized Haar measure pushforward integration Jacobian is identically 1",
+    "boundary_link_non_invariance": "boundary links U(b) transform as h_x U(b) != U(b); effective fiber density W_eff cannot be factored into W_chi * F(V_hat, I); all factors retained in fiber integral",
+    "concrete_history_source_audit": "Bałaban CMP 122 (1989) pp. 194-198 verified: single root h_{x_0} = I, exclusion of inner boundary bonds, inclusion of outer boundary bonds, absence of pre-existing deltas on active bonds",
+    "arithmetic_reconciliation": "Test 12 reconciled: density defect Delta_weight = -1/2 != 0 vs measure loss defect Delta_measure = -1/4 != 0; compact U(1) / SU(2) certificate proves Delta_compact_measure = -2/9 != 0 and Delta_compact_weight = -2/3 != 0",
+    "missing_bridges": "integration of non-trivial fiber weights across gauge orbits and proof of Lemma YM-051F-DETERMINISTIC-CHART-OVERLAP precede downstream weighted-measure tail estimates"
+  },
+  "source_provenance_correction": "Bałaban CMP 122 (1989) group-valued augmented gauge map globally established; sequential normalized Haar pushforward with unit Jacobian proved; effective fiber density inseparability certified; Test 12 arithmetic reconciled and compact Lie group certificate verified."
+}
