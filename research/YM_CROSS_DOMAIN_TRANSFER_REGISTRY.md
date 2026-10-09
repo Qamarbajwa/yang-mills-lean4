@@ -290,5 +290,20 @@ Source mechanisms: own finite row-space/kernel target-descent theorem, positive 
 - Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
 
 
+## XFER-YM-ONE-TERM-PULLBACK-053 — group-valued augmented gauge map, Haar pushforward, effective fiber density, and history admissibility
+
+- Source: Bałaban R-I, Commun. Math. Phys. 122, 175–202 (1989).
+- Target: YM-015F degree-one physical marked observable insertion under RG transport.
+- Verified mapping:
+  - Global group augmented map $\Phi: G^{\mathbb{B}_0} \to G^{\mathbb{B}_0 \setminus T_0} \times \mathcal{G}_{\Lambda_0, x_0}$ in group variables with explicit inverse $\Phi^{-1}(\hat{V}, h)$ and global bijectivity, resolving matrix logarithm chart restrictions.
+  - Sequential normalized Haar pushforward with unit integration Jacobian: $\Phi_*(\prod dV^{\prime\prime}) = \prod d\hat{V} \times dh$.
+  - Separation of pure measure fiber weight $W_\chi(\hat{V}) = \int dh \, \chi(\Phi^{-1}(\hat{V}, h))$ from full effective fiber density $\mathcal{W}_{\mathrm{eff}}(\hat{V}) = \int dh \, \mathcal{F}(\Phi^{-1}(\hat{V}, h))$.
+  - Proof that boundary-crossing links transform as $h_x U(b) \ne U(b)$, forcing all action, observable, and boundary factors to remain inside the fiber integral $\int dh$.
+  - Source audit confirming single root fixing ($h_{x_0} = I$), exclusion of internal boundary bonds, inclusion of outer boundary bonds, and absence of pre-existing deltas on active bonds $\mathbb{B}_0$.
+  - Reconciled Test 12 density defect $\Delta_{\mathrm{weight}} = -1/2$ vs measure loss $\Delta_{\mathrm{measure}} = -1/4$, and certified compact-group $U(1)$ / $SU(2)$ defects ($\Delta_{\mathrm{compact\_measure}} = -2/9 \ne 0$, $\Delta_{\mathrm{compact\_weight}} = -2/3 \ne 0$).
+- Open bridge: Pushforward measure integration and fiber weight bounds preceding deterministic chart overlap closure.
+- Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
+
+
 
 

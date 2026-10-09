@@ -162,9 +162,31 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
    - Naively setting tree variables to zero loses the fiber weight $W(\hat{B}^\prime) \ne 1$.
    - Status of Lemma `YM-051F-DETERMINISTIC-CHART-OVERLAP`: the set partition into overlap, chart-exit, and large-field sets is algebraically exact, but calling the overlap integral an unweighted tree-slice integral is formally classified as $\mathbf{UNPROVED\_PENDING\_FIBER\_WEIGHT\_INTEGRATION}$.
 4. **Concrete history boundary admissibility & tree solvability:**
-   - Permitted site gauge group on $\Lambda_0$ requires a single root constraint $h_{x_0} = I$ for unique sequential solvability along tree $T_0$.
-   - Imposing multiple fixed boundary endpoints (e.g. $h_x = I$ on $\partial \Lambda_0$) overconstrains tree equations, producing zero solutions on generic configurations with non-zero holonomy along paths connecting fixed endpoints.
-   - Bałaban's construction avoids overconstraint by fixing only root $x_0$ and strictly excluding internal boundary bonds touching the preliminary collar from $\mathbb{B}_0$.
+165:    - Permitted site gauge group on $\Lambda_0$ requires a single root constraint $h_{x_0} = I$ for unique sequential solvability along tree $T_0$.
+166:    - Imposing multiple fixed boundary endpoints (e.g. $h_x = I$ on $\partial \Lambda_0$) overconstrains tree equations, producing zero solutions on generic configurations with non-zero holonomy along paths connecting fixed endpoints.
+167:    - Bałaban's construction avoids overconstraint by fixing only root $x_0$ and strictly excluding internal boundary bonds touching the preliminary collar from $\mathbb{B}_0$.
+
+
+## CDC-053: group-valued augmented gauge map, sequential normalized Haar pushforward, effective fiber density, and concrete history admissibility audit
+
+1. **Global group-valued augmented diffeomorphism:**
+   - Defines the augmented gauge map $\Phi: G^{\mathbb{B}_0} \to G^{\mathbb{B}_0 \setminus T_0} \times \mathcal{G}_{\Lambda_0, x_0}$ in group variables ($U(b) \in G = SU(2)$ or $SU(N)$) using the sequential tree gauge solver along rooted spanning tree $T_0 \subset \mathbb{B}_0$ ($h_{x_0} = I$).
+   - Explicit inverse $\Phi^{-1}(\hat{V}, h)$ defined for all group elements without matrix logarithms or small-field domain restrictions; proves $\Phi$ is an exact, global, smooth bijection onto the full product space.
+   - Restricts to Lie algebra log charts on explicit domains only afterwards.
+2. **Sequential normalized Haar measure pushforward:**
+   - Proves by sequential translation along $T_0$ and two-sided translation on $\mathbb{B}_0 \setminus T_0$ that $\Phi_*(\prod_{b \in \mathbb{B}_0} dV^{\prime\prime}(b)) = (\prod_{b \in \mathbb{B}_0 \setminus T_0} d\hat{V}(b)) \times dh_{\mathcal{G}_{\Lambda_0, x_0}}$.
+   - The integration Jacobian with respect to normalized Haar measure is identically 1.
+3. **Retention of all factors in fiber integral & effective density distinction:**
+   - Retains all cutoffs, action, physical observable, and boundary factors in the fiber integral.
+   - Distinguishes pure measure fiber weight $W_\chi(\hat{V}) = \int dh \, \chi(\Phi^{-1}(\hat{V}, h))$ from the full effective fiber density $\mathcal{W}_{\mathrm{eff}}(\hat{V}) = \int dh \, \mathcal{F}(\Phi^{-1}(\hat{V}, h))$.
+   - Proves that factoring $\mathcal{W}_{\mathrm{eff}}$ into $W_\chi \times (\text{slice value})$ fails because boundary-crossing links $U(b)$ ($b = (x, y)$ with $x \in \Lambda_0, y \notin \Lambda_0$) transform non-trivially as $h_x U(b) \ne U(b)$, forcing boundary plaquettes and observable factors to remain inside $\int dh$.
+4. **Concrete history boundary admissibility audit:**
+   - Source audit of Bałaban CMP 122 (1989) pp. 194–198 confirms: single root $x_0 \in \Lambda_0$ is fixed ($h_{x_0} = I$); bonds intersecting inner boundary $\partial \Omega_{k+1}^1$ are excluded from $\mathbb{B}_0$; bonds intersecting outer boundary $\partial \Lambda$ belong to $\mathbb{B}_0$ and connect to exterior field $V_k|_{Z \cap \Lambda^c}$; pre-existing delta constraints on $\mathbb{B}_0$ are absent ("all integrated out", p. 194).
+   - Formulates the exact termwise density representation with operator $\mathbb{T}_h(Z_h)$, short-distance fields $V_h$, and global partition function $Z_{\mathrm{vac}}^{-1}$.
+5. **Finite regression challenge & arithmetic reconciliation:**
+   - Reconciles Test 12 formulas: pointwise density defect is $\Delta_{\mathrm{weight}} = 2\delta - 1 = -1/2 \ne 0$, while integrated measure loss defect is $\Delta_{\mathrm{measure}} = 2\delta(2\delta - 1) = -1/4 \ne 0$ for $\delta = 1/4$. Both are non-zero; prose conflation resolved via additive assertions.
+   - Genuine compact-group certificate on $U(1)$ / $SU(2)$ certifies exact orbit weight $W(\hat{\theta}_2) = \frac{2\delta - |\hat{\theta}_2|}{2\pi}$, compact measure loss defect $\Delta_{\mathrm{compact\_measure}} = -2/9 \ne 0$, origin weight defect $\Delta_{\mathrm{compact\_weight}} = -2/3 \ne 0$, and observable moment defect on $\cos(\hat{\theta}_2)$ without Euclidean normalization confusion.
+
 
 
 

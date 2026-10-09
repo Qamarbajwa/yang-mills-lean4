@@ -568,4 +568,17 @@ Positive T_epsilon fixes normalized vacuum but a contrast target recovered from 
   5. *Classification:* `METHOD_SPECIFIC_OBSTRUCTION`; structural no-go count remains 0; no continuum edge closes.
 
 
+## NEG-YM-053-AUGMENTED-MAP-AND-EFFECTIVE-FIBER-DENSITY: Non-Invariance of Boundary Links, Inseparable Effective Fiber Density, and Measure-Weight Defect Reconciliation (`YM-053`)
+
+- **Discovery Date:** 2026-10-09
+- **Epistemic Classification:** `[METHOD_SPECIFIC_OBSTRUCTION]`
+- **Hypothesis tested:** Whether tree gauge fixing allows factoring the pushforward effective fiber density $\mathcal{W}_{\mathrm{eff}}(\hat{V}) = \int dh \, \mathcal{F}(\Phi^{-1}(\hat{V}, h))$ into the product of a pure measure fiber weight $W_\chi(\hat{V})$ and an unweighted slice evaluation $\mathcal{F}(\hat{V}, h=I)$; whether boundary-crossing links remain invariant under site gauge transformations rooted inside $\Lambda_0$; and whether naive gauge-slice integration avoids measure loss on compact Lie groups.
+- **Result:** Falsified.
+  1. *Non-Invariance of Boundary Links:* Site gauge transformations $h \in \mathcal{G}_{\Lambda_0, x_0}$ act exclusively on sites within $\Lambda_0$ (with $h_{x_0} = I$), while fields outside $\Lambda_0$ ($V_h$ on preliminary region $Z_h$, $V_k$ on exterior $Z \cap \Lambda^c$) are untransformed ($h \equiv I$ outside $\Lambda_0$). Any link $b = (x, y)$ crossing boundary $\partial \Lambda$ (with $x \in \Lambda_0, y \in Z \cap \Lambda^c$) transforms non-trivially as $U^h(b) = h_x U(b) \ne U(b)$. Plaquettes straddling $\partial \Lambda$ in the action $A_k^{\prime\prime}$ and observable $\mathcal{O}_{(a, t)}(f)$ pick up boundary gauge factors $h_x$.
+  2. *Inseparability of Full Effective Fiber Density:* Because the action and physical observable depend non-trivially on $h$ along the fiber, the effective fiber density $\mathcal{W}_{\mathrm{eff}}(\hat{V}) = \int dh \, \mathcal{F}(\Phi^{-1}(\hat{V}, h))$ CANNOT be factored into $W_\chi(\hat{V}) \times \mathcal{F}(\hat{V}, h=I)$ without introducing uncontrolled boundary errors. All cutoffs, action factors, physical observables, and boundary couplings must remain inside the fiber integral $\int dh$.
+  3. *Measure Loss on Compact Lie Groups:* On compact Lie group $U(1)$ / $SU(2)$ with normalized Haar measure, gauge fixing a 2-bond graph under cutoff $\delta = \pi/3$ produces exact orbit weight $W(\hat{\theta}_2) = \frac{2\delta - |\hat{\theta}_2|}{2\pi}$, causing an exact compact measure loss defect $\Delta_{\mathrm{compact\_measure}} = -2/9 \ne 0$ and origin density defect $\Delta_{\mathrm{compact\_weight}} = -2/3 \ne 0$. Naively omitting fiber weights produces measure loss and observable bias.
+  4. *Arithmetic Reconciliation:* Reconciled Test 12 arithmetic: pointwise density defect is $\Delta_{\mathrm{weight}} = 2\delta - 1 = -1/2 \ne 0$, while integrated measure loss defect is $\Delta_{\mathrm{measure}} = 2\delta(2\delta - 1) = -1/4 \ne 0$ for $\delta = 1/4$.
+  5. *Classification:* `METHOD_SPECIFIC_OBSTRUCTION`; structural no-go count remains 0; no continuum edge closes.
+
+
 

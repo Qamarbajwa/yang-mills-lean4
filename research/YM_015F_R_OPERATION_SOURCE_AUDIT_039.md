@@ -872,3 +872,164 @@ In Section YM-051R3 (lines 738–739), equations (1.85)–(1.88) and (1.89) were
    - Partitioning boundary bonds so that internal boundary bonds touching $\partial \Omega_{k+1}^1$ are strictly excluded from $\mathbb{B}_0$, leaving active bonds $\mathbb{B}_0$ and site group $\mathcal{G}_{\Lambda_0, x_0}$ free of preliminary fixed-site overconstraints.
 
 
+## YM-053: GROUP-VALUED AUGMENTED GAUGE MAP, SEQUENTIAL NORMALIZED HAAR PUSHFORWARD, EFFECTIVE FIBER DENSITY, AND CONCRETE HISTORY ADMISSIBILITY AUDIT
+
+### 1. Group-Valued Invertible Augmented Map $\Phi$
+1. **Geometric Setup and Target Spaces:**
+   - Active spatial domain: $\Lambda_0 = \Lambda \cap \Omega_{k+1}^1 = \Lambda \cap (Z_h^{\prime \sim})^c \subset \mathbb{Z}^4$ (Bałaban CMP 122 p. 195).
+   - Active bonds: $\mathbb{B}_0 = \mathbb{U}_k \cap \Lambda_0$, excluding bonds touching $\partial \Omega_{k+1}^1$.
+   - Compact gauge group: $G = SU(2)$ (or $SU(N)$).
+   - Group configuration space: $\mathcal{U} = G^{\mathbb{B}_0}$.
+   - Spanning tree: $T_0 \subset \mathbb{B}_0$, a maximal spanning tree of the graph $(\Lambda_0, \mathbb{B}_0)$ rooted at single base site $x_0 \in \Lambda_0$.
+   - Number of vertices: $N_0 = |\Lambda_0|$. Number of tree bonds: $|T_0| = N_0 - 1$.
+   - Rooted gauge group:
+     $$\mathcal{G}_{\Lambda_0, x_0} = \left\{ h = (h_x)_{x \in \Lambda_0} \in G^{\Lambda_0} : h_{x_0} = I \right\}.$$
+   - Target slice space: $\mathcal{S} = G^{\mathbb{B}_0 \setminus T_0}$.
+   - Target augmented space: $\mathcal{S} \times \mathcal{G}_{\Lambda_0, x_0} = G^{\mathbb{B}_0 \setminus T_0} \times \mathcal{G}_{\Lambda_0, x_0}$.
+   - Dimensional balance: $\dim(G^{\mathbb{B}_0}) = (\dim G)|\mathbb{B}_0| = (\dim G)(|\mathbb{B}_0 \setminus T_0| + |T_0|) = \dim(G^{\mathbb{B}_0 \setminus T_0} \times \mathcal{G}_{\Lambda_0, x_0})$.
+
+2. **Sequential Tree Gauge Solver in Group Variables:**
+   - Let $V_0 \in G^{\mathbb{B}_0}$ be the fixed minimal background parallel transporter $V_0 = M_{\mathbb{B}_k^{\prime\prime}}(U_0)$ (CMP 122 p. 195 (1.81)).
+   - For every vertex $y \in \Lambda_0 \setminus \{x_0\}$, let $p(y) \in \Lambda_0$ be its unique parent in $T_0$, and let $b_y = (p(y), y) \in T_0$ be the directed tree edge entering $y$.
+   - For any active group configuration $V^{\prime\prime} \in G^{\mathbb{B}_0}$, the gauge-slice condition on tree bonds is:
+     $$V^{\prime\prime h}(b_y) = V_0(b_y) \iff h_{p(y)} V^{\prime\prime}(b_y) h_y^{-1} = V_0(b_y).$$
+   - This determines $h_y \in G$ recursively by:
+     $$h_y[V^{\prime\prime}] = V_0(b_y)^{-1} h_{p(y)}[V^{\prime\prime}] V^{\prime\prime}(b_y), \quad h_{x_0}[V^{\prime\prime}] = I.$$
+   - **Global Solvability Theorem:**
+     Because $G$ is a group and $T_0$ has no cycles, this recursion defines $h_x[V^{\prime\prime}] \in G$ uniquely and smoothly for every $x \in \Lambda_0$.
+     **Crucial distinction from Lie algebra coordinates:** This solver operates entirely with group multiplications and inversions. It requires NO matrix logarithms and NO small-field domain restrictions; it is globally well-defined on all of $G^{\mathbb{B}_0}$.
+     Furthermore, $h[V^{\prime\prime}]$ depends *strictly* on tree link variables $V^{\prime\prime}|_{T_0}$ and is independent of non-tree variables $V^{\prime\prime}|_{\mathbb{B}_0 \setminus T_0}$.
+
+3. **Definition of the Group Augmented Map $\Phi$:**
+   $$\Phi: G^{\mathbb{B}_0} \to G^{\mathbb{B}_0 \setminus T_0} \times \mathcal{G}_{\Lambda_0, x_0}, \quad V^{\prime\prime} \mapsto (\hat{V}^{\prime\prime}, h[V^{\prime\prime}]),$$
+   where:
+   $$\hat{V}^{\prime\prime}(b) = h_x[V^{\prime\prime}] V^{\prime\prime}(b) h_y[V^{\prime\prime}]^{-1} \in G \quad \text{for each } b = (x, y) \in \mathbb{B}_0 \setminus T_0.$$
+
+4. **Explicit Inverse Map $\Phi^{-1}$:**
+   Given $(\hat{V}, h) \in G^{\mathbb{B}_0 \setminus T_0} \times \mathcal{G}_{\Lambda_0, x_0}$, define $\Phi^{-1}(\hat{V}, h) \in G^{\mathbb{B}_0}$ by:
+   $$V^{\prime\prime}(b) = \begin{cases} h_x^{-1} V_0(b) h_y & \text{if } b = (x, y) \in T_0, \\ h_x^{-1} \hat{V}(b) h_y & \text{if } b = (x, y) \in \mathbb{B}_0 \setminus T_0. \end{cases}$$
+   - **Verification of Left Inverse ($\Phi \circ \Phi^{-1} = \operatorname{id}$):**
+     On tree bonds, $V^{\prime\prime}(b_y) = h_{p(y)}^{-1} V_0(b_y) h_y$. The tree solver computes:
+     $$h_y[V^{\prime\prime}] = V_0(b_y)^{-1} h_{p(y)}[V^{\prime\prime}] (h_{p(y)}^{-1} V_0(b_y) h_y).$$
+     Since $h_{x_0}[V^{\prime\prime}] = I = h_{x_0}$, mathematical induction on tree depth gives $h_y[V^{\prime\prime}] = h_y$ for all $y \in \Lambda_0$.
+     Hence the gauge output is $h$.
+     On non-tree bonds $b = (x, y) \in \mathbb{B}_0 \setminus T_0$:
+     $$\hat{V}^{\prime\prime}(b) = h_x V^{\prime\prime}(b) h_y^{-1} = h_x (h_x^{-1} \hat{V}(b) h_y) h_y^{-1} = \hat{V}(b).$$
+     Thus $\Phi(\Phi^{-1}(\hat{V}, h)) = (\hat{V}, h)$.
+   - **Verification of Right Inverse ($\Phi^{-1} \circ \Phi = \operatorname{id}$):**
+     Let $V^{\prime\prime} \in G^{\mathbb{B}_0}$. The map $\Phi$ produces $(\hat{V}^{\prime\prime}, h[V^{\prime\prime}])$.
+     On tree bonds $b = (x, y) \in T_0$, $h_x[V^{\prime\prime}]^{-1} V_0(b) h_y[V^{\prime\prime}] = V^{\prime\prime}(b)$ by the tree solver relation.
+     On non-tree bonds $b = (x, y) \in \mathbb{B}_0 \setminus T_0$, $h_x[V^{\prime\prime}]^{-1} \hat{V}^{\prime\prime}(b) h_y[V^{\prime\prime}] = h_x^{-1} (h_x V^{\prime\prime}(b) h_y^{-1}) h_y = V^{\prime\prime}(b)$.
+     Thus $\Phi^{-1}(\Phi(V^{\prime\prime})) = V^{\prime\prime}$.
+   - **Theorem (Global Diffeomorphism):**
+     $\Phi: G^{\mathbb{B}_0} \to G^{\mathbb{B}_0 \setminus T_0} \times \mathcal{G}_{\Lambda_0, x_0}$ is a global, bijective, smooth diffeomorphism with image equal to the entire product space.
+
+5. **Restricted Log Charts on Explicit Domains:**
+   - On the open chart ball $\mathcal{B}_{\delta_k^\prime} = \{ B^\prime \in \mathfrak{su}(2)^{\mathbb{B}_0} : \|B^\prime(b)\| < \delta_k^\prime \ \forall b \in \mathbb{B}_0 \}$ with $\delta_k^\prime \le \pi$, fluctuation variables are defined by $V^{\prime\prime}(b) = \exp(i B^\prime(b)) V_0(b)$.
+   - The matrix logarithm $\log: \exp(\mathcal{B}_{\delta_k^\prime}) V_0 \to \mathcal{B}_{\delta_k^\prime}$ is well-defined only on this open ball.
+   - On the slice, $\hat{V}(b) = \exp(i \hat{B}^\prime(b)) V_0(b)$ for $b \in \mathbb{B}_0 \setminus T_0$.
+   - The group diffeomorphism $\Phi$ induces a chart map on the restricted domain:
+     $$\mathcal{E}_{\mathrm{chart}} = \left\{ V^{\prime\prime} \in \exp(\mathcal{B}_{\delta_k^\prime}) V_0 : \forall b \in \mathbb{B}_0 \setminus T_0, \ \hat{V}(b) V_0(b)^{-1} \in \exp(\mathcal{B}_{\delta_k^\prime}) \right\}.$$
+   - On $\mathcal{E}_{\mathrm{chart}}$, the gauge slice coordinate condition $\hat{B}^\prime|_{T_0} = 0$ is exact.
+
+### 2. Sequential Normalized Haar Changes of Variables & Unit Pushforward Jacobian
+1. **Sequential Transformation along Spanning Tree:**
+   - Let $dV^{\prime\prime} = \prod_{b \in \mathbb{B}_0} dV^{\prime\prime}(b)$ be the product normalized Haar measure on $G^{\mathbb{B}_0}$.
+   - Order vertices $x_0, x_1, \dots, x_{N_0-1}$ by increasing tree distance from root $x_0$.
+   - Each $x_j$ ($j \ge 1$) has unique tree edge $b_j = (p(x_j), x_j) \in T_0$ with parent $p(x_j) \in \{x_0, \dots, x_{j-1}\}$.
+   - At step $j$, the mapping $V^{\prime\prime}(b_j) \mapsto h_{x_j} = V_0(b_j)^{-1} h_{p(x_j)} V^{\prime\prime}(b_j)$ is left multiplication by the already determined group element $V_0(b_j)^{-1} h_{p(x_j)} \in G$.
+   - By left invariance of the normalized Haar measure on compact Lie group $G$:
+     $$dh_{x_j} = dV^{\prime\prime}(b_j).$$
+   - Therefore, taking the product over all tree bonds:
+     $$\prod_{b \in T_0} dV^{\prime\prime}(b) = \prod_{x \in \Lambda_0 \setminus \{x_0\}} dh_x = dh_{\mathcal{G}_{\Lambda_0, x_0}}.$$
+2. **Two-Sided Transformation on Non-Tree Bonds:**
+   - For each non-tree bond $b = (x, y) \in \mathbb{B}_0 \setminus T_0$, the transformation is $\hat{V}(b) = h_x V^{\prime\prime}(b) h_y^{-1}$.
+   - For any fixed $(h_x, h_y) \in G \times G$, this is a left translation by $h_x$ and right translation by $h_y^{-1}$.
+   - By bi-invariance of normalized Haar measure on compact Lie group $G$:
+     $$d\hat{V}(b) = dV^{\prime\prime}(b).$$
+3. **Triangular Jacobian and Exact Measure Pushforward:**
+   - The derivative matrix of the transformation $(V^{\prime\prime}|_{T_0}, V^{\prime\prime}|_{\mathbb{B}_0 \setminus T_0}) \mapsto (h, \hat{V})$ is block triangular: $h$ depends only on $V^{\prime\prime}|_{T_0}$, and the diagonal blocks are left/right translations with determinant 1.
+   - Therefore, the pushforward of normalized product Haar measure under $\Phi$ satisfies:
+     $$\Phi_*\left( \prod_{b \in \mathbb{B}_0} dV^{\prime\prime}(b) \right) = \left[ \prod_{b \in \mathbb{B}_0 \setminus T_0} d\hat{V}(b) \right] \times dh_{\mathcal{G}_{\Lambda_0, x_0}}.$$
+   - The integration Jacobian with respect to normalized Haar measure is **IDENTICALLY 1**.
+
+### 3. Retention of Cutoffs, Action, and Boundary Factors: Measure Fiber Weight vs. Full Effective Density
+1. **Full Integrand on Active Bonds:**
+   In Bałaban R-I (1.76), the full integrand on active bonds $\mathbb{B}_0$ in term $\alpha$ is:
+   $$\mathcal{F}(V^{\prime\prime}) = \chi_k^{\prime\prime}[V^{\prime\prime}] \, \chi^\prime[V^{\prime\prime}] \, \exp(A_k^{\prime\prime}[V^{\prime\prime}]) \, \mathcal{O}_{(a, t)}(f)[U(V_h, V^{\prime\prime}, V_k|_{Z \cap \Lambda^c})] \, \Theta_{\mathrm{boundary}}[V^{\prime\prime}, V_h, V_k].$$
+2. **Pushforward onto Slice Space:**
+   Applying the global diffeomorphism $\Phi$:
+   $$\int_{G^{\mathbb{B}_0}} dV^{\prime\prime} \, \mathcal{F}(V^{\prime\prime}) = \int_{G^{\mathbb{B}_0 \setminus T_0}} d\hat{V} \, \mathcal{W}_{\mathrm{eff}}(\hat{V}),$$
+   where the **FULL EFFECTIVE FIBER DENSITY** is the explicit fiber integral:
+   $$\mathcal{W}_{\mathrm{eff}}(\hat{V}) = \int_{\mathcal{G}_{\Lambda_0, x_0}} dh \, \mathcal{F}(\Phi^{-1}(\hat{V}, h)).$$
+3. **Distinction between Measure Fiber Weight and Effective Density:**
+   - The **Pure Measure Fiber Weight** of a cutoff characteristic function $\chi$ (e.g. $\chi^\prime$ or overlap indicator $\chi_{\mathcal{E}_{\mathrm{chart}}}$) is:
+     $$W_\chi(\hat{V}) = \int_{\mathcal{G}_{\Lambda_0, x_0}} dh \, \chi(\Phi^{-1}(\hat{V}, h)).$$
+   - For the deterministic overlap domain $\mathcal{E}_{\mathrm{chart}}$:
+     $$W_{\mathcal{E}_{\mathrm{chart}}}(\hat{V}) = \int_{\mathcal{G}_{\Lambda_0, x_0}} dh \, \mathbf{1}_{\{\Phi^{-1}(\hat{V}, h) \in \mathcal{E}_{\mathrm{chart}}\}}.$$
+   - **Why factoring $\mathcal{W}_{\mathrm{eff}}(\hat{V})$ into $W_\chi(\hat{V}) \times \mathcal{F}(\hat{V}, h=I)$ fails in general:**
+     - A site gauge transformation $h \in \mathcal{G}_{\Lambda_0, x_0}$ acts only on sites in $\Lambda_0$ with $h_{x_0} = I$, while fields outside $\Lambda_0$ ($V_h$ on $Z_h$, $V_k$ on $Z \cap \Lambda^c$) are NOT transformed by $h$.
+     - Any link $b = (x, y)$ crossing the boundary $\partial \Lambda$ (with $x \in \Lambda_0$ and $y \in Z \cap \Lambda^c$) transforms as:
+       $$U^h(b) = h_x U(b) \ne U(b) \quad (\text{since } h_y = I \text{ outside } \Lambda_0).$$
+     - Plaquettes straddling $\partial \Lambda$ in the action $A_k^{\prime\prime}$ and observable $\mathcal{O}_{(a, t)}(f)$ pick up boundary gauge factors $h_x$.
+     - Consequently, $\exp(A_k^{\prime\prime}[\Phi^{-1}(\hat{V}, h)])$ and $\mathcal{O}_{(a, t)}(f)[\Phi^{-1}(\hat{V}, h)]$ depend non-trivially on $h$ along the fiber.
+     - **Strict Mathematical Rule:** Unless exact boundary compensating transformations are proved to cancel every boundary $h_x$ factor identically, all action, insertion, and boundary factors **MUST REMAIN INSIDE THE FIBER INTEGRAL** $\int dh$. Factoring them out produces an uncontrolled approximation error.
+
+### 4. Source Reconstruction of ONE Actual Admissible R-I History
+1. **Source Context from Bałaban CMP 122 (1989) Section 1 (pp. 192–198):**
+   - Scale $k$. Large-field domain: $\Lambda = (\Omega_{k_0+1}^4)^c \cap Z$ (p. 192).
+   - Preliminary region $Z_h$ carries short-distance fields $V_h$ under operator $\mathbb{T}_h(Z_h)$.
+   - Regularized neighborhood $Z_h^{\prime \sim}$.
+   - Active region: $\Lambda_0 = \Lambda \cap \Omega_{k+1}^1 = \Lambda \cap (Z_h^{\prime \sim})^c$ (p. 195).
+   - Active bonds $\mathbb{B}_0 = \mathbb{U}_k \cap \Lambda_0$: bonds intersecting $\partial \Lambda$ are INCLUDED in $\mathbb{B}_0$; bonds intersecting $\partial \Omega_{k+1}^1$ are EXCLUDED from $\mathbb{B}_0$.
+   - Exterior domain: $Z \cap \Lambda^c$, carrying fixed $V_k|_{Z \cap \Lambda^c}$ under cutoff $\chi_{k, \Lambda}$ (p. 193 (1.75)).
+2. **Audit of Fixed Sites and Pre-Existing Delta Functions:**
+   - Bałaban states on p. 194: *"The integration in (1.76) does not involve any $\delta$-functions, they are all integrated out."*
+   - There are NO pre-existing delta constraints on active bonds $\mathbb{B}_0$.
+   - On p. 196: *"The union of the above described tree graphs and bonds is denoted by $T_0$. It is a tree graph in $\mathbb{B}_0$, fixing completely a gauge in this set. Using the Faddeev-Popov procedure we introduce the gauge fixing $\delta$-function $\delta_{T_0}(V^\prime)$ in the integral (1.76)."*
+   - Tree $T_0$ leaves exactly ONE root site $x_0 \in \Lambda_0$ fixed.
+   - The prior assertion that "excluded internal boundary bonds automatically remove all fixed-site obstructions" is confirmed for the inner boundary $\partial \Omega_{k+1}^1$ because bonds intersecting $\partial \Omega_{k+1}^1$ are not in $\mathbb{B}_0$.
+   - However, for outer boundary bonds intersecting $\partial \Lambda$, these bonds ARE in $\mathbb{B}_0$ and connect to exterior field $V_k|_{Z \cap \Lambda^c}$.
+   - Bałaban resolves this outer background coupling on p. 197 by transforming $U_0$ to the axial-Landau (AL) mixture gauge (eqs. (1.85)–(1.88)) with compensating transformations on $V_h$ and $V^\prime$.
+3. **Explicit Termwise Density Representation:**
+   The un-normalized termwise density with physical insertion is:
+   $$\rho_{k, \alpha}[\mathcal{O}_{(a, t)}(f)] = \chi_k(\Omega_k^{\sim 4}) \, \chi_{k, \Lambda} \int dV_h \lceil_{Z_h} \chi_h(\Omega_h \cap Z_h) \, \mathbb{T}_h(Z_h) \int_{G^{\mathbb{B}_0 \setminus T_0}} d\hat{V} \, \mathcal{W}_{\mathrm{eff}}(\hat{V}; V_h, V_k|_{Z \cap \Lambda^c}) + \mathcal{R}_{\alpha, \mathrm{large}},$$
+   where the full effective fiber density is:
+   $$\mathcal{W}_{\mathrm{eff}}(\hat{V}; V_h, V_k) = \int_{\mathcal{G}_{\Lambda_0, x_0}} dh \, \chi_k^{\prime\prime}[\Phi^{-1}(\hat{V}, h)] \, \chi^\prime[\Phi^{-1}(\hat{V}, h)] \, \exp(A_k^{\prime\prime}[\Phi^{-1}(\hat{V}, h)]) \, \mathcal{O}_{(a, t)}(f)[U(V_h, \Phi^{-1}(\hat{V}, h), V_k)].$$
+   Normalized physical insertion: $\mathcal{I}_\alpha = Z_{\mathrm{vac}}^{-1} \rho_{k, \alpha}$.
+   Any assertion of unweighted slice factorizability across $\partial \Lambda$ remains formally classified as **OPEN**.
+
+### 5. Finite Regression Challenge and Arithmetic Reconciliation
+1. **Arithmetic Reconciliation of Test 12 Defect Formulas:**
+   - In Test 12 code: parameter $\delta = 1/4$.
+   - The true fiber weight is $w(x_S) = 2\delta = 1/2$. The naive slice indicator is $\chi(0, x_S) = 1$.
+   - **Pointwise Density / Fiber-Weight Defect:**
+     $$\Delta_{\mathrm{weight}} = w(x_S) - 1 = 2\delta - 1 = 2(1/4) - 1 = -1/2 \ne 0.$$
+   - **Integrated Measure Loss Defect:**
+     $$\Delta_{\mathrm{measure}} = \int_{-\delta}^\delta (w(x_S) - 1) dx_S = (2\delta - 1)(2\delta) = 2\delta(2\delta - 1) = \left(\frac{1}{2}\right)\left(-\frac{1}{2}\right) = -1/4 \ne 0.$$
+   - (Remark: For parameter $\delta = 3/8$, $2\delta - 1 = -1/4$).
+   - The formula written in the prose summary "$\Delta_{\mathrm{fiber}} = 2\delta - 1 = -1/4$" conflated the pointwise density defect $2\delta - 1 = -1/2$ with the integrated measure loss defect $2\delta(2\delta - 1) = -1/4$.
+   - **Reconciliation Resolution:** Both defects are strictly non-zero and certify the measure loss obstruction. Additive assertions in Test 12/13 certify both $2\delta - 1 = -1/2$ and $2\delta(2\delta - 1) = -1/4$. Immutable raw receipts are preserved.
+
+2. **Genuine Compact-Group $U(1)$ / $SU(2)$ Orbit-Weight Certificate:**
+   - Consider a 2-bond graph with vertices $\{x_0, x_1\}$ and bonds $\mathbb{B}_0 = \{b_1, b_2\}$, where $b_1 = (x_0, x_1) \in T_0$ and $b_2 = (x_0, x_1) \notin T_0$.
+   - Compact group $G = U(1)$ with normalized Haar measure $d\theta / (2\pi)$ on $[-\pi, \pi)$. Total group volume $\int dU = 1$.
+   - Rooted gauge group $\mathcal{G}_{x_0} = \{h_{x_1} = e^{i\phi} : \phi \in [-\pi, \pi)\}$, Haar measure $dh = d\phi / (2\pi)$.
+   - Tree gauge condition: $U^h(b_1) = 1 \iff \phi = \theta_1$.
+   - Global augmented diffeomorphism $\Phi(e^{i\theta_1}, e^{i\theta_2}) = (e^{i(\theta_2 - \theta_1)}, e^{i\theta_1}) = (e^{i\hat{\theta}_2}, e^{i\phi})$.
+   - Inverse: $\Phi^{-1}(e^{i\hat{\theta}_2}, e^{i\phi}) = (e^{i\phi}, e^{i(\hat{\theta}_2 + \phi)})$.
+   - Measure pushforward: $\Phi_*(dU) = d\hat{U} dh$ with exact Jacobian 1.
+   - Compact-group cutoff: $\chi(U) = \mathbf{1}_{\{|\theta| \le \delta\}}$ with $\delta = \pi/3$ ($\cos \delta = 1/2$).
+   - Exact compact-group fiber weight:
+     $$W(\hat{\theta}_2) = \int_{-\pi}^\pi \frac{d\phi}{2\pi} \mathbf{1}_{\{|\phi| \le \delta\}} \mathbf{1}_{\{|\hat{\theta}_2 + \phi| \le \delta\}} = \frac{2\delta - |\hat{\theta}_2|}{2\pi} \mathbf{1}_{\{|\hat{\theta}_2| \le 2\delta\}}.$$
+   - **Exact Compact-Group Measure Loss Defect:**
+     $$\Delta_{\mathrm{compact\_measure}} = \int_{-\pi}^\pi \frac{d\hat{\theta}_2}{2\pi} W(\hat{\theta}_2) - \int_{-\pi}^\pi \frac{d\hat{\theta}_2}{2\pi} \chi(1, e^{i\hat{\theta}_2}) = \left(\frac{\delta}{\pi}\right)^2 - \frac{\delta}{\pi} = \left(\frac{1}{3}\right)^2 - \frac{1}{3} = \frac{1}{9} - \frac{1}{3} = -\frac{2}{9} \ne 0.$$
+   - **Exact Compact-Group Fiber Weight Defect at Slice Origin:**
+     $$\Delta_{\mathrm{compact\_weight\_origin}} = W(0) - 1 = \frac{2\delta}{2\pi} - 1 = \frac{1}{3} - 1 = -\frac{2}{3} \ne 0.$$
+   - **Exact Observable Expectation Defect on $F(\hat{U}) = \cos(\hat{\theta}_2)$:**
+     Pushforward expectation is $(\sin(\delta)/\pi)^2 = 3/(4\pi^2)$. Naive slice expectation is $\sin(\delta)/\pi = \sqrt{3}/(2\pi)$.
+     Defect: $\Delta_{\mathrm{compact\_obs}} = \frac{\sqrt{3}}{2\pi}\left(\frac{\sqrt{3}}{2\pi} - 1\right) \ne 0$.
+   - This compact-group certificate has zero Euclidean normalization ambiguity and confirms that naive slice projection causes exact measure and expectation defects on compact Lie groups.
+
+
+
