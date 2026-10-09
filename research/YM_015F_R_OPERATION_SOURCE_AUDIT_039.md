@@ -720,3 +720,85 @@ We audit ONE concrete actual admissible history $\alpha$ from Bałaban R-I (1.76
 4. **Corrected Dependency Ordering:**
    Uniform multiscale polymer activity summability is **NOT** the first dependency-satisfied obligation. The first required obligation is the proof of Lemma `YM-051F-ACTUAL-CHART-SUMMABILITY` on the concrete history domain.
 
+
+## YM-051R3: SOURCE/DOMAIN AND CONJECTURE WELL-POSEDNESS REPAIR
+
+### 1. Primary-Source Citation Supersession and Page/Equation Verification
+In Section YM-051R2 (lines 619, 697), citations referred to "Bałaban CMP 109 (1987) pp. 193–198". This citation is formally corrected and superseded:
+- **Erroneous Citation (Superseded):** CMP 109 (1987) pp. 193–198 (*Generation of Effective Actions*).
+- **Correct Primary Source:**
+  **T. Bałaban, *Large Field Renormalization. I. The Basic Step of the Renormalization Group*, Communications in Mathematical Physics 122, 175–202 (1989)**.
+- **Direct Primary PDF Page and Equation Mapping:**
+  - Section 1: pp. 180–202.
+  - Page 192, eq. (1.71)–(1.73): Decomposition of large-field component $Z_k^\prime = (\Omega_{k_0+1}^5)^c \cap Z$ and integration domain $\Lambda = (\Omega_{k_0+1}^4)^c \cap Z$.
+  - Page 193, eq. (1.75): Characteristic function $\chi_{k, \Lambda}$ on exterior $Z \cap \Lambda^c$.
+  - Page 194, eq. (1.76): Definition of termwise density $\rho_{k, \alpha}[V]$ with preliminary integration on $Z_h$.
+  - Page 194, Proposition 1 and eq. (1.79): Minimal background configuration $U_0 = U_{k, Z}(V_\Lambda^*)$.
+  - Page 195, eq. (1.81): Active fluctuation factorization $V^{\prime\prime} = \exp(i B^\prime) V_0$ on $\mathbb{B}_0$.
+  - Page 195, eq. (1.85)–(1.88): Compensating transformations under background gauge change.
+  - Page 195, eq. (1.89): Support-specific cutoff replacement $\chi_k^{\prime\prime} \chi^\prime = \chi^\prime$.
+  - Pages 195–196: Maximal tree graph $T_0 \subset \mathbb{B}_0$ constructed from nested parallelepipeds $P_1 \setminus P_2$.
+
+### 2. Geometric Domain Reconciliation: $\Lambda_0$ vs. $\Lambda \setminus Z_h$ and Scoping of Finite Examples
+1. **Enlarged Neighborhoods and Domain Inequality:**
+   In line 700 of Section YM-051R2, $\Lambda_0$ was loosely written as $\Lambda \setminus Z_h$. This is mathematically inaccurate and is superseded:
+   $$\Lambda_0 = \Lambda \cap \Omega_{k+1}^1 = \Lambda \cap (Z_h^{\prime \sim})^c \quad \text{(CMP 122 p. 195)}.$$
+   Because $Z_h \subset Z_h^\prime \subset Z_h^{\prime \sim}$, the set $Z_h^{\prime \sim}$ is a strictly larger regularized neighborhood of $Z_h$.
+   Consequently, $\Lambda_0 \subsetneq \Lambda \setminus Z_h$. The collar region $(\Lambda \setminus Z_h) \setminus \Lambda_0 = Z_h^{\prime \sim} \setminus Z_h$ carries delta constraints, preliminary boundary fields, and buffer bonds, but is **NOT** part of the active fluctuation domain $\Lambda_0$.
+2. **Active Bond Endpoints and Boundaries:**
+   - Active bonds: $\mathbb{B}_0 = \mathbb{U}_k \cap \Lambda_0$.
+   - Bonds in $\mathbb{U}_k$ that intersect the outer boundary $\partial \Lambda$ belong to $\mathbb{B}_0$.
+   - Bonds that intersect the internal boundary $\partial \Omega_{k+1}^1$ (touching $Z_h^{\prime \sim}$) are explicitly excluded from $\mathbb{B}_0$.
+   - Exterior sites on $\partial \Lambda$ and in $Z \cap \Lambda^c$ carry fixed exterior fields $V_k|_{Z \cap \Lambda^c}$ under cutoff $\chi_{k, \Lambda}$.
+3. **Explicit Scoping of Finite Certificates:**
+   The 4-site unit quaternion graph in Test 11 ($x_0=(1, 1)$, $x_1=(1, 0)$, $x_2=(2, 0)$, $x_3=(0, 1)$) is an explicit **toy finite graph certificate** illustrating the algebraic mechanism of multi-edge tree affine transport and cycle holonomy defect.
+   Its non-tree cycle edge $b_4 = ((2, 0), (0, 1))$ has coordinate displacement $(-2, 1)$ and Euclidean length $\sqrt{5}$, which is NOT a nearest-neighbor hypercubic lattice bond.
+   This graph is NOT an admissible Bałaban history on $\mathbb{Z}^4$; it is strictly scoped as a non-hypercubic algebraic certificate of the tree-gauge transport mechanism.
+
+### 3. Signed Determinant vs. Absolute Jacobian and Orientation Order
+In line 643 of Section YM-051R2, the claim that $\det(D_{V_0}) = +1$ universally is corrected:
+- On link $b = (x, y)$ oriented from parent $x$ to child $y$, the directional derivative of $U^h(b) = h_x U(b) h_y^{-1}$ with respect to Lie algebra parameters $\xi_x, \xi_y$ is:
+  $$(D_{V_0} \xi)(b) = \xi_x - \operatorname{Ad}_{V_0(b)} \xi_y.$$
+- For a rooted tree with root condition $\xi_{x_0} = 0$, the child site $\xi_y$ enters with coefficient $- \operatorname{Ad}_{V_0(b)}$.
+- On the 3-dimensional Lie algebra $\mathfrak{su}(2)$, the linear operator $- \operatorname{Ad}_{V_0(b)}$ has determinant:
+  $$\det(- \operatorname{Ad}_{V_0(b)}) = (-1)^3 \det(\operatorname{Ad}_{V_0(b)}) = (-1) \cdot (+1) = -1.$$
+- Therefore, for a tree with $k$ child edges directed away from the root, the signed block determinant is:
+  $$\det(D_{V_0}) = (-1)^{3 k} = (-1)^k.$$
+  The sign is $-1$ for odd $k$ and $+1$ for even $k$, and reverses if edge orientations are flipped.
+- In contrast, the **absolute Jacobian**:
+  $$|\det(D_{V_0})| = |-1|^k = 1$$
+  is universally and robustly equal to $1$, completely independent of edge orientation, basis order, or dimension parity.
+
+### 4. Observables: Scoped Toy Cross-Defect vs. Open Physical Flowed Non-Factorization
+1. **Toy Algebraic Scope:** The non-factorization defect $\Delta_{\mathrm{fact}} = -16/25 \ne 0$ for composite observable $\mathcal{O}(U_A, U_B) = \frac{1}{2} \operatorname{Tr}(U_A U_B)$ is strictly a toy algebraic certificate disproving the spatial factorization hypothesis $f(U_A) g(U_B)$ for coupled open links.
+2. **Physical Gauge Invariance & Open Status:** On a physical lattice gauge theory, the trace of two open links is not gauge invariant without closing paths. Furthermore, an infinitesimal Euler flow staple calculation does not prove non-factorization for the physical gauge-invariant flowed observable $\mathcal{O}_{(a, t)}(f)$ across non-linear trajectories at finite $t_{\mathrm{phys}} > 0$.
+3. **Formal Epistemic Classification:** The claim of non-factorization for the physical flowed observable remains formally classified as:
+   $$\mathbf{PHYSICAL\_FLOWED\_OBSERVABLE\_NON\_FACTORIZATION\_OPEN}.$$
+
+### 5. Refutation of Ill-Posed Lemma `YM-051F-ACTUAL-CHART-SUMMABILITY` and Replacement by Deterministic Lemma
+1. **Refutation of Proposed Probabilistic Formulation:**
+   The formulation of Lemma `YM-051F-ACTUAL-CHART-SUMMABILITY` in Section YM-051R2 is refuted as ill-posed:
+   - Haar measure on $SU(2)$ is a normalized translation-invariant group measure with NO $g$-dependence; naming $g$ cannot produce an $\mathcal{O}(e^{-c/g^2})$ probability bound under Haar measure.
+   - An $\mathcal{O}(e^{-c/g^2})$ suppression requires the Wilson action $\exp(-g^{-2} S(U))$, which is a weighted measure, not pure Haar measure.
+   - The event that the original configuration exits the chart ball (governed by $1 - \chi^\prime$) is NOT identical to the event that the tree-gauge transformed configuration exits the chart ball.
+   - Constants $C_k, c_k, M$, norms, and parameter ranges were undefined.
+2. **Replacement: Purely Deterministic First Bridge Lemma:**
+   We formulate the true, source-bound deterministic bridge lemma that precedes any statistical estimates:
+
+   **LEMMA `YM-051F-DETERMINISTIC-CHART-OVERLAP` (Deterministic Small-Field Chart Overlap and Remainder Decomposition):**
+   *For any admissible history $\alpha$ in Bałaban CMP 122 (1.76) on $\Lambda_0 = \Lambda \cap (Z_h^{\prime \sim})^c$ and active bonds $\mathbb{B}_0 = \mathbb{U}_k \cap \Lambda_0$:*
+   1. *Let $\mathcal{B}_{\delta_k^\prime} = \{B^\prime \in \mathfrak{su}(2)^{\mathbb{B}_0} : \|B^\prime(b)\| < \delta_k^\prime \ \forall b \in \mathbb{B}_0\}$ with small-field characteristic function $\chi^\prime = \mathbf{1}_{\mathcal{B}_{\delta_k^\prime}}$.*
+   2. *Let $h[V^{\prime\prime}] \in \mathcal{G}_{\Lambda_0}$ (rooted at $x_0$, $h_{x_0} = I$) be the unique sequential tree-fixing affine parallel transport map satisfying $V^{\prime\prime h}(b) = V_0(b)$ for all $b \in T_0$.*
+   3. *Define the deterministic chart overlap domain:*
+      $$\mathcal{E}_{\mathrm{chart}} = \left\{ B^\prime \in \mathcal{B}_{\delta_k^\prime} : \forall b \in \mathbb{B}_0 \setminus T_0, \ V^{\prime\prime h[V^{\prime\prime}]}(b) V_0(b)^{-1} \in \exp(\mathcal{B}_{\delta_k^\prime}) \right\}.$$
+   4. *On $\mathcal{E}_{\mathrm{chart}}$, the gauge slice coordinate map $B^{\prime h}|_{T_0} = 0$ is exact, the absolute Jacobian is $|\det(D_{V_0})| = 1$, and Haar measure satisfies exact measure equality.*
+   5. *The un-normalized termwise density $\rho_{k, \alpha}$ admits an exact deterministic decomposition:*
+      $$\rho_{k, \alpha} = \rho_{k, \alpha}^{\mathrm{tree-slice}} + \mathcal{R}_{\alpha, \mathrm{chart-exit}} + \mathcal{R}_{\alpha, \mathrm{large}}$$
+      *where:*
+      - $\rho_{k, \alpha}^{\mathrm{tree-slice}}$ *is the integral restricted to $\mathcal{E}_{\mathrm{chart}}$ on the gauge slice $B^{\prime h}|_{T_0} = 0$;*
+      - $\mathcal{R}_{\alpha, \mathrm{chart-exit}}$ *is the integral over $\mathcal{B}_{\delta_k^\prime} \setminus \mathcal{E}_{\mathrm{chart}}$ where the tree gauge rotates fluctuations outside the small-field chart;*
+      - $\mathcal{R}_{\alpha, \mathrm{large}}$ *is the remainder integral carrying $(1 - \chi^\prime)$.*
+   6. *Status & Dependency:*
+      *This deterministic decomposition is completely defined. Any subsequent weighted-measure tail estimate under the action $\exp(-g_k^{-2} A_k^{\prime\prime})$ is a separate, downstream analytic obligation that is conditionally blocked until the deterministic properties of $\mathcal{E}_{\mathrm{chart}}$ are certified.*
+
+

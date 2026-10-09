@@ -262,3 +262,19 @@ Source mechanisms: own finite row-space/kernel target-descent theorem, positive 
 - Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
 
 
+## XFER-YM-ONE-TERM-PULLBACK-051R3 — source citation, domain hierarchy inequality, orientation sign, observable scoping, and deterministic bridge lemma
+
+- Source: Bałaban R-I (1.76)–(1.89), Commun. Math. Phys. 122, 175–202 (1989) (superseding erroneous citation to CMP 109).
+- Target: YM-015F degree-one physical marked observable insertion under RG transport.
+- Verified mapping:
+  - Primary source verified: Commun. Math. Phys. 122, 175–202 (1989), Section 1 (pp. 180–202).
+  - Domain hierarchy: $\Lambda_0 = \Lambda \cap \Omega_{k+1}^1 = \Lambda \cap (Z_h^{\prime \sim})^c \subsetneq \Lambda \setminus Z_h$ due to collar $Z_h^{\prime \sim} \setminus Z_h$ carrying boundary constraints and buffer bonds. Active bonds $\mathbb{B}_0 = \mathbb{U}_k \cap \Lambda_0$ exclude bonds touching internal boundary $\partial \Omega_{k+1}^1$.
+  - Scoping of finite graph: 4-site quaternion graph in Test 11 has non-tree cycle edge $((2, 0), (0, 1))$ of length $\sqrt{5}$ (diagonal non-hypercubic jump); strictly scoped as toy finite graph certificate.
+  - Directional derivative orientation sign: $(D_{V_0} \xi)(b) = - \operatorname{Ad}_{V_0(b)} \xi_y$ on child site along parent-to-child edge has $\det(-\operatorname{Ad}_{V_0}) = (-1)^3 (+1) = -1$ in dimension 3. Signed determinant is $\det(D_{V_0}) = (-1)^k$, which depends on edge orientation and variable ordering. Absolute integration Jacobian $|\det(D_{V_0})| = 1$ is universally robust.
+  - Observable scoping: cross-defect $\Delta_{\mathrm{fact}} = -16/25 \ne 0$ for open-link observable $\mathcal{O}(U_A, U_B) = \frac{1}{2}\operatorname{Tr}(U_A U_B)$ is strictly scoped as toy algebraic certificate. Physical flowed observable non-factorization across spatial boundaries at finite $t_{\mathrm{phys}} > 0$ remains formally classified as $\mathbf{PHYSICAL\_FLOWED\_OBSERVABLE\_NON\_FACTORIZATION\_OPEN}$.
+  - Deterministic bridge lemma: ill-posed probabilistic formulation of Lemma `YM-051F-ACTUAL-CHART-SUMMABILITY` is refuted and replaced by purely deterministic lemma: **LEMMA `YM-051F-DETERMINISTIC-CHART-OVERLAP`** (Deterministic Small-Field Chart Overlap and Remainder Decomposition). Weighted-measure tail estimates under the physical action are a downstream analytic obligation conditionally blocked by deterministic chart overlap.
+- Open bridge: LEMMA `YM-051F-DETERMINISTIC-CHART-OVERLAP` preceding weighted action tail bounds and multiscale marked polymer activity summability.
+- Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
+
+
+

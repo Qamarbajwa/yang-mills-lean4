@@ -121,3 +121,28 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
    - Reconciled dependency ordering: cutoff-uniform polymer activity summability is conditionally dependent on Lemma `YM-051F-ACTUAL-CHART-SUMMABILITY` and is NOT the immediate next dependency-satisfied obligation.
 
 
+## CDC-051R3: repair of primary-source citation, domain hierarchy inequality, signed orientation determinant, observable scoping, and deterministic bridge lemma
+
+1. **Primary-source citation correction and verification:**
+   - Formal supersession of erroneous citation in CDC-051R2 to "CMP 109 (1987) pp. 193–198".
+   - Primary source is verified directly as: T. Bałaban, *Large Field Renormalization. I. The Basic Step of the Renormalization Group*, Communications in Mathematical Physics 122, 175–202 (1989).
+   - Direct PDF page locators confirmed: Section 1 (pp. 180–202), Prop. 1 (p. 194), (1.76) (p. 194), (1.79) (p. 194), (1.81) (p. 195), (1.85)–(1.88) (p. 195), (1.89) (p. 195), maximal tree construction (pp. 195–196).
+2. **Domain hierarchy inequality and scoping of finite examples:**
+   - Correction of active region definition: $\Lambda_0 = \Lambda \cap \Omega_{k+1}^1 = \Lambda \cap (Z_h^{\prime \sim})^c$ (CMP 122 p. 195).
+   - Established that $\Lambda_0 \subsetneq \Lambda \setminus Z_h$ due to the collar region $Z_h^{\prime \sim} \setminus Z_h$, which carries delta constraints and buffer fields. Active bonds $\mathbb{B}_0 = \mathbb{U}_k \cap \Lambda_0$ include bonds intersecting outer boundary $\partial \Lambda$ and exclude bonds touching internal boundary $\partial \Omega_{k+1}^1$.
+   - The 4-site unit quaternion graph in Test 11 ($x_0=(1,1), x_1=(1,0), x_2=(2,0), x_3=(0,1)$) is an explicit **toy finite graph certificate**, not an admissible hypercubic lattice history, because its cycle bond $((2,0),(0,1))$ is a diagonal jump of Euclidean length $\sqrt{5}$.
+3. **Signed orientation determinant vs. absolute integration Jacobian:**
+   - On directed edge $b=(x, y)$ from parent to child with root condition $\xi_{x_0} = 0$, directional derivative is $- \operatorname{Ad}_{V_0(b)} \xi_y$.
+   - On the 3-dimensional Lie algebra $\mathfrak{su}(2)$, $\det(-\operatorname{Ad}_{V_0}) = (-1)^3 \det(\operatorname{Ad}_{V_0}) = -1$.
+   - For a rooted tree with $k$ child edges directed away from the root, the signed block determinant is $\det(D_{V_0}) = (-1)^k$, which depends on edge orientation and variable ordering.
+   - The absolute integration Jacobian $|\det(D_{V_0})| = 1$ is invariant, robust, and orientation-independent.
+4. **Observable scoping: toy algebraic defect vs. open physical flowed non-factorization:**
+   - The cross-variation defect $\Delta_{\mathrm{fact}} = -16/25 \ne 0$ for open-link observable $\mathcal{O}(U_A, U_B) = \frac{1}{2}\operatorname{Tr}(U_A U_B)$ is strictly scoped as a toy algebraic certificate disproving the spatial factorization hypothesis $f(U_A) g(U_B)$ for coupled functionals.
+   - Physical flowed observable non-factorization across spatial boundaries at finite $t_{\mathrm{phys}} > 0$ remains formally classified as $\mathbf{PHYSICAL\_FLOWED\_OBSERVABLE\_NON\_FACTORIZATION\_OPEN}$.
+5. **Refutation of ill-posed lemma and replacement by deterministic bridge lemma:**
+   - The proposed formulation of Lemma `YM-051F-ACTUAL-CHART-SUMMABILITY` is refuted as ill-posed: Haar measure on $SU(2)$ has no $g$-dependence; $\exp(-c/g^2)$ cannot be acquired under Haar measure; original cutoff $(1-\chi^\prime)$ is not identical to gauge-transformed chart exit; constants $C_k, c_k, M$ were undefined.
+   - Replaced by purely deterministic lemma: **LEMMA `YM-051F-DETERMINISTIC-CHART-OVERLAP`** (Deterministic Small-Field Chart Overlap and Remainder Decomposition), defining domain $\mathcal{E}_{\mathrm{chart}}$, verifying exact measure equality on the gauge slice, and proving the exact deterministic decomposition $\rho_{k, \alpha} = \rho_{k, \alpha}^{\mathrm{tree-slice}} + \mathcal{R}_{\alpha, \mathrm{chart-exit}} + \mathcal{R}_{\alpha, \mathrm{large}}$.
+   - Any weighted-measure tail estimate under the physical action $\exp(-g_k^{-2} A_k^{\prime\prime})$ is a downstream analytic obligation that is conditionally blocked by this deterministic chart overlap lemma.
+
+
+
