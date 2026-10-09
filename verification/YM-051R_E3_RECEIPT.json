@@ -1,0 +1,26 @@
+{
+  "task": "YM-051R",
+  "baseline_revision": 53,
+  "baseline_sha": "bde427b977f395d53e51af7925ceaec54209b8fd",
+  "candidate_sha": "f30af9f49131afdd9c542ff7434acbc4525f8088",
+  "scientific_tree_hash": "2584d0036f931c783a0e783f1af401e55fc2b3d1b227fc7266a2a3b0df0632c6",
+  "git_blob_scientific_hash": "0b66646328b9b6534cbd32b1a06991bc9784a343ebd7b98ff6d31e9430a93c9c",
+  "scientific_files": 158,
+  "tests": "441 passed in 6.55s",
+  "workflow": "SERIALIZED_SHARED_WORKSPACE_PYTEST",
+  "negative_prefix": "literal Git bytes preserved",
+  "own_diagnostic": {
+    "finite_certificates": 11,
+    "tree_gauge_chart_map": "non-linear map B'^{h}(b) = (1/i) log(h_x exp(i B') V_0 h_y^{-1} V_0^{-1}) derived on injectivity chart ||B'|| < delta_k' <= pi",
+    "chart_derivative_at_slice": "directional derivative along generators X evaluated as (D_{V_0} X)(b) with det(D_{V_0}) = 1 along rooted tree T0",
+    "group_vs_algebra_measure": "compact boundary-free group Haar tree integration distinguished from Lie algebra delta on restricted charts with cutoffs",
+    "adjoint_preservation_theorem": "adjoint conjugation B' -> u_0 B' u_0^{-1} strictly preserves Frobenius norm and cannot zero out tree fluctuations (||u_0 B' u_0^{-1} - 0||_F = ||B'||_F > 0)",
+    "affine_parallel_transport": "tree-gauge fixing requires solving h_y = V_0^{-1} h_x exp(i B') V_0 along tree T0, decoupling AL background mixture covariance from tree-gauge fixing",
+    "explicit_transformed_template": "degree-one marked insertion carries explicit cutoffs chi_k, chi_{k, Lambda}, chi_h, chi_{h, 1/2}, chi' and explicit remainder R_{alpha, large}",
+    "tautology_replacement": "Test 11 replaces hardcoded tautologies with non-commutative SU(2) quaternion operations, norm preservation, affine transport failure, and plaquette coupling",
+    "reclassification": "ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN",
+    "first_missing_bridge": "multiscale marked polymer activity summability sum_alpha I_alpha under Bałaban cluster expansion remains the open bridge lemma",
+    "scope": "finite rational certificates and conditional one-term representation; multiscale cluster expansion summability and continuum limit remain open"
+  },
+  "source_provenance_correction": "Bałaban R-I (1.76)-(1.89) audited; tree-gauge chart map and slice derivative det(D_{V_0}) = 1 derived; adjoint conjugation decoupled from tree-gauge fixing; explicit transformed template and remainder sector instantiated; reclassified as CONDITIONAL_AND_OPEN (ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN)."
+}
