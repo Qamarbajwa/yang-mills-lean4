@@ -233,3 +233,18 @@ Source mechanisms: own finite row-space/kernel target-descent theorem, positive 
 - Allowed conclusion: Exact finite one-term coordinate and gauge-orbit representation proved within stated hypotheses.
 - Status: CONDITIONAL_ONE_TERM_REPRESENTATION_PROVED; no continuum or spectral gap promotion; zero DAG edges close.
 
+
+## XFER-YM-ONE-TERM-PULLBACK-051R — repaired tree-gauge chart map and conditional representation
+
+- Source: Bałaban R-I (1.76)–(1.89), Commun. Math. Phys. 122, 175–202 (1989).
+- Target: YM-015F degree-one physical marked observable insertion under RG transport.
+- Verified mapping:
+  - Chart map derived via matrix logarithm: $B^{\prime h}(b) = \frac{1}{i}\log(h_x \exp(i B^\prime(b)) V_0(b) h_y^{-1} V_0(b)^{-1})$ on injectivity chart $\|B^\prime(b)\| < \delta_k^\prime \le \pi$.
+  - Directional derivative at gauge slice $B^\prime = 0$ is background covariant lattice differential $(D_{V_0} X)(b) = X_x - \operatorname{Ad}_{V_0(b)}(X_y)$ with $\det(D_{V_0}) = \prod_{b \in T_0} |\det(\operatorname{Ad}_{V_0(b)})| = 1$ along rooted tree $T_0$.
+  - Unrestricted compact group Haar tree gauge integration is distinguished from Lie algebra delta with open chart and cutoff restrictions.
+  - Adjoint preservation proved: $\|u_0 B^\prime u_0^{-1}\|_F = \|B^\prime\|_F$ strictly preserves norm, proving adjoint conjugation cannot zero out tree fluctuations. Decouples AL background mixture transformation from tree-gauge fixing (affine parallel transport $h_y = V_0^{-1} h_x V_0$).
+  - Explicit transformed template carries all inherited cutoffs ($\chi_k, \chi_{k, \Lambda}, \chi_h, \chi_{h, 1/2}, \chi^\prime$), Lie algebra Haar Jacobian $J(B^\prime)$, and exact complementary remainder $\mathcal{R}_{\alpha, \mathrm{large}}$.
+- Open bridge: Multiscale marked polymer activity summability $\sum_\alpha \mathcal{I}_\alpha$ under Bałaban's cluster expansion.
+- Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
+
+

@@ -511,3 +511,104 @@ This finite representation for term $\alpha$ is completely instantiated and prov
 **The Multiscale Marked Polymer Activity Summability Theorem:**
 $$\sum_{\alpha} \mathcal{I}_\alpha[\mathcal{O}_{(a, t)}(f)] \quad \text{converges uniformly as } a_0 \to 0,$$
 which requires proving that the marked polymer activities $K_j^{(1)}$ satisfy the cluster-expansion tree bound $\|K_j^{(1)}\|_{B_j} \le C_j$ across all scales $j = 0, \dots, n$ under Bałaban's multiscale cluster expansion.
+
+
+## YM-051R: REPAIR OF TREE-GAUGE CHART MAP, ADJOINT-VS-TREE CONFLATION, EXPLICIT DENSITY REPRESENTATION, AND CONDITIONAL CLASSIFICATION
+
+### 1. Rigorous Derivation of Tree-Gauge Chart Map $h \mapsto B^{\prime h}$ and Slice Derivative
+In Section YM-051.5, the tree Faddeev–Popov identity was cited as $\Delta_{\mathrm{FP}} \equiv 1$ under group Haar measure, but its application to a Lie-algebra delta distribution $\prod_{b \in T_0} \delta(B^{\prime h}(b))$ over restricted coordinates omitted the chart mapping and its differential. Here we establish the exact chart representation:
+
+1. **Domain and Coordinate Chart:**
+   Let $\mathbb{B}_0 = \mathbb{U}_k \cap \Lambda_0$ be the active bond set. On each bond $b = (x, y) \in \mathbb{B}_0$, the link configuration is parameterized by:
+   $$V^{\prime\prime}(b) = \exp(i B^\prime(b)) V_0(b),$$
+   where $V_0(b) \in SU(2)$ is the fixed minimal background parallel transporter and $B^\prime(b) \in \mathfrak{su}(2)$ satisfies the small-field bound $\|B^\prime(b)\| < \delta_k^\prime \le \pi$. The matrix exponential $\exp: \mathfrak{su}(2) \to SU(2)$ is a diffeomorphism from the ball $\{B \in \mathfrak{su}(2) : \|B\| < \pi\}$ onto its image in $SU(2) \setminus \{-I\}$.
+
+2. **Site Gauge Transformation on Links:**
+   Let $\mathcal{G}_{\Lambda_0} = \prod_{x \in V(\Lambda_0)} SU(2)$ be the site gauge group. A gauge transformation $h = (h_x)_{x \in V(\Lambda_0)}$ acts on directed bond $b = (x, y)$ by:
+   $$V^{\prime\prime h}(b) = h_x V^{\prime\prime}(b) h_y^{-1} = h_x \exp(i B^\prime(b)) V_0(b) h_y^{-1}.$$
+   To express $V^{\prime\prime h}(b)$ in the Bałaban fluctuation chart relative to the same background $V_0(b)$, we write:
+   $$V^{\prime\prime h}(b) = \exp(i B^{\prime h}(b)) V_0(b).$$
+   Equating these two expressions yields:
+   $$\exp(i B^{\prime h}(b)) = h_x \exp(i B^\prime(b)) V_0(b) h_y^{-1} V_0(b)^{-1}.$$
+
+3. **Chart Map Definition via Matrix Logarithm:**
+   Whenever $h_x \exp(i B^\prime(b)) V_0(b) h_y^{-1} V_0(b)^{-1}$ stays within the injectivity radius (trace $> -2$), the transformed Lie algebra fluctuation $B^{\prime h}(b)$ is uniquely defined by:
+   $$B^{\prime h}(b) = \frac{1}{i} \log\left( h_x \exp(i B^\prime(b)) V_0(b) h_y^{-1} V_0(b)^{-1} \right).$$
+
+4. **Root Condition and Maximal Tree Graph:**
+   Let $x_0 \in V(\Lambda_0)$ be the designated tree root. The gauge group at the root is fixed: $h_{x_0} = I$.
+   The reduced gauge group is $G_{T_0} = \prod_{x \in V(\Lambda_0) \setminus \{x_0\}} SU(2)$.
+   The tree graph $T_0 \subset \mathbb{B}_0$ contains $|V(\Lambda_0)| - 1$ bonds and no closed loops, so each vertex $x \ne x_0$ has a unique path in $T_0$ to $x_0$.
+
+5. **Linearization and Derivative at the Gauge Slice:**
+   Consider an infinitesimal gauge transformation along generators $X = (X_x)_{x \in V(\Lambda_0) \setminus \{x_0\}} \in \mathfrak{su}(2)^{V(\Lambda_0) \setminus \{x_0\}}$ with $X_{x_0} = 0$:
+   $$h_x(\epsilon) = \exp(i \epsilon X_x) = I + i \epsilon X_x + \mathcal{O}(\epsilon^2).$$
+   At the gauge slice $B^\prime = 0$, evaluating the chart map:
+   $$h_x(\epsilon) V_0(b) h_y(\epsilon)^{-1} V_0(b)^{-1} = (I + i \epsilon X_x) V_0(b) (I - i \epsilon X_y) V_0(b)^{-1} + \mathcal{O}(\epsilon^2) = I + i \epsilon \left( X_x - V_0(b) X_y V_0(b)^{-1} \right) + \mathcal{O}(\epsilon^2).$$
+   Taking the logarithm and dividing by $i$:
+   $$\left. \frac{d}{d\epsilon} B^{\prime h(\epsilon)}(b) \right|_{\epsilon=0, B^\prime=0} = X_x - \operatorname{Ad}_{V_0(b)}(X_y) = (D_{V_0} X)(b),$$
+   where $D_{V_0}: \mathfrak{su}(2)^{V(\Lambda_0) \setminus \{x_0\}} \to \mathfrak{su}(2)^{T_0}$ is the background covariant lattice differential along tree bonds.
+   Because $T_0$ is a rooted tree, ordering vertices by tree distance from $x_0$ renders the matrix of $D_{V_0}$ block triangular with diagonal blocks given by $\pm \operatorname{Ad}_{V_0(b)}$ or $\pm I$.
+   Since $\det(\operatorname{Ad}_g) = 1$ for all $g \in SU(2)$, the Jacobian determinant of $D_{V_0}$ is:
+   $$\det(D_{V_0}) = \prod_{b \in T_0} |\det(\operatorname{Ad}_{V_0(b)})| = 1.$$
+
+6. **Unrestricted Group Tree Gauge vs. Lie Algebra Delta with Cutoffs:**
+   - On the full group $SU(2)^{T_0}$, normalized Haar measure $\int \prod_{b \in T_0} dh_b = 1$ integrates over compact space with no boundaries.
+   - In contrast, the Lie algebra delta $\delta(B^\prime)$ is supported on an open coordinate chart $\mathcal{U} = \{\|B^\prime\| < \delta_k^\prime\}$.
+   - If a gauge orbit exits the chart $\mathcal{U}$, the matrix logarithm ceases to be single-valued or crosses the cutoff $\chi^\prime$.
+   - Therefore, replacing group Haar tree gauge by a Lie algebra delta $\prod_{b \in T_0} \delta(B^\prime(b))$ is **not** an unconditional identity; it is strictly conditional on the small-field chart domain and boundary cutoffs.
+
+
+### 2. Adjoint Conjugation vs. Tree-Gauge Fixing Decoupling
+In Section YM-051.6, the joint compensating transformation under background axial-Landau gauge change $U_0 \mapsto U_0^{u_0}$ was presented alongside tree-gauge fixing. We prove that these two actions are mathematically distinct and cannot be conflated:
+
+1. **Adjoint Conjugation Preserves Norm and Spectrum:**
+   Let $u_0 \in SU(2)$ and $B^\prime \in \mathfrak{su}(2)$. Under adjoint conjugation, $B^\prime \mapsto u_0 B^\prime u_0^{-1}$.
+   Using the standard Frobenius / Hilbert–Schmidt norm on $\mathfrak{su}(2)$ (where $\|X\|_F = \sqrt{\frac{1}{2} \operatorname{Tr}(X^\dagger X)} = \sqrt{\frac{1}{2} \operatorname{Tr}(X^2)}$ for anti-Hermitian $X$, or $\sqrt{\operatorname{Tr}(B^{\prime 2})}$ for Hermitian $B^\prime$):
+   $$\|u_0 B^\prime u_0^{-1}\|_F^2 = \operatorname{Tr}((u_0 B^\prime u_0^{-1})^\dagger (u_0 B^\prime u_0^{-1})) = \operatorname{Tr}(u_0 B^{\prime \dagger} B^\prime u_0^{-1}) = \operatorname{Tr}(B^{\prime \dagger} B^\prime) = \|B^\prime\|_F^2.$$
+   Consequently, for any non-zero fluctuation $B^\prime \ne 0$:
+   $$\|u_0 B^\prime u_0^{-1} - 0\|_F = \|B^\prime\|_F > 0.$$
+   **Theorem (Adjoint Non-Zero Preservation):** Adjoint conjugation is an isometry of $\mathfrak{su}(2)$ and can NEVER map a non-zero fluctuation to zero. It merely rotates the Lie-algebra direction; it does not reduce degrees of freedom or fix a gauge slice.
+
+2. **Tree-Gauge Fixing Requires Affine Parallel Transport:**
+   To fix tree gauge on bond $b = (x, y) \in T_0$, one requires $V^{\prime\prime h}(b) = V_0(b)$, which is equivalent to $B^{\prime h}(b) = 0$.
+   From $h_x \exp(i B^\prime) V_0 h_y^{-1} = V_0$, the site gauge element $h_y$ at the target endpoint MUST satisfy:
+   $$h_y = V_0(b)^{-1} h_x \exp(i B^\prime(b)) V_0(b).$$
+   When $B^\prime = 0$, this is the affine parallel transport equation:
+   $$h_y = V_0(b)^{-1} h_x V_0(b).$$
+   Notice that $h_y \ne h_x$ whenever $V_0(b)$ does not commute with $h_x$.
+   Adjoint conjugation $B^\prime \mapsto u_0 B^\prime u_0^{-1}$ is an AL background mixture covariance transformation acting with the same parameter $u_0$ everywhere on the background field, whereas tree-gauge fixing recursively solves the non-local parallel transport equation edge-by-edge along the tree $T_0$.
+   Conflating the two is a severe conceptual error; they must be decoupled completely.
+
+
+### 3. Explicit Original Density vs. Transformed Template and Remainder Sector
+We present the exact original term from Bałaban R-I (1.76) and its explicit transformed template with all constraints and inherited cutoffs:
+
+1. **Original Unmarked Termwise Density (R-I (1.76), p. 194):**
+   $$\rho_{k, \alpha}[V] = \chi_k(\Omega_k^{\sim 4}) \, \chi_{k, \Lambda} \int dV_h \lceil_{Z_h} \chi_h(\Omega_h \cap Z_h) \, \mathbb{T}_h(Z_h) \int dV^{\prime\prime} \lceil_{\mathbb{B}_k^{\prime\prime} \cap (\Lambda \cap Z_h^c)} \chi_k^{\prime\prime} \, \exp\left(A_k^{\prime\prime}[V]\right).$$
+
+2. **Explicit Transformed Template with Inherited Cutoffs and Measure Factors:**
+   Introducing the Lie-algebra fluctuation coordinates $V^{\prime\prime}(b) = \exp(i B^\prime(b)) V_0(b)$ on active bonds $\mathbb{B}_0 = \mathbb{U}_k \cap \Lambda_0$, the degree-one physical marked insertion is:
+   $$\mathcal{I}_\alpha[\mathcal{O}_{(a, t)}(f)] = \chi_k(\Omega_k^{\sim 4}) \, \chi_{k, \Lambda} \int dV_h \lceil_{Z_h} \chi_h(\Omega_h \cap Z_h) \, \mathbb{T}_h(Z_h) \int_{\mathfrak{g}^{\mathbb{B}_0 \setminus T_0}} \prod_{b \in \mathbb{B}_0 \setminus T_0} dB^\prime(b) \, J(B^\prime(b)) \, \chi^\prime(B^\prime|_{T_0=0}) \, \chi_{h, 1/2}((\Omega_{h+1}^{\prime\prime \sim 2})^c \cap \Omega_h) \, \exp\left(A_k^{\prime\prime}[\exp(i B^\prime|_{T_0=0}) V_0]\right) \, \mathcal{O}_{(a, t)}(f)[U(V_h, \exp(i B^\prime|_{T_0=0}) V_0, V_k|_{Z \cap \Lambda^c})] + \mathcal{R}_{\alpha, \mathrm{large}}.$$
+
+3. **Complete Inventory of Inherited Cutoffs:**
+   - $\chi_k(\Omega_k^{\sim 4})$: scale $k$ large-field cutoff on domain $\Omega_k^{\sim 4}$;
+   - $\chi_{k, \Lambda}$: partition-of-unity characteristic function isolating exterior domain $Z \cap \Lambda^c$ (R-I (1.75));
+   - $\chi_h(\Omega_h \cap Z_h)$: scale $h$ cutoff on preliminary region $Z_h$;
+   - $\chi_{h, 1/2}((\Omega_{h+1}^{\prime\prime \sim 2})^c \cap \Omega_h)$: transition cutoff from scale $h$ to $h+1$ (R-I (1.89));
+   - $\chi^\prime(B^\prime) = \prod_{b \in \mathbb{B}_0} \mathbf{1}_{\|B^\prime(b)\| < \delta_k^\prime}$: small-field characteristic function on active bonds $\mathbb{B}_0$;
+   - $J(B^\prime(b)) = \det\left(\frac{1 - e^{-i \operatorname{ad}_{B^\prime(b)}}}{i \operatorname{ad}_{B^\prime(b)}}\right)$: Lie algebra Haar measure Jacobian on unconstrained bonds $b \in \mathbb{B}_0 \setminus T_0$.
+
+4. **Explicit Complementary Large-Field Remainder Term $\mathcal{R}_{\alpha, \mathrm{large}}$:**
+   Instead of an uninstantiated symbolic label, the exact complementary term is given by:
+   $$\mathcal{R}_{\alpha, \mathrm{large}} = \chi_k(\Omega_k^{\sim 4}) \, \chi_{k, \Lambda} \int dV_h \lceil_{Z_h} \chi_h(\Omega_h \cap Z_h) \, \mathbb{T}_h(Z_h) \int dV^{\prime\prime} \lceil_{\mathbb{B}_k^{\prime\prime} \cap (\Lambda \cap Z_h^c)} (1 - \chi^\prime) \, \chi_k^{\prime\prime} \, \exp\left(A_k^{\prime\prime}[V]\right) \, \mathcal{O}_{(a, t)}(f)[U(V_h, V^{\prime\prime}, V_k|_{Z \cap \Lambda^c})].$$
+   Every factor in $\mathcal{R}_{\alpha, \mathrm{large}}$ is mathematically explicit.
+
+
+### 4. Formal Reclassification
+The actual-model Bałaban coordinate pullback and tree-gauge orbit representation across external bonds $\mathbb{B}_0$, charts, and cutoffs are formally classified as:
+$$\text{Status: } \mathbf{CONDITIONAL\_AND\_OPEN}$$
+with persistent governance identifier:
+$$\mathbf{ACTUAL\_BALABAN\_COORDINATE\_PULLBACK\_AND\_TREE\_GAUGE\_CONDITIONAL\_AND\_OPEN}.$$
+No continuum limit or spectral gap estimate is closed. The structural no-go count remains strictly 0.
+

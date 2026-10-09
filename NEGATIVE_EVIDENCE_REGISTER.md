@@ -512,3 +512,16 @@ Positive T_epsilon fixes normalized vacuum but a contrast target recovered from 
   1. The single-term admissible representation $\mathcal{I}_\alpha[\mathcal{O}_{(a, t)}(f)]$ establishes the exact finite coordinate, gauge-orbit, and compensating transformation identities on active bonds $\mathbb{B}_0$, but does not prove uniform summability $\sum_\alpha \mathcal{I}_\alpha$ over the infinite family of polymer histories under the multiscale cluster expansion.
   2. The bound $\|K_j^{(1)}\|_{B_j} \le C_j$ across all RG scales $j = 0, \dots, n$ remains the first unresolved bridge lemma (`MULTISCALE_MARKED_POLYMER_ACTIVITY_SUMMABILITY_OPEN`).
   3. Classification: `METHOD_SPECIFIC_OBSTRUCTION`; structural no-go count remains 0; no continuum edge closes.
+
+
+## NEG-YM-051R-TREE-CHART-AND-ADJOINT-CONFLATION: Conflation of Adjoint Background Covariance with Tree-Gauge Fixing and Unconditioned Chart Delta (`YM-051R`)
+
+- **Discovery Date:** 2026-10-09
+- **Epistemic Classification:** `[METHOD_SPECIFIC_OBSTRUCTION]`
+- **Hypothesis tested:** Whether adjoint conjugation $B^\prime \mapsto u_0 B^\prime u_0^{-1}$ can zero out tree fluctuations, whether group Haar tree-gauge integration directly yields an unconditioned Lie-algebra delta on restricted coordinates, and whether the single-term representation closes without conditional chart and cutoff bounds.
+- **Result:** Falsified.
+  1. Adjoint conjugation is an inner automorphism preserving Frobenius norm: $\|u_0 B^\prime u_0^{-1}\|_F = \|B^\prime\|_F$. For non-zero $B^\prime \ne 0$, $\|u_0 B^\prime u_0^{-1} - 0\|_F = \|B^\prime\|_F > 0$; it can NEVER zero out a fluctuation. Adjoint covariance governs background AL mixture transformation, whereas tree-gauge fixing requires solving the affine parallel transport equation $h_y = V_0(b)^{-1} h_x \exp(i B^\prime(b)) V_0(b)$ along tree edges. Conflating the two was a defect that must be decoupled.
+  2. Group Haar measure on tree bonds integrates over compact $SU(2)^{T_0}$ with volume 1 and no boundaries. The Lie algebra delta $\prod_{b \in T_0} \delta(B^\prime(b))$ is defined on an open coordinate chart with cutoff $\chi^\prime$. Replacing group tree gauge by Lie algebra delta on restricted coordinates is strictly conditional on the orbit remaining within chart boundaries $\|B^\prime\| < \delta_k^\prime$.
+  3. The actual-model Bałaban coordinate pullback and tree-gauge representation are formally reclassified as `CONDITIONAL_AND_OPEN` (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`).
+  4. Classification: `METHOD_SPECIFIC_OBSTRUCTION`; structural no-go count remains 0; no continuum edge closes.
+
