@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 54
+revision: 55
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "f30af9f49131afdd9c542ff7434acbc4525f8088"
-  scientific_candidate_sha: "f30af9f49131afdd9c542ff7434acbc4525f8088"
-  review_bound_sha: "f30af9f49131afdd9c542ff7434acbc4525f8088"
-  evidence_closeout_head: "f30af9f49131afdd9c542ff7434acbc4525f8088"
-  closeout_resolution: "evidence_closeout_head binds the completed YM-051R receipt/state commit; later metadata commits preserve it. Resolve current authoritative HEAD from Git."
+  head: "15c8c13dc9f51728d34cccc80942ff4710030dee"
+  scientific_candidate_sha: "15c8c13dc9f51728d34cccc80942ff4710030dee"
+  review_bound_sha: "15c8c13dc9f51728d34cccc80942ff4710030dee"
+  evidence_closeout_head: "15c8c13dc9f51728d34cccc80942ff4710030dee"
+  closeout_resolution: "evidence_closeout_head binds the completed YM-051R2 receipt/state commit; later metadata commits preserve it. Resolve current authoritative HEAD from Git."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,14 +32,25 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 54
-  last_updated_at: "2026-10-09T12:05:00Z"
+  last_expected_revision: 55
+  last_updated_at: "2026-10-09T14:40:00Z"
   active_contract: "YM-015F-JET-002B"
-  frozen_candidate: "f30af9f49131afdd9c542ff7434acbc4525f8088"
+  frozen_candidate: "15c8c13dc9f51728d34cccc80942ff4710030dee"
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-051R2
+    scope_in: "Repair of SU(2) unit rational quaternion certificates via Pythagorean quadruples, multi-edge tree affine transport and cycle holonomy defect, observable mixed dependence non-factorization cross-defect, Lie algebra convention and determinant reconciliation, concrete actual-history audit, and formulation of Lemma YM-051F-ACTUAL-CHART-SUMMABILITY"
+    scope_out: "Multiscale marked polymer activity summability under Bałaban RG, chart stability proof, cutoff-uniform estimates, and continuum closure"
+    dependencies: ["YM-051R"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-051R2_E4_RAW_20261009.md"
+    acceptor: "verification/YM-051R2_TECHNICAL_ACCEPTANCE.md"
+    status: SCIENTIFICALLY_ACCEPTED
+    scope_limitation: "ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN_CHART_SUMMABILITY_OPEN"
   - id: YM-051R
     scope_in: "Repair of tree-gauge chart map and slice derivative det(D_{V_0}) = 1, proof of adjoint norm preservation vs tree-gauge fixing decoupling, explicit transformed template and remainder sector, formal reclassification to CONDITIONAL_AND_OPEN, and replacement of tautological certificates with non-commutative SU(2) quaternion arithmetic in Test 11"
     scope_out: "Multiscale marked polymer activity summability under Bałaban RG, cutoff-uniform estimates, and continuum closure"
@@ -1155,4 +1166,25 @@ repaired_one_term_representation_cycle:
   verification_workflow: SERIALIZED_SHARED_WORKSPACE_PYTEST
   next_automatic_task: YM-015F-JET-002B
   next_bounded_obligation: "Multiscale marked polymer activity recurrence and cluster expansion convergence across scales j = 0, ..., n under Bałaban RG; cutoff-uniform summability of ||K_j^(1)||_{B_j}"
+
+# Accepted bounded YM-051R2; chart stability lemma and multiscale marked polymer activity summability remain open.
+unit_rational_certificates_and_multi_edge_tree_cycle:
+  id: YM-051R2
+  status: SCIENTIFICALLY_ACCEPTED_WITH_LIMITATIONS
+  scientific_candidate_sha: 15c8c13dc9f51728d34cccc80942ff4710030dee
+  scientific_tree_hash: c9f53ceeb0d5b99357f8eb65aa371c5464ff9558b9fa68ce7cf5a8048e6f4fbc
+  git_blob_scientific_hash: 1d4a9f02d4f7c179808081dfba6a049ebb33df366900bd364d6a21e911e9f038
+  hash_scope: LOCAL_RAW_CHECKOUT_BYTES_WITH_DECLARED_EOL_LIMITATION
+  primary_task: YM-015F-JET-002B
+  scientific_edge_closures: []
+  review_ref: verification/raw/YM-051R2_E4_RAW_20261009.md
+  review_sha256: 0470e24a1d1a1d16fa6a15e344efcd31b107f95a0e9e55c05b9b93a9b3712552
+  review_verdict: SCIENTIFICALLY_ACCEPTABLE_WITH_LIMITATIONS
+  acceptance_ref: verification/YM-051R2_TECHNICAL_ACCEPTANCE.md
+  milestone_ref: verification/YM-051R2_MILESTONE.md
+  source_status: UNIT_RATIONAL_CERTIFICATES_MULTI_EDGE_TREE_TRANSPORT_AND_OBSERVABLE_NON_FACTORIZATION_PROVED
+  atlas_status: CONVENTIONS_RECONCILED_AND_LEMMA_YM_051F_ACTUAL_CHART_SUMMABILITY_FORMULATED
+  verification_workflow: SERIALIZED_SHARED_WORKSPACE_PYTEST
+  next_automatic_task: YM-015F-JET-002B
+  next_bounded_obligation: "LEMMA YM-051F-ACTUAL-CHART-SUMMABILITY (Small-Field Chart Stability and Remainder Activity Bound across scales j = 0, ..., n under Bałaban RG; probability bound on gauge orbit remaining in injectivity chart and exponential suppression of large-field remainder activity ||R_{alpha, large}|| <= C e^{-M/g^2})"
 

@@ -1,0 +1,24 @@
+{
+  "task": "YM-051R2",
+  "baseline_revision": 54,
+  "baseline_sha": "c6859211542a1c1e2983a9ffc5681425d44aa3f8",
+  "candidate_sha": "15c8c13dc9f51728d34cccc80942ff4710030dee",
+  "scientific_tree_hash": "c9f53ceeb0d5b99357f8eb65aa371c5464ff9558b9fa68ce7cf5a8048e6f4fbc",
+  "git_blob_scientific_hash": "1d4a9f02d4f7c179808081dfba6a049ebb33df366900bd364d6a21e911e9f038",
+  "scientific_files": 158,
+  "tests": "441 passed in 7.01s",
+  "workflow": "SERIALIZED_SHARED_WORKSPACE_PYTEST",
+  "negative_prefix": "literal Git bytes preserved",
+  "own_diagnostic": {
+    "finite_certificates": 11,
+    "unit_rational_quaternions": "all links and site transformations constructed from Pythagorean quadruples with exact unit norm ||q||^2 = 1 in Q; non-unit approximations excised",
+    "multi_edge_tree_transport": "sequential affine parallel transport verified across rooted multi-edge tree T0 with depth >= 2 and multiple branches; tree links simultaneously fixed to V0, while non-tree cycle bonds retain holonomy (defect squared 38536388/34328125 > 0)",
+    "observable_mixed_dependence": "cross-variation determinant Delta_fact = -16/25 != 0 for composite observable O(UA, UB) = (1/2) Tr(UA UB) across partial Zh rigorously proves non-factorization",
+    "convention_reconciliation": "explicit dictionary between Hermitian generators (Tr(B^2) >= 0, exp(iB)) and anti-Hermitian generators (Tr(X^2) <= 0, exp(X)); signed det(D_{V_0}) = +1 distinguished from absolute Jacobian |det(D_{V_0})| = 1",
+    "actual_history_audit": "Bałaban R-I (1.76) history alpha audited on concrete domains (Z cap Lambda^c, Zh, Lambda0, B0) with rooted gauge group h_{x0} = I",
+    "first_missing_bridge": "Lemma YM-051F-ACTUAL-CHART-SUMMABILITY (Small-Field Chart Stability and Remainder Activity Bound under Bałaban Cluster Expansion) formulated as immediate prerequisite",
+    "reclassification": "ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN",
+    "dependency_ordering": "multiscale polymer activity summability is conditionally blocked by chart stability and is NOT the immediate next dependency-satisfied obligation"
+  },
+  "source_provenance_correction": "Bałaban R-I (1.76)-(1.89) audited; exact unit rational quaternions verified; multi-edge rooted tree transport proved; observable non-factorization defect established; conventions reconciled; Lemma YM-051F-ACTUAL-CHART-SUMMABILITY formulated."
+}
