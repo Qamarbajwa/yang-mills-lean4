@@ -172,5 +172,14 @@ Primary YMH Lemma4.5 p54 ->Lemma5.5 p60 was text rechecked at https://www.pure.e
 5. **Arithmetic reconciliation & compact certificate:** Reconciled Test 12 pointwise density defect $\Delta_{\mathrm{weight}} = -1/2 \ne 0$ and integrated measure loss defect $\Delta_{\mathrm{measure}} = -1/4 \ne 0$. Certified exact compact-group defects on $U(1)$ / $SU(2)$: $\Delta_{\mathrm{compact\_measure}} = -2/9 \ne 0$, $\Delta_{\mathrm{compact\_weight}} = -2/3 \ne 0$, and observable moment defect on $\cos(\hat{\theta}_2)$. Earliest global 4D failure remains UNESTABLISHED; structural no-go count 0.
 
 
+## FA-001 boundary gauge invariance, actual graph correspondence, and effective factor inventory / YM-053R
+
+1. **Closed-plaquette trace invariance & refutation of single-link defect:** Refuted the invalid inference that boundary-crossing link transformation implies non-invariance of straddling plaquettes or physical observables. Proved that under consistent extended gauge transformations ($h \equiv I$ on $\Lambda_0^c$), all plaquette holonomies transform by exact conjugation $U^h(p) = h_{x_1} U(p) h_{x_1}^{-1}$, rendering plaquette traces $\operatorname{Tr}(U^h(p)) \equiv \operatorname{Tr}(U(p))$ identically invariant. Proved that physical gradient-flowed observables $\mathcal{O}_{(a, t)}(f)$ are identically gauge invariant. Contrasted with broken transformations (holding link fixed with one transformed endpoint). Retention of $\int dh$ in $\mathcal{W}_{\mathrm{eff}}$ is necessitated by link-based cutoffs $\chi^\prime$ and background terms.
+2. **Actual graph dimensions and boundary bond partition:** Active bond vertex set $V(\mathbb{B}_0) = \Lambda_0 \cup \partial_{\mathrm{ext}}\Lambda_0$. Dynamic site gauge group acts on $\Lambda_0$ with single root $x_0 \implies \dim(\mathcal{G}_{\Lambda_0, x_0}) = (\dim G)(|\Lambda_0| - 1)$. Spanning tree $T_0$ of internal vertices has $|T_0| = |\Lambda_0| - 1$ edges, while external boundary bonds belong to $\mathbb{B}_0 \setminus T_0$, ensuring dimensional balance $|\mathbb{B}_0| = |T_0| + |\mathbb{B}_0 \setminus T_0|$. Formulated LEMMA `YM-053F-ACTUAL-GRAPH-MEASURE-CORRESPONDENCE` and classified multiscale block tree correspondence as `GRAPH_MEASURE_CORRESPONDENCE_CONDITIONAL_ON_SOURCE_DOMAIN_AUDIT`.
+3. **Effective density factor inventory reconciliation:** Reconciled full 12-factor inventory in the termwise density, restoring boundary coupling factor $\Theta_{\mathrm{boundary}}[V^{\prime\prime}, V_h, V_k|_{Z \cap \Lambda^c}]$ under global vacuum normalization $Z_{\mathrm{vac}}^{-1}$.
+4. **Scoping of compact $U(1)$ vs non-abelian $SU(2)$ Haar measure:** Distinguished flat $U(1)$ Haar density $1/(2\pi)$ from curved $SU(2)$ Haar density $\frac{1}{\pi}\sin^2(\theta/2)$. Established explicit non-lifting barrier from $U(1)$ toy certificates to full $SU(2)$. Earliest global 4D failure remains UNESTABLISHED; structural no-go count 0.
+
+
+
 
 

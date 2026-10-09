@@ -305,5 +305,20 @@ Source mechanisms: own finite row-space/kernel target-descent theorem, positive 
 - Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
 
 
+## XFER-YM-ONE-TERM-PULLBACK-053R: Boundary Gauge Invariance Repair, Graph Measure Correspondence, and Effective Density Factor Inventory
+
+- Source: Bałaban R-I, Commun. Math. Phys. 122, 175–202 (1989).
+- Target: YM-015F degree-one physical marked observable insertion under RG transport.
+- Verified mapping:
+  - Exact closed-plaquette trace invariance under extended gauge transformations ($h \equiv I$ on $\Lambda_0^c$): $\operatorname{Tr}(U^h(p)) \equiv \operatorname{Tr}(U(p))$ proved for all straddling plaquettes via conjugation $U^h(p) = h_{x_1} U(p) h_{x_1}^{-1}$.
+  - Gauge invariance of physical gradient-flowed observables $\mathcal{O}_{(a, t)}(f)[U^h] \equiv \mathcal{O}_{(a, t)}(f)[U]$ proved. Refuted the invalid inference that single-link transformation implies action/observable non-invariance.
+  - Active bond vertex set $V(\mathbb{B}_0) = \Lambda_0 \cup \partial_{\mathrm{ext}}\Lambda_0$ and dimensional balance $|\mathbb{B}_0| = |T_0| + |\mathbb{B}_0 \setminus T_0|$ with $|T_0| = |\Lambda_0| - 1$ established. Formulated LEMMA `YM-053F-ACTUAL-GRAPH-MEASURE-CORRESPONDENCE` and classified multiscale block tree correspondence as `GRAPH_MEASURE_CORRESPONDENCE_CONDITIONAL_ON_SOURCE_DOMAIN_AUDIT`.
+  - Reconciled full 12-factor inventory of effective density, restoring boundary coupling factor $\Theta_{\mathrm{boundary}}[V^{\prime\prime}, V_h, V_k|_{Z \cap \Lambda^c}]$ under global vacuum normalization $Z_{\mathrm{vac}}^{-1}$.
+  - Established strict barrier between compact abelian $U(1)$ flat Haar measure and non-abelian $SU(2)$ curved Haar density $\frac{1}{\pi}\sin^2(\theta/2)$.
+- Open bridge: Exact Bałaban block tree correspondence (Lemma `YM-053F-ACTUAL-GRAPH-MEASURE-CORRESPONDENCE`) and deterministic chart overlap (Lemma `YM-051F-DETERMINISTIC-CHART-OVERLAP`).
+- Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
+
+
+
 
 

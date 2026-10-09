@@ -1032,4 +1032,166 @@ In Section YM-051R3 (lines 738–739), equations (1.85)–(1.88) and (1.89) were
    - This compact-group certificate has zero Euclidean normalization ambiguity and confirms that naive slice projection causes exact measure and expectation defects on compact Lie groups.
 
 
+## YM-053R: REPAIR OF BOUNDARY GAUGE INVARIANCE, ACTUAL GRAPH/MEASURE CORRESPONDENCE, AND ADMISSIBLE EFFECTIVE DENSITY FACTOR INVENTORY
+
+### 1. Refutation of Invalid Single-Link Non-Invariance Inference and Proof of Closed-Plaquette Trace Cancellation
+In Section YM-053.3, it was asserted that because boundary-crossing links $b = (x, y)$ (with $x \in \Lambda_0$ and $y \in Z \cap \Lambda^c$) transform non-trivially as $U^h(b) = h_x U(b) \ne U(b)$, straddling plaquettes in the action $A_k^{\prime\prime}$ and the gradient-flowed observable $\mathcal{O}_{(a, t)}(f)$ necessarily depend on $h$.
+**This inference is mathematically invalid and is formally refuted:**
+
+1. **The Single-Link vs. Closed-Loop Non-Sequitur:**
+   A single link $U(b)$ is not a gauge-invariant quantity. Conflating the non-invariance of a single link with the non-invariance of an action or physical observable is an elementary mathematical fallacy. Physical actions and observables are composed of gauge-invariant traces of closed loops (or covariant functional combinations).
+
+2. **Proof of Exact Closed-Plaquette Trace Invariance under Extended Gauge Transformations:**
+   Let $\mathcal{G}_{\Lambda_0, x_0} = \{h \in G^{\Lambda_0} : h_{x_0} = I\}$ be the rooted site gauge group on active vertices $\Lambda_0$. Extend $h$ to the entire lattice by setting:
+   $$h_x = I \quad \text{for all } x \notin \Lambda_0.$$
+   Under the standard lattice gauge transformation, every directed bond $b = (u, v)$ on the lattice transforms as:
+   $$U^h(u, v) = h_u U(u, v) h_v^{-1}.$$
+   Now consider an arbitrary oriented plaquette $p = (x_1, x_2, x_3, x_4)$ straddling the boundary $\partial \Lambda$, where $x_1, x_4 \in \Lambda_0$ (active sites) and $x_2, x_3 \in \Lambda_0^c$ (exterior sites).
+   Evaluating each of the four links:
+   - Link $b_1 = (x_1, x_2)$ (crossing from active to exterior):
+     $$U^h(b_1) = h_{x_1} U(b_1) h_{x_2}^{-1} = h_{x_1} U(b_1) I = h_{x_1} U(b_1).$$
+   - Link $b_2 = (x_2, x_3)$ (exterior link with both endpoints in $\Lambda_0^c$):
+     $$U^h(b_2) = h_{x_2} U(b_2) h_{x_3}^{-1} = I \cdot U(b_2) \cdot I = U(b_2).$$
+     *(An exterior link whose endpoints are both exterior stays identically fixed!)*
+   - Link $b_3 = (x_3, x_4)$ (crossing from exterior to active):
+     $$U^h(b_3) = h_{x_3} U(b_3) h_{x_4}^{-1} = I \cdot U(b_3) h_{x_4}^{-1} = U(b_3) h_{x_4}^{-1}.$$
+   - Link $b_4 = (x_4, x_1)$ (internal link with both endpoints in $\Lambda_0$):
+     $$U^h(b_4) = h_{x_4} U(b_4) h_{x_1}^{-1}.$$
+   Now compute the ordered product around the closed loop $p$:
+   $$\begin{aligned}
+   U^h(p) &= U^h(b_1) \, U^h(b_2) \, U^h(b_3) \, U^h(b_4) \\
+   &= (h_{x_1} U(b_1)) \, (U(b_2)) \, (U(b_3) h_{x_4}^{-1}) \, (h_{x_4} U(b_4) h_{x_1}^{-1}).
+   \end{aligned}$$
+   At vertex $x_4$, the interior factors cancel: $h_{x_4}^{-1} h_{x_4} = I$.
+   Thus:
+   $$U^h(p) = h_{x_1} \left( U(b_1) U(b_2) U(b_3) U(b_4) \right) h_{x_1}^{-1} = h_{x_1} U(p) h_{x_1}^{-1}.$$
+   The holonomy of the straddling plaquette transforms by exact conjugation by $h_{x_1} \in G$.
+   Taking the trace:
+   $$\operatorname{Tr}(U^h(p)) = \operatorname{Tr}(h_{x_1} U(p) h_{x_1}^{-1}) = \operatorname{Tr}(U(p)).$$
+   **Theorem (Exact Boundary Plaquette Trace Invariance):**
+   For every plaquette $p$ on the lattice—whether purely internal, purely exterior, or straddling the boundary—the plaquette trace is IDENTICALLY INVARIANT under the extended gauge transformation:
+   $$\operatorname{Tr}(U^h(p)) \equiv \operatorname{Tr}(U(p)).$$
+   Consequently, the Wilson plaquette action $S_W(U^h) \equiv S_W(U)$ is identically invariant.
+
+3. **Gauge Invariance of Physical Flowed Observables:**
+   Wilson gradient flow $\partial_t U_t(b) = - D S(U_t)(b) U_t(b)$ is strictly gauge covariant: if bare links transform as $U \mapsto U^h$, flowed links satisfy $U_t^h(b) = h_u U_t(b) h_v^{-1}$ identically.
+   Any gauge-invariant observable $\mathcal{O}_{(a, t)}(f)[U]$ constructed from flowed plaquette traces / Wilson loops satisfies:
+   $$\mathcal{O}_{(a, t)}(f)[U^h] \equiv \mathcal{O}_{(a, t)}(f)[U].$$
+   The assertion that the physical observable depends on $h$ along the fiber under a legitimate extended gauge transformation is refuted.
+
+4. **Contrast with Incomplete / Inconsistent Transformation:**
+   Conversely, suppose a transformation is applied inconsistently: for instance, if link $b_3 = (x_3, x_4)$ is held fixed ($U^h(b_3) = U(b_3)$) because it is labeled "exterior", while its endpoint $x_4 \in \Lambda_0$ transforms with $h_{x_4} \ne I$.
+   Then the closed-loop product becomes:
+   $$U^{\mathrm{broken}}(p) = h_{x_1} U(b_1) U(b_2) U(b_3) h_{x_4} U(b_4) h_{x_1}^{-1}.$$
+   Here the factor $h_{x_4}$ does not cancel, and $\operatorname{Tr}(U^{\mathrm{broken}}(p)) \ne \operatorname{Tr}(U(p))$.
+   Holding a link fixed with one transformed endpoint breaks gauge invariance. The actual Bałaban transformation on active bonds $\mathbb{B}_0$ transforms ALL bonds in $\mathbb{B}_0$ consistently, so boundary crossing links in $\mathbb{B}_0$ receive their legitimate endpoint factor $h_x$.
+
+5. **What Actually Causes $h$-Dependence Along the Fiber $\int dh$:**
+   While the plaquette action and physical observable are gauge invariant under consistent extended transformations, the effective fiber density $\mathcal{W}_{\mathrm{eff}}(\hat{V}) = \int dh \, \mathcal{F}(\Phi^{-1}(\hat{V}, h))$ CANNOT be factored into an unweighted slice value because:
+   - **Small-Field Cutoffs are Link-Based:** The characteristic function $\chi^\prime(V^{\prime\prime}) = \prod_{b \in \mathbb{B}_0} \mathbf{1}_{\|B^\prime(b)\| < \delta_k^\prime}$ depends on individual bond fluctuations $B^\prime(b) = \frac{1}{i}\log(V^{\prime\prime}(b) V_0(b)^{-1})$. Under $V^{\prime\prime} \mapsto \Phi^{-1}(\hat{V}, h)$, tree bonds satisfy $B^{\prime h}|_{T_0} = 0$, but the original configuration $V^{\prime\prime}(b) = h_x^{-1} V_0(b) h_y$ has $B^\prime(b) \ne 0$. The cutoff $\chi^\prime$ explicitly depends on $h$, cutting off gauge orbits non-trivially.
+   - **Gauge-Fixing and Background Terms:** If the effective action $A_k^{\prime\prime}$ contains quadratic fluctuation terms $S_2(B^\prime)$ relative to background $V_0$, or gauge-fixing terms, these terms depend on $h$.
+   - **Boundary Constraints:** Any boundary constraints $\Theta_{\mathrm{boundary}}$ that couple to individual link fluctuations or background variables depend on $h$.
+   **Conclusion:** Retaining the full integrand $\mathcal{F}(\Phi^{-1}(\hat{V}, h))$ inside the fiber integral $\int dh$ is mathematically safe and necessary due to cutoffs and background terms. However, asserting a "theorem" that the plaquette action or physical flowed observable is non-invariant simply because single crossing links transform was an invalid claim that is now formally repaired.
+
+
+### 2. Actual Graph Dimensions, Boundary Bonds, and Spanning Tree vs. Forest Correspondence
+1. **Precise Vertex and Bond Sets in Bałaban CMP 122:**
+   - Active region: $\Lambda_0 = \Lambda \cap \Omega_{k+1}^1 = \Lambda \cap (Z_h^{\prime \sim})^c \subset \mathbb{Z}^4$ (p. 195).
+   - Active bonds: $\mathbb{B}_0 = \mathbb{U}_k \cap \Lambda_0$.
+   - By Bałaban's rule (p. 195), bonds intersecting the outer boundary $\partial \Lambda$ belong to $\mathbb{B}_0$, while bonds intersecting the inner boundary $\partial \Omega_{k+1}^1$ are excluded from $\mathbb{B}_0$.
+   - The vertex set of bonds in $\mathbb{B}_0$ is:
+     $$V(\mathbb{B}_0) = \Lambda_0 \cup \partial_{\mathrm{ext}}\Lambda_0,$$
+     where $\partial_{\mathrm{ext}}\Lambda_0 = \{y \in Z \cap \Lambda^c : \exists x \in \Lambda_0, (x, y) \in \mathbb{B}_0\}$.
+   - The dynamic site gauge group acts ONLY on vertices in $\Lambda_0$. Vertices in $\partial_{\mathrm{ext}}\Lambda_0$ belong to the exterior domain $Z \cap \Lambda^c$ where fields are fixed to $V_k|_{Z \cap \Lambda^c}$; they have $h_y = I$ identically.
+   - Root condition: Exactly ONE site $x_0 \in \Lambda_0$ is fixed ($h_{x_0} = I$).
+   - Number of free dynamic sites: $|\Lambda_0| - 1$.
+   - Dimension of rooted gauge group: $\dim(\mathcal{G}_{\Lambda_0, x_0}) = (\dim G)(|\Lambda_0| - 1)$.
+
+2. **Dimension Count and Boundary Bond Partition:**
+   - Decompose active bonds into internal bonds and boundary bonds:
+     $$\mathbb{B}_0 = \mathbb{B}_0^{\mathrm{int}} \cup \mathbb{B}_0^{\mathrm{ext}},$$
+     where $\mathbb{B}_0^{\mathrm{int}} = \{(x, y) \in \mathbb{B}_0 : x, y \in \Lambda_0\}$ and $\mathbb{B}_0^{\mathrm{ext}} = \{(x, y) \in \mathbb{B}_0 : x \in \Lambda_0, y \in \partial_{\mathrm{ext}}\Lambda_0\}$.
+   - If $T_0 \subset \mathbb{B}_0^{\mathrm{int}}$ is a spanning tree of the internal vertices $\Lambda_0$ rooted at $x_0$, then:
+     $$|T_0| = |\Lambda_0| - 1.$$
+     The number of tree bonds $|T_0|$ matches the number of free gauge sites $|\Lambda_0| - 1$ EXACTLY.
+   - The external boundary bonds $\mathbb{B}_0^{\mathrm{ext}}$ CANNOT belong to $T_0$; they belong to $\mathbb{B}_0 \setminus T_0$.
+   - Dimension balance:
+     $$|\mathbb{B}_0| = |T_0| + |\mathbb{B}_0 \setminus T_0| = (|\Lambda_0| - 1) + |\mathbb{B}_0 \setminus T_0|.$$
+     The group configuration space has dimension $(\dim G)|\mathbb{B}_0| = \dim(G^{\mathbb{B}_0 \setminus T_0} \times \mathcal{G}_{\Lambda_0, x_0})$.
+   - On external bonds $b = (x, y) \in \mathbb{B}_0^{\mathrm{ext}}$, the transformed link is $\hat{V}(b) = h_x V^{\prime\prime}(b) h_y^{-1} = h_x V^{\prime\prime}(b)$ (since $h_y = I$). These bonds remain residual unconstrained dynamical degrees of freedom in the slice space $G^{\mathbb{B}_0 \setminus T_0}$.
+
+3. **Status of Bałaban's Block Tree Construction (CMP 122 pp. 195–196):**
+   Bałaban constructs trees in nested rectangular parallelepipeds $P_1 \setminus P_2$ and adds external bonds connecting blocks into a maximal tree $T_0$.
+   Whether Bałaban's $T_0$ is strictly contained in $\mathbb{B}_0^{\mathrm{int}}$ or includes boundary links across blocks requires detailed verification for every admissible history geometry.
+   We formulate:
+
+   **LEMMA `YM-053F-ACTUAL-GRAPH-MEASURE-CORRESPONDENCE` (Bałaban Spanning Tree / Forest and Boundary Bond Decomposition):**
+   *For any admissible history $\alpha$ in Bałaban CMP 122 (1.76):*
+   1. *The maximal tree graph $T_0 \subset \mathbb{B}_0$ spans precisely the $|\Lambda_0|$ active vertices with single root $x_0 \in \Lambda_0$ and $|T_0| = |\Lambda_0| - 1$ bonds;*
+   2. *All external boundary bonds connecting $\Lambda_0$ to $\partial \Lambda$ belong to $\mathbb{B}_0 \setminus T_0$;*
+   3. *The sequential tree gauge solver $h_y = V_0(b_y)^{-1} h_{p(y)} V^{\prime\prime}(b_y)$ uniquely determines $\mathcal{G}_{\Lambda_0, x_0}$ without boundary overconstraint;*
+   4. *The pushforward measure under $\Phi$ satisfies exact normalized Haar measure equality with unit Jacobian.*
+
+   *Epistemic Status:* While the generic finite-graph theorem is proved for any graph with spanning tree $T_0$ and single root $x_0$, the exact source correspondence for arbitrary multiscale Bałaban block boundaries remains formally classified as:
+   $$\mathbf{GRAPH\_MEASURE\_CORRESPONDENCE\_CONDITIONAL\_ON\_SOURCE\_DOMAIN\_AUDIT}.$$
+
+
+### 3. Complete Effective-Density Factor Inventory Reconciliation
+In Section YM-053.4 (line 998), the termwise density formula omitted the boundary factor $\Theta_{\mathrm{boundary}}$ that had been present in line 959. Here we provide the complete, reconciled inventory of all 12 mathematical factors entering the degree-one marked functional integral:
+
+1. $\chi_k(\Omega_k^{\sim 4})$: large-field cutoff at scale $k$ on domain $\Omega_k^{\sim 4}$;
+2. $\chi_{k, \Lambda}$: partition-of-unity characteristic function on exterior domain $Z \cap \Lambda^c$ (eq. (1.75));
+3. $\chi_h(\Omega_h \cap Z_h)$: scale $h$ cutoff on preliminary region $Z_h$;
+4. $\mathbb{T}_h(Z_h)$: preliminary scale transfer operator on short-distance fields $V_h$;
+5. $\Theta_{\mathrm{boundary}}[V^{\prime\prime}, V_h, V_k|_{Z \cap \Lambda^c}]$: **RESTORED** boundary coupling factor, carrying delta constraints and regularized collar boundary terms across $Z_h^{\prime \sim} \setminus Z_h$ and $\partial \Lambda$;
+6. $\chi_{h, 1/2}((\Omega_{h+1}^{\prime\prime \sim 2})^c \cap \Omega_h)$: transition cutoff from scale $h$ to $h+1$ (eq. (1.89));
+7. $\chi_k^{\prime\prime}[V^{\prime\prime}]$: scale $k$ active fluctuation cutoff;
+8. $\chi^\prime[V^{\prime\prime}] = \prod_{b \in \mathbb{B}_0} \mathbf{1}_{\|B^\prime(b)\| < \delta_k^\prime}$: small-field characteristic function on active bonds $\mathbb{B}_0$;
+9. $\exp(A_k^{\prime\prime}[V^{\prime\prime}])$: effective action on active bonds;
+10. $\mathcal{O}_{(a, t)}(f)[U(V_h, V^{\prime\prime}, V_k|_{Z \cap \Lambda^c})]$: gauge-invariant gradient-flowed physical observable;
+11. $\mathcal{R}_{\alpha, \mathrm{large}}$: exact complementary large-field remainder carrying $(1 - \chi^\prime) \chi_k^{\prime\prime}$;
+12. $Z_{\mathrm{vac}}^{-1}$: global vacuum partition function normalization.
+
+The complete termwise density with physical insertion is:
+$$\rho_{k, \alpha}[\mathcal{O}_{(a, t)}(f)] = \chi_k(\Omega_k^{\sim 4}) \, \chi_{k, \Lambda} \int dV_h \lceil_{Z_h} \chi_h(\Omega_h \cap Z_h) \, \mathbb{T}_h(Z_h) \int_{G^{\mathbb{B}_0 \setminus T_0}} d\hat{V} \, \mathcal{W}_{\mathrm{eff}}(\hat{V}; V_h, V_k|_{Z \cap \Lambda^c}) + \mathcal{R}_{\alpha, \mathrm{large}},$$
+where the full effective fiber density is:
+$$\mathcal{W}_{\mathrm{eff}}(\hat{V}; V_h, V_k) = \int_{\mathcal{G}_{\Lambda_0, x_0}} dh \, \chi_k^{\prime\prime}[\Phi^{-1}(\hat{V}, h)] \, \chi^\prime[\Phi^{-1}(\hat{V}, h)] \, \chi_{h, 1/2} \, \Theta_{\mathrm{boundary}}[\Phi^{-1}(\hat{V}, h), V_h, V_k] \, \exp(A_k^{\prime\prime}[\Phi^{-1}(\hat{V}, h)]) \, \mathcal{O}_{(a, t)}(f)[U(V_h, \Phi^{-1}(\hat{V}, h), V_k)].$$
+Normalized physical insertion: $\mathcal{I}_\alpha = Z_{\mathrm{vac}}^{-1} \rho_{k, \alpha}$.
+Every factor is mathematically explicit. No placeholder "complete" certifications are asserted; any unresolved multi-scale boundary factors remain explicitly scoped.
+
+
+### 4. Scoping of Compact $U(1)$ vs. Non-Abelian $SU(2)$ Haar Measure
+In Section YM-053.5, a 2-bond compact-group toy certificate was constructed on $U(1)$. We establish the precise mathematical distinction between $U(1)$ and $SU(2)$ Haar measures:
+1. **Abelian $U(1)$ Haar Measure:**
+   - Parameterized by $\theta \in [-\pi, \pi)$ with normalized Haar measure $d\mu_{U(1)} = d\theta / (2\pi)$.
+   - The Haar density is completely flat: $\rho_{U(1)}(\theta) = 1/(2\pi)$ everywhere.
+   - The orbit weight $W(\hat{\theta}_2) = \frac{2\delta - |\hat{\theta}_2|}{2\pi}$ for cutoff $[-\delta, \delta]$ is a piecewise-linear triangle function resulting from the convolution of flat box distributions.
+2. **Non-Abelian $SU(2)$ Haar Measure:**
+   - Parameterized by rotation angle $\theta \in [0, 2\pi)$ and axis $\mathbf{n} \in S^2$ (or unit quaternion $q \in S^3$), the class-function Haar measure has volume element:
+     $$d\mu_{SU(2)}(\theta) = \frac{1}{\pi} \sin^2(\theta/2) \, d\theta.$$
+   - The density is geometrically curved: it vanishes quadratically as $\theta^2 / (4\pi)$ at $\theta = 0$ and peaks at $\theta = \pi$.
+3. **Explicit Scoping Rule:**
+   - The $U(1)$ calculation is strictly an **abelian toy certificate** demonstrating that compact Lie groups with boundary cutoffs generate non-trivial fiber weights and measure defects;
+   - There is **NO AUTOMATIC LIFT** of $U(1)$ orbit weights, density formulas, or probability certificates to full non-abelian $SU(2)$;
+   - On $SU(2)$, computing fiber weights requires non-abelian quaternion / matrix multiplications and integration against curved $\sin^2(\theta/2)$ volume elements;
+   - Compact $U(1)$ weighted integrals must remain distinct from normalized expectations, and subgroup $U(1)$ Haar measures must remain distinct from full $SU(2)$ Haar measures.
+
+
+### 5. Formal Reclassification and Preserved Governance Boundaries
+1. **Classification:**
+   - Bounded task `YM-053R` is classified under `[METHOD_SPECIFIC_OBSTRUCTION]`.
+   - Structural no-go count remains strictly 0.
+   - All constitutional invariants remain preserved: `goal_complete = false`, `clay_problem = OPEN_AND_UNSOLVED`, `P3 = OPEN`, `E-CROSSOVER = OPEN`, `E-UV-FLOWED = PARTIAL_PROGRESS`, `YM-016 = BLOCKED`.
+2. **Proved Results within Bounded Scope:**
+   - Exact closed-plaquette trace invariance under extended gauge transformations ($h \equiv I$ outside $\Lambda_0$) proved for all plaquettes, including boundary-straddling plaquettes;
+   - Single-link transformation defect decoupled from closed-plaquette / physical observable invariance;
+   - Retention of $\int dh$ in effective fiber density $\mathcal{W}_{\mathrm{eff}}$ justified by link cutoffs $\chi^\prime$ and background terms;
+   - Active graph dimension count $|\mathbb{B}_0| = |T_0| + |\mathbb{B}_0 \setminus T_0|$ established, with external boundary bonds belonging to $\mathbb{B}_0 \setminus T_0$;
+   - Full 12-factor inventory of effective density reconciled, restoring $\Theta_{\mathrm{boundary}}$;
+   - $U(1)$ compact toy certificate scoped with explicit non-lifting barrier to full $SU(2)$.
+3. **Immediate Next Concrete Obligation:**
+   Under objective `YM-015F-JET-002B`, the next dependency-satisfied obligation is to verify the exact Bałaban tree graph correspondence (Lemma `YM-053F-ACTUAL-GRAPH-MEASURE-CORRESPONDENCE`) and establish deterministic chart overlap (Lemma `YM-051F-DETERMINISTIC-CHART-OVERLAP`) before advancing downstream weighted-measure tail estimates under the Wilson action.
+
+
+
 

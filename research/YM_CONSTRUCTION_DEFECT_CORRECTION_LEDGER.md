@@ -188,6 +188,29 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
    - Genuine compact-group certificate on $U(1)$ / $SU(2)$ certifies exact orbit weight $W(\hat{\theta}_2) = \frac{2\delta - |\hat{\theta}_2|}{2\pi}$, compact measure loss defect $\Delta_{\mathrm{compact\_measure}} = -2/9 \ne 0$, origin weight defect $\Delta_{\mathrm{compact\_weight}} = -2/3 \ne 0$, and observable moment defect on $\cos(\hat{\theta}_2)$ without Euclidean normalization confusion.
 
 
+## CDC-053R: repair of boundary gauge invariance, actual graph/measure correspondence, and admissible effective density factor inventory
+
+1. **Refutation of invalid single-link non-invariance inference & proof of closed-plaquette trace invariance:**
+   - Refutes the erroneous assertion from CDC-053 that boundary-crossing links transforming as $h_x U(b)$ implies straddling plaquettes and physical flowed observables necessarily depend on $h$.
+   - Proves by explicit four-link product calculation that under the consistent extended gauge transformation ($h \equiv I$ outside $\Lambda_0$), any straddling plaquette transforms by exact conjugation $U^h(p) = h_{x_1} U(p) h_{x_1}^{-1}$, so its trace is identically invariant: $\operatorname{Tr}(U^h(p)) \equiv \operatorname{Tr}(U(p))$.
+   - Proves that gauge-covariant gradient flow preserves exact gauge invariance for physical observables: $\mathcal{O}_{(a, t)}(f)[U^h] \equiv \mathcal{O}_{(a, t)}(f)[U]$.
+   - Contrasts with broken/incomplete transformations (holding a link fixed with one transformed endpoint), which break trace invariance.
+   - Re-establishes that retention of the fiber integral $\int dh$ in the effective density $\mathcal{W}_{\mathrm{eff}}$ is strictly required by link-based small-field cutoffs $\chi^\prime$ and background terms, not by spurious plaquette/observable non-invariance.
+2. **Actual graph dimensions, boundary bond partition, and tree-forest correspondence:**
+   - Identifies active bond vertex set $V(\mathbb{B}_0) = \Lambda_0 \cup \partial_{\mathrm{ext}}\Lambda_0$.
+   - Confirms that dynamic gauge transformations act only on $\Lambda_0$ with single root $x_0 \implies \dim(\mathcal{G}_{\Lambda_0, x_0}) = (\dim G)(|\Lambda_0| - 1)$.
+   - Establishes that internal spanning tree $T_0 \subset \mathbb{B}_0^{\mathrm{int}}$ has $|T_0| = |\Lambda_0| - 1$ edges, while external boundary bonds $\mathbb{B}_0^{\mathrm{ext}}$ belong to $\mathbb{B}_0 \setminus T_0$.
+   - Establishes exact dimensional balance: $|\mathbb{B}_0| = |T_0| + |\mathbb{B}_0 \setminus T_0| = (|\Lambda_0| - 1) + |\mathbb{B}_0 \setminus T_0|$.
+   - Formulates LEMMA `YM-053F-ACTUAL-GRAPH-MEASURE-CORRESPONDENCE` and classifies multiscale source block-tree correspondence as `GRAPH_MEASURE_CORRESPONDENCE_CONDITIONAL_ON_SOURCE_DOMAIN_AUDIT`.
+3. **Effective density factor inventory reconciliation:**
+   - Reconciles full 12-factor inventory in the termwise density, explicitly restoring $\Theta_{\mathrm{boundary}}[V^{\prime\prime}, V_h, V_k|_{Z \cap \Lambda^c}]$.
+   - Reconciles active bond domain $\mathbb{B}_0$ with preliminary domain $Z_h$ and exterior domain $Z \cap \Lambda^c$ under global vacuum normalization $Z_{\mathrm{vac}}^{-1}$.
+4. **Scoping of compact $U(1)$ vs non-abelian $SU(2)$ Haar measure:**
+   - Explicitly distinguishes flat $U(1)$ Haar density $1/(2\pi)$ from curved $SU(2)$ non-abelian Haar density $\frac{1}{\pi}\sin^2(\theta/2)$.
+   - Establishes strict barrier: no automatic lift of $U(1)$ orbit weights or probability certificates to full non-abelian $SU(2)$.
+
+
+
 
 
 
