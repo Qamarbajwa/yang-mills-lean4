@@ -1,7 +1,7 @@
 # NEXT ACTION
 
 ## Current primary action
-`YM-015F ACTIVE; YM-051R ACCEPTED_WITH_LIMITATIONS; YM-015F-JET-002B ACTIVE; P3 OPEN; CLAY_PROBLEM OPEN_AND_UNSOLVED; YM-016 BLOCKED`
+`YM-015F ACTIVE; YM-051R2 ACCEPTED_WITH_LIMITATIONS; YM-015F-JET-002B ACTIVE; P3 OPEN; CLAY_PROBLEM OPEN_AND_UNSOLVED; YM-016 BLOCKED`
 
 ## Scope
 - `YM-011` is `SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_UV_SCOPE)`.
@@ -184,4 +184,13 @@ Primary YM-015F-JET-002B remains ACTIVE. Completely instantiates repaired tree-g
 Freeze f30af9f49131afdd9c542ff7434acbc4525f8088; raw scientific hash 2584d0036f931c783a0e783f1af401e55fc2b3d1b227fc7266a2a3b0df0632c6 over 158 files; Git-blob hash 0b66646328b9b6534cbd32b1a06991bc9784a343ebd7b98ff6d31e9430a93c9c; 158 canonical files. Full test suite 441 passed in 6.55s. Negative Git-byte prefix preserved. Immutable raw E4 SHA-256 990dec207d06b554e330772560170bd8bbd69ad627464355085a1b61750ef2d7; verification/YM-051R_TECHNICAL_ACCEPTANCE.md grants bounded acceptance. Internal distinct execution contexts only (Writer 00ffe8a3..., Reviewer d37e44fd..., Acceptor a2056c9c... under IND1_DISTINCT_PROCESS_ACCEPTOR); no external peer review or human constitutional sign-off.
 
 DAG: YM-051 -> YM-051R accepted bounded milestone; scientific edge closures []. Smallest missing theorem remains cutoff-uniform marked polymer activity summability and large-field regulator control under Bałaban multiscale cluster expansion. Next automatic obligation under YM-015F-JET-002B: evaluate multiscale marked polymer activity recurrence and cluster expansion convergence across scales $j = 0, \dots, n$. METHOD_SPECIFIC_OBSTRUCTION only; structural no-go 0. goal_complete = false; Clay OPEN_AND_UNSOLVED; P3/crossover OPEN; E-UV-FLOWED PARTIAL_PROGRESS; local OS/free continuum OPEN_AND_UNSOLVED; spatial-flow RP compatibility retains PROVED; thermodynamic limit/OS reconstruction/physical spectral gap OPEN; YM-016 BLOCKED. Current authoritative HEAD comes from Git; evidence closeout binding follows.
+
+## Accepted bounded YM-051R2 — revision 55
+
+Primary YM-015F-JET-002B remains ACTIVE. Completely instantiates repaired SU(2) unit rational quaternion certificates via Pythagorean quadruples, multi-edge rooted tree affine transport and non-tree cycle holonomy defect, observable mixed dependence non-factorization cross-defect, reconciliation of Hermitian vs anti-Hermitian generator conventions and signed determinant vs absolute Jacobian, concrete actual-history audit, and formulation of Lemma `YM-051F-ACTUAL-CHART-SUMMABILITY`.
+
+Freeze 15c8c13dc9f51728d34cccc80942ff4710030dee; raw scientific hash c9f53ceeb0d5b99357f8eb65aa371c5464ff9558b9fa68ce7cf5a8048e6f4fbc over 158 files; Git-blob hash 1d4a9f02d4f7c179808081dfba6a049ebb33df366900bd364d6a21e911e9f038; 158 canonical files. Full test suite 441 passed in 7.01s. Negative Git-byte prefix preserved. Immutable raw E4 SHA-256 0470e24a1d1a1d16fa6a15e344efcd31b107f95a0e9e55c05b9b93a9b3712552; verification/YM-051R2_TECHNICAL_ACCEPTANCE.md grants bounded acceptance. Internal distinct execution contexts only (Writer 00ffe8a3-c73a-4096-b0e7-53138b34c21a, Reviewer fa7b8aa6-896f-4836-961b-8f7844561345, Acceptor 4629eec4-50b0-4559-a271-14dfcc2347cf under IND1_DISTINCT_PROCESS_ACCEPTOR); no external peer review or human constitutional sign-off.
+
+DAG: YM-051R -> YM-051R2 accepted bounded milestone; scientific edge closures []. Smallest missing theorem remains Lemma `YM-051F-ACTUAL-CHART-SUMMABILITY` (Small-Field Chart Stability and Remainder Activity Bound under Bałaban Cluster Expansion), preceding cutoff-uniform marked polymer activity summability. Next automatic obligation under YM-015F-JET-002B: resolve small-field chart stability and large-field remainder bounds for admissible history $\alpha$ before advancing multiscale summability. METHOD_SPECIFIC_OBSTRUCTION only; structural no-go 0. goal_complete = false; Clay OPEN_AND_UNSOLVED; P3/crossover OPEN; E-UV-FLOWED PARTIAL_PROGRESS; local OS/free continuum OPEN_AND_UNSOLVED; spatial-flow RP compatibility retains PROVED; thermodynamic limit/OS reconstruction/physical spectral gap OPEN; YM-016 BLOCKED. Current authoritative HEAD comes from Git; evidence closeout binding follows.
+
 
