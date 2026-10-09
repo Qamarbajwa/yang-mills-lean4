@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 56
+revision: 57
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "58f51b19f34e7713ab1a85738149f293bc886520"
-  scientific_candidate_sha: "58f51b19f34e7713ab1a85738149f293bc886520"
-  review_bound_sha: "58f51b19f34e7713ab1a85738149f293bc886520"
-  evidence_closeout_head: "58f51b19f34e7713ab1a85738149f293bc886520"
-  closeout_resolution: "evidence_closeout_head binds the completed YM-051R3 receipt/state commit; later metadata commits preserve it. Resolve current authoritative HEAD from Git."
+  head: "bc32b6903ea7dbd7d3b02b22009745e7c3c93a35"
+  scientific_candidate_sha: "bc32b6903ea7dbd7d3b02b22009745e7c3c93a35"
+  review_bound_sha: "bc32b6903ea7dbd7d3b02b22009745e7c3c93a35"
+  evidence_closeout_head: "bc32b6903ea7dbd7d3b02b22009745e7c3c93a35"
+  closeout_resolution: "evidence_closeout_head binds the completed YM-052 receipt/state commit; later metadata commits preserve it. Resolve current authoritative HEAD from Git."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,14 +32,25 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 56
-  last_updated_at: "2026-10-09T15:05:00Z"
+  last_expected_revision: 57
+  last_updated_at: "2026-10-09T15:40:00Z"
   active_contract: "YM-015F-JET-002B"
-  frozen_candidate: "58f51b19f34e7713ab1a85738149f293bc886520"
+  frozen_candidate: "bc32b6903ea7dbd7d3b02b22009745e7c3c93a35"
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-052
+    scope_in: "Printed-page mapping repair to Bałaban CMP 122 (1989) (pp. 197, 198), exact geometric collar difference identity (Lambda \\ Zh) \\ Lambda0 = Lambda cap (Zh_prime_tilde \\ Zh) and strictness precision, refutation of tree pushforward unweighted slice assumption and proof of non-trivial fiber weights W(B_hat_prime), finite toy regression certificate for measure loss / fiber weights, single root sequential boundary admissibility vs multi-site overconstraint"
+    scope_out: "Integration of non-trivial fiber weights across gauge orbits, proof of deterministic chart overlap lemma, weighted-measure tail estimates under Wilson action, multiscale marked polymer activity summability under Bałaban RG, cutoff-uniform estimates, and continuum closure"
+    dependencies: ["YM-051R3"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-052_E4_RAW_20261009.md"
+    acceptor: "verification/YM-052_TECHNICAL_ACCEPTANCE.md"
+    status: SCIENTIFICALLY_ACCEPTED
+    scope_limitation: "UNPROVED_PENDING_FIBER_WEIGHT_INTEGRATION"
   - id: YM-051R3
     scope_in: "Source citation supersession to Bałaban CMP 122 (1989), geometric domain hierarchy reconciliation Lambda0 strictly subset of Lambda \\ Zh, finite graph scoping, directional derivative signed determinant det(D_{V_0}) = (-1)^k vs absolute Jacobian |det(D_{V_0})| = 1, observable scoping of toy algebraic cross-defect vs open physical flowed non-factorization, refutation of ill-posed probabilistic chart lemma, and replacement by deterministic Lemma YM-051F-DETERMINISTIC-CHART-OVERLAP"
     scope_out: "Proof of deterministic chart overlap lemma, weighted-measure tail estimates under Wilson action, multiscale marked polymer activity summability under Bałaban RG, cutoff-uniform estimates, and continuum closure"
@@ -1219,3 +1230,25 @@ source_domain_and_chart_overlap_cycle:
   verification_workflow: SERIALIZED_SHARED_WORKSPACE_PYTEST
   next_automatic_task: YM-015F-JET-002B
   next_bounded_obligation: "LEMMA YM-051F-DETERMINISTIC-CHART-OVERLAP (Deterministic Small-Field Chart Overlap and Remainder Decomposition; proof that small-field chart overlap domain E_chart is non-empty, gauge slice restriction on tree is exact, and remainder decomposition rho_{k, alpha} = rho_{k, alpha}^{tree-slice} + R_{alpha, chart-exit} + R_{alpha, large} is deterministic; preceding downstream weighted-measure tail estimates)"
+
+# Accepted bounded YM-052; fiber weight integration, deterministic chart overlap lemma, downstream tail estimates, and multiscale marked polymer activity summability remain open.
+tree_pushforward_and_fiber_weight_cycle:
+  id: YM-052
+  status: SCIENTIFICALLY_ACCEPTED_WITH_LIMITATIONS
+  scientific_candidate_sha: bc32b6903ea7dbd7d3b02b22009745e7c3c93a35
+  scientific_tree_hash: 790bb4336f62f1007ed2033da0c5d57759d57826f79e6ad9f1e98147f0866094
+  git_blob_scientific_hash: 78e789f76a9e41db34fe8f93e5352f1868964bbff18fdcb6c090b56f161f0e77
+  hash_scope: LOCAL_RAW_CHECKOUT_BYTES_WITH_DECLARED_EOL_LIMITATION
+  primary_task: YM-015F-JET-002B
+  scientific_edge_closures: []
+  review_ref: verification/raw/YM-052_E4_RAW_20261009.md
+  review_sha256: d0bab837ff61e25aa7981a22da5825fd7207a85a07bd9246fc981680868c3f78
+  review_verdict: SCIENTIFICALLY_ACCEPTABLE_WITH_LIMITATIONS
+  acceptance_ref: verification/YM-052_TECHNICAL_ACCEPTANCE.md
+  milestone_ref: verification/YM-052_MILESTONE.md
+  source_status: PRINTED_PAGES_VERIFIED_COLLAR_IDENTITY_PROVED_AND_BOUNDARY_OVERCONSTRAINT_REFUTED
+  atlas_status: TREE_PUSHFORWARD_TO_SLICE_REFUTED_PENDING_FIBER_WEIGHT_INTEGRATION
+  verification_workflow: SERIALIZED_SHARED_WORKSPACE_PYTEST
+  next_automatic_task: YM-015F-JET-002B
+  next_bounded_obligation: "Fiber-weight integration W(B_hat_prime) = int_{Fiber} dh J_orbit chi_prime and proof of Lemma YM-051F-DETERMINISTIC-CHART-OVERLAP (Deterministic Small-Field Chart Overlap and Remainder Decomposition; preceding downstream weighted-measure tail estimates)"
+

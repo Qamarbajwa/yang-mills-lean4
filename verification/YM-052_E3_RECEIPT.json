@@ -1,0 +1,22 @@
+{
+  "task": "YM-052",
+  "baseline_revision": 56,
+  "baseline_sha": "40523e02a61ca20e6c495bb37d083ce5539ce920",
+  "candidate_sha": "bc32b6903ea7dbd7d3b02b22009745e7c3c93a35",
+  "scientific_tree_hash": "790bb4336f62f1007ed2033da0c5d57759d57826f79e6ad9f1e98147f0866094",
+  "git_blob_scientific_hash": "78e789f76a9e41db34fe8f93e5352f1868964bbff18fdcb6c090b56f161f0e77",
+  "scientific_files": 158,
+  "tests": "442 passed in 6.57s",
+  "workflow": "SERIALIZED_SHARED_WORKSPACE_PYTEST",
+  "negative_prefix": "literal Git bytes preserved",
+  "own_diagnostic": {
+    "finite_certificates": 12,
+    "primary_source_printed_pages": "verified Bałaban CMP 122 (1989) author/journal printed pages: Prop 1 & (1.79) p. 194, (1.81) p. 195, tree pp. 195-196, (1.85)-(1.88) printed p. 197, (1.89) printed p. 198; distinguished from PDF page packaging indices",
+    "collar_difference_identity": "(Lambda \\ Zh) \\ Lambda0 = Lambda cap (Zh_prime_tilde \\ Zh); strict inclusion holds iff collar intersects Lambda; verified Geometry B equality countermodel",
+    "tree_pushforward_refutation": "tree gauge fixing eliminates 3|T0| dimensions; small-field cutoff is not gauge invariant; full augmented map Phi proves pushforward carries fiber weight W(B_hat_prime); equating to slice integral causes measure loss",
+    "toy_regression_measure_loss": "Test 12 certifies uncoupled volume factor loss Delta_fiber = -1/4 != 0 and coupled quadratic moment defect Delta_coupled = -11/1536 != 0",
+    "boundary_admissibility": "single root h_{x0} = I yields unique sequential tree solvability; multiple boundary fixed sites overconstrain tree equations with 4/5 holonomy defect on generic configurations",
+    "missing_bridges": "fiber weight integration W(B_hat_prime) and deterministic chart overlap Lemma YM-051F-DETERMINISTIC-CHART-OVERLAP precede downstream weighted-measure tail estimates"
+  },
+  "source_provenance_correction": "Bałaban CMP 122 (1989) printed pages corrected (pp. 197, 198); collar difference identity proved; tree pushforward measure loss refuted pending fiber weights; boundary admissibility reconciled."
+}
