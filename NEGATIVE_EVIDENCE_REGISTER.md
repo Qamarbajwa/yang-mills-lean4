@@ -501,3 +501,14 @@ Positive T_epsilon fixes normalized vacuum but a contrast target recovered from 
   3. **Declaration Heads & Proof Status:** The phantom declaration head `lattice_spin_decay_2d` does not exist. The comparator challenge specifies `def ExponentialDecay : Prop` and `theorem main : ExponentialDecay := by sorry`. The candidate solution `Main.lean` contains proof script text `theorem main : ExponentialDecay := by ...`. However, because downloaded code is untrusted and no reproducible kernel-checked build receipt is verified, proof status is strictly `UNVERIFIED_UPSTREAM_PROOF_CODE`.
   4. **Inspected Scope vs. Nonexistence Theorem:** Direct inspection of the scope doc, comparator challenge, manifest, and solution main module establishes a search-negative finding: zero declarations exist for continuum QFT construction, Osterwalder–Schrader axioms, non-Gaussianity, or 4D Yang–Mills. This search-negative finding across inspected primary files is distinguished from an unproved universal assertion of repo-wide nonexistence.
   5. **Transfer Status:** Classification remains `UNVERIFIED_CANDIDATE_PREPRINT` and `METHOD_SPECIFIC_OBSTRUCTION`; allowed transfer conclusion is strictly None; zero DAG edges close.
+
+
+## NEG-YM-051-ONE-TERM-REPRESENTATION: Single-Term Admissible Pullback Insufficiency for Multiscale Cluster Expansion and Continuum Limit (`YM-051`)
+
+- **Discovery Date:** 2026-10-09
+- **Epistemic Classification:** `[METHOD_SPECIFIC_OBSTRUCTION]`
+- **Hypothesis tested:** Whether instantiating the exact coordinate pullback, tree-gauge resolution, and compensating transformation for ONE admissible history term $\alpha$ from Bałaban R-I (1.76) suffices to establish multiscale marked polymer activity summability or the continuum limit of flowed correlation functions.
+- **Result:** Falsified.
+  1. The single-term admissible representation $\mathcal{I}_\alpha[\mathcal{O}_{(a, t)}(f)]$ establishes the exact finite coordinate, gauge-orbit, and compensating transformation identities on active bonds $\mathbb{B}_0$, but does not prove uniform summability $\sum_\alpha \mathcal{I}_\alpha$ over the infinite family of polymer histories under the multiscale cluster expansion.
+  2. The bound $\|K_j^{(1)}\|_{B_j} \le C_j$ across all RG scales $j = 0, \dots, n$ remains the first unresolved bridge lemma (`MULTISCALE_MARKED_POLYMER_ACTIVITY_SUMMABILITY_OPEN`).
+  3. Classification: `METHOD_SPECIFIC_OBSTRUCTION`; structural no-go count remains 0; no continuum edge closes.

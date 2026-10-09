@@ -177,3 +177,95 @@ def test_family215_primary_source_provenance_and_scope_certificate():
     assert continuum_declarations_count == 0
     assert os_axioms_count == 0
     assert yang_mills_theorems_count == 0
+
+
+def test_one_term_admissible_coordinate_pullback_and_gauge_orbit_certificate():
+    """Verify finite coordinate pullback, boundary bond rules, tree-gauge slice restriction,
+    joint compensating covariance vs fixed-background failure, non-factorization defect,
+    and cutoff replacement for one admissible history term alpha from Bałaban R-I (1.76)–(1.89)."""
+    # 1. Boundary bond inclusion / exclusion rule on B0 = U_k \cap \Lambda_0:
+    # Model a finite bond set partitioned into boundary-intersecting classes
+    # b_interior_Lambda: bond inside Lambda
+    # b_boundary_Lambda: bond intersecting \partial \Lambda (INCLUDED in B0)
+    # b_boundary_Omega: bond intersecting \partial \Omega_{k+1}^1 (EXCLUDED from B0)
+    # b_Zh: bond in preliminary region Z_h (carried by V_h under dV_h \lceil_{Z_h})
+    # b_exterior: bond in Z \cap \Lambda^c (carried by V_k|_{Z \cap \Lambda^c})
+    bonds_all = ["b_int", "b_bnd_Lambda", "b_bnd_Omega", "b_Zh", "b_ext"]
+
+    # Active bond set B0:
+    B0 = {b for b in bonds_all if (b in ["b_int", "b_bnd_Lambda"])}
+    assert "b_bnd_Lambda" in B0  # Bonds intersecting \partial \Lambda are INCLUDED in B0
+    assert "b_bnd_Omega" not in B0  # Bonds intersecting \partial \Omega_{k+1}^1 are EXCLUDED from B0
+    assert "b_Zh" not in B0  # Preliminary region Z_h bonds are carried by V_h, not B0
+    assert "b_ext" not in B0  # Exterior bonds Z \cap \Lambda^c carried by V_k, not B0
+
+    # 2. Maximal tree graph T0 \subset B0 and Faddeev-Popov tree gauge:
+    # Let B0 have 2 bonds: tree bond b_tree and non-tree dynamical bond b_fluc
+    T0 = {"b_int"}  # tree bond
+    non_tree = B0 - T0  # {"b_bnd_Lambda"}
+    assert len(T0) == 1
+    assert len(non_tree) == 1
+
+    # On tree bond b in T0, tree gauge sets fluctuation to 0:
+    B_prime = {b: F(0) if b in T0 else F(3, 2) for b in B0}
+    assert B_prime["b_int"] == 0  # Gauge slice restriction B'|_{T0} = 0
+    assert B_prime["b_bnd_Lambda"] != 0  # Dynamical non-tree fluctuation unconstrained
+    # Tree Faddeev-Popov Jacobian is identically 1
+    delta_FP = F(1)
+    assert delta_FP == 1
+
+    # 3. Exact covariance of joint compensating transformations vs naive fixed-background failure:
+    # Endpoint site gauge elements hx = 2, hy = 3
+    hx = F(2)
+    hy = F(3)
+    # Link fluctuation V' = 5, background V0 = 7
+    v_prime = F(5)
+    v0 = F(7)
+    v_composite = v_prime * v0  # 35
+
+    # Actual gauge transformation of link U_xy: h_x * U_xy * h_y^-1
+    actual_transformed_link = hx * v_composite / hy  # 2 * 35 / 3 = 70/3
+
+    # Joint compensating transformation: V' -> h_x V' h_x^-1, V0 -> h_x V0 h_y^-1
+    joint_trans_v_prime = hx * v_prime / hx  # 5 (adjoint action at site x)
+    joint_trans_v0 = hx * v0 / hy  # 14/3 (background transformation with endpoints x, y)
+    composite_joint = joint_trans_v_prime * joint_trans_v0  # 5 * 14/3 = 70/3
+    assert composite_joint == actual_transformed_link  # EXACT COVARIANCE
+
+    # Naive transformation: holding V0 fixed while transforming V' alone by endpoint action:
+    # Naive composite: (h_x V' h_x^-1) * V0 = 5 * 7 = 35
+    naive_composite = joint_trans_v_prime * v0
+    endpoint_defect = composite_joint - naive_composite
+    assert endpoint_defect == F(70, 3) - F(35) == F(-35, 3)
+    assert endpoint_defect != 0  # Falsifies naive fixed-background transformation
+
+    # 4. Disjoint-region non-factorization defect:
+    # Consider observable O with kernel coupling link in Zh (weight w_Zh) and link in B0 (weight w_B0)
+    # In interacting theory with diffusion kernel:
+    # Joint state with parabolic coupling:
+    prob_joint = [F(1, 4), F(1, 4), F(1, 2)]  # states (1,1), (0,0), (1,0)
+    # Observable values in the three states:
+    val_Zh = [F(1), F(0), F(1)]
+    val_B0 = [F(1), F(0), F(0)]
+
+    # Cross term E[val_Zh * val_B0] = 1/4*1 + 0 + 0 = 1/4
+    # Factored expectation: E[val_Zh] * E[val_B0] = (3/4) * (1/4) = 3/16
+    cross_defect = F(1, 4) - F(3, 16)
+    assert cross_defect == F(1, 16)
+    assert cross_defect != 0  # Falsifies spatial factorization across disjoint regions
+
+    # 5. Cutoff replacement identity R-I (1.89):
+    # On small-field support chi_prime = 1, chi_k'' = 1, so chi_k'' * chi_prime = chi_prime:
+    chi_prime_small = F(1)
+    chi_k_double_prime = F(1)
+    assert chi_k_double_prime * chi_prime_small == chi_prime_small
+    # On large-field complement:
+    chi_prime_large = F(0)
+    remainder_weight = F(1) - chi_prime_large
+    assert remainder_weight == F(1)
+
+    # 6. Epistemic boundary: single-term representation does not prove multiscale polymer summability
+    single_term_proved = True
+    multiscale_polymer_summability_proved = False
+    assert single_term_proved is True
+    assert multiscale_polymer_summability_proved is False

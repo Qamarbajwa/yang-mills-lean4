@@ -422,3 +422,92 @@ We audited the external candidate manuscript from the openai/math repository at 
 2. **Non-linear fluctuation source:** On S^2, writing q = (pi, sigma) with sigma = sqrt(1 - ||pi||^2) = 1 - 1/2 ||pi||^2 - ... proves that J . q = J_pi . pi + J_sigma sqrt(1 - ||pi||^2) is strictly non-linear in the fluctuation coordinates pi. It shifts the fluctuation Hessian by -J_sigma delta_ij and does not complete the square linearly.
 3. **Green's kernel vs. uniform source analyticity:** Local L1 integrability of (-Delta)^-1(x, y) ~ ln |x-y|^-1 in 2D does not establish cutoff-uniform source analyticity of non-linear observables without multiscale cluster expansion bounds.
 4. **Resolvent domain and norm specification:** For the observable Hessian B = D^2 O_(a,t)(f)[V] in 4D, at fixed flow time t_phys > 0, gradient flow smoothing bounds B on L2(Lambda_a, su(N)) orthogonal to gauge zero modes. The obstacle is not an infinite operator norm at fixed t > 0, but the cutoff-uniform summability of the marked polymer activity ||K_j^(1)||_B_j under Bałaban's multiscale RG.
+
+
+## YM-051: ONE-TERM ADMISSIBLE R-I(1.76) MARKED COORDINATE AND GAUGE-ORBIT REPRESENTATION
+
+### 1. Primary Source Extraction & Metadata
+- **Primary Source:** T. Bałaban, *Large Field Renormalization. I. The Basic Step of the Renormalization Group*, Communications in Mathematical Physics 122, 175–202 (1989).
+- **Inspected Range:** Pages 192–198, specifically Section 1, equations (1.71)–(1.76), Proposition 1, (1.77)–(1.89).
+- **Direct Visual & Digital Extraction:** Verified from `C:\Users\arqam\AppData\Local\Temp\YM043_review_RI.pdf` via high-resolution rendering.
+
+### 2. Specification of ONE Explicit Admissible History Term $\alpha$
+At the retained summed $\mathbb{T}/\zeta$ level, we select ONE explicit admissible history term $\alpha$ generated after $N$ preliminary scale integrations:
+1. **Scale Parameters:** Lattice spacing $a_k = L^{-k} a_0$, with block scale $M \ge 100$ and $L \ge 2$.
+2. **Domain Hierarchy:**
+   - Previous retained large-field region $Z$, a rectangular parallelepiped union of $M$-cubes.
+   - Scale index $k_0$ where $L^{-(k - k_0 + 1)} R_{k - k_0 + 1} = 1$, with $N_0 = k - k_0$.
+   - Large-field component $Z_k^\prime = (\Omega_{k_0+1}^5)^c \cap Z$ (eq. (1.10), p. 192), a rectangular parallelepiped contained in a cube of size $100M$.
+   - Integration domain $\Lambda$:
+     $$\Lambda = (\Omega_{k_0+1}^4)^c \cap Z \quad \text{(R-I (1.73), p. 192)}$$
+     obtained by adding exactly one layer of $M$-cubes to $Z_k^\prime$. $\Lambda$ is a rectangular parallelepiped contained in a cube of size $100M$.
+   - Preliminary integration domain $Z_h \subset \Lambda$: a rectangular domain on which constraint delta functions have already been integrated out (p. 194).
+   - Active fluctuation domain:
+     $$\Lambda_0 = \Lambda \cap \Omega_{k+1}^1 = \Lambda \cap (Z_h^{\prime \sim})^c \quad \text{(p. 195)}.$$
+   - Boundary and external bond set $\mathbb{B}_0$:
+     $$\mathbb{B}_0 = \mathbb{U}_k \cap \Lambda_0 \quad \text{(p. 195)}.$$
+     *Boundary bond convention (R-I p. 195):* Bonds $b \in \mathbb{U}_k$ that intersect the outer boundary $\partial \Lambda$ belong to $\mathbb{B}_0$. Bonds that intersect the internal boundary $\partial \Omega_{k+1}^1$ (i.e., touching $Z_h^{\prime \sim}$) DO NOT belong to $\mathbb{B}_0$.
+   - Exterior domain: $Z \cap \Lambda^c$, carrying field variables $V_k|_{Z \cap \Lambda^c}$ governed by characteristic function $\chi_{k, \Lambda}$ from the decomposition of unity $1 = \chi_{k, \Lambda} + (1 - \chi_{k, \Lambda})$ (eq. (1.75), p. 193).
+3. **Unmarked Termwise Density (R-I (1.76), p. 194):**
+   $$\rho_{k, \alpha}[V] = \chi_k(\Omega_k^{\sim 4}) \chi_{k, \Lambda} \int dV_h \lceil_{Z_h} \chi_h(\Omega_h \cap Z_h) \mathbb{T}_h(Z_h) \int dV^{\prime\prime} \lceil_{\mathbb{B}_k^{\prime\prime} \cap (\Lambda \cap Z_h^c)} \chi_k^{\prime\prime} \exp A_k^{\prime\prime}[V].$$
+
+### 3. Coordinate Coverage and Factorization Scope
+- **Active fluctuation factorization on $\mathbb{B}_0$:**
+  On the bond set $\mathbb{B}_0$, the configuration $V^{\prime\prime}$ factorizes as:
+  $$V^{\prime\prime}(b) = V^\prime(b) V_0(b), \quad V_0 = M_{\mathbb{B}_k^\prime}(U_0) \quad \text{(R-I (1.81), p. 195)}$$
+  where $U_0 = U_{k, Z}(V_\Lambda^*)$ is the critical background configuration (eq. (1.79)) from Proposition 1 (p. 194), and $V^\prime = \exp(i B^\prime)$ with $B^\prime \in \mathfrak{g}^{\mathbb{B}_0}$.
+- **Link coverage disclaimer:**
+  The fluctuation representation $V^{\prime\prime} = \exp(i B^\prime) V_0$ covers ONLY the active bond set $\mathbb{B}_0$.
+  - It does NOT cover links in $Z_h$, which are carried by the preliminary field $V_h$ under measure $dV_h \lceil_{Z_h}$ and operator $\mathbb{T}_h(Z_h)$.
+  - It does NOT cover links in $Z \cap \Lambda^c$, which are carried by the exterior field $V_k|_{Z \cap \Lambda^c}$ under cutoff $\chi_{k, \Lambda}$.
+  - It does NOT replace residual scale operators $\mathbb{T}_k$ by a Gaussian; all preliminary and residual operations are strictly retained.
+
+### 4. Degree-One Physical Insertion Pullback
+Let $\mathcal{O}_{(a, t)}(f)[U]$ be the gauge-invariant gradient-flowed observable at positive flow time $t_{\mathrm{phys}} > 0$:
+$$\mathcal{O}_{(a, t)}(f)[U] = a^4 \sum_{x \in \Lambda_a} f(x) E_{(a, t)}(x)[U].$$
+In the degree-one marked partition function $Z(\eta) = Z_{\mathrm{vac}} + \eta \langle \mathcal{O}_{(a, t)}(f) \rangle Z_{\mathrm{vac}} + \mathcal{O}(\eta^2)$, the contribution from term $\alpha$ is:
+$$\mathcal{I}_\alpha[\mathcal{O}_{(a, t)}(f)] = \chi_k(\Omega_k^{\sim 4}) \chi_{k, \Lambda} \int dV_h \lceil_{Z_h} \chi_h(\Omega_h \cap Z_h) \mathbb{T}_h(Z_h) \int dV^{\prime\prime} \lceil_{\mathbb{B}_k^{\prime\prime} \cap (\Lambda \cap Z_h^c)} \chi_k^{\prime\prime} \exp(A_k^{\prime\prime}[V]) \, \mathcal{O}_{(a, t)}(f)[U(V_h, V^{\prime\prime}, V_k|_{Z \cap \Lambda^c})].$$
+
+*Non-Factorization Proof:*
+Positive flow time $t > 0$ generates parabolic diffusion with RMS radius $r_{\mathrm{diff}} = \sqrt{8 t_{\mathrm{phys}}}$. For test functions $f$ whose diffusion envelope intersects both $Z_h$ and $\Lambda \cap Z_h^c$, the flowed field strength $G_{\mu\nu}(x, t)$ depends simultaneously on links in $Z_h$, links in $\mathbb{B}_0$, and links in $Z \cap \Lambda^c$. Consequently, the physical insertion does NOT factor into $\mathcal{O}_{Z_h}[V_h] \cdot \mathcal{O}_{\Lambda \setminus Z_h}[V^{\prime\prime}]$. The preliminary integration over $V_h$ and the fluctuation integration over $V^{\prime\prime}$ remain non-trivially coupled through the physical insertion.
+
+### 5. Gauge Orbit Resolution, Maximal Tree $T_0$, and Slice Restriction
+1. **Tree Graph Construction (R-I p. 195–196):**
+   Across the nested rectangular parallelepipeds $P_1 \supset P_2 \dots$, contours $\Gamma_{y, x}$ connecting $x \in P_1 \setminus P_2$ to base point $y = (a_1 + 1/2, \dots, a_d + 1/2)$ build tree graph $T = \bigcup_{x} \Gamma_{y, x}$.
+   Adding external bonds $[(a_1^\prime - 1/2, \dots), (a_1^\prime + 1/2, \dots)]$ intersecting $\partial P_1$, and for $P_1 = \Lambda$ adding $[(y_1 - 1, y_2, \dots), y]$, yields tree graph $T_0 \subset \mathbb{B}_0$.
+2. **Faddeev–Popov Tree-Gauge Resolution:**
+   Let $G_{T_0} = \prod_{x \in V(\Lambda_0) \setminus \{x_0\}} G_x$ be the site gauge group rooted at $x_0$. Because $T_0$ contains no closed loops, the tree Jacobian is strictly constant: $\Delta_{\mathrm{FP}} \equiv 1$ under normalized Haar measure.
+   On configuration space, inserting the resolution of unity $\Delta_{\mathrm{FP}} \int_{G_{T_0}} dh \prod_{b \in T_0} \delta(B^{\prime h}(b)) = 1$ and performing the functional change of variables $B^\prime \mapsto B^{\prime h^{-1}}$ using gauge invariance of the measure, action, and physical observable $\mathcal{O}_{(a, t)}(f)[U^h] = \mathcal{O}_{(a, t)}(f)[U]$ evaluates the group volume to $\operatorname{Vol}(G_{T_0}) = 1$ and restricts the functional integral to the gauge slice:
+   $$\prod_{b \in T_0} \delta(B^\prime(b)).$$
+   *Crucial distinction:* Fluctuation variables on non-tree bonds $b \in \mathbb{B}_0 \setminus T_0$ remain unconstrained dynamical degrees of freedom.
+
+### 6. Compensating Transformations (R-I (1.85)–(1.88))
+Transforming background $U_0$ to the axial-Landau (AL) mixture gauge (eqs. (1.85)–(1.87), p. 197) with gauge parameter $u_0$:
+$$U_0 \mapsto U_0^{u_0} = \exp(i \eta \mathbb{A}_0)$$
+requires simultaneous compensating transformations:
+- on $V_h$: site transformation restricted to $\partial^+(Z_h^{\prime \sim})^{(h)}$;
+- on $V^\prime$: transformation in the adjoint representation $B^\prime \mapsto u_0 B^\prime u_0^{-1}$.
+At link endpoints $(x, y)$, site gauge transformations act with endpoint factors $(h_x, h_y)$. Bałaban's joint compensating transformation satisfies:
+$$V^{\prime\prime h}_{xy} = (h_x V^\prime_{xy} h_x^{-1}) (h_x V_{0, xy} h_y^{-1}) = h_x (V^\prime_{xy} V_{0, xy}) h_y^{-1} = h_x V^{\prime\prime}_{xy} h_y^{-1}.$$
+This guarantees that composite links transform covariantly and the physical insertion $\mathcal{O}_{(a, t)}(f)[U]$ is identically invariant. A naive transformation holding $V_0$ fixed while transforming $B^\prime$ alone fails by an endpoint mismatch $(h_x V_0 h_y^{-1} \ne V_0 h_y^{-1})$.
+
+### 7. Support-Specific Cutoff Replacement (R-I (1.89))
+On $\mathbb{B}_0$, decomposition of unity $1 = \chi^\prime + (1 - \chi^\prime)$ with $\chi^\prime = \chi(\{|B^\prime(b)| < \delta_k^\prime \text{ for } b \in \mathbb{B}_0\})$ separates small and large fields.
+On the surviving small-field support $\chi^\prime$, Bałaban's cutoff replacement identity (1.89, p. 198) holds:
+$$\chi_k(\Omega_k^{\sim 4}) \chi_{k, \Lambda} \chi_{h, 1/2}((\Omega_{h+1}^{\prime\prime \sim 2})^c \cap \Omega_h) \chi^\prime \chi_h(\Omega_h \cap Z_h) \chi_k^{\prime\prime} = \chi_k(\Omega_k^{\sim 4}) \chi_{k, \Lambda} \chi_{h, 1/2}((\Omega_{h+1}^{\prime\prime \sim 2})^c \cap \Omega_h) \chi^\prime.$$
+This allows dropping the previous cutoff $\chi_k^{\prime\prime}$ strictly on the small-field branch. The complementary branch $(1 - \chi^\prime)$ is explicitly carried into the large-field remainder $\mathcal{R}_{\alpha, \mathrm{large}}$.
+
+### 8. Established Proved Identity for Term $\alpha$
+Within stated finite hypotheses, the degree-one marked functional integral for term $\alpha$ is:
+$$\mathcal{I}_\alpha[\mathcal{O}_{(a, t)}(f)] = \chi_k(\Omega_k^{\sim 4}) \chi_{k, \Lambda} \int dV_h \lceil_{Z_h} \chi_h(\Omega_h \cap Z_h) \mathbb{T}_h(Z_h) \int_{\mathfrak{g}^{\mathbb{B}_0 \setminus T_0}} \prod_{b \in \mathbb{B}_0 \setminus T_0} dB^\prime(b) \, J(B^\prime) \, \chi^\prime(B^\prime) \chi_{h, 1/2} \exp(A_k^{\prime\prime}[\exp(i B^\prime) V_0]) \, \mathcal{O}_{(a, t)}(f)[U(V_h, \exp(i B^\prime) V_0, V_k|_{Z \cap \Lambda^c})] + \mathcal{R}_{\alpha, \mathrm{large}}$$
+where:
+- $J(B^\prime) = \prod_{b \in \mathbb{B}_0 \setminus T_0} \det\left(\frac{1 - e^{-i \operatorname{ad}_{B^\prime(b)}}}{i \operatorname{ad}_{B^\prime(b)}}\right)$ is the Lie algebra Haar Jacobian;
+- $B^\prime|_{T_0} = 0$ is fixed by tree gauge;
+- $\mathcal{R}_{\alpha, \mathrm{large}}$ carries the complementary $(1 - \chi^\prime)$ and rejected sectors;
+- The observable $\mathcal{O}_{(a, t)}(f)$ is evaluated at the full entangled configuration.
+
+### 9. First Missing Theorem Blocking Continuum Closure
+This finite representation for term $\alpha$ is completely instantiated and proved within stated hypotheses. The first missing theorem that blocks continuum closure is:
+**The Multiscale Marked Polymer Activity Summability Theorem:**
+$$\sum_{\alpha} \mathcal{I}_\alpha[\mathcal{O}_{(a, t)}(f)] \quad \text{converges uniformly as } a_0 \to 0,$$
+which requires proving that the marked polymer activities $K_j^{(1)}$ satisfy the cluster-expansion tree bound $\|K_j^{(1)}\|_{B_j} \le C_j$ across all scales $j = 0, \dots, n$ under Bałaban's multiscale cluster expansion.

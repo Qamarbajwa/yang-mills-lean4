@@ -258,6 +258,7 @@ def test_14_scientific_candidate_and_evidence_closeout_head_remain_distinct():
         "50398000f703d55174b88b0e47216b7641a59f8d2bbbca91d3bbda6d9d1aff4b",
         "02fb66ef626481c88a6f4e2e3ae75f5be7dfe8e6892c387a17995a183292ced0",
         "bea824858bad92b6d092520f89e19d532cd9b6ed28fef4d743183e63f0a0e9d2",
+        "4c531d2324c929eac2bb50a1a76b374a3e5828c4179d4280d187e867ee94c837",
     ]
 
 

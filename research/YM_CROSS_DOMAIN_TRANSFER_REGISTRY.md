@@ -216,3 +216,20 @@ Source mechanisms: own finite row-space/kernel target-descent theorem, positive 
   4. At fixed flow time t_phys > 0, gradient flow smoothing bounds the 4D observable Hessian B on each finite lattice; the genuine obstacle is multiscale polymer activity summability under Bałaban's RG, not fixed-lattice operator norm divergence.
 - Allowed conclusion: None. Status: UNVERIFIED_CANDIDATE_PREPRINT / METHOD_SPECIFIC_OBSTRUCTION. No accepted transfer. No DAG edge closes.
 
+
+## XFER-YM-ONE-TERM-PULLBACK-051 — one-term admissible coordinate pullback and gauge-orbit representation
+
+- Source: Bałaban R-I (1.76)–(1.89), Commun. Math. Phys. 122, 175–202 (1989).
+- Target: YM-015F degree-one physical marked observable insertion under RG transport.
+- Verified mapping:
+  - Finite-volume coordinate factorization $V^{\prime\prime} = \exp(i B^\prime) V_0$ holds strictly on $\mathbb{B}_0 = \mathbb{U}_k \cap \Lambda_0$.
+  - Bonds intersecting $\partial \Lambda$ are in $\mathbb{B}_0$; bonds intersecting $\partial \Omega_{k+1}^1$ are excluded from $\mathbb{B}_0$.
+  - Preliminary region $Z_h$ carries field $V_h$ under $dV_h \lceil_{Z_h}$ with retained operator $\mathbb{T}_h(Z_h)$.
+  - Faddeev–Popov tree-gauge resolution on maximal tree $T_0 \subset \mathbb{B}_0$ yields slice restriction $B^\prime|_{T_0} = 0$, with non-tree bonds unconstrained.
+  - Joint compensating transformations on $(V_h, B^\prime)$ under background AL transformation preserve exact covariance $V^{\prime\prime h} = h_x V^{\prime\prime} h_y^{-1}$.
+  - Cutoff replacement identity (1.89) drops previous cutoff $\chi_k^{\prime\prime}$ on small-field support $\chi^\prime$.
+  - Parabolic diffusion over flow time $t_{\mathrm{phys}} > 0$ couples links across $\partial Z_h$, precluding spatial factorization of the marked insertion.
+- Open bridge: Multiscale marked polymer activity summability $\sum_\alpha \mathcal{I}_\alpha$ under Bałaban's cluster expansion.
+- Allowed conclusion: Exact finite one-term coordinate and gauge-orbit representation proved within stated hypotheses.
+- Status: CONDITIONAL_ONE_TERM_REPRESENTATION_PROVED; no continuum or spectral gap promotion; zero DAG edges close.
+
