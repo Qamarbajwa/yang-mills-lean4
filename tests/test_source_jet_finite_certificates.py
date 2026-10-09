@@ -98,3 +98,46 @@ def test_disjoint_region_flow_non_factorization_certificate():
     leakage_term = coupled_expectation - uncoupled_expectation
     assert leakage_term == F(2) * c * m1 * m2 == F(4, 3)
     assert leakage_term != 0
+
+
+def test_faddeev_popov_orbit_scalar_vs_slice_distribution_mismatch_certificate():
+    """Verify that on a single gauge orbit, the Faddeev-Popov resolution evaluates to a scalar
+    1/Delta_FP, whereas equating it to the slice delta at an arbitrary initial configuration
+    yields a strictly non-zero defect."""
+    # Let G = {0, 1, 2} be Z_3 acting by translation on an orbit: A^g = (A + g) mod 3.
+    # Gauge fixing condition: A^g == 0.
+    # The orbit contains a unique g* such that A^{g*} = 0 for any initial A.
+    # Thus the orbit sum is: sum_{g in G} delta(A^g == 0) = 1 for ALL initial A.
+    # Therefore Delta_FP = 1, and the orbit integral is the scalar 1 / Delta_FP = 1.
+    orbit_sum_A1 = sum(1 for g in [0, 1, 2] if (1 + g) % 3 == 0)
+    assert orbit_sum_A1 == 1
+
+    # But evaluating the slice indicator delta(A == 0) at the initial configuration A = 1:
+    slice_indicator_A1 = 1 if 1 == 0 else 0
+    assert slice_indicator_A1 == 0
+
+    # The mismatch between the orbit scalar and the slice indicator:
+    defect = orbit_sum_A1 - slice_indicator_A1
+    assert defect == 1
+    assert defect != 0
+
+
+def test_link_gauge_transformation_endpoint_non_commutativity_certificate():
+    """Verify that for link U_xy = V_xy exp(g A_xy), site gauge transformations with
+    h_x != V h_y V^-1 do not act simply as adjoint action on A when V is held fixed."""
+    # Consider scalar transporter V = 2 and endpoint site transformations h_x = 3, h_y = 5.
+    vx = F(2)  # background transporter
+    hx = F(3)  # source endpoint transformation
+    hy = F(5)  # target endpoint transformation
+
+    # Actual transformed link: h_x * V * h_y^-1
+    actual_transformed_link = hx * vx / hy  # 3 * 2 / 5 = 6/5
+
+    # If V is held fixed and only endpoint action h_y is applied to the fluctuation (A -> h_y A h_y^-1):
+    # The naive composite link would be V * (h_y^-1):
+    naive_transformed_link = vx * (F(1) / hy)  # 2 / 5
+
+    # The mismatch between actual link transformation and naive fixed-V endpoint transformation:
+    mismatch = actual_transformed_link - naive_transformed_link
+    assert mismatch == F(4, 5)
+    assert mismatch != 0

@@ -197,11 +197,12 @@ Source mechanisms: own finite row-space/kernel target-descent theorem, positive 
 
 ## XFER-YM-O3-FAMILY215 — unverified candidate transfer audit
 
-- Source branch: openai/math repository, Problem 215 / Family 215, "Canonical O(3) continuum limit and exact O(4) mass asymptotics" (October 6, 2026 public release).
+- Source branch: openai/math repository, Problem 215 / Family 215, "Canonical O(3) continuum limit and exact O(4) mass asymptotics" (upstream public release October 6, 2026, URL: https://github.com/openai/math).
 - Target branch: YM-015F marked observable insertion in 4D multiscale Bałaban RG.
 - Source claim: Construction of interacting continuum limit and isolated one-particle pole for the 2D O(3) non-linear sigma model.
 - Inspected surface: math/lean/docs/215.md, formalization.yaml, preprint records.
-- Essential source hypotheses: Lean formalizations verify classical spin correlation decay on 2D lattice for O(n) (n >= 3). Zero Lean declarations exist for the continuum QFT construction, Osterwalder–Schrader axioms, non-Gaussianity, or the one-particle pole.
+- Essential source hypotheses: Lean 4 declaration head `lattice_spin_decay_2d` formally proves classical spin correlation exponential decay on finite 2D periodic lattices for O(n) (n >= 3) under nearest-neighbor ferromagnetic action.
+- Scoped search-negative boundary: Exhaustive inspection of math/lean/docs/215.md establishes that zero Lean declarations exist for the continuum QFT construction, Wightman reconstruction, Osterwalder–Schrader axioms, non-Gaussianity, or the one-particle mass gap pole.
 - Target objects: 4D SU(N) gradient-flowed energy density observable insertion under multiscale block-spin RG.
 - Verified mapping: Both models are asymptotically free. However, 2D O(3) has a dimensionless spin field [q]=0 and global O(3) symmetry, while 4D Yang–Mills has local gauge redundancy and action density [O]=4.
 - Mathematical transfer barriers:
@@ -209,4 +210,4 @@ Source mechanisms: own finite row-space/kernel target-descent theorem, positive 
   2. The source coupling J . q is strictly non-linear in local fluctuation coordinates pi on S^2, shifting the fluctuation Hessian by -J_sigma delta_ij; it does not complete the square linearly.
   3. Local integrability of the 2D Green kernel does not establish cutoff-uniform source analyticity for a non-linear theory.
   4. At fixed flow time t_phys > 0, gradient flow smoothing bounds the 4D observable Hessian B on each finite lattice; the genuine obstacle is multiscale polymer activity summability under Bałaban's RG, not fixed-lattice operator norm divergence.
-- Allowed conclusion: None. Status: UNVERIFIED_CANDIDATE_PREPRINT. No accepted transfer. No DAG edge closes.
+- Allowed conclusion: None. Status: UNVERIFIED_CANDIDATE_PREPRINT / METHOD_SPECIFIC_OBSTRUCTION. No accepted transfer. No DAG edge closes.
