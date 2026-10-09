@@ -1,0 +1,23 @@
+{
+  "task": "YM-051R3",
+  "baseline_revision": 55,
+  "baseline_sha": "501e13fb52366767a1908e644e3a51284d0c7ebd",
+  "candidate_sha": "58f51b19f34e7713ab1a85738149f293bc886520",
+  "scientific_tree_hash": "d6d7a82e74b339904510e529b64cfa2d91e86a4ed9f98b75b58d7e8b7e487dc6",
+  "git_blob_scientific_hash": "52ee7565bf181e8ab52254fae1c21aec24fe0dceab77ca57718f48ea0e137e57",
+  "scientific_files": 158,
+  "tests": "441 passed in 9.24s",
+  "workflow": "SERIALIZED_SHARED_WORKSPACE_PYTEST",
+  "negative_prefix": "literal Git bytes preserved",
+  "own_diagnostic": {
+    "finite_certificates": 11,
+    "primary_source_supersession": "superseded erroneous citation to CMP 109 (1987); verified primary source as T. Bałaban, Large Field Renormalization. I, Commun. Math. Phys. 122, 175-202 (1989) with direct PDF section/page/equation locators",
+    "domain_hierarchy_reconciliation": "active region Lambda0 = Lambda cap Omega_{k+1}^1 = Lambda cap (Zh_prime_tilde)^c strictly subset of Lambda \\ Zh due to collar region carrying boundary constraints and buffer bonds",
+    "toy_graph_scoping": "4-site unit quaternion graph in Test 11 explicitly scoped as a toy finite graph certificate, not an admissible hypercubic lattice history, due to diagonal jump edge of length sqrt(5)",
+    "orientation_sign_vs_jacobian": "child site directional derivative operator has signed determinant det(D_{V_0}) = (-1)^k depending on orientation, whereas absolute integration Jacobian |det(D_{V_0})| = 1 is universally robust",
+    "observable_scoping": "cross-defect Delta_fact = -16/25 strictly scoped as toy algebraic certificate for coupled functionals; physical flowed observable non-factorization retains PHYSICAL_FLOWED_OBSERVABLE_NON_FACTORIZATION_OPEN",
+    "chart_lemma_refutation_and_replacement": "refuted speculative probabilistic chart lemma YM-051F-ACTUAL-CHART-SUMMABILITY; replaced with purely deterministic Lemma YM-051F-DETERMINISTIC-CHART-OVERLAP (Deterministic Small-Field Chart Overlap and Remainder Decomposition)",
+    "first_missing_bridge": "Lemma YM-051F-DETERMINISTIC-CHART-OVERLAP formulated as immediate prerequisite before downstream weighted-action tail estimates"
+  },
+  "source_provenance_correction": "Bałaban CMP 122 (1989) audited; domain hierarchy reconciled; toy graph scoped; orientation sign resolved; observable scoped; deterministic bridge lemma formulated."
+}
