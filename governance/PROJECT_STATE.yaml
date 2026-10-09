@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 60
+revision: 61
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "15086d3a81dd083aafb48eda4cb73863bc312da1"
+  head: "8190b205cce2232f96137fadb2e346215d04ad1d"
   scientific_candidate_sha: "15086d3a81dd083aafb48eda4cb73863bc312da1"
   review_bound_sha: "15086d3a81dd083aafb48eda4cb73863bc312da1"
-  evidence_closeout_head: "15086d3a81dd083aafb48eda4cb73863bc312da1"
-  closeout_resolution: "evidence_closeout_head binds the completed YM-054 receipt/state commit; later metadata commits preserve it. Resolve current authoritative HEAD from Git."
+  evidence_closeout_head: "8190b205cce2232f96137fadb2e346215d04ad1d"
+  closeout_resolution: "evidence_closeout_head binds the preceding completed YM-054 receipt/state closeout commit (8190b205cce2232f96137fadb2e346215d04ad1d); scientific_candidate_sha binds the reviewed candidate freeze commit (15086d3a81dd083aafb48eda4cb73863bc312da1)."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -33,13 +33,24 @@ coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
   last_expected_revision: 60
-  last_updated_at: "2026-10-09T18:40:00Z"
+  last_updated_at: "2026-10-10T01:00:00Z"
   active_contract: "YM-015F-JET-002B"
   frozen_candidate: "15086d3a81dd083aafb48eda4cb73863bc312da1"
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-054R
+    scope_in: "Provenance repair of Git-blob vs checkout digest, literal-blob byte hashing via Git object database, correction of evidence_closeout_head semantics in PROJECT_STATE.yaml to 8190b205cce2232f96137fadb2e346215d04ad1d, elimination of reliance on unverified hash 7e7eda0e119b1707905625d86312123a333a576f with UNRESOLVED_OR_INVALID classification, durable Test 16 certificate, and strict preservation of immutable historical raw receipts"
+    scope_out: "Pushforward measure integration and fiber weight bounds under exact Bałaban tree, deterministic chart overlap proof, weighted-measure tail estimates under Wilson action, multiscale marked polymer activity summability under Bałaban RG, cutoff-uniform estimates, and continuum closure"
+    dependencies: ["YM-054"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-054R_E4_RAW_20261010.md"
+    acceptor: "verification/YM-054R_TECHNICAL_ACCEPTANCE.md"
+    status: IN_PROGRESS
+    scope_limitation: "GIT_BLOB_PROVENANCE_AND_STATE_SEMANTICS_REPAIRED"
   - id: YM-054
     scope_in: "Primary-source Bałaban tree/forest construction on nested rectangular parallelepipeds P_1 \\ P_2 (CMP 122 pp. 195-196), refutation of guessed ungrounded tree hypothesis from YM-053R, boundary grounding bond mechanism [(y_1-1, ...), y] in T_0, explicit 2D concrete geometry on P_1 \\ P_2 with |T_0| = |Lambda_0| = 2, full site gauge fixing with zero grounding defect, reconstruction of (1.76) without deltas, permanent excision of Theta_boundary placeholder, support-conditioned cutoff replacement (1.89), and Git-blob digest disambiguation"
     scope_out: "Pushforward measure integration and fiber weight bounds under exact Bałaban tree, deterministic chart overlap proof, weighted-measure tail estimates under Wilson action, multiscale marked polymer activity summability under Bałaban RG, cutoff-uniform estimates, and continuum closure"

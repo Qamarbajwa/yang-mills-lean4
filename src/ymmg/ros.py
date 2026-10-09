@@ -467,6 +467,35 @@ def compute_closed_world_scientific_tree_hash(workspace_root: Path) -> Tuple[str
     tree_hash = hashlib.sha256(tree_payload).hexdigest()
     return tree_hash, file_hashes
 
+
+def compute_literal_git_blob_scientific_tree_hash(
+    workspace_root: Path, commit_sha: str = "HEAD"
+) -> Tuple[str, Dict[str, str]]:
+    """
+    Computes a deterministic SHA-256 tree hash over literal Git blob bytes
+    stored in the Git object repository database for every canonical scientific file.
+    This hash is completely independent of operating system newline conversion
+    (e.g., Windows CRLF vs Unix LF checkout normalization).
+    """
+    import io, tarfile
+    file_hashes = {}
+    entries = []
+    discovered_scientific = sorted(SCIENTIFIC_FINGERPRINT_MANIFEST)
+    cmd = ["git", "archive", "--format=tar", commit_sha]
+    res = subprocess.run(cmd, cwd=workspace_root, capture_output=True, check=True)
+    with tarfile.open(fileobj=io.BytesIO(res.stdout)) as tf:
+        for rel_path in discovered_scientific:
+            git_path = rel_path.replace("\\", "/")
+            member = tf.getmember(git_path)
+            blob_bytes = tf.extractfile(member).read()
+            f_hash = hashlib.sha256(blob_bytes).hexdigest()
+            file_hashes[rel_path] = f_hash
+            entries.append(f"{rel_path}::{f_hash}")
+
+    tree_payload = "\n".join(entries).encode("utf-8")
+    tree_hash = hashlib.sha256(tree_payload).hexdigest()
+    return tree_hash, file_hashes
+
 def compute_canonical_dependency_hash(dependencies: List[Dict[str, str]]) -> str:
     """
     Hashes canonical tuples: (dependency_id, dependency_version, dependency_statement_hash)

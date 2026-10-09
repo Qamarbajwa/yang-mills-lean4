@@ -189,6 +189,15 @@ Primary YMH Lemma4.5 p54 ->Lemma5.5 p60 was text rechecked at https://www.pure.e
 5. **Git-blob digest disambiguation:** Reconciled Format A 40-hex Git object SHA-1 (`7e7eda0e119b1707905625d86312123a333a576f`) with Format B 64-hex SHA-256 canonical payload digest (`0855124cb8e2ba5c98d107e9ae655b90f37d4f8db3fdd499b34611f07360c5be`) additively without editing immutable historical receipts. Earliest global 4D failure remains UNESTABLISHED; structural no-go count 0.
 
 
+## FA-001 git-blob provenance repair, literal-blob byte hashing, and state closeout head semantics / YM-054R
+
+1. **Elimination of unverified hash reliance:** Refuted speculative dual-representation conjecture from YM-054. Direct query `git cat-file -e 7e7eda0e119b1707905625d86312123a333a576f` fails closed (`fatal: git cat-file: could not get object info`). Formally classified `7e7eda...` as `UNRESOLVED_OR_INVALID_HISTORICAL_ENTRY` and eliminated all reliance on it. Historical raw receipts preserved immutable.
+2. **Dual digest classification:** Established exact distinction between Checkout-Byte Canonical Manifest Digest and Literal Git-Blob Canonical Manifest Digest across the 158 canonical scientific files. Certified physical cause: 15 files carrying UNIX LF line endings in Git objects convert to CRLF on Windows checkouts.
+   - Candidate YM-054: checkout digest `b962eb50281ed1bdb3cbf4e570d9438a73b7887aa8814fc850e0c52672375f24` vs literal Git-blob digest `4e4338aa5fbe9d961cd439bf1254f5c0869531f950c5726bd5e6afb930d4e888`.
+   - Baseline YM-053R: checkout digest `0855124cb8e2ba5c98d107e9ae655b90f37d4f8db3fdd499b34611f07360c5be` vs literal Git-blob digest `622b29ec7b20f0d5cd67e7b7ba7db6a308077a748114f12f2a08b55d282d842d`.
+3. **State closeout head semantics:** Disambiguated `scientific_candidate_sha` (freeze commit `15086d3...`) from `evidence_closeout_head` (preceding closeout commit `8190b205cce2232f96137fadb2e346215d04ad1d`). Eliminated self-referential requirements. Earliest global 4D failure remains UNESTABLISHED; structural no-go count 0.
+
+
 
 
 

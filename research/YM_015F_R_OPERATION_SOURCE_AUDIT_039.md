@@ -1353,6 +1353,71 @@ In `verification/YM-053R_E3_RECEIPT.json` and `verification/YM-053R_MILESTONE.md
    - This additive reconciliation note formally records that Format A (40 hex Git SHA-1) and Format B (64 hex SHA-256) are dual representations of the candidate tree identity, with Format B providing the canonical closed-world tree hash.
 
 
+---
+
+## YM-054R: PROVENANCE REPAIR OF GIT-BLOB VS CHECKOUT DIGEST, LITERAL-BLOB BYTE HASHING, STATE CLOSEOUT HEAD SEMANTICS, AND ELIMINATION OF UNVERIFIED HASH RELIANCE
+
+### 1. Refutation of Unverified Hash Reliance and Formal Status Classification
+1. **Defect Diagnosis of `7e7eda0e119b1707905625d86312123a333a576f`:**
+   - In `verification/YM-053R_E3_RECEIPT.json`, the 40-character hexadecimal string `7e7eda0e119b1707905625d86312123a333a576f` was recorded under the key `git_blob_scientific_hash`.
+   - In Task `YM-054`, it was hypothesized that this string represented a "Format A (40-hex Git object SHA-1)" representation of the repository state.
+   - Direct execution of `git cat-file -e 7e7eda0e119b1707905625d86312123a333a576f` fails closed with exit code 1 (`fatal: git cat-file: could not get object info`).
+   - Exhaustive repository search confirms that no object with SHA-1 `7e7eda0e119b1707905625d86312123a333a576f` exists in the Git repository database. Hex length (40 hex characters) alone does not establish algorithm, provenance, or object existence.
+2. **Formal Elimination of Reliance & Immutable Preservation:**
+   - The speculative dual-representation hypothesis is formally **REFUTED AND SUPERSEDED**.
+   - The entry `7e7eda0e119b1707905625d86312123a333a576f` is formally classified as:
+     $$\mathbf{UNRESOLVED\_OR\_INVALID\_HISTORICAL\_ENTRY}.$$
+   - In accordance with governance immutability principles, historical raw receipts (`verification/raw/YM-053R_E4_RAW_20261009.md` SHA-256 `1b91ebdaf4da4525ac504fe09d270fb424503b8a5d291d999b357491c1eec594`, `verification/raw/YM-054_E4_RAW_20261009.md` SHA-256 `ed8671e276eeffb31da1d02cbfdbe9963f5eeee8679d3a4acc21d85a33e196b8`) remain 100% byte-identical and unmodified.
+   - Reliance on this unverified string is completely and permanently removed from all active and future project coordination.
+   - All mathematical results established in `YM-054` (boundary grounding bond $[y_0, y] \in T_0$, $|T_0| = |\Lambda_0| = 2$, zero grounding defect $\Delta_{\mathrm{grounding}} = 0$, elimination of $\Theta_{\mathrm{boundary}}$, and support-conditioned cutoff (1.89)) remain fully preserved and unaffected.
+
+---
+
+### 2. Dual Digest Classification and Forensic Derivation
+
+1. **Manifest Specification:**
+   The scientific closed-world packet consists of exactly 158 canonical files defined by `src.ymmg.ros.SCIENTIFIC_FINGERPRINT_MANIFEST`, sorted lexicographically.
+
+2. **Digest 1: Checkout-Byte Canonical Manifest Digest:**
+   - **Algorithm:** For each relative path $p$ in the sorted manifest, read file bytes directly from the working-tree filesystem: $h_p = \operatorname{SHA256}(\operatorname{read\_bytes}(p))$. Concatenate entries as $p\text{::}h_p$ joined with newline characters $\text{"\\n"}$, and compute the SHA-256 digest of the UTF-8 encoded manifest string.
+   - **Baseline YM-053R (`5d65389`):**
+     $$0855124cb8e2ba5c98d107e9ae655b90f37d4f8db3fdd499b34611f07360c5be$$
+   - **Candidate YM-054 (`15086d3`):**
+     $$b962eb50281ed1bdb3cbf4e570d9438a73b7887aa8814fc850e0c52672375f24$$
+
+3. **Digest 2: Literal Git-Blob Canonical Manifest Digest:**
+   - **Algorithm:** For each relative path $p$ in the sorted manifest, extract the raw, literal blob bytes stored in the content-addressed Git repository object database at the target commit: $b = \operatorname{git\_blob}(\text{commit}, p)$. Compute $h_p^{\mathrm{blob}} = \operatorname{SHA256}(b)$. Concatenate entries as $p\text{::}h_p^{\mathrm{blob}}$ joined with $\text{"\\n"}$, and compute the SHA-256 digest.
+   - **Baseline YM-053R (`5d65389`):**
+     $$622b29ec7b20f0d5cd67e7b7ba7db6a308077a748114f12f2a08b55d282d842d$$
+   - **Candidate YM-054 (`15086d3`):**
+     $$4e4338aa5fbe9d961cd439bf1254f5c0869531f950c5726bd5e6afb930d4e888$$
+   - **Closeout YM-054 (`8190b20`):**
+     $$4e4338aa5fbe9d961cd439bf1254f5c0869531f950c5726bd5e6afb930d4e888$$
+     (Identical to candidate freeze because canonical scientific files were unchanged between freeze and closeout).
+
+4. **Forensic Physical Cause of Discrepancy:**
+   - Exactly 15 of the 158 canonical files were committed into Git with UNIX LF line endings (`\n`):
+     `CLAIM_EVIDENCE_MATRIX.md`, `DEFINITION_LEDGER.md`, `OFFICIAL_PROBLEM_SPECIFICATION.md`, `RESEARCH_LEDGER.md`, `THEOREM_LEDGER.md`, `governance/EPISTEMIC_TAXONOMY_v1.0.yaml`, `governance/MATHEMATICAL_RESEARCH_OPERATING_SYSTEM_v1.0.md`, `governance/PROJECT_BINDING_POLICY.md`, `literature/ANALOGUE_DEPENDENCY_GRAPH.md`, `literature/ANALOGUE_LIMITATION_MATRIX.md`, `literature/ANALOGUE_MECHANISM_MATRIX.md`, `literature/CONSTRUCTIVE_LIMITATION_MATRIX.md`, `literature/FOUNDATIONAL_LIMITATION_MATRIX.md`, `literature/MODERN_LIMITATION_MATRIX.md`, `literature/PATHWAY_MEMORY_REGISTER.md`.
+   - On Windows environments with `core.autocrlf = true`, Git checkout automatically converts LF to CRLF (`\r\n`), altering the byte content and SHA-256 on disk.
+   - The remaining 143 files were committed with CRLF line endings, so their git blob bytes and disk bytes are identical.
+   - This exact physical difference accounts for $h_{\mathrm{checkout}} \ne h_{\mathrm{blob}}$.
+   - Both digests are now fully recognized, differentiated, and reproducibly computed via ROS.
+
+---
+
+### 3. Truthful Semantics for `PROJECT_STATE.yaml`
+
+1. **Previous Conflation:**
+   In Task YM-054, `evidence_closeout_head` was set to candidate SHA `15086d3a81dd083aafb48eda4cb73863bc312da1`, while prose described it as binding the completed receipt/state closeout commit.
+2. **Disambiguated Semantic Definitions:**
+   - `scientific_candidate_sha`: The immutable Git commit freezing the candidate code and documentation under scientific review (`15086d3a81dd083aafb48eda4cb73863bc312da1` for YM-054).
+   - `review_bound_sha`: The Git commit that the E4 review is strictly bound to (equals `scientific_candidate_sha`).
+   - `evidence_closeout_head`: The Git commit that bound the preceding completed receipt/state closeout (`8190b205cce2232f96137fadb2e346215d04ad1d` for YM-054).
+   - `project.head`: Current authoritative Git HEAD.
+   - Elimination of self-referential requirements: A closeout commit cannot self-referentially bind its own future SHA before it is created; `evidence_closeout_head` records the preceding closeout commit from Git ancestry.
+
+
+
 
 
 

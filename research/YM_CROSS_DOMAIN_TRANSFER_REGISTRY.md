@@ -334,6 +334,21 @@ Source mechanisms: own finite row-space/kernel target-descent theorem, positive 
 - Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
 
 
+## XFER-YM-ONE-TERM-PULLBACK-054R: Git-Blob Provenance Repair, Literal-Blob Byte Hashing, and State Closeout Head Semantics
+
+- Source: Repository Git object database at frozen candidate SHAs (`5d65389`, `15086d3`, `8190b20`) and 158-file canonical manifest `src.ymmg.ros.SCIENTIFIC_FINGERPRINT_MANIFEST`.
+- Target: Cryptographic and provenance grounding under contract YM-015F-JET-002B and Universal Governance Baseline v4.0.6-r3.
+- Verified mapping:
+  - Nonexistence of `7e7eda0e119b1707905625d86312123a333a576f` proved via `git cat-file -e` failure closed; string classified as `UNRESOLVED_OR_INVALID_HISTORICAL_ENTRY`; reliance permanently eliminated.
+  - Dual digest distinction established: Checkout-byte canonical digest (Windows CRLF) vs Literal Git-blob canonical digest (content-addressed Git object database). Physical mechanism verified across 15 files with UNIX LF line endings in Git.
+  - Candidate YM-054: checkout digest `b962eb50281ed1bdb3cbf4e570d9438a73b7887aa8814fc850e0c52672375f24` vs literal Git-blob digest `4e4338aa5fbe9d961cd439bf1254f5c0869531f950c5726bd5e6afb930d4e888`.
+  - Baseline YM-053R: checkout digest `0855124cb8e2ba5c98d107e9ae655b90f37d4f8db3fdd499b34611f07360c5be` vs literal Git-blob digest `622b29ec7b20f0d5cd67e7b7ba7db6a308077a748114f12f2a08b55d282d842d`.
+  - Closeout head semantics disambiguated: `scientific_candidate_sha` = `15086d3...`, `evidence_closeout_head` = `8190b205cce2232f96137fadb2e346215d04ad1d`.
+- Open bridge: Pushforward measure integration and fiber weight bounds under exact Bałaban tree preceding deterministic chart overlap closure.
+- Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
+
+
+
 
 
 

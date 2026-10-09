@@ -611,6 +611,24 @@ Positive T_epsilon fixes normalized vacuum but a contrast target recovered from 
   5. *Classification:* `METHOD_SPECIFIC_OBSTRUCTION`; structural no-go count remains 0; no continuum edge closes.
 
 
+## NEG-YM-054R-GIT-BLOB-DIGEST-AND-STATE-SEMANTICS: Unverified Git Object Hash Reliance, Working-Tree CRLF Line-Ending Discrepancy, and State Closeout Conflation (`YM-054R`)
+
+- **Discovery Date:** 2026-10-10
+- **Epistemic Classification:** `[METHOD_SPECIFIC_OBSTRUCTION]`
+- **Hypothesis tested:** Whether `7e7eda0e119b1707905625d86312123a333a576f` is a verified Git object SHA-1 in the repository; whether raw working-tree file byte hashes on Windows are identical to literal Git-blob object hashes; and whether `evidence_closeout_head` in `PROJECT_STATE.yaml` should bind candidate freeze commit `15086d3`.
+- **Result:** Falsified.
+  1. *Unverified Hash Nonexistence:* Direct query `git cat-file -e 7e7eda0e119b1707905625d86312123a333a576f` fails closed with exit code 1 (`fatal: git cat-file: could not get object info`). No Git object with this SHA-1 exists in the repository. Hex string length (40 hex characters) does not establish object existence or validity. The dual-representation conjecture from YM-054 is refuted; `7e7eda...` is classified as `UNRESOLVED_OR_INVALID_HISTORICAL_ENTRY`, and reliance on it is permanently eliminated.
+  2. *Line-Ending Conversion Discrepancy:* On Windows checkouts with `core.autocrlf = true`, 15 specific canonical files (including `CLAIM_EVIDENCE_MATRIX.md`, `DEFINITION_LEDGER.md`, `OFFICIAL_PROBLEM_SPECIFICATION.md`, `RESEARCH_LEDGER.md`, `THEOREM_LEDGER.md`) committed with UNIX LF line endings are checked out with CRLF line endings (`\r\n`). This produces an exact byte-level divergence:
+     - Candidate YM-054 Checkout-Byte Canonical Digest: `b962eb50281ed1bdb3cbf4e570d9438a73b7887aa8814fc850e0c52672375f24`
+     - Candidate YM-054 Literal Git-Blob Canonical Digest: `4e4338aa5fbe9d961cd439bf1254f5c0869531f950c5726bd5e6afb930d4e888`
+     - Baseline YM-053R Checkout-Byte Canonical Digest: `0855124cb8e2ba5c98d107e9ae655b90f37d4f8db3fdd499b34611f07360c5be`
+     - Baseline YM-053R Literal Git-Blob Canonical Digest: `622b29ec7b20f0d5cd67e7b7ba7db6a308077a748114f12f2a08b55d282d842d`
+     Calling checkout-byte hashes Git-blob hashes without byte verification is refuted. Both hashes are independently computed, distinguished, and certified by ROS.
+  3. *State Closeout Head Conflation:* Setting `evidence_closeout_head` to candidate SHA `15086d3` conflated candidate freeze with state closeout. True closeout commit from Git ancestry is `8190b205cce2232f96137fadb2e346215d04ad1d`. Semantics are disambiguated: `scientific_candidate_sha` binds candidate freeze commit (`15086d3...`), while `evidence_closeout_head` binds the preceding completed closeout commit (`8190b205cce2232f96137fadb2e346215d04ad1d`).
+  4. *Classification:* `METHOD_SPECIFIC_OBSTRUCTION`; structural no-go count remains 0; no continuum edge closes.
+
+
+
 
 
 

@@ -238,6 +238,31 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
    - Clarifies Format A (40-hex Git object SHA-1 `7e7eda0e119b1707905625d86312123a333a576f`) vs Format B (64-hex SHA-256 canonical payload digest `0855124cb8e2ba5c98d107e9ae655b90f37d4f8db3fdd499b34611f07360c5be`) additively without modifying historical receipts.
 
 
+## CDC-054R: provenance repair of git-blob vs checkout digest, literal-blob byte hashing, state closeout head semantics, and elimination of unverified hash reliance
+
+1. **Defect 1: Elimination of unverified hash reliance (`7e7eda0e119b1707905625d86312123a333a576f`):**
+   - Direct execution of `git cat-file -e 7e7eda0e119b1707905625d86312123a333a576f` fails closed with exit code 1 (`fatal: git cat-file: could not get object info`).
+   - Exhaustive repository inspection confirms that no object with this SHA-1 exists in the Git repository database.
+   - The speculative "Format A dual representation" hypothesis from YM-054 is refuted and superseded.
+   - Formally marks `7e7eda0e119b1707905625d86312123a333a576f` as `UNRESOLVED_OR_INVALID_HISTORICAL_ENTRY`. Reliance on it is permanently and completely eliminated.
+   - Historical raw receipts (`verification/raw/YM-053R_E4_RAW_20261009.md`, `verification/raw/YM-054_E4_RAW_20261009.md`) remain 100% byte-identical and unmodified in accordance with governance immutability principles. All corrections are recorded strictly additively.
+   - All mathematical results established in `YM-054` ($[y_0, y] \in T_0$, $|T_0| = |\Lambda_0| = 2$, $\Delta_{\mathrm{grounding}} = 0$, elimination of $\Theta_{\mathrm{boundary}}$, support-conditioned cutoff (1.89)) remain fully preserved and certified.
+2. **Defect 2: Dual digest classification and forensic derivation:**
+   - Manifest: 158 canonical scientific files from `src.ymmg.ros.SCIENTIFIC_FINGERPRINT_MANIFEST`.
+   - Checkout-Byte Canonical Manifest Digest (reading disk bytes directly):
+     - Baseline YM-053R (`5d65389`): `0855124cb8e2ba5c98d107e9ae655b90f37d4f8db3fdd499b34611f07360c5be`
+     - Candidate YM-054 (`15086d3`): `b962eb50281ed1bdb3cbf4e570d9438a73b7887aa8814fc850e0c52672375f24`
+   - Literal Git-Blob Canonical Manifest Digest (reading literal Git object database bytes via `git archive --format=tar` / `git cat-file blob`):
+     - Baseline YM-053R (`5d65389`): `622b29ec7b20f0d5cd67e7b7ba7db6a308077a748114f12f2a08b55d282d842d`
+     - Candidate YM-054 (`15086d3`): `4e4338aa5fbe9d961cd439bf1254f5c0869531f950c5726bd5e6afb930d4e888`
+     - Closeout YM-054 (`8190b20`): `4e4338aa5fbe9d961cd439bf1254f5c0869531f950c5726bd5e6afb930d4e888`
+   - Forensic derivation: exactly 15 files were committed into Git with UNIX LF line endings (`\n`), but on Windows checkout Git converts them to CRLF (`\r\n`), altering the on-disk byte representation and SHA-256. The remaining 143 files have identical bytes.
+   - Added `compute_literal_git_blob_scientific_tree_hash` to `src.ymmg.ros` and durable Test 16 in `tests/test_source_jet_finite_certificates.py`.
+3. **Defect 3: Truthful semantics for `evidence_closeout_head` in `PROJECT_STATE.yaml`:**
+   - Corrected `evidence_closeout_head` in `PROJECT_STATE.yaml` from candidate freeze commit `15086d3` to the actual completed receipt/state closeout commit: `8190b205cce2232f96137fadb2e346215d04ad1d`.
+   - Disambiguated semantics: `scientific_candidate_sha` binds candidate freeze commit (`15086d3...`), `review_bound_sha` binds reviewed freeze commit (`15086d3...`), `evidence_closeout_head` binds preceding completed receipt/state closeout commit (`8190b205cce2232f96137fadb2e346215d04ad1d`), and `head` binds current authoritative commit. Eliminated self-referential closeout requirements.
+
+
 
 
 
