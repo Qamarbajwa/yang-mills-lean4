@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 58
+revision: 59
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "6bc5e564aa7f754b8507eac04d141f5eb7a6d579"
-  scientific_candidate_sha: "6bc5e564aa7f754b8507eac04d141f5eb7a6d579"
-  review_bound_sha: "6bc5e564aa7f754b8507eac04d141f5eb7a6d579"
-  evidence_closeout_head: "6bc5e564aa7f754b8507eac04d141f5eb7a6d579"
-  closeout_resolution: "evidence_closeout_head binds the completed YM-053 receipt/state commit; later metadata commits preserve it. Resolve current authoritative HEAD from Git."
+  head: "5d65389a333c101f4f9de9522df0ef9a32ad84f4"
+  scientific_candidate_sha: "5d65389a333c101f4f9de9522df0ef9a32ad84f4"
+  review_bound_sha: "5d65389a333c101f4f9de9522df0ef9a32ad84f4"
+  evidence_closeout_head: "5d65389a333c101f4f9de9522df0ef9a32ad84f4"
+  closeout_resolution: "evidence_closeout_head binds the completed YM-053R receipt/state commit; later metadata commits preserve it. Resolve current authoritative HEAD from Git."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,14 +32,25 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 58
-  last_updated_at: "2026-10-09T17:25:00Z"
+  last_expected_revision: 59
+  last_updated_at: "2026-10-09T18:07:00Z"
   active_contract: "YM-015F-JET-002B"
-  frozen_candidate: "6bc5e564aa7f754b8507eac04d141f5eb7a6d579"
+  frozen_candidate: "5d65389a333c101f4f9de9522df0ef9a32ad84f4"
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-053R
+    scope_in: "Repair of boundary gauge invariance and closed-plaquette trace invariance under consistent extended gauge transformations, broken transformation contrast, link cutoff origin of fiber integration, actual graph dimension balance and spanning tree correspondence (Lemma YM-053F-ACTUAL-GRAPH-MEASURE-CORRESPONDENCE), full 12-factor effective density inventory reconciliation, and non-abelian SU(2) Haar curvature barrier"
+    scope_out: "Exact Bałaban tree graph correspondence proof, deterministic chart overlap proof, weighted-measure tail estimates under Wilson action, multiscale marked polymer activity summability under Bałaban RG, cutoff-uniform estimates, and continuum closure"
+    dependencies: ["YM-053"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-053R_E4_RAW_20261009.md"
+    acceptor: "verification/YM-053R_TECHNICAL_ACCEPTANCE.md"
+    status: SCIENTIFICALLY_ACCEPTED
+    scope_limitation: "BOUNDARY_INVARIANCE_AND_GRAPH_MEASURE_CORRESPONDENCE_CONDITIONAL_ON_SOURCE_DOMAIN_AUDIT"
   - id: YM-053
     scope_in: "Group-valued augmented gauge map Phi globally on group variables via sequential tree solver, explicit smooth inverse Phi^{-1}, sequential normalized Haar pushforward with unit integration Jacobian, non-invariance of boundary links U(b) -> h_x U(b) != U(b), inseparable effective fiber density W_eff retaining all factors in fiber integral, Bałaban CMP 122 pp. 194-198 concrete history admissibility audit, Test 12 arithmetic reconciliation, and compact Lie group U(1)/SU(2) orbit weight defects"
     scope_out: "Integration of non-trivial fiber weights across gauge orbits, proof of deterministic chart overlap lemma, weighted-measure tail estimates under Wilson action, multiscale marked polymer activity summability under Bałaban RG, cutoff-uniform estimates, and continuum closure"

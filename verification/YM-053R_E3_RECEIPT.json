@@ -1,0 +1,23 @@
+{
+  "task": "YM-053R",
+  "baseline_revision": 58,
+  "baseline_sha": "86a188d9ed0bb21dfc61865d5f8f5102e26db48f",
+  "candidate_sha": "5d65389a333c101f4f9de9522df0ef9a32ad84f4",
+  "scientific_tree_hash": "0855124cb8e2ba5c98d107e9ae655b90f37d4f8db3fdd499b34611f07360c5be",
+  "git_blob_scientific_hash": "7e7eda0e119b1707905625d86312123a333a576f",
+  "scientific_files": 158,
+  "tests": "444 passed in 9.91s",
+  "workflow": "SERIALIZED_SHARED_WORKSPACE_PYTEST",
+  "negative_prefix": "literal Git bytes preserved",
+  "own_diagnostic": {
+    "finite_certificates": 14,
+    "boundary_plaquette_invariance": "proved closed-plaquette trace gauge invariance Tr(U^h(p)) == Tr(U(p)) under consistent extended gauge transformations; physical flowed observables O_{(a, t)}(f)[U^h] == O_{(a, t)}(f)[U] do not depend on h; single-link fallacy refuted",
+    "broken_transformation_contrast": "holding exterior link fixed with one transformed endpoint breaks trace invariance (Delta_broken != 0)",
+    "fiber_retention_origin": "link cutoffs chi'(V'') and background terms relative to V0 depend on h (Delta_cutoff = -1 != 0), demanding full fiber integration in W_eff",
+    "graph_measure_correspondence": "active bond vertex set V(B0) = Lambda0 u d_ext Lambda0; dynamic gauge dim (dim G)(|Lambda0| - 1); internal tree |T0| = |Lambda0| - 1; dimension balance |B0| = |T0| + |B0 \\ T0|; Lemma YM-053F-ACTUAL-GRAPH-MEASURE-CORRESPONDENCE formulated",
+    "factor_inventory_reconciliation": "all 12 factors reconciled in termwise density, restoring Theta_boundary under global vacuum normalization Z_vac^{-1}",
+    "haar_curvature_barrier": "flat U(1) density 1/(2pi) vs curved SU(2) density (1/pi)sin^2(theta/2) establishes strict non-lifting barrier",
+    "missing_bridges": "exact Bałaban tree graph correspondence and deterministic chart overlap precede downstream weighted-measure tail estimates"
+  },
+  "source_provenance_correction": "Bałaban CMP 122 (1989) boundary gauge invariance and closed-plaquette trace invariance rigorously proved; graph dimension balance and spanning tree correspondence established; full 12-factor inventory reconciled; U(1) vs SU(2) Haar curvature barrier certified."
+}
