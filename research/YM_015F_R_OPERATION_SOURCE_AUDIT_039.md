@@ -802,3 +802,73 @@ In line 643 of Section YM-051R2, the claim that $\det(D_{V_0}) = +1$ universally
       *This deterministic decomposition is completely defined. Any subsequent weighted-measure tail estimate under the action $\exp(-g_k^{-2} A_k^{\prime\prime})$ is a separate, downstream analytic obligation that is conditionally blocked until the deterministic properties of $\mathcal{E}_{\mathrm{chart}}$ are certified.*
 
 
+## YM-052: CONSTRAINED TREE-MAP PUSHFORWARD, FIBER WEIGHTS, BOUNDARY ADMISSIBILITY, AND SOURCE LOCATOR CORRECTIONS
+
+### 1. Primary-Source Printed-Page Mapping and Page/Equation Disambiguation
+In Section YM-051R3 (lines 738–739), equations (1.85)–(1.88) and (1.89) were listed as appearing on page 195. A rigorous visual audit against the printed article **T. Bałaban, *Large Field Renormalization. I. The Basic Step of the Renormalization Group*, Communications in Mathematical Physics 122, 175–202 (1989)** establishes the precise printed page numbers:
+- **Printed p. 194:** Proposition 1 and minimal background equation (1.79): $U_0 = U_{k, Z}(V_\Lambda^*)$ with decomposition $U_k = U_0 \exp(i B^\prime)$.
+- **Printed p. 195:** Fluctuation factorization equation (1.81): $V^{\prime\prime} = \exp(i B^\prime) V_0$ on active bonds $\mathbb{B}_0 = \mathbb{U}_k \cap \Lambda_0$, and initial boundary definitions.
+- **Printed pp. 195–196:** Maximal tree graph $T_0 \subset \mathbb{B}_0$ constructed from nested parallelepipeds $P_1 \setminus P_2$ rooted at a single base point $x_0 \in \Lambda_0$.
+- **Printed p. 197:** Background covariance and compensating transformations, equations **(1.85)–(1.88)**: joint action under background AL gauge transformation $U_0 \mapsto U_0^{u_0}$ via $V_h \mapsto V_h^{u_0}$ and $B^\prime \mapsto u_0 B^\prime u_0^{-1}$. (Formally supersedes the erroneous citation to p. 195).
+- **Printed p. 198:** Support-specific cutoff replacement, equation **(1.89)**: $\chi_k^{\prime\prime} \chi^\prime = \chi^\prime$ on the small-field support $\chi^\prime = \mathbf{1}_{\{|B^\prime(b)| < \delta_k^\prime \ \forall b \in \mathbb{B}_0\}}$. (Formally supersedes the erroneous citation to p. 195).
+- **Disambiguation Note:** Authors and readers must strictly distinguish between **PDF page indices** (which depend on journal front matter / cover sheets) and **printed journal page numbers** (pp. 175–202 in CMP 122).
+
+### 2. Geometric Collar Difference Identity and Strictness Precision
+1. **Exact Set Difference Identity:**
+   Let $\Lambda = (\Omega_{k_0+1}^4)^c \cap Z$ be the large-field integration domain, $Z_h$ the preliminary region, and $Z_h^{\prime \sim}$ the enlarged regularized neighborhood carrying delta constraints and buffer bonds.
+   The active fluctuation region is defined by:
+   $$\Lambda_0 = \Lambda \cap \Omega_{k+1}^1 = \Lambda \cap (Z_h^{\prime \sim})^c.$$
+   The difference between the naive exterior $\Lambda \setminus Z_h$ and the true active region $\Lambda_0$ is given by the exact set identity:
+   $$(\Lambda \setminus Z_h) \setminus \Lambda_0 = (\Lambda \setminus Z_h) \cap (\Lambda \cap (Z_h^{\prime \sim})^c)^c = (\Lambda \setminus Z_h) \cap Z_h^{\prime \sim} = \Lambda \cap (Z_h^{\prime \sim} \setminus Z_h).$$
+2. **Precision on Strict Inclusion:**
+   In Section YM-051R3 (line 747), strict inclusion $\Lambda_0 \subsetneq \Lambda \setminus Z_h$ was asserted unconditionally. This is refined and superseded:
+   - The inclusion $\Lambda_0 \subseteq \Lambda \setminus Z_h$ is universal because $Z_h \subset Z_h^{\prime \sim} \implies (Z_h^{\prime \sim})^c \subset Z_h^c$.
+   - **Strict inclusion $\Lambda_0 \subsetneq \Lambda \setminus Z_h$ holds IF AND ONLY IF the collar intersection inside $\Lambda$ is non-empty:**
+     $$\Lambda \cap (Z_h^{\prime \sim} \setminus Z_h) \ne \emptyset.$$
+   - If the regularized collar lies entirely outside $\Lambda$, or in boundary configurations where the collar carries zero interior lattice points inside $\Lambda$, then $\Lambda \cap (Z_h^{\prime \sim} \setminus Z_h) = \emptyset$ and $\Lambda_0 = \Lambda \setminus Z_h$.
+   - Strictness cannot be asserted for every arbitrary history geometry from topological inclusions alone without explicit verification of non-emptiness.
+
+### 3. Full Invertible Augmented Coordinate Map vs. Unproved Slice Projection
+1. **The Dimension Reduction Fallacy:**
+   On active bonds $\mathbb{B}_0$, the original Lie algebra fluctuation variables $B^\prime$ span $3|\mathbb{B}_0|$ dimensions.
+   A spanning tree $T_0 \subset \mathbb{B}_0$ rooted at $x_0$ with $|T_0| = |\Lambda_0| - 1$ edges defines a gauge-fixing condition $B^{\prime h}|_{T_0} = 0$.
+   Projecting to the gauge slice by eliminating tree variables reduces dimensions from $3|\mathbb{B}_0|$ to $3|\mathbb{B}_0 \setminus T_0|$.
+   Local absolute Faddeev–Popov determinant $|\det(D_{V_0})| = 1$ at the slice together with group Haar invariance under *fixed* gauge transformations **DOES NOT** establish that the pushforward measure on the slice equals the restricted slice measure.
+2. **Non-Invariance of Small-Field Cutoffs:**
+   The small-field cutoff:
+   $$\chi^\prime(B^\prime) = \prod_{b \in \mathbb{B}_0} \mathbf{1}_{\{\|B^\prime(b)\| < \delta_k^\prime\}}$$
+   is explicitly **dependent on individual bond fluctuations and is NOT gauge invariant**. Under a gauge transformation $h \in \mathcal{G}_{\Lambda_0}$, the tree link fluctuations change, so the support of $\chi^\prime$ cuts off the gauge orbit non-trivially.
+3. **The Invertible Augmented Map $\Phi$:**
+   Before integration, the change of variables must be defined as an invertible augmented diffeomorphism:
+   $$\Phi: \mathfrak{su}(2)^{\mathbb{B}_0} \to \mathfrak{su}(2)^{\mathbb{B}_0 \setminus T_0} \times \mathcal{G}_{\Lambda_0, x_0}, \quad B^\prime \mapsto (\hat{B}^\prime, h[B^\prime]),$$
+   where $h[B^\prime]$ is the unique sequential tree-fixing transformation satisfying $V^{\prime\prime h[B^\prime]}(b) = V_0(b)$ for all $b \in T_0$, and $\hat{B}^\prime \in \mathfrak{su}(2)^{\mathbb{B}_0 \setminus T_0}$ represents the gauge-transformed fluctuations on non-tree bonds:
+   $$\exp(i \hat{B}^\prime(b)) V_0(b) = h_x[B^\prime] \exp(i B^\prime(b)) V_0(b) h_y[B^\prime]^{-1} \quad \text{for } b = (x, y) \in \mathbb{B}_0 \setminus T_0.$$
+4. **Exact Pushforward Measure and Fiber Weights:**
+   The pushforward measure on the slice coordinates $\hat{B}^\prime$ is:
+   $$d\hat{\mu}(\hat{B}^\prime) = W(\hat{B}^\prime) \, \left[ \prod_{b \in \mathbb{B}_0 \setminus T_0} J(\hat{B}^\prime(b)) \, d\hat{B}^\prime(b) \right],$$
+   where the **FIBER WEIGHT** is the explicit integral over the orbit fiber:
+   $$W(\hat{B}^\prime) = \int_{\mathcal{G}_{\Lambda_0, x_0}} dh \, J_{\mathrm{orbit}}(\hat{B}^\prime, h) \, \chi^\prime(\Phi^{-1}(\hat{B}^\prime, h)).$$
+   - In Lemma `YM-051F-DETERMINISTIC-CHART-OVERLAP`, setting $W(\hat{B}^\prime) \equiv 1$ (or identifying the overlap integral with an unweighted slice integral) assumed without proof that the fiber weight is identically 1.
+   - For cutoffs depending on tree variables, the fiber volume $\operatorname{vol}(\text{Fiber}(\hat{B}^\prime))$ varies with $\hat{B}^\prime$ and does not integrate to 1.
+   - Consequently, the overlap integral can only be equated to a tree-slice integral AFTER computing and bounding the fiber weight $W(\hat{B}^\prime)$.
+   - Status of Lemma `YM-051F-DETERMINISTIC-CHART-OVERLAP`: the set partition $\rho_{k, \alpha} = \rho_{k, \alpha}^{\mathrm{overlap}} + \mathcal{R}_{\alpha, \mathrm{chart-exit}} + \mathcal{R}_{\alpha, \mathrm{large}}$ is algebraically exact, but calling $\rho_{k, \alpha}^{\mathrm{overlap}}$ an unweighted tree-slice integral is formally **UNPROVED_PENDING_FIBER_WEIGHT_INTEGRATION**.
+
+### 4. Concrete History Boundary Admissibility and Tree Solvability
+1. **Permitted Site Gauge Group:**
+   On $\Lambda_0$, the gauge group is $\mathcal{G}_{\Lambda_0} = \{h: \Lambda_0 \to SU(2)\}$.
+2. **Solvability under Single-Root Constraint:**
+   If $\mathcal{G}_{\Lambda_0}$ is constrained ONLY at a single root site $x_0 \in \Lambda_0$ by $h_{x_0} = I$, the sequential tree-fixing equations:
+   $$h_y = V_0(b)^{-1} h_x \exp(i B^\prime(b)) V_0(b)$$
+   have a UNIQUE, unconditional solution along every directed edge of spanning tree $T_0$. Every vertex $y \ne x_0$ has exactly one parent in $T_0$, so each $h_y$ is uniquely determined without overconstraint.
+3. **Obstruction under Multiple Fixed Endpoints:**
+   If preliminary sector boundary conditions or external boundary rules impose $h_x = I$ on multiple boundary sites (e.g. $h_x = I$ for all $x \in \partial \Lambda_0$):
+   - Any path in $T_0$ connecting two fixed endpoints $x_1, x_2 \in \partial \Lambda_0$ imposes the global holonomy constraint:
+     $$I = h_{x_2} = \left[ \prod_{b \in \text{path}(x_1, x_2)} \operatorname{Ad}_{V_0(b)} \exp(i B^\prime(b)) \right] h_{x_1} = \prod_{b \in \text{path}} \operatorname{Ad}_{V_0(b)} \exp(i B^\prime(b)).$$
+   - For generic configurations $B^\prime$, this holonomy is non-trivial ($ \ne I$).
+   - Therefore, the tree-fixing equation **HAS NO SOLUTION** on configurations with non-zero tree holonomy if multiple endpoints are pre-fixed.
+4. **Source Audit Finding:**
+   Bałaban CMP 122 pp. 195–196 avoids this overconstraint obstruction by:
+   - Fixing ONLY the single root site $x_0$ ($h_{x_0} = I$).
+   - Partitioning boundary bonds so that internal boundary bonds touching $\partial \Omega_{k+1}^1$ are strictly excluded from $\mathbb{B}_0$, leaving active bonds $\mathbb{B}_0$ and site group $\mathcal{G}_{\Lambda_0, x_0}$ free of preliminary fixed-site overconstraints.
+
+

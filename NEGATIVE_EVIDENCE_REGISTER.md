@@ -555,3 +555,17 @@ Positive T_epsilon fixes normalized vacuum but a contrast target recovered from 
   7. Classification: `METHOD_SPECIFIC_OBSTRUCTION`; structural no-go count remains 0; no continuum edge closes.
 
 
+## NEG-YM-052-TREE-PUSHFORWARD-AND-FIBER-WEIGHT-DEFECT: Tree-Map Pushforward Measure Loss, Fiber Weights, Collar Strictness Precision, and Boundary Overconstraint (`YM-052`)
+
+- **Discovery Date:** 2026-10-09
+- **Epistemic Classification:** `[METHOD_SPECIFIC_OBSTRUCTION]`
+- **Hypothesis tested:** Whether a configuration-dependent tree gauge fixing map allows identifying an overlap integral with an unweighted gauge-slice integral without fiber integration; whether small-field cutoff indicator functions are gauge invariant; whether universal strict inclusion $\Lambda_0 \subsetneq \Lambda \setminus Z_h$ holds for arbitrary geometries from topological inclusions alone; whether printed equations (1.85)–(1.89) in Bałaban CMP 122 appear on p. 195; and whether multiple pre-fixed boundary sites permit a solvable tree gauge recursion.
+- **Result:** Falsified.
+  1. *Pushforward vs Slice Integral Assumption / Measure Loss:* A tree gauge fixing map eliminates degrees of freedom ($3|\mathbb{B}_0| \to 3|\mathbb{B}_0 \setminus T_0|$). Local absolute FP determinant $|\det(D_{V_0})| = 1$ and group Haar invariance under fixed transformations do not establish pushforward measure equality for a configuration-dependent tree map. Small-field cutoffs $\chi^\prime$ depend on individual bond fluctuations and are not gauge invariant; they cut off gauge orbits non-trivially. Full invertible augmented map $\Phi: B^\prime \mapsto (\hat{B}^\prime, h)$ proves that pushforward measure on slice coordinates carries non-trivial fiber weight $W(\hat{B}^\prime) = \int_{\text{Fiber}(\hat{B}^\prime)} dh \, J_{\mathrm{orbit}} \chi^\prime$. Naively equating the overlap integral to the slice integral without computing fiber weights causes measure loss (demonstrated by finite regression certificate $\Delta_{\text{fiber}} \ne 0$). Calling the overlap integral a tree-slice integral is formally classified as `UNPROVED_PENDING_FIBER_WEIGHT_INTEGRATION`.
+  2. *Collar Strictness Precision:* Exact set difference identity is $(\Lambda \setminus Z_h) \setminus \Lambda_0 = \Lambda \cap (Z_h^{\prime \sim} \setminus Z_h)$. Strict inclusion $\Lambda_0 \subsetneq \Lambda \setminus Z_h$ holds if and only if $\Lambda \cap (Z_h^{\prime \sim} \setminus Z_h) \ne \emptyset$. If the collar lies entirely outside $\Lambda$, $\Lambda_0 = \Lambda \setminus Z_h$. Universal strictness for arbitrary geometries was an overgeneralization and is superseded.
+  3. *Printed-Page Locator Erratum:* In Bałaban CMP 122 (1989), equations (1.85)–(1.88) appear on printed page 197 (not 195), and equation (1.89) appears on printed page 198 (not 195). PDF packaging page index is distinguished from printed journal page numbers.
+  4. *Multiple Fixed Boundary Sites Obstruction:* If multiple boundary sites are pre-fixed (e.g. $h_x = I$ for all $x \in \partial \Lambda_0$), the sequential tree gauge equation has zero solution on generic configurations with non-zero holonomy along paths connecting fixed endpoints. Solvability requires fixing only a single root site $x_0 \in \Lambda_0$, as in Bałaban CMP 122 pp. 195–196.
+  5. *Classification:* `METHOD_SPECIFIC_OBSTRUCTION`; structural no-go count remains 0; no continuum edge closes.
+
+
+

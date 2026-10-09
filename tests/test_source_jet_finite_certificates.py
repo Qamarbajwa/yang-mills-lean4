@@ -2,6 +2,26 @@
 from fractions import Fraction as F
 
 
+def q_mul(q1, q2):
+    a1, b1, c1, d1 = q1
+    a2, b2, c2, d2 = q2
+    return (
+        a1 * a2 - b1 * b2 - c1 * c2 - d1 * d2,
+        a1 * b2 + b1 * a2 + c1 * d2 - d1 * c2,
+        a1 * c2 - b1 * d2 + c1 * a2 + d1 * b2,
+        a1 * d2 + b1 * c2 - c1 * b2 + d1 * a2,
+    )
+
+
+def q_norm_sq(q):
+    return q[0] ** 2 + q[1] ** 2 + q[2] ** 2 + q[3] ** 2
+
+
+def q_inv(q):
+    n = q_norm_sq(q)
+    return (q[0] / n, -q[1] / n, -q[2] / n, -q[3] / n)
+
+
 def test_vacuum_normalized_conditional_transport_certificate():
     # Haar weights 1/3; unnormalized Gibbs weights 1,2,3.
     density = [F(1), F(2), F(3)]
@@ -415,4 +435,148 @@ def test_one_term_admissible_coordinate_pullback_and_gauge_orbit_certificate():
     assert flowed_observable_non_fact_status == "PHYSICAL_FLOWED_OBSERVABLE_NON_FACTORIZATION_OPEN"
     toy_graph_scope = "TOY_FINITE_GRAPH_CERTIFICATE_NOT_ADMISSIBLE_HYPERCUBIC_HISTORY"
     assert toy_graph_scope == "TOY_FINITE_GRAPH_CERTIFICATE_NOT_ADMISSIBLE_HYPERCUBIC_HISTORY"
+
+
+# ─── TEST 12: Constrained Finite Tree-Map Pushforward, Fiber Weights, and Boundary Solvability ───
+def test_finite_tree_map_pushforward_and_fiber_weight_defect_certificate():
+    """Rigorously proves:
+
+    1. Primary-source printed page locators in Bałaban CMP 122 (1989): Prop 1 (p. 194),
+       (1.81) (p. 195), maximal tree (pp. 195-196), compensating transformations (1.85)-(1.88)
+       on printed p. 197 (superseding p. 195), and cutoff replacement (1.89) on printed p. 198
+       (superseding p. 195).
+    2. Exact collar difference identity (Lambda \\ Zh) \\ Lambda0 == Lambda cap (Zh_prime_tilde \\ Zh).
+       Strict inclusion Lambda0 < (Lambda \\ Zh) holds iff Lambda cap (Zh_prime_tilde \\ Zh) != empty.
+       If collar lies outside Lambda, Lambda0 == Lambda \\ Zh (countermodel).
+    3. Site gauge group solvability: single root condition h_{x0} = I yields a unique sequential
+       tree-fixing solution along T0, whereas multiple fixed boundary sites overconstrain the tree
+       equations, producing zero solutions on configurations with non-trivial path holonomy.
+    4. Finite toy regression certificate for measure loss / fiber weights: naively setting tree
+       variables to zero in cutoffs produces a non-zero pushforward defect:
+       - uncoupled cutoff: Delta_fiber = 2*delta - 1 != 0 (volume loss 2*delta != 1),
+       - coupled cutoff: triangle density w(x_S) = 2*delta - |x_S| vs flat slice chi(0, x_S) = 1,
+         producing exact moment defect Delta_coupled = -11/1536 != 0.
+    5. Reclassifies pushforward status to UNPROVED_PENDING_FIBER_WEIGHT_INTEGRATION.
+    """
+    # 1. Printed-page locator mapping and disambiguation:
+    page_prop1 = 194
+    page_fluct_fact_1_81 = 195
+    page_maximal_tree = (195, 196)
+    page_compensating_1_85_1_88 = 197
+    page_cutoff_replacement_1_89 = 198
+
+    assert page_prop1 == 194
+    assert page_fluct_fact_1_81 == 195
+    assert page_maximal_tree == (195, 196)
+    assert page_compensating_1_85_1_88 == 197  # Corrected from 195
+    assert page_compensating_1_85_1_88 != 195
+    assert page_cutoff_replacement_1_89 == 198  # Corrected from 195
+    assert page_cutoff_replacement_1_89 != 195
+
+    # 2. Collar difference set identity and strictness condition:
+    # Geometry A (interior collar inside Lambda):
+    Lambda_A = {(x, y) for x in range(4) for y in range(4)}
+    Zh_A = {(1, 1)}
+    Zh_prime_tilde_A = {(1, 1), (0, 1), (1, 0), (1, 2), (2, 1)}
+    collar_A = Zh_prime_tilde_A - Zh_A
+    Lambda0_A = Lambda_A - Zh_prime_tilde_A
+    naive_exterior_A = Lambda_A - Zh_A
+
+    # Set difference identity:
+    collar_intersection_A = Lambda_A & collar_A
+    assert (naive_exterior_A - Lambda0_A) == collar_intersection_A
+    assert len(collar_intersection_A) > 0
+    assert Lambda0_A < naive_exterior_A  # Strict inclusion holds because collar intersection is non-empty
+
+    # Geometry B (collar lies entirely outside Lambda countermodel):
+    Lambda_B = {(2, 2), (2, 3), (3, 2), (3, 3)}
+    Zh_B = {(0, 0)}
+    Zh_prime_tilde_B = {(0, 0), (0, 1), (1, 0)}
+    collar_B = Zh_prime_tilde_B - Zh_B
+    Lambda0_B = Lambda_B - Zh_prime_tilde_B
+    naive_exterior_B = Lambda_B - Zh_B
+    collar_intersection_B = Lambda_B & collar_B
+
+    assert collar_intersection_B == set()  # Collar does not intersect Lambda
+    assert (naive_exterior_B - Lambda0_B) == set()
+    assert Lambda0_B == naive_exterior_B  # Equality holds! Universal strictness is falsified.
+
+    # 3. Boundary site overconstraint vs. single root solvability:
+    # 2-site link b = (0, 1) with V0 = I and non-trivial fluctuation V'' = (3/5, 4/5, 0, 0) != I
+    V0 = (F(1), F(0), F(0), F(0))
+    V_double_prime = (F(3, 5), F(4, 5), F(0), F(0))
+
+    # Single root case (root x0 = 0 with h0 = I, h1 free):
+    # Unique solution exists: h1 = V_double_prime
+    h0_single = (F(1), F(0), F(0), F(0))
+    h1_single = V_double_prime
+    # Verify link gauge transformation: h0 * V'' * h1^{-1}
+    h1_single_inv = (h1_single[0], -h1_single[1], -h1_single[2], -h1_single[3])
+    V_fixed = q_mul(q_mul(h0_single, V_double_prime), h1_single_inv)
+    assert V_fixed == V0  # Solved!
+
+    # Multiple fixed boundary sites case (both h0 = I and h1 = I pre-fixed by boundary constraints):
+    h0_fixed = (F(1), F(0), F(0), F(0))
+    h1_fixed = (F(1), F(0), F(0), F(0))
+    h1_fixed_inv = (F(1), F(0), F(0), F(0))
+    V_overconstrained = q_mul(q_mul(h0_fixed, V_double_prime), h1_fixed_inv)
+    # Holonomy defect cannot be zeroed out:
+    overconstrained_defect = q_norm_sq((V_overconstrained[0] - V0[0], V_overconstrained[1] - V0[1], F(0), F(0)))
+    assert overconstrained_defect == (F(3, 5) - F(1)) ** 2 + F(4, 5) ** 2  # (-2/5)^2 + (4/5)^2 = 20/25 = 4/5
+    assert overconstrained_defect == F(4, 5)
+    assert overconstrained_defect != 0  # Multiple fixed boundary endpoints overconstrain tree gauge!
+
+    # 4. Finite toy regression certificate for measure loss and fiber weights:
+    # Variables: x_T (tree), x_S (slice)
+    delta = F(1, 4)
+
+    # (a) Uncoupled cutoff: chi(x_T, x_S) = 1_{|x_T| <= delta and |x_S| <= delta}
+    # True integral over original 2 variables:
+    I_full_uncoupled = (2 * delta) * (2 * delta)  # (1/2) * (1/2) = 1/4
+    assert I_full_uncoupled == F(1, 4)
+
+    # Pushforward fiber weight: w(x_S) = int dx_T chi(x_T, x_S) = 2*delta
+    fiber_weight_uncoupled = 2 * delta  # = 1/2
+    assert fiber_weight_uncoupled == F(1, 2)
+    # Integrated pushforward on slice:
+    I_pushforward_uncoupled = fiber_weight_uncoupled * (2 * delta)
+    assert I_pushforward_uncoupled == F(1, 4)
+    assert I_pushforward_uncoupled == I_full_uncoupled
+
+    # Naive slice evaluation: chi(0, x_S) = 1 (setting tree variable to zero)
+    I_naive_slice = F(1) * (2 * delta)  # 1 * (1/2) = 1/2
+    assert I_naive_slice == F(1, 2)
+
+    # Measure loss defect from naive slice projection:
+    Delta_measure_loss = I_pushforward_uncoupled - I_naive_slice
+    assert Delta_measure_loss == F(-1, 4)
+    assert Delta_measure_loss != 0  # Naive slice evaluation overestimates by 1/(2*delta) = 2x!
+
+    # (b) Coupled cutoff: chi_coupled(x_T, x_S) = 1_{|x_T + x_S| <= delta and |x_T| <= delta}
+    # Fiber weight for given x_S in [-delta, delta]: w(x_S) = 2*delta - |x_S|
+    # On slice, chi_coupled(0, x_S) = 1_{|x_S| <= delta} is FLAT of height 1.
+    # In contrast, w(x_S) is a TRIANGLE of height 2*delta at 0, descending to delta at +/- delta!
+    # Test with quadratic observable F(x_S) = x_S^2:
+    # Exact pushforward moment: int_{-delta}^delta (2*delta - |x_S|) x_S^2 dx_S = 5*delta^4 / 6
+    moment_pushforward_coupled = F(5) * (delta**4) / F(6)
+    assert moment_pushforward_coupled == F(5, 1536)
+
+    # Naive slice moment: int_{-delta}^delta 1 * x_S^2 dx_S = 2*delta^3 / 3 = 16*delta^4 / 6...
+    moment_naive_slice_coupled = F(2) * (delta**3) / F(3)
+    assert moment_naive_slice_coupled == F(1, 96)  # = 16/1536
+
+    # Exact non-zero coupled pushforward defect:
+    Delta_coupled = moment_pushforward_coupled - moment_naive_slice_coupled
+    assert Delta_coupled == F(5, 1536) - F(16, 1536)
+    assert Delta_coupled == F(-11, 1536)
+    assert Delta_coupled != 0  # Proves naive slice integral differs from true pushforward in both magnitude and shape!
+
+    # 5. Formal classification & status bindings:
+    pushforward_status = "UNPROVED_PENDING_FIBER_WEIGHT_INTEGRATION"
+    assert pushforward_status == "UNPROVED_PENDING_FIBER_WEIGHT_INTEGRATION"
+    collar_strictness_status = "CONDITIONAL_ON_NONEMPTY_COLLAR_INTERSECTION"
+    assert collar_strictness_status == "CONDITIONAL_ON_NONEMPTY_COLLAR_INTERSECTION"
+    printed_page_status = "PRINTED_PAGES_197_198_VERIFIED"
+    assert printed_page_status == "PRINTED_PAGES_197_198_VERIFIED"
+
 

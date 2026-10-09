@@ -145,4 +145,27 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
    - Any weighted-measure tail estimate under the physical action $\exp(-g_k^{-2} A_k^{\prime\prime})$ is a downstream analytic obligation that is conditionally blocked by this deterministic chart overlap lemma.
 
 
+## CDC-052: repair of tree-map pushforward, fiber weights, boundary admissibility, and printed-page source mapping
+
+1. **Printed-page mapping disambiguation:**
+   - Formal correction of printed page citations in T. Bałaban, *Large Field Renormalization. I*, Commun. Math. Phys. 122, 175–202 (1989): Prop. 1 and (1.79) (p. 194), (1.81) (p. 195), maximal tree (pp. 195–196), compensating transformations (1.85)–(1.88) (**printed p. 197**, superseding p. 195), support-specific cutoff replacement (1.89) (**printed p. 198**, superseding p. 195).
+   - Distinguishes PDF page packaging indices from author/journal printed pagination.
+2. **Collar difference identity and strictness condition:**
+   - Exact set difference identity: $(\Lambda \setminus Z_h) \setminus \Lambda_0 = \Lambda \cap (Z_h^{\prime \sim} \setminus Z_h)$.
+   - Strict inclusion $\Lambda_0 \subsetneq \Lambda \setminus Z_h$ holds *if and only if* $\Lambda \cap (Z_h^{\prime \sim} \setminus Z_h) \ne \emptyset$.
+   - Supersedes universal assertion of strictness for arbitrary geometries: if the collar lies entirely outside $\Lambda$, $\Lambda_0 = \Lambda \setminus Z_h$.
+3. **Refutation of unproved pushforward-to-slice reduction & fiber-weight defect:**
+   - Refutes the assumption that the overlap integral over $\mathcal{E}_{\mathrm{chart}}$ equals the unweighted tree-slice integral $\rho_{k, \alpha}^{\mathrm{tree-slice}}$.
+   - Gauge fixing on a tree eliminates dimensions ($3|\mathbb{B}_0| \to 3|\mathbb{B}_0 \setminus T_0|$). Local absolute FP determinant $|\det(D_{V_0})| = 1$ and group Haar invariance under fixed transformations do not establish pushforward measure equality for a configuration-dependent tree map.
+   - Small-field cutoff $\chi^\prime$ depends on individual bond fluctuations and is NOT gauge invariant; it cuts off gauge orbits non-trivially.
+   - Full invertible augmented map $\Phi: B^\prime \mapsto (\hat{B}^\prime, h)$ proves that the pushforward measure on slice coordinates carries the non-trivial fiber weight $W(\hat{B}^\prime) = \int_{\text{Fiber}(\hat{B}^\prime)} dh \, J_{\mathrm{orbit}} \chi^\prime$.
+   - Naively setting tree variables to zero loses the fiber weight $W(\hat{B}^\prime) \ne 1$.
+   - Status of Lemma `YM-051F-DETERMINISTIC-CHART-OVERLAP`: the set partition into overlap, chart-exit, and large-field sets is algebraically exact, but calling the overlap integral an unweighted tree-slice integral is formally classified as $\mathbf{UNPROVED\_PENDING\_FIBER\_WEIGHT\_INTEGRATION}$.
+4. **Concrete history boundary admissibility & tree solvability:**
+   - Permitted site gauge group on $\Lambda_0$ requires a single root constraint $h_{x_0} = I$ for unique sequential solvability along tree $T_0$.
+   - Imposing multiple fixed boundary endpoints (e.g. $h_x = I$ on $\partial \Lambda_0$) overconstrains tree equations, producing zero solutions on generic configurations with non-zero holonomy along paths connecting fixed endpoints.
+   - Bałaban's construction avoids overconstraint by fixing only root $x_0$ and strictly excluding internal boundary bonds touching the preliminary collar from $\mathbb{B}_0$.
+
+
+
 

@@ -277,4 +277,18 @@ Source mechanisms: own finite row-space/kernel target-descent theorem, positive 
 - Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
 
 
+## XFER-YM-ONE-TERM-PULLBACK-052 — tree-map pushforward, fiber weights, boundary admissibility, and printed-page mapping
+
+- Source: Bałaban R-I, Commun. Math. Phys. 122, 175–202 (1989).
+- Target: YM-015F degree-one physical marked observable insertion under RG transport.
+- Verified mapping:
+  - Printed page disambiguation: Prop. 1 and (1.79) on printed p. 194; (1.81) on printed p. 195; maximal tree on printed pp. 195–196; compensating transformations (1.85)–(1.88) on **printed p. 197** (superseding p. 195); cutoff replacement (1.89) on **printed p. 198** (superseding p. 195).
+  - Collar difference identity: $(\Lambda \setminus Z_h) \setminus \Lambda_0 = \Lambda \cap (Z_h^{\prime \sim} \setminus Z_h)$. Strict inclusion $\Lambda_0 \subsetneq \Lambda \setminus Z_h$ holds *if and only if* $\Lambda \cap (Z_h^{\prime \sim} \setminus Z_h) \ne \emptyset$. If collar lies outside $\Lambda$, $\Lambda_0 = \Lambda \setminus Z_h$.
+  - Tree-map pushforward and fiber weights: gauge fixing on a tree eliminates $3|T_0|$ dimensions; small-field cutoff $\chi^\prime$ depends on individual bond fluctuations and is NOT gauge invariant. Full invertible augmented map $\Phi: B^\prime \mapsto (\hat{B}^\prime, h)$ proves pushforward measure carries non-trivial fiber weight $W(\hat{B}^\prime) = \int_{\text{Fiber}} dh \, J_{\mathrm{orbit}} \chi^\prime$. Naively equating the overlap integral to the slice integral causes measure loss ($W(\hat{B}^\prime) \ne 1$). Calling the overlap integral a tree-slice integral is formally classified as $\mathbf{UNPROVED\_PENDING\_FIBER\_WEIGHT\_INTEGRATION}$.
+  - Boundary admissibility and tree solvability: site gauge group on $\Lambda_0$ requires a single root constraint $h_{x_0} = I$ for unique sequential tree solvability. Multiple fixed boundary sites overconstrain tree equations, producing zero solutions on generic configurations with non-zero holonomy. Bałaban avoids this by fixing only root $x_0$ and excluding internal boundary bonds from $\mathbb{B}_0$.
+- Open bridge: Pushforward measure integration and fiber weight bounds preceding deterministic chart overlap closure.
+- Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
+
+
+
 
