@@ -1,0 +1,23 @@
+{
+  "task": "YM-050R2",
+  "baseline_revision": 51,
+  "baseline_sha": "6d1e46fc1a9f974c3855320fe775c9e26c9dfe13",
+  "candidate_sha": "6328f403af0e32fe80c5d4241213f0c472704d58",
+  "scientific_tree_hash": "bea824858bad92b6d092520f89e19d532cd9b6ed28fef4d743183e63f0a0e9d2",
+  "git_blob_scientific_hash": "80057cd488724b753953ee830e772f0987afc464aac464a9f796f7ddcfde6115",
+  "scientific_files": 158,
+  "tests": "440 passed in 6.23s",
+  "workflow": "SERIALIZED_SHARED_WORKSPACE_PYTEST",
+  "negative_prefix": "literal Git bytes preserved",
+  "own_diagnostic": {
+    "finite_certificates": 10,
+    "upstream_commit": "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb",
+    "path_locator_repair": "math/ prefix removed; lean/docs/215.md verified (HTTP 200)",
+    "boundary_condition_repair": "free boundary conditions on finite square-lattice subgraphs verified; periodic boundary assertion refuted",
+    "declaration_supersession": "phantom lattice_spin_decay_2d superseded; comparator OAI.ClassicalON.main : ExponentialDecay := by sorry verified",
+    "solution_module": "lean/OAI/Probability/ClassicalON/Main.lean verified with proof script; status UNVERIFIED_UPSTREAM_PROOF_CODE",
+    "epistemic_scope": "zero declarations for continuum QFT, OS axioms, non-Gaussianity, or 4D Yang-Mills theory across 4 inspected primary artifacts",
+    "scope": "finite rational certificates and primary source audit; actual-model Bałaban coordinate pullback conditional and open; no continuum or infinite-volume estimate"
+  },
+  "source_provenance_correction": "OpenAI Family 215 audited at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb; free boundary condition on finite square subgraphs verified; infinite volume and O(4) spectral gap disclaimed upstream; challenge placeholder sorry separated from solution module proof code (UNVERIFIED_UPSTREAM_PROOF_CODE); zero continuum QFT or 4D Yang-Mills declarations in inspected primary files. Classified as UNVERIFIED_CANDIDATE_PREPRINT."
+}
