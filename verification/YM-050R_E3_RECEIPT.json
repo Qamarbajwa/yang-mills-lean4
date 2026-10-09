@@ -1,0 +1,24 @@
+{
+  "task": "YM-050R",
+  "baseline_revision": 50,
+  "baseline_sha": "551a338afb185136d13a3166b2e126787599ff20",
+  "candidate_sha": "8495ad846cf77bd76c7817ba67c23ef50f3b9002",
+  "scientific_tree_hash": "02fb66ef626481c88a6f4e2e3ae75f5be7dfe8e6892c387a17995a183292ced0",
+  "git_blob_scientific_hash": "ae9bf8568598142562e4323c54749e91afb2a71c3f55a8817223eea060aa13b2",
+  "scientific_files": 158,
+  "tests": "439 passed in 7.23s",
+  "workflow": "SERIALIZED_SHARED_WORKSPACE_PYTEST",
+  "negative_prefix": "literal Git bytes preserved",
+  "own_diagnostic": {
+    "finite_certificates": 9,
+    "faddeev_popov_orbit_vs_slice": "defect 1 != 0 proving single-orbit scalar integral mismatch with gauge slice distribution",
+    "link_endpoint_non_commutativity": "mismatch 4/5 != 0 proving site gauge transformations act on endpoints non-trivially",
+    "nilpotent_linearization": "exact trace formula in eta^2 = 0; quadratic resolvent curvature 3/32 for real J != 0",
+    "linear_vertex_omission": "defect 1/2 != 0 in first moment when omitting linear fluctuation term DX . A",
+    "sigma_model_fluctuation": "Hessian trace -10 != 0 proving non-linear fluctuation source on S^2",
+    "disjoint_region_flow": "leakage 4/3 != 0 proving gradient flow non-factorization across Zh",
+    "vacuum_normalization": "transported moment 5/2 matches global moment without individual history division",
+    "scope": "finite rational certificates and algebraic identities; actual-model Bałaban coordinate pullback conditional and open; no continuum or infinite-volume estimate"
+  },
+  "source_provenance_correction": "OpenAI Family 215 audited; Lean declarations cover only classical lattice spin correlation decay for O(n) (n>=3) on 2D lattices under declaration head lattice_spin_decay_2d. Zero Lean declarations for continuum QFT, OS axioms, non-Gaussianity, or mass gap. Classified as UNVERIFIED_CANDIDATE_PREPRINT."
+}
