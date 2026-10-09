@@ -319,6 +319,22 @@ Source mechanisms: own finite row-space/kernel target-descent theorem, positive 
 - Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
 
 
+## XFER-YM-ONE-TERM-PULLBACK-054: Primary-Source Bałaban Tree/Forest Construction, Exact Nested Parallelepiped Geometry, Admissible Domain Factor Matching, and Git-Blob Digest Disambiguation
+
+- Source: Bałaban CMP 122, 175–202 (1989), printed pp. 194 (factor inventory of (1.76)), 195–196 (tree construction on nested parallelepipeds $P_1 \setminus P_2$), 198 (support-conditioned cutoff replacement (1.89)).
+- Target: YM-015F degree-one physical marked observable insertion under RG transport.
+- Verified mapping:
+  - Primary-source inspection refutes the guessed hypothesis from YM-053R: external bonds ARE added to $T_0$. Bałaban explicitly adds inner boundary-crossing bonds $[(a_1^\prime - 1/2, \dots), (a_1^\prime + 1/2, \dots)]$ to connect blocks across scales, and the outer boundary grounding bond $[(y_1 - 1, y_2, \dots), y]$ to ground the tree at exterior site $y_0 \in \Lambda^c$ with $h_{y_0} = I$.
+  - Explicit smallest concrete geometry on $P_1 \setminus P_2$: $\Lambda_0 = \{(0, 0), (0, 1)\}$ ($|\Lambda_0| = 2$), active bonds $\mathbb{B}_0 = \{ b_{\mathrm{int}}, b_{\mathrm{ext}, 1}, b_{\mathrm{ext}, 2} \}$ ($|\mathbb{B}_0| = 3$), tree $T_0 = \{ b_{\mathrm{int}}, b_{\mathrm{ext}, 1} \}$ ($|T_0| = 2 = |\Lambda_0|$).
+  - Gauge dimension balance: $|T_0| = |\Lambda_0|$ fixes all $|\Lambda_0|\dim G = \dim(G^{\Lambda_0})$ site gauge degrees of freedom uniquely with zero arbitrary internal roots left. Omitting $b_{\mathrm{ground}}$ leaves a strictly non-zero grounding defect $\Delta_{\mathrm{grounding}} = \dim G \ne 0$. Certified by exact rational unit quaternion sequential solver in Test 15.
+  - Factor-by-factor reconstruction of (1.76): all delta functions are integrated out; $\Theta_{\mathrm{boundary}}$ is formally excised as an unresolved schematic placeholder.
+  - Cutoff replacement (1.89) holds strictly on joint support $\operatorname{supp}(\chi_k \chi_{k, \Lambda} \chi_{h, 1/2} \chi_h)$.
+  - Git-blob digest disambiguation: Format A 40-hex Git SHA-1 vs Format B 64-hex SHA-256 canonical payload digest reconciled additively without editing historical receipts.
+- Open bridge: Pushforward measure integration and fiber weight bounds under exact Bałaban tree preceding deterministic chart overlap closure.
+- Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
+
+
+
 
 
 

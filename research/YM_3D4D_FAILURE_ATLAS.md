@@ -180,6 +180,16 @@ Primary YMH Lemma4.5 p54 ->Lemma5.5 p60 was text rechecked at https://www.pure.e
 4. **Scoping of compact $U(1)$ vs non-abelian $SU(2)$ Haar measure:** Distinguished flat $U(1)$ Haar density $1/(2\pi)$ from curved $SU(2)$ Haar density $\frac{1}{\pi}\sin^2(\theta/2)$. Established explicit non-lifting barrier from $U(1)$ toy certificates to full $SU(2)$. Earliest global 4D failure remains UNESTABLISHED; structural no-go count 0.
 
 
+## FA-001 bałaban tree/forest construction, exact nested parallelepiped geometry, admissible domain factor matching, and git-blob digest disambiguation / YM-054
+
+1. **Primary-source Bałaban tree inspection & refutation of guessed hypothesis:** Transcribed Bałaban's primary tree construction on nested rectangular parallelepipeds $P_1 \setminus P_2$ (CMP 122 pp. 195–196). Refuted the guessed lemma from YM-053R that claimed external boundary bonds cannot belong to $T_0$. Proved that Bałaban explicitly adds external bonds: inner crossing bonds $[(a_1^\prime - 1/2, \dots), (a_1^\prime + 1/2, \dots)]$ connecting blocks across scales, and outer grounding bond $[(y_1 - 1, y_2, \dots), y]$ connecting the active base point $y \in \Lambda_0$ to exterior site $y_0 \in \Lambda^c$ where fields are fixed ($h_{y_0} = I$).
+2. **Boundary-grounded tree mechanism & zero grounding defect:** Including the external grounding bond gives $|T_0| = |\Lambda_0|$ tree edges, fixing all $|\Lambda_0|\dim G = \dim(G^{\Lambda_0})$ site degrees of freedom uniquely without leaving any arbitrary internal root unfixed. Omitting the grounding bond leaves a strictly non-zero grounding defect $\Delta_{\mathrm{grounding}} = \dim G \ne 0$.
+3. **Reconstruction of (1.76) & excision of placeholder $\Theta_{\mathrm{boundary}}$:** Confirmed that all delta functions in (1.76) (p. 194) are integrated out ("they are all integrated out", p. 194). Formula (1.76) contains no independent factor $\Theta_{\mathrm{boundary}}$. All boundary couplings reside inside effective action $A_k^{\prime\prime}[V]$ and composite field $V$. Formally excised $\Theta_{\mathrm{boundary}}$ as an unresolved schematic placeholder.
+4. **Support-conditioned cutoff replacement (1.89):** On page 198 (1.89), $\chi_k^{\prime\prime} \chi^\prime = \chi^\prime$ holds strictly on the joint support $\operatorname{supp}(\chi_k(\Omega_k^{\sim 4}) \chi_{k, \Lambda} \chi_{h, 1/2} \chi_h(\Omega_h \cap Z_h))$, not as an unconditioned link identity.
+5. **Git-blob digest disambiguation:** Reconciled Format A 40-hex Git object SHA-1 (`7e7eda0e119b1707905625d86312123a333a576f`) with Format B 64-hex SHA-256 canonical payload digest (`0855124cb8e2ba5c98d107e9ae655b90f37d4f8db3fdd499b34611f07360c5be`) additively without editing immutable historical receipts. Earliest global 4D failure remains UNESTABLISHED; structural no-go count 0.
+
+
+
 
 
 

@@ -598,5 +598,19 @@ Positive T_epsilon fixes normalized vacuum but a contrast target recovered from 
   7. *Classification:* `METHOD_SPECIFIC_OBSTRUCTION`; structural no-go count remains 0; no continuum edge closes.
 
 
+## NEG-YM-054-BALABAN-TREE-FOREST-AND-THETA-PLACEHOLDER: Refutation of Guessed Ungrounded Tree Lemma, Boundary Grounding Mechanism, and Excision of Theta_boundary Placeholder (`YM-054`)
+
+- **Discovery Date:** 2026-10-09
+- **Epistemic Classification:** `[METHOD_SPECIFIC_OBSTRUCTION]`
+- **Hypothesis tested:** Whether external boundary bonds cannot belong to $T_0$; whether tree gauge fixing on nested rectangular parallelepipeds leaves an arbitrary internal root $x_0 \in \Lambda_0$ unfixed; whether termwise density formula (1.76) in Bałaban CMP 122 contains delta functions or an independent boundary factor $\Theta_{\mathrm{boundary}}$; and whether cutoff replacement $\chi_k^{\prime\prime} \chi^\prime = \chi^\prime$ holds as an unconditioned link identity.
+- **Result:** Falsified.
+  1. *Refutation of Guessed Ungrounded Tree Hypothesis:* The guessed lemma from YM-053R claiming external boundary bonds cannot belong to $T_0$ is refuted by direct inspection of Bałaban CMP 122 pp. 195–196. Bałaban explicitly adds external bonds to the tree graph: inner crossing bonds $[(a_1^\prime - 1/2, \dots), (a_1^\prime + 1/2, \dots)]$ connecting blocks across scales, and the outer grounding bond $[(y_1 - 1, y_2, \dots), y]$ connecting the active base point $y \in \Lambda_0$ to exterior site $y_0 \in \Lambda^c$ where fields are fixed ($h_{y_0} = I$).
+  2. *Boundary-Grounded Tree Mechanism & Zero Grounding Defect:* By including the external grounding bond $[y_0, y]$ into $T_0$, the tree graph has $|T_0| = |\Lambda_0|$ edges. The tree constraints fix all $|\Lambda_0| \dim G = \dim(G^{\Lambda_0})$ site degrees of freedom uniquely without leaving any arbitrary internal root unfixed. Omitting the external grounding bond leaves a strictly non-zero grounding defect: $\Delta_{\mathrm{grounding}} = \dim(\mathcal{G}_{\Lambda_0}) - (\dim G)|T_0^{\mathrm{internal}}| = \dim G \ne 0$.
+  3. *Reconstruction of (1.76) & Excision of Placeholder $\Theta_{\mathrm{boundary}}$:* In Bałaban CMP 122 p. 194 (1.76), all delta functions are integrated out ("they are all integrated out", p. 194). Formula (1.76) contains no independent factor $\Theta_{\mathrm{boundary}}$. All boundary couplings reside inside effective action $A_k^{\prime\prime}[V]$ and composite field $V$. $\Theta_{\mathrm{boundary}}$ is formally classified as an unresolved schematic placeholder and permanently excised from the factor inventory.
+  4. *Conditional Support for Cutoff Replacement (1.89):* On page 198 (1.89), $\chi_k^{\prime\prime} \chi^\prime = \chi^\prime$ holds strictly on the joint support $\operatorname{supp}(\chi_k(\Omega_k^{\sim 4}) \chi_{k, \Lambda} \chi_{h, 1/2} \chi_h(\Omega_h \cap Z_h))$, not as an unconditioned algebraic identity on link fluctuations.
+  5. *Classification:* `METHOD_SPECIFIC_OBSTRUCTION`; structural no-go count remains 0; no continuum edge closes.
+
+
+
 
 

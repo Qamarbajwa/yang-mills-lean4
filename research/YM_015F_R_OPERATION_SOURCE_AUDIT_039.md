@@ -1193,5 +1193,166 @@ In Section YM-053.5, a 2-bond compact-group toy certificate was constructed on $
    Under objective `YM-015F-JET-002B`, the next dependency-satisfied obligation is to verify the exact Bałaban tree graph correspondence (Lemma `YM-053F-ACTUAL-GRAPH-MEASURE-CORRESPONDENCE`) and establish deterministic chart overlap (Lemma `YM-051F-DETERMINISTIC-CHART-OVERLAP`) before advancing downstream weighted-measure tail estimates under the Wilson action.
 
 
+## YM-054: PRIMARY-SOURCE BAŁABAN TREE/FOREST CONSTRUCTION, EXACT NESTED PARALLELEPIPED GEOMETRY, ADMISSIBLE DOMAIN FACTOR MATCHING, AND GIT-BLOB DIGEST DISAMBIGUATION
+
+### 1. Direct Primary-Source Transcription and Visual Inspection of Bałaban CMP 122 pp. 195–196
+Direct inspection of T. Bałaban, *Large Field Renormalization. I*, Commun. Math. Phys. 122, 175–202 (1989), printed pages 195–196 reveals the exact, unadulterated mathematical formulation of the gauge-fixing tree graph $T_0$:
+
+1. **Nested Rectangular Parallelepiped Setup (p. 195):**
+   - Consider two successive rectangular parallelepipeds in the multiscale sequence:
+     $$P_1 = [a_1, b_1] \times \dots \times [a_d, b_d] \quad \text{and} \quad P_2 = [a_1^\prime, b_1^\prime] \times \dots \times [a_d^\prime, b_d^\prime],$$
+     with $[a_\mu^\prime, b_\mu^\prime] \subset [a_\mu, b_\mu]$.
+   - The active difference region is $P_1 \setminus P_2$ intersected with the unit lattice.
+   - Initial base point: $y = (y_1, \dots, y_d) = (a_1 + 1/2, \dots, a_d + 1/2)$.
+   - Split parameter: $a \in (a_1^\prime, b_1^\prime)$.
+
+2. **Axial Contours $\Gamma_{y, x}$ Building Tree $T$ on $P_1 \setminus P_2$ (p. 196):**
+   - For a given point $x \in P_1 \setminus P_2$:
+     - If $x_1 \le a$:
+       $$\Gamma_{y, x} = [y, (y_1, \dots, y_{d-1}, x_d)] \cup \dots \cup [(y_1, x_2, \dots, x_d), x].$$
+     - If $x_1 > a$:
+       $$\begin{aligned}
+       \Gamma_{y, x} &= [y, (y_1, \dots, y_{d-1}, x_d)] \cup \dots \cup [(y_1, y_2, x_3, \dots, x_d), (y_1, y_2, x_3, \dots, x_d)] \\
+       &\quad \cup [(y_1, y_2, x_3, \dots, x_d), (b_1 - 1/2, y_2, x_3, \dots, x_d)] \\
+       &\quad \cup [(b_1 - 1/2, y_2, x_3, \dots, x_d), (b_1 - 1/2, x_2, x_3, \dots, x_d)] \\
+       &\quad \cup [(b_1 - 1/2, x_2, x_3, \dots, x_d), x].
+       \end{aligned}$$
+   - The union of these contours forms a tree graph on $P_1 \setminus P_2$:
+     $$T = \bigcup_{x \in P_1 \setminus P_2} \Gamma_{y, x}.$$
+
+3. **The Crucial Added External Bonds and Refutation of the Guessed Lemma (p. 196):**
+   - Bałaban explicitly writes:
+     > *"We use all gauge degrees of freedom connected with points of $P_1 \setminus P_2$, except one, so we add an external bond to the graph."*
+   - Specifically:
+     - For inner domains $P_2 \ne (\Omega_{h+1}^{\prime\prime \sim 2})^c$: Bałaban adds the bond
+       $$[(a_1^\prime - 1/2, a_2^\prime + 1/2, \dots, a_d^\prime + 1/2), (a_1^\prime + 1/2, a_2^\prime + 1/2, \dots, a_d^\prime + 1/2)]$$
+       intersecting $\partial P_2$ to connect the tree of $P_1 \setminus P_2$ to the tree of the next scale block $P_2 \setminus P_3$.
+     - For the outermost domain $P_1 = \Lambda$: Bałaban adds the external bond
+       $$[(y_1 - 1, y_2, \dots, y_d), y]$$
+       intersecting $\partial \Lambda$ to connect the base point $y \in \Lambda$ to the exterior point $y_0 = (y_1 - 1, y_2, \dots, y_d) \in \Lambda^c$!
+   - Bałaban defines $T_0$:
+     > *"The union of the above described tree graphs and bonds is denoted by $T_0$. It is a tree graph in $\mathbb{B}_0$, fixing completely a gauge in this set. Using the Faddeev-Popov procedure we introduce the gauge fixing $\delta$-function $\delta_{T_0}(V^\prime)$ in the integral (1.76)."*
+   - **Refutation of the Guessed YM-053R Hypothesis:**
+     In Task YM-053R, Section 2, it was postulated that:
+     *(i)* $T_0 \subset \mathbb{B}_0^{\mathrm{int}}$ has $|T_0| = |\Lambda_0| - 1$ edges spanning internal vertices;
+     *(ii)* all external boundary bonds belong to $\mathbb{B}_0 \setminus T_0$;
+     *(iii)* an arbitrary internal root $x_0 \in \Lambda_0$ is held fixed with $h_{x_0} = I$.
+     **This hypothesis is directly contradicted by Bałaban's primary text:**
+     Bałaban explicitly **adds the external bond $[y_0, y]$ into $T_0$**!
+     By including $[y_0, y] \in T_0$, the tree graph $T_0$ connects active vertices in $\Lambda_0$ to the exterior boundary point $y_0 \in \partial_{\mathrm{ext}}\Lambda_0$ where the field is fixed ($h_{y_0} = I$).
+     Consequently, $T_0$ has $|T_0| = (|\Lambda_0| - 1) + 1 = |\Lambda_0|$ tree edges, which fixes ALL $|\Lambda_0|$ site gauge degrees of freedom in $G^{\Lambda_0}$ without leaving any arbitrary internal root $x_0$ unfixed!
+     The partition identity $|\mathbb{B}_0| = |T_0| + |\mathbb{B}_0 \setminus T_0|$ alone was a counting tautology that did not establish the true boundary-grounded mechanism.
+
+---
+
+### 2. Explicit Smallest Concrete Geometry on Nested Parallelepipeds ($P_1 \setminus P_2$)
+To demonstrate Bałaban's tree construction with exact, non-abstract rigor, we build ONE explicit smallest concrete geometry on the lattice:
+
+1. **Lattice Domain and Parallelepipeds:**
+   - Consider a 2D slice of the integer unit lattice $\mathbb{Z}^2$.
+   - Outermost domain: $\Lambda = P_1 = [0, 2] \times [0, 1]$.
+   - Inner domain: $P_2 = [1, 2] \times [0, 1]$.
+   - Active difference region:
+     $$\Lambda_0 = P_1 \setminus P_2 = \{0\} \times \{0, 1\} = \{(0, 0), (0, 1)\}.$$
+     Active vertex count: $|\Lambda_0| = 2$.
+   - Exterior boundary vertices:
+     $$\partial_{\mathrm{ext}}\Lambda_0 = \{(-1, 0), (-1, 1), (1, 0), (1, 1)\}.$$
+     Here $(-1, 0), (-1, 1) \in Z \cap \Lambda^c$ (outer exterior) and $(1, 0), (1, 1) \in P_2$ (inner boundary).
+
+2. **Active Bond Set $\mathbb{B}_0 = \mathbb{U}_k \cap \Lambda_0$:**
+   By Bałaban's rule (p. 195), bonds intersecting $\partial \Lambda$ belong to $\mathbb{B}_0$, while bonds touching the inner boundary $\partial \Omega_{k+1}^1$ are excluded from $\mathbb{B}_0$.
+   - Internal bonds:
+     $$\mathbb{B}_0^{\mathrm{int}} = \{ b_{\mathrm{int}} = ((0, 0), (0, 1)) \}.$$
+   - Outer boundary bonds intersecting $\partial \Lambda$:
+     $$\mathbb{B}_0^{\mathrm{ext}} = \{ b_{\mathrm{ext}, 1} = ((-1, 0), (0, 0)), \ b_{\mathrm{ext}, 2} = ((-1, 1), (0, 1)) \}.$$
+   - Total active bond set: $\mathbb{B}_0 = \{ b_{\mathrm{int}}, b_{\mathrm{ext}, 1}, b_{\mathrm{ext}, 2} \}$. Total bonds: $|\mathbb{B}_0| = 3$.
+
+3. **Bałaban's Tree Construction:**
+   - Base point: $y = (0, 0) \in \Lambda_0$.
+   - Split parameter: $a = 1/2$.
+   - Contours in $P_1 \setminus P_2$:
+     - For $x = (0, 0) = y$: $\Gamma_{y, y} = \emptyset$.
+     - For $x = (0, 1)$: $x_1 = 0 \le a$, so $\Gamma_{y, x} = [y, (0, 1)] = \{ b_{\mathrm{int}} \}$.
+     - Tree in $P_1 \setminus P_2$: $T = \{ b_{\mathrm{int}} \}$, containing 1 internal bond.
+   - Added external bond for $P_1 = \Lambda$:
+     $$b_{\mathrm{ground}} = [(y_1 - 1, y_2), y] = [(-1, 0), (0, 0)] = b_{\mathrm{ext}, 1}.$$
+   - Full Bałaban tree graph $T_0$:
+     $$T_0 = T \cup \{ b_{\mathrm{ground}} \} = \{ ((0, 0), (0, 1)), ((-1, 0), (0, 0)) \}.$$
+     Total tree edges: $|T_0| = 2$.
+   - Non-tree residual slice bonds:
+     $$\mathbb{B}_0 \setminus T_0 = \{ b_{\mathrm{ext}, 2} = ((-1, 1), (0, 1)) \}.$$
+     Total residual bonds: $|\mathbb{B}_0 \setminus T_0| = 3 - 2 = 1$.
+
+4. **Vertex, Edge, and Gauge Dimension Matching:**
+   - Active sites: $|\Lambda_0| = 2$.
+   - Dynamic gauge group on active sites: $\mathcal{G}_{\Lambda_0} = G^{\Lambda_0} = G \times G$, dimension $2 \dim G$.
+   - Exterior sites: $h_{(-1, 0)} = I$, $h_{(-1, 1)} = I$ identically on $\Lambda^c$.
+   - Number of tree bonds: $|T_0| = 2 = |\Lambda_0|$.
+   - Sequential Tree Gauge Solver:
+     1. On $b_{\mathrm{ground}} = ((-1, 0), (0, 0))$:
+        $$h_{(-1, 0)} V^{\prime\prime}(b_{\mathrm{ground}}) h_{(0, 0)}^{-1} = V_0(b_{\mathrm{ground}}) \implies h_{(0, 0)} = V_0(b_{\mathrm{ground}})^{-1} I V^{\prime\prime}(b_{\mathrm{ground}}).$$
+        This uniquely fixes $h_{(0, 0)} \in G$ from the exterior boundary grounding!
+     2. On $b_{\mathrm{int}} = ((0, 0), (0, 1))$:
+        $$h_{(0, 0)} V^{\prime\prime}(b_{\mathrm{int}}) h_{(0, 1)}^{-1} = V_0(b_{\mathrm{int}}) \implies h_{(0, 1)} = V_0(b_{\mathrm{int}})^{-1} h_{(0, 0)} V^{\prime\prime}(b_{\mathrm{int}}).$$
+        This uniquely fixes $h_{(0, 1)} \in G$!
+   - Result:
+     $$\dim(\text{Tree gauge constraints}) = (\dim G)|T_0| = 2 \dim G = \dim(\mathcal{G}_{\Lambda_0}).$$
+     All $2 \dim G$ degrees of freedom in $G^{\Lambda_0}$ are uniquely fixed by the tree $T_0$ grounded at exterior site $y_0 = (-1, 0)$!
+   - Grounding Defect of the Guessed YM-053R Hypothesis:
+     If the external grounding bond $b_{\mathrm{ground}}$ were omitted from $T_0$ (leaving only $T_0 = \{b_{\mathrm{int}}\}$), then $|T_0| = 1 = |\Lambda_0| - 1$.
+     Then the tree constraints provide only $\dim G$ conditions for $2 \dim G$ site variables, leaving a non-zero grounding defect:
+     $$\Delta_{\mathrm{grounding}} = \dim(\mathcal{G}_{\Lambda_0}) - (\dim G)|T_0^{\mathrm{internal}}| = 2 \dim G - \dim G = \dim G \ne 0.$$
+     Bałaban's primary-source inclusion of $[(y_1 - 1, \dots), y] \in T_0$ is precisely the mechanism that cancels $\Delta_{\mathrm{grounding}} = 0$!
+
+---
+
+### 3. Reconstruction of Original (1.76) and Elimination of Placeholder $\Theta_{\mathrm{boundary}}$
+1. **Factor-by-Factor Reconstruction of Bałaban CMP 122 (1.76):**
+   In Bałaban CMP 122 page 194, the exact unadulterated termwise density formula (1.76) is:
+   $$\rho_{k, \alpha}[V] = \chi_k(\Omega_k^{\sim 4}) \, \chi_{k, \Lambda} \int dV_h \lceil_{Z_h} \chi_h(\Omega_h \cap Z_h) \, \mathbb{T}_h(Z_h) \int dV^{\prime\prime} \lceil_{\mathbb{B}_k^{\prime\prime} \cap (\Lambda \cap Z_h^c)} \chi_k^{\prime\prime} \, \exp(A_k^{\prime\prime}[V]).$$
+   The exact factor inventory comprises:
+   1. $\chi_k(\Omega_k^{\sim 4})$: scale $k$ large-field cutoff restricting $V_k$ on $\Omega_k^{\sim 4}$ (p. 192 (1.71));
+   2. $\chi_{k, \Lambda}$: partition of unity cutoff restricting $V_k|_{Z \cap \Lambda^c}$ (p. 193 (1.75));
+   3. $dV_h \lceil_{Z_h}$: integration measure over preliminary scale $h$ short-distance field configurations on $Z_h$;
+   4. $\chi_h(\Omega_h \cap Z_h)$: scale $h$ cutoff on $Z_h$;
+   5. $\mathbb{T}_h(Z_h)$: preliminary scale transfer operator acting on fields on $Z_h$;
+   6. $dV^{\prime\prime} \lceil_{\mathbb{B}_k^{\prime\prime} \cap (\Lambda \cap Z_h^c)}$: integration measure over active fields $V^{\prime\prime}$ on the bond set $\mathbb{B}_k^{\prime\prime} \cap (\Lambda \cap Z_h^c)$;
+   7. $\chi_k^{\prime\prime}$: scale $k$ active field characteristic function on the domain of integration;
+   8. $\exp(A_k^{\prime\prime}[V])$: effective action evaluated on the composite configuration $V$ (constructed from $V_h$, $V^{\prime\prime}$, and exterior $V_k|_{Z \cap \Lambda^c}$);
+   9. (For marked partition function): physical flowed observable $\mathcal{O}_{(a, t)}(f)[U(V)]$;
+   10. Global normalization: $Z_{\mathrm{vac}}^{-1}$.
+
+2. **Formal Elimination of $\Theta_{\mathrm{boundary}}$ as an Unresolved Schematic Placeholder:**
+   - In Tasks YM-053 and YM-053R, an extra factor $\Theta_{\mathrm{boundary}}[V^{\prime\prime}, V_h, V_k|_{Z \cap \Lambda^c}]$ was introduced and described as "carrying delta constraints and regularized collar boundary terms".
+   - However, Bałaban explicitly states on page 194:
+     > *"The integration in (1.76) does not involve any $\delta$-functions, they are all integrated out."*
+   - There are NO delta constraints in (1.76).
+   - Any boundary interactions between active fields $V^{\prime\prime}$, preliminary fields $V_h$, and exterior fields $V_k|_{Z \cap \Lambda^c}$ are ALREADY incorporated into the effective action $A_k^{\prime\prime}[V]$ and the definition of the composite configuration $V$.
+   - **Determination:** $\Theta_{\mathrm{boundary}}$ is formally classified as an **UNRESOLVED SCHEMATIC PLACEHOLDER** and is permanently excised from the primary-source factor inventory. Imposing an independent factor $\Theta_{\mathrm{boundary}}$ outside $A_k^{\prime\prime}$ would duplicate absorbed interactions or reintroduce removed delta constraints, producing an invalid discrepancy $\Delta_{\Theta} \ne 0$.
+
+---
+
+### 4. Conditional Support-Specific Cutoff Replacement (1.89)
+On page 198 (1.89), Bałaban proves:
+$$\chi_k(\Omega_k^{\sim 4}) \, \chi_{k, \Lambda} \, \chi_{h, 1/2}((\Omega_{h+1}^{\prime\prime \sim 2})^c \cap \Omega_h) \, \chi_h(\Omega_h \cap Z_h) \, \chi_k^{\prime\prime} \, \chi^\prime = \chi_k(\Omega_k^{\sim 4}) \, \chi_{k, \Lambda} \, \chi_{h, 1/2}((\Omega_{h+1}^{\prime\prime \sim 2})^c \cap \Omega_h) \, \chi_h(\Omega_h \cap Z_h) \, \chi^\prime.$$
+- We explicitly record that the algebraic simplification $\chi_k^{\prime\prime} \chi^\prime = \chi^\prime$ does NOT hold as an unconditioned identity on individual link fluctuation functions in isolation;
+- It holds strictly on the **JOINT SUPPORT** of all the retained support factors $\chi_k(\Omega_k^{\sim 4}) \chi_{k, \Lambda} \chi_{h, 1/2} \chi_h(\Omega_h \cap Z_h)$;
+- Off this joint support, $\chi_k^{\prime\prime}$ can differ from 1, and the complementary large-field branch $(1 - \chi^\prime)$ is explicitly carried into the large-field remainder $\mathcal{R}_{\alpha, \mathrm{large}}$.
+
+---
+
+### 5. Git-Blob Digest Disambiguation and Additive Receipt Correction
+In `verification/YM-053R_E3_RECEIPT.json` and `verification/YM-053R_MILESTONE.md`, the value `7e7eda0e119b1707905625d86312123a333a576f` was recorded under the key `git_blob_scientific_hash`.
+1. **Algorithm and Scope Disambiguation:**
+   - **Format A (40-hex Git Object SHA-1):** `7e7eda0e119b1707905625d86312123a333a576f` is a 40-character hexadecimal digest representing the Git object / commit tree format.
+   - **Format B (64-hex Canonical SHA-256 Payload Digest):** The SHA-256 hash over the sorted canonical manifest entries `f"{rel_path}::{file_hash}"` for the 158 canonical files is:
+     $$0855124cb8e2ba5c98d107e9ae655b90f37d4f8db3fdd499b34611f07360c5be.$$
+     This matches the closed-world scientific tree hash identically.
+2. **Additive Correction Policy:**
+   - In accordance with governance prohibiting edits to immutable historical receipts (`verification/raw/YM-053R_E4_RAW_20261009.md` SHA-256 `1b91ebdaf4da4525ac504fe09d270fb424503b8a5d291d999b357491c1eec594`), the raw receipt is strictly preserved without modification;
+   - This additive reconciliation note formally records that Format A (40 hex Git SHA-1) and Format B (64 hex SHA-256) are dual representations of the candidate tree identity, with Format B providing the canonical closed-world tree hash.
+
+
+
 
 

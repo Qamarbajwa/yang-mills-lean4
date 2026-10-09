@@ -210,6 +210,35 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
    - Establishes strict barrier: no automatic lift of $U(1)$ orbit weights or probability certificates to full non-abelian $SU(2)$.
 
 
+## CDC-054: primary-source bałaban tree/forest construction, exact nested parallelepiped geometry, admissible domain factor matching, and git-blob digest disambiguation
+
+1. **Primary-source inspection of Bałaban CMP 122 pp. 195–196 & refutation of guessed ungrounded tree hypothesis:**
+   - Directly transcribes Bałaban's primary tree construction on nested rectangular parallelepipeds $P_1 \setminus P_2$ (p. 195–196).
+   - Refutes the guessed lemma from CDC-053R which claimed that external boundary bonds cannot belong to $T_0$.
+   - Proves that Bałaban explicitly adds external bonds to the tree graph:
+     - inner crossing bonds $[(a_1^\prime - 1/2, \dots), (a_1^\prime + 1/2, \dots)]$ crossing $\partial P_2$ to connect blocks across scales;
+     - outer grounding bond $[(y_1 - 1, y_2, \dots), y]$ crossing $\partial \Lambda$ to ground the tree at the exterior fixed boundary ($h_{y_0} = I$)!
+   - Shows that this inclusion yields $|T_0| = |\Lambda_0|$ tree edges, fixing ALL $|\Lambda_0|$ site variables in $G^{\Lambda_0}$ without leaving any arbitrary internal root $x_0$ unfixed.
+   - Proves that omitting the external grounding bond leaves a strictly non-zero grounding defect:
+     $$\Delta_{\mathrm{grounding}} = \dim(\mathcal{G}_{\Lambda_0}) - (\dim G)|T_0^{\mathrm{internal}}| = \dim G \ne 0.$$
+2. **Explicit smallest concrete geometry on $P_1 \setminus P_2$:**
+   - Constructs explicit 2D unit lattice configuration: $P_1 = [0, 2] \times [0, 1]$, $P_2 = [1, 2] \times [0, 1]$, $\Lambda_0 = \{(0, 0), (0, 1)\}$ ($|\Lambda_0| = 2$).
+   - Active bonds $\mathbb{B}_0 = \{ b_{\mathrm{int}} = ((0, 0), (0, 1)), b_{\mathrm{ext}, 1} = ((-1, 0), (0, 0)), b_{\mathrm{ext}, 2} = ((-1, 1), (0, 1)) \}$ ($|\mathbb{B}_0| = 3$).
+   - Tree $T_0 = \{ b_{\mathrm{int}}, b_{\mathrm{ext}, 1} \}$ ($|T_0| = 2 = |\Lambda_0|$), including boundary grounding bond $b_{\mathrm{ground}} = b_{\mathrm{ext}, 1}$.
+   - Residual slice bond $\mathbb{B}_0 \setminus T_0 = \{ b_{\mathrm{ext}, 2} \}$ ($|\mathbb{B}_0 \setminus T_0| = 1$).
+   - Certified by exact rational unit quaternion sequential solver in Test 15.
+3. **Reconstruction of Bałaban CMP 122 (1.76) & excision of placeholder $\Theta_{\mathrm{boundary}}$:**
+   - Reconstructs factor-by-factor (1.76) (p. 194): $\chi_k(\Omega_k^{\sim 4})$, $\chi_{k, \Lambda}$, $dV_h \lceil_{Z_h}$, $\chi_h$, $\mathbb{T}_h$, $dV^{\prime\prime}$, $\chi_k^{\prime\prime}$, $\exp(A_k^{\prime\prime}[V])$, $\mathcal{O}_{(a, t)}(f)$, and $Z_{\mathrm{vac}}^{-1}$.
+   - Confirms that all delta functions are integrated out ("they are all integrated out", p. 194).
+   - Formally classifies $\Theta_{\mathrm{boundary}}$ as an unresolved schematic placeholder and permanently excises it from the factor inventory.
+   - Confirms that all boundary interactions reside inside effective action $A_k^{\prime\prime}[V]$ and composite field $V$.
+4. **Conditional support-specific cutoff replacement (1.89):**
+   - Records that $\chi_k^{\prime\prime} \chi^\prime = \chi^\prime$ holds strictly on the joint support of retained factors $\chi_k(\Omega_k^{\sim 4}) \chi_{k, \Lambda} \chi_{h, 1/2} \chi_h(\Omega_h \cap Z_h)$ (p. 198), not as an unconditioned link identity.
+5. **Git-blob digest disambiguation:**
+   - Clarifies Format A (40-hex Git object SHA-1 `7e7eda0e119b1707905625d86312123a333a576f`) vs Format B (64-hex SHA-256 canonical payload digest `0855124cb8e2ba5c98d107e9ae655b90f37d4f8db3fdd499b34611f07360c5be`) additively without modifying historical receipts.
+
+
+
 
 
 
