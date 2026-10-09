@@ -196,6 +196,7 @@ Primary YMH Lemma4.5 p54 ->Lemma5.5 p60 was text rechecked at https://www.pure.e
    - Candidate YM-054: checkout digest `b962eb50281ed1bdb3cbf4e570d9438a73b7887aa8814fc850e0c52672375f24` vs literal Git-blob digest `4e4338aa5fbe9d961cd439bf1254f5c0869531f950c5726bd5e6afb930d4e888`.
    - Baseline YM-053R: checkout digest `0855124cb8e2ba5c98d107e9ae655b90f37d4f8db3fdd499b34611f07360c5be` vs literal Git-blob digest `622b29ec7b20f0d5cd67e7b7ba7db6a308077a748114f12f2a08b55d282d842d`.
 3. **State closeout head semantics:** Disambiguated `scientific_candidate_sha` (freeze commit `15086d3...`) from `evidence_closeout_head` (preceding closeout commit `8190b205cce2232f96137fadb2e346215d04ad1d`). Eliminated self-referential requirements. Earliest global 4D failure remains UNESTABLISHED; structural no-go count 0.
+4. **Closeout reconciliation & direct object-byte querying:** Replaced `git archive` in ROS with direct object streaming via `git cat-file --batch`, establishing exact object-byte equivalence across all 158 canonical scientific files for candidate `6b25aae3eefc8e22b4b5a6486f2045bffa0b9e39` (`b9bbef05cf85f9f410992b33179771643608a5f4331a86aafcd7f96407912196`). Reconciled full Git commit lineage IDs (`6b25aae...`, `c28e16eb...`, `3faa8925...`) and updated live candidate bindings in `PROJECT_STATE.yaml`. Earliest global 4D failure remains UNESTABLISHED; structural no-go count 0.
 
 
 

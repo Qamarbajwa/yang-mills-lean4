@@ -473,28 +473,50 @@ def compute_literal_git_blob_scientific_tree_hash(
 ) -> Tuple[str, Dict[str, str]]:
     """
     Computes a deterministic SHA-256 tree hash over literal Git blob bytes
-    stored in the Git object repository database for every canonical scientific file.
-    This hash is completely independent of operating system newline conversion
-    (e.g., Windows CRLF vs Unix LF checkout normalization).
+    stored directly in the Git object repository database for every canonical scientific file.
+    Uses 'git cat-file --batch' to query raw object database blobs directly, establishing
+    direct object-byte equivalence independent of operating system newline conversion
+    (CRLF vs LF) and immune to git archive export attributes (export-ignore/export-subst).
+    Fails closed if any canonical file is missing or not a blob object.
     """
-    import io, tarfile
     file_hashes = {}
     entries = []
     discovered_scientific = sorted(SCIENTIFIC_FINGERPRINT_MANIFEST)
-    cmd = ["git", "archive", "--format=tar", commit_sha]
-    res = subprocess.run(cmd, cwd=workspace_root, capture_output=True, check=True)
-    with tarfile.open(fileobj=io.BytesIO(res.stdout)) as tf:
+    cmd = ["git", "cat-file", "--batch"]
+    proc = subprocess.Popen(
+        cmd,
+        cwd=workspace_root,
+        stdin=subprocess.PIPE,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+    )
+    try:
         for rel_path in discovered_scientific:
             git_path = rel_path.replace("\\", "/")
-            member = tf.getmember(git_path)
-            blob_bytes = tf.extractfile(member).read()
+            spec = f"{commit_sha}:{git_path}\n".encode("utf-8")
+            proc.stdin.write(spec)
+            proc.stdin.flush()
+            header = proc.stdout.readline().decode("utf-8").strip()
+            parts = header.split()
+            if len(parts) != 3 or parts[1] != "blob":
+                raise ConstitutionalIntegrityError(
+                    f"Failed to retrieve literal Git blob for {rel_path!r} at commit {commit_sha!r}: {header!r}"
+                )
+            size = int(parts[2])
+            blob_bytes = proc.stdout.read(size)
+            proc.stdout.read(1)  # consume trailing newline delimiter from git cat-file --batch
             f_hash = hashlib.sha256(blob_bytes).hexdigest()
             file_hashes[rel_path] = f_hash
             entries.append(f"{rel_path}::{f_hash}")
+    finally:
+        if proc.stdin:
+            proc.stdin.close()
+        proc.wait()
 
     tree_payload = "\n".join(entries).encode("utf-8")
     tree_hash = hashlib.sha256(tree_payload).hexdigest()
     return tree_hash, file_hashes
+
 
 def compute_canonical_dependency_hash(dependencies: List[Dict[str, str]]) -> str:
     """

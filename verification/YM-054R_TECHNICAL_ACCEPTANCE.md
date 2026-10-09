@@ -46,16 +46,17 @@ Acceptor conducted independent mathematical, code, cryptographic, and governance
      `03f26596658319a188729b44b6e69b367b3ef3ca213e879191a858bf84453153`.
    - Literal Git-Blob Manifest Digest (SHA-256) on candidate `6b25aae`:
      `b9bbef05cf85f9f410992b33179771643608a5f4331a86aafcd7f96407912196`.
+   - Direct object bytes queried via `git cat-file --batch` establish exact byte equivalence with literal Git object database blobs and zero export attribute divergence.
    - Forensic mechanism confirmed: Exactly 15 files (`CLAIM_EVIDENCE_MATRIX.md`, `DEFINITION_LEDGER.md`, `OFFICIAL_PROBLEM_SPECIFICATION.md`, `RESEARCH_LEDGER.md`, `THEOREM_LEDGER.md`, `governance/EPISTEMIC_TAXONOMY_v1.0.yaml`, `governance/MATHEMATICAL_RESEARCH_OPERATING_SYSTEM_v1.0.md`, `governance/PROJECT_BINDING_POLICY.md`, `literature/ANALOGUE_DEPENDENCY_GRAPH.md`, `literature/ANALOGUE_LIMITATION_MATRIX.md`, `literature/ANALOGUE_MECHANISM_MATRIX.md`, `literature/CONSTRUCTIVE_LIMITATION_MATRIX.md`, `literature/FOUNDATIONAL_LIMITATION_MATRIX.md`, `literature/MODERN_LIMITATION_MATRIX.md`, `literature/PATHWAY_MEMORY_REGISTER.md`) carry UNIX LF newlines (`\n`) in Git object blobs. On Windows checkouts with standard `core.autocrlf = true`, Git expands LF to CRLF (`\r\n`), altering the on-disk file bytes and SHA-256. The remaining 143 files carry CRLF in both Git blobs and disk checkouts.
    - Both digests are now formally separated, verified, and independently computed via ROS (`compute_closed_world_scientific_tree_hash` vs `compute_literal_git_blob_scientific_tree_hash`).
 
-5. **State Closeout Head Semantics in `PROJECT_STATE.yaml`:**
+5. **State Closeout Head Semantics & Live Candidate Bindings in `PROJECT_STATE.yaml`:**
    - Inspected `governance/PROJECT_STATE.yaml` revision 61:
-     - `head: 8190b205cce2232f96137fadb2e346215d04ad1d`
-     - `scientific_candidate_sha: 15086d3a81dd083aafb48eda4cb73863bc312da1`
-     - `review_bound_sha: 15086d3a81dd083aafb48eda4cb73863bc312da1`
+     - `scientific_candidate_sha: 6b25aae3eefc8e22b4b5a6486f2045bffa0b9e39`
+     - `review_bound_sha: 6b25aae3eefc8e22b4b5a6486f2045bffa0b9e39`
+     - `frozen_candidate: 6b25aae3eefc8e22b4b5a6486f2045bffa0b9e39`
      - `evidence_closeout_head: 8190b205cce2232f96137fadb2e346215d04ad1d`
-     - `closeout_resolution`: explicitly documents that `evidence_closeout_head` binds preceding completed YM-054 closeout commit (`8190b20...`), while `scientific_candidate_sha` binds candidate freeze commit (`15086d3...`).
+     - `closeout_resolution`: explicitly documents that `evidence_closeout_head` binds preceding completed YM-054 closeout commit (`8190b20...`), while `scientific_candidate_sha` and `review_bound_sha` bind reviewed candidate freeze commit (`6b25aae...`); current authoritative Git HEAD is resolved dynamically from Git.
    - Self-referential requirement (demanding a closeout commit bind its own SHA before its creation) is permanently eliminated.
 
 6. **Preservation of Mathematical Grounding & Factor Matching:**

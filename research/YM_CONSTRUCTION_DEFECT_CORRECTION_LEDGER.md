@@ -261,6 +261,10 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
 3. **Defect 3: Truthful semantics for `evidence_closeout_head` in `PROJECT_STATE.yaml`:**
    - Corrected `evidence_closeout_head` in `PROJECT_STATE.yaml` from candidate freeze commit `15086d3` to the actual completed receipt/state closeout commit: `8190b205cce2232f96137fadb2e346215d04ad1d`.
    - Disambiguated semantics: `scientific_candidate_sha` binds candidate freeze commit (`15086d3...`), `review_bound_sha` binds reviewed freeze commit (`15086d3...`), `evidence_closeout_head` binds preceding completed receipt/state closeout commit (`8190b205cce2232f96137fadb2e346215d04ad1d`), and `head` binds current authoritative commit. Eliminated self-referential closeout requirements.
+4. **Closeout Reconciliation: Direct Object-Byte Streaming and Live Candidate Binding:**
+   - Literal Git-blob hashing in `src.ymmg.ros` updated to use direct `git cat-file --batch` querying raw Git object database blobs, establishing direct object-byte equivalence independent of operating system newline conversion and immune to git archive export attributes (`export-ignore`/`export-subst`), with fail-closed behavior on missing or non-blob objects.
+   - Live candidate bindings in `governance/PROJECT_STATE.yaml` updated to bind candidate freeze commit `6b25aae3eefc8e22b4b5a6486f2045bffa0b9e39` (`scientific_candidate_sha`, `review_bound_sha`, and `frozen_candidate`), separating prior closeout commit (`8190b205cce2232f96137fadb2e346215d04ad1d`) from reviewed candidate (`6b25aae...`) and current authoritative Git HEAD.
+   - Reconciled full Git commit lineage IDs: candidate freeze `6b25aae3eefc8e22b4b5a6486f2045bffa0b9e39`, acceptance commit `c28e16eb2097c6e8f84361dc68a0ee6e8edf48c4`, and initial evidence closeout commit `3faa8925386d7bccad961b5a3899bce8d073cfe9`, eliminating any erroneous suffix references.
 
 
 

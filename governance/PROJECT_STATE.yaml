@@ -10,10 +10,10 @@ project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
   head: "8190b205cce2232f96137fadb2e346215d04ad1d"
-  scientific_candidate_sha: "15086d3a81dd083aafb48eda4cb73863bc312da1"
-  review_bound_sha: "15086d3a81dd083aafb48eda4cb73863bc312da1"
+  scientific_candidate_sha: "6b25aae3eefc8e22b4b5a6486f2045bffa0b9e39"
+  review_bound_sha: "6b25aae3eefc8e22b4b5a6486f2045bffa0b9e39"
   evidence_closeout_head: "8190b205cce2232f96137fadb2e346215d04ad1d"
-  closeout_resolution: "evidence_closeout_head binds the preceding completed YM-054 receipt/state closeout commit (8190b205cce2232f96137fadb2e346215d04ad1d); scientific_candidate_sha binds the reviewed candidate freeze commit (15086d3a81dd083aafb48eda4cb73863bc312da1)."
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-054 closeout commit (8190b205cce2232f96137fadb2e346215d04ad1d); scientific_candidate_sha and review_bound_sha bind reviewed YM-054R candidate freeze commit (6b25aae3eefc8e22b4b5a6486f2045bffa0b9e39); resolve authoritative current HEAD dynamically from Git."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -35,7 +35,7 @@ coordination:
   last_expected_revision: 60
   last_updated_at: "2026-10-10T01:13:00Z"
   active_contract: "YM-015F-JET-002B"
-  frozen_candidate: "15086d3a81dd083aafb48eda4cb73863bc312da1"
+  frozen_candidate: "6b25aae3eefc8e22b4b5a6486f2045bffa0b9e39"
 
 current_objective: YM-015F-JET-002B
 

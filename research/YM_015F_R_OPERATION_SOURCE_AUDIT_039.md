@@ -1416,6 +1416,26 @@ In `verification/YM-053R_E3_RECEIPT.json` and `verification/YM-053R_MILESTONE.md
    - `project.head`: Current authoritative Git HEAD.
    - Elimination of self-referential requirements: A closeout commit cannot self-referentially bind its own future SHA before it is created; `evidence_closeout_head` records the preceding closeout commit from Git ancestry.
 
+---
+
+### 4. Closeout Reconciliation: Direct Object-Byte Querying, Reconciled Git IDs, and Live State Bindings
+
+1. **Direct Object-Byte Querying via `git cat-file --batch`:**
+   - The literal Git-blob helper `compute_literal_git_blob_scientific_tree_hash` in `src.ymmg.ros` was updated to stream object specifications `<commit_sha>:<git_path>\n` directly into `git cat-file --batch`.
+   - This bypasses `git archive`, establishing direct object-byte equivalence with literal Git object database blobs, completely immune to `export-ignore` or `export-subst` attributes, and fails closed with `ConstitutionalIntegrityError` if any canonical file is missing or not a blob object.
+   - For candidate `6b25aae3eefc8e22b4b5a6486f2045bffa0b9e39`, the literal Git-blob tree hash over all 158 canonical files is verified as `b9bbef05cf85f9f410992b33179771643608a5f4331a86aafcd7f96407912196`.
+
+2. **Live Candidate Bindings in `PROJECT_STATE.yaml`:**
+   - Updated `governance/PROJECT_STATE.yaml` revision 61 so that `scientific_candidate_sha`, `review_bound_sha`, and `coordination.frozen_candidate` bind the reviewed candidate freeze commit `6b25aae3eefc8e22b4b5a6486f2045bffa0b9e39`.
+   - Confirmed that `evidence_closeout_head` binds preceding completed closeout commit `8190b205cce2232f96137fadb2e346215d04ad1d`, separating prior closeout from reviewed candidate and current authoritative Git HEAD.
+
+3. **Reconciliation of Actual Git Lineage IDs:**
+   - Candidate freeze commit: `6b25aae3eefc8e22b4b5a6486f2045bffa0b9e39`
+   - Acceptance commit: `c28e16eb2097c6e8f84361dc68a0ee6e8edf48c4`
+   - Initial evidence closeout commit: `3faa8925386d7bccad961b5a3899bce8d073cfe9`
+   - All historical raw receipts remain immutable; all active project artifacts are reconciled with true Git IDs.
+
+
 
 
 

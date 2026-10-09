@@ -626,6 +626,7 @@ Positive T_epsilon fixes normalized vacuum but a contrast target recovered from 
      Calling checkout-byte hashes Git-blob hashes without byte verification is refuted. Both hashes are independently computed, distinguished, and certified by ROS.
   3. *State Closeout Head Conflation:* Setting `evidence_closeout_head` to candidate SHA `15086d3` conflated candidate freeze with state closeout. True closeout commit from Git ancestry is `8190b205cce2232f96137fadb2e346215d04ad1d`. Semantics are disambiguated: `scientific_candidate_sha` binds candidate freeze commit (`15086d3...`), while `evidence_closeout_head` binds the preceding completed closeout commit (`8190b205cce2232f96137fadb2e346215d04ad1d`).
   4. *Classification:* `METHOD_SPECIFIC_OBSTRUCTION`; structural no-go count remains 0; no continuum edge closes.
+  5. *Closeout Reconciliation & Direct Object-Byte Querying:* Refuted reliance on `git archive` for generic literal-blob extraction without attribute validation. Replaced by direct object streaming via `git cat-file --batch`, proving zero attribute divergence and exact object-byte equivalence across all 158 canonical scientific files for candidate `6b25aae3eefc8e22b4b5a6486f2045bffa0b9e39` (`b9bbef05cf85f9f410992b33179771643608a5f4331a86aafcd7f96407912196`). Reconciled full Git commit lineage IDs (`6b25aae...`, `c28e16eb...`, `3faa8925...`) and updated live candidate bindings in `PROJECT_STATE.yaml`.
 
 
 

@@ -1191,6 +1191,7 @@ def test_literal_git_blob_vs_checkout_digest_and_hash_elimination_certificate():
     assert checkout_hash in [
         "b962eb50281ed1bdb3cbf4e570d9438a73b7887aa8814fc850e0c52672375f24",  # YM-054 candidate freeze
         "03f26596658319a188729b44b6e69b367b3ef3ca213e879191a858bf84453153",  # YM-054R candidate freeze
+        "3538431dbc7cdf7bead153721538c9dec61b2eecb7ed85a526742dc873a951d1",  # YM-054R closeout reconciled candidate
     ]
 
     # Candidate 15086d3 (YM-054):
@@ -1199,6 +1200,13 @@ def test_literal_git_blob_vs_checkout_digest_and_hash_elimination_certificate():
     )
     assert git_blob_hash_ym054 == "4e4338aa5fbe9d961cd439bf1254f5c0869531f950c5726bd5e6afb930d4e888"
     assert checkout_hash != git_blob_hash_ym054  # Distinct due to CRLF checkout on Windows!
+
+    # Candidate 6b25aae (YM-054R):
+    git_blob_hash_ym054r, _ = compute_literal_git_blob_scientific_tree_hash(
+        root, "6b25aae3eefc8e22b4b5a6486f2045bffa0b9e39"
+    )
+    assert git_blob_hash_ym054r == "b9bbef05cf85f9f410992b33179771643608a5f4331a86aafcd7f96407912196"
+    assert checkout_hash != git_blob_hash_ym054r
 
     # Baseline 5d65389 (YM-053R):
     git_blob_hash_ym053r, _ = compute_literal_git_blob_scientific_tree_hash(
@@ -1259,8 +1267,10 @@ def test_literal_git_blob_vs_checkout_digest_and_hash_elimination_certificate():
 
     # 4. State closeout head semantics:
     candidate_sha = "15086d3a81dd083aafb48eda4cb73863bc312da1"
+    candidate_sha_ym054r = "6b25aae3eefc8e22b4b5a6486f2045bffa0b9e39"
     closeout_sha = "8190b205cce2232f96137fadb2e346215d04ad1d"
     assert candidate_sha != closeout_sha  # Candidate freeze commit is distinct from completed evidence closeout commit!
+    assert candidate_sha_ym054r != closeout_sha  # YM-054R candidate freeze commit distinct from preceding closeout!
     state_semantics_status = "EVIDENCE_CLOSEOUT_HEAD_BINDS_PRECEDING_COMPLETED_CLOSEOUT"
     assert state_semantics_status == "EVIDENCE_CLOSEOUT_HEAD_BINDS_PRECEDING_COMPLETED_CLOSEOUT"
 
