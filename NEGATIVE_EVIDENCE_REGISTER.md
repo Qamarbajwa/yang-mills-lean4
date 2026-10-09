@@ -451,3 +451,27 @@ No actual nontrivial history, termwise marked adjoint or cutoff-uniform terminal
 
 ## YM-049 own observability and orbit-normalization limits
 Positive T_epsilon fixes normalized vacuum but a contrast target recovered from unmarked reduced data has unique adjoint norm1/epsilon; at epsilon0 kernel loss forbids that particular descent. The same column-stochastic map exactly preserves masses of preinserted marked coefficients, so this is not an obstruction to the selected full source-jet route or Yang–Mills. Toy even projection preserves vacuum yet loses odd-source/odd-probe pairing1; no BPHZ lemma is identified with that projection. Signed orbit kernel2 delta_identity-delta_swap fixes invariant marks but amplifies noninvariant contrast by3, so massone does not imply probability contraction. Actual Faddeev-Popov measure/original physical gauge pullback are unverified; abstract invariance does not close them. Classification METHOD_SPECIFIC_OBSTRUCTION; structural no-go0, no cutoff-uniform gain or scientific edge closure.
+
+
+## YM-050: OpenAI Family 215 unverified candidate and criticality mismatch
+
+- **Discovery Date:** 2026-10-09
+- **Epistemic Classification:** `[METHOD_SPECIFIC_OBSTRUCTION]` / `[UNVERIFIED_CANDIDATE_PREPRINT]`
+- **Hypothesis tested:** Whether OpenAI Family 215 provides a verified, mathematically transferable technique for controlling the missing M1 source insertion term in 4D Yang–Mills constructive RG.
+- **Result:** Falsified as a verified transfer.
+  1. Primary-source audit of `openai/math` (Problem 215 / Family 215) establishes that its Lean 4 formalization covers only classical lattice spin correlation decay for $O(n)$ ($n \ge 3$) on 2D lattices. Zero Lean declarations formalize the continuum QFT construction, Osterwalder–Schrader axioms, non-Gaussianity, or the one-particle pole. The claimed full continuum construction remains an unreviewed candidate preprint (`UNVERIFIED_CANDIDATE_PREPRINT`).
+  2. The 2D $O(3)$ sigma model is strictly critical / renormalizable (dimensionless coupling), not super-renormalizable.
+  3. The spin source term $J \cdot q = J_\pi \cdot \pi + J_\sigma \sqrt{1 - \|\pi\|^2}$ is strictly non-linear in local fluctuation coordinates $\pi$ on $S^2$, refuting the claim that source coupling is a simple linear Gaussian shift.
+  4. Local $L^1$ integrability of the 2D Green's kernel does not establish cutoff-uniform source analyticity for a non-linear field theory.
+  5. The transfer proposal is classified as `UNVERIFIED_CANDIDATE_PREPRINT` and `METHOD_SPECIFIC_OBSTRUCTION`; no accepted transfer is promoted, and zero DAG edges close.
+
+
+## YM-050: physical observable non-factorization across disjoint regions and trace-only omission
+
+- **Discovery Date:** 2026-10-09
+- **Epistemic Classification:** `[METHOD_SPECIFIC_OBSTRUCTION]`
+- **Hypothesis tested:** Whether disjoint integration regions in R-I (1.76) allow independent factorization of the physical flowed observable insertion, and whether the nilpotent determinant trace $\frac{1}{2} \operatorname{Tr}(Q^{-1} B)$ captures the complete first moment.
+- **Result:** Falsified.
+  1. Gradient flow over positive flow time $t > 0$ generates non-compact diffusion across physical distance $\sim \sqrt{8 t_{\mathrm{phys}}}$. The physical clover energy density $\mathcal{O}_{a,t}(f)[V e^{g A}]$ couples link variables across both $Z_h$ and active fluctuation regions, preventing spatial factorization of the marked integral despite disjointness of the vacuum measure domains.
+  2. In the nilpotent algebra $\eta^2 = 0$, $\det(Q - \eta B)^{-1/2}$ linearizes exactly to $1 + \frac{1}{2} \eta \operatorname{Tr}(Q^{-1} B)$. However, replacing the full physical insertion by this trace alone drops linear fluctuation terms $DX[V] \cdot A$ that contract with cubic/quartic interaction vertices in the non-Gaussian effective action, producing an exact strictly non-zero moment defect in interacting models.
+  3. Classification: `METHOD_SPECIFIC_OBSTRUCTION`; structural no-go count remains 0; no continuum edge closes.

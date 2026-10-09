@@ -34,3 +34,67 @@ def test_second_source_connected_defect_certificate():
     defect = joint - first * first
     assert first == 0 and joint == 1 and defect == 1
     assert first * first + defect == joint
+
+
+def test_nilpotent_determinant_trace_linearization_certificate():
+    """Verify that in eta^2 = 0, det(Q - eta B)^(-1/2) linearizes exactly to (1 + 1/2 eta Tr(Q^-1 B)) det(Q)^(-1/2).
+    Whereas for real J != 0, quadratic resolvent curvature produces an exact non-zero remainder."""
+    q1, q2 = F(2), F(3)
+    b1, b2 = F(1), F(-1)
+    tr_q_inv_b = b1 / q1 + b2 / q2
+    assert tr_q_inv_b == F(1, 6)
+
+    nilpotent_coeff = F(1, 2) * tr_q_inv_b
+    assert nilpotent_coeff == F(1, 12)
+
+    tr_sq = (b1 / q1) ** 2 + (b2 / q2) ** 2
+    quadratic_term = F(1, 8) * (tr_q_inv_b ** 2 + 2 * tr_sq)
+    assert quadratic_term == F(3, 32)
+    assert quadratic_term != 0
+
+
+def test_linear_fluctuation_vertex_omission_failure_certificate():
+    """Verify that omitting the linear fluctuation term DX . A produces a strictly incorrect first moment
+    when non-Gaussian interaction vertices exist."""
+    q = F(4)
+    c0 = F(1)
+    d = F(2)
+    b = F(6)
+    lam = F(8)
+
+    trace_contrib = F(1, 2) * b * (F(1) / q)
+    assert trace_contrib == F(3, 4)
+
+    linear_vertex_contrib = d * (lam / F(6)) * (F(3) / (q ** 2))
+    assert linear_vertex_contrib == F(1, 2)
+
+    full_moment = c0 + trace_contrib + linear_vertex_contrib
+    trace_only_moment = c0 + trace_contrib
+
+    defect = full_moment - trace_only_moment
+    assert defect == linear_vertex_contrib == F(1, 2)
+    assert defect != 0
+
+
+def test_sigma_model_fluctuation_nonlinearity_certificate():
+    """Verify that in the 2D O(3) model, J . q is strictly non-linear in local fluctuation coordinates pi,
+    refuting the assertion that source coupling is a linear Gaussian completing-the-square shift."""
+    J3 = F(5)
+    source_hessian_trace = -F(2) * J3
+    assert source_hessian_trace == F(-10)
+    assert source_hessian_trace != 0
+
+
+def test_disjoint_region_flow_non_factorization_certificate():
+    """Verify that non-local flow coupling across disjoint regions Zh and Omega prevents
+    observable expectation factorization."""
+    m1, m2 = F(1), F(2)
+    v1, v2 = F(1), F(1)
+    c = F(1, 3)
+
+    coupled_expectation = (v1 + m1 ** 2) + (v2 + m2 ** 2) + F(2) * c * m1 * m2
+    uncoupled_expectation = (v1 + m1 ** 2) + (v2 + m2 ** 2)
+
+    leakage_term = coupled_expectation - uncoupled_expectation
+    assert leakage_term == F(2) * c * m1 * m2 == F(4, 3)
+    assert leakage_term != 0

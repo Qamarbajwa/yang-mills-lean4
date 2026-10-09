@@ -100,3 +100,23 @@ Proof: the invariant value is constant in the g integral and kappa_x(G)=1. This 
 Signed finite witness: G=Z2 swaps two coordinates and kappa=2 delta_identity-delta_swap has mass1 and total variation3. It fixes invariant f=(3,3) exactly, but sends f=(1,-1) to(3,-3). Thus signed normalized gauge-like averaging can preserve a genuinely invariant mark while failing probability-kernel contraction on general marks. This abstract action is not identified with the physical lattice gauge action or noise-reflection action. The pointwise lemma does not prove the author's singular Faddeev-Popov/tree-gauge insertion is represented by such a finite mass-one measure; its actual constrained measure/Jacobian identity and transformed source support remain separate obligations.
 
 For physical flowed gauge-invariant insertions, the missing source step is to identify their pulled-back functions in the actual R-I(1.76) coordinates, prove invariance under exactly the compensating residual/fluctuation transformations or retain transformed marks, and match the true gauge-orbit measure and normalization. The first unchanged disjoint integral and all complementary T/zeta/rejected/n=0 sectors remain present. Physical gauge invariance by itself does not prove this complete coordinate/measure dictionary. Forward marked densities should be retained rather than reconstructed from vacuum data; CDC-049 distinguishes those paths and their norms. No actual gauge-fixed marked transport or cutoff-uniform bound is supplied.
+
+
+## YM-050: nilpotent determinant trace linearization vs. non-linear resolvent inversion
+
+Own conditional algebraic theorem. In the nilpotent algebra with eta^2 = 0, let Q be an invertible real symmetric or complex Hermitian matrix and B an arbitrary matrix of the same dimension. The formal determinant expansion linearizes identically:
+
+    det(Q - eta B)^(-1/2) = det(Q)^(-1/2) * (1 + (1/2) eta Tr(Q^(-1) B)).
+
+Proof: log det(I - eta Q^(-1) B) = Tr log(I - eta Q^(-1) B) = -eta Tr(Q^(-1) B) because all higher powers (eta Q^(-1) B)^k vanish identically for k >= 2. Exponentiating gives exp(1/2 eta Tr(Q^(-1) B)) = 1 + (1/2) eta Tr(Q^(-1) B).
+
+For real J != 0, this identity fails due to non-zero quadratic curvature:
+    (det(Q - J B) / det(Q))^(-1/2) = 1 + (1/2) J Tr(Q^(-1) B) + (1/8) J^2 [ (Tr(Q^(-1) B))^2 + 2 Tr((Q^(-1) B)^2) ] + O(J^3).
+
+### What nilpotency removes and what remains open
+1. **What nilpotency removes:** Working with eta^2 = 0 eliminates the need to prove convergence of an infinite Taylor series sum_(m=0)^infinity (J^m / m!) X^m in a finite source polydisc |J| <= r_0. It reduces the source-deformed partition function to an exact polynomial jet of degree k.
+2. **What remains open:**
+   - Invertibility of the fluctuation operator Q on the subspace orthogonal to gauge zero modes;
+   - Cutoff-uniform bound on the trace Tr(Q^(-1) B) as lattice spacing a -> 0;
+   - Non-replacement of the full physical insertion: the observable X[V exp(g A)] = X[V] + DX . A + 1/2 D^2 X(A, A) + ... contains linear fluctuation terms DX . A and higher vertices. Linear terms contract with cubic and higher interaction vertices in the non-Gaussian effective action; omitting them and retaining only Tr(Q^(-1) B) yields a strictly incorrect first moment in the presence of interactions.
+   - For multiple insertions k >= 2, mixed connected defects c_ij = <X_i X_j> - <X_i><X_j> persist and must be tracked across every scale.
