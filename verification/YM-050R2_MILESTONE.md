@@ -27,4 +27,4 @@ DAG: YM-050R -> YM-050R2 accepted bounded repair; scientific edge closures []. S
 
 ## Final closeout: accepted revision 52
 
-Final closeout: accepted revision 52; evidence receipt/state commit pending. Full test suite 440 passed; all 12 project hard gates PASS within bounded scope. Scientific identity 158 files unchanged and final immutable raw E4 digest rechecked. Resolve current authoritative HEAD from Git after this metadata binding commit. Scientific edge closures remain [].
+Final closeout: accepted revision 52; evidence receipt/state commit f6d607b892802cfb77e93b3b26264754c1ce1508. Full test suite 440 passed; all 12 project hard gates PASS within bounded scope. Scientific identity 158 files unchanged and final immutable raw E4 digest rechecked. Resolve current authoritative HEAD from Git after this metadata binding commit. Scientific edge closures remain [].
