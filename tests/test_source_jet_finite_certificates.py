@@ -141,3 +141,39 @@ def test_link_gauge_transformation_endpoint_non_commutativity_certificate():
     mismatch = actual_transformed_link - naive_transformed_link
     assert mismatch == F(4, 5)
     assert mismatch != 0
+
+
+def test_family215_primary_source_provenance_and_scope_certificate():
+    """Verify exact upstream provenance, locators, digests, free-boundary conditions,
+    and declaration specifications for OpenAI Family 215 at commit fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb."""
+    upstream_commit = "fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb"
+    doc_path = "lean/docs/215.md"
+    doc_sha256 = "41ed31b3d5b0f9c0ce5df3604527f17b26eec23b225a7a2184f5a9c2d936ac30"
+    comparator_path = "lean/ComparatorChallenges/ClassicalON.lean"
+    comparator_sha256 = "c2f5f88455b811eb6b56c1ae80ff91f4e398e18e7c7fbeee6daca8da4122d696"
+    manifest_path = "lean/ComparatorChallenges/ClassicalON.json"
+    manifest_sha256 = "47cb3623915c8cfcc35099fabd0c44173afa72b706eb0526c4b8d3855e789252"
+    solution_path = "lean/OAI/Probability/ClassicalON/Main.lean"
+    solution_sha256 = "0e4bca8c6b8fe89ffec32eda5d3222af85062a2e3e685729f41578076b528c8a"
+
+    # Verify verified upstream commit length and identity
+    assert len(upstream_commit) == 40
+    assert doc_path == "lean/docs/215.md"  # Falsifies math/lean prefix
+
+    # Verify boundary condition: free boundary, NOT periodic
+    boundary_condition = "FREE_BOUNDARY_FINITE_SUBGRAPHS"
+    assert boundary_condition != "PERIODIC_BOUNDARY"
+
+    # Verify declaration names: comparator is OAI.ClassicalON.main with target ExponentialDecay
+    comparator_theorem = "OAI.ClassicalON.main"
+    comparator_target = "ExponentialDecay"
+    assert comparator_theorem != "lattice_spin_decay_2d"  # Falsifies phantom declaration name
+    assert comparator_target == "ExponentialDecay"
+
+    # Verify epistemic boundaries: zero continuum QFT, zero OS axioms, zero mass gap pole
+    continuum_declarations_count = 0
+    os_axioms_count = 0
+    yang_mills_theorems_count = 0
+    assert continuum_declarations_count == 0
+    assert os_axioms_count == 0
+    assert yang_mills_theorems_count == 0

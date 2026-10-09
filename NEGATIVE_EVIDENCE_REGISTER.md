@@ -464,6 +464,7 @@ Positive T_epsilon fixes normalized vacuum but a contrast target recovered from 
   3. The spin source term $J \cdot q = J_\pi \cdot \pi + J_\sigma \sqrt{1 - \|\pi\|^2}$ is strictly non-linear in local fluctuation coordinates $\pi$ on $S^2$, refuting the claim that source coupling is a simple linear Gaussian shift.
   4. Local $L^1$ integrability of the 2D Green's kernel does not establish cutoff-uniform source analyticity for a non-linear field theory.
   5. The transfer proposal is classified as `UNVERIFIED_CANDIDATE_PREPRINT` and `METHOD_SPECIFIC_OBSTRUCTION`; no accepted transfer is promoted, and zero DAG edges close.
+  6. **[CHALLENGED_AND_SUPERSEDED IN YM-050R2]:** The path `math/lean/docs/215.md`, periodic boundary condition, and declaration head `lattice_spin_decay_2d` cited in this historical entry are superseded by exact upstream commit `fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb`, path `lean/docs/215.md`, free-boundary condition, comparator `OAI.ClassicalON.main : ExponentialDecay := by sorry`, and candidate solution module `lean/OAI/Probability/ClassicalON/Main.lean` (see entry `NEG-YM-050R2-FAMILY215-PROVENANCE`).
 
 
 ## YM-050: physical observable non-factorization across disjoint regions and trace-only omission
@@ -487,3 +488,16 @@ Positive T_epsilon fixes normalized vacuum but a contrast target recovered from 
   2. For composite link $U_{xy} = V_{xy} \exp(g A_{xy})$, site gauge transformations $h \in \mathcal{G}$ act at both endpoints: $U_{xy}^h = h_x U_{xy} h_y^{-1}$. Holding background $V$ fixed does not commute with this action: $V_{xy}^{-1} h_x V_{xy} \exp(g A_{xy}) h_y^{-1} \ne \exp(g h_y A_{xy} h_y^{-1})$ unless $h_x = V_{xy} h_y V_{xy}^{-1}$. Bałaban's compensating transformations (R-I (1.85)–(1.88)) require joint transformation of both background $V \mapsto V^h$ and fluctuation $A \mapsto h^{-1} A h$.
   3. Consequently, asserting an uncoupled tree-gauge identity on fluctuation $A$ with fixed background $V$ is mathematically defective. The actual-model Bałaban coordinate pullback and tree-gauge orbit identity are reclassified as `CONDITIONAL_AND_OPEN` (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_ORBIT_IDENTITY_OPEN`).
   4. Classification: `METHOD_SPECIFIC_OBSTRUCTION`; structural no-go count remains 0; no continuum edge closes.
+
+
+## YM-050R2: OpenAI Family 215 primary-source provenance and proof status repair
+
+- **Discovery Date:** 2026-10-09
+- **Epistemic Classification:** `[METHOD_SPECIFIC_OBSTRUCTION]` / `[UNVERIFIED_CANDIDATE_PREPRINT]`
+- **Hypothesis tested:** Whether OpenAI Family 215 at commit `fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb` provides a verified, kernel-checked, transferable technique for 4D Yang–Mills source control.
+- **Result:** Falsified and source provenance repaired.
+  1. **Upstream Locators & Hashes:** Repository `https://github.com/openai/math.git` at commit `fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb`. Scope doc: `lean/docs/215.md` (LEN 1,031 bytes, SHA-256 `41ed31b3d5b0f9c0ce5df3604527f17b26eec23b225a7a2184f5a9c2d936ac30`). Comparator challenge: `lean/ComparatorChallenges/ClassicalON.lean` (LEN 1,961 bytes, SHA-256 `c2f5f88455b811eb6b56c1ae80ff91f4e398e18e7c7fbeee6daca8da4122d696`). Manifest: `lean/ComparatorChallenges/ClassicalON.json` (LEN 308 bytes, SHA-256 `47cb3623915c8cfcc35099fabd0c44173afa72b706eb0526c4b8d3855e789252`). Solution module: `lean/OAI/Probability/ClassicalON/Main.lean` (LEN 2,050 bytes, SHA-256 `0e4bca8c6b8fe89ffec32eda5d3222af85062a2e3e685729f41578076b528c8a`).
+  2. **Boundary Conditions & Model:** The model specifies classical $O(n)$ ($n \ge 3$) spin correlation decay on finite square-lattice subgraphs with **FREE boundary conditions**, NOT periodic boundaries. Infinite-volume limit and $O(4)$ spectral gap are explicitly disclaimed in `lean/docs/215.md`.
+  3. **Declaration Heads & Proof Status:** The phantom declaration head `lattice_spin_decay_2d` does not exist. The comparator challenge specifies `def ExponentialDecay : Prop` and `theorem main : ExponentialDecay := by sorry`. The candidate solution `Main.lean` contains proof script text `theorem main : ExponentialDecay := by ...`. However, because downloaded code is untrusted and no reproducible kernel-checked build receipt is verified, proof status is strictly `UNVERIFIED_UPSTREAM_PROOF_CODE`.
+  4. **Inspected Scope vs. Nonexistence Theorem:** Direct inspection of the scope doc, comparator challenge, manifest, and solution main module establishes a search-negative finding: zero declarations exist for continuum QFT construction, Osterwalder–Schrader axioms, non-Gaussianity, or 4D Yang–Mills. This search-negative finding across inspected primary files is distinguished from an unproved universal assertion of repo-wide nonexistence.
+  5. **Transfer Status:** Classification remains `UNVERIFIED_CANDIDATE_PREPRINT` and `METHOD_SPECIFIC_OBSTRUCTION`; allowed transfer conclusion is strictly None; zero DAG edges close.

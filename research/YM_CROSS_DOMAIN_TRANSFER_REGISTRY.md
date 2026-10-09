@@ -195,14 +195,18 @@ Own transfer candidate: before defining a marked Gaussian adjoint, match the ori
 Source mechanisms: own finite row-space/kernel target-descent theorem, positive stochastic adjoint norm witness and invariant signed-orbit mark lemma. Source-local triggers: R-I(1.76) coordinate/gauge insertion audit049 and YMH numbered4.5->5.5 vacuum symmetry hypothesis. Target: complete fixed-vacuum physical source jet before actual eliminated-variable and gauge operations; FA-001 marked target preservation. Verified mapping: finite exact matrices/abstract orbit action only. Necessary hypotheses: actual integration operator/domain and target identified, true orbit mass/measure/Jacobian identity, invariance under the exact transformed action, all-sector absolute integrability and physical terminal normalization. Allowed conclusion: conditional representation selection and omission diagnostics. Unresolved: actual coordinate/source/model dictionary, gauge factors and hidden T/zeta, rejected/n=0 sectors, uniform input/terminal norms and cutoff-independent estimates. Coarse observable descent is not required when complete marked densities are transported; signed activity pieces are not assigned stochasticity. No continuum or positive4D-gain transfer.
 
 
-## XFER-YM-O3-FAMILY215 — unverified candidate transfer audit
+## XFER-YM-O3-FAMILY215 — unverified candidate transfer audit (repaired YM-050R2)
 
-- Source branch: openai/math repository, Problem 215 / Family 215, "Canonical O(3) continuum limit and exact O(4) mass asymptotics" (upstream public release October 6, 2026, URL: https://github.com/openai/math).
+- Source branch: openai/math repository, commit `fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb`, Problem 215 / Family 215, "Canonical O(3) continuum limit and exact O(4) mass asymptotics" (upstream public release October 6, 2026, URL: https://github.com/openai/math).
 - Target branch: YM-015F marked observable insertion in 4D multiscale Bałaban RG.
 - Source claim: Construction of interacting continuum limit and isolated one-particle pole for the 2D O(3) non-linear sigma model.
-- Inspected surface: math/lean/docs/215.md, formalization.yaml, preprint records.
-- Essential source hypotheses: Lean 4 declaration head `lattice_spin_decay_2d` formally proves classical spin correlation exponential decay on finite 2D periodic lattices for O(n) (n >= 3) under nearest-neighbor ferromagnetic action.
-- Scoped search-negative boundary: Exhaustive inspection of math/lean/docs/215.md establishes that zero Lean declarations exist for the continuum QFT construction, Wightman reconstruction, Osterwalder–Schrader axioms, non-Gaussianity, or the one-particle mass gap pole.
+- Inspected surface: `lean/docs/215.md` (LEN 1,031, SHA-256 `41ed31b3...`), `lean/ComparatorChallenges/ClassicalON.lean` (LEN 1,961, SHA-256 `c2f5f884...`), `lean/ComparatorChallenges/ClassicalON.json` (LEN 308, SHA-256 `47cb3623...`), and `lean/OAI/Probability/ClassicalON/Main.lean` (LEN 2,050, SHA-256 `0e4bca8c...`).
+- Essential source hypotheses:
+  - Model: Classical $O(n)$ ($n \ge 3$) spin correlation decay on finite square-lattice subgraphs with **FREE boundary conditions** (`structure LatticeGraph`), NOT periodic boundaries.
+  - Exclusions: Infinite-volume limit and $O(4)$ spectral gap are explicitly disclaimed in `lean/docs/215.md`.
+  - Comparator challenge: Namespace `OAI.ClassicalON`, `def ExponentialDecay : Prop`, `theorem main : ExponentialDecay := by sorry`.
+  - Solution module: `OAI.Probability.ClassicalON.Main` contains proof text without `sorry`, but status is `UNVERIFIED_UPSTREAM_PROOF_CODE` (no execution of untrusted downloaded code, no verified local kernel check receipt at commit `fd4aeeb2...`).
+- Scoped search-negative boundary: Direct inspection of the scope doc, comparator challenge, manifest, and solution main module establishes that zero Lean declarations exist for continuum QFT construction, Wightman reconstruction, Osterwalder–Schrader axioms, non-Gaussianity, or the one-particle mass gap pole. This search-negative finding is distinguished from an unproved universal assertion of repo-wide nonexistence.
 - Target objects: 4D SU(N) gradient-flowed energy density observable insertion under multiscale block-spin RG.
 - Verified mapping: Both models are asymptotically free. However, 2D O(3) has a dimensionless spin field [q]=0 and global O(3) symmetry, while 4D Yang–Mills has local gauge redundancy and action density [O]=4.
 - Mathematical transfer barriers:
@@ -211,3 +215,4 @@ Source mechanisms: own finite row-space/kernel target-descent theorem, positive 
   3. Local integrability of the 2D Green kernel does not establish cutoff-uniform source analyticity for a non-linear theory.
   4. At fixed flow time t_phys > 0, gradient flow smoothing bounds the 4D observable Hessian B on each finite lattice; the genuine obstacle is multiscale polymer activity summability under Bałaban's RG, not fixed-lattice operator norm divergence.
 - Allowed conclusion: None. Status: UNVERIFIED_CANDIDATE_PREPRINT / METHOD_SPECIFIC_OBSTRUCTION. No accepted transfer. No DAG edge closes.
+

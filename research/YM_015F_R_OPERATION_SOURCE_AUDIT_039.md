@@ -378,17 +378,43 @@ Let O_(a,t)(f)[U] = a^4 sum_x f(x) E_(a,t)(x)[U] be the physically normalized cl
        <O_(a,t)(f)> = (1 / Z_vac) sum_alpha integral dmu_(alpha)^vac[V, A] O_(a,t)(f)[V exp(g A)].
    This sum carries all small-field sectors, complementary/rejected sectors (chi_small = 0), and the n=0 sector.
 
-### Primary-source audit of OpenAI Family 215 (scoped provenance)
+### Primary-source audit of OpenAI Family 215 (repaired provenance and proof status)
 
-We audited the external candidate manuscript from the openai/math repository (upstream public release October 6, 2026, Problem 215 / Family 215, titled "Canonical O(3) continuum limit and exact O(4) mass asymptotics"):
-1. **Inspected repository surface:** Inspected `math/lean/docs/215.md`, `formalization.yaml`, and accompanying preprint documents in `https://github.com/openai/math`.
-2. **Named Lean 4 declarations:** The inspectable formalization contains the declaration head `lattice_spin_decay_2d`, formalizing classical spin correlation exponential decay for O(n) (n >= 3) on finite 2D periodic lattices under nearest-neighbor ferromagnetic action.
-3. **Scoped search-negative boundary:** Exhaustive search across declaration names, axioms, and theorem heads in `math/lean/docs/215.md` establishes that zero Lean declarations exist for:
-   (a) Continuum quantum field theory construction / Wightman reconstruction;
-   (b) Osterwalder–Schrader axioms OS0–OS4;
-   (c) Non-Gaussianity of connected Schwinger functions;
-   (d) The continuum one-particle spectral pole or non-perturbative mass gap.
-4. **Epistemic status:** The claimed full continuum construction remains an unverified candidate preprint (`UNVERIFIED_CANDIDATE_PREPRINT`). Retained classification: `METHOD_SPECIFIC_OBSTRUCTION`. No accepted transfer (XFER-YM-O3-FAMILY215) is authorized.
+We audited the external candidate manuscript from the openai/math repository at immutable upstream commit `fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb` (upstream public release October 6, 2026, Problem 215 / Family 215, titled "Canonical O(3) continuum limit and exact O(4) mass asymptotics"):
+
+1. **Exact Upstream Locators, Roles, and Byte Digests:**
+   - **Scope Description:** `lean/docs/215.md` (LEN 1,031 bytes, SHA-256: `41ed31b3d5b0f9c0ce5df3604527f17b26eec23b225a7a2184f5a9c2d936ac30`). Role: Scope documentation for accompanying preprint `preprints/Exponential-decay-in-two-dimensional-classical-On-models-September-23-2026/paper.pdf`. (Note: The repository-relative path is `lean/docs/215.md`; prefixing with `math/` returns 404). This markdown file contains documentation and markdown tables, but zero Lean code declarations or theorem heads.
+   - **Comparator Challenge Specification:** `lean/ComparatorChallenges/ClassicalON.lean` (LEN 1,961 bytes, SHA-256: `c2f5f88455b811eb6b56c1ae80ff91f4e398e18e7c7fbeee6daca8da4122d696`). Role: Formal challenge specification. Namespace: `OAI.ClassicalON`. Exact declarations: `Site := ℤ × ℤ`, `PositiveNeighbor (x y : Site) : Prop`, `structure LatticeGraph` (finite square-lattice subgraphs with nearest-neighbor edges), `abbrev Spin (n : ℕ) := ↥(Metric.sphere (0 : EuclideanSpace ℝ (Fin n)) 1)`, `Configuration`, `referenceLaw`, `interaction`, `partition`, `correlation`, `siteDistance`, `def ExponentialDecay : Prop`, and `theorem main : ExponentialDecay := by sorry`.
+   - **Comparator Execution Manifest:** `lean/ComparatorChallenges/ClassicalON.json` (LEN 308 bytes, SHA-256: `47cb3623915c8cfcc35099fabd0c44173afa72b706eb0526c4b8d3855e789252`). Role: Manifest linking challenge module `ComparatorChallenges.ClassicalON` to solution module `OAI.Probability.ClassicalON.Main`, with permitted axioms `["propext", "Quot.sound", "Classical.choice"]`.
+   - **Candidate Solution Module:** `lean/OAI/Probability/ClassicalON/Main.lean` (LEN 2,050 bytes, SHA-256: `0e4bca8c6b8fe89ffec32eda5d3222af85062a2e3e685729f41578076b528c8a`). Role: Solution proof module. Imports `OAI.Probability.ClassicalON.BlockReduction` and contains `theorem main : ExponentialDecay := by ...` without top-level `sorry`.
+
+2. **Exact Mathematical Model & Boundary Conditions:**
+   - **Model:** Two-dimensional classical lattice spin system on unit sphere $S^{n-1} \subset \mathbb{R}^n$ ($n \ge 3$) under nearest-neighbor ferromagnetic coupling $\sum_e b(e) \langle \sigma(e_1), \sigma(e_2) \rangle$ with $b(e) \in [0, \beta]$.
+   - **Boundary Conditions:** Finite square-lattice subgraphs with **FREE boundary conditions** (`structure LatticeGraph`), NOT periodic boundary conditions.
+   - **Explicit Documented Scope & Exclusions:** `lean/docs/215.md` explicitly specifies: *"For each interaction bound $\beta>0$, constants $A$ and $m>0$ work for every finite square-lattice subgraph with free boundary and nonnegative edge strengths at most $\beta$: the correlation between sites $x,y$ is at most $Ae^{-m|x-y|}$. The infinite-volume limit and the separate $O(4)$ spectral-gap claim are not included."*
+
+3. **Supersession of Inaccurate Declaration & Periodic-Boundary Claims:**
+   - The previously asserted declaration head `lattice_spin_decay_2d` does NOT exist in the repository; it is formally superseded by the actual comparator theorem `OAI.ClassicalON.main : ExponentialDecay` (with `sorry` in `ClassicalON.lean`) and solution theorem `OAI.ClassicalON.main` in `Main.lean`.
+   - The previously asserted "finite 2D periodic lattices" claim is superseded by the exact free-boundary specification.
+   - The claim that inspecting `lean/docs/215.md` constituted an "exhaustive declaration search of Lean formalization" is superseded: `lean/docs/215.md` is a Markdown doc with zero Lean code heads; the actual comparator code is `ClassicalON.lean` and solution code is `Main.lean`.
+
+4. **Proof Status Evaluation:**
+   - The comparator `ClassicalON.lean` contains `theorem main : ExponentialDecay := by sorry`, which is a problem statement placeholder, not a verified proof.
+   - The solution module `Main.lean` contains proof script text relying on a deep dependency tree of ~100 modules in `lean/OAI/Probability/ClassicalON/`. Because we adhere to governance prohibiting execution of untrusted downloaded code, and no reproducible kernel-checking verification receipt is verified at commit `fd4aeeb2...`, the candidate proof status is labeled **UNVERIFIED_UPSTREAM_PROOF_CODE**.
+   - Presence of `sorry` in the comparator challenge does NOT imply absence of a solution proof in `Main.lean`; conversely, presence of proof text in `Main.lean` does not substitute for independent kernel verification.
+
+5. **Inspected Search Scope & Negative Boundary:**
+   - Across the inspected files (`lean/docs/215.md`, `ClassicalON.lean`, `ClassicalON.json`, and `Main.lean`), zero declarations exist for:
+     (a) Continuum quantum field theory construction / Wightman reconstruction;
+     (b) Osterwalder–Schrader axioms OS0–OS4;
+     (c) Non-Gaussianity of connected Schwinger functions;
+     (d) The one-particle mass gap pole or 4D Yang–Mills gauge theory.
+   - This search-negative finding across inspected primary files is distinguished from an unproved universal assertion of repo-wide nonexistence.
+
+6. **Epistemic Classification & Transfer Determination:**
+   - The transfer candidate remains classified as `UNVERIFIED_CANDIDATE_PREPRINT` and `METHOD_SPECIFIC_OBSTRUCTION`.
+   - Allowed transfer conclusion: strictly `None`. Zero DAG edges close.
+
 
 ### Mathematical corrections to the proposed transfer mechanism
 
