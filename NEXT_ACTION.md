@@ -1,7 +1,7 @@
 # NEXT ACTION
 
 ## Current primary action
-`YM-015F ACTIVE; YM-051 ACCEPTED_WITH_LIMITATIONS; YM-015F-JET-002B ACTIVE; P3 OPEN; CLAY_PROBLEM OPEN_AND_UNSOLVED; YM-016 BLOCKED`
+`YM-015F ACTIVE; YM-051R ACCEPTED_WITH_LIMITATIONS; YM-015F-JET-002B ACTIVE; P3 OPEN; CLAY_PROBLEM OPEN_AND_UNSOLVED; YM-016 BLOCKED`
 
 ## Scope
 - `YM-011` is `SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_UV_SCOPE)`.
@@ -176,4 +176,12 @@ Primary YM-015F-JET-002B remains ACTIVE. Completely instantiates degree-one mark
 Freeze bde427b977f395d53e51af7925ceaec54209b8fd; raw scientific hash 4c531d2324c929eac2bb50a1a76b374a3e5828c4179d4280d187e867ee94c837 over 158 files; Git-blob hash 80057cd488724b753953ee830e772f0987afc464aac464a9f796f7ddcfde6115; 158 canonical files. Full test suite 441 passed in 6.13s. Negative Git-byte prefix preserved. Immutable raw E4 SHA-256 90ec888c42f42e52e1e3604e9379638ccaab4c49f8c79db29b20419f7032c945; verification/YM-051_TECHNICAL_ACCEPTANCE.md grants bounded acceptance. Internal distinct execution contexts only (Writer 00ffe8a3..., Reviewer 92c33c18..., Acceptor b3c4cb3f... under IND1_DISTINCT_PROCESS_ACCEPTOR); no external peer review or human constitutional sign-off.
 
 DAG: YM-050R2 -> YM-051 accepted bounded milestone; scientific edge closures []. Smallest missing theorem remains cutoff-uniform marked polymer activity summability and large-field regulator control under Bałaban multiscale cluster expansion. Next automatic obligation under YM-015F-JET-002B: multiscale marked polymer activity recurrence and cluster expansion convergence across scales $j = 0, \dots, n$. METHOD_SPECIFIC_OBSTRUCTION only; structural no-go 0. goal_complete = false; Clay OPEN_AND_UNSOLVED; P3/crossover OPEN; E-UV-FLOWED PARTIAL_PROGRESS; local OS/free continuum OPEN_AND_UNSOLVED; spatial-flow RP compatibility retains PROVED; thermodynamic limit/OS reconstruction/physical spectral gap OPEN; YM-016 BLOCKED. Current authoritative HEAD comes from Git; evidence closeout binding follows.
+
+## Accepted bounded YM-051R — revision 54
+
+Primary YM-015F-JET-002B remains ACTIVE. Completely instantiates repaired tree-gauge chart map, slice derivative $\det(D_{V_0}) = 1$, adjoint norm preservation proof, affine parallel transport decoupling, explicit transformed template and remainder sector, reclassification to `CONDITIONAL_AND_OPEN`, and replacement of tautological certificates with non-commutative $SU(2)$ quaternion arithmetic in Test 11.
+
+Freeze f30af9f49131afdd9c542ff7434acbc4525f8088; raw scientific hash 2584d0036f931c783a0e783f1af401e55fc2b3d1b227fc7266a2a3b0df0632c6 over 158 files; Git-blob hash 0b66646328b9b6534cbd32b1a06991bc9784a343ebd7b98ff6d31e9430a93c9c; 158 canonical files. Full test suite 441 passed in 6.55s. Negative Git-byte prefix preserved. Immutable raw E4 SHA-256 990dec207d06b554e330772560170bd8bbd69ad627464355085a1b61750ef2d7; verification/YM-051R_TECHNICAL_ACCEPTANCE.md grants bounded acceptance. Internal distinct execution contexts only (Writer 00ffe8a3..., Reviewer d37e44fd..., Acceptor a2056c9c... under IND1_DISTINCT_PROCESS_ACCEPTOR); no external peer review or human constitutional sign-off.
+
+DAG: YM-051 -> YM-051R accepted bounded milestone; scientific edge closures []. Smallest missing theorem remains cutoff-uniform marked polymer activity summability and large-field regulator control under Bałaban multiscale cluster expansion. Next automatic obligation under YM-015F-JET-002B: evaluate multiscale marked polymer activity recurrence and cluster expansion convergence across scales $j = 0, \dots, n$. METHOD_SPECIFIC_OBSTRUCTION only; structural no-go 0. goal_complete = false; Clay OPEN_AND_UNSOLVED; P3/crossover OPEN; E-UV-FLOWED PARTIAL_PROGRESS; local OS/free continuum OPEN_AND_UNSOLVED; spatial-flow RP compatibility retains PROVED; thermodynamic limit/OS reconstruction/physical spectral gap OPEN; YM-016 BLOCKED. Current authoritative HEAD comes from Git; evidence closeout binding follows.
 
