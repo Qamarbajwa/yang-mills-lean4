@@ -1,0 +1,22 @@
+{
+  "task": "YM-054",
+  "baseline_revision": 59,
+  "baseline_sha": "95af5b8662607f043741deef6665a42903ee1d59",
+  "candidate_sha": "15086d3a81dd083aafb48eda4cb73863bc312da1",
+  "scientific_tree_hash": "b962eb50281ed1bdb3cbf4e570d9438a73b7887aa8814fc850e0c52672375f24",
+  "git_blob_scientific_hash": "Format A 40-hex Git SHA-1 7e7eda0e119b1707905625d86312123a333a576f / Format B 64-hex SHA-256 payload digest b962eb50281ed1bdb3cbf4e570d9438a73b7887aa8814fc850e0c52672375f24",
+  "scientific_files": 158,
+  "tests": "445 passed in 9.23s",
+  "workflow": "SERIALIZED_SHARED_WORKSPACE_PYTEST",
+  "negative_prefix": "literal Git bytes preserved",
+  "own_diagnostic": {
+    "finite_certificates": 15,
+    "balaban_tree_construction": "primary-source inspection of CMP 122 pp. 195-196 refutes guessed lemma; Bałaban adds inner crossing bonds and outer boundary grounding bond [(y_1-1, ...), y] to T_0",
+    "concrete_geometry": "2D lattice slice P_1 \\ P_2 with |Lambda_0| = 2, active bonds |B_0| = 3, tree |T_0| = 2 including boundary grounding bond b_ground = [(-1, 0), (0, 0)]",
+    "gauge_dimension_matching": "fixes all 2 dim G site degrees of freedom uniquely with Delta_grounding = 0; omitting grounding bond leaves defect dim G != 0",
+    "reconstruction_1_76": "all delta functions integrated out; Theta_boundary permanently excised as unresolved schematic placeholder; boundary interactions reside inside A_k''[V]",
+    "cutoff_replacement_1_89": "conditioned strictly on joint support supp(chi_k * chi_{k, Lambda} * chi_{h, 1/2} * chi_h), not an unconditioned link identity",
+    "git_blob_disambiguation": "Format A 40-hex Git object SHA-1 vs Format B 64-hex SHA-256 payload digest reconciled additively without editing historical receipts"
+  },
+  "source_provenance_correction": "Bałaban CMP 122 (1989) tree construction on nested rectangular parallelepipeds P_1 \\ P_2 restored from primary source; boundary grounding mechanism verified; formula (1.76) reconstructed without deltas; Theta_boundary excised; cutoff replacement (1.89) conditioned on joint support; Git-blob digest disambiguated."
+}
