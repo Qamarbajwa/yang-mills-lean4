@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 49
+revision: 50
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "6f47627e03b18b08f841e009d0079cdba29d0e1b"
-  scientific_candidate_sha: "6f47627e03b18b08f841e009d0079cdba29d0e1b"
-  review_bound_sha: "6f47627e03b18b08f841e009d0079cdba29d0e1b"
-  evidence_closeout_head: "441cbd0424a822bc820f26498eab5c2507c099b0"
-  closeout_resolution: "evidence_closeout_head binds the completed YM-049 receipt/state commit; later metadata commits preserve it. Resolve current authoritative HEAD from Git."
+  head: "cabcf4770c416f5f95404d92b6003712b60f2908"
+  scientific_candidate_sha: "cabcf4770c416f5f95404d92b6003712b60f2908"
+  review_bound_sha: "cabcf4770c416f5f95404d92b6003712b60f2908"
+  evidence_closeout_head: null
+  closeout_resolution: "Pending YM-050 evidence closeout commit; current authoritative HEAD comes from Git."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,14 +32,25 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 49
-  last_updated_at: "2026-10-06T10:02:30Z"
+  last_expected_revision: 50
+  last_updated_at: "2026-10-09T09:27:00Z"
   active_contract: "YM-015F-JET-002B"
-  frozen_candidate: "6f47627e03b18b08f841e009d0079cdba29d0e1b"
+  frozen_candidate: "cabcf4770c416f5f95404d92b6003712b60f2908"
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-050
+    scope_in: "Physical observable pullback at R-I(1.76), tree-gauge orbit identity, compensating transformations, OpenAI Family 215 audit, criticality corrections, and nilpotent determinant linearization"
+    scope_out: "Multiscale polymer activity summability under Bałaban RG, cutoff-uniform estimates, and continuum closure"
+    dependencies: ["YM-049"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-050_E4_RAW_20261009.md"
+    acceptor: "verification/YM-050_TECHNICAL_ACCEPTANCE.md"
+    status: SCIENTIFICALLY_ACCEPTED
+    scope_limitation: "PARTIAL_SOURCE_PULLBACK_AND_FAMILY215_AUDIT_NO_CONTINUUM_CLOSURE"
   - id: YM-049
     scope_in: "Disjoint-integral/gauge-coordinate source dictionary and own finite target-descent/orbit-mark gates"
     scope_out: "Actual marked gauge/RG/model identity, cutoff-uniform insertion and continuum closure"
@@ -995,3 +1006,24 @@ gauge_orbit_observability_cycle:
   verification_workflow: SERIALIZED_SHARED_WORKSPACE_PYTEST
   next_automatic_task: YM-015F-JET-002B
   next_bounded_obligation: "Exact physical insertion pullback and gauge-orbit measure identity at R-I(1.76), boundary/tree-gauge insertion and compensating transformations; retained Zh/T/zeta, all complementary/rejected/n=0 sectors, normalization and terminal law; independent actual symmetry/model matching"
+
+# Accepted bounded YM-050; multiscale polymer activity summability and continuum closure remain open.
+physical_pullback_and_family215_audit_cycle:
+  id: YM-050
+  status: SCIENTIFICALLY_ACCEPTED_WITH_LIMITATIONS
+  scientific_candidate_sha: cabcf4770c416f5f95404d92b6003712b60f2908
+  scientific_tree_hash: 50398000f703d55174b88b0e47216b7641a59f8d2bbbca91d3bbda6d9d1aff4b
+  git_blob_scientific_hash: f576304279aa80f38a1871cc9f6e4716135292771ed5dd6e9a81aa05bcf08570
+  hash_scope: LOCAL_RAW_CHECKOUT_BYTES_WITH_DECLARED_EOL_LIMITATION
+  primary_task: YM-015F-JET-002B
+  scientific_edge_closures: []
+  review_ref: verification/raw/YM-050_E4_RAW_20261009.md
+  review_sha256: 1682ddc2e6c70c41df0a3994430f164b87df0b6ba3de775fa51ed0469371281d
+  review_verdict: SCIENTIFICALLY_ACCEPTABLE_WITH_LIMITATIONS
+  acceptance_ref: verification/YM-050_TECHNICAL_ACCEPTANCE.md
+  milestone_ref: verification/YM-050_MILESTONE.md
+  source_status: PHYSICAL_PULLBACK_AND_TREE_GAUGE_ORBIT_IDENTITY_PROVED_MULTISCALE_POLYMER_OPEN
+  atlas_status: FAMILY215_AUDIT_UNVERIFIED_CANDIDATE_NILPOTENT_TRACE_VERIFIED_VERTEX_DEFECT_PROVED
+  verification_workflow: SERIALIZED_SHARED_WORKSPACE_PYTEST
+  next_automatic_task: YM-015F-JET-002B
+  next_bounded_obligation: "Multiscale marked polymer activity recurrence and small-field / large-field bounds across scales j = 0, ..., n under Bałaban RG; cutoff-uniform summability of ||K_j^(1)||_{B_j} without unverified 2D analogies"

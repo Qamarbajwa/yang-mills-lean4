@@ -1,0 +1,24 @@
+{
+  "task": "YM-050",
+  "baseline_revision": 49,
+  "baseline_sha": "2af1898763979b7540544c948e9c27013e166452",
+  "candidate_sha": "cabcf4770c416f5f95404d92b6003712b60f2908",
+  "scientific_tree_hash": "50398000f703d55174b88b0e47216b7641a59f8d2bbbca91d3bbda6d9d1aff4b",
+  "git_blob_scientific_hash": "f576304279aa80f38a1871cc9f6e4716135292771ed5dd6e9a81aa05bcf08570",
+  "scientific_files": 158,
+  "eol_only_differences": 15,
+  "substantive_differences": 0,
+  "tests": "437 passed in 7.04s",
+  "workflow": "SERIALIZED_SHARED_WORKSPACE_PYTEST",
+  "negative_prefix": "literal Git bytes preserved",
+  "own_diagnostic": {
+    "finite_certificates": 7,
+    "nilpotent_linearization": "exact trace formula in eta^2 = 0; quadratic resolvent curvature 3/32 for real J != 0",
+    "linear_vertex_omission": "defect 1/2 != 0 in first moment when omitting linear fluctuation term DX . A",
+    "sigma_model_fluctuation": "Hessian trace -10 != 0 proving non-linear fluctuation source on S^2",
+    "disjoint_region_flow": "leakage 4/3 != 0 proving gradient flow non-factorization across Zh",
+    "vacuum_normalization": "transported moment 5/2 matches global moment without individual history division",
+    "scope": "finite rational certificates and algebraic identities; no continuum or infinite-volume estimate"
+  },
+  "source_provenance_correction": "OpenAI Family 215 audited; Lean declarations cover only classical lattice spin correlation decay for O(n) (n>=3) on 2D lattices. Zero Lean declarations for continuum QFT, OS axioms, non-Gaussianity, or mass gap. Classified as UNVERIFIED_CANDIDATE_PREPRINT."
+}
