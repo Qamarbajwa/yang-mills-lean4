@@ -1,0 +1,20 @@
+{
+  "task": "YM-054R",
+  "baseline_revision": 60,
+  "baseline_sha": "8190b205cce2232f96137fadb2e346215d04ad1d",
+  "candidate_sha": "6b25aae3eefc8e22b4b5a6486f2045bffa0b9e39",
+  "checkout_tree_hash": "03f26596658319a188729b44b6e69b367b3ef3ca213e879191a858bf84453153",
+  "literal_git_blob_tree_hash": "b9bbef05cf85f9f410992b33179771643608a5f4331a86aafcd7f96407912196",
+  "scientific_files": 158,
+  "tests": "446 passed in 10.06s",
+  "workflow": "SERIALIZED_SHARED_WORKSPACE_PYTEST",
+  "negative_prefix": "literal Git bytes preserved",
+  "own_diagnostic": {
+    "finite_certificates": 16,
+    "unverified_hash_disposition": "7e7eda0e119b1707905625d86312123a333a576f fails closed via git cat-file -e with non-zero exit code (does not exist in Git object store); classified UNRESOLVED_OR_INVALID_HISTORICAL_ENTRY; all reliance permanently eliminated; historical raw receipts preserved unchanged",
+    "dual_digest_classification": "Working-tree checkout digest (03f26596...) and literal Git-blob digest (b9bbef05...) independently separated and computed via ROS; physical cause verified as 15 files with UNIX LF expanding to CRLF on Windows checkout",
+    "state_closeout_head_semantics": "evidence_closeout_head binds preceding completed closeout commit (8190b205cce2232f96137fadb2e346215d04ad1d); scientific_candidate_sha binds candidate freeze commit (6b25aae3eefc8e22b4b5a6486f2045bffa0b9e39); self-referential requirements eliminated",
+    "mathematical_preservation": "All mathematical grounding results from YM-054 ([y_0, y] in T_0, |T_0|=|Lambda_0|=2, Delta_grounding=0, excision of Theta_boundary placeholder, support-conditioned cutoff (1.89)) fully preserved and certified by Test 15 and Test 16"
+  },
+  "source_provenance_correction": "Provenance repair of Git-blob vs checkout digest, literal-blob byte hashing via Git object database, correction of evidence_closeout_head semantics in PROJECT_STATE.yaml, elimination of reliance on unverified hash 7e7eda..., durable Test 16 certificate, and strict preservation of immutable historical raw receipts."
+}
