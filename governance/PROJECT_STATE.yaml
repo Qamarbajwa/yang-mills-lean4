@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 52
+revision: 53
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "6328f403af0e32fe80c5d4241213f0c472704d58"
-  scientific_candidate_sha: "6328f403af0e32fe80c5d4241213f0c472704d58"
-  review_bound_sha: "6328f403af0e32fe80c5d4241213f0c472704d58"
-  evidence_closeout_head: "f6d607b892802cfb77e93b3b26264754c1ce1508"
-  closeout_resolution: "evidence_closeout_head binds the completed YM-050R2 receipt/state commit; later metadata commits preserve it. Resolve current authoritative HEAD from Git."
+  head: "bde427b977f395d53e51af7925ceaec54209b8fd"
+  scientific_candidate_sha: "bde427b977f395d53e51af7925ceaec54209b8fd"
+  review_bound_sha: "bde427b977f395d53e51af7925ceaec54209b8fd"
+  evidence_closeout_head: "bde427b977f395d53e51af7925ceaec54209b8fd"
+  closeout_resolution: "evidence_closeout_head binds the completed YM-051 receipt/state commit; later metadata commits preserve it. Resolve current authoritative HEAD from Git."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,14 +32,25 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 52
-  last_updated_at: "2026-10-09T10:35:00Z"
+  last_expected_revision: 53
+  last_updated_at: "2026-10-09T11:10:00Z"
   active_contract: "YM-015F-JET-002B"
-  frozen_candidate: "6328f403af0e32fe80c5d4241213f0c472704d58"
+  frozen_candidate: "bde427b977f395d53e51af7925ceaec54209b8fd"
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-051
+    scope_in: "One-term admissible R-I(1.76) marked coordinate pullback, boundary bond rules, Faddeev–Popov tree-gauge slice restriction, joint compensating covariance, and spatial non-factorization proof"
+    scope_out: "Multiscale marked polymer activity summability under Bałaban RG, cutoff-uniform estimates, and continuum closure"
+    dependencies: ["YM-050R2"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-051_E4_RAW_20261009.md"
+    acceptor: "verification/YM-051_TECHNICAL_ACCEPTANCE.md"
+    status: SCIENTIFICALLY_ACCEPTED
+    scope_limitation: "ONE_TERM_ADMISSIBLE_PULLBACK_PROVED_MULTISCALE_SUMMABILITY_OPEN"
   - id: YM-050R2
     scope_in: "Primary-source provenance and proof-status repair of OpenAI Family 215, free-boundary condition repair, path locator repair, comparator vs solution module separation, and epistemic scope distinction"
     scope_out: "Multiscale polymer activity summability under Bałaban RG, actual Bałaban coordinate pullback on external bonds, cutoff-uniform estimates, and continuum closure"
@@ -1091,3 +1102,24 @@ repaired_family215_provenance_cycle:
   verification_workflow: SERIALIZED_SHARED_WORKSPACE_PYTEST
   next_automatic_task: YM-015F-JET-002B
   next_bounded_obligation: "Multiscale marked polymer activity recurrence and small-field / large-field bounds across scales j = 0, ..., n under Bałaban RG; cutoff-uniform summability of ||K_j^(1)||_{B_j} without unverified 2D analogies; resolution of open actual Bałaban coordinate pullback and tree-gauge orbit identity across all external bonds B0, charts, and cutoffs"
+
+# Accepted bounded YM-051; multiscale marked polymer activity summability and continuum closure remain open.
+one_term_marked_representation_cycle:
+  id: YM-051
+  status: SCIENTIFICALLY_ACCEPTED_WITH_LIMITATIONS
+  scientific_candidate_sha: bde427b977f395d53e51af7925ceaec54209b8fd
+  scientific_tree_hash: 4c531d2324c929eac2bb50a1a76b374a3e5828c4179d4280d187e867ee94c837
+  git_blob_scientific_hash: 80057cd488724b753953ee830e772f0987afc464aac464a9f796f7ddcfde6115
+  hash_scope: LOCAL_RAW_CHECKOUT_BYTES_WITH_DECLARED_EOL_LIMITATION
+  primary_task: YM-015F-JET-002B
+  scientific_edge_closures: []
+  review_ref: verification/raw/YM-051_E4_RAW_20261009.md
+  review_sha256: 90ec888c42f42e52e1e3604e9379638ccaab4c49f8c79db29b20419f7032c945
+  review_verdict: SCIENTIFICALLY_ACCEPTABLE_WITH_LIMITATIONS
+  acceptance_ref: verification/YM-051_TECHNICAL_ACCEPTANCE.md
+  milestone_ref: verification/YM-051_MILESTONE.md
+  source_status: ONE_TERM_ADMISSIBLE_PULLBACK_AND_TREE_GAUGE_REPRESENTATION_PROVED
+  atlas_status: COMPENSATING_COVARIANCE_AND_NON_FACTORIZATION_PROVED_MULTISCALE_SUMMABILITY_OPEN
+  verification_workflow: SERIALIZED_SHARED_WORKSPACE_PYTEST
+  next_automatic_task: YM-015F-JET-002B
+  next_bounded_obligation: "Multiscale marked polymer activity recurrence and cluster expansion convergence across scales j = 0, ..., n under Bałaban RG; cutoff-uniform summability of ||K_j^(1)||_{B_j}"

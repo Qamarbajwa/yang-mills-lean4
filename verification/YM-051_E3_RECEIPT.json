@@ -1,0 +1,24 @@
+{
+  "task": "YM-051",
+  "baseline_revision": 52,
+  "baseline_sha": "32a2f6c97d3ff3722041c187e379538f589da5d9",
+  "candidate_sha": "bde427b977f395d53e51af7925ceaec54209b8fd",
+  "scientific_tree_hash": "4c531d2324c929eac2bb50a1a76b374a3e5828c4179d4280d187e867ee94c837",
+  "git_blob_scientific_hash": "80057cd488724b753953ee830e772f0987afc464aac464a9f796f7ddcfde6115",
+  "scientific_files": 158,
+  "tests": "441 passed in 6.13s",
+  "workflow": "SERIALIZED_SHARED_WORKSPACE_PYTEST",
+  "negative_prefix": "literal Git bytes preserved",
+  "own_diagnostic": {
+    "finite_certificates": 11,
+    "one_term_pullback": "exact coordinate pullback for term alpha from Bałaban R-I (1.76)-(1.89) instantiated on active bonds B0 = U_k cap Lambda_0",
+    "boundary_bond_rules": "bonds intersecting partial Lambda included in B0; bonds intersecting partial Omega_{k+1}^1 excluded; Z_h carried by V_h under dV_h, exterior by V_k",
+    "tree_gauge_resolution": "maximal tree graph T0 subset B0 with Delta_FP = 1; gauge slice B'|_{T0} = 0, non-tree bonds dynamical under Lie algebra Haar measure",
+    "compensating_covariance": "joint compensating transformations on (V_h, B') prove exact link covariance; naive fixed-V0 transformation refuted by non-zero endpoint mismatch",
+    "spatial_non_factorization": "parabolic diffusion across partial Z_h for t_phys > 0 couples links across regions, disproving spatial factorization into O_{Z_h} * O_{Lambda \\setminus Z_h}",
+    "cutoff_replacement": "identity (1.89) chi_k'' chi' = chi' verified on small-field support; large-field complement carried into remainder",
+    "first_missing_bridge": "multiscale marked polymer activity summability sum_alpha I_alpha under Bałaban cluster expansion isolated as first open bridge",
+    "scope": "finite rational certificates and one-term admissible representation; multiscale cluster expansion summability and continuum limit remain open"
+  },
+  "source_provenance_correction": "Bałaban R-I (1.76)-(1.89) audited from primary source CMP 122, 175-202 (1989); degree-one marked coordinate pullback, tree-gauge resolution, and compensating covariance proved for term alpha; multiscale polymer activity summability isolated as first open bridge lemma."
+}
