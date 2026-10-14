@@ -1433,7 +1433,210 @@ In `verification/YM-053R_E3_RECEIPT.json` and `verification/YM-053R_MILESTONE.md
    - Candidate freeze commit: `6b25aae3eefc8e22b4b5a6486f2045bffa0b9e39`
    - Acceptance commit: `c28e16eb2097c6e8f84361dc68a0ee6e8edf48c4`
    - Initial evidence closeout commit: `3faa8925386d7bccad961b5a3899bce8d073cfe9`
+   - Reconciliation freeze commit: `920077fa284d58afb7f0b5998c3817a63d41a0a7`
+   - Reconciliation acceptance: `523bd354-8afa-4478-8d26-8cf1c0847468` (`verification/YM-054R_RECONCILIATION_TECHNICAL_ACCEPTANCE.md`)
+   - Preceding reconciliation closeout commit: `62918f1ee8a32fc4532480b89cb89dc40c1c3787`
    - All historical raw receipts remain immutable; all active project artifacts are reconciled with true Git IDs.
+
+
+---
+
+## YM-055: PUSHFORWARD MEASURE INTEGRATION, EFFECTIVE FIBER DENSITY BOUNDS, AND COLLAR DOMAIN MATCHING UNDER BALABAN GROUNDED TREE T_0
+
+### 1. Actual Integrated / Fixed Domain Matching for Original CMP 122 (1.76)
+
+1. **Primary-Source Integration Domain in (1.76):**
+   In T. Bałaban, *Large Field Renormalization. I*, Commun. Math. Phys. 122, 175–202 (1989), the termwise partition density formula (1.76) on printed page 194 is defined as:
+   $$\rho_{k, \alpha}[V] = \chi_k(\Omega_k^{\sim 4}) \, \chi_{k, \Lambda} \int dV_h \lceil_{Z_h} \chi_h(\Omega_h \cap Z_h) \, \mathbb{T}_h(Z_h) \int dV^{\prime\prime} \lceil_{\mathbb{B}_k^{\prime\prime} \cap (\Lambda \cap Z_h^c)} \chi_k^{\prime\prime} \, \exp(A_k^{\prime\prime}[V]).$$
+   The active group integration measure $dV^{\prime\prime}$ is integrated over the bond set:
+   $$\operatorname{Domain}(dV^{\prime\prime}) = \mathbb{B}_k^{\prime\prime} \cap (\Lambda \cap Z_h^c).$$
+   Here:
+   - $\Lambda$ is the scale $k+1$ unit block;
+   - $Z_h \subset \Lambda$ is the preliminary region carrying short-distance fields $V_h$ at scale $h < k$;
+   - $Z_h^c = Z \setminus Z_h$, so $\Lambda \cap Z_h^c = \Lambda \setminus Z_h$ is the spatial complement of the preliminary region in $\Lambda$;
+   - $\mathbb{B}_k^{\prime\prime}$ is the set of scale $k$ lattice bonds.
+
+2. **Contrast with the Fluctuation Domain $\mathbb{B}_0$:**
+   In Proposition 1 (p. 194) and the tree-gauge construction (p. 195), Bałaban defines:
+   - The active spatial region: $\Lambda_0 = \Lambda \cap \Omega_{k+1}^1 = \Lambda \cap (Z_h^{\prime\sim})^c$, where $Z_h^{\prime\sim}$ is the regularized neighborhood of $Z_h$ carrying boundary constraints and buffer zones;
+   - The active bond set: $\mathbb{B}_0 = \mathbb{U}_k \cap \Lambda_0$.
+   - Fluctuation coordinates $B^\prime$ via $V^{\prime\prime} = \exp(i B^\prime) V_0$ and tree gauge $T_0$ are introduced **ONLY on $\mathbb{B}_0$**!
+
+3. **Collar Geometric Difference & Retained Preliminary Bonds:**
+   - As established in YM-051R3 and YM-052, whenever the collar region intersects $\Lambda$, we have the strict inclusion:
+     $$\Lambda_0 = \Lambda \setminus Z_h^{\prime\sim} \subsetneq \Lambda \setminus Z_h = \Lambda \cap Z_h^c,$$
+     with exact spatial difference:
+     $$(\Lambda \setminus Z_h) \setminus \Lambda_0 = \Lambda \cap (Z_h^{\prime\sim} \setminus Z_h).$$
+   - Consequently, the bond integration domain in (1.76) splits into two disjoint subsets:
+     $$\mathbb{B}_k^{\prime\prime} \cap (\Lambda \cap Z_h^c) = \mathbb{B}_0 \sqcup \mathbb{B}_{\mathrm{collar}},$$
+     where $\mathbb{B}_{\mathrm{collar}} = (\mathbb{B}_k^{\prime\prime} \cap (\Lambda \cap Z_h^c)) \setminus \mathbb{B}_0$.
+   - **Why Bałaban Excludes Internal Boundary Bonds from $\mathbb{B}_0$:**
+     On page 195, Bałaban explicitly specifies:
+     > *"bonds intersecting $\partial \Lambda$ are included in $\mathbb{B}_0$, whereas bonds intersecting $\partial \Omega_{k+1}^1$ are excluded."*
+     The boundary $\partial \Omega_{k+1}^1$ is precisely the interface $\partial Z_h^{\prime\sim}$ between $\Lambda_0$ and the collar! Bonds intersecting $\partial \Omega_{k+1}^1$ connect the active region $\Lambda_0$ to the preliminary/collar region $Z_h^{\prime\sim}$.
+   - **Absence of Unconditioned Equivalence / Missing Bridge Lemma:**
+     Equating the integral $\int dV^{\prime\prime} \lceil_{\mathbb{B}_k^{\prime\prime} \cap (\Lambda \cap Z_h^c)}$ to the tree-gauge integral $\int dV^{\prime\prime} \lceil_{\mathbb{B}_0}$ without accounting for $\mathbb{B}_{\mathrm{collar}}$ is an unproved assumption.
+     On histories where the collar is non-empty, the collar bonds $\mathbb{B}_{\mathrm{collar}}$ carry boundary couplings to the preliminary transfer operator $\mathbb{T}_h(Z_h)$.
+     Full domain equivalence requires establishing that the preliminary integration $dV_h \lceil_{Z_h} \mathbb{T}_h(Z_h)$ factorizes the collar variables from the active fluctuation bonds $\mathbb{B}_0$.
+     This requirement is formally isolated and classified as:
+     $$\mathbf{COLLAR\_DOMAIN\_MATCHING\_CONDITIONAL\_ON\_PRELIMINARY\_OPERATOR\_AUDIT}.$$
+     In accordance with governance principles, this missing bridge is formally documented rather than papered over by guessing an ungrounded domain equivalence.
+
+---
+
+### 2. Explicit Grounded-Tree Map $\Phi$, Inverse $\Phi^{-1}$, and Normalized Haar Pushforward
+
+1. **Definition of the Augmented Gauge Map $\Phi$:**
+   Let $G = SU(2)$ (or compact Lie group $SU(N)$).
+   Let $\mathbb{B}_0 = \mathbb{U}_k \cap \Lambda_0$ be the active bond set.
+   Let $T_0 \subset \mathbb{B}_0$ be the Bałaban grounded tree constructed in CMP 122 pp. 195–196, containing internal bonds of $\Lambda_0$ plus the outer grounding bond $b_{\mathrm{ground}} = (y_0, x_{\mathrm{entry}})$ crossing $\partial \Lambda$ to exterior site $y_0 \in \Lambda^c$.
+   On the exterior $\Lambda^c$, the gauge group is pinned: $h_y = I$ for all $y \in \Lambda^c$, specifically $h_{y_0} = I$.
+   The dynamic gauge group on active sites is $\mathcal{G}_{\Lambda_0} = G^{\Lambda_0}$, with $\dim(\mathcal{G}_{\Lambda_0}) = |\Lambda_0| \dim G = |T_0| \dim G$.
+   For any configuration $V^{\prime\prime} \in G^{\mathbb{B}_0}$:
+   The sequential tree gauge solver along $T_0$ is defined inductively from root $y_0$:
+   For each directed tree bond $b = (u, v) \in T_0$ directed from parent $u$ to child $v$:
+   $$h_v = V_0(b)^{-1} h_u V^{\prime\prime}(b).$$
+   Since $h_{y_0} = I$, this determines $h_x \in G$ uniquely for every site $x \in \Lambda_0$.
+   The transformed links on residual bonds $\mathbb{B}_0 \setminus T_0$ are:
+   $$\hat{V}(b) = h_x V^{\prime\prime}(b) h_y^{-1} \quad \text{for } b = (x, y) \in \mathbb{B}_0 \setminus T_0$$
+   (with convention $h_x = I$ if $x \in \Lambda^c$, $h_y = I$ if $y \in \Lambda^c$).
+   The augmented gauge map is:
+   $$\Phi: G^{\mathbb{B}_0} \to G^{\mathbb{B}_0 \setminus T_0} \times \mathcal{G}_{\Lambda_0}, \quad V^{\prime\prime} \mapsto (\hat{V}, h).$$
+
+2. **Explicit Smooth Inverse Map $\Phi^{-1}$:**
+   Given $(\hat{V}, h) \in G^{\mathbb{B}_0 \setminus T_0} \times \mathcal{G}_{\Lambda_0}$:
+   For each bond $b = (x, y) \in \mathbb{B}_0$:
+   $$\Phi^{-1}(\hat{V}, h)(b) = \begin{cases}
+   h_x^{-1} V_0(b) h_y, & b = (x, y) \in T_0, \\
+   h_x^{-1} \hat{V}(b) h_y, & b = (x, y) \in \mathbb{B}_0 \setminus T_0,
+   \end{cases}$$
+   where $h_x$ and $h_y$ are the gauge elements at the endpoints (with $h \equiv I$ on $\Lambda^c$).
+   **Theorem (Exact Global Bijectivity):**
+   $$\Phi^{-1}(\Phi(V^{\prime\prime})) = V^{\prime\prime} \quad \forall V^{\prime\prime} \in G^{\mathbb{B}_0}, \qquad \Phi(\Phi^{-1}(\hat{V}, h)) = (\hat{V}, h) \quad \forall (\hat{V}, h) \in G^{\mathbb{B}_0 \setminus T_0} \times \mathcal{G}_{\Lambda_0}.$$
+   *Proof:* On tree bonds $b \in T_0$, $\Phi(V^{\prime\prime})$ fixes $h$ so that $h_x V^{\prime\prime}(b) h_y^{-1} = V_0(b)$, which rearranges to $V^{\prime\prime}(b) = h_x^{-1} V_0(b) h_y = \Phi^{-1}(\hat{V}, h)(b)$. On non-tree bonds $b \in \mathbb{B}_0 \setminus T_0$, $\hat{V}(b) = h_x V^{\prime\prime}(b) h_y^{-1} \implies V^{\prime\prime}(b) = h_x^{-1} \hat{V}(b) h_y = \Phi^{-1}(\hat{V}, h)(b)$. Conversely, evaluating $\Phi$ on $\Phi^{-1}(\hat{V}, h)$ recovers $h$ via sequential solver since $h_x (h_x^{-1} V_0(b) h_y) h_y^{-1} = V_0(b)$, and reproduces $\hat{V}(b)$ on non-tree bonds. Global smoothness follows from Lie group multiplication and inversion. $\blacksquare$
+
+3. **Normalized Haar Pushforward with Unit Jacobian:**
+   Under normalized Haar measure $\mu_{\mathbb{B}_0} = \prod_{b \in \mathbb{B}_0} dV^{\prime\prime}(b)$:
+   The pushforward measure under $\Phi$ satisfies:
+   $$\Phi_* \left( \prod_{b \in \mathbb{B}_0} dV^{\prime\prime}(b) \right) = \left( \prod_{b \in \mathbb{B}_0 \setminus T_0} d\hat{V}(b) \right) \times dh_{\mathcal{G}_{\Lambda_0}}.$$
+   *Proof:* Since Haar measure $dV(b)$ on compact Lie group $G$ is both left- and right-invariant ($d(g V) = d(V g) = dV$) and normalized ($\int_G dV = 1$), the sequential variable changes $V^{\prime\prime}(b) \mapsto h_v$ along tree $T_0$ and $V^{\prime\prime}(b) \mapsto \hat{V}(b)$ on non-tree bonds are compositions of group translations. The integration Jacobian is identically 1:
+   $$|\det J_{\Phi}| \equiv 1.$$
+   $\blacksquare$
+
+4. **Consistent Retention of All Incident Boundary Links:**
+   Every bond $b \in \mathbb{B}_0$ incident to $\partial \Lambda$ connects an active site in $\Lambda_0$ to an exterior site in $\Lambda^c$.
+   - Grounding bond $b_{\mathrm{ground}} = (y_0, x_{\mathrm{entry}}) \in T_0$: $y_0 \in \Lambda^c \implies h_{y_0} = I$. Under $\Phi^{-1}$: $V^{\prime\prime}(b_{\mathrm{ground}}) = V_0(b_{\mathrm{ground}}) h_{x_{\mathrm{entry}}}$.
+   - Non-tree boundary links $b = (y_{\mathrm{ext}}, x) \in \mathbb{B}_0 \setminus T_0$: $y_{\mathrm{ext}} \in \Lambda^c \implies h_{y_{\mathrm{ext}}} = I$. Under $\Phi^{-1}$: $V^{\prime\prime}(b) = \hat{V}(b) h_x$.
+   Zero boundary links are dropped or omitted; all incident boundary links are accounted for.
+
+---
+
+### 3. Scoping: Two-Site 2D Certificate vs Full 4D Source Geometry Non-Lifting Barrier
+
+1. **Role of the Two-Site 2D Certificate:**
+   The concrete 2D configuration on $P_1 \setminus P_2$ ($|\Lambda_0| = 2$, $|T_0| = 2$, $|\mathbb{B}_0| = 3$) rigorously certifies:
+   - The algebraic mechanism of the exterior boundary grounding bond $[y_0, y] \in T_0$;
+   - The exact cancellation of the grounding defect $\Delta_{\mathrm{grounding}} = 0$;
+   - The exact solvability and invertibility of $\Phi$ and $\Phi^{-1}$ with unit rational quaternions in $SU(2)$.
+
+2. **The 4D Geometry Non-Lifting Barrier:**
+   However, a two-site 2D certificate does **NOT** constitute full 4D source geometry acceptance:
+   - In 4D, each lattice site has coordination number $2D = 8$ (compared to 4 in 2D);
+   - Parallelepipeds $P_1 \setminus P_2$ in 4D have 3D boundary faces, 2D boundary edges, and 1D corners;
+   - The Bałaban tree/forest $T_0$ in 4D spans a 4-dimensional domain with multiple boundary grounding bonds across 3D faces and internal scale-connecting bonds across $\partial P_2$;
+   - Plaquettes are 2D surfaces oriented in 6 planes $(\mu, \nu)$ with $1 \le \mu < \nu \le 4$;
+   - Dimensional difference:
+     $$\Delta_{\mathrm{4D\_lifting}} = \dim(\text{4D hypercubic bond set}) - \dim(\text{2D toy bond set}) > 0.$$
+   - **Formal Scoping Limitation:** The 2D certificate is strictly scoped as a toy algebraic/geometric certificate. Full 4D multiscale block-tree construction is formally classified as:
+     $$\mathbf{2D\_GEOMETRY\_CERTIFIED\_4D\_SOURCE\_GEOMETRY\_OPEN}.$$
+
+---
+
+### 4. Full Integrand Effective Fiber Density Derivation
+
+1. **Representation of the Effective Fiber Density:**
+   Rewriting the integration over $V^{\prime\prime} \in G^{\mathbb{B}_0}$ via the augmented gauge map $\Phi$ gives:
+   $$\int_{G^{\mathbb{B}_0}} dV^{\prime\prime} \mathcal{F}(V^{\prime\prime}) = \int_{G^{\mathbb{B}_0 \setminus T_0}} d\hat{V} \, \mathcal{W}_{\mathrm{eff}}(\hat{V}),$$
+   where the effective fiber density is:
+   $$\mathcal{W}_{\mathrm{eff}}(\hat{V}) = \int_{\mathcal{G}_{\Lambda_0}} dh \, \mathcal{F}(\Phi^{-1}(\hat{V}, h)).$$
+
+2. **Inventory and Proof of Invariant vs Non-Invariant Factors:**
+   From Bałaban (1.76) and flowed physical observable insertion, the full integrand is:
+   $$\mathcal{F}(V^{\prime\prime}) = \chi_k(\Omega_k^{\sim 4}) \, \chi_{k, \Lambda} \, \chi_h(\Omega_h \cap Z_h) \, \mathbb{T}_h(Z_h) \, \chi_k^{\prime\prime}(V^{\prime\prime}) \, \exp(A_k^{\prime\prime}[V(V^{\prime\prime})]) \, \mathcal{O}_{(a, t)}(f)[U(V(V^{\prime\prime}))] \, Z_{\mathrm{vac}}^{-1}.$$
+
+   | Factor | Gauge Status along Fiber $\mathcal{G}_{\Lambda_0}$ | Mathematical Proof / Verification |
+   |---|---|---|
+   | $\chi_k(\Omega_k^{\sim 4})$ | **INVARIANT** | Depends strictly on exterior/prior fields $V_k$ on $\Omega_k^{\sim 4} \subset \Lambda^c$; independent of $h \in \mathcal{G}_{\Lambda_0}$. |
+   | $\chi_{k, \Lambda}$ | **INVARIANT** | Partition of unity cutoff on exterior $V_k|_{Z \cap \Lambda^c}$; independent of $h \in \mathcal{G}_{\Lambda_0}$. |
+   | $\chi_h(\Omega_h \cap Z_h)$ | **INVARIANT** | Depends strictly on preliminary fields $V_h$ on $Z_h \subset \Lambda_0^c$; independent of $h \in \mathcal{G}_{\Lambda_0}$. |
+   | $\exp(S_W[V^{\prime\prime}])$ (closed plaquettes) | **INVARIANT** | Proved in YM-053R: under $h \equiv I$ on $\Lambda_0^c$, $U^h(p) = h_{x_1} U(p) h_{x_1}^{-1} \implies \operatorname{Tr}(U^h(p)) = \operatorname{Tr}(U(p))$ by cyclicity of trace. |
+   | $\mathcal{O}_{(a, t)}(f)[U]$ | **INVARIANT** | Gauge-invariant physical observable (e.g. Wilson loops or gradient-flowed field strength $\operatorname{Tr}(F_{\mu\nu}^2)$); invariant under group gauge transformations with matching boundaries. |
+   | $Z_{\mathrm{vac}}^{-1}$ | **INVARIANT** | Global scalar partition function normalization; independent of field configurations. |
+   | $\chi_k^{\prime\prime}(V^{\prime\prime})$ | **NON-INVARIANT** | Link-based characteristic function $|B^\prime(b)| < \delta_k^\prime$. Fluctuation $B^\prime = \frac{1}{i}\log(V^{\prime\prime} V_0^{-1})$ transforms non-trivially: $B^{\prime h}(b) = \frac{1}{i}\log(h_x \exp(i B^\prime) V_0 h_y^{-1} V_0^{-1}) \ne h_x B^\prime(b) h_x^{-1}$. Link norms are NOT invariant along the orbit. |
+   | $\chi^\prime(B^\prime)$ | **NON-INVARIANT** | Small-field chart cutoff: depends on individual bond fluctuation norms $\|B^\prime(b)\|$; changes along the gauge fiber. |
+   | $\exp(A_k^{\prime\prime}[V])$ | **NON-INVARIANT / COMPENSATING** | Effective action contains background connections relative to $V_0$. Naive transformation holding $V_0$ fixed produces non-zero defect; invariance requires compensating transformation on $(V_h, B^\prime)$. |
+
+   **Conclusion:** Because $\chi_k^{\prime\prime}$, $\chi^\prime$, and background-dependent parts of $A_k^{\prime\prime}$ are strictly non-invariant, they CANNOT be factored out of the fiber integral $\int dh$. The full integrand $\mathcal{F}(\Phi^{-1}(\hat{V}, h))$ must be integrated along the compact gauge fiber.
+
+3. **Effective Fiber Density Bounds with Finite-Cutoff Dependence:**
+   Under normalized Haar measure $dh$ on compact group $\mathcal{G}_{\Lambda_0}$, $\int_{\mathcal{G}_{\Lambda_0}} dh = 1$.
+   On the small-field support $\mathcal{E}_{\mathrm{chart}} = \{ V^{\prime\prime} \in G^{\mathbb{B}_0} : \|B^\prime(b)\| < \delta_k^\prime \; \forall b \in \mathbb{B}_0 \}$:
+   The integrand is bounded by:
+   $$|\mathcal{F}(\Phi^{-1}(\hat{V}, h))| \le C_{\mathcal{F}}(\hat{V}) \cdot \mathbf{1}_{\mathcal{E}_{\mathrm{chart}}}(\Phi^{-1}(\hat{V}, h)),$$
+   where $C_{\mathcal{F}}(\hat{V}) = \sup_{h \in \mathcal{G}_{\Lambda_0}} |\exp(A_k^{\prime\prime}[\Phi^{-1}(\hat{V}, h)]) \mathcal{O}[U]|$.
+   Integrating over the fiber gives the explicit bound:
+   $$\mathcal{W}_{\mathrm{eff}}(\hat{V}) \le C_{\mathcal{F}}(\hat{V}) \cdot W_{\mathcal{E}}(\hat{V}),$$
+   where the pure measure fiber weight is:
+   $$W_{\mathcal{E}}(\hat{V}) = \int_{\mathcal{G}_{\Lambda_0}} dh \, \mathbf{1}_{\mathcal{E}_{\mathrm{chart}}}(\Phi^{-1}(\hat{V}, h)) \le \operatorname{Vol}(\mathcal{G}_{\Lambda_0}) = 1.$$
+   **Finite-Cutoff Dependence:**
+   As proved in Tests 12 and 13, $W_{\mathcal{E}}(\hat{V})$ depends explicitly on the finite small-field cutoff $\delta_k^\prime$ and configuration $\hat{V}$.
+   - For $\hat{V}$ close to identity: $W_{\mathcal{E}}(\hat{V}) > 0$.
+   - For $\hat{V}$ far from identity: the gauge orbit never intersects $\mathcal{E}_{\mathrm{chart}}$, so $W_{\mathcal{E}}(\hat{V}) = 0$.
+   - Replacing $W_{\mathcal{E}}(\hat{V})$ by 1 is a crude supremum inequality that discards the cutoff-dependent fiber density profile.
+   - We explicitly declare that a mere supremum inequality $\mathcal{W}_{\mathrm{eff}} \le C_{\mathcal{F}}$ is **NOT** a reconstruction of the pushforward measure.
+
+---
+
+### 5. Tracking of Global Vacuum Partition Function $Z_{\mathrm{vac}}^{-1}$ and Marked $n=0$ Normalization
+
+1. **Physical Observable Expectation Value:**
+   Physical expectations of the flowed observable are defined by global vacuum normalization:
+   $$\langle \mathcal{O}_{(a, t)}(f) \rangle = \frac{Z[\mathcal{O}_{(a, t)}(f)]}{Z_{\mathrm{vac}}} = Z_{\mathrm{vac}}^{-1} \sum_\alpha \int dV_{\alpha} \, \rho_{k, \alpha}[V] \, \mathcal{O}_{(a, t)}(f)[U(V)].$$
+
+2. **Marked Polymer Sector Correspondence:**
+   - In Bałaban's marked cluster expansion, the unmarked vacuum sector corresponds to $n=0$ insertions ($\mathcal{O} \equiv 1$).
+   - The global factor $Z_{\mathrm{vac}}^{-1}$ is scalar and configuration-independent; it commutes through the tree gauge integration $\int_{\mathcal{G}_{\Lambda_0}} dh$.
+   - Maintaining $Z_{\mathrm{vac}}^{-1}$ explicitly prevents conflating unnormalized path-integral densities with physical correlation functions.
+
+---
+
+### 6. Support-Specific Cutoff Replacement (1.89) Conditioning
+
+On page 198 (1.89), Bałaban establishes:
+$$\chi_k(\Omega_k^{\sim 4}) \, \chi_{k, \Lambda} \, \chi_{h, 1/2}((\Omega_{h+1}^{\prime\prime \sim 2})^c \cap \Omega_h) \, \chi_h(\Omega_h \cap Z_h) \, \chi_k^{\prime\prime} \, \chi^\prime = \chi_k(\Omega_k^{\sim 4}) \, \chi_{k, \Lambda} \, \chi_{h, 1/2}((\Omega_{h+1}^{\prime\prime \sim 2})^c \cap \Omega_h) \, \chi_h(\Omega_h \cap Z_h) \, \chi^\prime.$$
+- This replacement identity holds **STRICTLY ON THE JOINT SUPPORT** of the retained support factors $\operatorname{supp}(\chi_k \chi_{k, \Lambda} \chi_{h, 1/2} \chi_h)$;
+- Off this joint support, $\chi_k^{\prime\prime}$ does not identically equal 1 on link fluctuations;
+- Dropping the joint support factors and claiming $\chi_k^{\prime\prime} \chi^\prime = \chi^\prime$ as an unconditioned link identity is mathematically false and formally barred.
+
+---
+
+### 7. Established Lemma and First Missing Downstream Obligation
+
+1. **LEMMA `YM-055F-GROUNDED-TREE-PUSHFORWARD-AND-COLLAR-MATCHING`**
+   *(Grounded-Tree Haar Pushforward, Effective Fiber Density, and Collar Domain Matching)*:
+   Under the hypotheses of Bałaban CMP 122 Proposition 1 on nested rectangular parallelepipeds $P_1 \setminus P_2$ with boundary-grounded tree $T_0$:
+   1. The augmented gauge map $\Phi: G^{\mathbb{B}_0} \to G^{\mathbb{B}_0 \setminus T_0} \times \mathcal{G}_{\Lambda_0}$ is an exact smooth diffeomorphism with explicit inverse $\Phi^{-1}$.
+   2. Normalized Haar measure on $G^{\mathbb{B}_0}$ pushes forward under $\Phi$ to product measure $d\hat{V}_{\mathbb{B}_0 \setminus T_0} \times dh_{\mathcal{G}_{\Lambda_0}}$ with integration Jacobian identically 1.
+   3. The effective fiber density $\mathcal{W}_{\mathrm{eff}}(\hat{V}) = \int_{\mathcal{G}_{\Lambda_0}} dh \, \mathcal{F}(\Phi^{-1}(\hat{V}, h))$ retains all non-invariant cutoffs ($\chi_k^{\prime\prime}, \chi^\prime$) and background action factors inside the fiber integral, satisfying the finite-cutoff dependent bound $\mathcal{W}_{\mathrm{eff}}(\hat{V}) \le C_{\mathcal{F}}(\hat{V}) W_{\mathcal{E}}(\hat{V})$ with $W_{\mathcal{E}}(\hat{V}) \le 1$.
+   4. Domain matching between $\mathbb{B}_k^{\prime\prime} \cap (\Lambda \cap Z_h^c)$ and $\mathbb{B}_0$ leaves collar bonds $\mathbb{B}_{\mathrm{collar}}$, requiring collar factorization under the preliminary operator $\mathbb{T}_h(Z_h)$ (`COLLAR_DOMAIN_MATCHING_CONDITIONAL_ON_PRELIMINARY_OPERATOR_AUDIT`).
+   *Status:* **PROVED_WITHIN_STATED_HYPOTHESES**.
+
+2. **First Missing Downstream Obligation:**
+   Following Lemma `YM-055F`, the immediate next dependency-satisfied mathematical obligation blocking continuum closure under primary contract `YM-015F-JET-002B` is:
+   **LEMMA `YM-051F-DETERMINISTIC-CHART-OVERLAP`**: *Deterministic Small-Field Chart Overlap and Remainder Decomposition*.
+   Specifically: proving that the small-field chart $\{|B^\prime(b)| < \delta_k^\prime\}$ overlaps deterministically with the gauge-fixed slice coordinates under tree gauge fixing, and providing the explicit geometric remainder decomposition for configurations exiting the chart.
+   All weighted-measure tail estimates under the Wilson action, multiscale marked polymer activity summability $\sum_\alpha \mathcal{I}_\alpha$, cutoff-uniform bounds, and continuum closure remain strictly downstream and open.
+
 
 
 

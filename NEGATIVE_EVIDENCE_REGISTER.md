@@ -629,6 +629,20 @@ Positive T_epsilon fixes normalized vacuum but a contrast target recovered from 
   5. *Closeout Reconciliation & Direct Object-Byte Querying:* Refuted reliance on `git archive` for generic literal-blob extraction without attribute validation. Replaced by direct object streaming via `git cat-file --batch`, proving zero attribute divergence and exact object-byte equivalence across all 158 canonical scientific files for candidate `6b25aae3eefc8e22b4b5a6486f2045bffa0b9e39` (`b9bbef05cf85f9f410992b33179771643608a5f4331a86aafcd7f96407912196`). Reconciled full Git commit lineage IDs (`6b25aae...`, `c28e16eb...`, `3faa8925...`) and updated live candidate bindings in `PROJECT_STATE.yaml`.
 
 
+## NEG-YM-055-COLLAR-DOMAIN-MISMATCH-AND-2D-LIFTING-BARRIER: Unconditioned Collar Domain Equivalence, 2D-to-4D Geometry Lifting, and Supremum Measure Substitution (`YM-055`)
+
+- **Discovery Date:** 2026-10-10
+- **Epistemic Classification:** `[METHOD_SPECIFIC_OBSTRUCTION]`
+- **Hypothesis tested:** Whether the active fluctuation bond domain $\mathbb{B}_0 = \mathbb{U}_k \cap \Lambda_0$ unconditionally equals the full group integration domain $\mathbb{B}_k^{\prime\prime} \cap (\Lambda \cap Z_h^c)$ in Bałaban CMP 122 (1.76); whether a two-site 2D certificate on $P_1 \setminus P_2$ suffices for full 4D source geometry acceptance; and whether a supremum upper bound on the integrand constitutes a reconstruction of the pushforward measure.
+- **Result:** Falsified.
+  1. *Collar Domain Mismatch:* In Bałaban CMP 122 (1.76), active integration is over $\mathbb{B}_k^{\prime\prime} \cap (\Lambda \cap Z_h^c)$. Active tree gauge coordinates $B^\prime$ and $T_0$ cover ONLY $\mathbb{B}_0 = \mathbb{U}_k \cap \Lambda_0$. Because $\Lambda_0 = \Lambda \cap (Z_h^{\prime\sim})^c \subsetneq \Lambda \setminus Z_h$ whenever the collar $\Lambda \cap (Z_h^{\prime\sim} \setminus Z_h)$ is non-empty, bonds touching internal boundary $\partial \Omega_{k+1}^1$ are excluded from $\mathbb{B}_0$. This leaves retained collar bonds $\mathbb{B}_{\mathrm{collar}} = (\mathbb{B}_k^{\prime\prime} \cap (\Lambda \cap Z_h^c)) \setminus \mathbb{B}_0$ connecting to the preliminary sector $Z_h$. Assuming unconditioned domain equivalence $\mathbb{B}_0 = \mathbb{B}_k^{\prime\prime} \cap (\Lambda \cap Z_h^c)$ without proving collar factorization under $\mathbb{T}_h(Z_h)$ is refuted. Formally classified as `COLLAR_DOMAIN_MATCHING_CONDITIONAL_ON_PRELIMINARY_OPERATOR_AUDIT`.
+  2. *2D-to-4D Geometry Non-Lifting Barrier:* A two-site 2D concrete certificate on $P_1 \setminus P_2$ ($|\Lambda_0| = 2$, $|T_0| = 2$, $|\mathbb{B}_0| = 3$) rigorously certifies algebraic grounding bond solvability and quaternion inversion. However, in 4D, coordination number is 8, parallelepiped faces are 3D cubes, edges are 2D plaquettes, and trees span 4D blocks across boundaries. Non-lifting defect $\Delta_{\mathrm{4D\_lifting}} = \dim(\text{4D bonds}) - \dim(\text{2D bonds}) > 0$. The 2D certificate cannot be marketed as full 4D source geometry acceptance. Formally classified as `2D_GEOMETRY_CERTIFIED_4D_SOURCE_GEOMETRY_OPEN`.
+  3. *Supremum vs Measure Reconstruction:* Link cutoffs ($\chi_k^{\prime\prime}, \chi^\prime$) and background connections in $A_k^{\prime\prime}$ are strictly non-invariant along the gauge orbit. Replacing the integrated fiber weight $W_{\mathcal{E}}(\hat{V}) = \int_{\mathcal{G}_{\Lambda_0}} dh \, \mathbf{1}_{\mathcal{E}_{\mathrm{chart}}}$ by a crude supremum upper bound $\mathcal{W}_{\mathrm{eff}} \le C_{\mathcal{F}}$ is an inequality, NOT a reconstruction of the pushforward measure.
+  4. *Conditional Support Replacement (1.89):* $\chi_k^{\prime\prime} \chi^\prime = \chi^\prime$ holds strictly on joint support $\operatorname{supp}(\chi_k \chi_{k, \Lambda} \chi_{h, 1/2} \chi_h)$; unconditioned link-level simplification is false.
+  5. *Classification:* `METHOD_SPECIFIC_OBSTRUCTION`; structural no-go count remains 0; no continuum edge closes.
+
+
+
 
 
 

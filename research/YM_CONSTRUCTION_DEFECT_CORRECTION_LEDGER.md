@@ -267,6 +267,38 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
    - Reconciled full Git commit lineage IDs: candidate freeze `6b25aae3eefc8e22b4b5a6486f2045bffa0b9e39`, acceptance commit `c28e16eb2097c6e8f84361dc68a0ee6e8edf48c4`, and initial evidence closeout commit `3faa8925386d7bccad961b5a3899bce8d073cfe9`, eliminating any erroneous suffix references.
 
 
+## CDC-055: pushforward measure integration, effective fiber density bounds, and collar domain matching under bałaban grounded tree t_0
+
+1. **Defect 1: Unconditioned domain equivalence between active fluctuation bonds and full integral (1.76):**
+   - In Bałaban CMP 122 p. 194 (1.76), the group integration is over $\mathbb{B}_k^{\prime\prime} \cap (\Lambda \cap Z_h^c)$.
+   - Active tree gauge coordinates $B^\prime$ and $T_0$ are defined only on $\mathbb{B}_0 = \mathbb{U}_k \cap \Lambda_0$, where $\Lambda_0 = \Lambda \cap \Omega_{k+1}^1 = \Lambda \cap (Z_h^{\prime\sim})^c \subsetneq \Lambda \setminus Z_h$.
+   - Bonds touching the internal boundary $\partial \Omega_{k+1}^1$ are excluded from $\mathbb{B}_0$. This leaves collar bonds $\mathbb{B}_{\mathrm{collar}} = (\mathbb{B}_k^{\prime\prime} \cap (\Lambda \cap Z_h^c)) \setminus \mathbb{B}_0$ connecting to the preliminary sector $Z_h$.
+   - Treating $\mathbb{B}_0$ as the entire integration domain of (1.76) without accounting for $\mathbb{B}_{\mathrm{collar}}$ is an unproved assumption.
+   - **Correction:** Formally isolates and classifies this bridge as `COLLAR_DOMAIN_MATCHING_CONDITIONAL_ON_PRELIMINARY_OPERATOR_AUDIT`. Proves that collar variables couple to the preliminary transfer operator $\mathbb{T}_h(Z_h)$ rather than tree gauge coordinates.
+2. **Defect 2: Explicit grounded-tree map and Haar pushforward with boundary links:**
+   - Constructs explicit group-valued forward map $\Phi: G^{\mathbb{B}_0} \to G^{\mathbb{B}_0 \setminus T_0} \times \mathcal{G}_{\Lambda_0}$ using Bałaban's outer boundary grounding bond $[y_0, x_{\mathrm{entry}}] \in T_0$ with $h_{y_0} = I$ on $\Lambda^c$.
+   - Derives explicit smooth inverse $\Phi^{-1}(\hat{V}, h)$ and proves global bijectivity: $\Phi^{-1}(\Phi(V^{\prime\prime})) = V^{\prime\prime}$ and $\Phi(\Phi^{-1}(\hat{V}, h)) = (\hat{V}, h)$.
+   - Proves sequential normalized Haar measure pushforward has Jacobian identically 1: $|\det J_{\Phi}| \equiv 1$.
+   - Retains all incident boundary links consistently with fixed exterior gauge condition $h \equiv I$ on $\Lambda^c$.
+3. **Defect 3: Two-site 2D certificate vs 4D source geometry non-lifting barrier:**
+   - Proves that while a two-site 2D configuration on $P_1 \setminus P_2$ ($|\Lambda_0| = 2$, $|T_0| = 2$, $|\mathbb{B}_0| = 3$) rigorously certifies algebraic solvability, grounding defect cancellation ($\Delta_{\mathrm{grounding}} = 0$), and quaternion inversion, it does NOT constitute acceptance of the full 4D source geometry.
+   - In 4D, coordination number is 8; faces of $P_1 \setminus P_2$ are 3D cubes; edges are 2D plaquettes; and tree/forest $T_0$ connects nested 4D blocks across boundaries.
+   - Formally classifies this barrier as `2D_GEOMETRY_CERTIFIED_4D_SOURCE_GEOMETRY_OPEN`.
+4. **Defect 4: Supremum upper bound vs actual measure reconstruction:**
+   - Derives full integrand effective fiber density $\mathcal{W}_{\mathrm{eff}}(\hat{V}) = \int_{\mathcal{G}_{\Lambda_0}} dh \, \mathcal{F}(\Phi^{-1}(\hat{V}, h))$.
+   - Proves that while closed-plaquette Wilson action, gauge-invariant observables, and exterior cutoffs are gauge invariant along the fiber, link cutoffs ($\chi_k^{\prime\prime}, \chi^\prime$) and background connections in $A_k^{\prime\prime}$ relative to $V_0$ are strictly non-invariant.
+   - Non-invariant factors must remain inside the fiber integral.
+   - Proves the explicit bound $\mathcal{W}_{\mathrm{eff}}(\hat{V}) \le C_{\mathcal{F}}(\hat{V}) W_{\mathcal{E}}(\hat{V})$, where $W_{\mathcal{E}}(\hat{V}) \le 1$ depends explicitly on the finite small-field cutoff $\delta_k^\prime$.
+   - Replaces crude supremum inequalities with exact geometric fiber orbit integrals.
+5. **Defect 5: Conditional support (1.89) preservation and global normalization:**
+   - Proves that $\chi_k^{\prime\prime}\chi^\prime = \chi^\prime$ holds strictly on joint support $\operatorname{supp}(\chi_k \chi_{k, \Lambda} \chi_{h, 1/2} \chi_h)$; dropping support factors unconditionally is barred.
+   - Explicitly tracks global vacuum partition function $Z_{\mathrm{vac}}^{-1}$ and marked $n=0$ normalization.
+6. **Isolated downstream obligation:**
+   - Proves Lemma `YM-055F-GROUNDED-TREE-PUSHFORWARD-AND-COLLAR-MATCHING` within stated hypotheses.
+   - Isolates the first open downstream obligation as Lemma `YM-051F-DETERMINISTIC-CHART-OVERLAP`.
+
+
+
 
 
 

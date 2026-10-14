@@ -349,6 +349,21 @@ Source mechanisms: own finite row-space/kernel target-descent theorem, positive 
 - Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
 
 
+## XFER-YM-ONE-TERM-PULLBACK-055: Pushforward Measure Integration, Effective Fiber Density Bounds, and Collar Domain Matching under Bałaban Grounded Tree T_0
+
+- Source: Bałaban CMP 122, 175–202 (1989), printed pp. 194 (formula (1.76) domain), 195–196 (tree construction on $P_1 \setminus P_2$), 198 (support-conditioned cutoff (1.89)).
+- Target: YM-015F degree-one physical marked observable insertion under RG transport.
+- Verified mapping:
+  - Exact domain matching audit: (1.76) integrates over $\mathbb{B}_k^{\prime\prime} \cap (\Lambda \cap Z_h^c)$, while active tree coordinates $B^\prime$ and $T_0$ cover ONLY $\mathbb{B}_0 = \mathbb{U}_k \cap \Lambda_0$. Collar $\Lambda \cap (Z_h^{\prime\sim} \setminus Z_h)$ carries retained bonds $\mathbb{B}_{\mathrm{collar}}$ touching $\partial \Omega_{k+1}^1$. Assuming unconditioned equivalence $\mathbb{B}_0 = \mathbb{B}_k^{\prime\prime} \cap (\Lambda \cap Z_h^c)$ without collar factorization under $\mathbb{T}_h(Z_h)$ is refuted (`COLLAR_DOMAIN_MATCHING_CONDITIONAL_ON_PRELIMINARY_OPERATOR_AUDIT`).
+  - Explicit group-valued grounded-tree map $\Phi: G^{\mathbb{B}_0} \to G^{\mathbb{B}_0 \setminus T_0} \times \mathcal{G}_{\Lambda_0}$ and smooth inverse $\Phi^{-1}$ satisfying $\Phi^{-1}(\Phi(V^{\prime\prime})) = V^{\prime\prime}$ and $\Phi(\Phi^{-1}(\hat{V}, h)) = (\hat{V}, h)$. Normalized Haar pushforward has Jacobian identically 1. All incident boundary links retained consistently.
+  - 2D certificate vs 4D source geometry barrier: two-site 2D certificate on $P_1 \setminus P_2$ ($|\Lambda_0| = 2$, $|T_0| = 2$, $|\mathbb{B}_0| = 3$) proves algebraic solvability and $\Delta_{\mathrm{grounding}} = 0$, but cannot certify full 4D source geometry (`2D_GEOMETRY_CERTIFIED_4D_SOURCE_GEOMETRY_OPEN`). Non-lifting defect $\Delta_{\mathrm{4D\_lifting}} > 0$.
+  - Effective fiber density derivation: $\mathcal{W}_{\mathrm{eff}}(\hat{V}) = \int_{\mathcal{G}_{\Lambda_0}} dh \, \mathcal{F}(\Phi^{-1}(\hat{V}, h))$. While closed-plaquette action and flowed observables are gauge invariant, link cutoffs and background connections are strictly non-invariant and remain inside the fiber integral. Bounded by $\mathcal{W}_{\mathrm{eff}}(\hat{V}) \le C_{\mathcal{F}}(\hat{V}) W_{\mathcal{E}}(\hat{V})$ with $W_{\mathcal{E}}(\hat{V}) \le 1$ depending on finite cutoff $\delta_k^\prime$. Mere supremum inequalities do not reconstruct the pushforward measure.
+  - Support replacement (1.89) holds strictly on joint support $\operatorname{supp}(\chi_k \chi_{k, \Lambda} \chi_{h, 1/2} \chi_h)$. Global vacuum partition function $Z_{\mathrm{vac}}^{-1}$ tracked explicitly.
+- Open bridge: Deterministic Small-Field Chart Overlap (Lemma `YM-051F-DETERMINISTIC-CHART-OVERLAP`) preceding weighted-measure tail estimates and multiscale polymer summability.
+- Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
+
+
+
 
 
 
