@@ -363,6 +363,21 @@ Source mechanisms: own finite row-space/kernel target-descent theorem, positive 
 - Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
 
 
+## XFER-YM-ONE-TERM-PULLBACK-056: Deterministic Small-Field Chart Overlap, Cycle Holonomy Exit Bounds, and Three-Sector Remainder Decomposition
+
+- Source: Bałaban CMP 122, 175–202 (1989), printed pp. 194 (1.76), 195 (1.81 small-field cutoff), 195–196 (grounded tree $T_0$), 198 (1.89).
+- Target: YM-015F degree-one physical marked observable insertion under RG transport.
+- Verified mapping:
+  - Small-field chart $\mathcal{B}_{\delta_k^\prime}$ and grounded tree slice overlap domain $\mathcal{E}_{\mathrm{chart}} = \{V^{\prime\prime} \in \mathcal{B}_{\delta_k^\prime} : d_G(\hat{V}(b), I) < \delta_k^\prime \ \forall b \in \mathbb{B}_0 \setminus T_0\}$ proved non-empty.
+  - Cumulative cycle holonomy chart exit: non-tree links transform to fundamental cycle holonomies $\hat{V}(b) = V^{\prime\prime}(C_b)^{-1}$. Even when all original links satisfy $d_G^2(V^{\prime\prime}(e), I) = 2/5 < 1/2 = \delta^2$, cumulative rotation yields $d_G^2(\hat{V}(b), I) = 338/125 > 1/2$, proving strictly non-empty chart exit remainder ($\Delta_{\mathrm{exit}} = 551/250 > 0$).
+  - Deterministic holonomy exit bound: $d_G(V^{\prime\prime}(C_b), I) \ge \delta_k^\prime \implies d_G(\hat{V}(b), I) \ge \delta_k^\prime$. Contraction sufficiency: $\|B^\prime(e)\| < \delta_k^\prime / L_{\mathrm{cycle}}(b)$.
+  - Three-sector deterministic partition of unity $\chi_{\mathcal{E}_{\mathrm{chart}}} + \chi_{\mathrm{chart-exit}} + \chi_{\mathrm{large}} \equiv 1$ decomposing termwise density $\rho_{k, \alpha} = \rho_{k, \alpha}^{\mathrm{overlap}} + \mathcal{R}_{\alpha, \mathrm{chart-exit}} + \mathcal{R}_{\alpha, \mathrm{large}}$.
+  - Lemma `YM-051F-DETERMINISTIC-CHART-OVERLAP` formally proved within stated hypotheses.
+- Open bridge: Weighted-Measure Tail Estimates under Wilson Action (Lemma `YM-056F-ACTION-SUPPRESSED-REMAINDER-BOUND`) preceding multiscale polymer summability.
+- Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
+
+
+
 
 
 

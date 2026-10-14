@@ -642,6 +642,22 @@ Positive T_epsilon fixes normalized vacuum but a contrast target recovered from 
   5. *Classification:* `METHOD_SPECIFIC_OBSTRUCTION`; structural no-go count remains 0; no continuum edge closes.
 
 
+## NEG-YM-056-CHART-EXIT-AND-HOLONOMY-BOUNDS: Cumulative Cycle Holonomy Chart Exit and Pure Haar Non-Suppression (`YM-056`)
+
+- **Discovery Date:** 2026-10-10
+- **Epistemic Classification:** `[METHOD_SPECIFIC_OBSTRUCTION]`
+- **Hypothesis tested:** Whether all configurations inside the small-field chart $\mathcal{B}_{\delta_k^\prime}$ remain inside the chart ball under Bałaban tree gauge fixing ($\mathcal{E}_{\mathrm{chart}} = \mathcal{B}_{\delta_k^\prime}$), and whether the chart-exit remainder $\mathcal{R}_{\alpha, \mathrm{chart-exit}}$ can be exponentially suppressed by pure Haar measure without the Wilson action.
+- **Result:** Falsified.
+  1. *Cumulative Tree Rotation Chart Exit:* Under tree-gauge parallel transport, non-tree link variables transform into the oriented holonomy of the fundamental cycle: $\hat{V}(b) = h_x V^{\prime\prime}(b) h_y^{-1} = V^{\prime\prime}(C_b)^{-1}$. Even when every individual link is strictly within the small-field chart ($d_G^2(V^{\prime\prime}(e), I) = 2/5 < 1/2 = \delta^2$), cumulative non-Abelian rotations along the cycle can produce $d_G^2(\hat{V}(b), I) = 338/125 > 1/2$. The chart-exit defect is strictly positive:
+     $$\Delta_{\mathrm{exit}} = \frac{551}{250} > 0.$$
+     Assuming that small-field cutoffs are automatically satisfied on gauge-fixed slice coordinates is refuted. The chart-exit remainder $\mathcal{R}_{\alpha, \mathrm{chart-exit}}$ is strictly non-vanishing.
+  2. *Deterministic Holonomy Exit Bound:* Whenever the cycle holonomy satisfies $d_G(V^{\prime\prime}(C_b), I) \ge \delta_k^\prime$, $\hat{V}(b)$ necessarily exits $\mathcal{B}_{\delta_k^\prime}$. Chart stability is guaranteed only under the contracted small-field condition $\|B^\prime(e)\| < \delta_k^\prime / L_{\mathrm{cycle}}(b)$.
+  3. *Pure Haar Non-Suppression:* Haar measure on $SU(2)$ has no coupling constant $g$. Exponential suppression $\mathcal{O}(e^{-c/g_k^2})$ cannot arise from kinematic Haar integration and requires the Wilson action penalty on non-trivial cycle holonomies.
+  4. *Three-Sector Partition:* Unpartitioned remainder treatments are replaced by the exact deterministic partition $\rho_{k, \alpha} = \rho_{k, \alpha}^{\mathrm{overlap}} + \mathcal{R}_{\alpha, \mathrm{chart-exit}} + \mathcal{R}_{\alpha, \mathrm{large}}$.
+  5. *Classification:* `METHOD_SPECIFIC_OBSTRUCTION`; structural no-go count remains 0; no continuum edge closes.
+
+
+
 
 
 

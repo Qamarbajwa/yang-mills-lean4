@@ -208,6 +208,16 @@ Primary YMH Lemma4.5 p54 ->Lemma5.5 p60 was text rechecked at https://www.pure.e
 5. **Support replacement (1.89) and global normalization:** $\chi_k^{\prime\prime}\chi^\prime = \chi^\prime$ holds strictly on joint support $\operatorname{supp}(\chi_k \chi_{k, \Lambda} \chi_{h, 1/2} \chi_h)$. Physical expectations tracked via global vacuum normalization $Z_{\mathrm{vac}}^{-1}$. Earliest global 4D failure remains UNESTABLISHED; structural no-go count 0.
 
 
+## FA-001 deterministic small-field chart overlap, cycle holonomy bounds, and remainder decomposition / YM-056
+
+1. **Deterministic chart overlap domain $\mathcal{E}_{\mathrm{chart}}$:** Tree gauge fixing sets tree link fluctuations to zero ($d_G(V^{\prime\prime h}(b), I) = 0$ on $T_0$), but non-tree links transform to fundamental cycle holonomies $\hat{V}(b) = V^{\prime\prime}(C_b)^{-1}$. The deterministic overlap domain $\mathcal{E}_{\mathrm{chart}} = \{V^{\prime\prime} \in \mathcal{B}_{\delta_k^\prime} : d_G(\hat{V}(b), I) < \delta_k^\prime \ \forall b \in \mathbb{B}_0 \setminus T_0\}$ is proved non-empty.
+2. **Cumulative cycle rotation chart exit:** Even when every individual bond satisfies $d_G^2(V^{\prime\prime}(e), I) = 2/5 < 1/2 = \delta^2$, cumulative non-Abelian tree rotation yields $d_G^2(\hat{V}(b), I) = 338/125 > 1/2$. Exact rational chart-exit defect $\Delta_{\mathrm{exit}} = 551/250 > 0$. Proves that the chart-exit remainder $\mathcal{R}_{\alpha, \mathrm{chart-exit}}$ is strictly non-vanishing.
+3. **Deterministic holonomy exit bound:** Guaranteed chart exit whenever $d_G(V^{\prime\prime}(C_b), I) \ge \delta_k^\prime$. Contraction sufficiency $\|B^\prime(e)\| < \delta_k^\prime / L_{\mathrm{cycle}}(b)$.
+4. **Three-sector remainder partition:** Exact partition of unity $\chi_{\mathcal{E}_{\mathrm{chart}}} + \chi_{\mathrm{chart-exit}} + \chi_{\mathrm{large}} \equiv 1$ decomposing termwise density $\rho_{k, \alpha} = \rho_{k, \alpha}^{\mathrm{overlap}} + \mathcal{R}_{\alpha, \mathrm{chart-exit}} + \mathcal{R}_{\alpha, \mathrm{large}}$.
+5. **Proved Lemma & downstream blocker:** Lemma `YM-051F-DETERMINISTIC-CHART-OVERLAP` is formally proved. Isolates downstream blocker: Lemma `YM-056F-ACTION-SUPPRESSED-REMAINDER-BOUND` (weighted-measure tail estimates under Wilson action penalty). Earliest global 4D failure remains UNESTABLISHED; structural no-go count 0.
+
+
+
 
 
 

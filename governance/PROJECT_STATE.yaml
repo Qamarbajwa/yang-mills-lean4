@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 63
+revision: 64
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "cac76bb0e2bc9d8bf6e8a9c7dce2037208baa425"
-  scientific_candidate_sha: "76b40c943920a4c37584d5e435b5373f5dd2eb04"
-  review_bound_sha: "76b40c943920a4c37584d5e435b5373f5dd2eb04"
-  evidence_closeout_head: "cac76bb0e2bc9d8bf6e8a9c7dce2037208baa425"
-  closeout_resolution: "evidence_closeout_head binds completed YM-055 technical acceptance recording commit (cac76bb0e2bc9d8bf6e8a9c7dce2037208baa425); scientific_candidate_sha and review_bound_sha bind reviewed YM-055 candidate freeze commit (76b40c943920a4c37584d5e435b5373f5dd2eb04); resolve authoritative current HEAD dynamically from Git."
+  head: "614aaea0f5a7d3efcf7c26c63b48325a9ff2ea4b"
+  scientific_candidate_sha: "pending_ym056_freeze"
+  review_bound_sha: "pending_ym056_freeze"
+  evidence_closeout_head: "614aaea0f5a7d3efcf7c26c63b48325a9ff2ea4b"
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-055 closeout commit (614aaea0f5a7d3efcf7c26c63b48325a9ff2ea4b); scientific_candidate_sha and review_bound_sha bind active YM-056 candidate once frozen; resolve authoritative current HEAD dynamically from Git."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,14 +32,25 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 62
-  last_updated_at: "2026-10-15T01:53:00Z"
+  last_expected_revision: 63
+  last_updated_at: "2026-10-15T01:54:00Z"
   active_contract: "YM-015F-JET-002B"
-  frozen_candidate: "76b40c943920a4c37584d5e435b5373f5dd2eb04"
+  frozen_candidate: "pending_ym056_freeze"
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-056
+    scope_in: "Deterministic small-field chart overlap analysis between original cube {|B'(b)| < delta_k'} and tree gauge slice B_0 \\ T_0, boundary cycle holonomy bounds for chart exit, three-sector remainder decomposition (rho_{k, alpha} = rho_{k, alpha}^{overlap} + R_{alpha, chart-exit} + R_{alpha, large}), proof of Lemma YM-051F-DETERMINISTIC-CHART-OVERLAP, isolation of downstream obligation (weighted-measure tail estimates under Wilson action), and Test 18 finite certificate"
+    scope_out: "Weighted-measure tail bounds under Wilson action exp(-g^{-2} S(U)), multiscale marked polymer activity summability under Bałaban RG, cutoff-uniform estimates, and continuum closure"
+    dependencies: ["YM-055"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-056_E4_RAW_20261010.md"
+    acceptor: "verification/YM-056_TECHNICAL_ACCEPTANCE.md"
+    status: IN_PROGRESS
+    scope_limitation: "DETERMINISTIC_CHART_OVERLAP_AND_REMAINDER_DECOMPOSITION_PROVED_WEIGHTED_TAILS_OPEN"
   - id: YM-055
     scope_in: "Pushforward measure integration and effective fiber density bounds under exact Bałaban grounded tree T_0 on P_1 \\ P_2, domain matching between B''_k cap Lambda cap Z_h^c and B_0 = U_k cap Lambda_0, explicit group-valued grounded-tree map Phi and inverse Phi^{-1}, normalized Haar pushforward with unit Jacobian, boundary-crossing link retention, factor-by-factor invariance classification, tracking of global vacuum Z_vac and marked n=0 insertion, conditional support (1.89) preservation, finite-cutoff dependence, 2D vs 4D geometry non-lifting barrier, and Test 17 finite certificate"
     scope_out: "Multiscale marked polymer activity summability under Bałaban RG, weighted-measure tail estimates under Wilson action, chart overlap completion, cutoff-uniform estimates, and continuum closure"

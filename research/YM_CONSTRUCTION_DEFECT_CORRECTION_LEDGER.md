@@ -298,6 +298,28 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
    - Isolates the first open downstream obligation as Lemma `YM-051F-DETERMINISTIC-CHART-OVERLAP`.
 
 
+## CDC-056: DETERMINISTIC SMALL-FIELD CHART OVERLAP, CYCLE HOLONOMY EXIT BOUNDS, AND THREE-SECTOR REMAINDER DECOMPOSITION
+
+1. **Defect 1: Unproved deterministic chart overlap assumption:**
+   - Previous analyses either assumed that small-field fluctuations stay inside the chart ball under tree-gauge fixing ($\mathcal{E}_{\mathrm{chart}} = \mathcal{B}_{\delta_k^\prime}$) or lacked explicit geometric conditions under which gauge-transformed cycle links exit the chart.
+   - **Correction:** Proves that while tree bonds $b \in T_0$ are set to zero fluctuation identically ($d_G(V^{\prime\prime h}(b), I) = 0$), non-tree cycle bonds accumulate holonomy:
+     $$\hat{V}(b) = h_x V^{\prime\prime}(b) h_y^{-1} = \left( \prod_{e \in P_{T_0}(y_0 \to x)} V^{\prime\prime}(e) \right) V^{\prime\prime}(b) \left( \prod_{e \in P_{T_0}(y_0 \to y)} V^{\prime\prime}(e) \right)^{-1}.$$
+   - Demonstrates via exact rational unit quaternions in $SU(2)$ that even when $d_G^2(V^{\prime\prime}(e), I) = 2/5 < 1/2 = \delta^2$ on every link, cumulative rotation yields $d_G^2(\hat{V}(b), I) = 338/125 > 1/2$, producing a strictly positive chart-exit defect:
+     $$\Delta_{\mathrm{exit}} = \frac{551}{250} > 0.$$
+   - Proves that the chart-exit domain $\mathcal{B}_{\delta_k^\prime} \setminus \mathcal{E}_{\mathrm{chart}}$ is strictly non-empty.
+2. **Defect 2: Missing deterministic holonomy exit bound and small-field contraction criterion:**
+   - **Correction:** Establishes the exact geometric holonomy exit bound: if fundamental cycle holonomy satisfies $d_G(V^{\prime\prime}(C_b), I) \ge \delta_k^\prime$, then $\hat{V}(b)$ necessarily exits the small-field chart.
+   - Derives the small-field contraction sufficiency criterion: $\|B^\prime(e)\| < \delta_k^\prime / L_{\mathrm{cycle}}(b)$ guarantees that gauge-transformed fluctuations remain inside $\mathcal{B}_{\delta_k^\prime}$.
+3. **Defect 3: Conflation of chart exit with large fields or unpartitioned remainder:**
+   - **Correction:** Establishes the exact deterministic three-sector partition of the termwise density:
+     $$\rho_{k, \alpha} = \rho_{k, \alpha}^{\mathrm{overlap}} + \mathcal{R}_{\alpha, \mathrm{chart-exit}} + \mathcal{R}_{\alpha, \mathrm{large}}$$
+     where $\chi_{\mathcal{E}_{\mathrm{chart}}} + \chi_{\mathrm{chart-exit}} + \chi_{\mathrm{large}} \equiv 1$ is an exact partition of unity.
+4. **Proved Lemma and isolated downstream blocker:**
+   - Formally proves Lemma `YM-051F-DETERMINISTIC-CHART-OVERLAP`.
+   - Isolates the immediate next downstream blocker: Lemma `YM-056F-ACTION-SUPPRESSED-REMAINDER-BOUND` (weighted-measure tail estimates under Wilson action penalty).
+
+
+
 
 
 

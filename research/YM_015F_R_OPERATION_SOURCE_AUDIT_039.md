@@ -1637,6 +1637,103 @@ $$\chi_k(\Omega_k^{\sim 4}) \, \chi_{k, \Lambda} \, \chi_{h, 1/2}((\Omega_{h+1}^
    Specifically: proving that the small-field chart $\{|B^\prime(b)| < \delta_k^\prime\}$ overlaps deterministically with the gauge-fixed slice coordinates under tree gauge fixing, and providing the explicit geometric remainder decomposition for configurations exiting the chart.
    All weighted-measure tail estimates under the Wilson action, multiscale marked polymer activity summability $\sum_\alpha \mathcal{I}_\alpha$, cutoff-uniform bounds, and continuum closure remain strictly downstream and open.
 
+---
+
+## YM-056: DETERMINISTIC SMALL-FIELD CHART OVERLAP, CYCLE HOLONOMY EXIT BOUNDS, AND THREE-SECTOR REMAINDER DECOMPOSITION UNDER BALABAN TREE GAUGE
+
+### 1. Mathematical Formulation of Small-Field Chart and Deterministic Overlap Domain
+1. **Original Small-Field Chart $\mathcal{B}_{\delta_k^\prime}$:**
+   On active fluctuation bonds $\mathbb{B}_0 = \mathbb{U}_k \cap \Lambda_0$, the small-field characteristic function is:
+   $$\chi^\prime(V^{\prime\prime}) = \prod_{b \in \mathbb{B}_0} \mathbf{1}_{\{d_G(V^{\prime\prime}(b), V_0(b)) < \delta_k^\prime\}}$$
+   where $d_G(U, V)^2 = \|U - V\|^2 = 2(1 - \frac{1}{2}\operatorname{Tr}(U V^{-1}))$ on $SU(2)$, with background connection $V_0(b) = I$.
+   Thus $\mathcal{B}_{\delta_k^\prime} = \{V^{\prime\prime} \in G^{\mathbb{B}_0} : d_G(V^{\prime\prime}(b), I) < \delta_k^\prime \ \forall b \in \mathbb{B}_0\}$.
+
+2. **Tree-Gauge Slice Coordinates:**
+   Under the grounded tree map $\Phi: G^{\mathbb{B}_0} \to G^{\mathbb{B}_0 \setminus T_0} \times \mathcal{G}_{\Lambda_0}$, tree gauge fixing satisfies:
+   $$V^{\prime\prime h}(b) = V_0(b) = I \quad \forall b \in T_0.$$
+   Consequently, on tree bonds $b \in T_0$, $d_G(V^{\prime\prime h}(b), I) = 0 < \delta_k^\prime$ is identically and unconditionally satisfied.
+   On residual non-tree bonds $b = (x, y) \in \mathbb{B}_0 \setminus T_0$, the transformed link variable is:
+   $$\hat{V}(b) = h_x V^{\prime\prime}(b) h_y^{-1}.$$
+
+3. **Deterministic Chart Overlap Domain $\mathcal{E}_{\mathrm{chart}}$:**
+   The exact deterministic chart overlap domain is defined by:
+   $$\mathcal{E}_{\mathrm{chart}} = \left\{ V^{\prime\prime} \in \mathcal{B}_{\delta_k^\prime} : \forall b \in \mathbb{B}_0 \setminus T_0, \ d_G(\hat{V}(b), I) < \delta_k^\prime \right\}.$$
+   On $\mathcal{E}_{\mathrm{chart}}$, both original configurations and gauge-transformed slice coordinates satisfy the small-field condition simultaneously.
+
+---
+
+### 2. Cycle Holonomy Accumulation along Tree Paths and Proof of Chart Exit
+1. **Fundamental Cycle Holonomy Representation:**
+   For each non-tree bond $b = (x, y) \in \mathbb{B}_0 \setminus T_0$, let $P_{T_0}(y_0 \to x)$ and $P_{T_0}(y_0 \to y)$ be the unique oriented paths in the grounded tree $T_0$ connecting the exterior grounded base point $y_0 \in \Lambda^c$ (where $h_{y_0} = I$) to vertices $x$ and $y$.
+   The sequential parallel transport equations determine:
+   $$h_x = \prod_{e \in P_{T_0}(y_0 \to x)} V^{\prime\prime}(e), \qquad h_y = \prod_{e \in P_{T_0}(y_0 \to y)} V^{\prime\prime}(e).$$
+   The gauge-transformed link on $b$ is therefore:
+   $$\hat{V}(b) = h_x V^{\prime\prime}(b) h_y^{-1} = \left( \prod_{e \in P_{T_0}(y_0 \to x)} V^{\prime\prime}(e) \right) V^{\prime\prime}(b) \left( \prod_{e \in P_{T_0}(y_0 \to y)} V^{\prime\prime}(e) \right)^{-1}.$$
+   This product is precisely the oriented holonomy around the fundamental cycle $C_b = P_{T_0}(y_0 \to x) \circ b \circ P_{T_0}(y_0 \to y)^{-1}$.
+
+2. **Proof of Strictly Non-Empty Chart Exit ($\Delta_{\mathrm{exit}} > 0$):**
+   Even when *every* individual link fluctuation is strictly inside the small-field chart ($d_G(V^{\prime\prime}(e), I) < \delta_k^\prime$ for all $e \in \mathbb{B}_0$), cumulative non-Abelian rotation along the cycle can force $\hat{V}(b)$ outside the chart ball.
+   - On the concrete 2D configuration $P_1 \setminus P_2$ ($|\Lambda_0| = 2, |T_0| = 2, |\mathbb{B}_0| = 3$), the fundamental cycle has length $L_{\mathrm{cycle}} = 3$ active bonds: $b_{\mathrm{ground}}$, $b_{\mathrm{int}}$, and $b_{\mathrm{ext2}}^{-1}$.
+   - Let $\delta^2 = 1/2$. Choosing rational unit quaternions $V^{\prime\prime}(b_{\mathrm{ground}}) = V^{\prime\prime}(b_{\mathrm{int}}) = (4/5, 3/5, 0, 0)$ and $V^{\prime\prime}(b_{\mathrm{ext2}}) = (4/5, -3/5, 0, 0)$, each bond satisfies:
+     $$d_G^2(V^{\prime\prime}(e), I) = 2\left(1 - \frac{4}{5}\right) = \frac{2}{5} = 0.4 < \frac{1}{2} = \delta^2.$$
+     Thus $V^{\prime\prime} \in \mathcal{B}_\delta$.
+   - However, the transformed non-tree bond is:
+     $$\hat{V}(b_{\mathrm{ext2}}) = V^{\prime\prime}(b_{\mathrm{ext2}}) V^{\prime\prime}(b_{\mathrm{int}})^{-1} V^{\prime\prime}(b_{\mathrm{ground}})^{-1} = (q_1^{-1})^3 = \left(-\frac{44}{125}, -\frac{117}{125}, 0, 0\right).$$
+   - Its distance from identity is:
+     $$d_G^2(\hat{V}(b_{\mathrm{ext2}}), I) = 2\left(1 - \left(-\frac{44}{125}\right)\right) = \frac{338}{125} = 2.704 \ge \frac{1}{2} = \delta^2.$$
+   - The exact rational chart-exit defect is:
+     $$\Delta_{\mathrm{exit}} = d_G^2(\hat{V}(b_{\mathrm{ext2}}), I) - \delta^2 = \frac{338}{125} - \frac{1}{2} = \frac{551}{250} > 0.$$
+   - This proves that $\mathcal{B}_{\delta_k^\prime} \setminus \mathcal{E}_{\mathrm{chart}} \ne \emptyset$: the chart-exit remainder is strictly non-vanishing.
+
+3. **Deterministic Holonomy Lower Bound & Small-Field Contraction Condition:**
+   - **Holonomy Exit Bound:** If the holonomy around fundamental cycle $C_b$ satisfies $d_G(V^{\prime\prime}(C_b), I) \ge \delta_k^\prime$, then $\hat{V}(b)$ necessarily exits the small-field chart: $d_G(\hat{V}(b), I) \ge \delta_k^\prime$.
+   - **Contraction Sufficiency:** By the triangle inequality on the Lie group, for $\hat{V}(b)$ to remain within radius $\delta_k^\prime$, it is sufficient that the original link fluctuations satisfy the contracted bound:
+     $$\|B^\prime(e)\| < \delta_{\mathrm{safe}} = \frac{\delta_k^\prime}{L_{\mathrm{cycle}}(b)}.$$
+
+---
+
+### 3. Three-Sector Mutually Exclusive and Exhaustive Remainder Decomposition
+The un-normalized termwise density $\rho_{k, \alpha}$ admits an exact, deterministic, algebraic decomposition into three mutually exclusive and exhaustive sectors:
+$$\rho_{k, \alpha} = \rho_{k, \alpha}^{\mathrm{overlap}} + \mathcal{R}_{\alpha, \mathrm{chart-exit}} + \mathcal{R}_{\alpha, \mathrm{large}}$$
+where the respective sector indicator operators satisfy:
+$$\mathbf{1} \equiv \chi_{\mathcal{E}_{\mathrm{chart}}} + \chi_{\mathrm{chart-exit}} + \chi_{\mathrm{large}}$$
+defined explicitly by:
+1. **Deterministic Overlap Sector:**
+   $$\chi_{\mathcal{E}_{\mathrm{chart}}}(V^{\prime\prime}) = \chi^\prime(V^{\prime\prime}) \prod_{b \in \mathbb{B}_0 \setminus T_0} \mathbf{1}_{\{d_G(\hat{V}(b), I) < \delta_k^\prime\}}$$
+   where $\rho_{k, \alpha}^{\mathrm{overlap}}$ is the integral restricted to $\mathcal{E}_{\mathrm{chart}}$, carrying both original and tree-gauge small-field cutoffs.
+2. **Chart-Exit Remainder Sector:**
+   $$\chi_{\mathrm{chart-exit}}(V^{\prime\prime}) = \chi^\prime(V^{\prime\prime}) \left( 1 - \prod_{b \in \mathbb{B}_0 \setminus T_0} \mathbf{1}_{\{d_G(\hat{V}(b), I) < \delta_k^\prime\}} \right)$$
+   where all original fluctuations are small ($V^{\prime\prime} \in \mathcal{B}_{\delta_k^\prime}$), but gauge-fixing rotates at least one cycle holonomy outside the small-field chart.
+3. **Large-Field Remainder Sector:**
+   $$\chi_{\mathrm{large}}(V^{\prime\prime}) = 1 - \chi^\prime(V^{\prime\prime})$$
+   where at least one original bond fluctuation exits the small-field chart before gauge fixing.
+
+---
+
+### 4. Established Lemma: Lemma `YM-051F-DETERMINISTIC-CHART-OVERLAP`
+With the explicit construction of $\mathcal{E}_{\mathrm{chart}}$, proof of non-empty chart exit ($\Delta_{\mathrm{exit}} > 0$), cycle holonomy exit bounds, and exact partition of unity, the foundational deterministic chart overlap lemma is established:
+
+**LEMMA `YM-051F-DETERMINISTIC-CHART-OVERLAP` (Deterministic Small-Field Chart Overlap and Remainder Decomposition):**
+*Under the hypotheses of Bałaban CMP 122 Proposition 1 on nested parallelepipeds $P_1 \setminus P_2$ with boundary-grounded tree $T_0$:*
+1. *The small-field chart $\mathcal{B}_{\delta_k^\prime}$ and tree-gauge slice coordinates overlap on the non-empty domain $\mathcal{E}_{\mathrm{chart}}$.*
+2. *On $\mathcal{E}_{\mathrm{chart}}$, the gauge slice coordinate map $B^{\prime h}|_{T_0} = 0$ is exact, the absolute pushforward Jacobian is $|\det J_{\Phi}| = 1$, and Haar measure pushforward satisfies exact measure equality.*
+3. *The complement $\mathcal{B}_{\delta_k^\prime} \setminus \mathcal{E}_{\mathrm{chart}}$ is strictly non-empty ($\Delta_{\mathrm{exit}} > 0$), governed by non-tree cycle holonomies exceeding $\delta_k^\prime$.*
+4. *The termwise path integral density admits the exact deterministic three-sector partition:*
+   $$\rho_{k, \alpha} = \rho_{k, \alpha}^{\mathrm{overlap}} + \mathcal{R}_{\alpha, \mathrm{chart-exit}} + \mathcal{R}_{\alpha, \mathrm{large}}.$$
+*Status:* **PROVED_WITHIN_STATED_HYPOTHESES**.
+
+---
+
+### 5. Isolation of Downstream Open Obligation: Weighted-Measure Tail Estimates
+Following the deterministic closure of Lemma `YM-051F-DETERMINISTIC-CHART-OVERLAP`, the immediate next downstream open obligation under primary contract `YM-015F-JET-002B` is isolated:
+
+**LEMMA `YM-056F-ACTION-SUPPRESSED-REMAINDER-BOUND` (Weighted-Measure Tail Estimates under Bałaban Wilson Action):**
+- Bounding the integral of the chart-exit remainder under the full effective action:
+  $$\int dV^{\prime\prime} \, \mathcal{R}_{\alpha, \mathrm{chart-exit}} \, \exp(-g_k^{-2} A_k^{\prime\prime}[V^{\prime\prime}]) \le \mathcal{O}(e^{-c / g_k^2}).$$
+- This bound requires establishing that whenever a cycle holonomy exits the chart ($d_G(\hat{V}(b), I) \ge \delta_k^\prime$), the closed-plaquette Wilson action $\exp(-g_k^{-2} S(U))$ acquires an action penalty $\Delta S \ge c (\delta_k^\prime)^2 > 0$.
+- Pure Haar measure alone possesses no $g$-dependence and cannot produce exponential suppression; the bound is strictly an analytic property of the weighted measure.
+- Multiscale marked polymer activity summability $\sum_\alpha \mathcal{I}_\alpha$ and continuum closure remain conditionally blocked by this weighted-measure tail estimate.
+
 
 
 
