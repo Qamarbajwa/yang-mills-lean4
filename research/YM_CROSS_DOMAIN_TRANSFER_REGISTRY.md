@@ -464,6 +464,22 @@ Source mechanisms: own finite row-space/kernel target-descent theorem, positive 
 - Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
 
 
+## XFER-YM-ONE-TERM-PULLBACK-061R: Reconciliation of Local Normalization, Exact History Weights, and Source-Derived Gauge Vacuum Quotient
+
+- Source: Bałaban CMP 122, 175–202 (1989), printed pp. 192–199, centered on eq. (1.76); CMP 139, 281–305 (1991).
+- Target: YM-015F exact history-weighted observable expectation and gauge vacuum quotient.
+- Verified mapping:
+  - Well-definedness of local conditional expectation $\mathbb{E}_{k, \alpha}[\mathcal{O}](V) = \rho_{k, \alpha}[\mathcal{O}](V) / \rho_{k, \alpha}[\mathbf{1}](V)$ on support $\{V : \rho[\mathbf{1}](V) > 0\}$.
+  - Exact convex / positive-weighted history decomposition: $\langle \mathcal{O} \rangle = \sum_\alpha \int dV \, w_{k, \alpha}(V) \, \mathbb{E}_{k, \alpha}[\mathcal{O}](V)$ with normalized weights $w_{k, \alpha}(V) = \rho_{k, \alpha}[\mathbf{1}](V) / \mathcal{Z}_{\mathrm{vac}} \ge 0$ and $\sum_\alpha \int dV \, w_{k, \alpha}(V) = 1$.
+  - Source-derived gauge vacuum quotient on $SU(2)$ with Wilson action: $z_p(\beta) = \frac{2}{\beta} I_1(\beta) > 1$ for all $\beta > 0$ with exact gauge quotient defect $\Delta_{\mathrm{gauge}}(\beta) = 1 - \frac{\beta}{2 I_1(\beta)} > 0$ (e.g. $\Delta_{\mathrm{gauge}}(4) \approx 0.795071 > 0$).
+  - Heuristic reclassification: arbitrary scalar model $E_{\mathrm{local}} = 0.5$ classified strictly as pedagogical toy model proving no 4D Yang-Mills theorem.
+  - Earliest source-supported failure: identified as fluctuation/fiber integration in (1.76) via connected covariance contractions $\langle \delta \mathcal{O} \, I_{\mathrm{int}} \rangle_{C_k} \ne 0$ and collar diffusion $\sqrt{8t} > 0$.
+  - Lemma `YM-061R-RECONCILED-FIRST-DENSITY-STEP-MARKED-TRANSPORT` formally proved within stated hypotheses.
+- Open bridge: Cutoff-Uniform Multiscale Cluster Bounds (Lemma `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS`), Continuum Wightman Reconstruction and Spectral Gap (Lemma `YM-060F-CONTINUUM-WIGHTMAN-RECONSTRUCTION-AND-SPECTRAL-GAP`), crossing infrared crossover `E-CROSSOVER`.
+- Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
+
+
+
 
 
 

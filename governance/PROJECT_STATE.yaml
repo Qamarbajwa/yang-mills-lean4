@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 77
+revision: 78
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "ff0f30eff8b9c5f7d80cd00903c10eec41fe5ae2"
-  scientific_candidate_sha: "95857e7c9e656e5d894c7ac8d0519e5778d834e9"
-  review_bound_sha: "95857e7c9e656e5d894c7ac8d0519e5778d834e9"
-  evidence_closeout_head: "116f2964e542ec551c964a38f38d38096dbfa7bc"
-  closeout_resolution: "evidence_closeout_head binds preceding completed YM-060R closeout commit (116f2964e542ec551c964a38f38d38096dbfa7bc); scientific_candidate_sha and review_bound_sha bind accepted YM-061 candidate (95857e7c9e656e5d894c7ac8d0519e5778d834e9); resolve authoritative current HEAD dynamically from Git."
+  head: "4673254cb6a380eafeff05315ff7c92bdf67eb49"
+  scientific_candidate_sha: "pending_ym061r_freeze"
+  review_bound_sha: "pending_ym061r_freeze"
+  evidence_closeout_head: "4673254cb6a380eafeff05315ff7c92bdf67eb49"
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-061 closeout commit (4673254cb6a380eafeff05315ff7c92bdf67eb49); scientific_candidate_sha and review_bound_sha bind active YM-061R candidate once frozen; resolve authoritative current HEAD dynamically from Git."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,14 +32,25 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 76
-  last_updated_at: "2026-10-15T22:45:00Z"
+  last_expected_revision: 77
+  last_updated_at: "2026-10-15T23:10:00Z"
   active_contract: "YM-015F-JET-002B"
-  frozen_candidate: "95857e7c9e656e5d894c7ac8d0519e5778d834e9"
+  frozen_candidate: "pending_ym061r_freeze"
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-061R
+    scope_in: "Reconciliation of local normalization, conditional expectations, exact history-summing weights, and source-derived gauge vacuum quotient under Bałaban CMP 122 (1.76), refutation of scalar toy arithmetic as 4D evidence, and Test 25 finite certificate"
+    scope_out: "Full continuum Wightman reconstruction, cutoff-uniform multiscale summability, thermodynamic infinite-volume limits, Wightman axioms, non-perturbative mass gap, and full continuum closure"
+    dependencies: ["YM-061"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-061R_E4_RAW_20261010.md"
+    acceptor: "verification/YM-061R_TECHNICAL_ACCEPTANCE.md"
+    status: IN_PROGRESS
+    scope_limitation: "RECONCILED_LOCAL_NORMALIZATION_AND_GAUGE_QUOTIENT_CONTINUUM_AND_THERMODYNAMIC_LIMIT_OPEN"
   - id: YM-061
     scope_in: "Primary-source audit of first density-changing renormalization step in Bałaban 4D construction (CMP 122 eq. (1.76)), physical observable transport, factor-by-factor measure transformation, fixed-vacuum vs moving coordinates, exact quotient obstruction, and Test 24 finite certificate"
     scope_out: "Full continuum Wightman reconstruction, cutoff-uniform multiscale summability, thermodynamic infinite-volume limits, Wightman axioms, non-perturbative mass gap, and full continuum closure"

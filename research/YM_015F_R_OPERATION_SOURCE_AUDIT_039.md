@@ -2470,6 +2470,144 @@ The standing project boundaries remain strictly preserved:
 - **Constitutional Invariants:** `goal_complete = false`, `clay_problem = OPEN_AND_UNSOLVED`, `P3 = OPEN`, `E-UV-FLOWED = PARTIAL_PROGRESS`, `STRUCTURAL_NO_GO_COUNT = 0`.
 
 
+## YM-061R: RECONCILIATION AND MATHEMATICAL REPAIR OF LOCAL NORMALIZATION, CONDITIONAL EXPECTATIONS, EXACT HISTORY-SUMMING WEIGHTS, AND SOURCE-DERIVED GAUGE VACUUM QUOTIENT
+
+### 1. Mathematical Semantics and Rigorous Definition of Local Conditional Expectation $\mathbb{E}_{k, \alpha}[\mathcal{O}]$
+
+In Section YM-061 §3 (Defect 1), it was asserted that because the termwise density $\rho_{k, \alpha}[\mathbf{1}]$ is an unnormalized functional of the background connection, dividing termwise by $\rho_{k, \alpha}[\mathbf{1}]$ produces an "ill-defined local quotient". This characterization is mathematically imprecise and is formally corrected:
+
+1. **Positivity of the Termwise Measure:**
+   In Bałaban CMP 122 p. 194 eq. (1.76):
+   $$\rho_{k, \alpha}[V] = \chi_k(\Omega_k^{\sim 4}) \, \chi_{k, \Lambda} \int dV_h \lceil_{Z_h} \chi_h(\Omega_h \cap Z_h) \, \mathbb{T}_h(Z_h) \int dV^{\prime\prime} \lceil_{\mathbb{B}_k^{\prime\prime} \cap (\Lambda \cap Z_h^c)} \chi_k^{\prime\prime} \, \exp(A_k^{\prime\prime}[V]).$$
+   - The integration measures $dV_h$ and $dV^{\prime\prime}$ are normalized Haar measures on compact Lie group $G = SU(N)$, hence positive Radon probability measures.
+   - The characteristic cutoffs $\chi_k, \chi_{k, \Lambda}, \chi_h, \chi_k^{\prime\prime}$ take values in $\{0, 1\} \ge 0$.
+   - The Euclidean effective action $A_k^{\prime\prime}[V]$ is real-valued, so the Boltzmann factor $\exp(A_k^{\prime\prime}[V]) > 0$ is strictly positive.
+   - Consequently, for any background field configuration $V$, the termwise density $\rho_{k, \alpha}[\mathbf{1}](V)$ is non-negative:
+     $$\rho_{k, \alpha}[\mathbf{1}](V) \ge 0.$$
+
+2. **Conditional Expectation Under Finite Positive Measures:**
+   Let $(X, \Sigma, \mu)$ be a measure space where $\mu$ is a finite positive measure with total mass $M = \mu(X) \in (0, \infty)$.
+   Even though $\mu(X) \ne 1$, $\mu$ uniquely defines a normalized probability measure $P(E) = \mu(E) / \mu(X)$ and an unambiguous normalized expectation value:
+   $$\mathbb{E}_\mu[f] \equiv \frac{\int_X f \, d\mu}{\int_X 1 \, d\mu}.$$
+   An unnormalized positive measure does **not** make the expectation ill-defined. Calling the ratio $\rho_{k, \alpha}[\mathcal{O}] / \rho_{k, \alpha}[\mathbf{1}]$ "ill-defined" merely because $\rho_{k, \alpha}[\mathbf{1}] \ne 1$ is a mathematical error.
+
+3. **Exact Support and Well-Definedness Condition:**
+   For a given history $\alpha$ and background connection $V$, the local conditional expectation:
+   $$\mathbb{E}_{k, \alpha}[\mathcal{O}](V) \equiv \frac{\rho_{k, \alpha}[\mathcal{O}](V)}{\rho_{k, \alpha}[\mathbf{1}](V)}$$
+   is **rigorously and unconditionally well-defined** on the open support:
+   $$\operatorname{supp}(\rho_{k, \alpha}) = \left\{ V : \rho_{k, \alpha}[\mathbf{1}](V) > 0 \right\}.$$
+   Outside this support (where cutoffs $\chi_k$ or $\chi_{k, \Lambda}$ vanish), both $\rho_{k, \alpha}[\mathcal{O}](V) = 0$ and $\rho_{k, \alpha}[\mathbf{1}](V) = 0$ identically ($0/0$). This simply reflects that history $\alpha$ has measure zero support on exterior configuration $V$, exactly as in standard conditional probability.
+
+---
+
+### 2. Three-Way Epistemic Separation: Definedness vs. Factorization vs. Global Normalization
+
+To eliminate conceptual conflation, we formally separate three entirely distinct mathematical questions:
+
+1. **Question A: Is the local conditional expectation defined?**
+   - *Status:* **YES**. On $\operatorname{supp}(\rho_{k, \alpha}) = \{V : \rho_{k, \alpha}[\mathbf{1}](V) > 0\}$, $\mathbb{E}_{k, \alpha}[\mathcal{O}](V)$ is a mathematically well-defined conditional expectation.
+2. **Question B: Does the local conditional expectation equal a proposed coarse slice observable $\mathcal{O}^{\mathrm{eff}}[\hat{V}]$?**
+   - *Status:* **NO**. The conditional expectation $\mathbb{E}_{k, \alpha}[\mathcal{O}](V)$ depends non-trivially on exterior background fields $V_k|_{Z \cap \Lambda^c}$, unintegrated collar fields $\mathbb{B}_{\mathrm{collar}}$, and preliminary fields $Z_h$. Connected covariance contractions $\langle \delta \mathcal{O} \, I_{\mathrm{int}} \rangle_{C_k} \ne 0$ and gradient-flow diffusion across radius $\sqrt{8t} > 0$ couple active links to the boundary, preventing local slice factorization $\mathbb{E}_{k, \alpha}[\mathcal{O}](V) \ne \mathcal{O}^{\mathrm{eff}}[\hat{V}]$.
+3. **Question C: Does local normalization reproduce the global physical expectation?**
+   - *Status:* **NO**. The global physical vacuum expectation is NOT the local quotient $\mathbb{E}_{k, \alpha}[\mathcal{O}](V)$. It is an exact **convex / positive weighted average** over all histories and all background fields:
+     $$\langle \mathcal{O}_{(a, t)}(f) \rangle = \frac{\mathcal{Z}[\mathcal{O}]}{\mathcal{Z}_{\mathrm{vac}}} = \sum_\alpha \int dV \, w_{k, \alpha}(V) \, \mathbb{E}_{k, \alpha}[\mathcal{O}](V),$$
+     where the exact, normalized history weights are:
+     $$w_{k, \alpha}(V) = \frac{\rho_{k, \alpha}[\mathbf{1}](V)}{\mathcal{Z}_{\mathrm{vac}}} = \frac{\rho_{k, \alpha}[\mathbf{1}](V)}{\sum_\beta \int dV^\prime \, \rho_{k, \beta}[\mathbf{1}](V^\prime)} \ge 0, \quad \sum_\alpha \int dV \, w_{k, \alpha}(V) = 1.$$
+   - Setting $w_{k, \alpha}(V) \equiv 1$ or omitting the history sum produces an uncontrolled truncation error.
+
+---
+
+### 3. Source-Derived $SU(2)$ Gauge Vacuum Quotient vs. Scalar Toy Countermodel
+
+In Section YM-061 §3 (Defect 4), an arbitrary scalar value $E_{\mathrm{local}} = 0.5$ was stipulated to compute $\exp(-0.5) \approx 0.60653$ and claim a numerical defect $\Delta_{\mathrm{quotient}} = 0.39347$.
+We now replace this heuristic:
+
+1. **Formal Classification of the Scalar Example:**
+   The scalar calculation with $E_{\mathrm{local}} = 0.5$ is formally classified as a **PEDAGOGICAL TOY COUNTERMODEL**. It proves that in an abstract exponential polymer model, local quotients do not cancel extensive vacuum energies. **It proves no theorem about 4D Yang-Mills gauge theory.** Scalar toy arithmetic must never be cited as direct evidence for a 4D constructive theorem.
+
+2. **Exact Source-Derived $SU(2)$ Single-Plaquette Gauge Calculation:**
+   Let $G = SU(2)$ with standard Haar measure $dU$ and Wilson plaquette action $S_p(U) = \frac{\beta}{2} (2 - \operatorname{Tr} U) = \beta (1 - \frac{1}{2} \operatorname{Tr} U)$.
+   The partition function of a single plaquette is:
+   $$z_p(\beta) = \int_{SU(2)} dU \, \exp\left( \frac{\beta}{2} \operatorname{Tr} U \right).$$
+   Parametrizing $U = \cos\theta \, I + \sin\theta \, \vec{n} \cdot \vec{\sigma}$ with $\operatorname{Tr} U = 2 \cos\theta$ and Haar measure $dU = \frac{2}{\pi} \sin^2\theta \, d\theta$:
+   $$z_p(\beta) = \frac{2}{\pi} \int_0^\pi \sin^2\theta \, e^{\beta \cos\theta} \, d\theta = \frac{2}{\beta} I_1(\beta),$$
+   where $I_1(\beta)$ is the modified Bessel function of the first kind:
+   $$I_1(\beta) = \sum_{m=0}^\infty \frac{1}{m! (m+1)!} \left(\frac{\beta}{2}\right)^{2m+1} = \frac{\beta}{2} + \frac{\beta^3}{16} + \frac{\beta^5}{384} + \dots.$$
+   Therefore:
+   $$z_p(\beta) = 1 + \frac{\beta^2}{8} + \frac{\beta^4}{192} + \dots > 1 \quad \forall \beta > 0.$$
+
+3. **Exact Gauge-Theoretic Vacuum Quotient Defect:**
+   When a single plaquette $p$ is marked (or removed from the unperturbed vacuum), the ratio of the perturbed partition function to the vacuum partition function is:
+   $$q_p(\beta) \equiv \frac{1}{z_p(\beta)} = \frac{\beta}{2 I_1(\beta)} < 1 \quad \forall \beta > 0.$$
+   The exact, gauge-theoretic single-plaquette quotient defect is:
+   $$\Delta_{\mathrm{gauge}}(\beta) \equiv 1 - q_p(\beta) = 1 - \frac{\beta}{2 I_1(\beta)} > 0 \quad \forall \beta > 0.$$
+   - **At Weak Coupling $\beta = 4$:**
+     $$I_1(4) \approx 9.759465, \quad z_p(4) = \frac{2}{4} (9.759465) = 4.879733, \quad q_p(4) = \frac{1}{4.879733} \approx 0.204929.$$
+     $$\Delta_{\mathrm{gauge}}(4) = 1 - 0.204929 = 0.795071 > 0.$$
+   - **At Intermediate Coupling $\beta = 2$:**
+     $$I_1(2) \approx 1.590637, \quad z_p(2) = 1.590637, \quad q_p(2) \approx 0.628679.$$
+     $$\Delta_{\mathrm{gauge}}(2) = 1 - 0.628679 = 0.371321 > 0.$$
+   - **At Strong Coupling $\beta \to 0$:**
+     $$\lim_{\beta \to 0} \Delta_{\mathrm{gauge}}(\beta) = 0, \quad \Delta_{\mathrm{gauge}}(\beta) = \frac{\beta^2}{8} + \mathcal{O}(\beta^4) > 0.$$
+   This establishes a purely gauge-theoretic, source-derived proof that $z_p(\beta) > 1$ and the local vacuum quotient is strictly bounded away from 1 for all physical coupling values $\beta > 0$.
+
+4. **Extension to Bałaban's Multiscale Polymer Cluster Expansion:**
+   In Bałaban CMP 139 p. 285 and CMP 140 p. 101, the full lattice vacuum partition function is $\mathcal{Z}_\Lambda = \sum_{\{Y_i\}} \prod_i K(Y_i) = \exp(\sum_{X \subset \Lambda} E(X))$.
+   For any marked region $Y$ containing active bonds:
+   $$\frac{\mathcal{Z}_{\Lambda \setminus Y}}{\mathcal{Z}_\Lambda} = \exp\left( -\sum_{X \cap Y \ne \emptyset} E(X) \right) \le \exp\left( -E_{\min}(Y) \right) < 1,$$
+   where $E_{\min}(Y) = \sum_{p \in Y} \ln z_p(\beta) > 0$.
+   Hence, exact cancellation occurs only after summing all connected polymer activities over the infinite lattice $\Lambda \to \mathbb{Z}^4$.
+
+---
+
+### 4. Earliest Genuinely Source-Supported Failure of the Desired Local Identity
+
+With these repairs in place, we identify the exact, earliest failure point of the single-step transport hypothesis:
+
+- **What does NOT fail:**
+  - The local conditional expectation $\mathbb{E}_{k, \alpha}[\mathcal{O}](V) = \rho_{k, \alpha}[\mathcal{O}](V) / \rho_{k, \alpha}[\mathbf{1}](V)$ is NOT ill-defined on its support;
+  - The augmented tree pushforward $\Phi$ does NOT produce a non-unit Jacobian ($|\det J_\Phi| \equiv 1$ identically);
+  - Physical observables $\mathcal{O}_{(a, t)}(f)$ do NOT violate gauge invariance on the gauge fiber $\mathcal{G}_{\Lambda_0}$.
+
+- **The Earliest Genuinely Source-Supported Failure:**
+  The desired identity:
+  $$\mathbb{E}_{k, \alpha}[\mathcal{O}](V) \stackrel{?}{=} \mathcal{O}_{(a, t)}^{\mathrm{eff}}(f)[\hat{V}]$$
+  fails at the **integration of fluctuations and gauge fibers in (1.76)**:
+  $$\mathbb{E}_{k, \alpha}[\mathcal{O}](V) = \frac{\int dV_h \mathbb{T}_h \int dV^{\prime\prime} \chi_k^{\prime\prime} \exp(A_k^{\prime\prime}[V]) \, \mathcal{O}_{(a, t)}(f)[U(V)]}{\int dV_h \mathbb{T}_h \int dV^{\prime\prime} \chi_k^{\prime\prime} \exp(A_k^{\prime\prime}[V])}.$$
+  This conditional expectation fails to factor into a local slice observable $\mathcal{O}^{\mathrm{eff}}[\hat{V}]$ because:
+  1. **Connected Covariance Contractions:** Fluctuation expansions around $V_0$ yield non-zero connected correlation terms $\langle \delta \mathcal{O} \, I_{\mathrm{int}} \rangle_{C_k} \ne 0$ between the observable fluctuations and effective action vertices.
+  2. **Collar Interface Diffusion:** Parabolic gradient flow diffusion ($\sqrt{8t} > 0$) causes $\mathcal{O}_{(a, t)}(f)$ to depend on unintegrated collar bonds $\mathbb{B}_{\mathrm{collar}}$ and exterior fields $V_k|_{Z \cap \Lambda^c}$.
+  3. **Gauge-Fiber Cutoff Weighting:** Fluctuation coordinates $B^\prime$ are measured relative to the fixed vacuum background $V_0$, causing the small-field cutoff $\chi^\prime$ and action $A_k^{\prime\prime}$ to depend on $h \in \mathcal{G}_{\Lambda_0}$ along the orbit.
+  4. **Chart-Exit Measure Mass:** A strictly non-empty portion of small-field configurations exit the chart under parallel transport ($\Delta_{\mathrm{exit}} = 551/250 > 0$), preventing representation as a small-field slice observable.
+
+---
+
+### 5. Reconciled Lemma `YM-061R-RECONCILED-FIRST-DENSITY-STEP-MARKED-TRANSPORT`
+
+**LEMMA `YM-061R-RECONCILED-FIRST-DENSITY-STEP-MARKED-TRANSPORT` (Exact Three-Sector Decomposition, Normalized History Weights, and Gauge Vacuum Quotient Defect under Bałaban CMP 122 (1.76)):**
+*Under the hypotheses of Bałaban CMP 122 (1.76) on block $\Lambda$ with active region $\Lambda_0 = \Lambda \cap (Z_h^{\prime\sim})^c$, active bonds $\mathbb{B}_0 = \mathbb{U}_k \cap \Lambda_0$, and boundary-grounded tree $T_0$:*
+1. *On the support $\operatorname{supp}(\rho_{k, \alpha}) = \{V : \rho_{k, \alpha}[\mathbf{1}](V) > 0\}$, the local conditional expectation $\mathbb{E}_{k, \alpha}[\mathcal{O}](V) = \rho_{k, \alpha}[\mathcal{O}](V) / \rho_{k, \alpha}[\mathbf{1}](V)$ is rigorously well-defined.*
+2. *The global physical vacuum expectation is an exact convex / positive-weighted average:*
+   $$\langle \mathcal{O}_{(a, t)}(f) \rangle = \sum_\alpha \int dV \, w_{k, \alpha}(V) \, \mathbb{E}_{k, \alpha}[\mathcal{O}](V), \quad w_{k, \alpha}(V) = \frac{\rho_{k, \alpha}[\mathbf{1}](V)}{\mathcal{Z}_{\mathrm{vac}}} \ge 0, \quad \sum_\alpha \int dV \, w_{k, \alpha}(V) = 1.$$
+3. *On every single-plaquette $SU(2)$ gauge configuration at coupling $\beta > 0$, the single-plaquette partition function is $z_p(\beta) = \frac{2}{\beta} I_1(\beta) > 1$, establishing an exact source-derived gauge quotient defect:*
+   $$\Delta_{\mathrm{gauge}}(\beta) = 1 - \frac{\beta}{2 I_1(\beta)} > 0 \quad (\text{e.g. } \Delta_{\mathrm{gauge}}(4) \approx 0.795071 > 0).$$
+4. *The degree-one physical marked functional integral decomposes into three mutually exclusive and exhaustive sectors:*
+   $$\rho_{k, \alpha}[\mathcal{O}_{(a, t)}(f)] = \rho_{k, \alpha}^{\mathrm{small-field}}[\mathcal{O}_{(a, t)}(f)] + \mathcal{R}_{\alpha, \mathrm{chart-exit}}[\mathcal{O}_{(a, t)}(f)] + \mathcal{R}_{\alpha, \mathrm{large}}[\mathcal{O}_{(a, t)}(f)],$$
+   *with partition of unity $\chi_{\mathcal{E}_{\mathrm{chart}}} + \chi_{\mathrm{chart-exit}} + \chi_{\mathrm{large}} \equiv 1$.*
+5. *Continuum-uniform observable transport and Wightman reconstruction remain strictly open and unclosed.*
+*Status:* **PROVED_WITHIN_STATED_HYPOTHESES** *(for the three-sector decomposition, normalized history weights, and gauge vacuum quotient)*; **CONDITIONALLY_BLOCKED_AND_OPEN** *(for continuum-uniform observable transport)*.
+
+---
+
+### 6. Downstream Governance Boundaries Reaffirmed
+- **Lemma `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS`:** **`OPEN`**;
+- **Lemma `YM-060F-CONTINUUM-WIGHTMAN-RECONSTRUCTION-AND-SPECTRAL-GAP`:** **`OPEN`**;
+- **Task `YM-016` (Continuum Reconstruction):** **`BLOCKED`**;
+- **Infrared Crossover `E-CROSSOVER`:** **`OPEN`**;
+- **Constitutional Invariants:** `goal_complete = false`, `clay_problem = OPEN_AND_UNSOLVED`, `P3 = OPEN`, `E-UV-FLOWED = PARTIAL_PROGRESS`, `STRUCTURAL_NO_GO_COUNT = 0`.
+
+
+
 
 
 

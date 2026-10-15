@@ -737,6 +737,20 @@ Positive T_epsilon fixes normalized vacuum but a contrast target recovered from 
   5. *Classification:* `METHOD_SPECIFIC_OBSTRUCTION`; structural no-go count remains 0; no continuum edge closes.
 
 
+## NEG-YM-061R-LOCAL-NORMALIZATION-AND-GAUGE-QUOTIENT-RECONCILIATION: Reconciliation of Local Conditional Normalization, Exact History Weights, and Refutation of Scalar Heuristics in Bałaban R-I (`YM-061R`)
+
+- **Discovery Date:** 2026-10-15 / 2026-10-16
+- **Epistemic Classification:** `[METHOD_SPECIFIC_OBSTRUCTION]`
+- **Hypothesis tested:** (1) Whether the local density ratio $\rho_{k, \alpha}[\mathcal{O}] / \rho_{k, \alpha}[\mathbf{1}]$ is ill-defined on its support; (2) Whether local conditional normalization reproduces the global expectation without history-summing weights; (3) Whether an arbitrary scalar parameter $E_{\mathrm{local}} = 0.5$ proves a 4D Yang-Mills quotient defect.
+- **Result:** Falsified.
+  1. *Conditional Expectation Well-Definedness:* On the open support $\{V : \rho_{k, \alpha}[\mathbf{1}](V) > 0\}$, the termwise positive measure defines a mathematically valid normalized conditional expectation $\mathbb{E}_{k, \alpha}[\mathcal{O}](V) \equiv \rho_{k, \alpha}[\mathcal{O}](V) / \rho_{k, \alpha}[\mathbf{1}](V)$. A non-unit total mass does not render the quotient ill-defined.
+  2. *Exact History-Summing Weights:* Local conditional expectations do NOT equal the global vacuum expectation without the normalized history weights $w_{k, \alpha}(V) = \rho_{k, \alpha}[\mathbf{1}](V) / \mathcal{Z}_{\mathrm{vac}}$. The global expectation is an exact convex / positive-weighted average: $\langle \mathcal{O} \rangle = \sum_\alpha \int dV \, w_{k, \alpha}(V) \, \mathbb{E}_{k, \alpha}[\mathcal{O}](V)$ with $\sum_\alpha \int dV \, w_{k, \alpha}(V) = 1$.
+  3. *Refutation of Scalar Toy Evidence:* Stipulating $E_{\mathrm{local}} = 0.5$ is formally reclassified as a pedagogical toy model that proves no theorem about 4D gauge theory.
+  4. *Source-Derived Gauge Quotient Defect:* On $SU(2)$ with Wilson action at coupling $\beta > 0$, the single-plaquette partition function is $z_p(\beta) = \frac{2}{\beta} I_1(\beta) > 1$, establishing an exact gauge-theoretic quotient defect $\Delta_{\mathrm{gauge}}(\beta) = 1 - \frac{\beta}{2 I_1(\beta)} > 0$ for all $\beta > 0$ (e.g. $\Delta_{\mathrm{gauge}}(4) \approx 0.795071 > 0$).
+  5. *Classification:* `METHOD_SPECIFIC_OBSTRUCTION`; structural no-go count remains 0; no continuum edge closes.
+
+
+
 
 
 

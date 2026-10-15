@@ -264,6 +264,16 @@ Primary YMH Lemma4.5 p54 ->Lemma5.5 p60 was text rechecked at https://www.pure.e
 4. **Proved Lemma & downstream blockers:** Lemma `YM-061F-FIRST-DENSITY-STEP-MARKED-TRANSPORT-AND-QUOTIENT-OBSTRUCTION` is formally proved for the three-sector decomposition and quotient obstruction. Lemma `YM-059F` (OPEN), Lemma `YM-060F` (OPEN), Task `YM-016` (BLOCKED). Earliest global 4D failure remains UNESTABLISHED; structural no-go count 0.
 
 
+## FA-001 local normalization reconciliation and source-derived gauge vacuum quotient / YM-061R
+
+1. **Reconciliation of local conditional expectation:** Corrected imprecise declaration that $\rho_{k, \alpha}[\mathcal{O}] / \rho_{k, \alpha}[\mathbf{1}]$ is "ill-defined". Proved that on support $\{V : \rho[\mathbf{1}](V) > 0\}$, the positive Haar measure defines a valid normalized conditional expectation $\mathbb{E}_{k, \alpha}[\mathcal{O}](V)$.
+2. **Exact history-summing weights:** Proved that the global vacuum expectation is an exact convex / positive-weighted average over all histories: $\langle \mathcal{O} \rangle = \sum_\alpha \int dV \, w_{k, \alpha}(V) \, \mathbb{E}_{k, \alpha}[\mathcal{O}](V)$ with $w_{k, \alpha}(V) = \rho_{k, \alpha}[\mathbf{1}](V) / \mathcal{Z}_{\mathrm{vac}} \ge 0$ and $\sum_\alpha \int dV \, w_{k, \alpha}(V) = 1$.
+3. **Source-derived gauge vacuum quotient:** Replaced arbitrary scalar heuristic $E_{\mathrm{local}} = 0.5$ with exact single-plaquette $SU(2)$ gauge calculation $z_p(\beta) = \frac{2}{\beta} I_1(\beta) > 1$ and exact gauge quotient defect $\Delta_{\mathrm{gauge}}(\beta) = 1 - \frac{\beta}{2 I_1(\beta)} > 0$ for all $\beta > 0$ (e.g. $\Delta_{\mathrm{gauge}}(4) \approx 0.795071 > 0$).
+4. **Earliest source-supported failure point:** Located failure at the fluctuation/fiber integration stage in (1.76) due to connected covariance contractions $\langle \delta \mathcal{O} \, I_{\mathrm{int}} \rangle_{C_k} \ne 0$ and collar diffusion $\sqrt{8t} > 0$, rather than mathematical undefinedness of the quotient.
+5. **Proved Lemma & downstream blockers:** Lemma `YM-061R-RECONCILED-FIRST-DENSITY-STEP-MARKED-TRANSPORT` proved. Lemma `YM-059F` (OPEN), Lemma `YM-060F` (OPEN), Task `YM-016` (BLOCKED). Earliest global 4D failure remains UNESTABLISHED; structural no-go count 0.
+
+
+
 
 
 

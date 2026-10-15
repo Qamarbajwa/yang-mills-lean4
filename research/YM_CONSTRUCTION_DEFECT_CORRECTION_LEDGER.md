@@ -416,6 +416,29 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
    - Reaffirmed downstream open obligations: Lemma `YM-059F` (OPEN), Lemma `YM-060F` (OPEN), Task `YM-016` (BLOCKED).
 
 
+## CDC-061R: RECONCILIATION OF LOCAL NORMALIZATION, EXACT HISTORY-SUMMING WEIGHTS, AND SOURCE-DERIVED GAUGE VACUUM QUOTIENT
+
+1. **Defect 1: Imprecise Declaration of Local Quotient as "Ill-Defined":**
+   - In YM-061 Defect 1, dividing by $\rho_{k, \alpha}[\mathbf{1}]$ was described as producing an "ill-defined local quotient" merely because the termwise measure is unnormalized ($\rho[\mathbf{1}] \ne 1$).
+   - **Correction:** Proved that on the support $\{V : \rho_{k, \alpha}[\mathbf{1}](V) > 0\}$, the termwise positive Haar measure defines an unambiguous normalized conditional expectation $\mathbb{E}_{k, \alpha}[\mathcal{O}](V) \equiv \rho_{k, \alpha}[\mathcal{O}](V) / \rho_{k, \alpha}[\mathbf{1}](V)$. A non-unit total mass does not render a conditional expectation ill-defined.
+2. **Defect 2: Conflation of Local Conditional Expectation with Global Vacuum Expectation:**
+   - Failure to articulate the exact mathematical relationship between local conditional expectations and the global normalized physical vacuum expectation $\langle \mathcal{O}_{(a, t)}(f) \rangle$.
+   - **Correction:** Derived the exact global expectation as a convex / positive-weighted average over all histories and background field configurations:
+     $$\langle \mathcal{O}_{(a, t)}(f) \rangle = \frac{\mathcal{Z}[\mathcal{O}]}{\mathcal{Z}_{\mathrm{vac}}} = \sum_\alpha \int dV \, w_{k, \alpha}(V) \, \mathbb{E}_{k, \alpha}[\mathcal{O}](V), \quad w_{k, \alpha}(V) = \frac{\rho_{k, \alpha}[\mathbf{1}](V)}{\mathcal{Z}_{\mathrm{vac}}} \ge 0, \quad \sum_\alpha \int dV \, w_{k, \alpha}(V) = 1.$$
+3. **Defect 3: Reliance on Stipulated Scalar Heuristic ($E_{\mathrm{local}} = 0.5$) for 4D Gauge Theory:**
+   - In YM-061 Defect 4, a numerical quotient defect $\Delta_{\mathrm{quotient}} \approx 0.39347$ was computed using an arbitrary scalar parameter $E_{\mathrm{local}} = 0.5$, which did not derive from a 4D gauge group or lattice action.
+   - **Correction:** Formally classified the scalar calculation as a pedagogical toy model that proves no theorem about 4D Yang-Mills. Replaced it with an exact, source-derived single-plaquette $SU(2)$ gauge calculation:
+     $$z_p(\beta) = \int_{SU(2)} dU \, \exp\left( \frac{\beta}{2} \operatorname{Tr} U \right) = \frac{2}{\beta} I_1(\beta) > 1 \quad \forall \beta > 0,$$
+     establishing an exact gauge-theoretic vacuum quotient defect:
+     $$\Delta_{\mathrm{gauge}}(\beta) = 1 - \frac{\beta}{2 I_1(\beta)} > 0 \quad (\text{e.g. } \Delta_{\mathrm{gauge}}(4) \approx 0.795071 > 0).$$
+4. **Defect 4: Identification of Earliest Genuinely Source-Supported Failure:**
+   - Clarified that failure occurs at the fluctuation/fiber integration stage in (1.76) due to connected covariance contractions $\langle \delta \mathcal{O} \, I_{\mathrm{int}} \rangle_{C_k} \ne 0$, collar diffusion $\sqrt{8t} > 0$, gauge-orbit cutoff dependence $\chi^\prime[\Phi^{-1}(\hat{V}, h)]$, and chart-exit remainder mass ($\Delta_{\mathrm{exit}} = 551/250 > 0$), rather than from mathematical undefinedness of the quotient.
+5. **Established Lemma and Downstream Isolation:**
+   - Proved Lemma `YM-061R-RECONCILED-FIRST-DENSITY-STEP-MARKED-TRANSPORT`.
+   - Reaffirmed downstream boundaries: Lemma `YM-059F` (OPEN), Lemma `YM-060F` (OPEN), Task `YM-016` (BLOCKED).
+
+
+
 
 
 
