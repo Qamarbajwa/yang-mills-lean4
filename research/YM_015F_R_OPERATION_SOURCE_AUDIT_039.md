@@ -2317,6 +2317,160 @@ The standing governance boundaries are strictly restored:
 - **Constitutional Invariants:** `goal_complete = false`, `clay_problem = OPEN_AND_UNSOLVED`, `P3 = OPEN`, `E-CROSSOVER = OPEN`, `E-UV-FLOWED = PARTIAL_PROGRESS`, `STRUCTURAL_NO_GO_COUNT = 0`.
 
 
+---
+
+## YM-061: PRIMARY-SOURCE AUDIT OF FIRST DENSITY-CHANGING RENORMALIZATION STEP IN BAŁABAN 4D CONSTRUCTION (CMP 122 EQ. (1.76)), PHYSICAL OBSERVABLE TRANSPORT, FACTOR-BY-FACTOR MEASURE TRANSFORMATION, AND EXACT QUOTIENT OBSTRUCTION
+
+### 1. Literal Primary-Source Locators from Bałaban CMP 122 pp. 175–202
+
+A forensic, page-by-page audit of T. Bałaban, *Large Field Renormalization. I. The Basic Step of the Renormalization Group*, Commun. Math. Phys. 122, 175–202 (1989), establishes the exact primary-source definitions and formulas governing the first density-changing renormalization group step centered on equation (1.76):
+
+1. **Scale $k$ Large-Field Domains and Cutoffs (p. 192, eqs. (1.71)–(1.74)):**
+   - $\Omega_k$: The scale $k$ large-field region where field strengths violate small-field bounds.
+   - $\Omega_k^{\sim 4}$: A 4-neighborhood regularized buffer around $\Omega_k$.
+   - $\chi_k(\Omega_k^{\sim 4})$: Characteristic function restricting the background field $V_k$ outside $\Omega_k^{\sim 4}$.
+   - $Z_h$: Preliminary short-distance regions for preliminary scales $h < k$.
+
+2. **Partition of Unity on Exterior Domains (p. 193, eq. (1.75)):**
+   - Bałaban introduces the partition of unity:
+     $$\sum_{\Lambda} \chi_{k, \Lambda} \equiv 1,$$
+     where $\chi_{k, \Lambda}$ restricts the exterior background field $V_k|_{Z \cap \Lambda^c}$ to unit blocks $\Lambda$ of the coarse lattice $\mathbb{L}_{k+1}$.
+
+3. **Unmarked Termwise Partition Density (p. 194, eq. (1.76)):**
+   - The unadulterated starting formula for the termwise functional integral on block $\Lambda$ in history $\alpha$ is:
+     $$\rho_{k, \alpha}[V] = \chi_k(\Omega_k^{\sim 4}) \, \chi_{k, \Lambda} \int dV_h \lceil_{Z_h} \chi_h(\Omega_h \cap Z_h) \, \mathbb{T}_h(Z_h) \int dV^{\prime\prime} \lceil_{\mathbb{B}_k^{\prime\prime} \cap (\Lambda \cap Z_h^c)} \chi_k^{\prime\prime} \, \exp(A_k^{\prime\prime}[V]).$$
+   - Bałaban notes explicitly (p. 194):
+     > *"The integration in (1.76) does not involve any $\delta$-functions, they are all integrated out."*
+
+4. **Small-Field / Large-Field Decomposition (p. 194, Proposition 1 & p. 195, eq. (1.81)):**
+   - Active region: $\Lambda_0 = \Lambda \cap \Omega_{k+1}^1 = \Lambda \cap (Z_h^{\prime\sim})^c$.
+   - Active bond set: $\mathbb{B}_0 = \mathbb{U}_k \cap \Lambda_0$.
+   - Small-field cutoff:
+     $$\chi^\prime[V^{\prime\prime}] = \prod_{b \in \mathbb{B}_0} \mathbf{1}_{\|B^\prime(b)\| < \delta_k^\prime},$$
+     where fluctuation coordinates are defined via $V^{\prime\prime}(b) = \exp(i B^\prime(b)) V_0(b)$.
+
+5. **Maximal Tree Graph $T_0$ & Outer Grounding Bond (pp. 195–196):**
+   - Axial contours $\Gamma_{y, x}$ form tree $T$ in $P_1 \setminus P_2$.
+   - For outermost domain $P_1 = \Lambda$, Bałaban explicitly adds the outer boundary grounding bond:
+     $$b_{\mathrm{ground}} = [(y_1 - 1, y_2, \dots, y_d), y] \in T_0,$$
+     connecting base point $y \in \Lambda$ to exterior site $y_0 \in \Lambda^c$ where gauge field is pinned ($h_{y_0} = I$).
+   - Faddeev-Popov gauge-fixing delta $\delta_{T_0}(V^\prime)$ is introduced into the integral (p. 196).
+
+6. **Compensating Gauge Transformations & Support Replacement (pp. 197–198, eqs. (1.85)–(1.89)):**
+   - Fluctuations transform as $B^{\prime h} = h B^\prime h^{-1} + \dots$.
+   - Equation (1.89) (p. 198): On the joint support $\operatorname{supp}(\chi_k \chi_{k, \Lambda} \chi_{h, 1/2} \chi_h)$, the cutoff simplifies:
+     $$\chi_k^{\prime\prime} \chi^\prime = \chi^\prime.$$
+
+7. **Coarse Effective Action & Remainder Integration (p. 199, eq. (1.90)):**
+   - Gaussian fluctuation integration over $B^\prime$ on the slice $\mathbb{B}_0 \setminus T_0$ yields the new coarse-scale effective action $A_{k+1}^{\prime\prime}[\hat{V}]$ plus polymer remainder activities.
+
+---
+
+### 2. Complete Factor-by-Factor Measure Transformation & Coordinate Systems
+
+We now evaluate the insertion of a physical marked observable $\mathcal{O}_{(a, t)}(f)$ into the density (1.76) and track all mathematical factors across the transformation:
+
+1. **Input Functional Integral with Physical Insertion:**
+   $$\rho_{k, \alpha}[\mathcal{O}_{(a, t)}(f)] = \chi_k(\Omega_k^{\sim 4}) \, \chi_{k, \Lambda} \int dV_h \lceil_{Z_h} \chi_h(\Omega_h \cap Z_h) \, \mathbb{T}_h(Z_h) \int dV^{\prime\prime} \lceil_{\mathbb{B}_k^{\prime\prime} \cap (\Lambda \cap Z_h^c)} \chi_k^{\prime\prime}[V^{\prime\prime}] \, \exp(A_k^{\prime\prime}[V]) \, \mathcal{O}_{(a, t)}(f)[U(V)].$$
+
+2. **Domain Partition and Collar Domain Difference:**
+   The integration over $V^{\prime\prime}$ is over $\mathbb{B}_k^{\prime\prime} \cap (\Lambda \cap Z_h^c)$.
+   The active fluctuation coordinates $B^\prime$ and tree gauge $T_0$ cover ONLY $\mathbb{B}_0 = \mathbb{U}_k \cap \Lambda_0$.
+   Since $\Lambda_0 = \Lambda \setminus Z_h^{\prime\sim} \subsetneq \Lambda \setminus Z_h$, the domain splits as:
+   $$\mathbb{B}_k^{\prime\prime} \cap (\Lambda \cap Z_h^c) = \mathbb{B}_0 \sqcup \mathbb{B}_{\mathrm{collar}},$$
+   where $\mathbb{B}_{\mathrm{collar}} = (\mathbb{B}_k^{\prime\prime} \cap (\Lambda \cap Z_h^c)) \setminus \mathbb{B}_0 \ne \emptyset$.
+   - Kinematic Haar measure factorizes: $dV^{\prime\prime} = dV^{\prime\prime}\lceil_{\mathbb{B}_0} \times dV^{\prime\prime}\lceil_{\mathbb{B}_{\mathrm{collar}}}$.
+   - Dynamical action and observables do NOT factorize: plaquettes in $A_k^{\prime\prime}$ straddle $\partial \Omega_{k+1}^1$, and gradient-flow diffusion $\sqrt{8t}$ diffuses across $\mathbb{B}_0$ and $\mathbb{B}_{\mathrm{collar}}$.
+
+3. **Augmented Tree Map Pushforward $\Phi$:**
+   On $\mathbb{B}_0$, the forward map $\Phi: G^{\mathbb{B}_0} \to G^{\mathbb{B}_0 \setminus T_0} \times \mathcal{G}_{\Lambda_0}$ maps $V^{\prime\prime} \mapsto (\hat{V}, h)$.
+   - Global bijectivity: $\Phi^{-1}(\hat{V}, h)(b) = h_x^{-1} V_0(b) h_y$ on $T_0$, and $h_x^{-1} \hat{V}(b) h_y$ on $\mathbb{B}_0 \setminus T_0$.
+   - Integration Jacobian: $|\det J_\Phi| \equiv 1$ identically (proved in YM-055).
+   - Normalized Haar pushforward: $\Phi_*( \prod_{b \in \mathbb{B}_0} dV^{\prime\prime}(b) ) = \prod_{b \in \mathbb{B}_0 \setminus T_0} d\hat{V}(b) \times dh_{\mathcal{G}_{\Lambda_0}}$.
+
+4. **Factor-by-Factor Gauge Status along the Fiber $\mathcal{G}_{\Lambda_0}$:**
+   - **Invariant Factors:**
+     - $\chi_k(\Omega_k^{\sim 4}), \chi_{k, \Lambda}, \chi_h(\Omega_h \cap Z_h)$: depend strictly on exterior/preliminary fields; independent of $h \in \mathcal{G}_{\Lambda_0}$.
+     - Closed-plaquette Wilson action $\exp(S_W[V^{\prime\prime}])$: invariant under $h$ (trace cyclicity under boundary pinning $h \equiv I$ on $\Lambda^c$).
+     - Gauge-invariant physical observable $\mathcal{O}_{(a, t)}(f)[U]$: invariant under $h$ on physical states.
+     - Global vacuum normalization $Z_{\mathrm{vac}}^{-1}$: scalar constant; invariant under $h$.
+   - **Strictly Non-Invariant Factors:**
+     - Small-field link cutoff $\chi^\prime[\Phi^{-1}(\hat{V}, h)] = \prod_{b \in \mathbb{B}_0} \mathbf{1}_{\|B^\prime(\Phi^{-1}(\hat{V}, h)(b))\| < \delta_k^\prime}$: depends on individual link fluctuations relative to $V_0$.
+     - Effective action background terms $A_k^{\prime\prime}[\Phi^{-1}(\hat{V}, h)]$: non-invariant relative to $V_0$.
+     - Chart-exit remainder: as proved in YM-056, parallel transport along fundamental cycles accumulates holonomy, producing strictly positive exit defect $\Delta_{\mathrm{exit}} = 551/250 > 0$.
+
+5. **Fixed-Vacuum Coordinates vs. Moving / Insertion-Dependent Coordinates:**
+   - In Bałaban's construction, the tree $T_0$, background connection $V_0$, and local minimizer are determined strictly by the classical vacuum action with boundary conditions $V_k|_{Z \cap \Lambda^c}$:
+     $$\frac{\delta S}{\delta V}(V_0) = 0.$$
+   - These are **FIXED-VACUUM COORDINATES**. They do NOT depend on the insertion $\mathcal{O}_{(a, t)}(f)$.
+   - If one attempted to introduce moving or insertion-dependent coordinates $V_0[\mathcal{O}]$, the background field would depend on the test function $f$. This would destroy the multiscale cluster expansion because the vacuum partition function denominator $\mathcal{Z}_{\mathrm{vac}}$ would no longer match the vacuum sector of the numerator.
+   - Therefore, coordinates MUST remain fixed-vacuum coordinates. In fixed-vacuum coordinates, the insertion $\mathcal{O}_{(a, t)}(f)$ enters as an active source term inside the fluctuation integration.
+
+---
+
+### 3. The Exact Quotient Obstruction (The Earliest Failed Equality)
+
+We investigate whether the physical marked observable expectation is transported exactly through the single-step transformation (1.76) $\to$ (1.90). That is, we test the proposed local transport identity:
+$$\langle \mathcal{O}_{(a, t)}(f) \rangle \stackrel{?}{=} \frac{\sum_\alpha \rho_{k, \alpha}[\mathcal{O}_{(a, t)}(f)]}{\sum_\alpha \rho_{k, \alpha}[\mathbf{1}]} \stackrel{?}{=} \langle \mathcal{O}_{(a, t)}^{\mathrm{eff}}(f) \rangle_{k+1}.$$
+
+**Theorem (The Exact Quotient Obstruction / Earliest Failed Equality):**
+*The unconditioned single-step marked transport equality fails identically at the level of a single local density-changing operation (1.76). Specifically:*
+$$\frac{\rho_{k, \alpha}[\mathcal{O}_{(a, t)}(f)]}{\rho_{k, \alpha}[\mathbf{1}]} \ne \mathcal{O}_{(a, t)}^{\mathrm{eff}}(f)[\hat{V}]$$
+*due to four distinct, non-vanishing mathematical defects:*
+
+1. **Defect 1: Termwise Non-Probability Measure:**
+   On an individual history $\alpha$, the weight $\rho_{k, \alpha}[\mathbf{1}]$ is an unnormalized functional of the background field $V$, not a normalized probability measure ($\int d\mu \ne 1$). Dividing termwise by $\rho_{k, \alpha}[\mathbf{1}]$ produces an ill-defined local quotient that does not sum to the global expectation $\langle \mathcal{O} \rangle = \mathcal{Z}[\mathcal{O}] / \mathcal{Z}_{\mathrm{vac}}$.
+
+2. **Defect 2: Collar & Background Fluctuation Coupling:**
+   Because gradient flow generates parabolic diffusion over physical distance $\sqrt{8 t}$, the physical observable $\mathcal{O}_{(a, t)}(f)[U(V_h, V^{\prime\prime}, V_k)]$ couples active fluctuation links $V^{\prime\prime} \in \mathbb{B}_0$ with collar links $\mathbb{B}_{\mathrm{collar}}$, preliminary fields $V_h \in Z_h$, and exterior fields $V_k|_{Z \cap \Lambda^c}$.
+   The Gaussian fluctuation integral generates connected covariance contractions:
+   $$\langle \mathcal{O}_{(a, t)}(f) \rangle_{C_k} = \mathcal{O}_{(a, t)}(f)[V_0] + \langle \mathcal{O}_{\mathrm{fluct}} \, I_{\mathrm{int}} \rangle_{C_k} \ne \mathcal{O}_{(a, t)}(f)[V_0].$$
+   The fluctuation contractions couple to distant blocks through the covariance Green's function $C_k(x, y)$, preventing local block factorization.
+
+3. **Defect 3: Remainder Non-Absorption on the Small-Field Slice:**
+   The characteristic function decomposes into three mutually exclusive sectors:
+   $$\mathbf{1} = \chi_{\mathcal{E}_{\mathrm{chart}}} + \chi_{\mathrm{chart-exit}} + \chi_{\mathrm{large}}.$$
+   The chart-exit sector $\mathcal{R}_{\alpha, \mathrm{chart-exit}}[\mathcal{O}]$ and large-field sector $\mathcal{R}_{\alpha, \mathrm{large}}[\mathcal{O}]$ carry strictly non-zero measure mass ($\Delta_{\mathrm{exit}} = 551/250 > 0$).
+   They cannot be absorbed into an effective observable $\mathcal{O}^{\mathrm{eff}}$ on the small-field slice $G^{\mathbb{B}_0 \setminus T_0}$; they form distinct polymer activity remainders that must be tracked as independent polymer terms in the multiscale expansion.
+
+4. **Defect 4: Global Vacuum Denominator Non-Cancellation:**
+   In Bałaban's polymer representation (CMP 139 p. 285), the physical expectation is:
+   $$\langle \mathcal{O} \rangle = \frac{\sum_{Y \text{ marked}} K^{(1)}(Y) \prod_{j} K(Y_j)}{\sum_{\{Y_i\}} \prod_i K(Y_i)} = \sum_{Y \ni \operatorname{supp}(\mathcal{O})} K^{(1)}(Y) \frac{\mathcal{Z}_{\Lambda \setminus Y}}{\mathcal{Z}_\Lambda}.$$
+   The ratio $\mathcal{Z}_{\Lambda \setminus Y} / \mathcal{Z}_\Lambda$ is the **vacuum correlation quotient**.
+   In a single local block $\Lambda$, this ratio does NOT equal 1; it carries extensive vacuum energy contributions $\exp(-\sum_{X \cap Y \ne \emptyset} E(X))$ from all polymers intersecting $Y$.
+   Attempting to cancel $Z_{\mathrm{vac}}^{-1}$ locally inside a single block produces an exact non-cancellation defect:
+   $$\Delta_{\mathrm{quotient}} = \left| \frac{\mathcal{Z}_{\Lambda \setminus Y}}{\mathcal{Z}_\Lambda} - 1 \right| = \left| \exp\left( -\sum_{X \cap Y \ne \emptyset} E(X) \right) - 1 \right| > 0.$$
+   Exact quotient cancellation occurs ONLY after summing the infinite multiscale cluster expansion across the entire lattice.
+
+---
+
+### 4. Minimal Conditional Statement That Remains Valid
+
+While an unconditioned, local single-step transport equality $\langle \mathcal{O} \rangle = \langle \mathcal{O}_{\mathrm{eff}} \rangle$ is refuted, the exact, rigorous three-sector marked decomposition remains unconditionally valid:
+
+**LEMMA `YM-061F-FIRST-DENSITY-STEP-MARKED-TRANSPORT-AND-QUOTIENT-OBSTRUCTION` (Three-Sector Marked Density Decomposition and Exact Quotient Obstruction under Bałaban R-I (1.76)):**
+*Under the hypotheses of Bałaban CMP 122 (1.76) on block $\Lambda$ with active region $\Lambda_0 = \Lambda \cap (Z_h^{\prime\sim})^c$, active bonds $\mathbb{B}_0 = \mathbb{U}_k \cap \Lambda_0$, and boundary-grounded tree $T_0$:*
+1. *The degree-one physical marked functional integral decomposes into three mutually exclusive and exhaustive sectors:*
+   $$\rho_{k, \alpha}[\mathcal{O}_{(a, t)}(f)] = \rho_{k, \alpha}^{\mathrm{small-field}}[\mathcal{O}_{(a, t)}(f)] + \mathcal{R}_{\alpha, \mathrm{chart-exit}}[\mathcal{O}_{(a, t)}(f)] + \mathcal{R}_{\alpha, \mathrm{large}}[\mathcal{O}_{(a, t)}(f)].$$
+2. *On the small-field chart overlap $\mathcal{E}_{\mathrm{chart}}$, the augmented tree pushforward $\Phi$ transforms the measure with unit Jacobian $|\det J_\Phi| \equiv 1$, and the physical observable pulls back to $\mathcal{O}_{(a, t)}(f)[\Phi^{-1}(\hat{V}, h)]$.*
+3. *The fiber integral $\mathcal{W}_{\mathrm{eff}}(\hat{V}) = \int_{\mathcal{G}_{\Lambda_0}} dh \, \mathcal{F}(\Phi^{-1}(\hat{V}, h))$ cannot be factored out due to link cutoffs $\chi^\prime$ and background field terms.*
+4. *An unconditioned single-step local transport equality $\rho_{k, \alpha}[\mathcal{O}] / \rho_{k, \alpha}[\mathbf{1}] = \mathcal{O}^{\mathrm{eff}}$ fails identically due to termwise non-probability weighting, collar coupling, non-empty chart exit ($\Delta_{\mathrm{exit}} > 0$), and non-local vacuum quotient defect $\Delta_{\mathrm{quotient}} > 0$.*
+5. *Exact physical transport $\langle \mathcal{O} \rangle$ requires the full multiscale polymer cluster expansion to absorb remainder sectors and cancel extensive vacuum energy.*
+*Status:* **PROVED_WITHIN_STATED_HYPOTHESES** *(for the three-sector decomposition and quotient obstruction)*; **CONDITIONALLY_BLOCKED_AND_OPEN** *(for continuum-uniform observable transport)*.
+
+---
+
+### 5. Downstream Governance Boundaries Reaffirmed
+
+The standing project boundaries remain strictly preserved:
+- **Lemma `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS`:** **`OPEN`**;
+- **Lemma `YM-060F-CONTINUUM-WIGHTMAN-RECONSTRUCTION-AND-SPECTRAL-GAP`:** **`OPEN`**;
+- **Task `YM-016` (Continuum Reconstruction):** **`BLOCKED`**;
+- **Infrared Crossover `E-CROSSOVER`:** **`OPEN`**;
+- **Constitutional Invariants:** `goal_complete = false`, `clay_problem = OPEN_AND_UNSOLVED`, `P3 = OPEN`, `E-UV-FLOWED = PARTIAL_PROGRESS`, `STRUCTURAL_NO_GO_COUNT = 0`.
+
+
+
 
 
 

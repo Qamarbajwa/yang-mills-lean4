@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 75
+revision: 76
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "0d03efdc9bb6a3bd27b40fa9e728319e6d12192d"
-  scientific_candidate_sha: "d493fa913532a7b2c802fbffa64c55e616192e28"
-  review_bound_sha: "d493fa913532a7b2c802fbffa64c55e616192e28"
-  evidence_closeout_head: "d92f40a12e8b09068b5774a8a0cce06c88f7b7cb"
-  closeout_resolution: "evidence_closeout_head binds preceding completed YM-060 closeout commit (d92f40a12e8b09068b5774a8a0cce06c88f7b7cb); scientific_candidate_sha and review_bound_sha bind active YM-060R candidate (d493fa913532a7b2c802fbffa64c55e616192e28); resolve authoritative current HEAD dynamically from Git."
+  head: "116f2964e542ec551c964a38f38d38096dbfa7bc"
+  scientific_candidate_sha: "pending_ym061_freeze"
+  review_bound_sha: "pending_ym061_freeze"
+  evidence_closeout_head: "116f2964e542ec551c964a38f38d38096dbfa7bc"
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-060R closeout commit (116f2964e542ec551c964a38f38d38096dbfa7bc); scientific_candidate_sha and review_bound_sha bind active YM-061 candidate once frozen; resolve authoritative current HEAD dynamically from Git."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,14 +32,25 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 74
-  last_updated_at: "2026-10-15T22:15:00Z"
+  last_expected_revision: 75
+  last_updated_at: "2026-10-15T22:35:00Z"
   active_contract: "YM-015F-JET-002B"
-  frozen_candidate: "d493fa913532a7b2c802fbffa64c55e616192e28"
+  frozen_candidate: "pending_ym061_freeze"
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-061
+    scope_in: "Primary-source audit of first density-changing renormalization step in Bałaban 4D construction (CMP 122 eq. (1.76)), physical observable transport, factor-by-factor measure transformation, fixed-vacuum vs moving coordinates, exact quotient obstruction, and Test 24 finite certificate"
+    scope_out: "Full continuum Wightman reconstruction, cutoff-uniform multiscale summability, thermodynamic infinite-volume limits, Wightman axioms, non-perturbative mass gap, and full continuum closure"
+    dependencies: ["YM-060R"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-061_E4_RAW_20261010.md"
+    acceptor: "verification/YM-061_TECHNICAL_ACCEPTANCE.md"
+    status: IN_PROGRESS
+    scope_limitation: "SINGLE_STEP_FIRST_DENSITY_AUDIT_EXACT_QUOTIENT_OBSTRUCTION_CONTINUUM_AND_THERMODYNAMIC_LIMIT_OPEN"
   - id: YM-060R
     scope_in: "Adversarial audit, epistemic scope repair, and restoration of cutoff-uniform multiscale cluster bounds and thermodynamic limit control to OPEN under Bałaban RG (Lemma YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS), refutation of ungrounded inter-scale contraction claims, separation of fixed-cutoff summability from continuum limits, and Test 23 finite certificate"
     scope_out: "Cutoff-uniform continuum summability, thermodynamic infinite-volume limits, Wightman axioms, non-perturbative mass gap, and full continuum closure"

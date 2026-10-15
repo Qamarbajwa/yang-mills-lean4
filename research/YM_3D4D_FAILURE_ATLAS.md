@@ -256,6 +256,15 @@ Primary YMH Lemma4.5 p54 ->Lemma5.5 p60 was text rechecked at https://www.pure.e
 2. **Restoration of continuum summability and thermodynamic limit to OPEN:** Lemma `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS` is restored to OPEN (`CONTINUUM_UNIFORM_SUMMABILITY_AND_THERMODYNAMIC_LIMIT_OPEN`). Fixed-cutoff marked polymer summability (Lemma `YM-058F`) remains proved. Earliest global 4D failure remains UNESTABLISHED; structural no-go count 0.
 
 
+## FA-001 single-step first density-changing renormalization audit and exact quotient obstruction / YM-061
+
+1. **First density-changing step audit (CMP 122 (1.76)):** Reconstructed all literal primary-source factors: measure $dV_h \lceil_{Z_h} \times dV^{\prime\prime} \lceil_{\mathbb{B}_k^{\prime\prime} \cap (\Lambda \cap Z_h^c)}$, collar domain difference $\mathbb{B}_{\mathrm{collar}}$, tree-gauge map $\Phi$ with unit Jacobian $|\det J_\Phi| \equiv 1$, cutoffs $\chi_k, \chi_{k, \Lambda}, \chi_h, \chi_{h, 1/2}, \chi_k^{\prime\prime}, \chi^\prime$, effective action $A_k^{\prime\prime}$, physical insertion pullback $\mathcal{O}_{(a, t)}(f)[\Phi^{-1}(\hat{V}, h)]$, and global normalization $Z_{\mathrm{vac}}^{-1}$.
+2. **Refutation of unconditioned local observable transport:** Proved the Exact Quotient Obstruction: termwise densities are unnormalized weights rather than probability measures; gradient flow diffusion across radius $\sqrt{8t}$ couples active links $\mathbb{B}_0$ with collar links $\mathbb{B}_{\mathrm{collar}}$, preliminary fields $Z_h$, and exterior fields; chart-exit remainders ($\Delta_{\mathrm{exit}} = 551/250 > 0$) cannot be absorbed into a slice observable.
+3. **Vacuum correlation quotient non-cancellation:** Proved that within a single local block $\Lambda$, the local ratio is the non-trivial vacuum correlation quotient $\mathcal{Z}_{\Lambda \setminus Y} / \mathcal{Z}_\Lambda = \exp(-\sum_{X \cap Y \ne \emptyset} E(X))$ with strictly positive non-cancellation defect $\Delta_{\mathrm{quotient}} > 0$. Exact cancellation requires the complete multiscale polymer cluster expansion across the entire lattice.
+4. **Proved Lemma & downstream blockers:** Lemma `YM-061F-FIRST-DENSITY-STEP-MARKED-TRANSPORT-AND-QUOTIENT-OBSTRUCTION` is formally proved for the three-sector decomposition and quotient obstruction. Lemma `YM-059F` (OPEN), Lemma `YM-060F` (OPEN), Task `YM-016` (BLOCKED). Earliest global 4D failure remains UNESTABLISHED; structural no-go count 0.
+
+
+
 
 
 

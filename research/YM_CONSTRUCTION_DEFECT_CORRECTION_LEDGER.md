@@ -400,6 +400,23 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
    - Lemma `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS` is formally re-classified as **CONDITIONALLY_BLOCKED_AND_OPEN** (`CONTINUUM_UNIFORM_SUMMABILITY_AND_THERMODYNAMIC_LIMIT_OPEN`).
 
 
+## CDC-061: PRIMARY-SOURCE AUDIT OF FIRST DENSITY-CHANGING STEP (CMP 122 (1.76)), FACTOR-BY-FACTOR MEASURE TRANSFORMATION, AND EXACT QUOTIENT OBSTRUCTION
+
+1. **Defect 1: Unsubstantiated Local Expectation Transport:**
+   - Attempting to equate the local single-step density ratio $\rho_{k, \alpha}[\mathcal{O}] / \rho_{k, \alpha}[\mathbf{1}]$ to an effective observable expectation $\mathcal{O}^{\mathrm{eff}}$ on the small-field slice.
+   - **Correction:** Proved the Exact Quotient Obstruction: termwise densities are unnormalized weights rather than probability measures; observable diffusion across physical radius $\sqrt{8t}$ couples active links $\mathbb{B}_0$ with collar links $\mathbb{B}_{\mathrm{collar}}$, preliminary fields $Z_h$, and exterior fields; chart-exit remainders ($\Delta_{\mathrm{exit}} = 551/250 > 0$) cannot be absorbed into a slice observable.
+2. **Defect 2: Local Vacuum Denominator Cancellation Conflation:**
+   - Assuming that the global vacuum partition function $Z_{\mathrm{vac}}^{-1}$ cancels identically inside a single local block $\Lambda$.
+   - **Correction:** Proved that in Bałaban's polymer expansion, the local ratio is the non-trivial vacuum correlation quotient $\mathcal{Z}_{\Lambda \setminus Y} / \mathcal{Z}_\Lambda = \exp(-\sum_{X \cap Y \ne \emptyset} E(X))$ with strictly positive non-cancellation defect $\Delta_{\mathrm{quotient}} > 0$. Exact cancellation occurs only after summing the complete multiscale cluster expansion across the entire lattice.
+3. **Defect 3: Coordinate System Ambiguity:**
+   - Failure to distinguish fixed-vacuum coordinates from moving or insertion-dependent coordinate systems.
+   - **Correction:** Proved that coordinates must remain fixed-vacuum coordinates determined by $\frac{\delta S}{\delta V}(V_0) = 0$ with exterior boundary conditions; source-dependent coordinates would destroy the vacuum cluster expansion.
+4. **Established Lemma and Downstream Isolation:**
+   - Proved Lemma `YM-061F-FIRST-DENSITY-STEP-MARKED-TRANSPORT-AND-QUOTIENT-OBSTRUCTION`.
+   - Reaffirmed downstream open obligations: Lemma `YM-059F` (OPEN), Lemma `YM-060F` (OPEN), Task `YM-016` (BLOCKED).
+
+
+
 
 
 

@@ -724,6 +724,20 @@ Positive T_epsilon fixes normalized vacuum but a contrast target recovered from 
   5. *Classification:* `METHOD_SPECIFIC_OBSTRUCTION`; structural no-go count remains 0; no continuum edge closes.
 
 
+## NEG-YM-061-SINGLE-STEP-EXACT-QUOTIENT-OBSTRUCTION: Refutation of Unconditioned Local Observable Expectation Transport and Proof of Exact Quotient Obstruction in Bałaban R-I (1.76) (`YM-061`)
+
+- **Discovery Date:** 2026-10-15
+- **Epistemic Classification:** `[METHOD_SPECIFIC_OBSTRUCTION]`
+- **Hypothesis tested:** Whether physical marked observable expectation $\langle \mathcal{O}_{(a, t)}(f) \rangle$ is transported exactly through a single density-changing renormalization group step centered on Bałaban CMP 122 eq. (1.76) via an unconditioned local density ratio $\rho_{k, \alpha}[\mathcal{O}] / \rho_{k, \alpha}[\mathbf{1}] = \mathcal{O}^{\mathrm{eff}}[\hat{V}]$.
+- **Result:** Falsified.
+  1. *Termwise Non-Probability Weighting:* Individual termwise densities $\rho_{k, \alpha}[\mathbf{1}]$ are unnormalized functionals of background fields, not probability measures ($\int d\mu \ne 1$).
+  2. *Collar & Background Fluctuation Coupling:* Gradient flow diffusion across physical radius $\sqrt{8t}$ couples active links $\mathbb{B}_0$ with collar links $\mathbb{B}_{\mathrm{collar}}$, preliminary fields $Z_h$, and exterior fields, generating connected covariance contractions $\langle \mathcal{O}_{\mathrm{fluct}} I_{\mathrm{int}} \rangle_{C_k} \ne 0$.
+  3. *Remainder Non-Absorption:* Chart-exit remainders ($\Delta_{\mathrm{exit}} = 551/250 > 0$) and large-field remainders carry non-vanishing measure mass that cannot be represented as a small-field slice observable.
+  4. *Global Vacuum Denominator Non-Cancellation:* In Bałaban's polymer expansion, the local factor is the non-trivial vacuum correlation quotient $\mathcal{Z}_{\Lambda \setminus Y} / \mathcal{Z}_\Lambda = \exp(-\sum_{X \cap Y \ne \emptyset} E(X))$ with strictly positive non-cancellation defect $\Delta_{\mathrm{quotient}} > 0$. Exact cancellation occurs only after summing the complete multiscale cluster expansion across the entire lattice.
+  5. *Classification:* `METHOD_SPECIFIC_OBSTRUCTION`; structural no-go count remains 0; no continuum edge closes.
+
+
+
 
 
 

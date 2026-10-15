@@ -449,6 +449,22 @@ Source mechanisms: own finite row-space/kernel target-descent theorem, positive 
 - Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
 
 
+## XFER-YM-ONE-TERM-PULLBACK-061: Single-Step First Density-Changing Renormalization Audit, Factor-by-Factor Measure Transformation, and Exact Quotient Obstruction
+
+- Source: Bałaban CMP 122, 175–202 (1989), printed pp. 192–199, centered on eq. (1.76).
+- Target: YM-015F degree-one physical marked observable insertion under RG transport.
+- Verified mapping:
+  - Exact factor inventory of (1.76): preliminary measure $dV_h \lceil_{Z_h}$, active measure $dV^{\prime\prime} \lceil_{\mathbb{B}_k^{\prime\prime} \cap (\Lambda \cap Z_h^c)}$, collar domain difference $\mathbb{B}_{\mathrm{collar}} = (\mathbb{B}_k^{\prime\prime} \cap (\Lambda \cap Z_h^c)) \setminus \mathbb{B}_0 \ne \emptyset$, cutoffs $\chi_k(\Omega_k^{\sim 4}), \chi_{k, \Lambda}, \chi_h, \chi_{h, 1/2}, \chi_k^{\prime\prime}, \chi^\prime$, effective action $A_k^{\prime\prime}$, physical insertion pullback $\mathcal{O}_{(a, t)}(f)[\Phi^{-1}(\hat{V}, h)]$, and global normalization $Z_{\mathrm{vac}}^{-1}$.
+  - Augmented tree map pushforward $\Phi: G^{\mathbb{B}_0} \to G^{\mathbb{B}_0 \setminus T_0} \times \mathcal{G}_{\Lambda_0}$ with unit Jacobian $|\det J_\Phi| \equiv 1$ and boundary grounding bond $[y_0, y] \in T_0$.
+  - Fixed-vacuum coordinate grounding: background connection $V_0$ satisfies $\frac{\delta S}{\delta V}(V_0) = 0$ with exterior boundary values, strictly independent of insertion $\mathcal{O}_{(a, t)}(f)$.
+  - Exact Quotient Obstruction (earliest failed equality): refutation of unconditioned local density transport $\rho_{k, \alpha}[\mathcal{O}] / \rho_{k, \alpha}[\mathbf{1}] \ne \mathcal{O}^{\mathrm{eff}}$ due to unnormalized termwise weighting, collar/background fluctuation coupling, non-empty chart exit ($\Delta_{\mathrm{exit}} = 551/250 > 0$), and local vacuum quotient defect $\Delta_{\mathrm{quotient}} > 0$.
+  - Minimal conditional statement: exact three-sector marked density decomposition: $\rho_{k, \alpha}[\mathcal{O}] = \rho_{k, \alpha}^{\mathrm{small-field}}[\mathcal{O}] + \mathcal{R}_{\alpha, \mathrm{chart-exit}}[\mathcal{O}] + \mathcal{R}_{\alpha, \mathrm{large}}[\mathcal{O}]$.
+  - Lemma `YM-061F-FIRST-DENSITY-STEP-MARKED-TRANSPORT-AND-QUOTIENT-OBSTRUCTION` formally proved within stated hypotheses.
+- Open bridge: Cutoff-Uniform Multiscale Cluster Bounds (Lemma `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS`), Continuum Wightman Reconstruction and Spectral Gap (Lemma `YM-060F-CONTINUUM-WIGHTMAN-RECONSTRUCTION-AND-SPECTRAL-GAP`), crossing infrared crossover `E-CROSSOVER`.
+- Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
+
+
+
 
 
 
