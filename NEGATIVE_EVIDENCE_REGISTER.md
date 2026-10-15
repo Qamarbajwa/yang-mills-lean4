@@ -710,6 +710,21 @@ Positive T_epsilon fixes normalized vacuum but a contrast target recovered from 
   5. *Classification:* `METHOD_SPECIFIC_OBSTRUCTION`; structural no-go count remains 0; no continuum edge closes.
 
 
+## NEG-YM-060R-INTERSCALE-CONTRACTION-AND-CONTINUUM-SUMMABILITY-GAP: Refutation of Unsubstantiated Inter-Scale Contraction, Tree Gap Non-Lifting Barrier, and Restoration of Continuum Summability to OPEN (`YM-060R`)
+
+- **Discovery Date:** 2026-10-15
+- **Epistemic Classification:** `[METHOD_SPECIFIC_OBSTRUCTION]`
+- **Hypothesis tested:** Whether 4D non-Abelian Yang-Mills gauge theory satisfies unconditioned geometric inter-scale contraction $\lambda_{\mathrm{scale}} < 1$ across all scales $j = 0, \dots, n \to \infty$; whether scalar geometric toy models lift to the full quantum field theory; and whether thermodynamic infinite-volume limits can be inferred without source-bound boundary comparison estimates.
+- **Result:** Falsified.
+  1. *Marginal Operator Tree-Level Barrier:* In 4D gauge theory, dimension-4 gauge operators scale with tree-level contraction factor $\lambda_{\mathrm{tree}} = 1.0$. Contraction requires positive anomalous dimensions or flow smoothing on scales $L^j \ge \sqrt{t}$. On UV scales $a \le L^j \le \sqrt{t}$, tree-level scaling is marginal ($\lambda \approx 1$).
+  2. *Tree Gap Non-Lifting Defect:* The difference between marginal scaling and the assumed scalar toy model ($\lambda_{\mathrm{toy}} = 0.5$) yields a strictly positive non-lifting defect:
+     $$\Delta_{\mathrm{tree\_gap}} = \lambda_{\mathrm{tree}} - \lambda_{\mathrm{toy}} = 1.0 - 0.5 = 0.5 > 0.$$
+  3. *Thermodynamic Boundary Decoupling Gap:* Point-evaluating $\exp(-m_0 d)$ does not constitute a source-bound proof of thermodynamic Cauchy convergence under boundary-grounded trees.
+  4. *Restoration to OPEN:* Lemma `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS` is restored to **OPEN** (`CONTINUUM_UNIFORM_SUMMABILITY_AND_THERMODYNAMIC_LIMIT_OPEN`). Fixed-cutoff summability (Lemma `YM-058F`) remains proved.
+  5. *Classification:* `METHOD_SPECIFIC_OBSTRUCTION`; structural no-go count remains 0; no continuum edge closes.
+
+
+
 
 
 

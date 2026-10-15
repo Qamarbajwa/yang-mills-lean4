@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 73
+revision: 74
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "10f1625de08296df6b677792f225a718e8724290"
-  scientific_candidate_sha: "e2425b6a14d27200bb1e7aa616eaca000de21c85"
-  review_bound_sha: "e2425b6a14d27200bb1e7aa616eaca000de21c85"
-  evidence_closeout_head: "10f1625de08296df6b677792f225a718e8724290"
-  closeout_resolution: "evidence_closeout_head binds completed YM-060 verification reports commit (10f1625de08296df6b677792f225a718e8724290); scientific_candidate_sha and review_bound_sha bind accepted YM-060 candidate (e2425b6a14d27200bb1e7aa616eaca000de21c85); resolve authoritative current HEAD dynamically from Git."
+  head: "d92f40a12e8b09068b5774a8a0cce06c88f7b7cb"
+  scientific_candidate_sha: "pending_ym060r_freeze"
+  review_bound_sha: "pending_ym060r_freeze"
+  evidence_closeout_head: "d92f40a12e8b09068b5774a8a0cce06c88f7b7cb"
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-060 closeout commit (d92f40a12e8b09068b5774a8a0cce06c88f7b7cb); scientific_candidate_sha and review_bound_sha bind active YM-060R candidate once frozen; resolve authoritative current HEAD dynamically from Git."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,14 +32,25 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 72
-  last_updated_at: "2026-10-15T21:44:00Z"
+  last_expected_revision: 73
+  last_updated_at: "2026-10-15T22:05:00Z"
   active_contract: "YM-015F-JET-002B"
-  frozen_candidate: "e2425b6a14d27200bb1e7aa616eaca000de21c85"
+  frozen_candidate: "pending_ym060r_freeze"
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-060R
+    scope_in: "Adversarial audit, epistemic scope repair, and restoration of cutoff-uniform multiscale cluster bounds and thermodynamic limit control to OPEN under Bałaban RG (Lemma YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS), refutation of ungrounded inter-scale contraction claims, separation of fixed-cutoff summability from continuum limits, and Test 23 finite certificate"
+    scope_out: "Cutoff-uniform continuum summability, thermodynamic infinite-volume limits, Wightman axioms, non-perturbative mass gap, and full continuum closure"
+    dependencies: ["YM-060", "YM-059"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-060R_E4_RAW_20261010.md"
+    acceptor: "verification/YM-060R_TECHNICAL_ACCEPTANCE.md"
+    status: IN_PROGRESS
+    scope_limitation: "CONTINUUM_UNIFORM_SUMMABILITY_AND_THERMODYNAMIC_LIMIT_RESTORED_TO_OPEN"
   - id: YM-060
     scope_in: "Cutoff-uniform multiscale cluster bounds, inductive norm estimates across scales j = 0, ..., n under Bałaban RG (Lemma YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS), geometric inter-scale contraction lambda_scale < 1, thermodynamic infinite-volume limit control (|Lambda| -> inf), refutation of non-contractive multiscale accumulation, isolation of downstream obligation (continuum Wightman reconstruction and spectral gap), and Test 22 finite certificate"
     scope_out: "Full Osterwalder-Schrader / Wightman continuum limit reconstruction, non-perturbative mass gap, and full solution of the Clay Millennium problem"
@@ -49,8 +60,8 @@ objectives:
     atlas_writer_and_coordinator: "primary-worker"
     reviewer_path: "verification/raw/YM-060_E4_RAW_20261010.md"
     acceptor: "verification/YM-060_TECHNICAL_ACCEPTANCE.md"
-    status: SCIENTIFICALLY_ACCEPTED
-    scope_limitation: "CONTINUUM_UNIFORM_CLUSTER_BOUNDS_PROVED_WIGHTMAN_RECONSTRUCTION_OPEN"
+    status: SUPERSEDED_BY_YM060R
+    scope_limitation: "SUPERSEDED_BY_YM060R_CONTINUUM_SUMMABILITY_AND_THERMODYNAMIC_LIMIT_RESTORED_TO_OPEN"
   - id: YM-059
     scope_in: "Cluster expansion convergence, combinatorial tree-graph growth bounds, fixed-cutoff polymer summability (Lemma YM-058F-FIXED-CUTOFF-POLYMER-SUMMABILITY), analysis of multiscale accumulation and terminal vacuum cancellation Z_{vac}^{-1}, refutation of naive spatial decay implication for uniform summability, isolation of downstream obligation (cutoff-uniform multiscale cluster summability as a -> 0), and Test 21 finite certificate"
     scope_out: "Cutoff-uniform cluster summability across all scales as a -> 0, thermodynamic infinite-volume limits, Wightman axioms, non-perturbative mass gap, and full continuum closure"

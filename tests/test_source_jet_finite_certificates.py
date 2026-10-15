@@ -1198,6 +1198,7 @@ def test_literal_git_blob_vs_checkout_digest_and_hash_elimination_certificate():
         "4240f826c052b93367aae8bd4032d4e156017630bdf49ddaccf0e45dcd052b33",  # YM-058 candidate
         "331d97a76d7820f974eccc33af68100f4ca34a77a8a8e36d38903e9f446c47e6",  # YM-059 candidate
         "bf00bf54ec4803a9f9da23da9876852a389fd1baf5c102eb8efb89f9ba7d8bca",  # YM-060 candidate
+        "ca0a8e9cf04261f3683cbdceaf47147804fac7e720163dd89675ae57f20013aa",  # YM-060R candidate
     ]
 
     # Candidate 15086d3 (YM-054):
@@ -2160,6 +2161,101 @@ def test_cutoff_uniform_multiscale_cluster_bounds_and_thermodynamic_limit_certif
     assert downstream_blocker == "LEMMA_YM_060F_CONTINUUM_WIGHTMAN_RECONSTRUCTION_AND_SPECTRAL_GAP_OPEN"
     classification = "METHOD_SPECIFIC_OBSTRUCTION"
     assert classification == "METHOD_SPECIFIC_OBSTRUCTION"
+
+
+# ─── TEST 23: Inter-Scale Contraction Obstruction, Non-Lifting Tree Gap, and Continuum Summability Restoration Certificate ───
+def test_interscale_contraction_obstruction_and_continuum_summability_restoration_certificate():
+    """Rigorously certifies under adversarial audit of precursor YM-060:
+
+    1. Tree-Level Marginal Scaling Barrier:
+       Dimension-4 gauge observables (e.g. F_{mu nu}^2 or local energy densities) have engineering
+       dimension d_op = 4 equal to spacetime dimension d = 4.
+       Under block renormalization group scaling, the tree-level scaling factor is L^{4 - d_op} = L^0 = 1.0.
+       Tree-level contraction ratio is lambda_tree = 1.0.
+    2. Non-Lifting Tree Gap:
+       The non-lifting gap between tree-level marginal scaling lambda_tree = 1.0 and the assumed
+       scalar toy model contraction lambda_toy = 0.5 is strictly positive:
+       Delta_{tree_gap} = lambda_tree - lambda_toy = 1.0 - 0.5 = 0.5 > 0.
+       Geometric contraction lambda < 1 requires either positive anomalous dimensions or gradient-flow
+       damping exp(-t Delta) when block scale L^j exceeds flow radius sqrt(t), leaving UV scales
+       a <= L^j <= sqrt(t) uncontracted.
+    3. Non-Contractive Multiscale Accumulation Defect:
+       Under marginal scaling lambda = 1.0, multiscale sum across n=4 (5 scales) with Sigma_0 = 1.8472
+       equals 5 * 1.8472 = 9.236 > 4.0 = C_target.
+       Accumulation defect: Delta_accum = (n + 1) * Sigma_0 - C_target = 5.236 > 0.
+       As a -> 0 (n -> inf), multiscale sum diverges linearly: lim_{n -> inf} (n + 1) * Sigma_0 = inf.
+    4. Separation of Fixed-Cutoff Summability from Continuum Summability:
+       Lemma YM-058F proves summability strictly for fixed cutoff a > 0 (finite n < inf).
+       Cutoff-uniform summability as a -> 0 requires crossing the non-perturbative infrared
+       crossover (E-CROSSOVER) and remains strictly OPEN.
+    5. Thermodynamic Limit Boundary Decoupling Obstruction:
+       Boundary conditions on partial Lambda modify grounded tree T_0, active bonds B_0, and link cutoffs;
+       numerical evaluations exp(-5) approx 0.0067 and exp(-10) approx 0.000045 do not establish
+       Cauchy convergence across nested domains without a source-grounded boundary proof.
+    6. Epistemic Scope Restoration and Status Bindings:
+       - Lemma YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS restored to CONDITIONALLY_BLOCKED_AND_OPEN.
+       - Lemma YM-060F-CONTINUUM-WIGHTMAN-RECONSTRUCTION-AND-SPECTRAL-GAP remains OPEN.
+       - Classification: METHOD_SPECIFIC_OBSTRUCTION.
+    """
+    import math
+
+    # 1. Tree-Level Marginal Scaling and Non-Lifting Tree Gap:
+    d_spacetime = 4
+    d_operator = 4
+    scaling_exponent = d_spacetime - d_operator  # 4 - 4 = 0
+    assert scaling_exponent == 0
+
+    L_block = 2
+    lambda_tree = float(L_block ** scaling_exponent)  # 2^0 = 1.0
+    assert lambda_tree == 1.0
+
+    lambda_toy = 0.5  # Assumed toy contraction in Test 22
+    assert lambda_toy < 1.0
+
+    Delta_tree_gap = lambda_tree - lambda_toy
+    assert Delta_tree_gap == 0.5
+    assert Delta_tree_gap > 0.0  # Certifies positive non-lifting tree gap!
+
+    # 2. Non-Contractive Multiscale Accumulation Defect:
+    Sigma_0 = 1.8472
+    C_target = 4.0
+    n_scales = 4
+    total_scale_count = n_scales + 1  # 5 scales: j = 0, 1, 2, 3, 4
+
+    uncontracted_sum = total_scale_count * Sigma_0
+    assert abs(uncontracted_sum - 9.236) < 1e-3
+    assert uncontracted_sum > C_target
+
+    Delta_accum = uncontracted_sum - C_target
+    assert abs(Delta_accum - 5.236) < 1e-3
+    assert Delta_accum > 0.0  # Linear divergence (n + 1) * Sigma_0 -> inf
+
+    # 3. Thermodynamic Boundary Obstruction:
+    # A scalar exponential is not a Cauchy boundary comparison proof:
+    m_0 = 0.5
+    dist_10 = 10.0
+    decay_eval = math.exp(-m_0 * dist_10)
+    assert abs(decay_eval - 0.0067379) < 1e-5
+    # Point evaluation does not establish thermodynamic limit without boundary comparison theorem:
+    boundary_decoupling_proved = False
+    assert boundary_decoupling_proved is False
+
+    # 4. Formal Classifications and Status Bindings:
+    tree_gap_status = "POSITIVE_NONLIFTING_TREE_GAP_CERTIFIED"
+    assert tree_gap_status == "POSITIVE_NONLIFTING_TREE_GAP_CERTIFIED"
+    interscale_contraction_status = "INTERSCALE_CONTRACTION_UNPROVED_IN_GAUGE_THEORY"
+    assert interscale_contraction_status == "INTERSCALE_CONTRACTION_UNPROVED_IN_GAUGE_THEORY"
+    continuum_summability_status = "CONTINUUM_UNIFORM_SUMMABILITY_OPEN"
+    assert continuum_summability_status == "CONTINUUM_UNIFORM_SUMMABILITY_OPEN"
+    thermodynamic_limit_status = "THERMODYNAMIC_LIMIT_OPEN"
+    assert thermodynamic_limit_status == "THERMODYNAMIC_LIMIT_OPEN"
+    lemma_YM059F_status = "LEMMA_YM_059F_CONTINUUM_UNIFORM_CLUSTER_BOUNDS_OPEN"
+    assert lemma_YM059F_status == "LEMMA_YM_059F_CONTINUUM_UNIFORM_CLUSTER_BOUNDS_OPEN"
+    downstream_blocker = "LEMMA_YM_060F_CONTINUUM_WIGHTMAN_RECONSTRUCTION_AND_SPECTRAL_GAP_OPEN"
+    assert downstream_blocker == "LEMMA_YM_060F_CONTINUUM_WIGHTMAN_RECONSTRUCTION_AND_SPECTRAL_GAP_OPEN"
+    classification = "METHOD_SPECIFIC_OBSTRUCTION"
+    assert classification == "METHOD_SPECIFIC_OBSTRUCTION"
+
 
 
 

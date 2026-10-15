@@ -2251,6 +2251,71 @@ The immediate next downstream open obligation under primary contract `YM-015F-JE
 - Applying the Osterwalder-Schrader reconstruction theorem to obtain a non-trivial Wightman Hilbert space $\mathcal{H}$, unitary representation of the Poincaré group, and vacuum vector $\Omega$ with strictly positive spectral gap.
 - Full non-perturbative continuum mass gap and formal solution of the Clay Millennium problem remain conditionally blocked by this continuum Wightman reconstruction obligation.
 
+---
+
+## YM-060R: ADVERSARIAL AUDIT, EPISTEMIC SCOPE REPAIR, AND RESTORATION OF CUTOFF-UNIFORM MULTISCALE CLUSTER BOUNDS AND THERMODYNAMIC LIMIT CONTROL TO OPEN UNDER BALABAN RG
+
+### 1. Concrete Audit Findings on Precursor YM-060 Candidate
+
+Following owner-authorized adversarial review under primary contract `YM-015F-JET-002B`, four foundational defects were identified in the precursor `YM-060` candidate:
+
+1. **Defect 1: Unsubstantiated Assertion of Inter-Scale Contraction ($\lambda_{\mathrm{scale}} < 1$):**
+   - Section 2 of YM-060 asserted inter-scale contraction $\lambda_{\mathrm{scale}} = L^{-\epsilon_0} < 1$ and derived $\Sigma_j(x) \le C_0 \lambda_{\mathrm{scale}}^j$ without deriving $\epsilon_0 > 0$ or proving that the actual Bałaban gauge-theory recurrence contracts marked physical activities across all scales.
+   - For marginal operators (e.g. dimension-4 gauge field observables such as $F_{\mu\nu}^2$ or local action densities), tree-level engineering scaling is $L^{4 - d_{\mathrm{op}}} = L^0 = 1$. The contraction ratio at tree level is $\lambda_{\mathrm{tree}} = 1.0$.
+   - Any geometric contraction $\lambda < 1$ requires either positive anomalous dimensions or gradient-flow damping $\exp(-t \Delta)$ when the block scale $L^j$ exceeds the flow radius $\sqrt{t}$. On UV scales $a \le L^j \le \sqrt{t}$, tree-level scaling remains marginal ($\lambda \approx 1$).
+   - Claiming unconditional geometric contraction $\lambda_{\mathrm{scale}} = 0.5$ across all scales $j = 0, \dots, n \to \infty$ without non-perturbative flow control was an ungrounded extrapolation.
+
+2. **Defect 2: Circular Reliance on YM-059 Fixed-Cutoff Summability:**
+   - Section 3 of YM-060 asserted that the required norm and decay $\kappa > \ln(22)$ were established in YM-059 for continuum limits.
+   - However, YM-059's accepted scope was strictly limited to fixed-cutoff summability ($a > 0$, finite scale count $n = \lfloor \log_L(1/am_0) \rfloor < \infty$, Lemma `YM-058F-FIXED-CUTOFF-POLYMER-SUMMABILITY`).
+   - YM-059 explicitly isolated continuum-uniform summability as an open downstream blocker: Lemma `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS`. Bootstrapping continuum-uniform bounds from fixed-cutoff convergence was an invalid circular inference.
+
+3. **Defect 3: Toy Scalar Arithmetic vs Actual Gauge-Theory Non-Lifting Gap:**
+   - Section 5.5 of YM-060 and Test 22 substituted chosen scalar constants $\Sigma_0 = 1.8472$ and $\lambda_{\mathrm{scale}} = 0.5$ into a geometric series, confirming $1.8472 / (1 - 0.5) = 3.6944 < 4.0$.
+   - This arithmetic check verified only scalar summation, not that 4D non-Abelian Yang-Mills gauge theory satisfies that contraction across all scales, volumes, and source sectors.
+   - The non-lifting gap between tree-level marginal scaling ($\lambda_{\mathrm{tree}} = 1.0$) and the assumed toy model ($\lambda_{\mathrm{toy}} = 0.5$) is strictly positive:
+     $$\Delta_{\mathrm{tree\_gap}} = \lambda_{\mathrm{tree}} - \lambda_{\mathrm{toy}} = 1.0 - 0.5 = 0.5 > 0.$$
+   - Test 22 was a scalar toy model certificate that did not lift to the full quantum field theory.
+
+4. **Defect 4: Ungrounded Assertion of Thermodynamic Limit from Numerical Decay:**
+   - Section 6 of YM-060 asserted thermodynamic infinite-volume limit existence based on numerical point-evaluations $\exp(-5) \approx 0.0067$ and $\exp(-10) \approx 0.000045$, without a source-bound boundary comparison proof.
+   - In Bałaban's multiscale cluster expansion with grounded boundary conditions on $\partial \Lambda$, establishing Cauchy convergence in volume requires controlling boundary modified trees, boundary links, and exterior connections across nested domains $\Lambda \subset \Lambda^\prime$.
+   - A numerical exponential is not a proof of thermodynamic Cauchy convergence.
+
+---
+
+### 2. Rigorous Separation & Epistemic Scope Repair
+
+1. **What Remains Rigorously Established:**
+   - **Lemma `YM-057F-MULTISCALE-POLYMER-RECURRENCE`:** Single-step marked polymer activity recurrence $\mathcal{I}_{\alpha^{(j+1)}} = \mathcal{R}(\mathcal{I}_{\alpha^{(j)}}, K_j^{(1)}, C_j)$ and covariance spatial decay $|C_j(x, y)| \le C_0 L^{-2j} \exp(-m_0 L^{-j} |x-y|)$ (YM-058).
+   - **Lemma `YM-058F-FIXED-CUTOFF-POLYMER-SUMMABILITY`:** Tree-graph growth $\mathcal{N}(d) \le c_0^d$ ($c_0 \le 22$), entropy threshold $\kappa_{\mathrm{crit}} = \ln(22)$, refutation of spatial decay sufficiency ($\Delta_{\mathrm{div}} = 1.2 > 0$ for $\kappa_0 \approx 2.3026$), scale $j=1$ convergence ($\Delta_{\mathrm{conv}} \approx 0.35122 > 0, \Sigma_1 \le 1.8472$), and finite-scale summability for fixed UV cutoff $a > 0$ ($n < \infty$) (YM-059).
+
+2. **What Is Restored to OPEN:**
+   - **Cutoff-Uniform Multiscale Summability ($a \to 0, n \to \infty$):** Whether the sum over infinitely many scales $\sum_{j=0}^\infty \sum_\alpha \|\mathcal{I}_{\alpha^{(j)}}\|_{B_j}$ remains uniformly bounded as $a \to 0$ depends on controlling operator anomalous dimensions, the gradient-flow smoothing transition, and large-field remainder sums $\sum_j \mathcal{R}_{\mathrm{large}}^{(j)}$ across the non-perturbative infrared crossover (`E-CROSSOVER`). This remains strictly **OPEN**.
+   - **Thermodynamic Infinite-Volume Limit Control ($|\Lambda| \to \infty$):** Whether the infinite-volume limit $\lim_{|\Lambda| \to \infty} \langle \mathcal{O}(f) \rangle_\Lambda$ exists uniquely and independently of boundary conditions on $\partial \Lambda$ remains strictly **OPEN**.
+
+---
+
+### 3. Superseding Lemma Classification
+
+**LEMMA `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS` (Cutoff-Uniform Multiscale Cluster Bounds and Thermodynamic Limit Control under Bałaban RG):**
+- **Prior Status in YM-060:** *Incorrectly claimed as proved within stated hypotheses.*
+- **Corrected Status under YM-060R:** **CONDITIONALLY_BLOCKED_AND_OPEN** (`CONTINUUM_UNIFORM_SUMMABILITY_AND_THERMODYNAMIC_LIMIT_OPEN`).
+- **Unresolved Downstream Hypotheses:**
+  1. *Hypothesis 1 (Inter-Scale Contraction):* Establishing that the marked operator activity contracts by $\lambda_j < 1$ uniformly across all scales $j \ge 0$, accounting for operator dimension and gradient flow smoothing;
+  2. *Hypothesis 2 (Crossover Remainder Control):* Controlling the large-field remainder accumulation $\sum_{j=0}^\infty \mathcal{R}_{\mathrm{large}}^{(j)} < \infty$ across the non-perturbative infrared crossover (`E-CROSSOVER`);
+  3. *Hypothesis 3 (Thermodynamic Boundary Decoupling):* Proving Cauchy convergence across nested spatial domains $|\langle \mathcal{O} \rangle_\Lambda - \langle \mathcal{O} \rangle_{\Lambda^\prime}| \le C(f) \exp(-c \, \operatorname{dist}(\operatorname{supp} f, \partial \Lambda))$ with source-grounded boundary conditions.
+
+---
+
+### 4. Downstream Blockers Reaffirmed
+
+The standing governance boundaries are strictly restored:
+- **Lemma `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS`:** **OPEN**;
+- **Lemma `YM-060F-CONTINUUM-WIGHTMAN-RECONSTRUCTION-AND-SPECTRAL-GAP`:** **OPEN**;
+- **Task `YM-016` (Continuum Reconstruction):** **BLOCKED**;
+- **Constitutional Invariants:** `goal_complete = false`, `clay_problem = OPEN_AND_UNSOLVED`, `P3 = OPEN`, `E-CROSSOVER = OPEN`, `E-UV-FLOWED = PARTIAL_PROGRESS`, `STRUCTURAL_NO_GO_COUNT = 0`.
+
 
 
 

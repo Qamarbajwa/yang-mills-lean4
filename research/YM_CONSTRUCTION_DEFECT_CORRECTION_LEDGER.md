@@ -382,6 +382,24 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
    - Isolated downstream blocker: Lemma `YM-060F-CONTINUUM-WIGHTMAN-RECONSTRUCTION-AND-SPECTRAL-GAP` (Osterwalder-Schrader / Wightman continuum limit reconstruction, relativistic invariance, and spectral mass gap from Bałaban effective actions).
 
 
+## CDC-060R: ADVERSARIAL AUDIT, EPISTEMIC SCOPE REPAIR, AND RESTORATION OF CUTOFF-UNIFORM MULTISCALE CLUSTER BOUNDS AND THERMODYNAMIC LIMIT CONTROL TO OPEN
+
+1. **Defect 1: Unsubstantiated assertion of inter-scale contraction ($\lambda_{\mathrm{scale}} < 1$):**
+   - In YM-060, inter-scale contraction $\lambda_{\mathrm{scale}} = L^{-\epsilon_0} < 1$ and $\Sigma_j \le C_0 \lambda_{\mathrm{scale}}^j$ were asserted without deriving $\epsilon_0 > 0$ from Bałaban's gauge-theory recurrence. For marginal dimension-4 operators, tree-level scaling is $\lambda_{\mathrm{tree}} = 1.0$; contraction requires positive anomalous dimensions or flow smoothing on scales $L^j \ge \sqrt{t}$.
+   - **Correction:** Formally refuted unconditioned geometric contraction across all scales. Restored cutoff-uniform multiscale summability to OPEN.
+2. **Defect 2: Circular reliance on YM-059 fixed-cutoff summability:**
+   - Bootstrapping continuum-uniform bounds from fixed-cutoff convergence (YM-059), which had explicitly left continuum-uniform summability open as Lemma `YM-059F`.
+   - **Correction:** Rigorously separated fixed-cutoff summability (Lemma `YM-058F`, PROVED) from cutoff-uniform continuum summability (Lemma `YM-059F`, OPEN).
+3. **Defect 3: Toy scalar arithmetic vs actual gauge-theory non-lifting gap:**
+   - Test 22 verified only scalar geometric series arithmetic ($1.8472 / (1 - 0.5) = 3.6944 < 4.0$). It failed to verify gauge-theory RG behavior, overlooking the non-lifting tree gap $\Delta_{\mathrm{tree\_gap}} = \lambda_{\mathrm{tree}} - \lambda_{\mathrm{toy}} = 1.0 - 0.5 = 0.5 > 0$.
+   - **Correction:** Implemented durable Test 23 certifying the non-lifting gap $\Delta_{\mathrm{tree\_gap}} = 0.5 > 0$ and open status bindings.
+4. **Defect 4: Ungrounded assertion of thermodynamic limit from numerical point evaluation:**
+   - Asserting thermodynamic Cauchy convergence from numerical evaluation of $\exp(-5)$ and $\exp(-10)$ without a source-bound boundary comparison proof.
+   - **Correction:** Proved that boundary conditions on $\partial \Lambda$ modify the grounded tree and active bonds; restored thermodynamic limit existence to OPEN.
+5. **Superseding Lemma Classification:**
+   - Lemma `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS` is formally re-classified as **CONDITIONALLY_BLOCKED_AND_OPEN** (`CONTINUUM_UNIFORM_SUMMABILITY_AND_THERMODYNAMIC_LIMIT_OPEN`).
+
+
 
 
 

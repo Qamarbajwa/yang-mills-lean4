@@ -250,6 +250,12 @@ Primary YMH Lemma4.5 p54 ->Lemma5.5 p60 was text rechecked at https://www.pure.e
 4. **Proved Lemma & downstream blocker:** Lemma `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS` is formally proved. Isolates downstream blocker: Lemma `YM-060F-CONTINUUM-WIGHTMAN-RECONSTRUCTION-AND-SPECTRAL-GAP` (Osterwalder-Schrader / Wightman continuum limit reconstruction, relativistic invariance, and spectral mass gap from Bałaban effective actions). Earliest global 4D failure remains UNESTABLISHED; structural no-go count 0.
 
 
+## FA-001 adversarial audit and restoration of continuum summability to open / YM-060R
+
+1. **Refutation of unconditioned inter-scale contraction:** Marginal dimension-4 gauge operators scale as $\lambda_{\mathrm{tree}} = 1.0$ at tree level; contraction $\lambda < 1$ requires positive anomalous dimensions or flow smoothing on scales $L^j \ge \sqrt{t}$, which does not hold on UV scales $a \le L^j \le \sqrt{t}$. Non-lifting tree gap: $\Delta_{\mathrm{tree\_gap}} = \lambda_{\mathrm{tree}} - \lambda_{\mathrm{toy}} = 1.0 - 0.5 = 0.5 > 0$.
+2. **Restoration of continuum summability and thermodynamic limit to OPEN:** Lemma `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS` is restored to OPEN (`CONTINUUM_UNIFORM_SUMMABILITY_AND_THERMODYNAMIC_LIMIT_OPEN`). Fixed-cutoff marked polymer summability (Lemma `YM-058F`) remains proved. Earliest global 4D failure remains UNESTABLISHED; structural no-go count 0.
+
+
 
 
 

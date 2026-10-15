@@ -434,6 +434,22 @@ Source mechanisms: own finite row-space/kernel target-descent theorem, positive 
 - Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
 
 
+## XFER-YM-ONE-TERM-PULLBACK-060R: Adversarial Audit, Epistemic Scope Repair, and Restoration of Cutoff-Uniform Cluster Bounds and Thermodynamic Limit to OPEN
+
+- Source: Bałaban CMP 122, 175–202 (1989), CMP 139, 281–305 (1991), and CMP 147, 445–489 (1992).
+- Target: YM-015F degree-one physical marked observable insertion under RG transport.
+- Verified mapping:
+  - Tree-level marginal scaling barrier: dimension-4 gauge observables have tree-level scaling factor $L^{4 - d_{\mathrm{op}}} = L^0 = 1.0$. Geometric contraction $\lambda < 1$ requires positive anomalous dimensions or gradient-flow damping $\exp(-t \Delta)$ only when $L^j \ge \sqrt{t}$, leaving UV scales $a \le L^j \le \sqrt{t}$ uncontracted.
+  - Positive non-lifting tree gap: $\Delta_{\mathrm{tree\_gap}} = \lambda_{\mathrm{tree}} - \lambda_{\mathrm{toy}} = 1.0 - 0.5 = 0.5 > 0$, refuting the unconditioned transfer of scalar toy contraction $\lambda_{\mathrm{scale}} = 0.5$ to full non-Abelian gauge theory.
+  - Non-contractive accumulation defect: $\Delta_{\mathrm{accum}} = (n+1)\Sigma_0 - C_{\mathrm{target}} = 5.236 > 0$ for $n=4$, proving divergence $(n+1)\Sigma_0 \to \infty$ as $a \to 0$ ($n \to \infty$) under marginal scaling.
+  - Rigorous separation of fixed-cutoff summability ($a > 0$, finite scale count $n < \infty$, Lemma `YM-058F-FIXED-CUTOFF-POLYMER-SUMMABILITY`, proved in YM-059) from continuum-uniform summability as $a \to 0$ ($n \to \infty$).
+  - Thermodynamic boundary decoupling obstruction: boundary conditions on $\partial \Lambda$ alter $T_0$, active bonds $\mathbb{B}_0$, and link cutoffs; point-evaluating numerical exponentials $\exp(-5), \exp(-10)$ does not establish Cauchy convergence in volume.
+  - Epistemic restoration: Lemma `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS` restored to `CONDITIONALLY_BLOCKED_AND_OPEN` (`CONTINUUM_UNIFORM_SUMMABILITY_AND_THERMODYNAMIC_LIMIT_OPEN`). Precursor task YM-060 superseded.
+- Open bridge: Cutoff-Uniform Multiscale Cluster Bounds (Lemma `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS`), Continuum Wightman Reconstruction and Spectral Gap (Lemma `YM-060F-CONTINUUM-WIGHTMAN-RECONSTRUCTION-AND-SPECTRAL-GAP`), crossing infrared crossover `E-CROSSOVER`.
+- Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
+
+
+
 
 
 
