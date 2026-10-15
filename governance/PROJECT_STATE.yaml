@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 74
+revision: 75
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "d92f40a12e8b09068b5774a8a0cce06c88f7b7cb"
-  scientific_candidate_sha: "pending_ym060r_freeze"
-  review_bound_sha: "pending_ym060r_freeze"
+  head: "0d03efdc9bb6a3bd27b40fa9e728319e6d12192d"
+  scientific_candidate_sha: "d493fa913532a7b2c802fbffa64c55e616192e28"
+  review_bound_sha: "d493fa913532a7b2c802fbffa64c55e616192e28"
   evidence_closeout_head: "d92f40a12e8b09068b5774a8a0cce06c88f7b7cb"
-  closeout_resolution: "evidence_closeout_head binds preceding completed YM-060 closeout commit (d92f40a12e8b09068b5774a8a0cce06c88f7b7cb); scientific_candidate_sha and review_bound_sha bind active YM-060R candidate once frozen; resolve authoritative current HEAD dynamically from Git."
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-060 closeout commit (d92f40a12e8b09068b5774a8a0cce06c88f7b7cb); scientific_candidate_sha and review_bound_sha bind active YM-060R candidate (d493fa913532a7b2c802fbffa64c55e616192e28); resolve authoritative current HEAD dynamically from Git."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,10 +32,10 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 73
-  last_updated_at: "2026-10-15T22:05:00Z"
+  last_expected_revision: 74
+  last_updated_at: "2026-10-15T22:15:00Z"
   active_contract: "YM-015F-JET-002B"
-  frozen_candidate: "pending_ym060r_freeze"
+  frozen_candidate: "d493fa913532a7b2c802fbffa64c55e616192e28"
 
 current_objective: YM-015F-JET-002B
 
@@ -49,7 +49,7 @@ objectives:
     atlas_writer_and_coordinator: "primary-worker"
     reviewer_path: "verification/raw/YM-060R_E4_RAW_20261010.md"
     acceptor: "verification/YM-060R_TECHNICAL_ACCEPTANCE.md"
-    status: IN_PROGRESS
+    status: SCIENTIFICALLY_ACCEPTED
     scope_limitation: "CONTINUUM_UNIFORM_SUMMABILITY_AND_THERMODYNAMIC_LIMIT_RESTORED_TO_OPEN"
   - id: YM-060
     scope_in: "Cutoff-uniform multiscale cluster bounds, inductive norm estimates across scales j = 0, ..., n under Bałaban RG (Lemma YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS), geometric inter-scale contraction lambda_scale < 1, thermodynamic infinite-volume limit control (|Lambda| -> inf), refutation of non-contractive multiscale accumulation, isolation of downstream obligation (continuum Wightman reconstruction and spectral gap), and Test 22 finite certificate"
