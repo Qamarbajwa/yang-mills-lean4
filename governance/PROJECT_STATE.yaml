@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 78
+revision: 79
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "4673254cb6a380eafeff05315ff7c92bdf67eb49"
-  scientific_candidate_sha: "pending_ym061r_freeze"
-  review_bound_sha: "pending_ym061r_freeze"
+  head: "fc0b969df0bfa0ddd4601f99508fde6fc1da4e99"
+  scientific_candidate_sha: "3e6783ca244e9e8194f64ecf729416bfee826299"
+  review_bound_sha: "3e6783ca244e9e8194f64ecf729416bfee826299"
   evidence_closeout_head: "4673254cb6a380eafeff05315ff7c92bdf67eb49"
-  closeout_resolution: "evidence_closeout_head binds preceding completed YM-061 closeout commit (4673254cb6a380eafeff05315ff7c92bdf67eb49); scientific_candidate_sha and review_bound_sha bind active YM-061R candidate once frozen; resolve authoritative current HEAD dynamically from Git."
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-061 closeout commit (4673254cb6a380eafeff05315ff7c92bdf67eb49); scientific_candidate_sha and review_bound_sha bind accepted YM-061R candidate (3e6783ca244e9e8194f64ecf729416bfee826299); resolve authoritative current HEAD dynamically from Git."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,10 +32,10 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 77
-  last_updated_at: "2026-10-15T23:10:00Z"
+  last_expected_revision: 78
+  last_updated_at: "2026-10-15T23:15:00Z"
   active_contract: "YM-015F-JET-002B"
-  frozen_candidate: "pending_ym061r_freeze"
+  frozen_candidate: "3e6783ca244e9e8194f64ecf729416bfee826299"
 
 current_objective: YM-015F-JET-002B
 
@@ -49,7 +49,7 @@ objectives:
     atlas_writer_and_coordinator: "primary-worker"
     reviewer_path: "verification/raw/YM-061R_E4_RAW_20261010.md"
     acceptor: "verification/YM-061R_TECHNICAL_ACCEPTANCE.md"
-    status: IN_PROGRESS
+    status: SCIENTIFICALLY_ACCEPTED
     scope_limitation: "RECONCILED_LOCAL_NORMALIZATION_AND_GAUGE_QUOTIENT_CONTINUUM_AND_THERMODYNAMIC_LIMIT_OPEN"
   - id: YM-061
     scope_in: "Primary-source audit of first density-changing renormalization step in Bałaban 4D construction (CMP 122 eq. (1.76)), physical observable transport, factor-by-factor measure transformation, fixed-vacuum vs moving coordinates, exact quotient obstruction, and Test 24 finite certificate"
