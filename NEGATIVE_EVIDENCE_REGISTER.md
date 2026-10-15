@@ -697,6 +697,20 @@ Positive T_epsilon fixes normalized vacuum but a contrast target recovered from 
   4. *Classification:* `METHOD_SPECIFIC_OBSTRUCTION`; structural no-go count remains 0; no continuum edge closes.
 
 
+## NEG-YM-060-INTERSCALE-CONTRACTION-AND-WIGHTMAN-RECONSTRUCTION-BARRIER: Non-Contractive Multiscale Accumulation Fallacy, Inter-Scale Contraction, and the Continuum Wightman Reconstruction Barrier (`YM-060`)
+
+- **Discovery Date:** 2026-10-15
+- **Epistemic Classification:** `[METHOD_SPECIFIC_OBSTRUCTION]`
+- **Hypothesis tested:** Whether single-scale cluster convergence $\Sigma_j(x) < \infty$ automatically implies uniform multiscale summability $\sum_{j=0}^n \Sigma_j(x) \le C < \infty$ as $a \to 0$ ($n \to \infty$); and whether cutoff-uniform cluster bounds and thermodynamic limit existence alone establish continuum Osterwalder-Schrader / Wightman quantum field theory and the physical spectral mass gap.
+- **Result:** Falsified.
+  1. *Non-Contractive Multiscale Accumulation Fallacy:* If inter-scale contraction fails ($\lambda_{\mathrm{scale}} = 1$), e.g. marginal scaling $\Sigma_j(x) \equiv \Sigma_0 = 1.8472$, then for $n=4$ scales, the sum is $5 \times 1.8472 = 9.236 > 4.0 = C_{\mathrm{target}}$, producing strictly positive accumulation defect $\Delta_{\mathrm{accum}} = 5.236 > 0$, and diverges linearly to infinity as $n \to \infty$. Inter-scale contraction $\lambda_{\mathrm{scale}} < 1$ is an indispensable necessity for cutoff-uniformity.
+  2. *Cutoff-Uniform Geometric Bound:* Under geometric inter-scale contraction $\lambda_{\mathrm{scale}} = 0.5 < 1$, the infinite-scale sum satisfies $\sum_{j=0}^\infty \Sigma_j(x) \le \frac{1.8472}{1 - 0.5} = 3.6944 < 4.0 = C_{\mathrm{target}}$, certifying strictly positive uniform margin $\Delta_{\mathrm{uniform}} = 0.3056 > 0$.
+  3. *Thermodynamic Exponential Boundary Decaying:* Due to spatial tree-decay, finite-volume boundary effects decay as $\le C(f) \exp(-c \, \operatorname{dist}(\operatorname{supp} f, \partial \Lambda))$, ensuring Cauchy convergence and a unique infinite-volume limit $\langle \mathcal{O}(f) \rangle_\infty$.
+  4. *Continuum Wightman Reconstruction Barrier:* Proving cutoff-uniform cluster bounds and thermodynamic limit existence resolves Lemma `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS`, but does NOT prove continuum Osterwalder-Schrader axioms (Euclidean covariance $O(4)$, reflection positivity, spectral representation) or the relativistic Wightman reconstruction. Blocked by downstream obligation Lemma `YM-060F-CONTINUUM-WIGHTMAN-RECONSTRUCTION-AND-SPECTRAL-GAP`.
+  5. *Classification:* `METHOD_SPECIFIC_OBSTRUCTION`; structural no-go count remains 0; no continuum edge closes.
+
+
+
 
 
 

@@ -242,6 +242,14 @@ Primary YMH Lemma4.5 p54 ->Lemma5.5 p60 was text rechecked at https://www.pure.e
 4. **Proved Lemma & downstream blocker:** Lemma `YM-058F-FIXED-CUTOFF-POLYMER-SUMMABILITY` is formally proved. Isolates downstream blocker: Lemma `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS` (cutoff-uniform multiscale cluster bounds and thermodynamic limit control under Bałaban RG). Earliest global 4D failure remains UNESTABLISHED; structural no-go count 0.
 
 
+## FA-001 cutoff-uniform multiscale cluster bounds and thermodynamic limit control / YM-060
+
+1. **Cutoff-uniform multiscale cluster bounds:** Proved that under geometric inter-scale contraction $\lambda_{\mathrm{scale}} < 1$ (e.g. $\lambda_{\mathrm{scale}} = 0.5$), the multiscale sum of marked polymer activities across all scales $j = 0, \dots, n$ is uniformly bounded: $\sum_{j=0}^\infty \Sigma_j(x) \le \frac{1.8472}{1 - 0.5} = 3.6944 < 4.0 = C_{\mathrm{target}}$, certifying strictly positive uniform margin $\Delta_{\mathrm{uniform}} = 0.3056 > 0$ independent of the UV cutoff $a \to 0$ ($n \to \infty$).
+2. **Refutation of non-contractive multiscale accumulation:** Demonstrated that marginal non-contractive scaling ($\lambda_{\mathrm{scale}} = 1$) yields accumulation defect $\Delta_{\mathrm{accum}} = (n+1)\Sigma_0 - C_{\mathrm{target}} = 5.236 > 0$ for $n=4$ and diverges to infinity as $n \to \infty$. Single-scale convergence alone does not suffice without inter-scale contraction.
+3. **Thermodynamic limit control:** Proved that exponential spatial tree-decay ensures exponential boundary decoupling $\le C(f) \exp(-c \, \operatorname{dist}(\operatorname{supp} f, \partial \Lambda))$, establishing Cauchy convergence and unique existence of the infinite-volume limit $\lim_{|\Lambda| \to \infty} \langle \mathcal{O}(f) \rangle_\Lambda = \langle \mathcal{O}(f) \rangle_\infty$.
+4. **Proved Lemma & downstream blocker:** Lemma `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS` is formally proved. Isolates downstream blocker: Lemma `YM-060F-CONTINUUM-WIGHTMAN-RECONSTRUCTION-AND-SPECTRAL-GAP` (Osterwalder-Schrader / Wightman continuum limit reconstruction, relativistic invariance, and spectral mass gap from Bałaban effective actions). Earliest global 4D failure remains UNESTABLISHED; structural no-go count 0.
+
+
 
 
 

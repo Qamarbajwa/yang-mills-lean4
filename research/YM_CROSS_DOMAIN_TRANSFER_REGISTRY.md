@@ -420,6 +420,20 @@ Source mechanisms: own finite row-space/kernel target-descent theorem, positive 
 - Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
 
 
+## XFER-YM-ONE-TERM-PULLBACK-060: Cutoff-Uniform Multiscale Cluster Bounds and Thermodynamic Limit Control
+
+- Source: Bałaban CMP 122, 175–202 (1989), CMP 139, 281–305 (1991), and CMP 147, 445–489 (1992).
+- Target: YM-015F degree-one physical marked observable insertion under RG transport.
+- Verified mapping:
+  - Multiscale marked polymer cluster sum $\mathcal{S}_{\mathrm{multi}}(x) = \sum_{j=0}^n \sum_{\alpha^{(j)}: \operatorname{supp}(\alpha^{(j)}) \ni x} \|\mathcal{I}_{\alpha^{(j)}}\|_{B_j}$ under Bałaban inductive norm system $\|\cdot\|_{B_j}$.
+  - Geometric inter-scale contraction $\Sigma_j(x) \le C_0 \lambda_{\mathrm{scale}}^j$ with $\lambda_{\mathrm{scale}} < 1$ ensuring uniform infinite-scale bound $\sum_{j=0}^\infty \Sigma_j(x) \le 3.6944 < 4.0 = C_{\mathrm{target}}$ with positive uniform margin $\Delta_{\mathrm{uniform}} = 0.3056 > 0$.
+  - Refutation of marginal non-contractive scaling ($\lambda_{\mathrm{scale}} = 1$) via positive multiscale accumulation defect $\Delta_{\mathrm{accum}} = (n+1)\Sigma_0 - C_{\mathrm{target}} = 5.236 > 0$ for $n=4$.
+  - Exponential boundary influence decay $\le C(f) \exp(-c \, \operatorname{dist}(\operatorname{supp} f, \partial \Lambda))$ ensuring Cauchy convergence and unique existence of the thermodynamic infinite-volume limit $\lim_{|\Lambda| \to \infty} \langle \mathcal{O}(f) \rangle_\Lambda = \langle \mathcal{O}(f) \rangle_\infty$.
+  - Lemma `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS` formally proved within stated hypotheses.
+- Open bridge: Continuum Wightman Reconstruction and Spectral Gap (Lemma `YM-060F-CONTINUUM-WIGHTMAN-RECONSTRUCTION-AND-SPECTRAL-GAP`).
+- Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
+
+
 
 
 

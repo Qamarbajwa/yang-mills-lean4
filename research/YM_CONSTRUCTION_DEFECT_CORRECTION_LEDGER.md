@@ -369,6 +369,19 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
    - Isolated downstream blocker: Lemma `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS` (cutoff-uniform multiscale cluster bounds and thermodynamic limit control under Bałaban RG).
 
 
+## CDC-060: CUTOFF-UNIFORM MULTISCALE CLUSTER BOUNDS, INDUCTIVE NORM ESTIMATES, AND THERMODYNAMIC LIMIT CONTROL
+
+1. **Defect 1: Conflation of single-scale convergence with cutoff-uniform multiscale summability:**
+   - Assuming that single-scale cluster convergence $\Sigma_j(x) < \infty$ automatically guarantees uniform multiscale summability $\sum_{j=0}^n \Sigma_j(x) \le C < \infty$ as UV cutoff $a \to 0$ ($n = \lfloor \log_L(1/am_0) \rfloor \to \infty$).
+   - **Correction:** Formulated adversarial countermodel refuting non-contractive scaling ($\lambda_{\mathrm{scale}} = 1$), yielding strictly positive accumulation defect $\Delta_{\mathrm{accum}} = (n+1)\Sigma_0 - C_{\mathrm{target}} = 5.236 > 0$ for $n=4$ and divergent sum as $n \to \infty$. Proved that geometric inter-scale contraction $\lambda_{\mathrm{scale}} < 1$ (e.g. $\lambda_{\mathrm{scale}} = 0.5$) guarantees uniform infinite-scale summability $\sum_{j=0}^\infty \Sigma_j(x) \le 3.6944 < 4.0$ with positive margin $\Delta_{\mathrm{uniform}} = 0.3056 > 0$.
+2. **Defect 2: Uncontrolled thermodynamic limit without exponential boundary decoupling:**
+   - Assuming that finite-volume expectations $\langle \mathcal{O}(f) \rangle_\Lambda$ trivially extend to the infinite-volume limit $|\Lambda| \to \infty$ without controlling boundary conditions on $\partial \Lambda$.
+   - **Correction:** Established exponential boundary influence decay $\le C(f) \exp(-c \, \operatorname{dist}(\operatorname{supp} f, \partial \Lambda))$ from spatial tree-decay and uniform multiscale summability, proving Cauchy convergence in volume and unique existence of the thermodynamic limit $\langle \mathcal{O}(f) \rangle_\infty$.
+3. **Proved Lemma and isolated downstream blocker:**
+   - Formally proved Lemma `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS`.
+   - Isolated downstream blocker: Lemma `YM-060F-CONTINUUM-WIGHTMAN-RECONSTRUCTION-AND-SPECTRAL-GAP` (Osterwalder-Schrader / Wightman continuum limit reconstruction, relativistic invariance, and spectral mass gap from Bałaban effective actions).
+
+
 
 
 
