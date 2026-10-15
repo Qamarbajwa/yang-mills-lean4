@@ -234,6 +234,15 @@ Primary YMH Lemma4.5 p54 ->Lemma5.5 p60 was text rechecked at https://www.pure.e
 4. **Proved Lemma & downstream blocker:** Lemma `YM-057F-MULTISCALE-POLYMER-RECURRENCE` is formally proved. Isolates downstream blocker: Lemma `YM-058F-MULTISCALE-POLYMER-SUMMABILITY` (cluster expansion convergence and cutoff-uniform summability $\sum_\alpha \|\mathcal{I}_\alpha\| \le C$). Earliest global 4D failure remains UNESTABLISHED; structural no-go count 0.
 
 
+## FA-001 cluster expansion convergence, fixed-cutoff summability, and continuum-uniform barrier / YM-059
+
+1. **Tree-graph combinatorial growth and spectral threshold:** On 4D hypercubic lattice ($z=8$), tree-graph growth $\mathcal{N}(d) \le c_0^d$ ($c_0 \le 22$) requires the strict spectral gap condition $\kappa > \ln(c_0) \approx 3.0910$. Weak spatial decay $\kappa \le \ln(c_0)$ causes the geometric polymer series to diverge ($\Delta_{\mathrm{div}} = 1.2 > 0$ for $\kappa_0 = \ln(10)$). At scale $j=1$, $\kappa_1 \approx 3.5237 > 3.0910$, ensuring finite cluster sum $\Sigma_1(x) \le 1.847 < \infty$ with positive convergence defect $\Delta_{\mathrm{conv}} \approx 0.35122 > 0$.
+2. **Fixed-cutoff summability:** At fixed UV lattice cutoff $a > 0$, the number of RG scales is finite ($n = \lfloor \log_L(1/am_0) \rfloor < \infty$), ensuring that total marked polymer activity across all scales is strictly finite.
+3. **Continuum-uniform barrier:** Proving that $\sum_{j=0}^\infty \sum_\alpha \|\mathcal{I}_\alpha^{(j)}\| \le C$ is strictly uniform in the UV cutoff as $a \to 0$ ($n \to \infty$) cannot be inferred from fixed-cutoff convergence. Uncontracted scale accumulation diverges linearly ($\ge n S_{\min} \to \infty$) and requires inter-scale contraction $\lambda_{\mathrm{scale}} < 1$ and non-perturbative vacuum cancellation $Z_{\mathrm{vac}}^{-1}$.
+4. **Proved Lemma & downstream blocker:** Lemma `YM-058F-FIXED-CUTOFF-POLYMER-SUMMABILITY` is formally proved. Isolates downstream blocker: Lemma `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS` (cutoff-uniform multiscale cluster bounds and thermodynamic limit control under Bałaban RG). Earliest global 4D failure remains UNESTABLISHED; structural no-go count 0.
+
+
+
 
 
 

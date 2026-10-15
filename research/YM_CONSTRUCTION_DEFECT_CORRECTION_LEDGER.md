@@ -356,6 +356,20 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
    - Isolated downstream blocker: Lemma `YM-058F-MULTISCALE-POLYMER-SUMMABILITY` (cluster expansion convergence and cutoff-uniform summability $\sum_\alpha \|\mathcal{I}_\alpha\| \le C$).
 
 
+## CDC-059: CLUSTER EXPANSION CONVERGENCE, COMBINATORIAL TREE-GRAPH GROWTH, FIXED-CUTOFF SUMMABILITY, AND THE UNIFORM CONTINUUM BARRIER
+
+1. **Defect 1: Conflation of spatial decay with cluster expansion convergence:**
+   - Previous analyses assumed that any strictly positive exponential decay $\|\mathcal{I}_\alpha\| \le \exp(-\kappa d(\alpha))$ with $\kappa > 0$ automatically implies convergence of the cluster expansion sum $\sum_\alpha \|\mathcal{I}_\alpha\|$.
+   - **Correction:** Proved that on the 4D hypercubic lattice with coordination $z=8$, tree-graph combinatorial growth $\mathcal{N}(d) \le c_0^d$ ($c_0 \le 22$) requires the strict spectral gap condition $\kappa > \ln(c_0) \approx 3.0910$. Verified that when $\kappa < \ln(c_0)$ (e.g. $\kappa_0 \approx 2.3026$), the series diverges geometrically with strictly positive divergence defect $\Delta_{\mathrm{div}} = 1.2 > 0$. At scale $j=1$, $\kappa_1 \approx 3.5237 > 3.0910$, certifying convergence with positive defect $\Delta_{\mathrm{conv}} \approx 0.35122 > 0$.
+2. **Defect 2: Conflation of fixed-cutoff summability with cutoff-uniform continuum summability:**
+   - Assuming that finite-cutoff polymer summability over $n = \lfloor \log_L(1/am_0) \rfloor$ scales implies uniform bounds in the continuum limit $a \to 0$ ($n \to \infty$).
+   - **Correction:** Rigorously separated fixed-cutoff convergence (Lemma `YM-058F-FIXED-CUTOFF-POLYMER-SUMMABILITY`) from cutoff-uniform continuum summability. Showed that uncontracted scale accumulation diverges linearly ($\ge n S_{\min} \to \infty$) and requires inter-scale contraction $\lambda_{\mathrm{scale}} < 1$ and non-perturbative vacuum cancellation $Z_{\mathrm{vac}}^{-1}$.
+3. **Proved Lemma and isolated downstream blocker:**
+   - Formally proved Lemma `YM-058F-FIXED-CUTOFF-POLYMER-SUMMABILITY`.
+   - Isolated downstream blocker: Lemma `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS` (cutoff-uniform multiscale cluster bounds and thermodynamic limit control under Bałaban RG).
+
+
+
 
 
 

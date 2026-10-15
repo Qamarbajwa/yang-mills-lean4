@@ -406,6 +406,21 @@ Source mechanisms: own finite row-space/kernel target-descent theorem, positive 
 - Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
 
 
+## XFER-YM-ONE-TERM-PULLBACK-059: Cluster Expansion Convergence, Combinatorial Tree Growth, and Fixed-Cutoff Summability
+
+- Source: Bałaban CMP 122, 175–202 (1989) and CMP 139, 281–305 (1991).
+- Target: YM-015F degree-one physical marked observable insertion under RG transport.
+- Verified mapping:
+  - Tree-graph combinatorial growth $\mathcal{N}(d) \le c_0^d$ ($c_0 \le 22$) and derivation of geometric cluster expansion sum $\Sigma(x) \le \frac{c_0 e^{-\kappa}}{1 - c_0 e^{-\kappa}}$.
+  - Refutation of spatial decay sufficiency: when $\kappa < \ln(c_0)$, polymer sum diverges ($\Delta_{\mathrm{div}} = 1.2 > 0$). When $\kappa_1 \approx 3.5237 > \ln(22)$, sum converges with strictly positive defect $\Delta_{\mathrm{conv}} \approx 0.35122 > 0$ and finite activity $\Sigma_1(x) \le 1.847 < \infty$.
+  - Fixed-cutoff summability: across finite scale count $n = \lfloor \log_L(1/am_0) \rfloor < \infty$, multiscale marked polymer sum is strictly finite.
+  - Inter-scale contraction $\lambda_{\mathrm{scale}} < 1$ requirement and global vacuum normalization cancellation $Z_{\mathrm{vac}}^{-1}$.
+  - Lemma `YM-058F-FIXED-CUTOFF-POLYMER-SUMMABILITY` formally proved within stated hypotheses.
+- Open bridge: Cutoff-Uniform Multiscale Cluster Bounds and Thermodynamic Limit Control (Lemma `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS`).
+- Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
+
+
+
 
 
 

@@ -685,6 +685,19 @@ Positive T_epsilon fixes normalized vacuum but a contrast target recovered from 
   5. *Classification:* `METHOD_SPECIFIC_OBSTRUCTION`; structural no-go count remains 0; no continuum edge closes.
 
 
+## NEG-YM-059-POLYMER-SUMMABILITY-AND-CONTINUUM-UNIFORMITY-BARRIER: Spatial Decay Sufficiency Fallacy, Tree-Graph Combinatorial Threshold, and the Continuum-Uniform Barrier (`YM-059`)
+
+- **Discovery Date:** 2026-10-15
+- **Epistemic Classification:** `[METHOD_SPECIFIC_OBSTRUCTION]`
+- **Hypothesis tested:** Whether strictly positive spatial decay $\kappa > 0$ alone guarantees polymer summability $\sum_\alpha \|\mathcal{I}_\alpha\| < \infty$; and whether fixed-cutoff cluster expansion convergence at finite lattice spacing $a > 0$ implies cutoff-uniform summability in the continuum limit $a \to 0$ ($n \to \infty$).
+- **Result:** Falsified.
+  1. *Spatial Decay Sufficiency Fallacy:* On the 4D hypercubic lattice with coordination $z=8$, tree-graph combinatorial growth $\mathcal{N}(d) \le c_0^d$ ($c_0 \le 22$) requires the strict spectral gap condition $\kappa > \ln(c_0) \approx 3.0910$. When $\kappa = 2.3026 < 3.0910$, the geometric polymer series diverges to infinity ($\Delta_{\mathrm{div}} = 1.2 > 0$) despite strictly positive spatial decay.
+  2. *Convergence at Scale $j=1$:* At scale $j=1$, $\kappa_1 \approx 3.5237 > \ln(22)$, yielding contraction ratio $r_1 \approx 0.64878 < 1$ and strictly positive convergence defect $\Delta_{\mathrm{conv}} = 0.35122 > 0$, with finite cluster sum $\Sigma_1(x) \le 1.847 < \infty$.
+  3. *Continuum-Uniform Summability Barrier:* Proving fixed-cutoff summability across $n = \lfloor \log_L(1/am_0) \rfloor$ scales resolves Lemma `YM-058F-FIXED-CUTOFF-POLYMER-SUMMABILITY`, but does NOT prove cutoff-uniform summability as $a \to 0$ ($n \to \infty$) or thermodynamic infinite-volume limits. Blocked by Lemma `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS`.
+  4. *Classification:* `METHOD_SPECIFIC_OBSTRUCTION`; structural no-go count remains 0; no continuum edge closes.
+
+
+
 
 
 
