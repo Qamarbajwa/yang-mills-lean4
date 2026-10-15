@@ -217,6 +217,16 @@ Primary YMH Lemma4.5 p54 ->Lemma5.5 p60 was text rechecked at https://www.pure.e
 5. **Proved Lemma & downstream blocker:** Lemma `YM-051F-DETERMINISTIC-CHART-OVERLAP` is formally proved. Isolates downstream blocker: Lemma `YM-056F-ACTION-SUPPRESSED-REMAINDER-BOUND` (weighted-measure tail estimates under Wilson action penalty). Earliest global 4D failure remains UNESTABLISHED; structural no-go count 0.
 
 
+## FA-001 action-suppressed remainder activity bounds, plaquette action penalty, and weighted-measure tail estimates / YM-057
+
+1. **Kinematic Haar measure suppression fallacy:** Pure Haar measure on $SU(2)$ has no coupling constant $g_k$; kinematic volume $\int dV^{\prime\prime} \chi_{\mathrm{chart-exit}} = \mathcal{O}(1)$ as $g_k \to 0$. Exponential tail suppression $\mathcal{O}(e^{-c/g_k^2})$ cannot arise from kinematic integration alone and strictly requires the dynamical Yang–Mills Wilson action.
+2. **Non-Abelian Stokes identity:** Oriented holonomy along fundamental cycle $C_b$ satisfies $V^{\prime\prime}(C_b) = \prod_{p \in \Sigma} U_p$ for any 2-chain $\Sigma$ with $\partial \Sigma = C_b$.
+3. **Cumulative plaquette action penalty lower bound:** By the geodesic triangle inequality and Cauchy-Schwarz on $SU(2)$, $S_{\Sigma}[V^{\prime\prime}] \ge \frac{(\delta_k^\prime)^2}{\operatorname{Area}(\Sigma)} > 0$ for all configurations in $\mathcal{R}_{\alpha, \mathrm{chart-exit}}$. Certified on the Test 18 exit configuration with exact rational action $S_p = 338/125$ and strictly positive action defect $\Delta_{\mathrm{action}} = 551/250 > 0$.
+4. **2D vs 4D minimal spanning surface scoping:** In 2D, spanning surface is unique. In 4D, non-uniqueness requires minimal spanning surface area $\operatorname{Area}_{\min}(C_b)$. Certified by `2D_PLAQUETTE_ACTION_CERTIFIED_4D_MINIMAL_SURFACE_BOUND_PROVED`.
+5. **Proved Lemma & downstream blocker:** Lemma `YM-056F-ACTION-SUPPRESSED-REMAINDER-BOUND` is formally proved. Isolates downstream blocker: Lemma `YM-057F-MULTISCALE-POLYMER-RECURRENCE` (multiscale marked polymer activity recurrence and covariance decomposition under Bałaban RG). Earliest global 4D failure remains UNESTABLISHED; structural no-go count 0.
+
+
+
 
 
 

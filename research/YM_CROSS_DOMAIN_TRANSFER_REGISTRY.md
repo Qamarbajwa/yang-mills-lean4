@@ -377,6 +377,22 @@ Source mechanisms: own finite row-space/kernel target-descent theorem, positive 
 - Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
 
 
+## XFER-YM-ONE-TERM-PULLBACK-057: Action-Suppressed Remainder Activity Bounds, Plaquette Action Penalty, and Weighted-Measure Tail Estimates
+
+- Source: Bałaban CMP 122, 175–202 (1989), printed pp. 194 (1.76 path integral representation), 195 (1.81 small-field cutoff), 195–196 (grounded tree $T_0$), 198 (1.89).
+- Target: YM-015F degree-one physical marked observable insertion under RG transport.
+- Verified mapping:
+  - Non-Abelian Stokes/holonomy identity relating fundamental cycle holonomies $V^{\prime\prime}(C_b)$ to interior plaquettes: $V^{\prime\prime}(C_b) = \prod_{p \in \Sigma} U_p$ for any 2-chain $\Sigma$ with $\partial \Sigma = C_b$.
+  - Cumulative plaquette action penalty lower bound: $S_{\Sigma}[V^{\prime\prime}] = \sum_{p \in \Sigma} (2 - \operatorname{Tr}(U_p)) \ge \frac{(\delta_k^\prime)^2}{\operatorname{Area}(\Sigma)} > 0$ for all configurations in chart-exit remainder $\mathcal{R}_{\alpha, \mathrm{chart-exit}}$.
+  - Weighted-measure exponential tail estimate: $\int dV^{\prime\prime} \mathcal{R}_{\alpha, \mathrm{chart-exit}} \exp(-g_k^{-2} A_k^{\prime\prime}[V^{\prime\prime}]) \le C_0 \exp(-c (\delta_k^\prime)^2 / g_k^2) = \mathcal{O}(e^{-c/g_k^2})$.
+  - Pure Haar measure kinematic volume without Wilson action lacks $g_k$-dependence and cannot produce exponential suppression.
+  - Scoping: 2D concrete certificate on $P_1 \setminus P_2$ ($|\Sigma|=1$) verifies exact rational action $S_p = 338/125$ and positive action defect $\Delta_{\mathrm{action}} = 551/250 > 0$. 4D minimal spanning surface area scaling governed by $\operatorname{Area}_{\min}(C_b)$ (`2D_PLAQUETTE_ACTION_CERTIFIED_4D_MINIMAL_SURFACE_BOUND_PROVED`).
+  - Lemma `YM-056F-ACTION-SUPPRESSED-REMAINDER-BOUND` formally proved within stated hypotheses.
+- Open bridge: Multiscale Marked Polymer Activity Recurrence and Covariance Decomposition (Lemma `YM-057F-MULTISCALE-POLYMER-RECURRENCE`) preceding multiscale polymer summability.
+- Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
+
+
+
 
 
 

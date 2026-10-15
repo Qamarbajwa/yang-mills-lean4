@@ -657,6 +657,21 @@ Positive T_epsilon fixes normalized vacuum but a contrast target recovered from 
   5. *Classification:* `METHOD_SPECIFIC_OBSTRUCTION`; structural no-go count remains 0; no continuum edge closes.
 
 
+## NEG-YM-057-WILSON-ACTION-PENALTY-AND-WEIGHTED-TAILS: Kinematic Haar Suppression Fallacy, Minimal Spanning Surface Non-Uniqueness, and Multiscale Polymer Barrier (`YM-057`)
+
+- **Discovery Date:** 2026-10-10
+- **Epistemic Classification:** `[METHOD_SPECIFIC_OBSTRUCTION]`
+- **Hypothesis tested:** Whether pure Haar measure kinematic integration produces exponential suppression $\mathcal{O}(e^{-c/g_k^2})$ on chart-exit remainder $\mathcal{R}_{\alpha, \mathrm{chart-exit}}$; whether 2D single-plaquette action bounds uniquely determine bounding 2-chains in 4D; and whether single-scale action-suppressed remainder activity bounds suffice for multiscale polymer activity summability or continuum closure.
+- **Result:** Falsified.
+  1. *Kinematic Haar Measure Suppression Fallacy:* Haar measure on compact Lie group $SU(2)$ has total volume 1 and no coupling constant $g_k$. The kinematic volume $\int dV^{\prime\prime} \chi_{\mathrm{chart-exit}}(V^{\prime\prime}) = \mathcal{O}(1)$ does NOT vanish as $g_k \to 0$. Exponential tail suppression $\mathcal{O}(e^{-c/g_k^2})$ cannot arise from kinematic Haar integration and strictly requires the dynamical Yang–Mills Wilson action.
+  2. *Non-Abelian Stokes Holonomy Identity:* The oriented holonomy along fundamental cycle $C_b$ satisfies the non-Abelian Stokes identity $V^{\prime\prime}(C_b) = \prod_{p \in \Sigma} U_p$ for any 2-chain $\Sigma$ with $\partial \Sigma = C_b$.
+  3. *Cumulative Plaquette Action Penalty Lower Bound:* By the geodesic triangle inequality and Cauchy-Schwarz on $SU(2)$, $S_{\Sigma}[V^{\prime\prime}] \ge \frac{(\delta_k^\prime)^2}{\operatorname{Area}(\Sigma)} > 0$ for all configurations in $\mathcal{R}_{\alpha, \mathrm{chart-exit}}$. Certified on the Test 18 exit configuration with exact rational action $S_p = 338/125$ and strictly positive action defect $\Delta_{\mathrm{action}} = 551/250 > 0$.
+  4. *4D Minimal Spanning Surface Barrier:* In 4D, spanning surfaces are non-unique; the action lower bound is governed by $\operatorname{Area}_{\min}(C_b)$. The 2D single-plaquette certificate does not certify 4D geometry (`2D_PLAQUETTE_ACTION_CERTIFIED_4D_MINIMAL_SURFACE_BOUND_PROVED`).
+  5. *Multiscale Marked Polymer Activity Barrier:* Proving single-scale remainder suppression under Bałaban Wilson action resolves Lemma `YM-056F-ACTION-SUPPRESSED-REMAINDER-BOUND`, but does NOT prove multiscale marked polymer activity recurrence or uniform summability $\sum_\alpha \mathcal{I}_\alpha$ across all scales $j = 0, \dots, n$. Blocked by Lemma `YM-057F-MULTISCALE-POLYMER-RECURRENCE`.
+  6. *Classification:* `METHOD_SPECIFIC_OBSTRUCTION`; structural no-go count remains 0; no continuum edge closes.
+
+
+
 
 
 

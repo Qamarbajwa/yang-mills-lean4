@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 65
+revision: 66
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "acfae3cb12eb6944ec78ca1492baee41f7d2bf61"
-  scientific_candidate_sha: "e2fb41ebf2c15d68da993516ab1b45cd581e7b2d"
-  review_bound_sha: "e2fb41ebf2c15d68da993516ab1b45cd581e7b2d"
-  evidence_closeout_head: "acfae3cb12eb6944ec78ca1492baee41f7d2bf61"
-  closeout_resolution: "evidence_closeout_head binds completed YM-056 technical acceptance recording commit (acfae3cb12eb6944ec78ca1492baee41f7d2bf61); scientific_candidate_sha and review_bound_sha bind reviewed YM-056 candidate freeze commit (e2fb41ebf2c15d68da993516ab1b45cd581e7b2d); resolve authoritative current HEAD dynamically from Git."
+  head: "e3082ec7adcb33d5d710faea26ea2d8f95c010b9"
+  scientific_candidate_sha: "pending_ym057_freeze"
+  review_bound_sha: "pending_ym057_freeze"
+  evidence_closeout_head: "e3082ec7adcb33d5d710faea26ea2d8f95c010b9"
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-056 closeout commit (e3082ec7adcb33d5d710faea26ea2d8f95c010b9); scientific_candidate_sha and review_bound_sha bind active YM-057 candidate once frozen; resolve authoritative current HEAD dynamically from Git."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,14 +32,25 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 64
-  last_updated_at: "2026-10-15T02:10:00Z"
+  last_expected_revision: 65
+  last_updated_at: "2026-10-15T02:25:00Z"
   active_contract: "YM-015F-JET-002B"
-  frozen_candidate: "e2fb41ebf2c15d68da993516ab1b45cd581e7b2d"
+  frozen_candidate: "pending_ym057_freeze"
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-057
+    scope_in: "Action-suppressed remainder activity bounds, non-Abelian Stokes/holonomy identity relating fundamental cycle holonomies to plaquette action penalty S_{Int(C_b)}[V''] >= (delta_k')^2 / Area(C_b), weighted-measure exponential tail estimates int R_{alpha, chart-exit} exp(-g_k^{-2} A_k'') <= O(e^{-c/g_k^2}), proof of Lemma YM-056F-ACTION-SUPPRESSED-REMAINDER-BOUND, isolation of downstream obligation (multiscale marked polymer activity recurrence under Bałaban RG), and Test 19 finite certificate"
+    scope_out: "Multiscale marked polymer activity summability sum_alpha I_alpha across all scales j = 0, ..., n, cutoff-uniform estimates as a -> 0, full continuum closure, and infinite-volume thermodynamic limit"
+    dependencies: ["YM-056"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-057_E4_RAW_20261010.md"
+    acceptor: "verification/YM-057_TECHNICAL_ACCEPTANCE.md"
+    status: IN_PROGRESS
+    scope_limitation: "WEIGHTED_MEASURE_TAIL_ESTIMATES_PROVED_MULTISCALE_POLYMER_RECURRENCE_OPEN"
   - id: YM-056
     scope_in: "Deterministic small-field chart overlap analysis between original cube {|B'(b)| < delta_k'} and tree gauge slice B_0 \\ T_0, boundary cycle holonomy bounds for chart exit, three-sector remainder decomposition (rho_{k, alpha} = rho_{k, alpha}^{overlap} + R_{alpha, chart-exit} + R_{alpha, large}), proof of Lemma YM-051F-DETERMINISTIC-CHART-OVERLAP, isolation of downstream obligation (weighted-measure tail estimates under Wilson action), and Test 18 finite certificate"
     scope_out: "Weighted-measure tail bounds under Wilson action exp(-g^{-2} S(U)), multiscale marked polymer activity summability under Bałaban RG, cutoff-uniform estimates, and continuum closure"
