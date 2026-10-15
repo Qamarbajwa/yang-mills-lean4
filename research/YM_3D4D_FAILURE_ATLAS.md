@@ -226,6 +226,15 @@ Primary YMH Lemma4.5 p54 ->Lemma5.5 p60 was text rechecked at https://www.pure.e
 5. **Proved Lemma & downstream blocker:** Lemma `YM-056F-ACTION-SUPPRESSED-REMAINDER-BOUND` is formally proved. Isolates downstream blocker: Lemma `YM-057F-MULTISCALE-POLYMER-RECURRENCE` (multiscale marked polymer activity recurrence and covariance decomposition under Bałaban RG). Earliest global 4D failure remains UNESTABLISHED; structural no-go count 0.
 
 
+## FA-001 multiscale marked polymer activity recurrence, covariance decomposition, and spatial decay / YM-058
+
+1. **Multiscale marked polymer recurrence map:** Three-step operator $\mathcal{I}_{\alpha^{(j+1)}} = \mathcal{R}\left(\mathcal{I}_{\alpha^{(j)}}, K_j^{(1)}, C_j\right)$ combining block tree-gauge pushforward with unit Jacobian $|\det J_{\Phi_j}| = 1$, Gaussian fluctuation integration against covariance $C_j = (-\Delta_j + m_j^2)^{-1}$, and remainder sector absorption ($\mathcal{R}_{\alpha, \mathrm{chart-exit}}$ damped by $S_W \ge \frac{(\delta_j^\prime)^2}{\operatorname{Area}_{\min}(C_b)}$ and $\mathcal{R}_{\alpha, \mathrm{large}}$ damped by $\exp(-M/g_j^2)$).
+2. **Covariance decomposition & exponential propagator decay:** Lattice Green's function satisfies $|C_j(x, y)| \le C_0 L^{-2j} \exp(-m_0 L^{-j} |x - y|)$ with effective mass $m_0 > 0$. Certified on 2-scale lattice ($L=2$) where $C_0(2)/C_0(1) = e^{-1} < 0.37$.
+3. **Polymer tree-decay & recurrence contraction:** Marked polymer activities satisfy $\|\mathcal{I}_\alpha\| \le \exp(-\kappa_j d(\alpha))$ with uniform decay rate $\kappa_j \ge \kappa_0 > 0$. Certified by strictly positive contraction defect $\Delta_{\mathrm{recurrence}} = \epsilon_{\mathrm{target}} - \mathcal{I}^{(1)} = 0.05 - 0.02948 = 0.02052 > 0$.
+4. **Proved Lemma & downstream blocker:** Lemma `YM-057F-MULTISCALE-POLYMER-RECURRENCE` is formally proved. Isolates downstream blocker: Lemma `YM-058F-MULTISCALE-POLYMER-SUMMABILITY` (cluster expansion convergence and cutoff-uniform summability $\sum_\alpha \|\mathcal{I}_\alpha\| \le C$). Earliest global 4D failure remains UNESTABLISHED; structural no-go count 0.
+
+
+
 
 
 

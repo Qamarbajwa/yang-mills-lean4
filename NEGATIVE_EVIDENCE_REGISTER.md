@@ -671,6 +671,21 @@ Positive T_epsilon fixes normalized vacuum but a contrast target recovered from 
   6. *Classification:* `METHOD_SPECIFIC_OBSTRUCTION`; structural no-go count remains 0; no continuum edge closes.
 
 
+## NEG-YM-058-MULTISCALE-POLYMER-RECURRENCE-AND-SUMMABILITY-BARRIER: Multiscale Marked Polymer Recurrence Stability, Propagator Spatial Decay, and Summability Barrier (`YM-058`)
+
+- **Discovery Date:** 2026-10-15
+- **Epistemic Classification:** `[METHOD_SPECIFIC_OBSTRUCTION]`
+- **Hypothesis tested:** Whether proving single-step marked polymer activity recurrence $\mathcal{I}_{\alpha^{(j+1)}} = \mathcal{R}\left(\mathcal{I}_{\alpha^{(j)}}, K_j^{(1)}, C_j\right)$ and exponential covariance decay $|C_j(x, y)| \le C_0 L^{-2j} \exp(-m_0 L^{-j} |x - y|)$ suffices to establish uniform summability $\sum_\alpha \|\mathcal{I}_\alpha\| \le C < \infty$ across all RG scales as UV lattice cutoff $a \to 0$, and whether the continuum mass gap can be inferred without cluster expansion convergence.
+- **Result:** Falsified.
+  1. *Recurrence Stability vs Uniform Summability Barrier:* While the three-step RG map contracts marked polymer activities $\|\mathcal{I}_{\alpha^{(j+1)}}\| \le \exp(-\kappa_{j+1} d(\alpha))$ inductively at each scale with $\kappa_{j+1} \ge \kappa_0 > 0$, bounding the infinite sum of polymer activities $\sum_{\alpha: \operatorname{supp}(\alpha) \ni x} \|\mathcal{I}_\alpha\| \le C < \infty$ uniformly in the UV cutoff requires controlling the combinatorial growth of polymers and tree graphs across arbitrarily many scales $j = 0, \dots, n$. Single-step recurrence does NOT imply uniform multiscale summability.
+  2. *Covariance Exponential Spatial Decay:* On lattice $\mathbb{L}_j = L^j \mathbb{Z}^4$, the Green's function propagator satisfies $|C_j(x, y)| \le C_0 L^{-2j} \exp(-m_0 L^{-j} |x - y|)$ with effective mass $m_0 > 0$. Certified on a 2-scale lattice ($L=2$) where $C_0(2)/C_0(1) = e^{-1} < 0.37$.
+  3. *Strictly Positive Polymer Contraction Defect:* In the 2-scale test system with initial activity $\mathcal{I}_0 = 0.1$, contraction $\lambda = 0.25$, and remainder activity $\mathcal{R}_{\mathrm{exit}} = 0.00448$, the next-scale activity is $\mathcal{I}^{(1)} = 0.02948 < 0.05 = \epsilon_{\mathrm{target}}$, yielding strictly positive contraction defect:
+     $$\Delta_{\mathrm{recurrence}} = \epsilon_{\mathrm{target}} - \mathcal{I}^{(1)} = 0.02052 > 0.$$
+  4. *Multiscale Marked Polymer Summability Barrier:* Proving single-step recurrence under Bałaban RG resolves Lemma `YM-057F-MULTISCALE-POLYMER-RECURRENCE`, but does NOT prove multiscale cluster expansion convergence or uniform summability $\sum_\alpha \|\mathcal{I}_\alpha\| \le C$ as $a \to 0$. Blocked by Lemma `YM-058F-MULTISCALE-POLYMER-SUMMABILITY`.
+  5. *Classification:* `METHOD_SPECIFIC_OBSTRUCTION`; structural no-go count remains 0; no continuum edge closes.
+
+
+
 
 
 

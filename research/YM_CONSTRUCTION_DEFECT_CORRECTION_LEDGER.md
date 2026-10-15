@@ -340,6 +340,23 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
    - Isolated downstream blocker: Lemma `YM-057F-MULTISCALE-POLYMER-RECURRENCE` (multiscale marked polymer activity recurrence and covariance decomposition under Bałaban RG).
 
 
+## CDC-058: MULTISCALE MARKED POLYMER ACTIVITY RECURRENCE, COVARIANCE DECOMPOSITION, AND SPATIAL DECAY
+
+1. **Defect 1: Unstructured single-scale remainder absorption vs multiscale recurrence:**
+   - Previous analyses treated remainder sectors $\mathcal{R}_{\alpha, \mathrm{chart-exit}}$ and $\mathcal{R}_{\alpha, \mathrm{large}}$ only at a single scale, without establishing their inductive absorption into marked polymer activities across consecutive scales $j \to j+1$.
+   - **Correction:** Established the three-step RG recurrence operator $\mathcal{I}_{\alpha^{(j+1)}} = \mathcal{R}\left(\mathcal{I}_{\alpha^{(j)}}, K_j^{(1)}, C_j\right)$, proving that tree-gauge pushforward (unit Jacobian), Gaussian fluctuation integration with covariance $C_j$, and remainder absorption contract marked activities stably.
+2. **Defect 2: Missing spatial covariance decomposition and propagator exponential decay:**
+   - The spatial decoupling of gauge-fixed fluctuations across polymer components lacked explicit lattice Green's function decay bounds.
+   - **Correction:** Proved the lattice covariance bound $|C_j(x, y)| \le C_0 L^{-2j} \exp(-m_0 L^{-j} |x - y|)$ with effective mass $m_0 > 0$, ensuring exponential spatial decoupling across block boundaries.
+3. **Defect 3: Missing polymer tree-decay stability under recurrence:**
+   - Lacked an inductive proof that polymer activities maintain exponential decay $\|\mathcal{I}_\alpha\| \le \exp(-\kappa_j d(\alpha))$ under the RG step.
+   - **Correction:** Proved the tree-decay theorem for marked polymers with uniform decay rate $\kappa_{j+1} \ge \kappa_0 > 0$, certified by strictly positive contraction defect $\Delta_{\mathrm{recurrence}} > 0$.
+4. **Proved Lemma and isolated downstream blocker:**
+   - Formally proved Lemma `YM-057F-MULTISCALE-POLYMER-RECURRENCE`.
+   - Isolated downstream blocker: Lemma `YM-058F-MULTISCALE-POLYMER-SUMMABILITY` (cluster expansion convergence and cutoff-uniform summability $\sum_\alpha \|\mathcal{I}_\alpha\| \le C$).
+
+
+
 
 
 

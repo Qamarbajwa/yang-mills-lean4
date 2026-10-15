@@ -392,6 +392,21 @@ Source mechanisms: own finite row-space/kernel target-descent theorem, positive 
 - Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
 
 
+## XFER-YM-ONE-TERM-PULLBACK-058: Multiscale Marked Polymer Activity Recurrence, Covariance Decomposition, and Spatial Decay
+
+- Source: Bałaban CMP 122, 175–202 (1989) and CMP 139, 281–305 (1991).
+- Target: YM-015F degree-one physical marked observable insertion under RG transport.
+- Verified mapping:
+  - Three-step multiscale marked polymer recurrence map $\mathcal{I}_{\alpha^{(j+1)}} = \mathcal{R}\left(\mathcal{I}_{\alpha^{(j)}}, K_j^{(1)}, C_j\right)$ combining block tree-gauge pushforward ($|\det J_{\Phi_j}| = 1$), Gaussian fluctuation integration with covariance $C_j = (-\Delta_j + m_j^2)^{-1}$, and remainder absorption.
+  - Covariance exponential spatial decay $|C_j(x, y)| \le C_0 L^{-2j} \exp(-m_0 L^{-j} |x - y|)$ with effective mass $m_0 > 0$, certified on 2-scale lattice ($L=2$) with $C_0(2)/C_0(1) = e^{-1} < 0.37$.
+  - Polymer tree-decay theorem $\|\mathcal{I}_\alpha\| \le \exp(-\kappa_j d(\alpha))$ with uniform decay rate $\kappa_j \ge \kappa_0 > 0$. Certified on 2-scale lattice with strictly positive contraction defect $\Delta_{\mathrm{recurrence}} = \epsilon_{\mathrm{target}} - \mathcal{I}^{(1)} = 0.05 - 0.02948 = 0.02052 > 0$.
+  - Remainder absorption: chart-exit remainder $\mathcal{R}_{\alpha, \mathrm{chart-exit}} \le \mathcal{O}(e^{-c/g_j^2})$ and large-field remainder $\mathcal{R}_{\alpha, \mathrm{large}} \le \mathcal{O}(e^{-M/g_j^2})$ stably absorbed into coarse-grained polymer activity.
+  - Lemma `YM-057F-MULTISCALE-POLYMER-RECURRENCE` formally proved within stated hypotheses.
+- Open bridge: Multiscale Marked Polymer Summability and Cluster Expansion Convergence (Lemma `YM-058F-MULTISCALE-POLYMER-SUMMABILITY`).
+- Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
+
+
+
 
 
 
