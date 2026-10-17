@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 84
+revision: 85
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "286d792d3778def00c8282da01e46e92614cbd3b"
-  scientific_candidate_sha: "286d792d3778def00c8282da01e46e92614cbd3b"
-  review_bound_sha: "286d792d3778def00c8282da01e46e92614cbd3b"
+  head: "0a16f0a12c0f0eb36a7787eb526482a92ab42913"
+  scientific_candidate_sha: "21ad3fb971fe2f9dce39765f27ab1758391dd72f"
+  review_bound_sha: "21ad3fb971fe2f9dce39765f27ab1758391dd72f"
   evidence_closeout_head: "286d792d3778def00c8282da01e46e92614cbd3b"
-  closeout_resolution: "evidence_closeout_head binds preceding completed YM-063 closeout commit (286d792d3778def00c8282da01e46e92614cbd3b); scientific_candidate_sha and review_bound_sha bind current YM-064 candidate freeze; resolve authoritative current HEAD dynamically from Git."
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-063 closeout commit (286d792d3778def00c8282da01e46e92614cbd3b); scientific_candidate_sha and review_bound_sha bind accepted YM-064 candidate (21ad3fb971fe2f9dce39765f27ab1758391dd72f); resolve authoritative current HEAD dynamically from Git."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,10 +32,10 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 83
-  last_updated_at: "2026-10-17T14:15:00Z"
+  last_expected_revision: 84
+  last_updated_at: "2026-10-17T14:24:30Z"
   active_contract: "YM-015F-JET-002B"
-  frozen_candidate: "286d792d3778def00c8282da01e46e92614cbd3b"
+  frozen_candidate: "21ad3fb971fe2f9dce39765f27ab1758391dd72f"
 
 current_objective: YM-015F-JET-002B
 
@@ -49,7 +49,7 @@ objectives:
     atlas_writer_and_coordinator: "primary-worker"
     reviewer_path: "verification/raw/YM-064_E4_RAW_20261017.md"
     acceptor: "verification/YM-064_TECHNICAL_ACCEPTANCE.md"
-    status: CANDIDATE_FROZEN
+    status: SCIENTIFICALLY_ACCEPTED
     scope_limitation: "MARKED_MAYER_EXPANSION_AND_POLYMER_PINNING_PROVED_COMPENSATING_GAUGE_AND_CONTINUUM_OPEN"
   - id: YM-063
     scope_in: "Finite-chart cutoff boundary corrections B_IBP in Gaussian integration by parts, Peierls collar suppression, non-Abelian fourth-order BCH commutator on su(2) (orthogonal degeneracy vs longitudinal-transverse activation), fourth-order observable jet Taylor remainder bounds and Weitzenböck curvature amplification in Bałaban CMP 122 (1.80)–(1.90), proof of Lemma YM-063F-FINITE-CHART-BOUNDARY-AND-FOURTH-ORDER-TAYLOR-REMAINDER, isolation of Lemma YM-064F, and Test 27 finite certificate"
