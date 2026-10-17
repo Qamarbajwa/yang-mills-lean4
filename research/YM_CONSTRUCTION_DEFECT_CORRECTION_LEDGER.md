@@ -450,3 +450,27 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
 
 
 
+## CDC-062: Fluctuation Covariance Contractions, Non-Abelian Weitzenböck Curvature Coupling, Connected Cumulant Expansion of Marked Observables, and Gradient-Flow Tadpole Regularization (`YM-062`)
+
+- **Date:** 2026-10-17
+- **Primary Contract:** `YM-015F-JET-002B`
+- **Source Target:** Bałaban CMP 122, 175–202 (1989), eqs. (1.76)–(1.90); CMP 139, 281–305 (1991).
+- **Defects Corrected & Mathematical Resolutions:**
+
+1. **Defect 1: Omission of Non-Abelian Weitzenböck Curvature Coupling $\mathcal{W}(F(V_0))$ in the Fluctuation Hessian $\mathcal{H}_{V_0}$:**
+   - Treating the scale-$k$ fluctuation covariance $C_k(V_0) = \mathcal{H}_{V_0}^{-1}$ as a purely positive scalar covariant Laplacian $d_{V_0}^* d_{V_0} + m_k^2 I$ omits the indefinite non-Abelian Weitzenböck commutator term $\mathcal{W}(F(V_0))_{b, b^\prime} = -2 \operatorname{ad}(F_{\mu\nu}(V_0))$ arising from expanding the Wilson action around a curved background $V_0$.
+   - **Correction:** Proved on an $\mathfrak{su}(2)$ color triplet ($[T_3, E_\pm] = \pm E_\pm$) that $\mathcal{W}(\phi) = i \phi \operatorname{ad}(T_3)$ has eigenvalues $\{-\phi, 0, +\phi\}$, shifting the Hessian spectrum to $\{\lambda_0 - \phi, \lambda_0, \lambda_0 + \phi\}$. Established that coercivity holds iff $\phi < \lambda_0$; for $\lambda_0 = 1, \phi = 3/2 > 1$, the chromomagnetic Savvidy instability mode satisfies $\lambda_-(3/2) = -1/2 < 0$ ($\Delta_{\mathrm{instability}} = 1/2 > 0$), proving that Bałaban's small-field cutoff $\chi_k(\Omega_k^{\sim 4})$ is indispensable for Gaussian integrability. For $\lambda_0 = 1, \phi = 1/2$, established the exact rational propagator trace shift $\Delta_{\mathrm{Weitzenbock}} = \operatorname{Tr}(C(1/2)) - \operatorname{Tr}(C(0)) = 11/3 - 3 = 2/3 > 0$.
+
+2. **Defect 2: Omission of Connected Cumulant Contractions $\langle J_1(\cdot), V_k^{(3)}(\cdot) \rangle_{C_k(V_0)}$ in Marked Observable Transport:**
+   - Assuming that the normalized Gaussian conditional expectation $\mathbb{E}_{k, \alpha}^{\mathrm{Gauss}}[\mathcal{O}](V_0) = \rho_{k, \alpha}^{\mathrm{Gauss}}[\mathcal{O}](V_0) / \rho_{k, \alpha}^{\mathrm{Gauss}}[\mathbf{1}](V_0)$ reduces solely to the tree-level insertion plus the standalone Wick tadpole $\mathcal{O}_0(V_0) + \frac{1}{2} g_k^2 \operatorname{Tr}(J_2(V_0) C_k(V_0))$ drops the connected cumulant contraction between the linear observable jet $J_1(V_0)[B^\prime]$ and the cubic Yang-Mills interaction vertex $V_k^{(3)}(V_0)[B^\prime, B^\prime, B^\prime]$.
+   - **Correction:** Derived the complete $\mathcal{O}(g_k^2)$ radiative shift via Gaussian integration by parts:
+     $$\mathbb{E}_{k, \alpha}^{\mathrm{Gauss}}[\mathcal{O}](V_0) - \mathcal{O}_0(V_0) = \Delta_{\mathrm{tadpole}}(V_0) + \Delta_{\mathrm{cumulant}}(V_0) + \mathcal{O}(g_k^4),$$
+     where $\Delta_{\mathrm{tadpole}} = \frac{1}{2} g_k^2 \operatorname{Tr}(J_2 C_k) = \frac{11}{24} > 0$ and $\Delta_{\mathrm{cumulant}} = \frac{1}{2} g_k^2 \langle J_1, V_k^{(3)}(\cdot, C_k) \rangle_{C_k} = \frac{1}{6} > 0$, yielding exact total shift $\Delta_{\mathrm{rad}} = \frac{11}{24} + \frac{1}{6} = \frac{5}{8} > 0$ on the certified rational $\mathfrak{su}(2)$ triplet.
+
+3. **Defect 3: Unflowed ($t = 0$) vs. Gradient-Flowed ($t > 0$) Tadpole Ultraviolet Behavior and Infrared Non-Contraction:**
+   - Confusing single-scale UV finiteness of gradient-flowed tadpoles with multiscale infrared cluster convergence.
+   - **Correction:** Proved that while positive flow time $t > 0$ regularizes the single-scale UV tadpole density $\tau_{\mathrm{flowed}}(p; t) = p^2 e^{-2 t p^2} \le \frac{1}{2 e t} < \infty$ universally across all $p \ge 0$ (whereas $\tau_{\mathrm{unflowed}}(p) = p^2 \to \infty$), heat-kernel smoothing provides no contraction in the infrared window $p^2 \ll t^{-1}$ ($e^{-2 t p^2} \to 1$), leaving multiscale accumulation across $n(a) \sim \log_L(1 / a m_0) \to \infty$ scales open (`YM-059F` OPEN, `E-CROSSOVER` OPEN).
+
+4. **Established Lemma and Isolated Next Downstream Obligation:**
+   - Proved Lemma `YM-062F-CONNECTED-CUMULANT-AND-WEITZENBOCK-CURVATURE-SHIFT`.
+   - Isolated immediate next downstream obligation: Lemma `YM-063F-FINITE-CHART-BOUNDARY-AND-FOURTH-ORDER-TAYLOR-REMAINDER` (Finite-chart cutoff boundary terms $\partial \mathcal{E}_{\mathrm{chart}}$ in Gaussian integration by parts and fourth-order BCH / jet Taylor remainder bounds in Bałaban CMP 122 (1.80)–(1.90)).

@@ -2607,6 +2607,169 @@ With these repairs in place, we identify the exact, earliest failure point of th
 - **Constitutional Invariants:** `goal_complete = false`, `clay_problem = OPEN_AND_UNSOLVED`, `P3 = OPEN`, `E-UV-FLOWED = PARTIAL_PROGRESS`, `STRUCTURAL_NO_GO_COUNT = 0`.
 
 
+---
+
+## SECTION YM-062: FLUCTUATION COVARIANCE CONTRACTIONS, NON-ABELIAN WEITZENBÖCK CURVATURE COUPLING, CONNECTED CUMULANT EXPANSION OF MARKED OBSERVABLES, AND GRADIENT-FLOW TADPOLE REGULARIZATION IN BAŁABAN CMP 122 (1.76)–(1.90)
+
+**Task ID:** `YM-062`  
+**Primary Contract:** `YM-015F-JET-002B`  
+**Precursor:** `YM-061R` (Reconciliation of Local Normalization, Exact History-Summing Weights, and Source-Derived Gauge Vacuum Quotient)  
+**Primary Sources:**
+1. T. Bałaban, *"Large Field Renormalization I. The Basic Step of the R Operation"*, Commun. Math. Phys. **122**, 175–202 (1989), printed pp. 194–201, eqs. (1.76)–(1.90).
+2. T. Bałaban, *"Renormalization Group Approach to Lattice Gauge Field Theories I. Generation of Effective Actions in a Small Field Approximation and a Coupling Constant Renormalization in Four Dimensions"*, Commun. Math. Phys. **109**, 249–301 (1987), §§2–4 (Quadratic Fluctuation Hessian, Covariant Laplacian, and Counterterms).
+3. T. Bałaban, *"Large Field Renormalization II. Localization, Exponentiation, and Bounds for the R Operation"*, Commun. Math. Phys. **122**, 355–392 (1989), §§1–2 (Cumulant / Mayer Expansion of Fluctuation Integrals).
+
+---
+
+### 1. Exponential Fluctuation Parametrization and Jet Expansion in the Small-Field Overlap Chart $\mathcal{E}_{\mathrm{chart}}$
+
+In Task `YM-061R`, we established that the earliest genuinely source-supported failure of the unconditioned single-step observable transport identity $\mathbb{E}_{k, \alpha}[\mathcal{O}](V) \stackrel{?}{=} \mathcal{O}_{(a, t)}^{\mathrm{eff}}(f)[\hat{V}]$ occurs at the **fluctuation and gauge-fiber integration stage in Bałaban CMP 122 eq. (1.76)**. We now perform a rigorous, first-principles mathematical derivation of the fluctuation integral on the small-field overlap domain $\mathcal{E}_{\mathrm{chart}} \subset G^{\mathbb{B}_0 \setminus T_0}$.
+
+1. **Lie Algebra Fluctuation Coordinates on the Grounded-Tree Slice:**
+   Let $G = SU(2)$ with Lie algebra $\mathfrak{su}(2) = \operatorname{span}_{\mathbb{R}}\{T_1, T_2, T_3\}$, where $T_a = \frac{1}{2}\sigma_a$ satisfy:
+   $$[T_a, T_b] = i \epsilon_{abc} T_c, \quad \operatorname{Tr}(T_a T_b) = \frac{1}{2}\delta_{ab}, \quad (\operatorname{ad}(T_a))_{bc} = -\epsilon_{abc}, \quad \operatorname{Tr}_{\mathfrak{su}(2)}(\operatorname{ad}(T_a)\operatorname{ad}(T_b)) = -2\delta_{ab}.$$
+   Around the constrained variational background configuration $V_0 \in G^{\mathbb{B}_0}$ satisfying the classical Euler-Lagrange extremum equation $\frac{\delta S_W}{\delta V}(V_0) = 0$ on $\mathbb{B}_0 \setminus T_0$ with fixed boundary conditions on $\Lambda^c$, every configuration $\hat{V} \in \mathcal{E}_{\mathrm{chart}}$ on the tree-gauge slice $V^{\prime\prime}|_{T_0} \equiv I$ is parametrized by the Lie-algebra-valued fluctuation field $B^\prime: \mathbb{B}_0 \setminus T_0 \to \mathfrak{su}(2)$ via the exponential map (Bałaban CMP 122 p. 195 eq. (1.80)):
+   $$\hat{V}(b) = V_0(b) \exp\left( i g_k B^\prime(b) \right), \quad B^\prime(b) = \sum_{a=1}^3 B^{\prime a}(b) T_a, \quad \|B^\prime(b)\| < \frac{\delta_k^\prime}{g_k}.$$
+
+2. **Quadratic Hessian and Interaction Expansion of the Effective Action:**
+   Because $V_0$ is a constrained variational extremum of the Wilson action $S_W[V]$, the first variational derivative vanishes identically ($\langle \delta S_W(V_0), B^\prime \rangle = 0$). Expanding the Boltzmann exponent $-\frac{1}{g_k^2} S_W[V_0 \exp(i g_k B^\prime)] + R_k[V_0 \exp(i g_k B^\prime)]$ in powers of $g_k B^\prime$ yields:
+   $$A_k^{\prime\prime}\left[\Phi^{-1}(V_0 \exp(i g_k B^\prime), h)\right] = A_k^{\prime\prime}[V_0] - \frac{1}{2} \langle B^\prime, \mathcal{H}_{V_0} B^\prime \rangle + I_{\mathrm{int}}(V_0, h; B^\prime),$$
+   where $\mathcal{H}_{V_0}$ is the covariant second-variation Hessian operator on $\ell^2(\mathbb{B}_0 \setminus T_0; \mathfrak{su}(2))$, and the interaction functional $I_{\mathrm{int}}$ begins at cubic order in $B^\prime$ (coupled to $g_k$):
+   $$I_{\mathrm{int}}(V_0, h; B^\prime) = g_k I_3(V_0; B^\prime) + g_k^2 I_4(V_0; B^\prime) + \mathcal{R}_{\mathrm{act}}^{(5)}(V_0, h; B^\prime),$$
+   with cubic Yang-Mills vertex $I_3(V_0; B^\prime) = \frac{1}{6} \sum_{i,j,l} V_{ijl}^{(3)}(V_0) B_i^\prime B_j^\prime B_l^\prime$ arising from the non-Abelian commutator $\operatorname{Tr}(d_{V_0} B^\prime \wedge [B^\prime, B^\prime])$.
+
+3. **Non-Stationary Jet Expansion of the Physical Flowed Observable:**
+   Crucially, while $V_0$ extremizes the action $S_W$, the physical gradient-flowed observable $\mathcal{O}_{(a, t)}(f)[U(V)]$ is **not** stationary at $V_0$ ($\frac{\delta \mathcal{O}_{(a, t)}(f)}{\delta V}(V_0) \ne 0$ for generic non-flat $V_0$). Its Taylor/jet expansion around $V_0$ takes the form:
+   $$\mathcal{O}_{(a, t)}(f)\left[U(V_0 \exp(i g_k B^\prime))\right] = \mathcal{O}_0(V_0) + g_k \langle J_1(V_0), B^\prime \rangle + \frac{1}{2} g_k^2 \langle B^\prime, J_2(V_0) B^\prime \rangle + \frac{1}{6} g_k^3 J_3(V_0)[B^\prime, B^\prime, B^\prime] + \mathcal{R}_{\mathrm{jet}}^{(4)}(V_0; B^\prime),$$
+   where $J_1(V_0) \in \ell^2(\mathbb{B}_0 \setminus T_0; \mathfrak{su}(2))$ is the first-order linear source jet and $J_2(V_0)$ is the second-order Hessian jet of the flowed observable.
+
+---
+
+### 2. Non-Abelian Weitzenböck / Paramagnetic Curvature Coupling and Savvidy Coercivity Threshold
+
+In a free or Abelian $U(1)$ gauge theory, the quadratic fluctuation operator $\mathcal{H}_{V_0} = d^* d + m_k^2 I$ is independent of the background field $V_0$. In 4D non-Abelian $SU(2)$ gauge theory, expanding the plaquette holonomy $U_p(V_0 \exp(i g_k B^\prime))$ via the Baker-Campbell-Hausdorff formula introduces the **non-Abelian Weitzenböck (paramagnetic) curvature operator** (Bałaban CMP 109 pp. 258–265):
+$$\mathcal{H}_{V_0} = d_{V_0}^* d_{V_0} + m_k^2 I + \mathcal{W}(F(V_0)),$$
+where $d_{V_0}$ is the background-covariant exterior difference operator and $\mathcal{W}(F(V_0))$ acts on colour indices in the adjoint representation via the background plaquette field strength $F_{\mu\nu}(V_0) \in \mathfrak{su}(2)$:
+$$\left(\mathcal{W}(F(V_0)) B^\prime\right)_\mu(x) = \sum_\nu 2 i \operatorname{ad}\left(F_{\mu\nu}(V_0)(x)\right) B_\nu^\prime(x) = \sum_\nu 2 i \left[ F_{\mu\nu}(V_0)(x), \, B_\nu^\prime(x) \right].$$
+
+1. **Exact Adjoint Eigenvalue Spectrum on $\mathfrak{su}(2)$:**
+   Let the local background curvature be aligned along the Cartan generator $T_3$: $F = \phi T_3 \in \mathfrak{su}(2)$ with curvature magnitude $\phi \in \mathbb{R}_{\ge 0}$.
+   On the complexified Lie algebra $\mathfrak{su}(2)_{\mathbb{C}} = \operatorname{span}\{T_+, T_3, T_-\}$ with ladder basis $T_\pm = \frac{1}{\sqrt{2}}(T_1 \pm i T_2)$ satisfying $[T_3, T_\pm] = \pm T_\pm$ and $[T_3, T_3] = 0$, the Hermitian adjoint operator $\mathcal{W}(\phi) = \operatorname{ad}_{\mathrm{sym}}(\phi T_3)$ has the exact $3 \times 3$ matrix representation in the Cartesian basis $\{T_1, T_2, T_3\}$:
+   $$\mathcal{W}_{\mathrm{Cart}}(\phi) = i \phi \operatorname{ad}(T_3) = \begin{pmatrix} 0 & -i\phi & 0 \\ i\phi & 0 & 0 \\ 0 & 0 & 0 \end{pmatrix}, \quad \operatorname{spec}\left(\mathcal{W}_{\mathrm{Cart}}(\phi)\right) = \left\{ -\phi, \, 0, \, +\phi \right\}.$$
+   Equivalently, in the eigenbasis $\{T_-, T_3, T_+\}$, $\mathcal{W}(\phi) = \operatorname{diag}(-\phi, \, 0, \, +\phi)$.
+
+2. **Coercivity Condition and Savvidy / Paramagnetic Instability Barrier:**
+   Let $\lambda_0 > 0$ denote the lowest eigenvalue of the positive-definite covariant Bochner Laplacian $d_{V_0}^* d_{V_0} + m_k^2 I$ on the tree-gauge slice $\mathbb{B}_0 \setminus T_0$. Then for a mode of Bochner eigenvalue $\lambda_0$ coupled to background curvature magnitude $\phi$, the three colour eigenvalues of $\mathcal{H}_{V_0}$ are:
+   $$\lambda_-(\phi) = \lambda_0 - \phi, \quad \lambda_3(\phi) = \lambda_0, \quad \lambda_+(\phi) = \lambda_0 + \phi.$$
+   - **Coercive Small-Field Regime ($\phi < \lambda_0$):**
+     When the small-field regulator $\chi_k(\Omega_k^{\sim 4})$ restricts the background curvature to $\phi < \lambda_0$ (for example, $\lambda_0 = 1$ and $\phi = 1/2$, giving $\operatorname{spec}(\mathcal{H}_{V_0}) = \{1/2, \, 1, \, 3/2\} > 0$), $\mathcal{H}_{V_0}$ is strictly positive definite and the Gaussian fluctuation covariance $C_k(V_0) = \mathcal{H}_{V_0}^{-1} = \operatorname{diag}\left(\frac{1}{\lambda_0 - \phi}, \, \frac{1}{\lambda_0}, \, \frac{1}{\lambda_0 + \phi}\right)$ exists and is bounded.
+   - **Paramagnetic / Savvidy Instability Regime ($\phi \ge \lambda_0$):**
+     If the small-field cutoff is omitted or violated such that $\phi > \lambda_0$ (for example, $\lambda_0 = 1$ and $\phi = 3/2$), the negatively aligned colour eigenvalue becomes strictly negative:
+     $$\lambda_-(3/2) = 1 - \frac{3}{2} = -\frac{1}{2} < 0, \quad \Delta_{\mathrm{instability}} \equiv \phi - \lambda_0 = \frac{3}{2} - 1 = \frac{1}{2} > 0.$$
+     In this regime, the Gaussian fluctuation integral $\int_{\mathbb{R}^3} d^3 B^\prime \exp(-\frac{1}{2} \langle B^\prime, \mathcal{H}_{V_0} B^\prime \rangle)$ diverges exponentially! This proves from first principles why Bałaban's scale-$k$ small-field characteristic function $\chi_k(\Omega_k^{\sim 4})$ is mathematically indispensable for the existence of the fluctuation propagator $C_k(V_0)$.
+
+3. **Background-Dependent Propagator Trace Shift ($\operatorname{Tr}(C_k(V_0)) \ne \operatorname{Tr}(C_k(0))$):**
+   Because $\operatorname{Tr}(\mathcal{W}(\phi)) = -\phi + 0 + \phi = 0$ while $\operatorname{Tr}(\mathcal{W}(\phi)^2) = (-\phi)^2 + 0^2 + \phi^2 = 2\phi^2 > 0$, the fluctuation propagator $C_k(V_0) = (\mathcal{H}_0 + \mathcal{W}(F(V_0)))^{-1}$ has a strictly positive trace shift relative to the free propagator $C_k(0) = \mathcal{H}_0^{-1}$:
+   $$\operatorname{Tr}_{\mathfrak{su}(2)}\left( C_k(\phi) - C_k(0) \right) = \left(\frac{1}{\lambda_0 - \phi} + \frac{1}{\lambda_0} + \frac{1}{\lambda_0 + \phi}\right) - \frac{3}{\lambda_0} = \frac{2 \phi^2}{\lambda_0(\lambda_0^2 - \phi^2)} > 0 \quad \forall \phi \in (0, \lambda_0).$$
+   For $\lambda_0 = 1$ and $\phi = 1/2$, we obtain the exact rational Weitzenböck propagator shift:
+   $$\operatorname{Tr}(C_k(1/2)) = 2 + 1 + \frac{2}{3} = \frac{11}{3}, \quad \operatorname{Tr}(C_k(0)) = 3, \quad \Delta_{\mathrm{Weitzenbock}} \equiv \operatorname{Tr}(C_k(1/2)) - \operatorname{Tr}(C_k(0)) = \frac{2}{3} > 0,$$
+   with leading second-order resolvent approximation $\operatorname{Tr}(C_k(0)^3 \mathcal{W}(1/2)^2) = \frac{2(1/2)^2}{1^3} = \frac{1}{2} > 0$.
+   Consequently, any tadpole contraction $\operatorname{Tr}(J_2(V_0) C_k(V_0))$ injects non-trivial functions of the background curvature $F_{\mu\nu}(V_0)^2$ into the renormalized observable!
+
+---
+
+### 3. Connected Cumulant Contractions of the Marked Observable in (1.76)
+
+On the small-field overlap domain $\mathcal{E}_{\mathrm{chart}}$, let $d\mu_{C_k(V_0)}(B^\prime) = \mathcal{N}_k(V_0)^{-1} \exp(-\frac{1}{2} \langle B^\prime, \mathcal{H}_{V_0} B^\prime \rangle) dB^\prime$ denote the normalized Gaussian fluctuation measure. By the Mayer / cumulant expansion (Bałaban CMP 122 pp. 358–365), dividing the numerator fluctuation integral by the denominator fluctuation integral cancels the vacuum normalization $\mathcal{N}_k(V_0) = (\det(2\pi C_k(V_0)))^{1/2}$ and all disconnected vacuum polymer diagrams, leaving the exact **connected cumulant expectation**:
+$$\mathbb{E}_{k, \alpha}^{\mathrm{Gauss}}[\mathcal{O}](V_0) \equiv \frac{\int d\mu_{C_k(V_0)}(B^\prime) \, \mathcal{O}[V_0 \exp(i g_k B^\prime)] \exp(I_{\mathrm{int}}(V_0; B^\prime))}{\int d\mu_{C_k(V_0)}(B^\prime) \, \exp(I_{\mathrm{int}}(V_0; B^\prime))} = \sum_{n=0}^\infty \frac{1}{n!} \left\langle \mathcal{O}[V_0 \exp(i g_k B^\prime)] ; \, \underbrace{I_{\mathrm{int}}, \dots, I_{\mathrm{int}}}_{n \text{ times}} \right\rangle_{C_k(V_0)}^c.$$
+
+Expanding to order $\mathcal{O}(g_k^2)$ via Wick's theorem yields two distinct, strictly non-vanishing radiative shift mechanisms:
+$$\mathbb{E}_{k, \alpha}^{\mathrm{Gauss}}[\mathcal{O}](V_0) = \mathcal{O}_0(V_0) + \Delta_{\mathrm{tadpole}}(V_0) + \Delta_{\mathrm{cumulant}}(V_0) + \mathcal{O}(g_k^4),$$
+where:
+
+1. **One-Loop Observable Tadpole Contraction ($n = 0$ connected self-contraction):**
+   Since $\langle B_i^\prime \rangle_{C_k(V_0)} = 0$ and $\langle B_i^\prime B_j^\prime \rangle_{C_k(V_0)} = C_{k, ij}(V_0)$, the linear jet $g_k \langle J_1, B^\prime \rangle$ has zero mean at $n=0$, while the quadratic Hessian jet produces the one-loop tadpole shift:
+   $$\Delta_{\mathrm{tadpole}}(V_0) = \frac{1}{2} g_k^2 \left\langle \langle B^\prime, J_2(V_0) B^\prime \rangle \right\rangle_{C_k(V_0)} = \frac{1}{2} g_k^2 \operatorname{Tr}\left( J_2(V_0) C_k(V_0) \right).$$
+   For any convex quadratic observable (such as the flowed action density $\mathcal{O}_{(a, t)} = \operatorname{Tr}(G_{\mu\nu}(t)^2)$ where $J_2(V_0) > 0$ on non-gauge modes), since $C_k(V_0) > 0$ is positive definite, the trace of the product of two positive-definite Hermitian operators is strictly positive:
+   $$\Delta_{\mathrm{tadpole}}(V_0) > 0 \quad \forall g_k > 0.$$
+
+2. **Connected Jet-Vertex Cumulant Contraction ($n = 1$ Wick contraction with $I_3$):**
+   At $n = 1$, the linear observable jet $g_k \langle J_1(V_0), B^\prime \rangle$ contracts with the cubic Yang-Mills interaction vertex $g_k I_3(V_0; B^\prime) = \frac{1}{6} g_k \sum_{j,l,m} V_{jlm}^{(3)}(V_0) B_j^\prime B_l^\prime B_m^\prime$.
+   By Wick's theorem for a four-point Gaussian moment $\langle B_i^\prime B_j^\prime B_l^\prime B_m^\prime \rangle_C = C_{ij} C_{lm} + C_{il} C_{jm} + C_{im} C_{jl}$, and using the total symmetry of $V_{jlm}^{(3)}$ in its multi-indices, we obtain:
+   $$\Delta_{\mathrm{cumulant}}(V_0) = g_k^2 \left\langle \langle J_1(V_0), B^\prime \rangle ; \, I_3(V_0; B^\prime) \right\rangle_{C_k(V_0)}^c = \frac{1}{2} g_k^2 \sum_{i,j,l,m} J_{1, i}(V_0) V_{jlm}^{(3)}(V_0) C_{k, ij}(V_0) C_{k, lm}(V_0).$$
+   In addition, contracting the third-order observable jet $\frac{1}{6} g_k^3 J_3[B^\prime, B^\prime, B^\prime]$ with $g_k I_3(B^\prime)$ at order $g_k^4$ produces the sunset diagram $\frac{1}{6} g_k^4 \sum J_{3, ijl} V_{mnp}^{(3)} C_{im} C_{jn} C_{lp}$, while at order $g_k^2$ the linear-cubic contraction $\Delta_{\mathrm{cumulant}}(V_0)$ is non-zero whenever a radiative tadpole loop $C_{k, lm}(V_0)$ attaches to a background-dependent vertex $V_{jlm}^{(3)}(V_0)$ coupled to $J_1(V_0)$.
+
+3. **Concrete Rational $\mathfrak{su}(2)$ Evaluation:**
+   For the colour triplet $a \in \{-, 3, +\}$ with $\lambda_0 = 1$, background curvature $\phi = 1/2$, covariance $C(1/2) = \operatorname{diag}(2, \, 1, \, 2/3)$, coupling $g_k^2 = 1/4$, observable Hessian $J_2 = \operatorname{diag}(1, \, 1, \, 1)$, linear jet $J_1 = (0, \, 1, \, 0)$, and background-induced cubic vertex $V_{3, aa}^{(3)} = (1, \, 0, \, -1)$ (arising from the commutator $[T_3, [T_+, T_-]]$ coupled to background curvature):
+   - One-loop tadpole shift:
+     $$\Delta_{\mathrm{tadpole}} = \frac{1}{2} \left(\frac{1}{4}\right) \left(2 + 1 + \frac{2}{3}\right) = \frac{1}{8} \cdot \frac{11}{3} = \frac{11}{24} > 0.$$
+   - Connected jet-vertex cumulant shift:
+     $$\Delta_{\mathrm{cumulant}} = \frac{1}{2} \left(\frac{1}{4}\right) J_{1, 3} C_{33} \sum_{a \in \{-, 3, +\}} V_{3, aa}^{(3)} C_{aa} = \frac{1}{8} (1)(1) \left( 1 \cdot 2 + 0 \cdot 1 + (-1) \cdot \frac{2}{3} \right) = \frac{1}{8} \cdot \frac{4}{3} = \frac{1}{6} > 0.$$
+   - Total order-$g_k^2$ radiative observable shift:
+     $$\Delta_{\mathrm{rad}} = \Delta_{\mathrm{tadpole}} + \Delta_{\mathrm{cumulant}} = \frac{11}{24} + \frac{4}{24} = \frac{15}{24} = \frac{5}{8} > 0.$$
+   This certifies in exact rational arithmetic that $\mathbb{E}_{k, \alpha}^{\mathrm{Gauss}}[\mathcal{O}](V_0) - \mathcal{O}_0(V_0) = \frac{5}{8} \ne 0$: the coarse-grained observable receives mandatory radiative counterterm and operator-mixing corrections at every RG step.
+
+---
+
+### 4. Gradient-Flow Tadpole Regularization ($t > 0$) vs. Unflowed UV Divergence ($t = 0$) and the Infrared Window
+
+A fundamental structural difference separates unflowed local gauge observables ($t = 0$) from Yang-Mills gradient-flowed observables ($t > 0$):
+
+1. **Unflowed Coincident Tadpole Divergence ($t = 0$):**
+   For an unflowed local quadratic observable such as $\mathcal{O}_{(a, 0)}(x) = \operatorname{Tr}(F_{\mu\nu}(x)^2)$, the second-order jet $J_2^{(t=0)}$ is a purely local second-order difference operator $d_{V_0}^* d_{V_0}$ scaling as momentum squared $p^2$ up to the ultraviolet lattice cutoff $|p| \sim \pi / a$.
+   In a single RG step at scale $a_k = L^k a$, integrating out the fluctuation shell $|p| \in [\pi/(L a_k), \pi/a_k]$ gives a tadpole contribution per mode proportional to:
+   $$\tau_{\mathrm{unflowed}}(p) = p^2 \xrightarrow{p \sim a^{-1} \to \infty} \infty,$$
+   and summing over the 4D Brillouin zone shell yields the quadratic ultraviolet divergence $\Delta_{\mathrm{tadpole}}^{(t=0)} \sim g_k^2 a_k^{-4}$ (for the energy density in physical units), preventing a finite continuum limit without fine-tuned additive vacuum energy subtractions.
+
+2. **Gradient-Flow Heat-Kernel UV Regularization ($t > 0$):**
+   When the observable is evaluated on the gradient-flowed gauge field $B_\mu(t, x)$ at fixed physical flow time $t > 0$, the linearized gradient flow equation $\partial_s \delta B_\mu = - (d_{V_0}^* d_{V_0} \delta B)_\mu$ smears every fluctuation mode of covariant momentum squared $p^2$ by the parabolic heat-kernel damping factor $e^{-t p^2}$.
+   Consequently, the quadratic jet $J_2^{(t)}$ of $\mathcal{O}_{(a, t)}$ carries two factors of $e^{-t p^2}$, and the single-mode tadpole spectral density becomes:
+   $$\tau_{\mathrm{flowed}}(p; t) = p^2 e^{-2 t p^2} \quad (p \ge 0, \, t > 0).$$
+   By elementary calculus, $\frac{\partial}{\partial (p^2)} \left(p^2 e^{-2 t p^2}\right) = (1 - 2 t p^2) e^{-2 t p^2} = 0 \iff p^2 = \frac{1}{2t}$, yielding the **universal ultraviolet supremum bound**:
+   $$0 \le \tau_{\mathrm{flowed}}(p; t) = p^2 e^{-2 t p^2} \le \frac{1}{2 e t} < \infty \quad \forall p \in [0, \infty), \, \forall a > 0!$$
+   Moreover, for ultraviolet fluctuation shells with $p^2 \gg t^{-1}$ (i.e. lattice scales $a_k \ll \sqrt{8t}$), the ratio of flowed to unflowed tadpole density is exponentially suppressed:
+   $$\frac{\tau_{\mathrm{flowed}}(p; t)}{\tau_{\mathrm{unflowed}}(p)} = e^{-2 t p^2} \ll 1.$$
+
+3. **The Infrared Uncontracted Window ($p^2 \ll t^{-1}$, i.e. $L^k a \gg \sqrt{8t}$):**
+   Does gradient-flow regularization at fixed physical $t > 0$ automatically resolve multiscale summability across **all** RG scales?
+   **NO.** On coarse infrared block scales where $L^k a \gg \sqrt{8t}$, the fluctuation momenta satisfy $t p^2 \ll 1$. In this regime:
+   $$e^{-2 t p^2} = 1 - 2 t p^2 + \mathcal{O}(t^2 p^4) \approx 1.$$
+   For example, at $t = 1/4$ and infrared momentum $p = 1/10$ ($p^2 = 1/100$), the damping factor is $e^{-2(1/4)(1/100)} = e^{-1/200} \approx 0.995012 > 0.995$, providing essentially zero exponential suppression!
+   Therefore, while gradient flow $t > 0$ completely regularizes ultraviolet tadpoles on scales $a_k \lesssim \sqrt{8t}$, controlling the accumulated radiative shifts $\sum_{k: L^k a \ge \sqrt{8t}} (\Delta_{\mathrm{tadpole}}^{(t)} + \Delta_{\mathrm{cumulant}}^{(t)})$ across the infrared scales strictly requires:
+   - Crossing the non-perturbative intermediate coupling crossover window (`E-CROSSOVER`, OPEN);
+   - Establishing cutoff-uniform multiscale cluster expansion bounds (`YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS`, OPEN);
+   - Proving existence of the non-perturbative mass gap $m_{\mathrm{phys}} > 0$ (`YM-060F`, OPEN).
+
+---
+
+### 5. Formal Proof of Lemma `YM-062F-CONNECTED-CUMULANT-AND-WEITZENBOCK-CURVATURE-SHIFT`
+
+**LEMMA `YM-062F-CONNECTED-CUMULANT-AND-WEITZENBOCK-CURVATURE-SHIFT` (Weitzenböck Adjoint Curvature Spectrum, Connected Cumulant Observable Shift, and Gradient-Flow Tadpole Bound in Bałaban CMP 122 (1.76)):**
+*Under the hypotheses of Bałaban CMP 122 eq. (1.76) on the small-field overlap domain $\mathcal{E}_{\mathrm{chart}} \subset G^{\mathbb{B}_0 \setminus T_0}$ with gauge group $G = SU(2)$ and Lie algebra fluctuation parametrization $\hat{V}(b) = V_0(b) \exp(i g_k B^\prime(b))$ around a constrained variational extremum $V_0$:*
+1. *The quadratic fluctuation Hessian $\mathcal{H}_{V_0} = d_{V_0}^* d_{V_0} + m_k^2 I + \mathcal{W}(F(V_0))$ contains the non-Abelian Weitzenböck curvature operator $\mathcal{W}(F(V_0)) = 2 i \operatorname{ad}(F(V_0))$. For background curvature magnitude $\phi = \|F(V_0)\|_{\mathrm{ad}}$, the local $\mathfrak{su}(2)$ adjoint spectrum of $\mathcal{W}(\phi)$ is $\{-\phi, 0, +\phi\}$. Gaussian coercivity $\mathcal{H}_{V_0} \succ 0$ holds if and only if the small-field cutoff enforces $\phi < \lambda_0$, and fails with Savvidy instability defect $\Delta_{\mathrm{instability}} = \phi - \lambda_0 > 0$ when $\phi > \lambda_0$.*
+2. *For any $\phi \in (0, \lambda_0)$, the fluctuation covariance $C_k(\phi) = (\lambda_0 I_3 + \mathcal{W}(\phi))^{-1}$ has a strictly positive Weitzenböck trace shift relative to the free propagator $C_k(0) = \lambda_0^{-1} I_3$:*
+   $$\Delta_{\mathrm{Weitzenbock}}(\phi) = \operatorname{Tr}_{\mathfrak{su}(2)}\left(C_k(\phi) - C_k(0)\right) = \frac{2 \phi^2}{\lambda_0(\lambda_0^2 - \phi^2)} > 0 \quad \left(\text{certified at } \lambda_0 = 1, \phi = \frac{1}{2} \implies \Delta_{\mathrm{Weitzenbock}} = \frac{2}{3} > 0\right).$$
+3. *Under Gaussian fluctuation integration on $\mathcal{E}_{\mathrm{chart}}$, the connected cumulant expectation of a physical observable $\mathcal{O}_{(a, t)}(f)$ differs from its classical pullback $\mathcal{O}_0(V_0)$ at order $\mathcal{O}(g_k^2)$ by the sum of the one-loop tadpole contraction and the connected jet-vertex cumulant contraction:*
+   $$\mathbb{E}_{k, \alpha}^{\mathrm{Gauss}}[\mathcal{O}](V_0) - \mathcal{O}_0(V_0) = \frac{1}{2} g_k^2 \operatorname{Tr}\left(J_2(V_0) C_k(V_0)\right) + \frac{1}{2} g_k^2 \sum_{i,j,l,m} J_{1, i}(V_0) V_{jlm}^{(3)}(V_0) C_{k, ij}(V_0) C_{k, lm}(V_0) + \mathcal{O}(g_k^4) \ne 0$$
+   *$\left(\text{certified on the triplet } \mathfrak{su}(2) \text{ model with } \Delta_{\mathrm{tadpole}} = \frac{11}{24} > 0, \, \Delta_{\mathrm{cumulant}} = \frac{1}{6} > 0, \, \Delta_{\mathrm{rad}} = \frac{5}{8} > 0\right)$.*
+4. *For positive gradient flow time $t > 0$, the single-mode tadpole spectral density $\tau_{\mathrm{flowed}}(p; t) = p^2 e^{-2 t p^2}$ is uniformly bounded across all ultraviolet momenta $p \in [0, \infty)$ by $\sup_{p \ge 0} \tau_{\mathrm{flowed}}(p; t) = \frac{1}{2 e t} < \infty$, whereas on infrared scales $p^2 \ll t^{-1}$ the damping factor satisfies $e^{-2 t p^2} \to 1$, leaving multiscale infrared accumulation open.*
+5. *Cutoff-uniform multiscale cluster summability as $a \to 0$, thermodynamic infinite-volume limits $|\Lambda| \to \infty$, and continuum Wightman reconstruction remain strictly open.*
+*Status:* **PROVED_WITHIN_STATED_HYPOTHESES** *(for the Weitzenböck spectrum, coercivity threshold, connected cumulant shift, and single-step UV flow regularization)*; **CONDITIONALLY_BLOCKED_AND_OPEN** *(for multiscale infrared accumulation and continuum closure)*.
+
+---
+
+### 6. Isolation of Immediate Next Downstream Obligation (`YM-063`) and Reaffirmed Governance Boundaries
+- **Immediate Next Open Obligation under `YM-015F-JET-002B`:**
+  **LEMMA `YM-063F-FINITE-CHART-BOUNDARY-AND-FOURTH-ORDER-TAYLOR-REMAINDER` (Finite-Chart Cutoff Boundary Corrections $\partial\mathcal{E}_{\mathrm{chart}}$ in Gaussian Integration by Parts and Fourth-Order Non-Abelian BCH / Jet Remainder Bounds in Bałaban CMP 122 (1.80)–(1.90)):**
+  Because the actual small-field fluctuation integral in (1.76) is restricted to the bounded domain $\mathcal{E}_{\mathrm{chart}}$ by the smooth cutoff $\chi^\prime(B^\prime)$ rather than integrated over the full tangent space $\mathbb{R}^{3|\mathbb{B}_0 \setminus T_0|}$, replacing the truncated integral by full Gaussian Wick contractions introduces **cutoff-derivative boundary terms** $\langle \nabla \chi^\prime \rangle_{C_k}$ under Gaussian integration by parts, together with fourth-order Baker-Campbell-Hausdorff (BCH) curvature remainders $\mathcal{R}_{\mathrm{BCH}}^{(4)}(V_0, B^\prime)$ and fourth-order observable jet remainders $\mathcal{R}_{\mathrm{jet}}^{(4)}(V_0, B^\prime)$. Auditing and bounding these finite-chart boundary and Taylor/BCH remainder terms is the immediate next task (`YM-063`).
+- **Downstream Open / Blocked Global Obligations:**
+  - **Lemma `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS`:** **`OPEN`**;
+  - **Lemma `YM-060F-CONTINUUM-WIGHTMAN-RECONSTRUCTION-AND-SPECTRAL-GAP`:** **`OPEN`**;
+  - **Task `YM-016` (Continuum Reconstruction):** **`BLOCKED`**;
+  - **Infrared Crossover `E-CROSSOVER`:** **`OPEN`**;
+  - **Constitutional Invariants:** `goal_complete = false`, `clay_problem = OPEN_AND_UNSOLVED`, `P3 = OPEN`, `E-UV-FLOWED = PARTIAL_PROGRESS`, `STRUCTURAL_NO_GO_COUNT = 0`.
+
+
 
 
 

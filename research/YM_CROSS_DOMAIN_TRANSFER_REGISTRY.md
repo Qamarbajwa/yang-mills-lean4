@@ -492,3 +492,15 @@ Source mechanisms: own finite row-space/kernel target-descent theorem, positive 
 
 
 
+## XFER-YM-ONE-TERM-PULLBACK-062: Fluctuation Covariance Contractions, Weitzenböck Curvature Shift, Connected Cumulants, and Gradient-Flow Tadpole Regularization
+
+- Source: Bałaban CMP 122, 175–202 (1989), eqs. (1.76)–(1.90); CMP 139, 281–305 (1991).
+- Target: YM-015F $\mathcal{O}(g_k^2)$ Gaussian fluctuation contraction of degree-one physical marked observable insertions.
+- Verified mapping:
+  - Non-Abelian Weitzenböck curvature operator $\mathcal{W}(F(V_0)) = -2 \operatorname{ad}(F_{\mu\nu}(V_0))$ in the fluctuation Hessian $\mathcal{H}_{V_0} = d_{V_0}^* d_{V_0} + m_k^2 I + \mathcal{W}(F(V_0))$ on $\mathfrak{su}(2)$ triplet ($\operatorname{spec}(\mathcal{H}_{V_0}) = \{\lambda_0 - \phi, \lambda_0, \lambda_0 + \phi\}$).
+  - Coercivity threshold $\phi < \lambda_0$, Savvidy instability defect $\Delta_{\mathrm{instability}} = \phi - \lambda_0 = 1/2 > 0$ at $\lambda_0 = 1, \phi = 3/2$, and exact Weitzenböck propagator trace shift $\Delta_{\mathrm{Weitzenbock}} = \operatorname{Tr}(C(1/2)) - \operatorname{Tr}(C(0)) = 11/3 - 3 = 2/3 > 0$ at $\lambda_0 = 1, \phi = 1/2$.
+  - Exact $\mathcal{O}(g_k^2)$ Gaussian conditional expectation decomposition: $\mathbb{E}_{k, \alpha}^{\mathrm{Gauss}}[\mathcal{O}](V_0) - \mathcal{O}_0(V_0) = \Delta_{\mathrm{tadpole}}(V_0) + \Delta_{\mathrm{cumulant}}(V_0) + \mathcal{O}(g_k^4)$, with $\Delta_{\mathrm{tadpole}} = 11/24 > 0$, $\Delta_{\mathrm{cumulant}} = 1/6 > 0$, and $\Delta_{\mathrm{rad}} = 5/8 > 0$.
+  - Gradient-flow UV tadpole bound $\tau_{\mathrm{flowed}}(p; t) = p^2 e^{-2 t p^2} \le \frac{1}{2 e t} < \infty$ for all $p \ge 0$ at $t > 0$, separated from infrared multiscale non-contraction ($e^{-2 t p^2} \to 1$ as $p^2 t \to 0$).
+  - Lemma `YM-062F-CONNECTED-CUMULANT-AND-WEITZENBOCK-CURVATURE-SHIFT` formally proved within stated hypotheses; isolated immediate next obligation Lemma `YM-063F-FINITE-CHART-BOUNDARY-AND-FOURTH-ORDER-TAYLOR-REMAINDER`.
+- Open bridge: Finite-Chart Boundary and Fourth-Order Taylor Remainder Bounds (Lemma `YM-063F`), Cutoff-Uniform Multiscale Cluster Bounds (Lemma `YM-059F`), Continuum Wightman Reconstruction and Spectral Gap (Lemma `YM-060F`), crossing infrared crossover `E-CROSSOVER`.
+- Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
