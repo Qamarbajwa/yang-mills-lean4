@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 89
+revision: 90
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "055c662449be5bdf4b78760bc3bc3a9df924bba8"
-  scientific_candidate_sha: "090bebb3ae02b82631a7889ea96f51d82c1afe9c"
-  review_bound_sha: "090bebb3ae02b82631a7889ea96f51d82c1afe9c"
-  evidence_closeout_head: "d74ecd2f4b658d02923c3ac4745ace841e175cda"
-  closeout_resolution: "evidence_closeout_head binds preceding completed YM-065 closeout commit (d74ecd2f4b658d02923c3ac4745ace841e175cda); scientific_candidate_sha and review_bound_sha bind accepted YM-066 candidate (090bebb3ae02b82631a7889ea96f51d82c1afe9c); resolve authoritative current HEAD dynamically from Git."
+  head: "28825217f843181688ef89af42079e1e68ed8a9b"
+  scientific_candidate_sha: "28825217f843181688ef89af42079e1e68ed8a9b"
+  review_bound_sha: "28825217f843181688ef89af42079e1e68ed8a9b"
+  evidence_closeout_head: "28825217f843181688ef89af42079e1e68ed8a9b"
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-066 closeout commit (28825217f843181688ef89af42079e1e68ed8a9b); scientific_candidate_sha and review_bound_sha bind current YM-067 candidate freeze; resolve authoritative current HEAD dynamically from Git."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,14 +32,25 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 88
-  last_updated_at: "2026-10-17T14:57:00Z"
+  last_expected_revision: 89
+  last_updated_at: "2026-10-17T15:02:00Z"
   active_contract: "YM-015F-JET-002B"
-  frozen_candidate: "090bebb3ae02b82631a7889ea96f51d82c1afe9c"
+  frozen_candidate: "28825217f843181688ef89af42079e1e68ed8a9b"
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-067
+    scope_in: "Multi-scale UV iteration of T_k^{marked} to the physical flow scale k_flow(a, t), asymptotic-freedom trajectory g_k^2(N_UV) = (beta_flow + (N_UV - k)*delta_beta_1)^{-1}, harmonic one-loop accumulation barrier sum_k g_k^2 ~ ln N_UV on unrenormalized marginal dimension-4 jets vs cutoff-uniform two-loop and higher-order remainder summability sum_k g_k^4 <= C < infinity, proof of Lemma YM-067F-MULTISCALE-UV-ITERATION-TO-FLOW-SCALE-AND-HARMONIC-LOG-BARRIER, isolation of Lemma YM-068F, and Test 31 finite certificate"
+    scope_out: "Gradient-flow semigroup tadpole cancellation and cutoff-uniform UV summability to k_flow(a, t) (Lemma YM-068F), cutoff-uniform multiscale cluster bounds (Lemma YM-059F), continuum Wightman reconstruction and spectral gap (Lemma YM-060F), and full continuum closure"
+    dependencies: ["YM-066"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-067_E4_RAW_20261017.md"
+    acceptor: "verification/YM-067_TECHNICAL_ACCEPTANCE.md"
+    status: CANDIDATE_FROZEN
+    scope_limitation: "MULTISCALE_UV_TRAJECTORY_AND_TWOLOOP_SUMMABILITY_PROVED_FLOW_SEMIGROUP_CANCELLATION_AND_CONTINUUM_OPEN"
   - id: YM-066
     scope_in: "Preliminary sector operator T_h(Z_h), collar interface coupling across B_collar, assembly of the complete five-sector single-step marked RG map T_k^{marked} in Bałaban CMP 122 (1.76)–(1.90), quantitative characterization of the UV-to-IR running coupling crossover threshold k_cross(g_0), proof of Lemma YM-066F-COLLAR-INTERFACE-AND-COMPLETE-SINGLE-STEP-MARKED-RG-MAP, isolation of Lemma YM-067F, and Test 30 finite certificate"
     scope_out: "Multi-scale UV iteration of T_k^{marked} to flow scale k_flow(a, t) and harmonic log barrier (Lemma YM-067F), cutoff-uniform multiscale summability (Lemma YM-059F), continuum Wightman reconstruction and spectral gap (Lemma YM-060F), and full continuum closure"

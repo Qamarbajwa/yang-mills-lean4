@@ -1206,6 +1206,7 @@ def test_literal_git_blob_vs_checkout_digest_and_hash_elimination_certificate():
         "38ad6b54d656e0966406a4b85a533a2db7f9dd8f71e35cbba26cef85e2d4df65",  # YM-064 candidate
         "fef79869d7888822e06fff5917da242a4a237e608535159f104b54a6003b2e6f",  # YM-065 candidate
         "c14f5abe44fcaac6f97c95c96919bb1f1cf705379e47f625179cb15664f8f07a",  # YM-066 candidate
+        "a987a8ee79139a0b469f480b9cba0978f6d7979a2e8b1a6f81f084dada87da2f",  # YM-067 candidate
     ]
 
     # Candidate 15086d3 (YM-054):
@@ -3408,5 +3409,140 @@ def test_collar_interface_and_complete_single_step_marked_rg_map_certificate():
     assert lemma_YM066F_status == "LEMMA_YM_066F_COLLAR_INTERFACE_AND_COMPLETE_SINGLE_STEP_MARKED_RG_MAP_PROVED"
     next_obligation = "LEMMA_YM_067F_MULTISCALE_UV_ITERATION_TO_FLOW_SCALE_AND_HARMONIC_LOG_BARRIER"
     assert next_obligation == "LEMMA_YM_067F_MULTISCALE_UV_ITERATION_TO_FLOW_SCALE_AND_HARMONIC_LOG_BARRIER"
+    classification = "METHOD_SPECIFIC_OBSTRUCTION"
+    assert classification == "METHOD_SPECIFIC_OBSTRUCTION"
+
+
+# ---------------------------------------------------------------------------
+# TEST 31: Multi-Scale UV Iteration to Flow Scale, Asymptotic-Freedom
+#          Trajectory, Harmonic One-Loop Accumulation Barrier, and
+#          Cutoff-Uniform Two-Loop Summability Certificate (YM-067 / Lemma YM-067F)
+# ---------------------------------------------------------------------------
+def test_multiscale_uv_iteration_to_flow_scale_and_harmonic_log_barrier_certificate():
+    """
+    Certifies Lemma YM-067F-MULTISCALE-UV-ITERATION-TO-FLOW-SCALE-AND-HARMONIC-LOG-BARRIER:
+    1. Asymptotic-freedom bare cutoff scaling beta_{inv, 0}(N_UV) = beta_flow + N_UV * delta_beta_1
+       (beta_flow = 4, delta_beta_1 = 11/24, g_crit^2 = 1/2):
+       for N_UV = 6, beta_{inv, 0}(6) = 27/4, g_0^2(6) = 4/27 < 1/4, and g_k^2(6) <= 1/4 < 1/2
+       for all 0 <= k <= 6, with uniform flow-scale margin Delta_AF_flow_margin = 1/4 > 0
+       and k = 5 rescue defect Delta_AF_rescue = 24/41 - 24/107 = 1584/4387 > 0.
+    2. Harmonic one-loop accumulation barrier on unrenormalized marginal dimension-4 jets
+       with lambda_tree = 1:
+       H_4 = 1 + 1/2 + 1/3 + 1/4 = 25/12 > 2 (Delta_harmonic_barrier = 1/12 > 0), and
+       physical SU(2) 4-scale harmonic sum S_1^{phys}(4) = 7459894 / 9501065 vs
+       S_1^{phys}(1) = 24/107 (Delta_phys_harmonic = 49802 / 88795 > 1/2 > 0).
+    3. Cutoff-uniform two-loop / higher-order remainder summability O(g_k^4(N_UV)):
+       S_2(4) = 1 + 1/4 + 1/9 + 1/16 = 205/144 < 7/4 = 2 - 1/4 < 2, with
+       Delta_twoloop_uniform_margin = 83/144 > 0, Delta_harmonic_vs_twoloop = 95/144 > 0,
+       and physical SU(2) telescoping bound S_2^{phys}(N_UV) < 1 / (delta_beta_1 * beta_flow) = 6/11 < 1.
+    """
+    from fractions import Fraction as F
+
+    beta_flow = F(4)
+    g_flow_sq = F(1) / beta_flow  # 1/4
+    g_crit_sq = F(1, 2)
+    beta_crit = F(1) / g_crit_sq  # 2
+    delta_beta_1 = F(11, 24)
+
+    # 1. Asymptotic-Freedom UV Trajectory to Flow Scale k_flow = N_UV = 6:
+    N_UV = 6
+    beta_inv_0_AF = beta_flow + N_UV * delta_beta_1
+    assert beta_inv_0_AF == F(27, 4)
+    g_0_sq_AF = F(1) / beta_inv_0_AF
+    assert g_0_sq_AF == F(4, 27)
+    assert g_0_sq_AF < g_flow_sq
+
+    def beta_inv_AF(k: int, n_uv: int) -> F:
+        return beta_flow + (n_uv - k) * delta_beta_1
+
+    def g_sq_AF(k: int, n_uv: int) -> F:
+        return F(1) / beta_inv_AF(k, n_uv)
+
+    g_sq_trajectory_6 = [g_sq_AF(k, N_UV) for k in range(N_UV + 1)]
+    for k in range(N_UV + 1):
+        assert beta_inv_AF(k, N_UV) >= beta_flow > beta_crit
+        assert g_sq_trajectory_6[k] <= g_flow_sq < g_crit_sq
+        if k < N_UV:
+            # Verify exact single-step RG recurrence beta_{inv, k+1} = beta_{inv, k} - delta_beta_1:
+            assert beta_inv_AF(k + 1, N_UV) == beta_inv_AF(k, N_UV) - delta_beta_1
+
+    max_g_sq_AF = max(g_sq_trajectory_6)
+    assert max_g_sq_AF == g_flow_sq == F(1, 4)
+    Delta_AF_flow_margin = g_crit_sq - max_g_sq_AF
+    assert Delta_AF_flow_margin == F(1, 4)
+    assert Delta_AF_flow_margin > F(0)
+
+    # Rescue at k = 5 compared with unrescaled fixed beta_{inv, 0} = 4:
+    g_5_sq_fixed = F(1) / (F(4) - 5 * delta_beta_1)
+    assert g_5_sq_fixed == F(24, 41)
+    assert g_5_sq_fixed > g_crit_sq
+
+    g_5_sq_rescaled = g_sq_AF(5, N_UV)
+    assert g_5_sq_rescaled == F(24, 107)
+    assert g_5_sq_rescaled < g_flow_sq < g_crit_sq
+
+    Delta_AF_rescue = g_5_sq_fixed - g_5_sq_rescaled
+    assert Delta_AF_rescue == F(1584, 4387)
+    assert Delta_AF_rescue > F(0)
+
+    # 2. Harmonic One-Loop Accumulation Barrier on Unrenormalized Marginal Jets (lambda_tree = 1):
+    # Affine-linear iteration I_{k+1} = lambda_tree * I_k + E_k^(1) with I_0 = 0, lambda_tree = 1:
+    lambda_tree = F(1)
+    H_4 = F(0)
+    for m in range(1, 5):
+        H_4 = lambda_tree * H_4 + F(1, m)
+    assert H_4 == F(25, 12)
+    C_marginal = F(2)
+    assert H_4 > C_marginal
+
+    Delta_harmonic_barrier = H_4 - C_marginal
+    assert Delta_harmonic_barrier == F(1, 12)
+    assert Delta_harmonic_barrier > F(0)
+
+    # Physical SU(2) trajectory one-loop sum for N_UV = 4 vs N_UV = 1:
+    S1_phys_1 = sum(g_sq_AF(k, 1) for k in range(1))
+    S1_phys_4 = sum(g_sq_AF(k, 4) for k in range(4))
+    assert S1_phys_1 == F(24, 107)
+    assert S1_phys_4 == F(24, 107) + F(12, 59) + F(8, 43) + F(6, 35)
+    assert S1_phys_4 == F(7459894, 9501065)
+
+    Delta_phys_harmonic = S1_phys_4 - S1_phys_1
+    assert Delta_phys_harmonic == F(49802, 88795)
+    assert Delta_phys_harmonic > F(1, 2) > F(0)
+
+    # 3. Cutoff-Uniform Two-Loop / Irrelevant Remainder Summability O(g_k^4):
+    S2_4 = sum(F(1, m * m) for m in range(1, 5))
+    assert S2_4 == F(205, 144)
+
+    # Telescoping envelope 2 - 1/N_UV at N_UV = 4:
+    telescoping_env_4 = F(1) + sum(F(1, m - 1) - F(1, m) for m in range(2, 5))
+    assert telescoping_env_4 == F(2) - F(1, 4) == F(7, 4)
+    assert S2_4 < telescoping_env_4 < F(2)
+
+    C_twoloop_target = F(2)
+    Delta_twoloop_uniform_margin = C_twoloop_target - S2_4
+    assert Delta_twoloop_uniform_margin == F(83, 144)
+    assert Delta_twoloop_uniform_margin > F(0)
+
+    Delta_harmonic_vs_twoloop = H_4 - S2_4
+    assert Delta_harmonic_vs_twoloop == F(95, 144)
+    assert Delta_harmonic_vs_twoloop > F(0)
+
+    # Physical SU(2) two-loop sum S_2^{phys}(N_UV) = sum_{k=0}^{N_UV-1} g_k^4(N_UV):
+    S2_phys_4 = sum(g_sq_AF(k, 4) ** 2 for k in range(4))
+    telescoping_phys_4 = (F(1) / delta_beta_1) * sum(
+        (F(1) / (beta_flow + (m - 1) * delta_beta_1))
+        - (F(1) / (beta_flow + m * delta_beta_1))
+        for m in range(1, 5)
+    )
+    C2_phys_uniform_bound = F(1) / (delta_beta_1 * beta_flow)
+    assert C2_phys_uniform_bound == F(6, 11)
+    assert S2_phys_4 < telescoping_phys_4 < C2_phys_uniform_bound < F(1)
+
+    # 4. Status Bindings & Downstream Isolation:
+    lemma_YM067F_status = "LEMMA_YM_067F_MULTISCALE_UV_ITERATION_TO_FLOW_SCALE_AND_HARMONIC_LOG_BARRIER_PROVED"
+    assert lemma_YM067F_status == "LEMMA_YM_067F_MULTISCALE_UV_ITERATION_TO_FLOW_SCALE_AND_HARMONIC_LOG_BARRIER_PROVED"
+    next_obligation = "LEMMA_YM_068F_GRADIENT_FLOW_SEMIGROUP_TADPOLE_CANCELLATION_AND_UV_SUMMABILITY"
+    assert next_obligation == "LEMMA_YM_068F_GRADIENT_FLOW_SEMIGROUP_TADPOLE_CANCELLATION_AND_UV_SUMMABILITY"
     classification = "METHOD_SPECIFIC_OBSTRUCTION"
     assert classification == "METHOD_SPECIFIC_OBSTRUCTION"

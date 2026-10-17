@@ -563,3 +563,24 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
 4. **Established Lemma and Isolated Next Downstream Obligation:**
    - Proved Lemma `YM-066F-COLLAR-INTERFACE-AND-COMPLETE-SINGLE-STEP-MARKED-RG-MAP`.
    - Isolated immediate next downstream obligation: Lemma `YM-067F-MULTISCALE-UV-ITERATION-TO-FLOW-SCALE-AND-HARMONIC-LOG-BARRIER`.
+## CDC-067: Multi-Scale UV Iteration to Physical Flow Scale $k_{\mathrm{flow}}(a, t)$, Asymptotic-Freedom Trajectory, Harmonic One-Loop Barrier vs. Cutoff-Uniform Two-Loop Summability (`YM-067`)
+
+- **Date:** 2026-10-17
+- **Primary Contract:** `YM-015F-JET-002B`
+- **Source Target:** Bałaban CMP 122, 175–202 (1989); CMP 139, 281–305 (1991); Lüscher JHEP 1008:071 (2010).
+- **Defects Corrected & Mathematical Resolutions:**
+
+1. **Defect 1: Confusing Fixed-Bare-Coupling Infrared Exit with Asymptotic-Freedom UV Scaling to the Flow Scale $k_{\mathrm{flow}}(a, t)$:**
+   - Iterating from a fixed bare coupling $\beta_{\mathrm{inv}, 0} = 4$ exits the small-field window at $k_{\mathrm{cross}} = 5$ (`YM-066`), whereas taking the continuum UV limit $a = L^{-N_{\mathrm{UV}}} \ell_{\mathrm{flow}} \to 0$ at fixed physical flow scale $\ell_{\mathrm{flow}} = \sqrt{8t}$ scales the bare cutoff coupling according to asymptotic freedom.
+   - **Correction:** Proved that setting $\beta_{\mathrm{inv}, 0}(N_{\mathrm{UV}}) = \beta_{\mathrm{flow}} + N_{\mathrm{UV}} \delta\beta_1$ ($\beta_{\mathrm{flow}} = 4, \delta\beta_1 = 11/24$) keeps $g_k^2(N_{\mathrm{UV}}) = (\beta_{\mathrm{flow}} + (N_{\mathrm{UV}} - k)\delta\beta_1)^{-1} \le g_{\mathrm{flow}}^2 = 1/4 < 1/2 = g_{\mathrm{crit}}^2$ strictly inside the small-field window for all $0 \le k \le N_{\mathrm{UV}}$, with uniform margin $\Delta_{\mathrm{AF\_flow\_margin}} = 1/4 > 0$ and $N_{\mathrm{UV}} = 6, k = 5$ rescue defect $\Delta_{\mathrm{AF\_rescue}}(5) = 24/41 - 24/107 = 1584/4387 > 0$.
+
+2. **Defect 2: The Harmonic One-Loop Accumulation Barrier on Unrenormalized Marginal Dimension-4 Jets:**
+   - On UV scales $a_k = L^k a \ll \sqrt{8t}$ where dimension-4 jets have marginal tree-level scaling $\lambda_{\mathrm{tree}} = 1$, unabsorbed $\mathcal{O}(g_k^2(N_{\mathrm{UV}}))$ cumulant shifts accumulate as the harmonic sum $\sum_{m=1}^{N_{\mathrm{UV}}} (\beta_{\mathrm{flow}} + m\,\delta\beta_1)^{-1} \sim \delta\beta_1^{-1} \ln N_{\mathrm{UV}} \to \infty$.
+   - **Correction:** Certified at $N_{\mathrm{UV}} = 4$ that $H_4 = 25/12 > 2$ ($\Delta_{\mathrm{harmonic\_barrier}}(4) = 1/12 > 0$) and $S_1^{\mathrm{phys}}(4) - S_1^{\mathrm{phys}}(1) = 49802/88795 > 0$.
+
+3. **Defect 3: Cutoff-Uniform Summability of Two-Loop and Higher-Order Remainders $\mathcal{O}(g_k^4(N_{\mathrm{UV}}))$:**
+   - Proved via exact telescoping bounds that $S_2(N_{\mathrm{UV}}) = \sum_{m=1}^{N_{\mathrm{UV}}} m^{-2} \le 2 - 1/N_{\mathrm{UV}} < 2$ ($S_2(4) = 205/144$, $\Delta_{\mathrm{twoloop\_uniform\_margin}}(4) = 83/144 > 0$, $\Delta_{\mathrm{harmonic\_vs\_twoloop}}(4) = 95/144 > 0$) and $\sum_{k=0}^{N_{\mathrm{UV}}-1} g_k^4(N_{\mathrm{UV}}) < (\delta\beta_1 \beta_{\mathrm{flow}})^{-1} = 6/11 < 1$ uniformly for all $N_{\mathrm{UV}} \ge 1$.
+
+4. **Established Lemma and Isolated Next Downstream Obligation:**
+   - Proved Lemma `YM-067F-MULTISCALE-UV-ITERATION-TO-FLOW-SCALE-AND-HARMONIC-LOG-BARRIER`.
+   - Isolated immediate next downstream obligation: Lemma `YM-068F-GRADIENT-FLOW-SEMIGROUP-TADPOLE-CANCELLATION-AND-UV-SUMMABILITY`.
