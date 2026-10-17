@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 92
+revision: 93
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "ad8c015c665beb9eac8aad13a958a612108a21a8"
-  scientific_candidate_sha: "ad8c015c665beb9eac8aad13a958a612108a21a8"
-  review_bound_sha: "ad8c015c665beb9eac8aad13a958a612108a21a8"
+  head: "858a0df34144b0896b482d6d2fdb84c0f1ca9e4b"
+  scientific_candidate_sha: "0284179ef4e6fd5f4cc92f635ee4c79a6ffa1e7e"
+  review_bound_sha: "0284179ef4e6fd5f4cc92f635ee4c79a6ffa1e7e"
   evidence_closeout_head: "ad8c015c665beb9eac8aad13a958a612108a21a8"
-  closeout_resolution: "evidence_closeout_head binds preceding completed YM-067 closeout commit (ad8c015c665beb9eac8aad13a958a612108a21a8); scientific_candidate_sha and review_bound_sha bind current YM-068 candidate freeze; resolve authoritative current HEAD dynamically from Git."
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-067 closeout commit (ad8c015c665beb9eac8aad13a958a612108a21a8); scientific_candidate_sha and review_bound_sha bind accepted YM-068 candidate freeze (0284179ef4e6fd5f4cc92f635ee4c79a6ffa1e7e); head binds YM-068 acceptance receipt commit (858a0df34144b0896b482d6d2fdb84c0f1ca9e4b); resolve authoritative current HEAD dynamically from Git."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,10 +32,10 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 91
-  last_updated_at: "2026-10-17T15:52:00Z"
+  last_expected_revision: 92
+  last_updated_at: "2026-10-17T16:03:00Z"
   active_contract: "YM-015F-JET-002B"
-  frozen_candidate: "ad8c015c665beb9eac8aad13a958a612108a21a8"
+  frozen_candidate: "0284179ef4e6fd5f4cc92f635ee4c79a6ffa1e7e"
 
 current_objective: YM-015F-JET-002B
 
@@ -49,7 +49,7 @@ objectives:
     atlas_writer_and_coordinator: "primary-worker"
     reviewer_path: "verification/raw/YM-068_E4_RAW_20261017.md"
     acceptor: "verification/YM-068_TECHNICAL_ACCEPTANCE.md"
-    status: CANDIDATE_FROZEN
+    status: SCIENTIFICALLY_ACCEPTED
     scope_limitation: "HEAT_KERNEL_SEMIGROUP_TADPOLE_CANCELLATION_AND_UV_SUMMABILITY_PROVED_COARSE_FLOW_SCALE_HANDOFF_AND_CONTINUUM_OPEN"
   - id: YM-067
     scope_in: "Multi-scale UV iteration of T_k^{marked} to the physical flow scale k_flow(a, t), asymptotic-freedom trajectory g_k^2(N_UV) = (beta_flow + (N_UV - k)*delta_beta_1)^{-1}, harmonic one-loop accumulation barrier sum_k g_k^2 ~ ln N_UV on unrenormalized marginal dimension-4 jets vs cutoff-uniform two-loop and higher-order remainder summability sum_k g_k^4 <= C < infinity, proof of Lemma YM-067F-MULTISCALE-UV-ITERATION-TO-FLOW-SCALE-AND-HARMONIC-LOG-BARRIER, isolation of Lemma YM-068F, and Test 31 finite certificate"
