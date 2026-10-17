@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 94
+revision: 95
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "03b5c8c740272a99252469ec584fc265a82cbd6e"
-  scientific_candidate_sha: "03b5c8c740272a99252469ec584fc265a82cbd6e"
-  review_bound_sha: "03b5c8c740272a99252469ec584fc265a82cbd6e"
+  head: "bed1eb900732ca4d8123ae2c40c3132cf948be38"
+  scientific_candidate_sha: "87d29296cf4b39467063c63d982a4176f2fcdedc"
+  review_bound_sha: "87d29296cf4b39467063c63d982a4176f2fcdedc"
   evidence_closeout_head: "03b5c8c740272a99252469ec584fc265a82cbd6e"
-  closeout_resolution: "evidence_closeout_head binds preceding completed YM-068 closeout commit (03b5c8c740272a99252469ec584fc265a82cbd6e); scientific_candidate_sha and review_bound_sha bind current YM-069 candidate freeze; resolve authoritative current HEAD dynamically from Git."
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-068 closeout commit (03b5c8c740272a99252469ec584fc265a82cbd6e); scientific_candidate_sha and review_bound_sha bind accepted YM-069 candidate freeze (87d29296cf4b39467063c63d982a4176f2fcdedc); head binds YM-069 acceptance receipt commit (bed1eb900732ca4d8123ae2c40c3132cf948be38); resolve authoritative current HEAD dynamically from Git."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,10 +32,10 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 93
-  last_updated_at: "2026-10-17T16:10:00Z"
+  last_expected_revision: 94
+  last_updated_at: "2026-10-17T16:20:00Z"
   active_contract: "YM-015F-JET-002B"
-  frozen_candidate: "03b5c8c740272a99252469ec584fc265a82cbd6e"
+  frozen_candidate: "87d29296cf4b39467063c63d982a4176f2fcdedc"
 
 current_objective: YM-015F-JET-002B
 
@@ -49,7 +49,7 @@ objectives:
     atlas_writer_and_coordinator: "primary-worker"
     reviewer_path: "verification/raw/YM-069_E4_RAW_20261017.md"
     acceptor: "verification/YM-069_TECHNICAL_ACCEPTANCE.md"
-    status: CANDIDATE_FROZEN
+    status: SCIENTIFICALLY_ACCEPTED
     scope_limitation: "FLOW_SCALE_HANDOFF_BOUND_AND_MASSIVE_CONTRACTION_PROVED_MASSLESS_CROSSOVER_AND_CONTINUUM_OPEN"
   - id: YM-068
     scope_in: "Heat-kernel semigroup step matching across RG scales, cancellation of the one-loop harmonic logarithmic barrier for gradient-flowed observables at t > 0, geometric convergence of flow discretization remainders sum_{m=1}^{N_UV} g_{N_UV-m}^2 4^{-m} < infinity, cutoff-uniform multiscale UV summability to the physical flow scale k_flow(a, t) = N_UV, proof of Lemma YM-068F-GRADIENT-FLOW-SEMIGROUP-TADPOLE-CANCELLATION-AND-UV-SUMMABILITY, isolation of Lemma YM-069F, and Test 32 finite certificate"
