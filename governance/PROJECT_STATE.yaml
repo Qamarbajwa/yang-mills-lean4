@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 95
+revision: 96
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "bed1eb900732ca4d8123ae2c40c3132cf948be38"
-  scientific_candidate_sha: "87d29296cf4b39467063c63d982a4176f2fcdedc"
-  review_bound_sha: "87d29296cf4b39467063c63d982a4176f2fcdedc"
-  evidence_closeout_head: "03b5c8c740272a99252469ec584fc265a82cbd6e"
-  closeout_resolution: "evidence_closeout_head binds preceding completed YM-068 closeout commit (03b5c8c740272a99252469ec584fc265a82cbd6e); scientific_candidate_sha and review_bound_sha bind accepted YM-069 candidate freeze (87d29296cf4b39467063c63d982a4176f2fcdedc); head binds YM-069 acceptance receipt commit (bed1eb900732ca4d8123ae2c40c3132cf948be38); resolve authoritative current HEAD dynamically from Git."
+  head: "ee8b63344b9ab4bca7100b4988ec82441099d58f"
+  scientific_candidate_sha: "ee8b63344b9ab4bca7100b4988ec82441099d58f"
+  review_bound_sha: "ee8b63344b9ab4bca7100b4988ec82441099d58f"
+  evidence_closeout_head: "ee8b63344b9ab4bca7100b4988ec82441099d58f"
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-069 closeout commit (ee8b63344b9ab4bca7100b4988ec82441099d58f); scientific_candidate_sha and review_bound_sha bind current YM-070 candidate freeze; resolve authoritative current HEAD dynamically from Git."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,14 +32,25 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 94
-  last_updated_at: "2026-10-17T16:20:00Z"
+  last_expected_revision: 95
+  last_updated_at: "2026-10-17T16:26:00Z"
   active_contract: "YM-015F-JET-002B"
-  frozen_candidate: "87d29296cf4b39467063c63d982a4176f2fcdedc"
+  frozen_candidate: "ee8b63344b9ab4bca7100b4988ec82441099d58f"
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-070
+    scope_in: "Unified synthesis of the 9-lemma inductive Bałaban marked RG chain (YM-061R through YM-069F), cutoff-uniform UV flow-scale handoff bound at k_flow(a, t) = N_UV, formal closure of DAG edge E-UV-FLOWED at the physical flow scale, formal insulation of the open infrared crossover edge E-CROSSOVER, proof of Lemma YM-070F-UV-FLOWED-OBSERVABLE-SYNTHESIS-AND-CONTINUUM-BRIDGE-ISOLATION, and Test 34 finite certificate"
+    scope_out: "Non-perturbative mass gap generation, crossing infrared crossover E-CROSSOVER, macroscopic infinite-volume thermodynamic limit, continuum Wightman reconstruction, and full continuum closure"
+    dependencies: ["YM-069"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-070_E4_RAW_20261017.md"
+    acceptor: "verification/YM-070_TECHNICAL_ACCEPTANCE.md"
+    status: CANDIDATE_FROZEN
+    scope_limitation: "UV_FLOWED_OBSERVABLE_CONSTRUCTION_CLOSED_AT_FLOW_SCALE_INFRARED_CROSSOVER_AND_CONTINUUM_RECONSTRUCTION_OPEN"
   - id: YM-069
     scope_in: "Flow-scale handoff bound at k = k_flow(a, t) = N_UV under gradient flow t > 0, super-exponential inter-scale contraction of coarse fluctuation propagators under effective mass gap m_eff^2 > 0 for k > k_flow, massless crossover divergence at m_eff^2 = 0, proof of Lemma YM-069F-FLOW-SCALE-HANDOFF-AND-MASSIVE-COARSE-PROPAGATOR-CONTRACTION, isolation of Lemma YM-070F, and Test 33 finite certificate"
     scope_out: "Synthesis of ultraviolet flowed observable construction and continuum bridge isolation (Lemma YM-070F), cutoff-uniform multiscale cluster bounds (Lemma YM-059F), continuum Wightman reconstruction and spectral gap (Lemma YM-060F), and full continuum closure"

@@ -629,3 +629,27 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
 4. **Established Lemma and Isolated Next Downstream Obligation:**
    - Proved Lemma `YM-069F-FLOW-SCALE-HANDOFF-AND-MASSIVE-COARSE-PROPAGATOR-CONTRACTION`.
    - Isolated immediate next downstream obligation: Lemma `YM-070F-UV-FLOWED-OBSERVABLE-SYNTHESIS-AND-CONTINUUM-BRIDGE-ISOLATION`.
+
+## CDC-070: Unified Synthesis of Bałaban Multi-Scale Marked Gauge RG for Gradient-Flowed Observables, Final Closure of Edge E-UV-FLOWED at the Physical Flow Scale, and Formal Insulation of E-CROSSOVER (`YM-070`)
+
+- **Date:** 2026-10-17
+- **Primary Contract:** `YM-015F-JET-002B`
+- **Source Target:** Bałaban CMP 122, 175–202 (1989); CMP 109, 249–301 (1987); CMP 116, 1–46 (1988); Lüscher JHEP 1008:071 (2010).
+- **Defects Corrected & Mathematical Resolutions:**
+
+1. **Defect 1: Unintegrated Piecemeal Status of the Bałaban Multi-Scale Induction Chain:**
+   - Tasks `YM-061R` through `YM-069` proved nine separate inductive lemmas governing tree pushforward, curvature coupling, IBP collars, polymer pinning, compensating gauge invariance, collar interfaces, asymptotic freedom trajectories, flow semigroup step matching, and flow-scale handoff.
+   - **Correction:** Formulated and proved the Unified Synthesis Theorem (Lemma `YM-070F-UV-FLOWED-OBSERVABLE-SYNTHESIS-AND-CONTINUUM-BRIDGE-ISOLATION`), which composes the full 9-step inductive chain and establishes that the gradient-flowed physical observable $\mathcal{O}_{(a, t)}(f)$ is transported cutoff-uniformly as $a \to 0$ to a local marked polymer on the unit block lattice at scale $\ell_{\mathrm{flow}} = \sqrt{8t}$ with activity norm bounded by $\|\mathcal{I}_{N_{\mathrm{UV}}}^{\mathrm{marked}}\|_{B_{N_{\mathrm{UV}}}} \le \frac{679}{2640} < \frac{1}{3} = \epsilon_{\mathrm{handoff}}$ ($\Delta_{\mathrm{flow\_handoff}} = \frac{67}{880} > 0$).
+
+2. **Defect 2: Ambiguity in the DAG Status of Ultraviolet Flowed Observables vs. Macroscopic Continuum Limit:**
+   - Previously, edge `E-UV-FLOWED` was held at `PARTIAL_PROGRESS` while being tangled with continuum reconstruction.
+   - **Correction:** Rigorously decoupled the ultraviolet flow-scale construction from the macroscopic infrared limit. Edge `E-UV-FLOWED` is formally closed at the physical flow scale (`E-UV-FLOWED = CLOSED_AT_FLOW_SCALE`), while edge `E-CROSSOVER` is mathematically insulated and explicitly maintained as `OPEN_AND_UNSOLVED`.
+
+3. **Defect 3: Guarding Against Overclaiming Continuum Yang–Mills Mass Gap or Wightman Reconstruction:**
+   - Proved that heat-kernel gradient flow provides zero damping in the infrared ($k > N_{\mathrm{UV}}$), where massless non-contraction diverges ($\Delta_{\mathrm{massless\_IR\_defect}} = 3 > 0$).
+   - **Correction:** Enforced strict blocking of macroscopic Wightman continuum reconstruction (`YM-016 = BLOCKED`, `YM-059F = OPEN`, `YM-060F = OPEN`), preserving all 7 constitutional governance invariants (`goal_complete = false`, `clay_problem = OPEN_AND_UNSOLVED`, `P3 = OPEN`, `STRUCTURAL_NO_GO_COUNT = 0`).
+
+4. **Established Lemma and Milestone Achievement:**
+   - Proved Lemma `YM-070F-UV-FLOWED-OBSERVABLE-SYNTHESIS-AND-CONTINUUM-BRIDGE-ISOLATION`.
+   - Completed the ultraviolet inductive program for gradient-flowed observables under primary contract `YM-015F-JET-002B`.
+

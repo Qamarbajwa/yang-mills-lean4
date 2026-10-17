@@ -581,3 +581,15 @@ Source mechanisms: own finite row-space/kernel target-descent theorem, positive 
   - Lemma `YM-069F-FLOW-SCALE-HANDOFF-AND-MASSIVE-COARSE-PROPAGATOR-CONTRACTION` formally proved within stated hypotheses; isolated immediate next obligation Lemma `YM-070F-UV-FLOWED-OBSERVABLE-SYNTHESIS-AND-CONTINUUM-BRIDGE-ISOLATION`.
 - Open bridge: Unified Synthesis of Bałaban Multi-Scale Marked Gauge RG for Gradient-Flowed Observables (Lemma `YM-070F`), Cutoff-Uniform Multiscale Cluster Bounds (Lemma `YM-059F`), Continuum Wightman Reconstruction and Spectral Gap (Lemma `YM-060F`), crossing infrared crossover `E-CROSSOVER`.
 - Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
+## XFER-YM-ONE-TERM-PULLBACK-070: Unified Synthesis of Bałaban Multi-Scale Marked Gauge RG for Gradient-Flowed Observables, Closure of Edge E-UV-FLOWED, and Insulation of E-CROSSOVER
+
+- Source: Bałaban CMP 122, 175–202 (1989); CMP 109, 249–301 (1987); CMP 116, 1–46 (1988); Lüscher JHEP 1008:071 (2010).
+- Target: YM-015F unified synthesis of the 9-lemma inductive Bałaban marked RG chain, closure of Edge `E-UV-FLOWED` at the physical flow scale $k_{\mathrm{flow}}(a, t) = N_{\mathrm{UV}}$, and formal insulation of `E-CROSSOVER`.
+- Verified mapping:
+  - Unified synthesis theorem (Lemma `YM-070F-UV-FLOWED-OBSERVABLE-SYNTHESIS-AND-CONTINUUM-BRIDGE-ISOLATION`) composing all 9 inductive steps (`YM-061R` through `YM-069F`), establishing cutoff-uniform ultraviolet transport of gradient-flowed physical observables $\mathcal{O}_{(a, t)}(f)$ to a local marked polymer on the unit block lattice at scale $\ell_{\mathrm{flow}} = \sqrt{8t}$ with activity norm bounded by $\|\mathcal{I}_{N_{\mathrm{UV}}}^{\mathrm{marked}}\|_{B_{N_{\mathrm{UV}}}} \le \frac{679}{2640} < \frac{1}{3} = \epsilon_{\mathrm{handoff}}$ ($\Delta_{\mathrm{flow\_handoff}} = \frac{67}{880} > 0$).
+  - Formal closure of Edge `E-UV-FLOWED` at the flow scale (`E-UV-FLOWED = CLOSED_AT_FLOW_SCALE`).
+  - Formal insulation of Edge `E-CROSSOVER`: gradient flow provides zero infrared damping ($k > N_{\mathrm{UV}}$), where massless non-contraction diverges ($\Delta_{\mathrm{massless\_IR\_defect}} = 3 > 0$). Edge `E-CROSSOVER` remains strictly `OPEN_AND_UNSOLVED`.
+  - Blocking of downstream continuum bridges: Task `YM-016` (BLOCKED), Lemma `YM-059F` (OPEN), Lemma `YM-060F` (OPEN).
+- Open bridge: Cutoff-Uniform Multiscale Cluster Bounds (Lemma `YM-059F`), Continuum Wightman Reconstruction and Spectral Gap (Lemma `YM-060F`), crossing infrared crossover `E-CROSSOVER`.
+- Allowed conclusion: Ultraviolet transport of gradient-flowed observables closed at flow scale; infrared crossover and continuum limit remain open. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Edge E-UV-FLOWED closes; continuum edges remain OPEN/BLOCKED.
+
