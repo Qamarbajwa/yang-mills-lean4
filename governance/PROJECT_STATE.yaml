@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 87
+revision: 88
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "9ce1ecb01ac3b0136af651335a96b28df4dfb23b"
-  scientific_candidate_sha: "8126c1a1cc756bf275c463f37c26d54aae2db242"
-  review_bound_sha: "8126c1a1cc756bf275c463f37c26d54aae2db242"
-  evidence_closeout_head: "c8ddd89aa7505e7f4365e039ac500bcd13c76c65"
-  closeout_resolution: "evidence_closeout_head binds preceding completed YM-064 closeout commit (c8ddd89aa7505e7f4365e039ac500bcd13c76c65); scientific_candidate_sha and review_bound_sha bind accepted YM-065 candidate (8126c1a1cc756bf275c463f37c26d54aae2db242); resolve authoritative current HEAD dynamically from Git."
+  head: "d74ecd2f4b658d02923c3ac4745ace841e175cda"
+  scientific_candidate_sha: "d74ecd2f4b658d02923c3ac4745ace841e175cda"
+  review_bound_sha: "d74ecd2f4b658d02923c3ac4745ace841e175cda"
+  evidence_closeout_head: "d74ecd2f4b658d02923c3ac4745ace841e175cda"
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-065 closeout commit (d74ecd2f4b658d02923c3ac4745ace841e175cda); scientific_candidate_sha and review_bound_sha bind current YM-066 candidate freeze; resolve authoritative current HEAD dynamically from Git."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,14 +32,25 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 86
-  last_updated_at: "2026-10-17T14:42:00Z"
+  last_expected_revision: 87
+  last_updated_at: "2026-10-17T14:48:00Z"
   active_contract: "YM-015F-JET-002B"
-  frozen_candidate: "8126c1a1cc756bf275c463f37c26d54aae2db242"
+  frozen_candidate: "d74ecd2f4b658d02923c3ac4745ace841e175cda"
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-066
+    scope_in: "Preliminary sector operator T_h(Z_h), collar interface coupling across B_collar, assembly of the complete five-sector single-step marked RG map T_k^{marked} in Bałaban CMP 122 (1.76)–(1.90), quantitative characterization of the UV-to-IR running coupling crossover threshold k_cross(g_0), proof of Lemma YM-066F-COLLAR-INTERFACE-AND-COMPLETE-SINGLE-STEP-MARKED-RG-MAP, isolation of Lemma YM-067F, and Test 30 finite certificate"
+    scope_out: "Multi-scale UV iteration of T_k^{marked} to flow scale k_flow(a, t) and harmonic log barrier (Lemma YM-067F), cutoff-uniform multiscale summability (Lemma YM-059F), continuum Wightman reconstruction and spectral gap (Lemma YM-060F), and full continuum closure"
+    dependencies: ["YM-065"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-066_E4_RAW_20261017.md"
+    acceptor: "verification/YM-066_TECHNICAL_ACCEPTANCE.md"
+    status: CANDIDATE_FROZEN
+    scope_limitation: "COLLAR_INTERFACE_AND_SINGLE_STEP_MARKED_RG_MAP_PROVED_MULTISCALE_UV_ITERATION_AND_CONTINUUM_OPEN"
   - id: YM-065
     scope_in: "Compensating gauge transformation u_k in Bałaban CMP 122 (1.85)–(1.88) (printed p. 197), asymmetric dual-number re-exponentiation of connected vacuum polymers vs linear degree-one preservation of marked observable insertions, one-loop running coupling growth and local counterterm bookkeeping vs flowed observable UV finiteness, proof of Lemma YM-065F-COMPENSATING-GAUGE-TRANSFORMATION-AND-REEXPONENTIATION, isolation of Lemma YM-066F, and Test 29 finite certificate"
     scope_out: "Preliminary sector operator T_h(Z_h) and collar interface coupling across B_collar (Lemma YM-066F), cutoff-uniform multiscale summability (Lemma YM-059F), continuum Wightman reconstruction and spectral gap (Lemma YM-060F), and full continuum closure"

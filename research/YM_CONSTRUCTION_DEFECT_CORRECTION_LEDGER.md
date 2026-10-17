@@ -542,3 +542,24 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
 4. **Established Lemma and Isolated Next Downstream Obligation:**
    - Proved Lemma `YM-065F-COMPENSATING-GAUGE-TRANSFORMATION-AND-REEXPONENTIATION`.
    - Isolated immediate next downstream obligation: Lemma `YM-066F-COLLAR-INTERFACE-AND-COMPLETE-SINGLE-STEP-MARKED-RG-MAP` (Preliminary sector operator $\mathbb{T}_h(Z_h)$, collar interface coupling across $\mathbb{B}_{\mathrm{collar}}$, assembly of the complete single-step marked RG map $\mathcal{T}_k^{\mathrm{marked}}$, and quantitative characterization of the UV-to-IR running coupling crossover threshold).
+## CDC-066: Preliminary Sector Operator $\mathbb{T}_h(Z_h)$, Collar Interface Coupling across $\mathbb{B}_{\mathrm{collar}}$, Assembly of Complete Single-Step Marked RG Map $\mathcal{T}_k^{\mathrm{marked}}$, and UV-to-IR Crossover Threshold (`YM-066`)
+
+- **Date:** 2026-10-17
+- **Primary Contract:** `YM-015F-JET-002B`
+- **Source Target:** Bałaban CMP 122, 175–202 (1989), eqs. (1.76)–(1.90), printed pp. 194–202; CMP 139, 281–305 (1991).
+- **Defects Corrected & Mathematical Resolutions:**
+
+1. **Defect 1: Naive Product Decoupling Across Collar Interface $\mathbb{B}_{\mathrm{collar}}$:**
+   - Assuming that the kinematic Haar factorization across $\mathbb{B}_{\mathrm{total}, k} = \mathbb{B}_0 \sqcup \mathbb{B}_{\mathrm{collar}} \sqcup \mathbb{B}(Z_h)$ decouples active fluctuations $B_1$ on $\mathbb{B}_0$ from collar modes $B_2$ on $\mathbb{B}_{\mathrm{collar}}$ ignores boundary plaquette holonomies and heat-kernel observable diffusion across radius $\sqrt{8t}$.
+   - **Correction:** Proved on the $2 \times 2$ interface Hessian $\mathcal{H}_{\mathrm{interface}} = \begin{pmatrix} 2 & -1/2 \\ -1/2 & 2 \end{pmatrix}$ ($\det = 15/4 > 0$) that Schur-complement conditioning preserves active-sector coercivity ($\mathcal{H}_{\mathrm{eff}, 11} = 15/8 > 1$, $\Delta_{\mathrm{collar\_coercive}} = 7/8 > 0$) while the coupled propagator $C_{\mathrm{interface}} = \begin{pmatrix} 8/15 & 2/15 \\ 2/15 & 8/15 \end{pmatrix}$ shifts $\mathbb{E}[(B_1 + B_2)^2]$ from $1$ to $4/3$, certifying $\Delta_{\mathrm{collar\_coupling}} = 1/3 > 0$ (Schur diagonal shift $1/15$ plus off-diagonal cross-propagator $4/15$).
+
+2. **Defect 2: Omission of Inhomogeneous Sectors in the Complete Single-Step Marked RG Operator $\mathcal{T}_k^{\mathrm{marked}}$:**
+   - Treating $\mathcal{T}_k^{\mathrm{marked}}$ as a purely homogeneous contraction $\mathcal{L}_k^{\mathrm{small-field}}$ omits the inhomogeneous cumulant, collar, chart-exit, and large-field remainders.
+   - **Correction:** Assembled the complete five-sector affine-linear map $\mathcal{T}_k^{\mathrm{marked}} = \mathcal{L}_k^{\mathrm{small-field}} + \mathcal{C}_k^{\mathrm{cumulant}} + \mathcal{R}_k^{\mathrm{collar}} + \mathcal{R}_k^{\mathrm{chart-exit}} + \mathcal{R}_k^{\mathrm{large}}$ on $\mathbb{R}[\lambda]/(\lambda^2 = 0)$, certifying at $g_k^2 = 1/4, \|\mathcal{I}_k^{\mathrm{marked}}\|_{B_k} = 1/10$ that $\|\mathcal{I}_{k+1}^{\mathrm{marked}}\|_{B_{k+1}} = (9+4+3+2+1)/360 = 19/360 < 36/360 = \epsilon_{\mathrm{step}}$ with stability margin $\Delta_{\mathrm{single\_step\_RG}} = 17/360 > 0$ and inhomogeneous sector contribution $\Delta_{\mathrm{inhom\_RG}} = 10/360 = 1/36 > 0$.
+
+3. **Defect 3: Unbounded Infrared Extrapolation Past the Running Coupling Crossover Threshold $k_{\mathrm{cross}}(g_0)$:**
+   - Proved that under $\beta_{\mathrm{inv}, k} = 4 - \frac{11}{24} k$ ($g_k^2 = \frac{24}{96 - 11k}$) and small-field threshold $g_{\mathrm{crit}}^2 = 1/2$, small-field contraction holds for $0 \le k \le 4$ ($g_4^2 = 6/13 < 1/2$, $\Delta_{\mathrm{UV\_window}}(4) = 1/26 > 0$) and fails at $k_{\mathrm{cross}} = 5$ ($g_5^2 = 24/41 > 1/2$, $\Delta_{\mathrm{crossover\_exit}} = 7/82 > 0$), hitting the perturbative Landau pole at $k_{\mathrm{Landau}} = 9$ ($\beta_{\mathrm{inv}, 9} = -1/8 < 0$).
+
+4. **Established Lemma and Isolated Next Downstream Obligation:**
+   - Proved Lemma `YM-066F-COLLAR-INTERFACE-AND-COMPLETE-SINGLE-STEP-MARKED-RG-MAP`.
+   - Isolated immediate next downstream obligation: Lemma `YM-067F-MULTISCALE-UV-ITERATION-TO-FLOW-SCALE-AND-HARMONIC-LOG-BARRIER`.

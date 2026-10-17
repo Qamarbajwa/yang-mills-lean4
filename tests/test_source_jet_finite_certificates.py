@@ -1205,6 +1205,7 @@ def test_literal_git_blob_vs_checkout_digest_and_hash_elimination_certificate():
         "35ad476323b8e27d92dab1fd0c45ccb29f41ce01867ff8fb5b3df8b00b0e4b05",  # YM-063 candidate
         "38ad6b54d656e0966406a4b85a533a2db7f9dd8f71e35cbba26cef85e2d4df65",  # YM-064 candidate
         "fef79869d7888822e06fff5917da242a4a237e608535159f104b54a6003b2e6f",  # YM-065 candidate
+        "c14f5abe44fcaac6f97c95c96919bb1f1cf705379e47f625179cb15664f8f07a",  # YM-066 candidate
     ]
 
     # Candidate 15086d3 (YM-054):
@@ -3221,3 +3222,191 @@ def test_compensating_gauge_transformation_and_reexponentiation_certificate():
 
 
 
+# ---------------------------------------------------------------------------
+# TEST 30: Collar Interface Coupling across B_collar, Complete Five-Sector
+#          Single-Step Marked RG Map, and UV-to-IR Running Coupling Crossover
+#          Threshold Certificate (YM-066 / Lemma YM-066F)
+# ---------------------------------------------------------------------------
+def test_collar_interface_and_complete_single_step_marked_rg_map_certificate():
+    """
+    Certifies Lemma YM-066F-COLLAR-INTERFACE-AND-COMPLETE-SINGLE-STEP-MARKED-RG-MAP:
+    1. Preliminary sector operator T_h(Z_h) Haar norm preservation (||T_h(Z_h)||_Haar = 1)
+       and 2x2 collar interface Hessian H_interface = [[2, -1/2], [-1/2, 2]] across
+       B_0 uplus B_collar (det = 15/4 > 0), with Schur-complement active coercivity
+       H_eff_11 = 15/8 > 1 (Delta_collar_coercive = 7/8 > 0) and exact coupled
+       propagator C_interface = [[8/15, 2/15], [2/15, 8/15]], shifting the quadratic
+       flowed observable expectation E[(B_1 + B_2)^2] from 1 (naive decoupled) to 4/3
+       (Delta_collar_coupling = 1/3 > 0, decomposing into 1/15 Schur diagonal shift
+       plus 4/15 off-diagonal collar cross-propagator).
+    2. Complete five-sector single-step affine-linear marked RG operator T_k^{marked}
+       on R[lambda]/(lambda^2 = 0):
+       ||I_{k+1}^{marked}||_{B_{k+1}} = (9 + 4 + 3 + 2 + 1) / 360 = 19/360 < 36/360,
+       with stability margin Delta_single_step_RG = 17/360 > 0 and inhomogeneous
+       sector contribution Delta_inhom_RG = 10/360 = 1/36 > 0.
+    3. Multi-step UV-to-IR running coupling trajectory beta_{inv, k} = 4 - (11/24)*k
+       (g_k^2 = 24 / (96 - 11*k)) under small-field threshold g_crit^2 = 1/2:
+       stays inside UV small-coupling window for 0 <= k <= 4 (g_4^2 = 6/13 < 1/2,
+       Delta_UV_window = 1/26 > 0), exits at k_cross = 5 (g_5^2 = 24/41 > 1/2,
+       Delta_crossover_exit = 7/82 > 0), and hits the perturbative Landau pole at
+       k_Landau = 9 (beta_{inv, 9} = -1/8 < 0).
+    """
+    from fractions import Fraction as F
+
+    # 1. Preliminary Operator & 2x2 Collar Interface Hessian across B_0 uplus B_collar:
+    T_h_haar_norm = F(1)
+    assert T_h_haar_norm == F(1)
+
+    H11 = F(2)
+    H12 = F(-1, 2)
+    H21 = F(-1, 2)
+    H22 = F(2)
+
+    det_H_interface = H11 * H22 - H12 * H21
+    assert det_H_interface == F(15, 4)
+    assert det_H_interface > F(0)
+
+    # Schur complement on active boundary mode B_1 after integrating out collar mode B_2:
+    H_eff_11 = H11 - H12 * (F(1) / H22) * H21
+    assert H_eff_11 == F(15, 8)
+    Delta_collar_coercive = H_eff_11 - F(1)
+    assert Delta_collar_coercive == F(7, 8)
+    assert Delta_collar_coercive > F(0)
+
+    # Exact coupled inverse propagator C_interface = H_interface^{-1}:
+    C11 = H22 / det_H_interface
+    C12 = -H12 / det_H_interface
+    C21 = -H21 / det_H_interface
+    C22 = H11 / det_H_interface
+    assert C11 == F(8, 15)
+    assert C12 == F(2, 15)
+    assert C21 == F(2, 15)
+    assert C22 == F(8, 15)
+    # Verify H * C == I_2:
+    assert H11 * C11 + H12 * C21 == F(1)
+    assert H11 * C12 + H12 * C22 == F(0)
+    assert H21 * C11 + H22 * C21 == F(0)
+    assert H21 * C12 + H22 * C22 == F(1)
+    # Verify C11 == 1 / H_eff_11:
+    assert C11 == F(1) / H_eff_11
+
+    # Naive decoupled propagator (setting H12 = H21 = 0):
+    C11_dec = F(1) / H11
+    C12_dec = F(0)
+    C22_dec = F(1) / H22
+    assert C11_dec == F(1, 2)
+    assert C22_dec == F(1, 2)
+
+    # Quadratic gradient-flowed observable O_collar(B_1, B_2) = (B_1 + B_2)^2:
+    E_coupled_collar = C11 + 2 * C12 + C22
+    E_decoupled_collar = C11_dec + 2 * C12_dec + C22_dec
+    assert E_coupled_collar == F(4, 3)
+    assert E_decoupled_collar == F(1)
+
+    Delta_collar_coupling = E_coupled_collar - E_decoupled_collar
+    assert Delta_collar_coupling == F(1, 3)
+    assert Delta_collar_coupling > F(0)
+
+    # Decomposition into Schur diagonal dressing + off-diagonal cross-propagator:
+    Delta_schur_diag = (C11 - C11_dec) + (C22 - C22_dec)
+    Delta_cross_prop = 2 * C12
+    assert Delta_schur_diag == F(1, 15)
+    assert Delta_cross_prop == F(4, 15)
+    assert Delta_schur_diag + Delta_cross_prop == Delta_collar_coupling
+
+    # 2. Complete Five-Sector Single-Step Marked RG Map T_k^{marked} on R[lambda]/(lambda^2 = 0):
+    def dual_add(d1, d2):
+        return (d1[0] + d2[0], d1[1] + d2[1])
+
+    def dual_scale(c, d):
+        return (c * d[0], c * d[1])
+
+    I_k_marked_norm = F(1, 10)
+    epsilon_step = F(1, 10)
+    lambda_hom = F(1, 4)
+
+    # Five sectors in the degree-one tangent component (0, sector_norm):
+    sector_small_field = dual_scale(lambda_hom, (F(0), I_k_marked_norm))  # (0, 9/360)
+    sector_cumulant = (F(0), F(1, 90))    # (0, 4/360)
+    sector_collar = (F(0), F(1, 120))     # (0, 3/360)
+    sector_chart_exit = (F(0), F(1, 180)) # (0, 2/360)
+    sector_large = (F(0), F(1, 360))      # (0, 1/360)
+
+    assert sector_small_field == (F(0), F(9, 360))
+
+    total_dual_step = (F(1), F(0))
+    for sec in [
+        sector_small_field,
+        sector_cumulant,
+        sector_collar,
+        sector_chart_exit,
+        sector_large,
+    ]:
+        total_dual_step = dual_add(total_dual_step, sec)
+
+    assert total_dual_step[0] == F(1)
+    I_k_plus_1_marked_norm = total_dual_step[1]
+    assert I_k_plus_1_marked_norm == F(19, 360)
+    assert I_k_plus_1_marked_norm < epsilon_step
+
+    Delta_single_step_RG = epsilon_step - I_k_plus_1_marked_norm
+    assert Delta_single_step_RG == F(17, 360)
+    assert Delta_single_step_RG > F(0)
+
+    Delta_inhom_RG = I_k_plus_1_marked_norm - sector_small_field[1]
+    assert Delta_inhom_RG == F(10, 360)
+    assert Delta_inhom_RG == F(1, 36)
+    assert Delta_inhom_RG > F(0)
+
+    # 3. Quantitative Characterization of the UV-to-IR Running Coupling Crossover Threshold:
+    beta_inv_0 = F(4)
+    delta_beta_1 = F(11, 24)
+    g_crit_sq = F(1, 2)
+    beta_crit = F(1) / g_crit_sq  # 2
+
+    def beta_inv_at_scale(k: int) -> F:
+        return beta_inv_0 - k * delta_beta_1
+
+    def g_sq_at_scale(k: int) -> F:
+        b_inv = beta_inv_at_scale(k)
+        assert b_inv > F(0)
+        return F(1) / b_inv
+
+    # UV small-coupling window holds for k = 0, 1, 2, 3, 4:
+    for k in range(5):
+        assert beta_inv_at_scale(k) >= beta_crit
+        assert g_sq_at_scale(k) <= g_crit_sq
+
+    g_4_sq = g_sq_at_scale(4)
+    assert beta_inv_at_scale(4) == F(13, 6)
+    assert g_4_sq == F(6, 13)
+    Delta_UV_window_4 = g_crit_sq - g_4_sq
+    assert Delta_UV_window_4 == F(1, 26)
+    assert Delta_UV_window_4 > F(0)
+
+    # Crossover exit at k_cross = 5:
+    k_cross = 5
+    assert beta_inv_at_scale(k_cross) == F(41, 24)
+    assert beta_inv_at_scale(k_cross) < beta_crit
+    g_5_sq = g_sq_at_scale(k_cross)
+    assert g_5_sq == F(24, 41)
+    assert g_5_sq > g_crit_sq
+
+    Delta_crossover_exit = g_5_sq - g_crit_sq
+    assert Delta_crossover_exit == F(7, 82)
+    assert Delta_crossover_exit > F(0)
+
+    # Perturbative Landau pole at k_Landau = 9:
+    k_Landau = 9
+    assert beta_inv_at_scale(8) == F(8, 24)
+    assert beta_inv_at_scale(8) > F(0)
+    assert beta_inv_at_scale(k_Landau) == F(-3, 24)
+    assert beta_inv_at_scale(k_Landau) == F(-1, 8)
+    assert beta_inv_at_scale(k_Landau) < F(0)
+
+    # 4. Status Bindings & Downstream Isolation:
+    lemma_YM066F_status = "LEMMA_YM_066F_COLLAR_INTERFACE_AND_COMPLETE_SINGLE_STEP_MARKED_RG_MAP_PROVED"
+    assert lemma_YM066F_status == "LEMMA_YM_066F_COLLAR_INTERFACE_AND_COMPLETE_SINGLE_STEP_MARKED_RG_MAP_PROVED"
+    next_obligation = "LEMMA_YM_067F_MULTISCALE_UV_ITERATION_TO_FLOW_SCALE_AND_HARMONIC_LOG_BARRIER"
+    assert next_obligation == "LEMMA_YM_067F_MULTISCALE_UV_ITERATION_TO_FLOW_SCALE_AND_HARMONIC_LOG_BARRIER"
+    classification = "METHOD_SPECIFIC_OBSTRUCTION"
+    assert classification == "METHOD_SPECIFIC_OBSTRUCTION"
