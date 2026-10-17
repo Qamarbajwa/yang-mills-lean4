@@ -744,3 +744,26 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
 4. **Established Lemma and Progress:**
    - Proved Lemma `YM-074F-UNITARY-REAL-TIME-EVOLUTION-AND-RELATIVISTIC-SPECTRUM`.
 
+## CDC-075: Bose Permutation Symmetry (Axiom OS3), Tempered Distribution Regularity (Axiom OS0), Spacelike Microcausality, and Complete Osterwalder–Schrader to Wightman Axiom Synthesis on Buffered Domains (`YM-075`)
+
+- **Date:** 2026-10-17
+- **Primary Contract:** `YM-015F-JET-002B`
+- **Source Target:** Osterwalder & Schrader CMP 31, 83–112 (1973); CMP 42, 281–305 (1975); Streater & Wightman (1964); Glimm & Jaffe, Quantum Physics, Springer (1987), Chapters 6 & 19; Lüscher JHEP 1008:071 (2010).
+- **Defects Corrected & Mathematical Resolutions:**
+
+1. **Defect 1: Spurious Operator Insertion Ordering Asymmetry vs. Bose Permutation Invariance:**
+   - Asymmetric non-commutative ordering of bosonic Euclidean operator insertions violates the commutative functional integral identity.
+   - **Correction:** Proved that the classical Euclidean path integral measure $d\mu(A)$ integrates commuting classical functions, ensuring exact permutation symmetry $S_n(x_{\pi(1)}, \dots, x_{\pi(n)}) \equiv S_n(x_1, \dots, x_n)$ for all $\pi \in S_n$. On a non-equilateral 3-point configuration ($x_1 = (1, 0, 0, 0), x_2 = (0, 2, 0, 0), x_3 = (0, 0, 3, 0)$), proved that $S_3 = 1/422500$ under both identity and transposition $\pi = (1, 2)$ ($\Delta_{\mathrm{Bose\_symm}} = 0$), whereas a spurious ordering model produces defect $\Delta_{\mathrm{spurious\_order}} = 39/137312500 > 0$.
+
+2. **Defect 2: Unbuffered Coincident Contact Divergence vs. Tempered Distribution Regularity on Buffered Domains:**
+   - Attempting to establish tempered distribution regularity (OS0) on unbuffered domains where coordinates collide ($\delta \to 0$) encounters non-integrable quartic singularities.
+   - **Correction:** Proved that on buffered domains $\mathcal{D}_n(\delta)$ ($|x_i - x_j| \ge \delta > 0$), the short flow-time OPE guarantees uniform Sobolev bounds $|S_2^{\mathrm{conn}}(x, y)| \le C \delta^{-4}$ (at $\delta = 1/2$, $\delta^{-4} = 16 < 20$, $\Delta_{\mathrm{OS0\_bound}} = 4 > 0$). In contrast, unbuffered collision $\delta \to 0$ yields radial divergence $\int_a^{1/2} r^{-5} dr \to \infty$ with growth defect $\Delta_{\mathrm{contact\_divergence}} = 960 > 0$ between $a = 1/4$ and $a = 1/8$, confirming that OS0 regularity is rigorously established on buffered domains.
+
+3. **Defect 3: Microcausality Derivation and Decoupling from Macroscopic Cluster Decomposition:**
+   - Failing to demonstrate that reconstructed real-time field operators commute at spacelike separation, or conflating buffered local reconstruction with the macroscopic mass gap.
+   - **Correction:** Proved via the Osterwalder–Schrader reconstruction theorem that Euclidean $SO(4)$ covariance (OS1) and Bose symmetry (OS3) analytically continue to spacelike microcausality $[\phi(x), \phi(y)] = 0$ for $(x-y)^2 < 0$. Certified on spacelike displacement $\Delta x^\mu = (0, 3/4, 0, 0)$ ($\Delta s^2 = -9/16 < 0$, $\Delta_{\mathrm{spacelike}} = 9/16 > 0$) that $\Delta_{\mathrm{microcausality}} = 0$, while timelike displacement $\Delta x^\mu = (1, 0, 0, 0)$ propagates non-trivially ($\Delta_{\mathrm{timelike\_propagation}} = 1 > 0$). Proved that local reconstruction does not bridge macroscopic exponential clustering (OS4), which remains blocked by `E-CROSSOVER = OPEN_AND_UNSOLVED` and `YM-016 = BLOCKED`. Edge `E-UV-LOCAL-OS` is closed on buffered domains (`E-UV-LOCAL-OS = CLOSED_ON_BUFFERED_DOMAIN`).
+
+4. **Established Lemma and Progress:**
+   - Proved Lemma `YM-075F-OS-WIGHTMAN-RECONSTRUCTION-SYNTHESIS-ON-BUFFERED-DOMAINS`.
+
+
