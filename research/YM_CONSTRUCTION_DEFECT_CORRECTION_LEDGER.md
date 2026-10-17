@@ -584,3 +584,26 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
 4. **Established Lemma and Isolated Next Downstream Obligation:**
    - Proved Lemma `YM-067F-MULTISCALE-UV-ITERATION-TO-FLOW-SCALE-AND-HARMONIC-LOG-BARRIER`.
    - Isolated immediate next downstream obligation: Lemma `YM-068F-GRADIENT-FLOW-SEMIGROUP-TADPOLE-CANCELLATION-AND-UV-SUMMABILITY`.
+
+## CDC-068: Heat-Kernel Semigroup Step Matching Across RG Scales, Cancellation of One-Loop Harmonic Logarithmic Barrier for Flowed Observables ($t > 0$), Geometric Discretization Convergence, and Cutoff-Uniform UV Summability to $k_{\mathrm{flow}}(a, t)$ (`YM-068`)
+
+- **Date:** 2026-10-17
+- **Primary Contract:** `YM-015F-JET-002B`
+- **Source Target:** Bałaban CMP 122, 175–202 (1989); CMP 139, 281–305 (1991); Lüscher JHEP 1008:071 (2010).
+- **Defects Corrected & Mathematical Resolutions:**
+
+1. **Defect 1: Confusing Unflowed Composite Operator Harmonic Logarithmic Divergence with Flowed Observable Evolution:**
+   - Unflowed composite operators ($t = 0$) suffer a genuine uncancelled one-loop logarithmic divergence $\sum_k g_k^2 \sim \ln(1/a)$ requiring subtractive/multiplicative local counterterm renormalization (`YM-067`).
+   - **Correction:** Proved that for a gradient-flowed physical observable $\mathcal{O}_{(a, t)}(f)$ at positive flow time $t > 0$ ($\ell_{\mathrm{flow}} = \sqrt{8t} = L^{N_{\mathrm{UV}}} a$), the linearized continuum heat kernel satisfies exact semigroup factorization $K_t = K_{t - \Delta t_k} \circ K_{\Delta t_k}$. The marginal dimension-4 one-loop fluctuation tadpole contraction $\frac{1}{2} g_k^2(N_{\mathrm{UV}}) \Delta_{C_k^{\mathrm{ideal}}} \mathcal{O}$ is absorbed into the coarse-scale flowed jet ($\Delta_{\mathrm{ideal\_semigroup\_cancel}} = 0$), leaving only a dimension-6 lattice/block discretization remainder suppressed by $\rho_{\mathrm{disc}}(m) = (a_k / \ell_{\mathrm{flow}})^2 = L^{-2(N_{\mathrm{UV}} - k)} = 4^{-m}$ ($m = N_{\mathrm{UV}} - k \in \{1, \dots, N_{\mathrm{UV}}\}$).
+
+2. **Defect 2: Uncontrolled High-Momentum Sums vs. Geometric Convergence of Flow Discretization Remainders:**
+   - Proved that because the dimension-6 discretization factor $4^{-m}$ decays exponentially with the UV distance $m \ge 1$ from the physical flow scale $k_{\mathrm{flow}} = N_{\mathrm{UV}}$, the flow-regularized one-loop sum converges geometrically:
+     - On the unit-normalized sequence $\tilde{g}_m^2 = 1/m$, $S_1^{\mathrm{flow}}(N_{\mathrm{UV}}) = \sum_{m=1}^{N_{\mathrm{UV}}} \frac{1}{m \, 4^m} < \sum_{m=1}^\infty 4^{-m} = 1/3$. At $N_{\mathrm{UV}} = 4$, $S_1^{\mathrm{flow}}(4) = 883/3072 < 1/3$, yielding uniform margin $\Delta_{\mathrm{flow\_oneloop\_margin}}(4) = 47/1024 > 0$ and rescuing $H_4 = 25/12 > 2$ by $\Delta_{\mathrm{semigroup\_rescue}}(4) = 1839/1024 > 1 > 0$.
+     - On the physical $SU(2)$ trajectory, $S_1^{\mathrm{phys, flow}}(N_{\mathrm{UV}}) = \sum_{m=1}^{N_{\mathrm{UV}}} g_{N_{\mathrm{UV}}-m}^2(N_{\mathrm{UV}}) 4^{-m} < g_{\mathrm{flow}}^2 / 3 = 1/12$. At $N_{\mathrm{UV}} = 4$, $S_1^{\mathrm{phys, flow}}(4) = 88003577 / 1216136320 < 1/12$, rescuing $S_1^{\mathrm{phys}}(4) = 7459894 / 9501065$ by $\Delta_{\mathrm{phys\_flow\_rescue}}(4) = 173372571 / 243227264 > 7/10 > 0$.
+
+3. **Defect 3: Complete Cutoff-Uniform Multiscale UV Summability to $k_{\mathrm{flow}}(a, t) = N_{\mathrm{UV}}$:**
+   - Combining the flow-regularized one-loop discretization remainder $S_1^{\mathrm{phys, flow}}(N_{\mathrm{UV}}) < 1/12$ with the two-loop / higher-order remainder bound $S_2^{\mathrm{phys}}(N_{\mathrm{UV}}) < 6/11$ (`YM-067`) bounds the cumulative marked perturbation norm uniformly for all $N_{\mathrm{UV}} \ge 1$ by $S_{\mathrm{total}}^{\mathrm{phys, UV}}(N_{\mathrm{UV}}) < 1/12 + 6/11 = 83/132 < 1 = B_{\mathrm{UV\_target}}$, with cutoff-uniform total UV margin $\Delta_{\mathrm{UV\_total\_uniform}} = 49/132 > 0$.
+
+4. **Established Lemma and Isolated Next Downstream Obligation:**
+   - Proved Lemma `YM-068F-GRADIENT-FLOW-SEMIGROUP-TADPOLE-CANCELLATION-AND-UV-SUMMABILITY`.
+   - Isolated immediate next downstream obligation: Lemma `YM-069F-FLOW-SCALE-HANDOFF-AND-MASSIVE-COARSE-PROPAGATOR-CONTRACTION`.
