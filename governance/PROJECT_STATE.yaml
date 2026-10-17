@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 82
+revision: 83
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "126e3939e7de7a57d588073b231b1cbccb42de07"
-  scientific_candidate_sha: "161e630f478d7afe2e5410375f8e7e9396ed31d9"
-  review_bound_sha: "161e630f478d7afe2e5410375f8e7e9396ed31d9"
+  head: "c4806e7f29246cd1996987710aca4dbb9e470382"
+  scientific_candidate_sha: "f37753761daa88596f85b1f86b65cd7c888e178b"
+  review_bound_sha: "f37753761daa88596f85b1f86b65cd7c888e178b"
   evidence_closeout_head: "126e3939e7de7a57d588073b231b1cbccb42de07"
-  closeout_resolution: "evidence_closeout_head binds preceding completed YM-062 closeout commit (126e3939e7de7a57d588073b231b1cbccb42de07); candidate freeze for YM-063 is committed on top of 126e3939e7de7a57d588073b231b1cbccb42de07; resolve authoritative current HEAD dynamically from Git."
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-062 closeout commit (126e3939e7de7a57d588073b231b1cbccb42de07); scientific_candidate_sha and review_bound_sha bind accepted YM-063 candidate (f37753761daa88596f85b1f86b65cd7c888e178b); resolve authoritative current HEAD dynamically from Git."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,10 +32,10 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 81
-  last_updated_at: "2026-10-17T13:57:00Z"
+  last_expected_revision: 82
+  last_updated_at: "2026-10-17T14:09:00Z"
   active_contract: "YM-015F-JET-002B"
-  frozen_candidate: "161e630f478d7afe2e5410375f8e7e9396ed31d9"
+  frozen_candidate: "f37753761daa88596f85b1f86b65cd7c888e178b"
 
 current_objective: YM-015F-JET-002B
 
@@ -49,7 +49,7 @@ objectives:
     atlas_writer_and_coordinator: "primary-worker"
     reviewer_path: "verification/raw/YM-063_E4_RAW_20261017.md"
     acceptor: "verification/YM-063_TECHNICAL_ACCEPTANCE.md"
-    status: IN_PROGRESS
+    status: SCIENTIFICALLY_ACCEPTED
     scope_limitation: "FINITE_CHART_IBP_AND_FOURTH_ORDER_BCH_JET_REMAINDER_PROVED_MAYER_EXPANSION_AND_CONTINUUM_OPEN"
   - id: YM-062
     scope_in: "Fluctuation covariance contractions, non-Abelian Weitzenböck curvature coupling W(F(V_0)) in H_{V_0}, connected cumulant expansion of marked observables at O(g_k^2), gradient-flow tadpole UV regularization vs IR non-contraction in Bałaban CMP 122 (1.76)–(1.90), proof of Lemma YM-062F-CONNECTED-CUMULANT-AND-WEITZENBOCK-CURVATURE-SHIFT, isolation of Lemma YM-063F, and Test 26 finite certificate"
