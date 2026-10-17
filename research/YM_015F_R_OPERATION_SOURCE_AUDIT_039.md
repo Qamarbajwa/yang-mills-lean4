@@ -2781,3 +2781,125 @@ A fundamental structural difference separates unflowed local gauge observables (
 
 
 
+---
+
+## SECTION YM-063: FINITE-CHART CUTOFF BOUNDARY CORRECTIONS IN GAUSSIAN INTEGRATION BY PARTS, NON-ABELIAN FOURTH-ORDER BCH CURVATURE REMAINDER BOUNDS, AND FOURTH-ORDER OBSERVABLE JET REMAINDER ESTIMATES IN BAŁABAN CMP 122 (1.80)–(1.90) (`YM-063`)
+
+### 1. Scope and Primary-Source Grounding
+Following Task `YM-062` (Lemma `YM-062F-CONNECTED-CUMULANT-AND-WEITZENBOCK-CURVATURE-SHIFT`), which established the $\mathcal{O}(g_k^2)$ connected cumulant and Weitzenböck curvature shifts under full-space Gaussian Wick contractions, Task `YM-063` audits the three exact remainder mechanisms in Bałaban, *Commun. Math. Phys.* **122**, 175–202 (1989), eqs. (1.80)–(1.90) (printed pp. 195–198) and **109**, 249–301 (1987) that separate the actual truncated small-field fluctuation integral on $\mathcal{E}_{\mathrm{chart}}$ from an uncutoff second-order Gaussian cumulant approximation:
+1. **Finite-Chart Cutoff Boundary Corrections $\mathcal{B}_{\mathrm{IBP}, i}[F; \chi^\prime]$ in Gaussian Integration by Parts:** Exact Stein–Wick identity on the bounded small-field chart $\mathcal{E}_{\mathrm{chart}} = \{\|B^\prime\|_\infty < \delta_k^\prime / g_k\}$ showing that differentiating the small-field cutoff $\chi^\prime(B^\prime)$ generates a non-zero boundary / collar-derivative defect $\Delta_{\mathrm{IBP}} > 0$ that is exponentially suppressed in $1/g_k^2$ by the coercive Hessian penalty $\frac{1}{2}\langle B^\prime, \mathcal{H}_{V_0} B^\prime \rangle \ge \frac{c_0 (\delta_k^\prime)^2}{8 g_k^2}$ on $\operatorname{supp}(\nabla \chi^\prime)$.
+2. **Non-Abelian Fourth-Order Baker–Campbell–Hausdorff (BCH) Curvature Remainder $\mathcal{R}_{\mathrm{BCH}}^{(4)}$ on $\mathfrak{su}(2)$:** Exact Lie-algebraic derivation of the fourth-order Dynkin–BCH commutator $-\frac{1}{24}[Y, [X, [X, Y]]]$ in the plaquette holonomy expansion around $V_0$, proving both why purely orthogonal generators ($X = x e_1, Y = y_2 e_2$) have a vanishing 4th-order commutator ($[y_2 e_2, -4 x^2 y_2 e_2] = 0$) and why mixed longitudinal-transverse fluctuations ($X = x e_1, Y = y_1 e_1 + y_2 e_2$) activate a strictly non-zero fourth-order non-Abelian BCH remainder $\operatorname{BCH}_4(X, Y) = \frac{1}{3} x^2 y_1 y_2 e_3 \ne 0$.
+3. **Fourth-Order Observable Jet Taylor Remainder $\mathcal{R}_{\mathrm{jet}}^{(4)}$ and Background Curvature Amplification:** Exact small-field $L^\infty$ bound and Gaussian fourth-moment Wick bound $\mathbb{E}_{C_k}[|\mathcal{R}_{\mathrm{jet}}^{(4)}(B^\prime)|] \le \frac{1}{8} g_k^4 \|J_4\| \operatorname{Tr}(C_k(V_0)^2)$, proving that background Weitzenböck curvature $\phi \in (0, \lambda_0)$ strictly amplifies the fourth-order Gaussian remainder relative to a flat background ($\Delta_{\mathrm{quartic\_curv}} = \frac{11}{576} > 0$ at $\lambda_0 = 1, \phi = 1/2, g_k^2 = 1/4$).
+
+---
+
+### 2. Finite-Chart Cutoff Boundary Corrections $\mathcal{B}_{\mathrm{IBP}, i}[F; \chi^\prime]$ in Gaussian Integration by Parts
+
+#### 2.1 Exact Truncated Stein–Wick Identity on $\mathcal{E}_{\mathrm{chart}}$
+In Bałaban CMP 122 eqs. (1.80)–(1.89) (pp. 195–198), after extracting the leading quadratic fluctuation form $-\frac{1}{2} \langle B^\prime, \mathcal{H}_{V_0} B^\prime \rangle$ with covariance $C_k(V_0) = \mathcal{H}_{V_0}^{-1}$, the small-field integral is weighted by the cutoff $\chi^\prime(B^\prime)$ supported in the rescaled small-field chart:
+$$\mathcal{E}_{\mathrm{chart}}(g_k) = \left\{ B^\prime \in \mathbb{R}^{3|\mathbb{B}_0 \setminus T_0|} : \|B^\prime\|_\infty < R_k := \frac{\delta_k^\prime}{g_k} \right\}.$$
+Let $d\mu_{C_k}(B^\prime) = Z_{0, k}(V_0)^{-1} \exp\left(-\frac{1}{2}\langle B^\prime, C_k(V_0)^{-1} B^\prime\rangle\right) dB^\prime$ be the normalized Gaussian measure on $\mathbb{R}^N$ ($N = 3|\mathbb{B}_0 \setminus T_0|$). Since
+$$B_i^\prime \exp\left(-\frac{1}{2}\langle B^\prime, C_k^{-1} B^\prime\rangle\right) = -\sum_{j=1}^N C_{k, ij}(V_0) \frac{\partial}{\partial B_j^\prime} \exp\left(-\frac{1}{2}\langle B^\prime, C_k^{-1} B^\prime\rangle\right),$$
+integrating by parts on $\mathbb{R}^N$ against the product $F(B^\prime) \chi^\prime(B^\prime)$ yields the **exact finite-chart Stein–Wick identity**:
+$$\left\langle B_i^\prime F(B^\prime) \chi^\prime(B^\prime) \right\rangle_{C_k} = \sum_{j=1}^N C_{k, ij}(V_0) \left\langle \frac{\partial F}{\partial B_j^\prime}(B^\prime) \, \chi^\prime(B^\prime) \right\rangle_{C_k} + \mathcal{B}_{\mathrm{IBP}, i}[F; \chi^\prime](V_0),$$
+where the **finite-chart cutoff boundary correction** is:
+$$\mathcal{B}_{\mathrm{IBP}, i}[F; \chi^\prime](V_0) := \sum_{j=1}^N C_{k, ij}(V_0) \left\langle F(B^\prime) \, \frac{\partial \chi^\prime}{\partial B_j^\prime}(B^\prime) \right\rangle_{C_k} \ne 0.$$
+
+#### 2.2 Explicit Boundary Defect for Sharp and Smooth Small-Field Cutoffs
+1. **Sharp Indicator Cutoff ($\chi^\prime(B^\prime) = \mathbf{1}_{[-R, R]}(B^\prime)$ on a 1D Mode of Variance $C > 0$):**
+   Taking $F(B^\prime) = B^\prime$, the distributional derivative is $\partial \mathbf{1}_{[-R, R]}(B^\prime) = \delta(B^\prime + R) - \delta(B^\prime - R)$. The exact truncated second moment satisfies:
+   $$\left\langle (B^\prime)^2 \mathbf{1}_{[-R, R]}(B^\prime) \right\rangle_C = C \left\langle \mathbf{1}_{[-R, R]}(B^\prime) \right\rangle_C + \mathcal{B}_{\mathrm{IBP}}[B^\prime; \mathbf{1}_{[-R, R]}],$$
+   where:
+   $$\mathcal{B}_{\mathrm{IBP}}[B^\prime; \mathbf{1}_{[-R, R]}] = C \int_{-R}^R B^\prime \left(\delta(B^\prime + R) - \delta(B^\prime - R)\right) \frac{e^{-(B^\prime)^2 / (2C)}}{\sqrt{2\pi C}} \, dB^\prime = -2 C R \frac{e^{-R^2 / (2C)}}{\sqrt{2\pi C}} < 0.$$
+   Thus the unadjusted Wick variance overestimate on $[-R, R]$ has the exact strictly positive **IBP boundary defect**:
+   $$\Delta_{\mathrm{IBP}}(R, C) := C \left\langle \mathbf{1}_{[-R, R]} \right\rangle_C - \left\langle (B^\prime)^2 \mathbf{1}_{[-R, R]} \right\rangle_C = 2 C R \frac{e^{-R^2 / (2C)}}{\sqrt{2\pi C}} > 0.$$
+   For $C = 1$ and $R = 2$ (corresponding to $\delta_k^\prime = 1, g_k = 1/2 \implies R = \delta_k^\prime / g_k = 2$):
+   $$\Delta_{\mathrm{IBP}}(2, 1) = \frac{4 e^{-2}}{\sqrt{2\pi}} \approx 0.215963866 > 0.$$
+2. **Smooth Transition Collar Cutoff ($\chi^\prime \in C_c^\infty(\mathcal{E}_{\mathrm{chart}})$) & Exponential Peierls Suppression:**
+   In Bałaban's smooth partition of unity, $\chi^\prime(B^\prime) = 1$ for $\|B^\prime\|_\infty \le \frac{1}{2} R_k$ and $\chi^\prime(B^\prime) = 0$ for $\|B^\prime\|_\infty \ge R_k$, so $\operatorname{supp}(\nabla \chi^\prime) \subset \mathcal{A}_{\mathrm{collar}} := \left\{B^\prime : \frac{\delta_k^\prime}{2 g_k} \le \|B^\prime\|_\infty \le \frac{\delta_k^\prime}{g_k}\right\}$ with $\|\nabla \chi^\prime\|_\infty \le C_{\chi} \frac{g_k}{\delta_k^\prime}$.
+   On thesmall-field background $V_0$ where $\mathcal{H}_{V_0} \ge c_0 I > 0$ ($c_0 = \lambda_0 - \phi > 0$), every configuration $B^\prime \in \mathcal{A}_{\mathrm{collar}}$ satisfies:
+   $$\frac{1}{2}\langle B^\prime, \mathcal{H}_{V_0} B^\prime \rangle \ge \frac{1}{2} c_0 \|B^\prime\|_2^2 \ge \frac{1}{2} c_0 \|B^\prime\|_\infty^2 \ge \frac{c_0 (\delta_k^\prime)^2}{8 g_k^2}.$$
+   Splitting the Gaussian weight into $\frac{1}{4}\langle B^\prime, \mathcal{H}_{V_0} B^\prime \rangle + \frac{1}{4}\langle B^\prime, \mathcal{H}_{V_0} B^\prime \rangle$ yields the rigorous exponential Peierls bound on the cutoff-derivative boundary term:
+   $$\left|\mathcal{B}_{\mathrm{IBP}, i}[F; \chi^\prime](V_0)\right| \le C_{\mathrm{IBP}} \, c_0^{-1} \left(\frac{g_k}{\delta_k^\prime}\right) \sup_{B^\prime \in \mathcal{A}_{\mathrm{collar}}} |F(B^\prime)| \, \exp\left(-\frac{c_0 (\delta_k^\prime)^2}{16 g_k^2}\right) = \mathcal{O}\left(e^{-\kappa_{\mathrm{IBP}} / g_k^2}\right).$$
+
+---
+
+### 3. Non-Abelian Fourth-Order Baker–Campbell–Hausdorff (BCH) Curvature Remainder $\mathcal{R}_{\mathrm{BCH}}^{(4)}$ on $\mathfrak{su}(2)$
+
+#### 3.1 Dynkin–BCH Expansion of Non-Abelian Plaquette Holonomies
+When expanding the non-Abelian link product $U_p(\hat{V}) = \prod_{b \in \partial p} V_0(b) \exp(i g_k B^\prime(b))$ around the background plaquette $U_p(V_0)$, parallel-transporting the link fluctuations $X_l = i g_k \operatorname{Ad}_{W_l} B^\prime(b_l) \in \mathfrak{su}(2)$ to the basepoint of plaquette $p$ requires iterating the Baker–Campbell–Hausdorff series for $\log(\exp(X)\exp(Y))$:
+$$\operatorname{BCH}(X, Y) = X + Y + \frac{1}{2}[X, Y] + \frac{1}{12}[X, [X, Y]] - \frac{1}{12}[Y, [X, Y]] - \frac{1}{24}[Y, [X, [X, Y]]] + \mathcal{R}_{\mathrm{BCH}}^{(\ge 5)}(X, Y).$$
+- **Order 1 (Linear):** $X + Y \sim \mathcal{O}(g_k B^\prime)$ generates the covariant exterior derivative $d_{V_0} B^\prime$.
+- **Order 2 (Quadratic):** $\frac{1}{2}[X, Y] \sim \mathcal{O}(g_k^2 (B^\prime)^2)$ generates both the curvature coupling $\mathcal{W}(F(V_0))$ (when paired with background curvature $F(V_0)$) and the cubic Yang–Mills vertex $g_k I_3(B^\prime)$ (when paired with $d_{V_0} B^\prime$).
+- **Order 3 & 4 (Cubic & Quartic BCH):** $\operatorname{BCH}_3(X, Y)$ and $\operatorname{BCH}_4(X, Y) := -\frac{1}{24}[Y, [X, [X, Y]]]$ contribute to the quartic effective action vertex $g_k^2 I_4(B^\prime)$ and the fourth-order BCH action remainder $\mathcal{R}_{\mathrm{BCH}}^{(4)}$.
+
+#### 3.2 Orthogonal Degeneracy Trap vs. Longitudinal–Transverse Activation on $\mathfrak{su}(2)$
+Let $\{e_1, e_2, e_3\}$ be the standard rational basis of $\mathfrak{su}(2)$ with commutation relations $[e_a, e_b] = 2 \epsilon_{abc} e_c$ ($e_a = -i \sigma_a$).
+- **Orthogonal Degeneracy Trap:** Suppose one tests only purely orthogonal Lie algebra elements $X = x e_1$ and $Y_{\perp} = y_2 e_2$. Then:
+  $$[X, Y_{\perp}] = 2 x y_2 e_3, \quad [X, [X, Y_{\perp}]] = [x e_1, 2 x y_2 e_3] = -4 x^2 y_2 e_2,$$
+  which is parallel to $Y_{\perp} = y_2 e_2$, so:
+  $$\operatorname{BCH}_4(x e_1, y_2 e_2) = -\frac{1}{24}[y_2 e_2, -4 x^2 y_2 e_2] = 0!$$
+  Relying on purely orthogonal basis pairs would falsely suggest that the fourth-order BCH commutator vanishes in $\mathfrak{su}(2)$.
+- **Exact Non-Vanishing Fourth-Order BCH Commutator for General Non-Parallel Elements:** Let $X = x e_1$ and $Y = y_1 e_1 + y_2 e_2$ ($x, y_1, y_2 \in \mathbb{Q} \setminus \{0\}$). Then:
+  1. $[X, Y] = [x e_1, y_1 e_1 + y_2 e_2] = 2 x y_2 e_3$.
+  2. $[X, [X, Y]] = [x e_1, 2 x y_2 e_3] = -4 x^2 y_2 e_2$.
+  3. $[Y, [X, Y]] = [y_1 e_1 + y_2 e_2, 2 x y_2 e_3] = -4 x y_1 y_2 e_2 + 4 x y_2^2 e_1$.
+  4. $[Y, [X, [X, Y]]] = [y_1 e_1 + y_2 e_2, -4 x^2 y_2 e_2] = -8 x^2 y_1 y_2 e_3 \ne 0$.
+  Therefore, the fourth-order Dynkin–BCH term is given in exact closed form by:
+  $$\operatorname{BCH}_4(x e_1, y_1 e_1 + y_2 e_2) = -\frac{1}{24}[Y, [X, [X, Y]]] = \frac{1}{3} x^2 y_1 y_2 e_3 \ne 0.$$
+  At the certified rational point $x = 1/2, y_1 = 1/2, y_2 = 1/2$:
+  $$\operatorname{BCH}_3 = -\frac{1}{3} x y_2^2 e_1 - \frac{1}{3} x(x - y_1) y_2 e_2 = -\frac{1}{24} e_1,$$
+  $$\operatorname{BCH}_4 = \frac{1}{3} \left(\frac{1}{2}\right)^2 \left(\frac{1}{2}\right) \left(\frac{1}{2}\right) e_3 = \frac{1}{48} e_3, \quad \Delta_{\mathrm{BCH4}} := \|\operatorname{BCH}_4\| = \frac{1}{48} > 0.$$
+
+---
+
+### 4. Fourth-Order Observable Jet Taylor Remainder $\mathcal{R}_{\mathrm{jet}}^{(4)}$ and Curvature Amplification
+
+#### 4.1 Pointwise Small-Field Bound and Gaussian Fourth-Moment Wick Contraction
+In the Taylor expansion of the pulled-back gradient-flowed observable around $V_0$:
+$$\mathcal{O}[V_0 \exp(i g_k B^\prime)] = \mathcal{O}_0(V_0) + g_k J_1(V_0)[B^\prime] + \frac{1}{2} g_k^2 J_2(V_0)[B^\prime, B^\prime] + \frac{1}{6} g_k^3 J_3(V_0)[B^\prime, B^\prime, B^\prime] + \mathcal{R}_{\mathrm{jet}}^{(4)}(V_0; B^\prime),$$
+the fourth-order Lagrange remainder is:
+$$\mathcal{R}_{\mathrm{jet}}^{(4)}(V_0; B^\prime) = \frac{1}{24} g_k^4 D^4 \mathcal{O}(V_\theta)[B^\prime, B^\prime, B^\prime, B^\prime], \quad \theta \in (0, 1).$$
+1. **Deterministic Pointwise Small-Field Bound on $\mathcal{E}_{\mathrm{chart}}$:**
+   Since $\|g_k B^\prime\|_\infty < \delta_k^\prime$ on $\mathcal{E}_{\mathrm{chart}}$, if $\|D^4 \mathcal{O}\|_{\ell^1} \le M_4$, then pointwise on $\mathcal{E}_{\mathrm{chart}}$:
+   $$\left|\mathcal{R}_{\mathrm{jet}}^{(4)}(V_0; B^\prime)\right| \le \frac{M_4}{24} (\delta_k^\prime)^4.$$
+   At $\delta_k^\prime = 1/2$ and $M_4 = 1$, the deterministic chart supremum bound is $\frac{1}{24} (1/2)^4 = \frac{1}{384} > 0$.
+2. **Gaussian Fourth-Moment Wick Bound & Weitzenböck Curvature Amplification:**
+   For a diagonal quartic jet envelope $\frac{1}{24} g_k^4 M_4 \sum_a (B_a^\prime)^4$ integrated against the Gaussian fluctuation covariance $C_k(\phi) = (\lambda_0 I_3 + \mathcal{W}(\phi))^{-1} = \operatorname{diag}\left((\lambda_0 - \phi)^{-1}, \lambda_0^{-1}, (\lambda_0 + \phi)^{-1}\right)$, Wick's theorem gives $\langle (B_a^\prime)^4 \rangle_{C_k(\phi)} = 3 C_{k, aa}(\phi)^2$. Hence the Gaussian expectation of the fourth-order jet envelope is:
+   $$B_{\mathrm{jet}}^{(4)}(\phi) := \frac{1}{24} g_k^4 M_4 \sum_{a \in \{-, 3, +\}} 3 C_{k, aa}(\phi)^2 = \frac{1}{8} g_k^4 M_4 \operatorname{Tr}_{\mathfrak{su}(2)}\left(C_k(\phi)^2\right).$$
+   Evaluating on the certified rational $\mathfrak{su}(2)$ triplet ($\lambda_0 = 1, \phi = 1/2, g_k^2 = 1/4 \implies g_k^4 = 1/16, M_4 = 1$):
+   - In the curved small-field background ($\phi = 1/2$), $C(1/2) = \operatorname{diag}(2, 1, 2/3)$, so:
+     $$\operatorname{Tr}\left(C(1/2)^2\right) = 2^2 + 1^2 + \left(\frac{2}{3}\right)^2 = 4 + 1 + \frac{4}{9} = \frac{49}{9}, \quad B_{\mathrm{jet}}^{(4)}\left(\frac{1}{2}\right) = \frac{1}{8} \cdot \frac{1}{16} \cdot \frac{49}{9} = \frac{49}{1152} > 0.$$
+   - In the flat background ($\phi = 0$), $C(0) = \operatorname{diag}(1, 1, 1)$, so:
+     $$\operatorname{Tr}\left(C(0)^2\right) = 1^2 + 1^2 + 1^2 = 3, \quad B_{\mathrm{jet}}^{(4)}(0) = \frac{1}{8} \cdot \frac{1}{16} \cdot 3 = \frac{3}{128} = \frac{27}{1152} > 0.$$
+   - Consequently, non-Abelian background curvature $\phi = 1/2$ amplifies the fourth-order Gaussian jet remainder by the exact strictly positive rational defect:
+     $$\Delta_{\mathrm{quartic\_curv}} := B_{\mathrm{jet}}^{(4)}\left(\frac{1}{2}\right) - B_{\mathrm{jet}}^{(4)}(0) = \frac{49}{1152} - \frac{27}{1152} = \frac{22}{1152} = \frac{11}{576} > 0.$$
+
+---
+
+### 5. Formal Statement and Proof of Lemma `YM-063F-FINITE-CHART-BOUNDARY-AND-FOURTH-ORDER-TAYLOR-REMAINDER`
+
+**LEMMA `YM-063F-FINITE-CHART-BOUNDARY-AND-FOURTH-ORDER-TAYLOR-REMAINDER` (Finite-Chart Cutoff Boundary Corrections in Gaussian Integration by Parts and Fourth-Order Non-Abelian BCH / Jet Remainder Bounds):**
+*In the first density-changing renormalization step of Bałaban's 4D gauge construction (CMP 122 eqs. (1.80)–(1.90), pp. 195–198), let $V_0$ be a small-field background configuration with coercive fluctuation Hessian $\mathcal{H}_{V_0} \ge c_0 I > 0$ ($c_0 = \lambda_0 - \phi > 0$) and covariance $C_k(V_0) = \mathcal{H}_{V_0}^{-1}$. Then:*
+1. *On the bounded small-field chart $\mathcal{E}_{\mathrm{chart}}(g_k) = \{\|B^\prime\|_\infty < R_k = \delta_k^\prime / g_k\}$ with cutoff $\chi^\prime(B^\prime)$, Gaussian integration by parts includes an exact non-vanishing cutoff-derivative boundary correction:*
+   $$\left\langle B_i^\prime F(B^\prime) \chi^\prime(B^\prime) \right\rangle_{C_k} - \sum_j C_{k, ij}(V_0) \left\langle \partial_j F(B^\prime) \, \chi^\prime(B^\prime) \right\rangle_{C_k} = \mathcal{B}_{\mathrm{IBP}, i}[F; \chi^\prime](V_0) := \sum_j C_{k, ij}(V_0) \left\langle F(B^\prime) \, \partial_j \chi^\prime(B^\prime) \right\rangle_{C_k},$$
+   *which produces a strictly positive variance defect $\Delta_{\mathrm{IBP}}(R, C) = 2 C R (2\pi C)^{-1/2} e^{-R^2/(2C)} > 0$ on $[-R, R]$ and satisfies the exponential Peierls bound $|\mathcal{B}_{\mathrm{IBP}, i}| \le C_{\mathrm{IBP}} c_0^{-1} (g_k / \delta_k^\prime) \sup_{\mathcal{A}_{\mathrm{collar}}} |F| \exp(-c_0 (\delta_k^\prime)^2 / (16 g_k^2))$ for smooth cutoffs supported in the collar $\frac{1}{2} R_k \le \|B^\prime\|_\infty \le R_k$.*
+2. *In the non-Abelian $\mathfrak{su}(2)$ Baker–Campbell–Hausdorff expansion of plaquette holonomies, while purely orthogonal generators ($X = x e_1, Y_\perp = y_2 e_2$) satisfy $\operatorname{BCH}_4(X, Y_\perp) = 0$, mixed longitudinal–transverse fluctuations ($X = x e_1, Y = y_1 e_1 + y_2 e_2$ with $x, y_1, y_2 \ne 0$) generate a strictly non-zero fourth-order commutator:*
+   $$\operatorname{BCH}_4(x e_1, y_1 e_1 + y_2 e_2) = -\frac{1}{24}[Y, [X, [X, Y]]] = \frac{1}{3} x^2 y_1 y_2 e_3 \ne 0 \quad \left(\text{certified at } x = y_1 = y_2 = \frac{1}{2} \implies \Delta_{\mathrm{BCH4}} = \frac{1}{48} > 0\right).$$
+3. *The fourth-order observable jet Taylor remainder $\mathcal{R}_{\mathrm{jet}}^{(4)}(V_0; B^\prime)$ is bounded pointwise on $\mathcal{E}_{\mathrm{chart}}$ by $\frac{M_4}{24}(\delta_k^\prime)^4$ and in Gaussian expectation by $B_{\mathrm{jet}}^{(4)}(\phi) = \frac{1}{8} g_k^4 M_4 \operatorname{Tr}(C_k(\phi)^2)$, with strictly positive Weitzenböck curvature amplification:*
+   $$\Delta_{\mathrm{quartic\_curv}} = B_{\mathrm{jet}}^{(4)}\left(\frac{1}{2}\right) - B_{\mathrm{jet}}^{(4)}(0) = \frac{49}{1152} - \frac{27}{1152} = \frac{11}{576} > 0 \quad \left(\text{at } \lambda_0 = 1, \phi = \frac{1}{2}, g_k^2 = \frac{1}{4}, M_4 = 1\right).$$
+4. *Cutoff-uniform multiscale cluster summability as $a \to 0$, thermodynamic infinite-volume limits $|\Lambda| \to \infty$, and continuum Wightman reconstruction remain strictly open.*
+*Status:* **PROVED_WITHIN_STATED_HYPOTHESES** *(for the finite-chart Stein–Wick boundary identity, exponential Peierls collar bound, fourth-order $\mathfrak{su}(2)$ BCH commutator, and fourth-order Gaussian jet remainder bound)*; **CONDITIONALLY_BLOCKED_AND_OPEN** *(for multiscale infrared accumulation and continuum closure)*.
+
+---
+
+### 6. Isolation of Immediate Next Downstream Obligation (`YM-064`) and Reaffirmed Governance Boundaries
+- **Immediate Next Open Obligation under `YM-015F-JET-002B`:**
+  **LEMMA `YM-064F-MARKED-MAYER-EXPANSION-AND-POLYMER-PINNING` (Linked Mayer Cluster Expansion of Exponentiated Effective Action Perturbations, Connected Polymer Pinning of Physical Observable Insertions, and Tree-Decay Inheritance in Bałaban CMP 122 (1.84)–(1.90)):**
+  After performing the small-field Gaussian integration and bounding the connected cumulant shifts (`YM-062`) and the finite-chart IBP / fourth-order BCH and jet remainders (`YM-063`), the resulting exponentiated effective action perturbation $\exp(\delta A_{k+1}[V_0] + \mathcal{R}_k[V_0])$ and renormalized observable insertion $\mathcal{O}_{k+1}^{\mathrm{ren}}[V_0]$ must be expanded into localized polymer activities via the **Mayer cluster expansion** $\prod_X (e^{f_X} - 1 + 1)$ and **Brydges–Kennedy–Abdesselam–Rivasseau (BKAR) forest interpolation formula** so that disconnected vacuum polymers factor out and only connected polymers pinned to the physical observable support $\operatorname{supp}(f_{t_0})$ contribute to the marked activity $\mathcal{I}_{\alpha^{(k+1)}}[\mathcal{O}]$. Auditing and proving this linked Mayer expansion and connected polymer pinning mechanism is the immediate next task (`YM-064`).
+- **Downstream Open / Blocked Global Obligations:**
+  - **Lemma `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS`:** **`OPEN`**;
+  - **Lemma `YM-060F-CONTINUUM-WIGHTMAN-RECONSTRUCTION-AND-SPECTRAL-GAP`:** **`OPEN`**;
+  - **Task `YM-016` (Continuum Reconstruction):** **`BLOCKED`**;
+  - **Infrared Crossover `E-CROSSOVER`:** **`OPEN`**;
+  - **Constitutional Invariants:** `goal_complete = false`, `clay_problem = OPEN_AND_UNSOLVED`, `P3 = OPEN`, `E-UV-FLOWED = PARTIAL_PROGRESS`, `STRUCTURAL_NO_GO_COUNT = 0`.

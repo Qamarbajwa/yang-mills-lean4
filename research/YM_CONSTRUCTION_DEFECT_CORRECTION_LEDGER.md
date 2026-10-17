@@ -474,3 +474,29 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
 4. **Established Lemma and Isolated Next Downstream Obligation:**
    - Proved Lemma `YM-062F-CONNECTED-CUMULANT-AND-WEITZENBOCK-CURVATURE-SHIFT`.
    - Isolated immediate next downstream obligation: Lemma `YM-063F-FINITE-CHART-BOUNDARY-AND-FOURTH-ORDER-TAYLOR-REMAINDER` (Finite-chart cutoff boundary terms $\partial \mathcal{E}_{\mathrm{chart}}$ in Gaussian integration by parts and fourth-order BCH / jet Taylor remainder bounds in Bałaban CMP 122 (1.80)–(1.90)).
+## CDC-063: Finite-Chart Cutoff Boundary Corrections in Gaussian Integration by Parts, Non-Abelian Fourth-Order BCH Curvature Remainder Bounds, and Fourth-Order Observable Jet Remainder Estimates (`YM-063`)
+
+- **Date:** 2026-10-17
+- **Primary Contract:** `YM-015F-JET-002B`
+- **Source Target:** Bałaban CMP 122, 175–202 (1989), eqs. (1.80)–(1.90); CMP 109, 249–301 (1987).
+- **Defects Corrected & Mathematical Resolutions:**
+
+1. **Defect 1: Omission of Finite-Chart Cutoff Boundary Terms $\mathcal{B}_{\mathrm{IBP}, i}[F; \chi^\prime]$ in Truncated Gaussian Integration by Parts:**
+   - Applying full-space Gaussian Wick identities on the bounded small-field chart $\mathcal{E}_{\mathrm{chart}} = \{\|B^\prime\|_\infty < R_k = \delta_k^\prime / g_k\}$ omits the boundary / collar-derivative term generated when $\partial / \partial B_j^\prime$ hits the small-field cutoff $\chi^\prime(B^\prime)$.
+   - **Correction:** Derived the exact finite-chart Stein–Wick identity:
+     $$\left\langle B_i^\prime F(B^\prime) \chi^\prime(B^\prime) \right\rangle_{C_k} = \sum_j C_{k, ij}(V_0) \left\langle \partial_j F(B^\prime) \, \chi^\prime(B^\prime) \right\rangle_{C_k} + \mathcal{B}_{\mathrm{IBP}, i}[F; \chi^\prime](V_0), \quad \mathcal{B}_{\mathrm{IBP}, i}[F; \chi^\prime](V_0) = \sum_j C_{k, ij}(V_0) \left\langle F(B^\prime) \, \partial_j \chi^\prime(B^\prime) \right\rangle_{C_k}.$$
+     Proved that on $[-R, R]$, the sharp-cutoff second moment differs from $C \langle \mathbf{1}_{[-R, R]} \rangle_C$ by the strictly positive boundary defect $\Delta_{\mathrm{IBP}}(R, C) = 2 C R (2\pi C)^{-1/2} e^{-R^2/(2C)} > 0$ ($\Delta_{\mathrm{IBP}}(2, 1) = 4 e^{-2} / \sqrt{2\pi} \approx 0.215964 > 0$), and proved the exponential Peierls collar bound $|\mathcal{B}_{\mathrm{IBP}, i}| \le C_{\mathrm{IBP}} c_0^{-1} (g_k / \delta_k^\prime) \sup_{\mathcal{A}_{\mathrm{collar}}} |F| \exp(-c_0 (\delta_k^\prime)^2 / (16 g_k^2))$ for smooth cutoffs supported in $\frac{1}{2} R_k \le \|B^\prime\|_\infty \le R_k$.
+
+2. **Defect 2: Orthogonal Degeneracy Trap in Fourth-Order $\mathfrak{su}(2)$ Baker–Campbell–Hausdorff (BCH) Commutators:**
+   - Testing only purely orthogonal $\mathfrak{su}(2)$ basis elements ($X = x e_1, Y_\perp = y_2 e_2$) gives $[X, [X, Y_\perp]] = -4 x^2 y_2 e_2 \parallel Y_\perp$ and thus $\operatorname{BCH}_4(X, Y_\perp) = -\frac{1}{24}[Y_\perp, [X, [X, Y_\perp]]] = 0$, which could falsely suggest that fourth-order BCH commutators vanish in $\mathfrak{su}(2)$.
+   - **Correction:** Proved that for general non-parallel fluctuations $X = x e_1$ and $Y = y_1 e_1 + y_2 e_2$ with both longitudinal ($y_1 \ne 0$) and transverse ($y_2 \ne 0$) components, the fourth-order Dynkin–BCH term is strictly non-zero:
+     $$\operatorname{BCH}_4(x e_1, y_1 e_1 + y_2 e_2) = -\frac{1}{24}[Y, [X, [X, Y]]] = \frac{1}{3} x^2 y_1 y_2 e_3 \ne 0,$$
+     with exact rational magnitude $\Delta_{\mathrm{BCH4}} = \frac{1}{48} > 0$ at $x = y_1 = y_2 = 1/2$.
+
+3. **Defect 3: Omission of Background Curvature Amplification in Fourth-Order Observable Jet Taylor Remainders $\mathcal{R}_{\mathrm{jet}}^{(4)}$:**
+   - Bounding the fourth-order observable jet remainder $\mathcal{R}_{\mathrm{jet}}^{(4)}(V_0; B^\prime) = \frac{1}{24} g_k^4 D^4 \mathcal{O}(V_\theta)[(B^\prime)^{\otimes 4}]$ using the free/flat propagator $C_k(0)$ underestimates the Gaussian fourth moment in a curved background field $V_0$.
+   - **Correction:** Proved both the deterministic small-field chart supremum bound $|\mathcal{R}_{\mathrm{jet}}^{(4)}| \le \frac{M_4}{24}(\delta_k^\prime)^4$ ($= \frac{1}{384}$ at $\delta_k^\prime = 1/2, M_4 = 1$) and the Gaussian fourth-moment Wick bound $B_{\mathrm{jet}}^{(4)}(\phi) = \frac{1}{8} g_k^4 M_4 \operatorname{Tr}(C_k(\phi)^2)$. On the certified rational $\mathfrak{su}(2)$ triplet ($\lambda_0 = 1, \phi = 1/2, g_k^2 = 1/4, M_4 = 1$), $B_{\mathrm{jet}}^{(4)}(1/2) = \frac{49}{1152}$ versus $B_{\mathrm{jet}}^{(4)}(0) = \frac{27}{1152}$, establishing the exact curvature amplification defect $\Delta_{\mathrm{quartic\_curv}} = \frac{11}{576} > 0$.
+
+4. **Established Lemma and Isolated Next Downstream Obligation:**
+   - Proved Lemma `YM-063F-FINITE-CHART-BOUNDARY-AND-FOURTH-ORDER-TAYLOR-REMAINDER`.
+   - Isolated immediate next downstream obligation: Lemma `YM-064F-MARKED-MAYER-EXPANSION-AND-POLYMER-PINNING` (Linked Mayer cluster expansion of exponentiated effective action perturbations, connected polymer pinning of physical observable insertions, and tree-decay inheritance in Bałaban CMP 122 (1.84)–(1.90)).

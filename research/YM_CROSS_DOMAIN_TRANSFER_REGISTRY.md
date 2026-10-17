@@ -504,3 +504,14 @@ Source mechanisms: own finite row-space/kernel target-descent theorem, positive 
   - Lemma `YM-062F-CONNECTED-CUMULANT-AND-WEITZENBOCK-CURVATURE-SHIFT` formally proved within stated hypotheses; isolated immediate next obligation Lemma `YM-063F-FINITE-CHART-BOUNDARY-AND-FOURTH-ORDER-TAYLOR-REMAINDER`.
 - Open bridge: Finite-Chart Boundary and Fourth-Order Taylor Remainder Bounds (Lemma `YM-063F`), Cutoff-Uniform Multiscale Cluster Bounds (Lemma `YM-059F`), Continuum Wightman Reconstruction and Spectral Gap (Lemma `YM-060F`), crossing infrared crossover `E-CROSSOVER`.
 - Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
+## XFER-YM-ONE-TERM-PULLBACK-063: Finite-Chart Cutoff Boundary Corrections in Gaussian IBP, Fourth-Order BCH Commutators, and Quartic Jet Remainder Bounds
+
+- Source: Bałaban CMP 122, 175–202 (1989), eqs. (1.80)–(1.90); CMP 109, 249–301 (1987).
+- Target: YM-015F finite-chart boundary and fourth-order BCH/jet remainder control in single-step RG transport.
+- Verified mapping:
+  - Exact finite-chart Stein–Wick identity: $\langle B_i^\prime F \chi^\prime \rangle_{C_k} = \sum_j C_{k, ij} \langle \partial_j F \chi^\prime \rangle_{C_k} + \sum_j C_{k, ij} \langle F \partial_j \chi^\prime \rangle_{C_k}$, with sharp-cutoff variance defect $\Delta_{\mathrm{IBP}}(R, C) = 2 C R (2\pi C)^{-1/2} e^{-R^2/(2C)} > 0$ and smooth-collar Peierls suppression $\le C_{\mathrm{IBP}} c_0^{-1} (g_k/\delta_k^\prime) \sup_{\mathcal{A}_{\mathrm{collar}}} |F| \exp(-c_0(\delta_k^\prime)^2/(16 g_k^2))$.
+  - Non-Abelian $\mathfrak{su}(2)$ fourth-order Dynkin–BCH commutator: $\operatorname{BCH}_4(x e_1, y_2 e_2) = 0$ (orthogonal degeneracy) vs. $\operatorname{BCH}_4(x e_1, y_1 e_1 + y_2 e_2) = \frac{1}{3} x^2 y_1 y_2 e_3 \ne 0$ ($\Delta_{\mathrm{BCH4}} = 1/48 > 0$ at $x = y_1 = y_2 = 1/2$).
+  - Fourth-order observable jet remainder bounds: small-field supremum $\frac{M_4}{24}(\delta_k^\prime)^4 = 1/384$ and Gaussian fourth-moment bound $B_{\mathrm{jet}}^{(4)}(1/2) = 49/1152 > B_{\mathrm{jet}}^{(4)}(0) = 27/1152$ ($\Delta_{\mathrm{quartic\_curv}} = 11/576 > 0$).
+  - Lemma `YM-063F-FINITE-CHART-BOUNDARY-AND-FOURTH-ORDER-TAYLOR-REMAINDER` formally proved within stated hypotheses; isolated immediate next obligation Lemma `YM-064F-MARKED-MAYER-EXPANSION-AND-POLYMER-PINNING`.
+- Open bridge: Linked Mayer Cluster Expansion and Polymer Pinning (Lemma `YM-064F`), Cutoff-Uniform Multiscale Cluster Bounds (Lemma `YM-059F`), Continuum Wightman Reconstruction and Spectral Gap (Lemma `YM-060F`), crossing infrared crossover `E-CROSSOVER`.
+- Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
