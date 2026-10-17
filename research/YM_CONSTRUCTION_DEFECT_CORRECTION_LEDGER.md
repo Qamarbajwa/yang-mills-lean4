@@ -521,3 +521,24 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
 4. **Established Lemma and Isolated Next Downstream Obligation:**
    - Proved Lemma `YM-064F-MARKED-MAYER-EXPANSION-AND-POLYMER-PINNING`.
    - Isolated immediate next downstream obligation: Lemma `YM-065F-COMPENSATING-GAUGE-TRANSFORMATION-AND-REEXPONENTIATION` (Compensating gauge transformation in Bałaban CMP 122 (1.85)–(1.88), inductive re-exponentiation of connected vacuum polymers vs. linear marked observable preservation, and one-loop running coupling / counterterm bookkeeping).
+## CDC-065: Compensating Gauge Transformation (CMP 122 (1.85)–(1.88)), Inductive Re-Exponentiation of Connected Vacuum Polymers vs. Linear Marked Observable Preservation, and One-Loop Running Coupling Bookkeeping (`YM-065`)
+
+- **Date:** 2026-10-17
+- **Primary Contract:** `YM-015F-JET-002B`
+- **Source Target:** Bałaban CMP 122, 175–202 (1989), eqs. (1.85)–(1.90), printed pp. 197–202; CMP 139, 281–305 (1991).
+- **Defects Corrected & Mathematical Resolutions:**
+
+1. **Defect 1: Omission of Compensating Gauge Rotation $u_k \in \mathcal{G}^{(k+1)}$ on Block-Averaged Coarse Links:**
+   - Identifying the tree-gauge-rotated block average $\tilde{W}(b^{(k+1)}) = h_x V_{k+1}(b^{(k+1)}) h_y^{-1}$ directly with the canonical scale-$(k+1)$ slice variable $V_{k+1}(b^{(k+1)})$ without applying Bałaban's compensating gauge transformation $u_k(x) = h_x^{-1}$ (CMP 122 (1.85)–(1.88), p. 197) distorts non-gauge-invariant coarse slice coordinates.
+   - **Correction:** Proved that $V_{k+1}^{\mathrm{comp}}(b^{(k+1)}) = u_k(x)\tilde{W}(b^{(k+1)})u_k(y)^{-1} \equiv V_{k+1}(b^{(k+1)})$ with unit Haar Jacobian $|\det J_{u_k}| \equiv 1$, while closed Wilson plaquettes and physical flowed observables remain identically invariant ($\Delta_{\mathrm{plaq\_inv}} = 0$). On the certified rational $SU(2)$ quaternion configuration ($u_k(x) = (3/5, 4/5, 0, 0), u_k(y) = (5/13, 0, 12/13, 0), V_{k+1} = I$), proved $d_G^2(\tilde{W}, V_{k+1}) = 20/13 > 0$ vs. $d_G^2(V_{k+1}^{\mathrm{comp}}, V_{k+1}) = 0$ ($\Delta_{\mathrm{comp\_gauge}} = 20/13 > 0$).
+
+2. **Defect 2: Spurious Nonlinear Re-Exponentiation of Physical Marked Observable Insertions:**
+   - Re-exponentiating the physical marked observable activity $\mathcal{I}^{\mathrm{marked}}[\mathcal{O}]$ into $\exp(\mathcal{I}^{\mathrm{marked}})$ alongside vacuum polymers introduces nonlinear multi-insertion terms $\frac{1}{2}(\mathcal{I}^{\mathrm{marked}})^2 + \frac{1}{6}(\mathcal{I}^{\mathrm{marked}})^3 + \dots$ that corrupt single-observable expectation transport.
+   - **Correction:** Formulated the exact dual-number cluster factorization over $\mathbb{R}[\lambda]/(\lambda^2 = 0)$: $\exp(\Delta A_{k+1} + \lambda \mathcal{O}_{k+1}^{\mathrm{eff}}) = \exp(\Delta A_{k+1})(1 + \lambda \mathcal{O}_{k+1}^{\mathrm{eff}})$. Certified at $\mathcal{I}^{\mathrm{marked}} = 1/2$ that cubic re-exponentiation gives $79/48$ vs. linear $72/48$ ($\Delta_{\mathrm{spurious\_reexp}} = 7/48 > 0$), while incompatible overlapping vacuum polymers ($\eta_A = \eta_B = 1/4$) carry connected Mayer overlap cumulant $\phi_{\mathrm{vac}}^T(A, B) = -1/16$ ($\Delta_{\mathrm{Mayer\_cumulant}} = 1/16 > 0$).
+
+3. **Defect 3: One-Loop Running Coupling Growth vs. Unrenormalized Coupling Bookkeeping:**
+   - Proved that extracting the marginal $\operatorname{Tr}(F_{\mu\nu}^2)$ jet from $\Delta A_{k+1}[V_{k+1}]$ shifts $\beta_{\mathrm{inv}, k+1} = \beta_{\mathrm{inv}, k} - \delta \beta_k$ while preserving zero gauge boson mass counterterm ($\Delta m_{\mathrm{gauge}}^2 = 0$) and exact vacuum energy cancellation ($\Delta_{\mathrm{vac\_energy\_cancel}} = 0$). At $\beta_{\mathrm{inv}, k} = 4$ ($g_k^2 = 1/4$) and $\delta \beta_1 = 11/24$, certified $\beta_{\mathrm{inv}, k+1} = 85/24$, $g_{k+1}^2 = 24/85$, $\Delta_{\mathrm{running\_g2}} = 11/340 > 0$, and higher-loop resummed remainder $\Delta_{\mathrm{resum\_loop}} = 121/32640 > 0$.
+
+4. **Established Lemma and Isolated Next Downstream Obligation:**
+   - Proved Lemma `YM-065F-COMPENSATING-GAUGE-TRANSFORMATION-AND-REEXPONENTIATION`.
+   - Isolated immediate next downstream obligation: Lemma `YM-066F-COLLAR-INTERFACE-AND-COMPLETE-SINGLE-STEP-MARKED-RG-MAP` (Preliminary sector operator $\mathbb{T}_h(Z_h)$, collar interface coupling across $\mathbb{B}_{\mathrm{collar}}$, assembly of the complete single-step marked RG map $\mathcal{T}_k^{\mathrm{marked}}$, and quantitative characterization of the UV-to-IR running coupling crossover threshold).

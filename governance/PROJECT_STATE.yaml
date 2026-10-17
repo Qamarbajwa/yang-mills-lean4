@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 85
+revision: 86
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "0a16f0a12c0f0eb36a7787eb526482a92ab42913"
-  scientific_candidate_sha: "21ad3fb971fe2f9dce39765f27ab1758391dd72f"
-  review_bound_sha: "21ad3fb971fe2f9dce39765f27ab1758391dd72f"
-  evidence_closeout_head: "286d792d3778def00c8282da01e46e92614cbd3b"
-  closeout_resolution: "evidence_closeout_head binds preceding completed YM-063 closeout commit (286d792d3778def00c8282da01e46e92614cbd3b); scientific_candidate_sha and review_bound_sha bind accepted YM-064 candidate (21ad3fb971fe2f9dce39765f27ab1758391dd72f); resolve authoritative current HEAD dynamically from Git."
+  head: "c8ddd89aa7505e7f4365e039ac500bcd13c76c65"
+  scientific_candidate_sha: "c8ddd89aa7505e7f4365e039ac500bcd13c76c65"
+  review_bound_sha: "c8ddd89aa7505e7f4365e039ac500bcd13c76c65"
+  evidence_closeout_head: "c8ddd89aa7505e7f4365e039ac500bcd13c76c65"
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-064 closeout commit (c8ddd89aa7505e7f4365e039ac500bcd13c76c65); scientific_candidate_sha and review_bound_sha bind current YM-065 candidate freeze; resolve authoritative current HEAD dynamically from Git."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,14 +32,25 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 84
-  last_updated_at: "2026-10-17T14:24:30Z"
+  last_expected_revision: 85
+  last_updated_at: "2026-10-17T14:30:00Z"
   active_contract: "YM-015F-JET-002B"
-  frozen_candidate: "21ad3fb971fe2f9dce39765f27ab1758391dd72f"
+  frozen_candidate: "c8ddd89aa7505e7f4365e039ac500bcd13c76c65"
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-065
+    scope_in: "Compensating gauge transformation u_k in Bałaban CMP 122 (1.85)–(1.88) (printed p. 197), asymmetric dual-number re-exponentiation of connected vacuum polymers vs linear degree-one preservation of marked observable insertions, one-loop running coupling growth and local counterterm bookkeeping vs flowed observable UV finiteness, proof of Lemma YM-065F-COMPENSATING-GAUGE-TRANSFORMATION-AND-REEXPONENTIATION, isolation of Lemma YM-066F, and Test 29 finite certificate"
+    scope_out: "Preliminary sector operator T_h(Z_h) and collar interface coupling across B_collar (Lemma YM-066F), cutoff-uniform multiscale summability (Lemma YM-059F), continuum Wightman reconstruction and spectral gap (Lemma YM-060F), and full continuum closure"
+    dependencies: ["YM-064"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-065_E4_RAW_20261017.md"
+    acceptor: "verification/YM-065_TECHNICAL_ACCEPTANCE.md"
+    status: CANDIDATE_FROZEN
+    scope_limitation: "COMPENSATING_GAUGE_AND_REEXPONENTIATION_PROVED_COLLAR_INTERFACE_AND_CONTINUUM_OPEN"
   - id: YM-064
     scope_in: "Linked Mayer cluster expansion of exponentiated effective action perturbations, BKAR forest covariance interpolation decoupling vs unfactored volume divergence, connected polymer pinning of physical observable insertions and hard-core vacuum exclusion ratio Z_vac(Lambda_0 \\ Y) / Z_vac(Lambda_0), spanning-tree decay inheritance in Bałaban CMP 122 (1.84)–(1.90), proof of Lemma YM-064F-MARKED-MAYER-EXPANSION-AND-POLYMER-PINNING, isolation of Lemma YM-065F, and Test 28 finite certificate"
     scope_out: "Compensating gauge transformation and inductive re-exponentiation (Lemma YM-065F), cutoff-uniform multiscale summability (Lemma YM-059F), continuum Wightman reconstruction and spectral gap (Lemma YM-060F), and full continuum closure"

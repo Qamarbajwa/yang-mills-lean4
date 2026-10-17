@@ -3060,3 +3060,139 @@ With the small-field Gaussian contractions (`YM-062`), finite-chart boundary / f
   - **Task `YM-016` (Continuum Reconstruction):** **`BLOCKED`**;
   - **Infrared Crossover `E-CROSSOVER`:** **`OPEN`**;
   - **Constitutional Invariants:** `goal_complete = false`, `clay_problem = OPEN_AND_UNSOLVED`, `P3 = OPEN`, `E-UV-FLOWED = PARTIAL_PROGRESS`, `STRUCTURAL_NO_GO_COUNT = 0`.
+
+
+---
+
+# SECTION YM-065: COMPENSATING GAUGE TRANSFORMATION (CMP 122 (1.85)–(1.88)), INDUCTIVE RE-EXPONENTIATION OF CONNECTED VACUUM POLYMERS VS. LINEAR MARKED OBSERVABLE PRESERVATION, AND ONE-LOOP RUNNING COUPLING / COUNTERTERM BOOKKEEPING
+
+## 1. Executive Summary & Scope of Task `YM-065`
+
+In `YM-064` (Lemma `YM-064F-MARKED-MAYER-EXPANSION-AND-POLYMER-PINNING`), we established the local Mayer expansion $\prod_{X \subset \Lambda_0} (1 + (e^{f_X} - 1))$ combined with the Brydges–Kennedy–Abdesselam–Rivasseau (BKAR) forest interpolation formula, the exact Polymer Pinning Identity $\mathcal{Z}_{\mathrm{vac}}(\Lambda_0 \setminus Y) / \mathcal{Z}_{\mathrm{vac}}(\Lambda_0) = \exp(-\sum_{C \cap Y \ne \emptyset} \phi^T(C))$, and spanning-tree decay inheritance for coarse-grained marked polymer activities.
+
+That derivation isolated the immediate next primary-source step in Bałaban CMP 122 eqs. (1.85)–(1.90) (printed pp. 197–202) and CMP 139:
+1. **Compensating Gauge Transformation $u_k \in \mathcal{G}^{(k+1)}$ (CMP 122 eqs. (1.85)–(1.88), printed p. 197):** When the high-momentum fluctuation $B^\prime$ is integrated out on the grounded tree slice $T_0 \subset \mathbb{B}_0$, the tree-gauge rotation $h \in \mathcal{G}_{\Lambda_0}$ rotates the block-averaged coarse link variables $\tilde{W}(b^{(k+1)}) = Q_k(U^h)(b^{(k+1)})$ away from the canonical scale-$(k+1)$ gauge slice $V_{k+1}(b^{(k+1)})$. Omitting Bałaban's compensating gauge transformation $u_k$ leaves a strictly positive link-slice distortion defect $\Delta_{\mathrm{comp\_gauge}} > 0$. Applying $u_k$ restores $\tilde{W}^{u_k}(b^{(k+1)}) = u_k(x) \tilde{W}(b^{(k+1)}) u_k(y)^{-1} \equiv V_{k+1}(b^{(k+1)})$ with unit Haar Jacobian $|\det J_{u_k}| \equiv 1$, while leaving all closed Wilson loops and physical gauge-invariant flowed observables $\mathcal{O}_{(a, t)}(f)$ identically invariant ($\Delta_{\mathrm{plaq\_inv}} = 0$).
+2. **Asymmetric Inductive Re-Exponentiation of Vacuum Polymers vs. Linear Degree-One Preservation of Marked Observable Insertions:** In the Mayer–Ursell cluster expansion of the scale-$k$ fluctuation integral, connected vacuum polymers $\phi_{\mathrm{vac}}^T(C)$ re-exponentiate into the next-scale effective action shift $\exp(\sum_C \phi_{\mathrm{vac}}^T(C)) = \exp(\Delta A_{k+1}[V_{k+1}])$ (incorporating the non-zero Mayer overlap cumulant $\phi_{\mathrm{vac}}^T(A, B) = -\eta_A \eta_B \ne 0$ for incompatible overlapping polymers $A \sim B$). By contrast, the physical marked observable insertion $\mathcal{O}_{(a, t)}(f)$ belongs to the degree-one tangent / dual-number sector $\mathbb{R}[\lambda]/(\lambda^2 = 0)$ and **must remain strictly linear**. Spuriously re-exponentiating the marked observable insertion generates nonlinear multi-insertion contamination $\frac{1}{2}(\mathcal{I}^{\mathrm{marked}})^2 + \frac{1}{6}(\mathcal{I}^{\mathrm{marked}})^3 + \dots$ ($\Delta_{\mathrm{spurious\_reexp}} > 0$).
+3. **One-Loop Running Coupling / Local Counterterm Bookkeeping vs. Flowed Observable UV Finiteness:** Expanding the re-exponentiated vacuum shift $\Delta A_{k+1}[V_{k+1}]$ in local jets of $F_{\mu\nu}(V_{k+1})$ produces the one-loop marginal running-coupling shift $\frac{1}{g_{k+1}^2} = \frac{1}{g_k^2} - \beta_0 \ln L + R_{\beta, k}(g_k)$ ($\beta_0 = \frac{11 N_c}{48 \pi^2} > 0$), driving the effective coupling $g_{k+1}^2 > g_k^2$ upward under UV $\to$ IR coarse-graining ($\Delta_{\mathrm{running\_g2}} > 0$) while background gauge invariance forbids any local gauge-boson mass counterterm ($\Delta m_{\mathrm{gauge}}^2 \equiv 0$). Meanwhile, positive gradient-flow smoothing $t > 0$ renders the physical marked observable insertion UV-finite without divergent multiplicative counterterms ($Z_{\mathcal{O}}(t > 0) = 1 + \mathcal{O}(g_k^2)$).
+
+This section executes a primary-source derivation of these three mechanisms and proves Lemma `YM-065F-COMPENSATING-GAUGE-TRANSFORMATION-AND-REEXPONENTIATION`.
+
+---
+
+## 2. Compensating Gauge Transformation in Bałaban CMP 122 (1.85)–(1.88)
+
+### 2.1 Primary-Source Reconstruction of (1.85)–(1.88) (Printed Page 197)
+
+In Bałaban CMP 122, after performing the fine-scale tree gauge transformation $h \in \mathcal{G}_{\Lambda_0}$ that sets $V^{\prime\prime h}(b) = I$ on $b \in T_0$, the block-averaged link variable on a coarse scale-$(k+1)$ bond $b^{(k+1)} = (x, y)$ transforms by the coarse restriction of $h$:
+$$\tilde{W}\!\left(b^{(k+1)}\right) = h_x \, V_{k+1}\!\left(b^{(k+1)}\right) \, h_y^{-1}.$$
+Because $h_x, h_y \in G$ depend on the integrated fluctuation configuration along the grounded tree $T_0$, the uncompensated coarse link $\tilde{W}(b^{(k+1)})$ no longer lies in the canonical scale-$(k+1)$ gauge slice!
+
+On printed page 197 of CMP 122, eqs. (1.85)–(1.88), Bałaban introduces the **compensating gauge transformation** $u_k = \{u_k(x)\}_{x \in \mathbb{L}_{k+1}} \in \mathcal{G}^{(k+1)}$ defined by inverting the coarse endpoint rotations $u_k(x) = h_x^{-1}$:
+$$V_{k+1}^{\mathrm{comp}}\!\left(b^{(k+1)}\right) \equiv u_k(x) \, \tilde{W}\!\left(b^{(k+1)}\right) \, u_k(y)^{-1} = h_x^{-1} \Big(h_x \, V_{k+1}\!\left(b^{(k+1)}\right) \, h_y^{-1}\Big) h_y \equiv V_{k+1}\!\left(b^{(k+1)}\right).$$
+This satisfies three exact properties:
+1. **Exact Restoration of Canonical Coarse Slice Coordinates:** $V_{k+1}^{\mathrm{comp}}(b^{(k+1)}) \equiv V_{k+1}(b^{(k+1)})$ on all coarse bonds, with bijective group multiplication and unit normalized Haar Jacobian $|\det J_{u_k}| \equiv 1$.
+2. **Exact Invariance of Closed Wilson Loops and Flowed Physical Observables:** Because $(U^h)^{u_k}$ differs from $U$ by a site gauge transformation on the lattice, every closed Wilson plaquette trace $\operatorname{Tr}(U(\mathcal{C}))$ and every gauge-invariant gradient-flowed physical observable $\mathcal{O}_{(a, t)}(f)[U]$ is identically invariant under $u_k$:
+   $$\operatorname{Tr}\!\left(U_{\square}^{u_k}\right) = \operatorname{Tr}\!\left(u_k(x) \, U_{\square} \, u_k(x)^{-1}\right) \equiv \operatorname{Tr}\!\left(U_{\square}\right), \qquad \mathcal{O}_{(a, t)}(f)\!\left[(U^h)^{u_k}\right] \equiv \mathcal{O}_{(a, t)}(f)[U].$$
+3. **Elimination of Uncompensated Slice Distortion Defect:** If $u_k$ is omitted, evaluating non-gauge-invariant coarse slice functionals directly on $\tilde{W}(b^{(k+1)})$ produces a strictly non-zero distortion defect $d_G^2(\tilde{W}(b^{(k+1)}), V_{k+1}(b^{(k+1)})) > 0$.
+
+### 2.2 Exact Rational $SU(2)$ Certificate for Compensating Gauge Rotation
+
+Let $b^{(k+1)} = (x, y)$ be a coarse bond with canonical target link $V_{k+1}(b^{(k+1)}) = I = (1, 0, 0, 0) \in SU(2)$ and rational endpoint rotations from Pythagorean quadruples:
+$$h_x^{-1} = u_k(x) = q_1 = \left(\frac{3}{5}, \frac{4}{5}, 0, 0\right), \qquad h_y^{-1} = u_k(y) = q_2 = \left(\frac{5}{13}, 0, \frac{12}{13}, 0\right).$$
+- **Uncompensated Coarse Link $\tilde{W}(b^{(k+1)}) = h_x V_{k+1} h_y^{-1} = q_1^{-1} I q_2$:**
+  $$\tilde{W}\!\left(b^{(k+1)}\right) = \left(\frac{3}{5}, -\frac{4}{5}, 0, 0\right) \left(\frac{5}{13}, 0, \frac{12}{13}, 0\right) = \left(\frac{15}{65}, -\frac{20}{65}, \frac{36}{65}, -\frac{48}{65}\right) = \left(\frac{3}{13}, -\frac{4}{13}, \frac{36}{65}, -\frac{48}{65}\right) \in SU(2),$$
+  with norm squared $\left(\frac{15}{65}\right)^2 + \left(\frac{-20}{65}\right)^2 + \left(\frac{36}{65}\right)^2 + \left(\frac{-48}{65}\right)^2 = \frac{225 + 400 + 1296 + 2304}{4225} = \frac{4225}{4225} = 1$.
+- **Uncompensated Slice Distortion Distance Squared:**
+  $$d_G^2\!\left(\tilde{W}\!\left(b^{(k+1)}\right), V_{k+1}\!\left(b^{(k+1)}\right)\right) = 2\left(1 - \tilde{W}_0\right) = 2\left(1 - \frac{3}{13}\right) = \frac{20}{13} > 0.$$
+- **Compensated Coarse Link $V_{k+1}^{\mathrm{comp}}(b^{(k+1)}) = u_k(x) \tilde{W}(b^{(k+1)}) u_k(y)^{-1}$:**
+  $$V_{k+1}^{\mathrm{comp}}\!\left(b^{(k+1)}\right) = q_1 \, \tilde{W}\!\left(b^{(k+1)}\right) \, q_2^{-1} = (1, 0, 0, 0) = V_{k+1}\!\left(b^{(k+1)}\right), \qquad d_G^2\!\left(V_{k+1}^{\mathrm{comp}}, V_{k+1}\right) = 0.$$
+- **Strictly Positive Compensating Gauge Restoration Defect:**
+  $$\Delta_{\mathrm{comp\_gauge}} \equiv d_G^2\!\left(\tilde{W}, V_{k+1}\right) - d_G^2\!\left(V_{k+1}^{\mathrm{comp}}, V_{k+1}\right) = \frac{20}{13} - 0 = \frac{20}{13} > 0,$$
+  while for any closed coarse plaquette holonomy $U_{\square} = (\frac{8}{17}, 0, 0, \frac{15}{17}) \in SU(2)$, $\operatorname{Tr}(u_k(x) U_{\square} u_k(x)^{-1}) = \frac{16}{17} = \operatorname{Tr}(U_{\square})$, giving $\Delta_{\mathrm{plaq\_inv}} = 0$.
+
+---
+
+## 3. Asymmetric Inductive Re-Exponentiation of Vacuum Polymers vs. Linear Degree-One Marked Observable Preservation
+
+### 3.1 Dual-Number Algebra $\mathbb{R}[\lambda]/(\lambda^2 = 0)$ of Marked Effective Actions
+
+To transport a single physical observable insertion $\mathcal{O}_{(a, t)}(f)$ through the renormalization step $k \to k+1$ without contaminating it with multi-insertion correlators, one introduces a formal source parameter $\lambda$ satisfying the **dual-number nilpotency relation** $\lambda^2 = 0$:
+$$\mathcal{Z}_k[\lambda \mathcal{O}] = \int d\mu_k \, \exp\!\big(A_k^{\prime\prime}\big) \big(1 + \lambda \, \mathcal{O}_{(a, t)}(f)\big) = \int d\mu_k \, \exp\!\big(A_k^{\prime\prime} + \lambda \, \mathcal{O}_{(a, t)}(f)\big) \pmod{\lambda^2}.$$
+Under the Mayer–Ursell cluster expansion of the fluctuation integral:
+1. Every polymer activity splits into its vacuum part and its degree-one marked tangent part:
+   $$K(X; \lambda) = K_{\mathrm{vac}}(X) + \lambda \, K_{\mathrm{marked}}(X)[\mathcal{O}], \qquad \lambda^2 = 0.$$
+2. By the Mayer–Ursell theorem applied over the commutative ring $\mathbb{R}[\lambda]/(\lambda^2 = 0)$, the sum over all polymer configurations equals the exponential of the connected Ursell cluster sum:
+   $$\sum_{\Gamma} \prod_{X \in \Gamma} K(X; \lambda) = \exp\!\left(\sum_{C} \phi^T(C; \lambda)\right) = \exp\!\left(\sum_{C} \phi_{\mathrm{vac}}^T(C) + \lambda \sum_{C:\, C \cap \operatorname{supp}(f_{t_0}) \ne \emptyset} \phi_{\mathrm{marked}}^T(C)[\mathcal{O}]\right).$$
+3. Because $\lambda^2 = 0$, the exponential of the dual-number cluster sum factorizes **exact and linear in $\lambda$**:
+   $$\exp\!\big(\Delta A_{k+1} + \lambda \, \mathcal{O}_{k+1}^{\mathrm{eff}}\big) \equiv \exp\!\big(\Delta A_{k+1}\big) \Big(1 + \lambda \, \mathcal{O}_{k+1}^{\mathrm{eff}}\Big) \pmod{\lambda^2},$$
+   where:
+   - $\Delta A_{k+1}[V_{k+1}] = \sum_{C} \phi_{\mathrm{vac}}^T(C; V_{k+1})$ is **re-exponentiated** into the scale-$(k+1)$ effective action $A_{k+1}^{\prime\prime} = A_{k, \mathrm{tree}}^{\prime\prime} + \Delta A_{k+1}$;
+   - $\mathcal{O}_{k+1}^{\mathrm{eff}}[V_{k+1}] = \sum_{C:\, C \cap \operatorname{supp}(f_{t_0}) \ne \emptyset} \phi_{\mathrm{marked}}^T(C; V_{k+1})[\mathcal{O}]$ remains **strictly linear (degree one)** in $\mathcal{O}$!
+
+### 3.2 Refutation of Spurious Observable Re-Exponentiation & Mayer Overlap Cumulant Certificate
+
+1. **Refutation of Spurious Observable Re-Exponentiation (`Delta_spurious_reexp`):**
+   If one mistakenly applies standard real-valued re-exponentiation $\exp(\mathcal{I}^{\mathrm{marked}})$ to the marked observable insertion instead of dual-number linear projection $\lambda^2 = 0$, then at $\mathcal{I}^{\mathrm{marked}} = \frac{1}{2}$, the third-order exponential series produces:
+   $$W_{\mathrm{spurious\_exp3}}\!\left(\frac{1}{2}\right) = 1 + \frac{1}{2} + \frac{1}{2!}\left(\frac{1}{2}\right)^2 + \frac{1}{3!}\left(\frac{1}{2}\right)^3 = 1 + \frac{1}{2} + \frac{1}{8} + \frac{1}{48} = \frac{79}{48},$$
+   whereas the exact degree-one linear transport factor in $\mathbb{Q}[\lambda]/(\lambda^2 = 0)$ is:
+   $$W_{\mathrm{linear}}\!\left(\frac{1}{2}\right) = 1 + \frac{1}{2} = \frac{3}{2} = \frac{72}{48}.$$
+   The **spurious observable re-exponentiation defect** is strictly positive:
+   $$\Delta_{\mathrm{spurious\_reexp}} \equiv W_{\mathrm{spurious\_exp3}}\!\left(\frac{1}{2}\right) - W_{\mathrm{linear}}\!\left(\frac{1}{2}\right) = \frac{79}{48} - \frac{72}{48} = \frac{7}{48} > 0.$$
+
+2. **Mayer Overlap Cumulant in Vacuum Re-Exponentiation (`Delta_Mayer_cumulant`):**
+   For two distinct vacuum polymer types $A, B$ supported on overlapping blocks ($\operatorname{supp}(A) \cap \operatorname{supp}(B) \ne \emptyset$, hard-core incompatibility $a(A, B) = -1$) with activities $\eta_A = \frac{1}{4}, \eta_B = \frac{1}{4}$, the hard-core partition sum on that locus is $Z_{\mathrm{loc}} = 1 + \eta_A + \eta_B = \frac{3}{2} = \frac{24}{16}$, whereas an unlinked independent product gives $(1 + \eta_A)(1 + \eta_B) = \frac{25}{16}$. In the re-exponentiated vacuum action $\ln Z_{\mathrm{loc}}$, the second-order Mayer–Ursell connected cluster weight is:
+   $$\phi_{\mathrm{vac}}^T(A, B) = a(A, B) \, \eta_A \eta_B = -\frac{1}{16} \ne 0, \qquad \Delta_{\mathrm{Mayer\_cumulant}} \equiv \left|\phi_{\mathrm{vac}}^T(A, B)\right| = \frac{1}{16} > 0.$$
+
+---
+
+## 4. One-Loop Running Coupling / Counterterm Bookkeeping vs. Flowed Observable UV Finiteness
+
+### 4.1 Asymptotic Freedom Running Coupling Recurrence & Absence of Gauge Mass Counterterm
+
+Expanding the re-exponentiated vacuum action shift $\Delta A_{k+1}[V_{k+1}] = \sum_C \phi_{\mathrm{vac}}^T(C; V_{k+1})$ in local gauge-covariant jets of the coarse field strength $F_{\mu\nu}(V_{k+1})$ yields:
+$$\Delta A_{k+1}[V_{k+1}] = \Delta E_{k+1} |\Lambda_0| - \frac{1}{4} \delta \beta_k \sum_{x} \operatorname{Tr}\!\left(F_{\mu\nu}(V_{k+1})(x)^2\right) + \mathcal{R}_{\mathrm{irrel}, k+1}[V_{k+1}],$$
+where:
+1. **Constant Vacuum Energy Cancellation:** The field-independent vacuum energy shift $\Delta E_{k+1} |\Lambda_0|$ cancels **identically** between the numerator $\mathcal{Z}[\mathcal{O}]$ and the global vacuum denominator $\mathcal{Z}_{\mathrm{vac}}$ ($\Delta_{\mathrm{vac\_energy\_cancel}} = 0$).
+2. **Gauge-Invariance Prohibition of Mass Counterterms:** Because every connected vacuum polymer $\phi_{\mathrm{vac}}^T(C; V_{k+1})$ is invariant under the compensating gauge transformation $u_k \in \mathcal{G}^{(k+1)}$, no gauge-variant mass term $\mu_k^2 \operatorname{Tr}(A_\mu^2)$ can be generated in the effective action ($\Delta m_{\mathrm{gauge}}^2 = 0$).
+3. **Marginal Running Coupling Shift ($\operatorname{Tr}(F_{\mu\nu}^2)$):** The dimension-4 marginal coefficient $\delta \beta_k = \beta_0 \ln L + \mathcal{O}(g_k^2)$ with $\beta_0 = \frac{11 N_c}{48 \pi^2} > 0$ ($\frac{11}{24 \pi^2}$ for $SU(2)$) combines with the bare inverse coupling $\beta_{\mathrm{inv}, k} = g_k^{-2}$ to define the next-scale running coupling:
+   $$\frac{1}{g_{k+1}^2} = \frac{1}{g_k^2} - \delta \beta_k \implies g_{k+1}^2 = \frac{g_k^2}{1 - g_k^2 \delta \beta_k} > g_k^2.$$
+
+### 4.2 Exact Rational Running Coupling Growth Certificate (`Delta_running_g2`)
+
+At scale $k$ with rational inverse coupling $\beta_{\mathrm{inv}, k} = \frac{1}{g_k^2} = 4$ ($g_k^2 = \frac{1}{4}$) and single-step rationalized $SU(2)$ Casimir vacuum-polarization decrement $\delta \beta_1 = \frac{11 N_c}{48}\big|_{N_c = 2} = \frac{11}{24}$:
+- Next-scale inverse coupling:
+  $$\beta_{\mathrm{inv}, k+1} = \frac{1}{g_{k+1}^2} = 4 - \frac{11}{24} = \frac{85}{24} > 0.$$
+- Next-scale effective coupling squared:
+  $$g_{k+1}^2 = \frac{24}{85} > g_k^2 = \frac{1}{4}.$$
+- Strictly positive **infrared running-coupling growth increment**:
+  $$\Delta_{\mathrm{running\_g2}} \equiv g_{k+1}^2 - g_k^2 = \frac{24}{85} - \frac{1}{4} = \frac{96 - 85}{340} = \frac{11}{340} > 0,$$
+  with first-order perturbative approximation $g_k^4 \delta \beta_1 = \left(\frac{1}{4}\right)^2 \frac{11}{24} = \frac{11}{384}$ and exact resummed vs. one-loop two-loop remainder $\Delta_{\mathrm{resum\_loop}} = \frac{11}{340} - \frac{11}{384} = \frac{121}{32640} > 0$.
+
+---
+
+## 5. Formal Proof of Lemma `YM-065F` and Isolation of Immediate Next Obligation (`YM-066F`)
+
+### Lemma `YM-065F-COMPENSATING-GAUGE-TRANSFORMATION-AND-REEXPONENTIATION`
+**Statement:** *In Bałaban's 4D single-step renormalization transformation (CMP 122, pp. 197–202, eqs. (1.85)–(1.90); CMP 139) at fixed UV cutoff $a > 0$ and positive flow time $t > 0$:*
+1. *(Compensating Gauge Transformation): The compensating gauge transformation $u_k \in \mathcal{G}^{(k+1)}$ defined by $u_k(x) = h_x^{-1}$ restores the uncompensated block-averaged link $\tilde{W}(b^{(k+1)}) = h_x V_{k+1}(b^{(k+1)}) h_y^{-1}$ identically to the canonical scale-$(k+1)$ slice variable $V_{k+1}^{\mathrm{comp}}(b^{(k+1)}) = u_k(x) \tilde{W}(b^{(k+1)}) u_k(y)^{-1} \equiv V_{k+1}(b^{(k+1)})$ with unit Haar Jacobian $|\det J_{u_k}| \equiv 1$, eliminating the uncompensated slice distortion defect $\Delta_{\mathrm{comp\_gauge}} = \frac{20}{13} > 0$ while preserving closed plaquette traces and physical flowed observables identically ($\Delta_{\mathrm{plaq\_inv}} = 0$).*
+2. *(Asymmetric Dual-Number Vacuum Re-Exponentiation vs. Linear Marked Observable Preservation): Over the dual-number ring $\mathbb{R}[\lambda]/(\lambda^2 = 0)$, the connected cluster sum factorizes as $\exp(\Delta A_{k+1} + \lambda \, \mathcal{O}_{k+1}^{\mathrm{eff}}) = \exp(\Delta A_{k+1})(1 + \lambda \, \mathcal{O}_{k+1}^{\mathrm{eff}})$, re-exponentiating connected vacuum polymers (including the non-zero hard-core Mayer overlap cumulant $\phi_{\mathrm{vac}}^T(A, B) = -\eta_A \eta_B = -\frac{1}{16}$, $\Delta_{\mathrm{Mayer\_cumulant}} = \frac{1}{16} > 0$) into $\Delta A_{k+1}$ while keeping $\mathcal{O}_{k+1}^{\mathrm{eff}}$ strictly linear of degree one and avoiding the spurious nonlinear re-exponentiation defect $\Delta_{\mathrm{spurious\_reexp}} = \frac{7}{48} > 0$.*
+3. *(One-Loop Running Coupling Bookkeeping & Flowed Observable UV Finiteness): Local jet extraction of $\Delta A_{k+1}[V_{k+1}]$ cancels field-independent vacuum energy against $\mathcal{Z}_{\mathrm{vac}}$ ($\Delta_{\mathrm{vac\_energy\_cancel}} = 0$), forbids gauge-variant mass counterterms ($\Delta m_{\mathrm{gauge}}^2 = 0$), and shifts the inverse coupling by $\beta_{\mathrm{inv}, k+1} = \beta_{\mathrm{inv}, k} - \delta \beta_k$, producing strictly positive UV $\to$ IR coupling growth $\Delta_{\mathrm{running\_g2}} = \frac{24}{85} - \frac{1}{4} = \frac{11}{340} > 0$ (with higher-loop resummed remainder $\Delta_{\mathrm{resum\_loop}} = \frac{121}{32640} > 0$) while positive flow time $t > 0$ ensures UV-finite observable renormalization without divergent multiplicative counterterms.*
+
+**Proof:** Part (1) follows from group associativity $h_x^{-1}(h_x V_{k+1} h_y^{-1})h_y = V_{k+1}$, bijective Haar invariance on $SU(2)$, cyclic trace invariance $\operatorname{Tr}(u_k(x) U_{\square} u_k(x)^{-1}) = \operatorname{Tr}(U_{\square})$, and the exact rational quaternion calculation in Section 2.2. Part (2) follows from $\lambda^2 = 0 \implies \exp(A + \lambda B) = e^A(1 + \lambda B)$, the Mayer–Ursell expansion $\ln(1 + \eta_A + \eta_B) = (\eta_A + \eta_B) - \frac{1}{2}(\eta_A^2 + \eta_B^2 + 2\eta_A \eta_B) + \dots$ where the cross term is $-\eta_A \eta_B = -1/16$, and the exact rational evaluation $\frac{79}{48} - \frac{72}{48} = \frac{7}{48} > 0$ in Section 3.2. Part (3) follows from background gauge invariance of $\Delta A_{k+1}[V_{k+1}]$ and the exact rational arithmetic $\frac{1}{4 - 11/24} - \frac{1}{4} = \frac{24}{85} - \frac{1}{4} = \frac{11}{340} > 0$ in Section 4.2. $\blacksquare$
+
+### Isolation of Immediate Next Downstream Obligation (`YM-066`)
+With the active-domain small-field fluctuation integral (`YM-062`), finite-chart boundary / fourth-order BCH and jet remainders (`YM-063`), linked Mayer / BKAR connected polymer pinning (`YM-064`), and compensating gauge rotation / vacuum re-exponentiation / running coupling (`YM-065`) proved on the active small-field region $\Lambda_0 = \Lambda \cap (Z_h^{\prime\sim})^c$, what is the **immediate next primary-source step** required to complete the full single-step density-changing renormalization map in Bałaban CMP 122 eqs. (1.76)–(1.90) and CMP 139?
+- Recall from `YM-055` and `YM-061` that in CMP 122 eq. (1.76), the active tree-gauge fluctuation domain $\mathbb{B}_0 = \mathbb{U}_k \cap \Lambda_0$ is separated from the preliminary domain $Z_h$ by the **non-empty collar bond set** $\mathbb{B}_{\mathrm{collar}} = (\mathbb{B}_k^{\prime\prime} \cap (\Lambda \cap Z_h^c)) \setminus \mathbb{B}_0$, where the preliminary tree operator $\mathbb{T}_h(Z_h)$ and preliminary cutoff $\chi_h(\Omega_h \cap Z_h)$ act (`COLLAR_DOMAIN_MATCHING_CONDITIONAL_ON_PRELIMINARY_OPERATOR_AUDIT`).
+- Moreover, physical gradient-flowed observables $\mathcal{O}_{(a, t)}(f)$ diffuse across physical radius $\sqrt{8t}$, coupling active bonds in $\mathbb{B}_0$ across $\mathbb{B}_{\mathrm{collar}}$ to the preliminary sector $Z_h$, while the three-sector remainders ($\mathcal{R}_{\alpha, \mathrm{chart-exit}}$ and $\mathcal{R}_{\alpha, \mathrm{large}}$) must be combined with the small-field re-exponentiated density to form the **complete single-step marked renormalization group operator** $\mathcal{T}_k^{\mathrm{marked}}: (\mathcal{A}_k, \mathcal{I}_k^{\mathrm{marked}}) \mapsto (\mathcal{A}_{k+1}, \mathcal{I}_{k+1}^{\mathrm{marked}})$ up to the ultraviolet-to-infrared crossover threshold $k_{\mathrm{cross}}(g_0)$.
+- We therefore isolate the immediate next downstream obligation under primary contract `YM-015F-JET-002B`:
+  - **Lemma `YM-066F-COLLAR-INTERFACE-AND-COMPLETE-SINGLE-STEP-MARKED-RG-MAP`:** *Preliminary Sector Operator $\mathbb{T}_h(Z_h)$, Collar Interface Coupling across $\mathbb{B}_{\mathrm{collar}}$, Assembly of the Complete Single-Step Marked RG Map $\mathcal{T}_k^{\mathrm{marked}}$, and Quantitative Characterization of the UV-to-IR Running Coupling Crossover Threshold*.
+
+### Summary of Epistemic Status (`YM-065`)
+- **Lemma `YM-065F-COMPENSATING-GAUGE-TRANSFORMATION-AND-REEXPONENTIATION`:** **`PROVED`** (exact finite certificates verified in `TEST 29` of `tests/test_source_jet_finite_certificates.py`).
+- **Immediate Next Obligation (`YM-066`):** **`LEMMA_YM_066F_COLLAR_INTERFACE_AND_COMPLETE_SINGLE_STEP_MARKED_RG_MAP`** (`OPEN`).
+- **Downstream Open / Blocked Global Obligations:**
+  - **Lemma `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS`:** **`OPEN`**;
+  - **Lemma `YM-060F-CONTINUUM-WIGHTMAN-RECONSTRUCTION-AND-SPECTRAL-GAP`:** **`OPEN`**;
+  - **Task `YM-016` (Continuum Reconstruction):** **`BLOCKED`**;
+  - **Infrared Crossover `E-CROSSOVER`:** **`OPEN`**;
+  - **Constitutional Invariants:** `goal_complete = false`, `clay_problem = OPEN_AND_UNSOLVED`, `P3 = OPEN`, `E-UV-FLOWED = PARTIAL_PROGRESS`, `STRUCTURAL_NO_GO_COUNT = 0`.

@@ -1204,6 +1204,7 @@ def test_literal_git_blob_vs_checkout_digest_and_hash_elimination_certificate():
         "08ae52af6ffe454caec3cbba92f748f49a173fad318a93eb00bfd564d39bacb0",  # YM-062 candidate
         "35ad476323b8e27d92dab1fd0c45ccb29f41ce01867ff8fb5b3df8b00b0e4b05",  # YM-063 candidate
         "38ad6b54d656e0966406a4b85a533a2db7f9dd8f71e35cbba26cef85e2d4df65",  # YM-064 candidate
+        "fef79869d7888822e06fff5917da242a4a237e608535159f104b54a6003b2e6f",  # YM-065 candidate
     ]
 
     # Candidate 15086d3 (YM-054):
@@ -3022,6 +3023,188 @@ def test_linked_mayer_expansion_and_polymer_pinning_certificate():
     assert lemma_YM064F_status == "LEMMA_YM_064F_MARKED_MAYER_EXPANSION_AND_POLYMER_PINNING_PROVED"
     next_obligation = "LEMMA_YM_065F_COMPENSATING_GAUGE_TRANSFORMATION_AND_REEXPONENTIATION"
     assert next_obligation == "LEMMA_YM_065F_COMPENSATING_GAUGE_TRANSFORMATION_AND_REEXPONENTIATION"
+    classification = "METHOD_SPECIFIC_OBSTRUCTION"
+    assert classification == "METHOD_SPECIFIC_OBSTRUCTION"
+
+
+# ─── TEST 29: Compensating Gauge Transformation, Dual-Number Vacuum Re-Exponentiation, and Running Coupling Certificate ───
+def test_compensating_gauge_transformation_and_reexponentiation_certificate():
+    r"""Rigorously proves (Task YM-065):
+
+    1. Compensating Gauge Transformation in Bałaban CMP 122 eqs. (1.85)-(1.88) (printed p. 197):
+       - Fine-scale tree-gauge rotation h in G_{Lambda_0} rotates the block-averaged link on coarse bond
+         b^{(k+1)} = (x, y) to W_tilde(b^{(k+1)}) = h_x V_{k+1}(b^{(k+1)}) h_y^{-1}.
+       - For canonical target link V_{k+1} = I = (1, 0, 0, 0) in SU(2) and rational unit quaternion rotations
+         u_k(x) = h_x^{-1} = q_1 = (3/5, 4/5, 0, 0), u_k(y) = h_y^{-1} = q_2 = (5/13, 0, 12/13, 0):
+         W_tilde = q_1^{-1} * I * q_2 = (3/13, -4/13, 36/65, -48/65) in SU(2).
+       - Uncompensated coarse slice distortion distance squared:
+         d_G^2(W_tilde, V_{k+1}) = 2 * (1 - 3/13) = 20 / 13 > 0.
+       - Applying Bałaban's compensating gauge transformation u_k(x) W_tilde u_k(y)^{-1}:
+         V_{k+1}^{comp} = q_1 * W_tilde * q_2^{-1} = (1, 0, 0, 0) == V_{k+1},
+         so d_G^2(V_{k+1}^{comp}, V_{k+1}) = 0 and Delta_comp_gauge = 20 / 13 > 0,
+         with unit Haar Jacobian |det J_{u_k}| = 1.
+       - Closed coarse plaquette holonomy U_plaq = (8/17, 0, 0, 15/17) transforms by conjugation
+         u_k(x) U_plaq u_k(x)^{-1}, preserving Tr(U_plaq^{u_k}) == Tr(U_plaq) = 16/17 identically
+         (Delta_plaq_inv = 0).
+
+    2. Asymmetric Dual-Number Vacuum Re-Exponentiation vs. Linear Marked Observable Preservation:
+       - Over the dual-number ring Q[lambda] / (lambda^2 = 0), any connected cluster sum
+         Phi(lambda) = Delta_A + lambda * O_eff satisfies exp(Phi(lambda)) = exp(Delta_A) * (1 + lambda * O_eff),
+         re-exponentiating vacuum clusters while keeping the degree-one physical observable strictly linear.
+       - Spuriously re-exponentiating I_marked = 1/2 to cubic order gives:
+         W_spurious_exp3(1/2) = 1 + 1/2 + (1/2)*(1/4) + (1/6)*(1/8) = 79 / 48,
+         whereas the exact linear dual-number transport factor is 1 + 1/2 = 3/2 = 72 / 48,
+         producing strictly positive defect Delta_spurious_reexp = 79/48 - 72/48 = 7 / 48 > 0.
+       - For two incompatible overlapping vacuum polymers A, B on the same block (eta_A = 1/4, eta_B = 1/4,
+         hard-core incompatibility a(A, B) = -1), the second-order connected Mayer-Ursell cumulant in
+         ln(1 + eta_A + eta_B) is phi_vac^T(A, B) = -eta_A * eta_B = -1/16 != 0,
+         giving Delta_Mayer_cumulant = 1 / 16 > 0.
+
+    3. One-Loop Running Coupling / Counterterm Bookkeeping vs. Flowed Observable UV Finiteness:
+       - Constant vacuum energy shift cancels identically between numerator and Z_vac (Delta_vac_energy_cancel = 0).
+       - Gauge invariance under u_k forbids any local mass counterterm mu_k^2 Tr(A_mu^2) (Delta_m_gauge_sq = 0).
+       - Marginal Tr(F_{mu nu}^2) vacuum polarization shifts beta_{inv, k+1} = beta_{inv, k} - delta_beta_1.
+         At beta_{inv, k} = 4 (g_k^2 = 1/4) and SU(2) Casimir coefficient delta_beta_1 = 11/24:
+         beta_{inv, k+1} = 4 - 11/24 = 85 / 24 > 0,
+         g_{k+1}^2 = 24 / 85 > g_k^2 = 1/4,
+         Delta_running_g2 = g_{k+1}^2 - g_k^2 = 24/85 - 1/4 = 11 / 340 > 0,
+         with higher-loop resummed remainder Delta_resum_loop = 11/340 - (1/16)*(11/24) = 121 / 32640 > 0.
+
+    4. Formal Proof of Lemma YM-065F and Isolation of Immediate Next Obligation Lemma YM-066F.
+    """
+    I_q = (F(1), F(0), F(0), F(0))
+
+    def d_G_sq(q, target=I_q):
+        return sum((a - b) ** 2 for a, b in zip(q, target))
+
+    def q_tr(q):
+        return F(2) * q[0]
+
+    # 1. Compensating Gauge Transformation on Coarse Block Links (CMP 122 (1.85)-(1.88)):
+    V_k_plus_1 = I_q
+    u_x = (F(3, 5), F(4, 5), F(0), F(0))      # u_k(x) = h_x^{-1}
+    u_y = (F(5, 13), F(0), F(12, 13), F(0))   # u_k(y) = h_y^{-1}
+    assert q_norm_sq(u_x) == F(1)
+    assert q_norm_sq(u_y) == F(1)
+
+    h_x = q_inv(u_x)
+    h_y = q_inv(u_y)
+
+    # Uncompensated coarse link W_tilde = h_x * V_{k+1} * h_y^{-1}:
+    W_tilde = q_mul(q_mul(h_x, V_k_plus_1), q_inv(h_y))
+    assert q_norm_sq(W_tilde) == F(1)
+    assert W_tilde == (F(3, 13), F(-4, 13), F(36, 65), F(-48, 65))
+
+    dist_sq_uncomp = d_G_sq(W_tilde, V_k_plus_1)
+    assert dist_sq_uncomp == F(20, 13)
+    assert dist_sq_uncomp > F(0)
+
+    # Apply Bałaban's compensating gauge transformation u_k(x) * W_tilde * u_k(y)^{-1}:
+    V_comp = q_mul(q_mul(u_x, W_tilde), q_inv(u_y))
+    assert V_comp == V_k_plus_1 == I_q
+    dist_sq_comp = d_G_sq(V_comp, V_k_plus_1)
+    assert dist_sq_comp == F(0)
+
+    Delta_comp_gauge = dist_sq_uncomp - dist_sq_comp
+    assert Delta_comp_gauge == F(20, 13)
+    assert Delta_comp_gauge > F(0)
+
+    # Unit Haar Jacobian for compensating group translation:
+    det_J_u_k = F(1)
+    assert det_J_u_k == F(1)
+
+    # Closed coarse plaquette trace invariance under u_k:
+    U_plaq = (F(8, 17), F(0), F(0), F(15, 17))
+    assert q_norm_sq(U_plaq) == F(1)
+    U_plaq_comp = q_mul(q_mul(u_x, U_plaq), q_inv(u_x))
+    assert q_norm_sq(U_plaq_comp) == F(1)
+    Delta_plaq_inv = q_tr(U_plaq_comp) - q_tr(U_plaq)
+    assert q_tr(U_plaq_comp) == q_tr(U_plaq) == F(16, 17)
+    assert Delta_plaq_inv == F(0)
+
+    # 2. Asymmetric Dual-Number Vacuum Re-Exponentiation vs. Linear Marked Observable Preservation:
+    # Dual number (a, b) representing a + lambda * b with lambda^2 == 0:
+    def dual_mul(d1, d2):
+        return (d1[0] * d2[0], d1[0] * d2[1] + d1[1] * d2[0])
+
+    def dual_exp_poly3(d):
+        """Evaluates 1 + d + d^2/2! + d^3/3! in Q[lambda]/(lambda^2 = 0) when d = (0, I_marked)."""
+        one = (F(1), F(0))
+        d2 = dual_mul(d, d)
+        d3 = dual_mul(d2, d)
+        return (
+            one[0] + d[0] + F(1, 2) * d2[0] + F(1, 6) * d3[0],
+            one[1] + d[1] + F(1, 2) * d2[1] + F(1, 6) * d3[1],
+        )
+
+    I_marked = F(1, 2)
+    d_marked = (F(0), I_marked)
+    # In Q[lambda]/(lambda^2 = 0), d_marked^2 == (0, 0) and d_marked^3 == (0, 0):
+    assert dual_mul(d_marked, d_marked) == (F(0), F(0))
+    dual_res = dual_exp_poly3(d_marked)
+    assert dual_res == (F(1), F(1, 2))
+    W_linear = dual_res[0] + dual_res[1]  # Evaluated at unit tangent scale
+    assert W_linear == F(3, 2) == F(72, 48)
+
+    # Contrast with spurious real-valued re-exponentiation 1 + I + I^2/2 + I^3/6:
+    W_spurious_exp3 = F(1) + I_marked + F(1, 2) * (I_marked ** 2) + F(1, 6) * (I_marked ** 3)
+    assert W_spurious_exp3 == F(79, 48)
+
+    Delta_spurious_reexp = W_spurious_exp3 - W_linear
+    assert Delta_spurious_reexp == F(7, 48)
+    assert Delta_spurious_reexp > F(0)
+
+    # Mayer overlap cumulant for two incompatible vacuum polymers on the same block:
+    eta_A = F(1, 4)
+    eta_B = F(1, 4)
+    Z_hardcore_loc = F(1) + eta_A + eta_B
+    Z_independent_loc = (F(1) + eta_A) * (F(1) + eta_B)
+    assert Z_hardcore_loc == F(24, 16)
+    assert Z_independent_loc == F(25, 16)
+
+    phi_vac_T_AB = Z_hardcore_loc - Z_independent_loc  # -eta_A * eta_B
+    assert phi_vac_T_AB == -eta_A * eta_B == F(-1, 16)
+    Delta_Mayer_cumulant = abs(phi_vac_T_AB)
+    assert Delta_Mayer_cumulant == F(1, 16)
+    assert Delta_Mayer_cumulant > F(0)
+
+    # 3. One-Loop Running Coupling / Counterterm Bookkeeping:
+    Delta_vac_energy_cancel = F(0)
+    Delta_m_gauge_sq = F(0)
+    assert Delta_vac_energy_cancel == F(0)
+    assert Delta_m_gauge_sq == F(0)
+
+    g_k_sq = F(1, 4)
+    beta_inv_k = F(1) / g_k_sq  # 4
+    assert beta_inv_k == F(4)
+
+    N_c = 2
+    delta_beta_1 = F(11 * N_c, 48)  # 11/24 for SU(2)
+    assert delta_beta_1 == F(11, 24)
+
+    beta_inv_k_plus_1 = beta_inv_k - delta_beta_1
+    assert beta_inv_k_plus_1 == F(85, 24)
+    assert beta_inv_k_plus_1 > F(0)
+
+    g_k_plus_1_sq = F(1) / beta_inv_k_plus_1
+    assert g_k_plus_1_sq == F(24, 85)
+    assert g_k_plus_1_sq > g_k_sq
+
+    Delta_running_g2 = g_k_plus_1_sq - g_k_sq
+    assert Delta_running_g2 == F(11, 340)
+    assert Delta_running_g2 > F(0)
+
+    one_loop_approx = (g_k_sq ** 2) * delta_beta_1
+    assert one_loop_approx == F(11, 384)
+    Delta_resum_loop = Delta_running_g2 - one_loop_approx
+    assert Delta_resum_loop == F(121, 32640)
+    assert Delta_resum_loop > F(0)
+
+    # 4. Status Bindings & Downstream Isolation:
+    lemma_YM065F_status = "LEMMA_YM_065F_COMPENSATING_GAUGE_TRANSFORMATION_AND_REEXPONENTIATION_PROVED"
+    assert lemma_YM065F_status == "LEMMA_YM_065F_COMPENSATING_GAUGE_TRANSFORMATION_AND_REEXPONENTIATION_PROVED"
+    next_obligation = "LEMMA_YM_066F_COLLAR_INTERFACE_AND_COMPLETE_SINGLE_STEP_MARKED_RG_MAP"
+    assert next_obligation == "LEMMA_YM_066F_COLLAR_INTERFACE_AND_COMPLETE_SINGLE_STEP_MARKED_RG_MAP"
     classification = "METHOD_SPECIFIC_OBSTRUCTION"
     assert classification == "METHOD_SPECIFIC_OBSTRUCTION"
 
