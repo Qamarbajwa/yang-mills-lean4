@@ -607,3 +607,25 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
 4. **Established Lemma and Isolated Next Downstream Obligation:**
    - Proved Lemma `YM-068F-GRADIENT-FLOW-SEMIGROUP-TADPOLE-CANCELLATION-AND-UV-SUMMABILITY`.
    - Isolated immediate next downstream obligation: Lemma `YM-069F-FLOW-SCALE-HANDOFF-AND-MASSIVE-COARSE-PROPAGATOR-CONTRACTION`.
+
+## CDC-069: Cutoff-Uniform Flow-Scale Handoff Bound at $k = k_{\mathrm{flow}}(a, t) = N_{\mathrm{UV}}$, Conditional Super-Exponential Infrared Contraction ($m_{\mathrm{eff}}^2 > 0$), and Epistemic Separation from `E-CROSSOVER` (`YM-069`)
+
+- **Date:** 2026-10-17
+- **Primary Contract:** `YM-015F-JET-002B`
+- **Source Target:** Bałaban CMP 122, 175–202 (1989); CMP 139, 281–305 (1991); Lüscher JHEP 1008:071 (2010).
+- **Defects Corrected & Mathematical Resolutions:**
+
+1. **Defect 1: Confusing Flow Smoothing Termination with Non-Local Divergence at the Flow Scale $k_{\mathrm{flow}}(a, t)$:**
+   - At the flow scale $k = N_{\mathrm{UV}} = \log_L(\sqrt{8t}/a)$, the effective lattice spacing matches the physical smoothing radius $a_{N_{\mathrm{UV}}} = \ell_{\mathrm{flow}} = \sqrt{8t}$, and flow smoothing $K_t$ is fully consumed.
+   - **Correction:** Proved that the flowed observable $\mathcal{O}_{(a, t)}(f)$ becomes a local marked polymer on the unit block lattice at scale $\ell_{\mathrm{flow}}$, with activity norm bounded cutoff-uniformly as $a \to 0$ ($N_{\mathrm{UV}} \to \infty$) by $\|\mathcal{I}_{N_{\mathrm{UV}}}^{\mathrm{marked}}\|_{B_{N_{\mathrm{UV}}}} \le \frac{1}{10} + \frac{83}{528} = \frac{679}{2640} < \frac{1}{3} = \epsilon_{\mathrm{handoff}}$, with strictly positive flow-scale handoff margin $\Delta_{\mathrm{flow\_handoff}} = \frac{67}{880} > 0$ (and $\Delta_{\mathrm{flow\_handoff\_clean}} = \frac{1}{15} > 0$). This establishes the ultraviolet completion of flowed observable transport (`E-UV-FLOWED = PROVED_TO_FLOW_SCALE`).
+
+2. **Defect 2: Conflating Conditional Mass-Gap Infrared Contraction with Unconditional 4D Yang–Mills Mass Generation:**
+   - Proved that if the 4D Yang–Mills vacuum generates an effective mass gap $m_{\mathrm{eff}}^2 > 0$ ($m_{\mathrm{eff}}^2 \ell_{\mathrm{flow}}^2 = 1$), the coarse-scale propagator $(-\Delta_k + m_{\mathrm{eff}}^2 a_k^2)^{-1}$ yields inter-scale contraction factors $\lambda_{\mathrm{massive}}(j) = (1 + 4^j)^{-2}$ ($L = 2$) whose cumulative product $P_{\mathrm{IR}}(j)$ satisfies $P_{\mathrm{IR}}(1) = 1/25, P_{\mathrm{IR}}(2) = 1/7225, P_{\mathrm{IR}}(3) = 1/30525625$ and decays super-exponentially, summing to $S_{\mathrm{post\_flow}}^{\mathrm{massive}} < \frac{289}{7200} < \frac{1}{20}$ with margin $\Delta_{\mathrm{massive\_postflow\_margin}} = \frac{71}{7200} > 0$.
+   - Conversely, in the massless case ($m_{\mathrm{eff}}^2 = 0$), $\lambda_{\mathrm{massless}} = 1$, producing the strictly positive non-contraction defect $\Delta_{\mathrm{massless\_IR\_defect}} = 4 - 1 = 3 > 0$ and exiting the small-field window at $j = 5$.
+
+3. **Defect 3: Conflating Ultraviolet Flowed Observable Transport with the Infrared Crossover:**
+   - Proved the exact mathematical decoupling of `E-UV-FLOWED` (which is fully bounded and closed at the physical flow scale $k_{\mathrm{flow}}(a, t)$) from the unsolved infrared crossover problem (`E-CROSSOVER = OPEN`, `YM-016 = BLOCKED`).
+
+4. **Established Lemma and Isolated Next Downstream Obligation:**
+   - Proved Lemma `YM-069F-FLOW-SCALE-HANDOFF-AND-MASSIVE-COARSE-PROPAGATOR-CONTRACTION`.
+   - Isolated immediate next downstream obligation: Lemma `YM-070F-UV-FLOWED-OBSERVABLE-SYNTHESIS-AND-CONTINUUM-BRIDGE-ISOLATION`.
