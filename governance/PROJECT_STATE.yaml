@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 110
+revision: 111
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "1ff9342a8b9efdc9e3557e054baeb3fbdf191bc3"
-  scientific_candidate_sha: ""
-  review_bound_sha: ""
-  evidence_closeout_head: "1ff9342a8b9efdc9e3557e054baeb3fbdf191bc3"
-  closeout_resolution: "evidence_closeout_head binds preceding completed YM-076 closeout commit (1ff9342a8b9efdc9e3557e054baeb3fbdf191bc3); candidate freeze commit for YM-077 establishes authoritative candidate SHA."
+  head: "3c52584b7985c0094f5730906b97c195090d29b4"
+  scientific_candidate_sha: "5f83112e6876ca14f67a8c93ece45199dbe04727"
+  review_bound_sha: "5f83112e6876ca14f67a8c93ece45199dbe04727"
+  evidence_closeout_head: "1ff9342ba8c703f8caf0e38793ffab1c859c12d5"
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-076 closeout commit (1ff9342ba8c703f8caf0e38793ffab1c859c12d5); scientific_candidate_sha and review_bound_sha bind accepted YM-077 candidate freeze (5f83112e6876ca14f67a8c93ece45199dbe04727); head binds YM-077 acceptance receipt commit (3c52584b7985c0094f5730906b97c195090d29b4); resolve authoritative current HEAD dynamically from Git."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,10 +32,10 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 109
-  last_updated_at: "2026-10-17T21:15:00Z"
+  last_expected_revision: 110
+  last_updated_at: "2026-10-17T21:26:00Z"
   active_contract: "YM-015F-JET-002B"
-  frozen_candidate: ""
+  frozen_candidate: "5f83112e6876ca14f67a8c93ece45199dbe04727"
 
 current_objective: YM-015F-JET-002B
 
@@ -49,7 +49,7 @@ objectives:
     atlas_writer_and_coordinator: "primary-worker"
     reviewer_path: "verification/raw/YM-077_E4_RAW_20261017.md"
     acceptor: "verification/YM-077_TECHNICAL_ACCEPTANCE.md"
-    status: CANDIDATE_FROZEN
+    status: SCIENTIFICALLY_ACCEPTED
     scope_limitation: "E_CROSSOVER_QUANTITATIVE_OBSTRUCTIONS_CHARACTERIZED_INFRARED_CROSSOVER_AND_CONTINUUM_GAP_OPEN"
   - id: YM-076
     scope_in: "Boundary contact operator renormalization, coincident-point singularity subtraction via Symanzik/BPHZ counterterms, unbuffered reflection positivity extension to {x_4 = 0}, unbuffered physical Hilbert space H_phys(0), advancement of Edge E-UV-LOCAL-OS to CLOSED_UNBUFFERED, proof of Lemma YM-076F-BOUNDARY-CONTACT-RENORMALIZATION-AND-UNBUFFERED-RP-EXTENSION, and Test 40 finite certificate"
