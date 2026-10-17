@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 86
+revision: 87
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "c8ddd89aa7505e7f4365e039ac500bcd13c76c65"
-  scientific_candidate_sha: "c8ddd89aa7505e7f4365e039ac500bcd13c76c65"
-  review_bound_sha: "c8ddd89aa7505e7f4365e039ac500bcd13c76c65"
+  head: "9ce1ecb01ac3b0136af651335a96b28df4dfb23b"
+  scientific_candidate_sha: "8126c1a1cc756bf275c463f37c26d54aae2db242"
+  review_bound_sha: "8126c1a1cc756bf275c463f37c26d54aae2db242"
   evidence_closeout_head: "c8ddd89aa7505e7f4365e039ac500bcd13c76c65"
-  closeout_resolution: "evidence_closeout_head binds preceding completed YM-064 closeout commit (c8ddd89aa7505e7f4365e039ac500bcd13c76c65); scientific_candidate_sha and review_bound_sha bind current YM-065 candidate freeze; resolve authoritative current HEAD dynamically from Git."
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-064 closeout commit (c8ddd89aa7505e7f4365e039ac500bcd13c76c65); scientific_candidate_sha and review_bound_sha bind accepted YM-065 candidate (8126c1a1cc756bf275c463f37c26d54aae2db242); resolve authoritative current HEAD dynamically from Git."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,10 +32,10 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 85
-  last_updated_at: "2026-10-17T14:30:00Z"
+  last_expected_revision: 86
+  last_updated_at: "2026-10-17T14:42:00Z"
   active_contract: "YM-015F-JET-002B"
-  frozen_candidate: "c8ddd89aa7505e7f4365e039ac500bcd13c76c65"
+  frozen_candidate: "8126c1a1cc756bf275c463f37c26d54aae2db242"
 
 current_objective: YM-015F-JET-002B
 
@@ -49,7 +49,7 @@ objectives:
     atlas_writer_and_coordinator: "primary-worker"
     reviewer_path: "verification/raw/YM-065_E4_RAW_20261017.md"
     acceptor: "verification/YM-065_TECHNICAL_ACCEPTANCE.md"
-    status: CANDIDATE_FROZEN
+    status: SCIENTIFICALLY_ACCEPTED
     scope_limitation: "COMPENSATING_GAUGE_AND_REEXPONENTIATION_PROVED_COLLAR_INTERFACE_AND_CONTINUUM_OPEN"
   - id: YM-064
     scope_in: "Linked Mayer cluster expansion of exponentiated effective action perturbations, BKAR forest covariance interpolation decoupling vs unfactored volume divergence, connected polymer pinning of physical observable insertions and hard-core vacuum exclusion ratio Z_vac(Lambda_0 \\ Y) / Z_vac(Lambda_0), spanning-tree decay inheritance in Bałaban CMP 122 (1.84)–(1.90), proof of Lemma YM-064F-MARKED-MAYER-EXPANSION-AND-POLYMER-PINNING, isolation of Lemma YM-065F, and Test 28 finite certificate"
