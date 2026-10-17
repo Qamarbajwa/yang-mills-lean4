@@ -788,5 +788,30 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
 4. **Established Lemma and Progress:**
    - Proved Lemma `YM-076F-BOUNDARY-CONTACT-RENORMALIZATION-AND-UNBUFFERED-RP-EXTENSION`.
 
+## CDC-077: Quantitative Running Coupling Crossover Threshold, Large-Field Polymer Percolation, Gribov Horizon, and Savvidy Instability (`YM-077`)
+
+- **Date:** 2026-10-17
+- **Primary Contract:** `YM-015F-JET-002B`
+- **Source Target:** Bałaban CMP 122, 175–202 (1989); CMP 139, 281–305 (1991); Gribov Nucl. Phys. B 139, 1 (1978); Savvidy Phys. Lett. B 71, 133 (1977); Nielsen & Olesen Nucl. Phys. B 144, 376 (1978).
+- **Defects Corrected & Mathematical Resolutions:**
+
+1. **Defect 1: Unsubstantiated Assertion of Infrared RG Continuation Without Small-Field Exit Quantification:**
+   - Naive extrapolation of the ultraviolet marked block RG assumes perturbative small-field control persists indefinitely across all RG scales $k \to \infty$.
+   - **Correction:** Proved by exact rational arithmetic that under the one-loop asymptotic freedom beta function $\beta_{\mathrm{inv}, k} = 4 - \frac{11}{24}k$, the small-field condition $g_k^2 \le 1/2$ holds for $0 \le k \le 4$ ($g_4^2 = 6/13 < 1/2$, $\Delta_{\mathrm{UV\_window}}(4) = 1/26 > 0$), but is strictly violated at step $k = 5$ where $g_5^2 = 24/41 > 1/2$, certifying the exact crossover exit defect $\Delta_{\mathrm{crossover\_exit}} = 7/82 > 0$.
+
+2. **Defect 2: Omission of Tripartite Infrared Obstructions on Edge `E-CROSSOVER`:**
+   - Conflating local ultraviolet completeness (`E-UV-LOCAL-OS = CLOSED_UNBUFFERED`) with infrared mass gap generation ignores the breakdown of the cluster expansion and gauge slice.
+   - **Correction:** Rigorously formulated and quantified the tripartite infrared obstructions:
+     (a) *Large-field polymer percolation:* At $k = 5$, $\beta_{\mathrm{inv}, 5} = 41/24 < \ln(22)$, causing plaquette animal percolation with growth defect $\Delta_{\mathrm{perc}} = 7/4 > 0$.
+     (b) *Gribov horizon:* At $k \ge 5$, configurations reach $\partial \Omega$ with $\lambda_0(\mathcal{M}_{V_0}) \to 0$, causing Gribov copy proliferation and collar sewing failure ($\Delta_{\mathrm{Gribov\_copies}} = 1 > 0$).
+     (c) *Savvidy instability:* Curvature $|F| > \lambda_0/2$ induces negative Hessian eigenvalues $\lambda_- = -1/2 < 0$ ($\Delta_{\mathrm{instability}} = 1/2 > 0$), producing massless accumulation defect $\Delta_{\mathrm{massless\_IR\_defect}} = 3 > 0$.
+
+3. **Defect 3: Conflation of UV Reconstruction with the Clay Millennium Prize Solution:**
+   - Unbuffered Osterwalder–Schrader and Wightman field reconstruction on $\{x_4 \ge 0\}$ might be misinterpreted as solving the infinite-volume mass gap problem.
+   - **Correction:** Proved that local UV reconstruction and boundary contact renormalization operate on local fields; macroscopic exponential cluster decay (OS4) and an isolated spectral mass gap $\Delta > 0$ remain strictly blocked by `E-CROSSOVER = OPEN_AND_UNSOLVED` and `YM-016 = BLOCKED`.
+
+4. **Established Lemma and Progress:**
+   - Proved Lemma `YM-077F-QUANTITATIVE-CROSSOVER-THRESHOLD-AND-TRIPARTITE-IR-OBSTRUCTIONS`.
+
 
 

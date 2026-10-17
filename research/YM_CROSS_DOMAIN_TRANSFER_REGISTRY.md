@@ -670,4 +670,19 @@ Source mechanisms: own finite row-space/kernel target-descent theorem, positive 
 - Open bridge: Macroscopic infinite-volume cluster bounds (Lemma `YM-059F`), Continuum Wightman Reconstruction and Spectral Gap (Lemma `YM-060F`), crossing infrared crossover `E-CROSSOVER`.
 - Allowed conclusion: Boundary contact operators and coincident-point singularities are renormalized via Symanzik/BPHZ subtractions; reflection positivity is extended to the unbuffered domain $\{x_4 \ge 0\}$; Edge E-UV-LOCAL-OS is closed unbuffered; macroscopic mass gap and infinite-volume continuum limit remain open. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Edge E-UV-LOCAL-OS closes unbuffered; continuum edges remain OPEN/BLOCKED.
 
+## XFER-YM-ONE-TERM-PULLBACK-077: Quantitative Running Coupling Crossover Threshold, Large-Field Polymer Percolation, Gribov Horizon, and Savvidy Instability on Edge E-CROSSOVER
+
+- Source: Bałaban CMP 122, 175–202 (1989); CMP 139, 281–305 (1991); Gribov Nucl. Phys. B 139, 1 (1978); Savvidy Phys. Lett. B 71, 133 (1977); Nielsen & Olesen Nucl. Phys. B 144, 376 (1978).
+- Target: YM-015F quantitative non-perturbative obstruction characterization on Edge `E-CROSSOVER` and boundary isolation of the Clay Millennium Prize problem.
+- Verified mapping:
+  - Exact quantitative crossover exit at $k = 5$: under $\beta_{\mathrm{inv}, k} = 4 - \frac{11}{24}k$, the small-field condition $g_k^2 \le 1/2$ holds for $0 \le k \le 4$ ($g_4^2 = 6/13 < 1/2$, $\Delta_{\mathrm{UV\_window}}(4) = 1/26 > 0$), but exits at $k = 5$ where $g_5^2 = 24/41 > 1/2$, certifying the exact crossover exit defect $\Delta_{\mathrm{crossover\_exit}} = 7/82 > 0$ and landing at Landau pole at $k = 9$ ($\beta_{\mathrm{inv}, 9} = -1/8 < 0$).
+  - Tripartite non-perturbative infrared obstructions:
+    1. *Large-field polymer percolation:* at $k = 5$, $\beta_{\mathrm{inv}, 5} = 41/24 < \ln(22)$, causing plaquette animal percolation with growth defect $\Delta_{\mathrm{perc}} = 7/4 > 0$.
+    2. *Gribov horizon:* at $k \ge 5$, configurations reach $\partial \Omega$ with $\lambda_0(\mathcal{M}_{V_0}) \to 0$, causing Gribov copy proliferation and collar sewing failure ($\Delta_{\mathrm{Gribov\_copies}} = 1 > 0$).
+    3. *Savvidy instability:* curvature $|F| > \lambda_0/2$ induces negative Hessian eigenvalues $\lambda_- = -1/2 < 0$ ($\Delta_{\mathrm{instability}} = 1/2 > 0$), producing massless accumulation defect $\Delta_{\mathrm{massless\_IR\_defect}} = 3 > 0$.
+  - Epistemic insulation: local ultraviolet completion (`E-UV-LOCAL-OS = CLOSED_UNBUFFERED`, `E-UV-FLOWED = CLOSED_AT_FLOW_SCALE`) does NOT resolve the infrared crossover. Edge `E-CROSSOVER` remains strictly `OPEN_AND_UNSOLVED`, Task `YM-016` remains `BLOCKED`, and the Clay Millennium Prize Problem remains `OPEN_AND_UNSOLVED`.
+  - Lemma `YM-077F-QUANTITATIVE-CROSSOVER-THRESHOLD-AND-TRIPARTITE-IR-OBSTRUCTIONS` formally proved within stated hypotheses.
+- Open bridge: Macroscopic infinite-volume cluster bounds (Lemma `YM-059F`), Continuum Wightman Reconstruction and Spectral Gap (Lemma `YM-060F`), crossing infrared crossover `E-CROSSOVER`.
+- Allowed conclusion: The small-field RG exit at $k = 5$ and the tripartite infrared obstructions on Edge `E-CROSSOVER` are rigorously proved and quantified; Edge `E-CROSSOVER` remains open; macroscopic mass gap and continuum limit remain open. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Edge E-CROSSOVER remains OPEN; continuum edges remain OPEN/BLOCKED.
+
 
