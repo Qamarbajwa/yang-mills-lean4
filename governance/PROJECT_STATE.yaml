@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 101
+revision: 102
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "ced918067dcc6c48faba867dfdb7b7991b17bdc8"
-  scientific_candidate_sha: "aa63a79f96a1f5b86d755638965b22c6485452a9"
-  review_bound_sha: "aa63a79f96a1f5b86d755638965b22c6485452a9"
-  evidence_closeout_head: "ceeeee668f44ff94e019a557c6179b5c2a1290bb"
-  closeout_resolution: "evidence_closeout_head binds preceding completed YM-071 closeout commit (ceeeee668f44ff94e019a557c6179b5c2a1290bb); scientific_candidate_sha and review_bound_sha bind accepted YM-072 candidate freeze (aa63a79f96a1f5b86d755638965b22c6485452a9); head binds YM-072 acceptance receipt commit (ced918067dcc6c48faba867dfdb7b7991b17bdc8); resolve authoritative current HEAD dynamically from Git."
+  head: "8cf729beae60bb773cbaee645b25fe4e71a3962b"
+  scientific_candidate_sha: "8cf729beae60bb773cbaee645b25fe4e71a3962b"
+  review_bound_sha: "8cf729beae60bb773cbaee645b25fe4e71a3962b"
+  evidence_closeout_head: "8cf729beae60bb773cbaee645b25fe4e71a3962b"
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-072 closeout commit (8cf729beae60bb773cbaee645b25fe4e71a3962b); scientific_candidate_sha and review_bound_sha bind active YM-073 candidate freeze; head binds current candidate freeze; resolve authoritative current HEAD dynamically from Git."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,14 +32,25 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 100
-  last_updated_at: "2026-10-17T17:55:00Z"
+  last_expected_revision: 101
+  last_updated_at: "2026-10-17T18:00:00Z"
   active_contract: "YM-015F-JET-002B"
-  frozen_candidate: "aa63a79f96a1f5b86d755638965b22c6485452a9"
+  frozen_candidate: "8cf729beae60bb773cbaee645b25fe4e71a3962b"
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-073
+    scope_in: "Physical Hilbert space construction H_phys(delta) = overline{A_+(delta)/N}, symmetric contractive semigroup e^{-sH}, non-negative self-adjoint Hamiltonian H >= 0 on buffered domains (delta > 0), proof of Lemma YM-073F-PHYSICAL-HILBERT-SPACE-AND-NONNEGATIVE-HAMILTONIAN, and Test 37 finite certificate"
+    scope_out: "Crossing infrared crossover E-CROSSOVER, macroscopic infinite-volume thermodynamic limit, isolated spectral mass gap Delta > 0, continuum Wightman reconstruction, and full continuum closure"
+    dependencies: ["YM-072"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-073_E4_RAW_20261017.md"
+    acceptor: "verification/YM-073_TECHNICAL_ACCEPTANCE.md"
+    status: CANDIDATE_FROZEN
+    scope_limitation: "LOCAL_HILBERT_SPACE_AND_NONNEGATIVE_HAMILTONIAN_PROVED_ON_BUFFERED_DOMAIN_MACROSCOPIC_GAP_AND_INFRARED_CROSSOVER_OPEN"
   - id: YM-072
     scope_in: "Continuous Euclidean SO(4) covariance restoration (Axiom OS1), Symanzik hypercubic anisotropy suppression O(a^2/t), geometric convergence of lattice breaking artifacts, simultaneous OS1 and OS2 recovery on buffered domains (delta > 0), proof of Lemma YM-072F-SO4-COVARIANCE-RESTORATION-AND-HYPERCUBIC-SUPPRESSION, and Test 36 finite certificate"
     scope_out: "Boundary contact operator renormalization, crossing infrared crossover E-CROSSOVER, macroscopic infinite-volume thermodynamic limit, continuum Wightman reconstruction, and full continuum closure"

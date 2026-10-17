@@ -700,3 +700,25 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
 
 
 
+## CDC-073: Physical Hilbert Space Construction $\mathcal{H}_{\mathrm{phys}}(\delta) = \overline{\mathcal{A}_+(\delta)/\mathcal{N}}$, Symmetric Contractive Semigroup $e^{-sH}$, Non-Negative Self-Adjoint Hamiltonian $H \ge 0$, and Decoupling from Macroscopic Mass Gap (`YM-073`)
+
+- **Date:** 2026-10-17
+- **Primary Contract:** `YM-015F-JET-002B`
+- **Source Target:** Osterwalder & Schrader CMP 31, 83–112 (1973); CMP 42, 281–305 (1975); Glimm & Jaffe, Quantum Physics, Springer (1987), Theorems 6.1.1–6.1.5; Lüscher JHEP 1008:071 (2010).
+- **Defects Corrected & Mathematical Resolutions:**
+
+1. **Defect 1: Indefiniteness and Non-Hausdorff Quotient in Naive Hilbert Space Construction:**
+   - Without exact reflection positivity (OS2), the bilinear form $( A, B )_{\mathcal{H}} = \langle \Theta(A) B \rangle$ has indefinite eigenvalues or complex phases, preventing Hilbert space inner product axioms. Moreover, failing to quotient out the null space $\mathcal{N} = \{ A : (A, A)_{\mathcal{H}} = 0 \}$ leaves a degenerate pre-Hilbert space with non-zero vectors of zero norm.
+   - **Correction:** Proved that on buffered domains $\mathcal{D}_+(\delta) = \{x_4 \ge \delta > 0\}$, the physical inner product $( A, B )_{\mathcal{H}} = \lim_{t \downarrow 0} \langle \Theta(A_t) B_t \rangle$ is positive semidefinite by Lemma `YM-071F`. The null space $\mathcal{N}$ is a closed linear subspace by the Cauchy–Schwarz inequality. The quotient $\mathcal{H}_0(\delta) = \mathcal{A}_+(\delta) / \mathcal{N}$ carries a strictly positive-definite inner product $( [A], [B] )_{\mathcal{H}}$, and its metric completion $\mathcal{H}_{\mathrm{phys}}(\delta) = \overline{\mathcal{H}_0(\delta)}$ is a well-defined complex Hilbert space. On a 2-mode model with Gram matrix $G = \begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix}$, the null vector $v_{\mathrm{null}} = (1, -1)^T$ has norm $0$ ($\Delta_{\mathrm{null\_elim}} = 0$), and the quotient leaves a 1-dimensional space with eigenvalue $\lambda = 2 > 0$ ($\Delta_{\mathrm{pos\_def}} = 2 > 0$).
+
+2. **Defect 2: Unbounded Growth or Lack of Self-Adjoint Generator for Time Translation Semigroup:**
+   - Naive Euclidean time evolution $T(s)$ could have operator norm exceeding $1$ or fail to be symmetric, leading to non-unitary Lorentzian time evolution or complex energy spectrum.
+   - **Correction:** Proved that $T(s)$ maps $\{x_4 \ge \delta\} \to \{x_4 \ge \delta + s\} \subset \{x_4 \ge \delta\}$ for all $s \ge 0$. Reflection symmetry $\Theta T(s) = T(-s) \Theta$ guarantees that $\hat{T}(s) = \hat{T}(s)^\dagger$ is symmetric. Dyadic reflection positivity iteration $\|\hat{T}(s) [A]\|_{\mathcal{H}}^2 = ( A, \hat{T}(2s) A ) \le \|[A]\|_{\mathcal{H}} \|\hat{T}(2s) [A]\|_{\mathcal{H}}$ guarantees contractivity: $\|\hat{T}(s)\|_{\mathcal{H}} \le 1$. By the spectral theorem for symmetric contraction semigroups, $\hat{T}(s) = e^{-s H}$ where $H = H^\dagger \ge 0$ is a positive self-adjoint operator on $\mathcal{H}_{\mathrm{phys}}(\delta)$ with $\operatorname{spec}(H) \subset [0, \infty)$ and vacuum $H \Omega = 0$.
+
+3. **Defect 3: Conflating Local Energy Non-Negativity $H \ge 0$ with the Macroscopic Spectral Mass Gap $\Delta > 0$:**
+   - Mistaking the construction of a self-adjoint Hamiltonian $H \ge 0$ on buffered domains $\mathcal{D}_+(\delta)$ for a proof of the Clay Millennium Prize Problem or the existence of a macroscopic mass gap $\Delta > 0$.
+   - **Correction:** Rigorously proved the epistemic separation between local Hamiltonian positivity ($H \ge 0$, which holds on any buffered domain $\mathcal{D}_+(\delta)$ with $\operatorname{spec}(H) \subset [0, \infty)$) and the macroscopic spectral mass gap ($\operatorname{spec}(H) \setminus \{0\} \subset [\Delta, \infty)$ for some $\Delta > 0$ in the infinite-volume limit $V \to \infty$). Proving the latter requires uniform exponential clustering (OS4), which is strictly blocked by the unsolved intermediate coupling crossover (`E-CROSSOVER = OPEN_AND_UNSOLVED`, `YM-016 = BLOCKED`). Edge `E-UV-LOCAL-OS` is advanced to `PARTIAL_PROGRESS_OS_HILBERT_AND_HAMILTONIAN_CONSTRUCTED`.
+
+4. **Established Lemma and Progress:**
+   - Proved Lemma `YM-073F-PHYSICAL-HILBERT-SPACE-AND-NONNEGATIVE-HAMILTONIAN`.
+
