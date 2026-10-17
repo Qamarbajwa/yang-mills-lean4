@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 80
+revision: 81
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "7f05e7efd31f61f67d844e4b4c519e70a2caeae0"
-  scientific_candidate_sha: "3e6783ca244e9e8194f64ecf729416bfee826299"
-  review_bound_sha: "3e6783ca244e9e8194f64ecf729416bfee826299"
+  head: "bad46887fa04607d91c218440ef6e1ea571cff4c"
+  scientific_candidate_sha: "161e630f478d7afe2e5410375f8e7e9396ed31d9"
+  review_bound_sha: "161e630f478d7afe2e5410375f8e7e9396ed31d9"
   evidence_closeout_head: "7f05e7efd31f61f67d844e4b4c519e70a2caeae0"
-  closeout_resolution: "evidence_closeout_head binds preceding completed YM-061R closeout commit (7f05e7efd31f61f67d844e4b4c519e70a2caeae0); candidate freeze for YM-062 is committed on top of 7f05e7efd31f61f67d844e4b4c519e70a2caeae0; resolve authoritative current HEAD dynamically from Git."
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-061R closeout commit (7f05e7efd31f61f67d844e4b4c519e70a2caeae0); scientific_candidate_sha and review_bound_sha bind accepted YM-062 candidate (161e630f478d7afe2e5410375f8e7e9396ed31d9); resolve authoritative current HEAD dynamically from Git."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,10 +32,10 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 79
-  last_updated_at: "2026-10-17T13:40:00Z"
+  last_expected_revision: 80
+  last_updated_at: "2026-10-17T13:52:00Z"
   active_contract: "YM-015F-JET-002B"
-  frozen_candidate: "3e6783ca244e9e8194f64ecf729416bfee826299"
+  frozen_candidate: "161e630f478d7afe2e5410375f8e7e9396ed31d9"
 
 current_objective: YM-015F-JET-002B
 
@@ -49,7 +49,7 @@ objectives:
     atlas_writer_and_coordinator: "primary-worker"
     reviewer_path: "verification/raw/YM-062_E4_RAW_20261017.md"
     acceptor: "verification/YM-062_TECHNICAL_ACCEPTANCE.md"
-    status: IN_PROGRESS
+    status: SCIENTIFICALLY_ACCEPTED
     scope_limitation: "WEITZENBOCK_CURVATURE_AND_CONNECTED_CUMULANT_SHIFT_PROVED_FINITE_CHART_BOUNDARY_AND_CONTINUUM_OPEN"
   - id: YM-061R
     scope_in: "Reconciliation of local normalization, conditional expectations, exact history-summing weights, and source-derived gauge vacuum quotient under Bałaban CMP 122 (1.76), refutation of scalar toy arithmetic as 4D evidence, and Test 25 finite certificate"
