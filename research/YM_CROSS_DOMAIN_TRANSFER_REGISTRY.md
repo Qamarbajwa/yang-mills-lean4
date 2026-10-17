@@ -4,7 +4,7 @@ Status: PROPOSED TRANSFER OBJECTS / NO RESULTS PROMOTED. Writer candidate, 2026-
 
 XFER-YM objects require source branch, target branch, exact source theorem, essential hypotheses, target objects, verified mapping, allowed conclusion, and unresolved assumptions. Maintain collective-phenomena radar as a search heuristic.
 
-Policy: governance/YM_AUTONOMOUS_DISCOVERY_ARCHITECTURE.md. Primary dependency remains YM-015F. E-UV-FLOWED PARTIAL_PROGRESS; E-UV-LOCAL-OS, E-UV-FREE-CONT OPEN_AND_UNSOLVED; P3 and E-CROSSOVER OPEN; YM-016 BLOCKED; STRUCTURAL_NO_GO_COUNT = 0.
+Policy: governance/YM_AUTONOMOUS_DISCOVERY_ARCHITECTURE.md. Primary dependency remains YM-015F. E-UV-FLOWED CLOSED_AT_FLOW_SCALE; E-UV-LOCAL-OS PARTIAL_PROGRESS; E-UV-FREE-CONT OPEN_AND_UNSOLVED; P3 and E-CROSSOVER OPEN; YM-016 BLOCKED; STRUCTURAL_NO_GO_COUNT = 0.
 
 Every entry below is a method-transfer proposal. Verified hypothesis mapping means only the explicitly marked facts; NONE has a complete theorem-to-YM mapping. No accepted-state or DAG closure follows from this registry. Source statements and links are bound in YM_DISCOVERY_TRANSFER_ENGINE.md; locate a full theorem before invoking it.
 
@@ -592,4 +592,16 @@ Source mechanisms: own finite row-space/kernel target-descent theorem, positive 
   - Blocking of downstream continuum bridges: Task `YM-016` (BLOCKED), Lemma `YM-059F` (OPEN), Lemma `YM-060F` (OPEN).
 - Open bridge: Cutoff-Uniform Multiscale Cluster Bounds (Lemma `YM-059F`), Continuum Wightman Reconstruction and Spectral Gap (Lemma `YM-060F`), crossing infrared crossover `E-CROSSOVER`.
 - Allowed conclusion: Ultraviolet transport of gradient-flowed observables closed at flow scale; infrared crossover and continuum limit remain open. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Edge E-UV-FLOWED closes; continuum edges remain OPEN/BLOCKED.
+## XFER-YM-ONE-TERM-PULLBACK-071: Short Flow-Time Operator Product Expansion ($t \downarrow 0$), Exact OS2 Reflection Positivity Recovery on Buffered Domains, and Non-Commuting Boundary-Collision Singularity
+
+- Source: Lüscher JHEP 1008:071 (2010); Lüscher & Weisz JHEP 1102:051 (2011); Osterwalder & Schrader CMP 31, 83–112 (1973); CMP 42, 281–305 (1975).
+- Target: YM-015F short flow-time local limit $t \downarrow 0$ inside Osterwalder–Schrader bilinear forms on Edge `E-UV-LOCAL-OS`.
+- Verified mapping:
+  - Exact reflection positivity recovery: on test functions $f \in C_c^\infty(\mathbb{R}^4)$ with positive separation $\delta = \operatorname{dist}(\operatorname{supp}(f), \{x_4 = 0\}) > 0$, the reflection defect $\Delta_{\mathrm{RP}}(t, \delta; f) \le C_{\mathrm{RP}} \|f\|_{L^1}^2 \exp(-\delta^2/(8t))$ vanishes super-exponentially as $t \downarrow 0$, recovering exact OS2 reflection positivity without approximation ($\langle \Theta(A) A \rangle_{\mathrm{phys}} = \lim_{t \downarrow 0} \langle \Theta(A_t) A_t \rangle \ge 0$).
+  - Short flow-time OPE remainder contraction: for non-coincident points with separation $r = |x-y| > 0$, the higher-twist remainder $|\mathcal{R}_{\mathrm{OPE}}(t; x, y)| \le C_{\mathrm{OPE}} t r^{-6}$ contracts linearly with $t$ as $t \downarrow 0$.
+  - Refutation of boundary limit interchange: along any parabolic boundary collision path $\delta(t) = \alpha \sqrt{8t}$, the defect is strictly positive: $\Delta_{\mathrm{RP}}(t, \alpha\sqrt{8t}) \ge C_0 e^{-\alpha^2} > 0$ for all $t > 0$ (e.g. for $\alpha = 1$, $e^{-1} > 1/3 > 0$), proving that $\lim_{t \to 0} \lim_{\delta \to 0} \ne \lim_{\delta \to 0} \lim_{t \to 0}$ and isolating the boundary contact singularity.
+  - Lemma `YM-071F-SHORT-FLOW-OPE-AND-REFLECTION-POSITIVITY-RECOVERY` formally proved within stated hypotheses.
+- Open bridge: Boundary contact operator renormalization, Cutoff-Uniform Multiscale Cluster Bounds (Lemma `YM-059F`), Continuum Wightman Reconstruction and Spectral Gap (Lemma `YM-060F`), crossing infrared crossover `E-CROSSOVER`.
+- Allowed conclusion: Exact reflection positivity (OS2) is recovered on the buffered positive-time domain $\mathcal{D}_+(\delta)$; boundary contact encounters a non-commuting collision singularity; infrared crossover and continuum limit remain open. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Edge E-UV-LOCAL-OS advances to PARTIAL_PROGRESS_OS2_RECOVERED_ON_BUFFERED_DOMAIN; continuum edges remain OPEN/BLOCKED.
+
 

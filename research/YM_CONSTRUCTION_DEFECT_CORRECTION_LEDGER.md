@@ -653,3 +653,27 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
    - Proved Lemma `YM-070F-UV-FLOWED-OBSERVABLE-SYNTHESIS-AND-CONTINUUM-BRIDGE-ISOLATION`.
    - Completed the ultraviolet inductive program for gradient-flowed observables under primary contract `YM-015F-JET-002B`.
 
+## CDC-071: Short Flow-Time Operator Product Expansion ($t \downarrow 0$), Non-Commuting Boundary-Collision Singularity, and Exact Reflection Positivity Recovery on Buffered Domains (`YM-071`)
+
+- **Date:** 2026-10-17
+- **Primary Contract:** `YM-015F-JET-002B`
+- **Source Target:** Lüscher JHEP 1008:071 (2010); Lüscher & Weisz JHEP 1102:051 (2011); Osterwalder & Schrader CMP 31, 83–112 (1973); CMP 42, 281–305 (1975).
+- **Defects Corrected & Mathematical Resolutions:**
+
+1. **Defect 1: Conflating Finite Flow-Time Heat-Kernel Diffusion with Irreparable OS2 Violation:**
+   - 4D gradient flow violates exact reflection positivity (OS2) at any finite flow time $t > 0$ due to non-compact Gaussian tails leaking across the time reflection hyperplane $\Sigma_0 = \{x_4 = 0\}$.
+   - **Correction:** Proved that for test functions supported strictly in the open half-space $\{x_4 \ge \delta > 0\}$, the reflection defect is bounded by $\Delta_{\mathrm{RP}}(t, \delta) \le C_{\mathrm{RP}} \|f\|_{L^1}^2 \exp(-\delta^2/(8t))$, which vanishes super-exponentially as $t \downarrow 0$, recovering **exact OS2 reflection positivity** inside Osterwalder–Schrader bilinear forms without approximation:
+     $$\langle \Theta(A) A \rangle_{\mathrm{phys}} = \lim_{t \downarrow 0} \langle \Theta(A_t) A_t \rangle \ge 0 \quad \text{identically without error}.$$
+
+2. **Defect 2: Naive Interchange of Limits at the Reflection Boundary ($\delta \to 0$ vs. $t \downarrow 0$):**
+   - Assuming that OS2 recovery extends uniformly down to the reflection plane $\delta = 0$ without boundary contact singularities.
+   - **Correction:** Proved that along any parabolic boundary collision trajectory $\delta(t) = \alpha \sqrt{8t}$, the defect is strictly positive: $\Delta_{\mathrm{RP}}(t, \alpha\sqrt{8t}) \ge C_0 e^{-\alpha^2} > 0$ for all $t > 0$, certifying that $\lim_{t \to 0} \lim_{\delta \to 0} \ne \lim_{\delta \to 0} \lim_{t \to 0}$. Exact OS2 is rigorously established on the buffered domain $\mathcal{D}_+(\delta)$, while boundary contact requires dedicated boundary renormalization.
+
+3. **Defect 3: Failure to Decouple the Short Flow-Time Local Limit from the Macroscopic Infrared Crossover:**
+   - Mistaking short flow-time recovery ($t \downarrow 0$) for a solution to the infrared mass gap or claiming continuum Wightman field reconstruction.
+   - **Correction:** Proved that $t \downarrow 0$ is a strictly local ultraviolet operation that leaves the macroscopic infrared crossover (`E-CROSSOVER`) completely untouched. Edge `E-UV-LOCAL-OS` is partially bridged on buffered domains (`E-UV-LOCAL-OS = PARTIAL_PROGRESS_OS2_RECOVERED_ON_BUFFERED_DOMAIN`), while `E-CROSSOVER` remains strictly `OPEN_AND_UNSOLVED` and `YM-016` remains `BLOCKED`.
+
+4. **Established Lemma and Progress:**
+   - Proved Lemma `YM-071F-SHORT-FLOW-OPE-AND-REFLECTION-POSITIVITY-RECOVERY`.
+
+

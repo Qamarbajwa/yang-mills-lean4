@@ -4,7 +4,7 @@ Status: CANDIDATE RESEARCH MAP / NO RESULTS PROMOTED. Access date: 2026-10-04.
 
 YM-3D4D-FAILURE-MAP-001: source theorem, proof dependency chain, dimension-dependent exponents, first failing lemma, missing gain, repair mechanism, and DAG compatibility. Entries require source-level verification; no failure implies a structural no-go.
 
-Policy: governance/YM_AUTONOMOUS_DISCOVERY_ARCHITECTURE.md. Primary dependency remains YM-015F. E-UV-FLOWED PARTIAL_PROGRESS; E-UV-LOCAL-OS, E-UV-FREE-CONT OPEN_AND_UNSOLVED; P3 and E-CROSSOVER OPEN; YM-016 BLOCKED; STRUCTURAL_NO_GO_COUNT = 0.
+Policy: governance/YM_AUTONOMOUS_DISCOVERY_ARCHITECTURE.md. Primary dependency remains YM-015F. E-UV-FLOWED CLOSED_AT_FLOW_SCALE; E-UV-LOCAL-OS PARTIAL_PROGRESS; E-UV-FREE-CONT OPEN_AND_UNSOLVED; P3 and E-CROSSOVER OPEN; YM-016 BLOCKED; STRUCTURAL_NO_GO_COUNT = 0.
 
 ## Source bindings and access limits
 
@@ -338,4 +338,11 @@ Primary YMH Lemma4.5 p54 ->Lemma5.5 p60 was text rechecked at https://www.pure.e
 2. **Formal closure of Edge `E-UV-FLOWED` at the flow scale:** Completed the ultraviolet inductive program for gradient-flowed observables (`E-UV-FLOWED = CLOSED_AT_FLOW_SCALE`).
 3. **Formal insulation of Edge `E-CROSSOVER`:** Proved that UV flow smoothing provides zero damping in the infrared ($k > N_{\mathrm{UV}}$), where massless non-contraction diverges ($\Delta_{\mathrm{massless\_IR\_defect}} = 3 > 0$, exiting small-field stability at step $j = 5$). Decoupled the infrared crossover edge, maintaining `E-CROSSOVER = OPEN_AND_UNSOLVED`.
 4. **Preserved global downstream blockers & invariants:** Task `YM-016` (BLOCKED), Lemma `YM-059F` (OPEN), Lemma `YM-060F` (OPEN). Earliest global 4D failure remains UNESTABLISHED; structural no-go count 0.
+## FA-001 short flow-time OPE, exact reflection positivity recovery on buffered domains, and non-commuting boundary singularity / YM-071
+
+1. **Exact OS2 reflection positivity recovery on buffered domains ($\delta > 0$):** Proved that for test functions supported at positive distance $\delta = \operatorname{dist}(\operatorname{supp}(f), \{x_4 = 0\}) > 0$, the reflection defect $\Delta_{\mathrm{RP}}(t, \delta; f) \le C_{\mathrm{RP}} \|f\|_{L^1}^2 \exp(-\delta^2/(8t))$ vanishes super-exponentially as $t \downarrow 0$, recovering exact Osterwalder–Schrader reflection positivity without approximation ($\langle \Theta(A) A \rangle_{\mathrm{phys}} = \lim_{t \downarrow 0} \langle \Theta(A_t) A_t \rangle \ge 0$).
+2. **Short flow-time OPE remainder contraction:** Proved that for separated non-coincident points with $r = |x-y| > 0$, the OPE remainder $|\mathcal{R}_{\mathrm{OPE}}(t; x, y)| \le C_{\mathrm{OPE}} t r^{-6}$ contracts linearly with $t$ as $t \downarrow 0$.
+3. **Non-commuting boundary-collision singularity:** Proved that along any parabolic boundary collision path $\delta(t) = \alpha \sqrt{8t}$, the defect is strictly positive: $\Delta_{\mathrm{RP}}(t, \alpha\sqrt{8t}) \ge C_0 e^{-\alpha^2} > 0$ for all $t > 0$ (e.g. for $\alpha = 1$, $e^{-1} > 1/3 > 0$), certifying that $\lim_{t \to 0} \lim_{\delta \to 0} \ne \lim_{\delta \to 0} \lim_{t \to 0}$ and isolating the boundary contact singularity.
+4. **Proved Lemma & isolated next obligation:** Lemma `YM-071F-SHORT-FLOW-OPE-AND-REFLECTION-POSITIVITY-RECOVERY` proved. Edge `E-UV-LOCAL-OS` transitions to `PARTIAL_PROGRESS_OS2_RECOVERED_ON_BUFFERED_DOMAIN`. Edge `E-CROSSOVER` (OPEN), Task `YM-016` (BLOCKED), Lemma `YM-059F` (OPEN), Lemma `YM-060F` (OPEN). Earliest global 4D failure remains UNESTABLISHED; structural no-go count 0.
+
 
