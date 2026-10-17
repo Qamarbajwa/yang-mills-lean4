@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 106
+revision: 107
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "1bba201086bd2134f3d25d9df4a749e3c16ce407"
-  scientific_candidate_sha: "1bba201086bd2134f3d25d9df4a749e3c16ce407"
-  review_bound_sha: "1bba201086bd2134f3d25d9df4a749e3c16ce407"
+  head: "10e900a32624c357ff58b209f3f58b6589f1ae74"
+  scientific_candidate_sha: "1194123154e88b7f82224dd21952086edd903710"
+  review_bound_sha: "1194123154e88b7f82224dd21952086edd903710"
   evidence_closeout_head: "1bba201086bd2134f3d25d9df4a749e3c16ce407"
-  closeout_resolution: "evidence_closeout_head binds preceding completed YM-074 closeout commit (1bba201086bd2134f3d25d9df4a749e3c16ce407); scientific_candidate_sha and review_bound_sha bind active YM-075 candidate freeze; head binds current candidate freeze; resolve authoritative current HEAD dynamically from Git."
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-074 closeout commit (1bba201086bd2134f3d25d9df4a749e3c16ce407); scientific_candidate_sha and review_bound_sha bind accepted YM-075 candidate freeze (1194123154e88b7f82224dd21952086edd903710); head binds YM-075 acceptance receipt commit (10e900a32624c357ff58b209f3f58b6589f1ae74); resolve authoritative current HEAD dynamically from Git."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,10 +32,10 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 105
-  last_updated_at: "2026-10-17T18:35:00Z"
+  last_expected_revision: 106
+  last_updated_at: "2026-10-17T18:45:00Z"
   active_contract: "YM-015F-JET-002B"
-  frozen_candidate: "1bba201086bd2134f3d25d9df4a749e3c16ce407"
+  frozen_candidate: "1194123154e88b7f82224dd21952086edd903710"
 
 current_objective: YM-015F-JET-002B
 
@@ -49,7 +49,7 @@ objectives:
     atlas_writer_and_coordinator: "primary-worker"
     reviewer_path: "verification/raw/YM-075_E4_RAW_20261017.md"
     acceptor: "verification/YM-075_TECHNICAL_ACCEPTANCE.md"
-    status: CANDIDATE_FROZEN
+    status: SCIENTIFICALLY_ACCEPTED
     scope_limitation: "OS_WIGHTMAN_AXIOM_RECONSTRUCTION_CLOSED_ON_BUFFERED_DOMAIN_MACROSCOPIC_GAP_AND_INFRARED_CROSSOVER_OPEN"
   - id: YM-074
     scope_in: "Unitary real-time evolution U(t_Mink) = e^{-i t_Mink H}, spatial translation group hat{U}(y) = e^{i y . P}, relativistic forward light-cone spectrum spec(P^mu) subset bar{V}_+, positive invariant mass operator M^2 = H^2 - P^2 >= 0 on buffered domains (delta > 0), proof of Lemma YM-074F-UNITARY-REAL-TIME-EVOLUTION-AND-RELATIVISTIC-SPECTRUM, and Test 38 finite certificate"
