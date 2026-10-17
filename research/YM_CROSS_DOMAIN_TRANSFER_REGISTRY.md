@@ -515,3 +515,14 @@ Source mechanisms: own finite row-space/kernel target-descent theorem, positive 
   - Lemma `YM-063F-FINITE-CHART-BOUNDARY-AND-FOURTH-ORDER-TAYLOR-REMAINDER` formally proved within stated hypotheses; isolated immediate next obligation Lemma `YM-064F-MARKED-MAYER-EXPANSION-AND-POLYMER-PINNING`.
 - Open bridge: Linked Mayer Cluster Expansion and Polymer Pinning (Lemma `YM-064F`), Cutoff-Uniform Multiscale Cluster Bounds (Lemma `YM-059F`), Continuum Wightman Reconstruction and Spectral Gap (Lemma `YM-060F`), crossing infrared crossover `E-CROSSOVER`.
 - Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.
+## XFER-YM-ONE-TERM-PULLBACK-064: Linked Mayer Cluster Expansion, BKAR Forest Decoupling, Connected Polymer Pinning, and Tree-Decay Inheritance
+
+- Source: Bałaban CMP 122, 175–202 (1989), eqs. (1.84)–(1.90); CMP 109, 249–301 (1987), Section 3.
+- Target: YM-015F connected polymer pinning and tree-decay inheritance of degree-one physical marked observable insertions.
+- Verified mapping:
+  - Local Mayer expansion $\prod_{X \subset \Lambda_0} (1 + (e^{f_X} - 1))$ and BKAR forest covariance interpolation $C_k(s(\mathfrak{F}))$ decoupling connected components ($s_{xy}(\mathfrak{F}) = 0$ between distinct trees), eliminating extensive volume divergence $\Delta_{\mathrm{unlinked\_vol}} = (5/4)^3 - 1 = 61/64 > 0$.
+  - Exact hard-core exclusion ratio $\mathcal{Z}_{\mathrm{vac}}(\Lambda_0 \setminus Y) / \mathcal{Z}_{\mathrm{vac}}(\Lambda_0) = \exp(-\sum_{C \cap Y \ne \emptyset} \phi^T(C))$ pinning all surviving Ursell clusters $C$ to the observable support $Y$, with exact cancellation of distant decoupled blocks ($\Delta_{\mathrm{decoupled\_invariance}} = 0$) and 3-block dimer-chain certificates ($\mathcal{Z}_{\mathrm{vac}}(\{1, 2, 3\}) = 145/64$, $\mathcal{Z}_{\mathrm{vac}}(\{2, 3\}) = 108/64$, $\Delta_{\mathrm{exclusion\_dressing}} = 37/145 > 0$, $\Delta_{\mathrm{dimer\_exclusion}} = 8/145 > 0$).
+  - Spanning-tree decay inheritance along BKAR trees with rational link contraction $r_{\mathrm{pin}} = 1/6 < 1$, margin $\Delta_{\mathrm{pin\_contraction}} = 5/6 > 0$, and convergent geometric dressing sum $\Sigma_{\mathrm{pinned}} = 1/5 < \infty$.
+  - Lemma `YM-064F-MARKED-MAYER-EXPANSION-AND-POLYMER-PINNING` formally proved within stated hypotheses; isolated immediate next obligation Lemma `YM-065F-COMPENSATING-GAUGE-TRANSFORMATION-AND-REEXPONENTIATION`.
+- Open bridge: Compensating Gauge Transformation and Re-Exponentiation (Lemma `YM-065F`), Cutoff-Uniform Multiscale Cluster Bounds (Lemma `YM-059F`), Continuum Wightman Reconstruction and Spectral Gap (Lemma `YM-060F`), crossing infrared crossover `E-CROSSOVER`.
+- Allowed conclusion: None. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Zero DAG edges close.

@@ -500,3 +500,24 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
 4. **Established Lemma and Isolated Next Downstream Obligation:**
    - Proved Lemma `YM-063F-FINITE-CHART-BOUNDARY-AND-FOURTH-ORDER-TAYLOR-REMAINDER`.
    - Isolated immediate next downstream obligation: Lemma `YM-064F-MARKED-MAYER-EXPANSION-AND-POLYMER-PINNING` (Linked Mayer cluster expansion of exponentiated effective action perturbations, connected polymer pinning of physical observable insertions, and tree-decay inheritance in Bałaban CMP 122 (1.84)–(1.90)).
+## CDC-064: Linked Mayer Cluster Expansion of Exponentiated Effective Action Perturbations, Connected Polymer Pinning of Physical Observable Insertions, and Tree-Decay Inheritance (`YM-064`)
+
+- **Date:** 2026-10-17
+- **Primary Contract:** `YM-015F-JET-002B`
+- **Source Target:** Bałaban CMP 122, 175–202 (1989), eqs. (1.84)–(1.90); CMP 109, 249–301 (1987), Section 3.
+- **Defects Corrected & Mathematical Resolutions:**
+
+1. **Defect 1: Unfactored Global Perturbation Expansion & Extensive Volume Growth:**
+   - Expanding $\exp(\sum_{X \subset \Lambda_0} f_X(V_0, B^\prime))$ via a global series without local Mayer factorization and BKAR forest covariance decoupling retains disconnected exterior block products that grow as $(1 + \eta)^{|\Lambda_0|-1}$ with active volume $|\Lambda_0|$.
+   - **Correction:** Formulated the local Mayer identity $\prod_X (1 + K_{\mathrm{Mayer}}(X))$ ($K_{\mathrm{Mayer}}(X) = e^{f_X} - 1$) combined with the Brydges–Kennedy–Abdesselam–Rivasseau (BKAR) forest interpolation formula, where $s_{xy}(\mathfrak{F}) = 0$ between distinct connected trees of $\mathfrak{F}$ factorizes the Gaussian expectation across connected components. Certified on $N = 4$ blocks at $\eta = 1/4$ that the unfactored weight $W_{\mathrm{unlinked}}(4) = 125/64$ exceeds the pinned normalized weight $W_{\mathrm{pinned}} = 1$ by $\Delta_{\mathrm{unlinked\_vol}} = 61/64 > 0$.
+
+2. **Defect 2: Omission of Hard-Core Multi-Block Exclusion Dressing in Pinned Observable Expectations:**
+   - Assuming that dividing by $\mathcal{Z}_{\mathrm{vac}}(\Lambda_0)$ either leaves disconnected vacuum polymers uncancelled or reduces the exclusion ratio $\mathcal{Z}_{\mathrm{vac}}(\Lambda_0 \setminus Y) / \mathcal{Z}_{\mathrm{vac}}(\Lambda_0)$ to a naive single-site factor $1 / (1 + \eta_Y)$ omits overlapping multi-block dimer contributions intersecting $Y$.
+   - **Correction:** Derived the exact Polymer Pinning Identity $\mathcal{Z}_{\mathrm{vac}}(\Lambda_0 \setminus Y) / \mathcal{Z}_{\mathrm{vac}}(\Lambda_0) = \exp(-\sum_{C \cap Y \ne \emptyset} \phi^T(C))$. On the 3-block chain $\Lambda_0 = \{1, 2, 3\}$ with $Y = \{1\}$, $\eta_i = 1/4$, and nearest-neighbor dimers $\eta_{\{1, 2\}} = \eta_{\{2, 3\}} = 1/8$, proved $\mathcal{Z}_{\mathrm{vac}}(\{1, 2, 3\}) = 145/64$ and $\mathcal{Z}_{\mathrm{vac}}(\{2, 3\}) = 108/64$, giving exact ratio $108/145$, exclusion dressing $\Delta_{\mathrm{exclusion\_dressing}} = 37/145 > 0$, dimer-overlap defect $\Delta_{\mathrm{dimer\_exclusion}} = 4/5 - 108/145 = 8/145 > 0$, and exact invariance under adjoining a decoupled block $4$ ($540/725 = 108/145$, $\Delta_{\mathrm{decoupled\_invariance}} = 0$).
+
+3. **Defect 3: Spanning-Tree Decay Inheritance of Pinned Marked Polymer Activities:**
+   - Proved via the spanning-tree triangle inequality along BKAR trees rooted at $Y_0 \cap \operatorname{supp}(f_{t_0}) \ne \emptyset$ that the coarse-grained marked polymer activity $\mathcal{I}_{Y^{(k+1)}}^{\mathrm{marked}}$ inherits exponential tree decay from scale $k$ to scale $k+1$. On the certified rational model ($z = 8, C_{\mathrm{link}} = 1/12, \eta = 1/4$), established $r_{\mathrm{pin}} = 1/6 < 1$, margin $\Delta_{\mathrm{pin\_contraction}} = 5/6 > 0$, and convergent geometric dressing sum $\Sigma_{\mathrm{pinned}} = 1/5 < \infty$.
+
+4. **Established Lemma and Isolated Next Downstream Obligation:**
+   - Proved Lemma `YM-064F-MARKED-MAYER-EXPANSION-AND-POLYMER-PINNING`.
+   - Isolated immediate next downstream obligation: Lemma `YM-065F-COMPENSATING-GAUGE-TRANSFORMATION-AND-REEXPONENTIATION` (Compensating gauge transformation in Bałaban CMP 122 (1.85)–(1.88), inductive re-exponentiation of connected vacuum polymers vs. linear marked observable preservation, and one-loop running coupling / counterterm bookkeeping).

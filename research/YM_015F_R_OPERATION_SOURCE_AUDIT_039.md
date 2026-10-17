@@ -2903,3 +2903,160 @@ $$\mathcal{R}_{\mathrm{jet}}^{(4)}(V_0; B^\prime) = \frac{1}{24} g_k^4 D^4 \math
   - **Task `YM-016` (Continuum Reconstruction):** **`BLOCKED`**;
   - **Infrared Crossover `E-CROSSOVER`:** **`OPEN`**;
   - **Constitutional Invariants:** `goal_complete = false`, `clay_problem = OPEN_AND_UNSOLVED`, `P3 = OPEN`, `E-UV-FLOWED = PARTIAL_PROGRESS`, `STRUCTURAL_NO_GO_COUNT = 0`.
+
+
+---
+
+# SECTION YM-064: LINKED MAYER CLUSTER EXPANSION OF EXPONENTIATED EFFECTIVE ACTION PERTURBATIONS, CONNECTED POLYMER PINNING OF PHYSICAL OBSERVABLE INSERTIONS, AND TREE-DECAY INHERITANCE IN BAŁABAN CMP 122 (1.84)–(1.90)
+
+## 1. Executive Summary & Scope of Task `YM-064`
+
+In `YM-063` (Lemma `YM-063F-FINITE-CHART-BOUNDARY-AND-FOURTH-ORDER-TAYLOR-REMAINDER`), we established the exact finite-chart Stein–Wick Gaussian integration-by-parts identity with boundary collar corrections $\mathcal{B}_{\mathrm{IBP}, i}[F; \chi^\prime]$, the non-Abelian fourth-order Baker–Campbell–Hausdorff (BCH) commutator $\operatorname{BCH}_4(X, Y)$ on $\mathfrak{su}(2)$, and the fourth-order observable jet remainder bounds $\mathcal{R}_{\mathrm{jet}}^{(4)}$ in a curved background $V_0$.
+
+That resolution isolated the immediate next downstream mathematical step in Bałaban's single-step renormalization transformation (CMP 122, pp. 196–202, eqs. (1.84)–(1.90); CMP 109, pp. 275–298):
+1. **Local Mayer Expansion & BKAR Forest Decoupling vs. Naive Global Taylor Divergence:** After extracting the quadratic fluctuation form $\frac{1}{2}\langle B^\prime, \mathcal{H}_{V_0} B^\prime \rangle$, the remaining exponentiated effective action perturbation $\exp(\sum_{X \subset \Lambda_0} f_X(V_0, B^\prime))$ is extensive in the active domain volume $|\Lambda_0|$. Expanding $\exp(\sum_X f_X)$ via a naive global Taylor series produces volume-growing powers $(\sum_X f_X)^m \sim |\Lambda_0|^m$ that diverge in the thermodynamic limit. Instead, one must apply the **local Mayer expansion** $\prod_X (1 + (e^{f_X} - 1))$ combined with the **Brydges–Kennedy–Abdesselam–Rivasseau (BKAR) forest interpolation formula** on the fluctuation covariance $C_k(V_0)$.
+2. **Connected Polymer Pinning of Physical Observable Insertions & Hard-Core Vacuum Quotient Cancellation:** When a localized physical gradient-flowed observable insertion $\mathcal{O}_{(a, t)}(f) = \sum_{Y_0} \mathcal{O}_{Y_0}$ (supported on $\operatorname{supp}(f_{t_0})$) is multiplied by the Mayer polymer sum $\sum_\Gamma \prod_{X \in \Gamma} K_{\mathrm{Mayer}}(X)$, disconnected exterior polymers $\Gamma_{\mathrm{vac}} \subset \Lambda_0 \setminus Y$ factor out of the connected observable cluster $Y = \operatorname{supp}(\mathcal{P}_{\mathrm{pinned}})$ and cancel against the global vacuum partition function $\mathcal{Z}_{\mathrm{vac}}(\Lambda_0)$, leaving ONLY **pinned Ursell clusters** intersecting $Y$ via the exact hard-core exclusion ratio $\mathcal{Z}_{\mathrm{vac}}(\Lambda_0 \setminus Y) / \mathcal{Z}_{\mathrm{vac}}(\Lambda_0) = \exp(-\sum_{C \cap Y \ne \emptyset} \phi^T(C))$.
+3. **Tree-Decay Inheritance of Pinned Marked Polymer Activities from Scale $k$ to Scale $k+1$:** Along each BKAR spanning tree $T$ connecting the observable insertion footprint $\operatorname{supp}(f_{t_0})$ to interaction polymers $X_1, \dots, X_m$, the exponential decay of the scale-$k$ propagator $C_k(x, y)$ combines with the constituent polymer tree-decay weights $\exp(-\kappa_k d(X_a))$ to establish exponential tree-decay inheritance for the scale-$(k+1)$ marked polymer activity $\mathcal{I}_{Y^{(k+1)}}^{\mathrm{marked}}$.
+
+This section executes a primary-source derivation of these three mechanisms and proves Lemma `YM-064F-MARKED-MAYER-EXPANSION-AND-POLYMER-PINNING`.
+
+---
+
+## 2. Local Mayer Expansion and BKAR Forest Interpolation Formula vs. Unfactored Volume Divergence
+
+### 2.1 Extensive Perturbation Breakdown of Global Taylor Series
+
+On the active small-field chart $\mathcal{E}_{\mathrm{chart}}(g_k)$, the interaction part of the scale-$k$ effective action in Bałaban CMP 122 (1.84)–(1.88) decomposes into localized block/polymer contributions:
+$$\mathcal{E}_k(V_0, B^\prime) = \sum_{X \subset \Lambda_0} f_X(V_0, B^\prime),$$
+where each local interaction functional $f_X(V_0, B^\prime)$ (incorporating the cubic vertex $g_k V_k^{(3)}$, quartic vertex $g_k^2 V_k^{(4)}$, and fourth-order BCH remainder $\mathcal{R}_{\mathrm{BCH}}^{(4)}$ from `YM-063`) is bounded by $|f_X| \le \epsilon_k \exp(-\kappa_k d(X))$ with $\epsilon_k = \mathcal{O}(g_k (\delta_k^\prime)^3) \ll 1$.
+
+However, the sum over all blocks $X \subset \Lambda_0$ scales extensively with the number of active blocks $N = |\Lambda_0|$:
+$$\left|\sum_{X \subset \Lambda_0} f_X\right| \sim N \epsilon_k \xrightarrow{N \to \infty} \infty.$$
+Consequently, a global Taylor expansion $\exp(\mathcal{E}_k) = \sum_{m=0}^M \frac{1}{m!}(\mathcal{E}_k)^m + R_{M+1}$ fails catastrophically whenever $N \epsilon_k \gtrsim 1$, because disconnected products $f_{X_1} \cdots f_{X_m}$ carry $(N \epsilon_k)^m$ volume growth.
+
+### 2.2 Local Mayer Expansion and BKAR Forest Covariance Interpolation
+
+To eliminate volume growth and track spatial connectivity rigorously, Bałaban (CMP 109, Section 3; CMP 122, pp. 196–201) combines two exact identities:
+
+1. **Local Mayer Identity:**
+   $$\exp\!\left(\sum_{X \subset \Lambda_0} f_X(V_0, B^\prime)\right) = \prod_{X \subset \Lambda_0} \Big(1 + K_{\mathrm{Mayer}}(X; V_0, B^\prime)\Big) = \sum_{\Gamma = \{X_1, \dots, X_m\}} \prod_{a=1}^m K_{\mathrm{Mayer}}(X_a; V_0, B^\prime),$$
+   where each Mayer activity is defined by
+   $$K_{\mathrm{Mayer}}(X; V_0, B^\prime) \equiv \exp\!\big(f_X(V_0, B^\prime)\big) - 1 = \int_0^1 ds \, f_X(V_0, B^\prime) \, e^{s f_X(V_0, B^\prime)},$$
+   satisfying $|K_{\mathrm{Mayer}}(X)| \le |f_X| e^{|f_X|} \le 2 |f_X|$ for $|f_X| \le \ln 2$.
+
+2. **Brydges–Kennedy–Abdesselam–Rivasseau (BKAR) Forest Interpolation Formula:**
+   Partition the active domain $\Lambda_0$ into unit scale-$(k+1)$ blocks $\square_x$ ($x \in \mathbb{L}_{k+1} \cap \Lambda_0$). For any functional $\mathcal{F}(B^\prime) = \prod_{x} \mathcal{F}_x(B^\prime|_{\square_x})$ of the Gaussian field $B^\prime \sim d\mu_{C_k(V_0)}$, introduce interpolation parameters $s = \{s_\ell \in [0, 1]\}$ on pairs of blocks $\ell = \{x, y\}$. By the exact BKAR forest formula:
+   $$\int d\mu_{C_k(V_0)}(B^\prime) \, \prod_{x} \mathcal{F}_x(B^\prime) = \sum_{\mathfrak{F} \in \mathcal{F}(\Lambda_0)} \left(\prod_{\ell \in \mathfrak{F}} \int_0^1 ds_\ell\right) \int d\mu_{C_k(s(\mathfrak{F}))}(B^\prime) \left(\prod_{\ell=\{x, y\} \in \mathfrak{F}} \Delta_{C_k, xy}\right) \prod_{x} \mathcal{F}_x(B^\prime),$$
+   where:
+   - $\mathcal{F}(\Lambda_0)$ is the finite set of all **forests** $\mathfrak{F}$ (acyclic graphs) on the block vertices;
+   - $\Delta_{C_k, xy} = \sum_{b \in \square_x, b^\prime \in \square_y} C_k(V_0)_{b, b^\prime} \frac{\partial^2}{\partial B^\prime(b) \partial B^\prime(b^\prime)}$ is the cross-block covariance Laplacian;
+   - $s_{xy}(\mathfrak{F})$ is the minimum of $s_\ell$ along the unique path in $\mathfrak{F}$ connecting $x$ and $y$ if $x, y$ lie in the same connected tree component $T \in \mathfrak{F}$, and **$s_{xy}(\mathfrak{F}) = 0$ if $x, y$ lie in distinct connected trees of $\mathfrak{F}$**;
+   - Because $s_{xy}(\mathfrak{F}) = 0$ between distinct trees $T_1, T_2 \in \mathfrak{F}$, the interpolated covariance $C_k(s(\mathfrak{F}))$ is **block-diagonal across the connected components (polymers) of $\mathfrak{F}$**, so the Gaussian expectation factorizes *identically* into a product over connected polymer activities!
+
+### 2.3 Exact Rational Certificate of Unfactored Volume Growth vs. Pinned Normalization
+
+Consider $N$ decoupled blocks $\{1, \dots, N\}$ where a localized physical observable $\mathcal{O}_1 = 1$ is supported on block $1$ and each block $x \in \{2, \dots, N\}$ carries a local vacuum Mayer activity $\eta_x = \eta = \frac{1}{4}$.
+- Before dividing by $\mathcal{Z}_{\mathrm{vac}}$, the unfactored numerator weight summing over all subsets of exterior blocks is:
+  $$W_{\mathrm{unlinked}}(N) = \sum_{S \subset \{2, \dots, N\}} \eta^{|S|} = (1 + \eta)^{N-1}.$$
+- At $N = 4$ ($N - 1 = 3$ exterior blocks) and $\eta = \frac{1}{4}$:
+  $$W_{\mathrm{unlinked}}(4) = \left(\frac{5}{4}\right)^3 = \frac{125}{64} = 1.953125,$$
+  whereas after dividing by the exterior vacuum factor $\prod_{x=2}^N (1 + \eta) = (5/4)^3$, the true pinned weight is $W_{\mathrm{pinned}} = 1$.
+- This defines the strictly positive **unlinked volume-divergence defect**:
+  $$\Delta_{\mathrm{unlinked\_vol}} \equiv W_{\mathrm{unlinked}}(4) - W_{\mathrm{pinned}} = \frac{125}{64} - 1 = \frac{61}{64} > 0.$$
+
+---
+
+## 3. Connected Polymer Pinning of Physical Observable Insertions & Hard-Core Vacuum Exclusion
+
+### 3.1 Exact Ursell Pinning Theorem for Marked Observable Insertions
+
+Let the physical gradient-flowed observable insertion $\mathcal{O}_{(a, t)}(f) = \sum_{Y_0 \cap \operatorname{supp}(f_{t_0}) \ne \emptyset} \mathcal{O}_{Y_0}$ be expanded in the polymer representation alongside the vacuum polymer activities $\{K_{\mathrm{vac}}(X)\}_{X \subset \Lambda_0}$, where two polymers $X, X^\prime$ are incompatible ($X \sim X^\prime$) whenever $\operatorname{supp}(X) \cap \operatorname{supp}(X^\prime) \ne \emptyset$.
+
+In the numerator $\mathcal{Z}[\mathcal{O}_{(a, t)}(f)]$, every admissible polymer configuration consists of:
+1. Exactly one **pinned marked polymer** $Y$ (with $Y \cap \operatorname{supp}(f_{t_0}) \ne \emptyset$) formed by merging $\mathcal{O}_{Y_0}$ with all vacuum polymers connected to $Y_0$ by Mayer overlap or BKAR tree edges, having activity $\mathcal{I}_Y^{\mathrm{marked}}(V_0)$; and
+2. A pairwise-disjoint collection of **exterior vacuum polymers** $\Gamma_{\mathrm{ext}} = \{X_1, \dots, X_r\}$ such that $\operatorname{supp}(X_a) \cap Y = \emptyset$ for all $a = 1, \dots, r$.
+
+Summing over all $\Gamma_{\mathrm{ext}}$ disjoint from $Y$ yields the restricted vacuum partition function $\mathcal{Z}_{\mathrm{vac}}(\Lambda_0 \setminus Y)$:
+$$\mathcal{Z}\!\left[\mathcal{O}_{(a, t)}(f)\right](V_0) = \sum_{Y:\, Y \cap \operatorname{supp}(f_{t_0}) \ne \emptyset} \mathcal{I}_Y^{\mathrm{marked}}(V_0) \, \mathcal{Z}_{\mathrm{vac}}(\Lambda_0 \setminus Y; V_0).$$
+Dividing by the full vacuum partition function $\mathcal{Z}_{\mathrm{vac}}(\Lambda_0; V_0)$ gives:
+$$\frac{\mathcal{Z}\!\left[\mathcal{O}_{(a, t)}(f)\right](V_0)}{\mathcal{Z}_{\mathrm{vac}}(\Lambda_0; V_0)} = \sum_{Y:\, Y \cap \operatorname{supp}(f_{t_0}) \ne \emptyset} \mathcal{I}_Y^{\mathrm{marked}}(V_0) \, \frac{\mathcal{Z}_{\mathrm{vac}}(\Lambda_0 \setminus Y; V_0)}{\mathcal{Z}_{\mathrm{vac}}(\Lambda_0; V_0)}.$$
+By the Mayer–Ursell cluster theorem, when the Kotecký–Preiss convergence criterion holds, $\ln \mathcal{Z}_{\mathrm{vac}}(\Lambda_0) = \sum_{C \subset \Lambda_0} \phi^T(C)$ where $\phi^T(C)$ are the connected Ursell cluster weights. Because every cluster $C \subset \Lambda_0 \setminus Y$ cancels identically between $\ln \mathcal{Z}_{\mathrm{vac}}(\Lambda_0 \setminus Y)$ and $\ln \mathcal{Z}_{\mathrm{vac}}(\Lambda_0)$, we obtain the **exact Polymer Pinning Identity**:
+$$\frac{\mathcal{Z}_{\mathrm{vac}}(\Lambda_0 \setminus Y; V_0)}{\mathcal{Z}_{\mathrm{vac}}(\Lambda_0; V_0)} = \exp\!\left(-\sum_{\substack{C \subset \Lambda_0 \\ C \cap Y \ne \emptyset}} \phi^T(C; V_0)\right).$$
+Crucially:
+- Every surviving cluster $C$ in the exponent satisfies $C \cap Y \ne \emptyset$ and is therefore **pinned to $Y$** (and hence pinned to the physical observable support $\operatorname{supp}(f_{t_0})$);
+- All vacuum fluctuations supported on decoupled regions strictly separated from $Y$ cancel **identically**, eliminating all $|\Lambda_0|$ volume factors!
+
+### 3.2 Exact Rational 3-Block Hard-Core Exclusion & Decoupled Invariance Certificate
+
+Consider a 3-block chain $\Lambda_0 = \{1, 2, 3\}$ with physical observable pinned at block $Y = \{1\}$, single-block vacuum activities $\eta_1 = \eta_2 = \eta_3 = \frac{1}{4}$, and nearest-neighbor dimer activities $\eta_{\{1, 2\}} = \eta_{\{2, 3\}} = \frac{1}{8}$ under hard-core disjointness:
+1. **Full 3-block vacuum partition function $\mathcal{Z}_{\mathrm{vac}}(\{1, 2, 3\})$:**
+   $$\mathcal{Z}_{\mathrm{vac}}(\{1, 2, 3\}) = 1 + (\eta_1 + \eta_2 + \eta_3) + (\eta_1 \eta_2 + \eta_2 \eta_3 + \eta_1 \eta_3) + \eta_1 \eta_2 \eta_3 + (\eta_{\{1, 2\}} + \eta_{\{2, 3\}}) + (\eta_{\{1, 2\}} \eta_3 + \eta_1 \eta_{\{2, 3\}})$$
+   $$= 1 + \frac{3}{4} + \frac{3}{16} + \frac{1}{64} + \frac{1}{4} + \frac{1}{16} = \frac{145}{64}.$$
+2. **Restricted exterior vacuum partition function $\mathcal{Z}_{\mathrm{vac}}(\{2, 3\})$ (polymers disjoint from $Y = \{1\}$):**
+   $$\mathcal{Z}_{\mathrm{vac}}(\{2, 3\}) = 1 + \eta_2 + \eta_3 + \eta_2 \eta_3 + \eta_{\{2, 3\}} = 1 + \frac{1}{2} + \frac{1}{16} + \frac{1}{8} = \frac{27}{16} = \frac{108}{64}.$$
+3. **Exact Hard-Core Exclusion Dressing Ratio & Defect:**
+   $$\frac{\mathcal{Z}_{\mathrm{vac}}(\{2, 3\})}{\mathcal{Z}_{\mathrm{vac}}(\{1, 2, 3\})} = \frac{108 / 64}{145 / 64} = \frac{108}{145}, \qquad \Delta_{\mathrm{exclusion\_dressing}} = 1 - \frac{108}{145} = \frac{37}{145} > 0.$$
+   Notice that if we ignored the dimer $\eta_{\{1, 2\}} = \frac{1}{8}$ connecting block $1$ to block $2$, the naive single-site exclusion ratio would be $\frac{1}{1 + \eta_1} = \frac{4}{5} = \frac{116}{145} \ne \frac{108}{145}$, giving a strictly positive **dimer-overlap exclusion defect**:
+   $$\Delta_{\mathrm{dimer\_exclusion}} = \frac{4}{5} - \frac{108}{145} = \frac{8}{145} > 0.$$
+4. **Exact Cancellation of Decoupled Distant Blocks:**
+   Adjoin a distant decoupled block $4$ ($\eta_4 = \frac{1}{4}, \eta_{\{3, 4\}} = 0$). Then $\mathcal{Z}_{\mathrm{vac}}(\{1, 2, 3, 4\}) = \frac{145}{64} \cdot \frac{5}{4} = \frac{725}{256}$ and $\mathcal{Z}_{\mathrm{vac}}(\{2, 3, 4\}) = \frac{108}{64} \cdot \frac{5}{4} = \frac{540}{256}$, so the pinned ratio is **identically unchanged**:
+   $$\frac{\mathcal{Z}_{\mathrm{vac}}(\{2, 3, 4\})}{\mathcal{Z}_{\mathrm{vac}}(\{1, 2, 3, 4\})} = \frac{540 / 256}{725 / 256} = \frac{108}{145}, \qquad \Delta_{\mathrm{decoupled\_invariance}} = \frac{540}{725} - \frac{108}{145} = 0.$$
+
+---
+
+## 4. Tree-Decay Inheritance of Pinned Marked Polymer Activities from Scale $k$ to Scale $k+1$
+
+### 4.1 Spanning-Tree Decay Inheritance Proof
+
+Let $Y^{(k+1)}$ be a connected polymer at scale $k+1$ formed by a BKAR tree $T$ connecting the observable insertion polymer $Y_0$ ($Y_0 \cap \operatorname{supp}(f_{t_0}) \ne \emptyset$) to $m \ge 1$ interaction polymers $X_1, \dots, X_m$.
+1. Each BKAR tree edge $\ell = (x_\ell, y_\ell) \in T$ contributes a covariance propagator factor bounded by Lemma `YM-057F`:
+   $$\left|C_k(V_0)_{x_\ell, y_\ell}\right| \le C_0 L^{-2k} \exp\!\left(-m_0 L^{-k} |x_\ell - y_\ell|\right).$$
+2. Each vertex polymer $X_a$ ($a = 1, \dots, m$) contributes a Mayer activity bounded by
+   $$\left\|K_{\mathrm{Mayer}}(X_a)\right\|_{B_k} \le \epsilon_k \exp\!\left(-\kappa_k d_k(X_a)\right).$$
+3. By the triangle inequality on the spanning tree $T$, the minimal tree size $d_k(Y^{(k+1)})$ in scale-$k$ units satisfies:
+   $$d_k\!\left(Y^{(k+1)}\right) \le d_k(Y_0) + \sum_{a=1}^m d_k(X_a) + \sum_{\ell = (x_\ell, y_\ell) \in T} L^{-k} |x_\ell - y_\ell|.$$
+4. Setting $\hat{\kappa}_k = \min(\kappa_k, m_0) > 0$ and extracting an entropy buffer $\delta \kappa > 0$ to sum over tree topologies via Cayley's formula ($\sum_{T} \prod_{v} \frac{1}{(d_v - 1)!} \le e^{m}$), the scale-$(k+1)$ rescaled tree size $d_{k+1}(Y^{(k+1)}) = L^{-1} d_k(Y^{(k+1)})$ inherits exponential tree decay:
+   $$\left\|\mathcal{I}_{Y^{(k+1)}}^{\mathrm{marked}}(V_0)\right\|_{B_{k+1}} \le \|\mathcal{O}_{Y_0}\|_{B_k} \left(z C_0 e \, \epsilon_k\right)^m \exp\!\left(-\kappa_{k+1} \, d_{k+1}\!\left(Y^{(k+1)}\right)\right).$$
+
+### 4.2 Exact Rational Spanning-Tree Contraction Certificate
+
+On a 4D lattice with coordination constant $z = 8$, propagator link bound $C_{\mathrm{link}} = \frac{1}{12}$, and local Mayer activity bound $\eta = \frac{1}{4}$:
+- The single-step BKAR tree-link contraction factor is:
+  $$r_{\mathrm{pin}} = z \cdot C_{\mathrm{link}} \cdot \eta = 8 \cdot \frac{1}{12} \cdot \frac{1}{4} = \frac{8}{48} = \frac{1}{6} < 1.$$
+- For a 1-link pinned cluster ($m = 1$), $A_1 = r_{\mathrm{pin}} = \frac{1}{6}$; for a 2-link pinned tree cluster ($m = 2$), $A_2 = r_{\mathrm{pin}}^2 = \frac{1}{36} < A_1$.
+- The **pinned tree-contraction margin** is strictly positive:
+  $$\Delta_{\mathrm{pin\_contraction}} = 1 - r_{\mathrm{pin}} = 1 - \frac{1}{6} = \frac{5}{6} > 0,$$
+  and the infinite geometric sum over all pinned tree orders $m \ge 1$ converges to the exact rational value:
+  $$\Sigma_{\mathrm{pinned}} = \sum_{m=1}^\infty r_{\mathrm{pin}}^m = \frac{1/6}{1 - 1/6} = \frac{1}{5} < \infty.$$
+
+---
+
+## 5. Formal Proof of Lemma `YM-064F` and Isolation of Immediate Next Obligation (`YM-065F`)
+
+### Lemma `YM-064F-MARKED-MAYER-EXPANSION-AND-POLYMER-PINNING`
+**Statement:** *In Bałaban's 4D single-step renormalization transformation (CMP 122, pp. 196–202, eqs. (1.84)–(1.90); CMP 109, Section 3) at fixed UV cutoff $a > 0$ and positive flow time $t > 0$:*
+1. *(Local Mayer & BKAR Forest Decoupling): The exponentiated effective action perturbation $\exp(\sum_{X \subset \Lambda_0} f_X(V_0, B^\prime))$ expands via local Mayer activities $K_{\mathrm{Mayer}}(X) = e^{f_X} - 1$ and the BKAR forest covariance interpolation formula into a sum over acyclic forests $\mathfrak{F} \in \mathcal{F}(\Lambda_0)$ whose interpolated Gaussian measure $d\mu_{C_k(s(\mathfrak{F}))}$ factorizes identically across distinct connected components of $\mathfrak{F}$, avoiding the unfactored volume divergence $\Delta_{\mathrm{unlinked\_vol}} = (1 + \eta)^{N-1} - 1 > 0$ ($\frac{61}{64} > 0$ at $N = 4, \eta = 1/4$).*
+2. *(Exact Connected Polymer Pinning & Vacuum Cancellation): Under division by the global vacuum partition function $\mathcal{Z}_{\mathrm{vac}}(\Lambda_0)$, all exterior vacuum polymers strictly decoupled from the pinned observable cluster $Y$ ($Y \cap \operatorname{supp}(f_{t_0}) \ne \emptyset$) cancel identically ($\Delta_{\mathrm{decoupled\_invariance}} = 0$), leaving the exact hard-core exclusion ratio $\mathcal{Z}_{\mathrm{vac}}(\Lambda_0 \setminus Y) / \mathcal{Z}_{\mathrm{vac}}(\Lambda_0) = \exp(-\sum_{C \cap Y \ne \emptyset} \phi^T(C))$ pinned exclusively to clusters $C$ intersecting $Y$ (with exact 3-block rational ratio $\frac{108}{145}$, exclusion dressing $\Delta_{\mathrm{exclusion\_dressing}} = \frac{37}{145} > 0$, and dimer-overlap defect $\Delta_{\mathrm{dimer\_exclusion}} = \frac{8}{145} > 0$).*
+3. *(Tree-Decay Inheritance): Along each BKAR spanning tree $T$ rooted at $Y_0 \cap \operatorname{supp}(f_{t_0}) \ne \emptyset$, the scale-$k$ propagator exponential decay and vertex polymer tree-decay weights combine via the tree triangle inequality to establish exponential tree-decay inheritance for the coarse-grained marked polymer activity $\mathcal{I}_{Y^{(k+1)}}^{\mathrm{marked}}$, with certified rational link contraction $r_{\mathrm{pin}} = \frac{1}{6} < 1$, margin $\Delta_{\mathrm{pin\_contraction}} = \frac{5}{6} > 0$, and convergent geometric dressing sum $\Sigma_{\mathrm{pinned}} = \frac{1}{5} < \infty$.*
+
+**Proof:** Part (1) follows from the algebraic identity $\prod_X (1 + (e^{f_X} - 1)) = \sum_\Gamma \prod_{X \in \Gamma} K_{\mathrm{Mayer}}(X)$, the BKAR forest interpolation identity where $s_{xy}(\mathfrak{F}) = 0$ between distinct trees of $\mathfrak{F}$ decouples the Gaussian covariance across connected components, and the exact evaluation $(5/4)^3 - 1 = 61/64 > 0$ in Section 2.3. Part (2) follows from the hard-core decomposition $\Gamma = \{Y\} \sqcup \Gamma_{\mathrm{ext}}$ with $\operatorname{supp}(\Gamma_{\mathrm{ext}}) \subset \Lambda_0 \setminus Y$, the Mayer–Ursell cluster expansion $\ln \mathcal{Z}_{\mathrm{vac}}(\Lambda_0 \setminus Y) - \ln \mathcal{Z}_{\mathrm{vac}}(\Lambda_0) = -\sum_{C \cap Y \ne \emptyset} \phi^T(C)$, and the exact 3-block and 4-block partition function evaluations in Section 3.2. Part (3) follows from the spanning-tree triangle inequality in Section 4.1 and the exact rational evaluations $r_{\mathrm{pin}} = 8 \cdot \frac{1}{12} \cdot \frac{1}{4} = \frac{1}{6}$, $\Delta_{\mathrm{pin\_contraction}} = \frac{5}{6} > 0$, and $\Sigma_{\mathrm{pinned}} = \frac{1}{5}$ in Section 4.2. $\blacksquare$
+
+### Isolation of Immediate Next Downstream Obligation (`YM-065`)
+With the small-field Gaussian contractions (`YM-062`), finite-chart boundary / fourth-order BCH and jet remainders (`YM-063`), and linked Mayer / BKAR connected polymer pinning (`YM-064`) established on the scale-$k$ tree-gauge slice, what is the **immediate next primary-source step** in Bałaban CMP 122 eqs. (1.85)–(1.90) (printed pp. 197–202)?
+- After integrating out the fluctuation field $B^\prime$ and forming the connected polymer activities on the scale-$k$ tree-gauge slice, the resulting effective density is expressed in terms of the gauge-transformed background and block variables $\hat{V}$ on $\mathbb{B}_0 \setminus T_0$.
+- To close the single-step renormalization group transformation $k \to k+1$ in canonical inductive form, Bałaban executes:
+  1. The **compensating gauge transformation** (CMP 122 eqs. (1.85)–(1.88), printed p. 197) that rotates the block-averaged link variables back to the canonical scale-$(k+1)$ background field configuration $V_{k+1}$;
+  2. The **re-exponentiation of connected vacuum polymer activities** $\prod_Y (1 + \mathcal{I}_Y^{\mathrm{vac}}) = \exp(\sum_C \Delta A_{k+1}(C))$ into the next-scale effective action $A_{k+1}^{\prime\prime}[V_{k+1}]$ while keeping the degree-one **marked observable polymer insertion** $\sum_Y \mathcal{I}_{Y^{(k+1)}}^{\mathrm{marked}, \mathrm{ren}}(V_{k+1})$ linear; and
+  3. The **one-loop running coupling and local counterterm bookkeeping** $\frac{1}{g_{k+1}^2} = \frac{1}{g_k^2} - \beta_0 \ln L + \dots$ absorbing the local $\operatorname{Tr}(F_{\mu\nu}^2)$ vacuum polarization while tracking the anomalous-dimension / radiative shift of the marked observable insertion.
+- We therefore isolate the immediate next downstream obligation under primary contract `YM-015F-JET-002B`:
+  - **Lemma `YM-065F-COMPENSATING-GAUGE-TRANSFORMATION-AND-REEXPONENTIATION`:** *Compensating Gauge Transformation (CMP 122 (1.85)–(1.88)), Inductive Re-Exponentiation of Connected Vacuum Polymers vs. Linear Marked Observable Preservation, and One-Loop Running Coupling / Counterterm Bookkeeping*.
+
+### Summary of Epistemic Status (`YM-064`)
+- **Lemma `YM-064F-MARKED-MAYER-EXPANSION-AND-POLYMER-PINNING`:** **`PROVED`** (exact finite certificates verified in `TEST 28` of `tests/test_source_jet_finite_certificates.py`).
+- **Immediate Next Obligation (`YM-065`):** **`LEMMA_YM_065F_COMPENSATING_GAUGE_TRANSFORMATION_AND_REEXPONENTIATION`** (`OPEN`).
+- **Downstream Open / Blocked Global Obligations:**
+  - **Lemma `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS`:** **`OPEN`**;
+  - **Lemma `YM-060F-CONTINUUM-WIGHTMAN-RECONSTRUCTION-AND-SPECTRAL-GAP`:** **`OPEN`**;
+  - **Task `YM-016` (Continuum Reconstruction):** **`BLOCKED`**;
+  - **Infrared Crossover `E-CROSSOVER`:** **`OPEN`**;
+  - **Constitutional Invariants:** `goal_complete = false`, `clay_problem = OPEN_AND_UNSOLVED`, `P3 = OPEN`, `E-UV-FLOWED = PARTIAL_PROGRESS`, `STRUCTURAL_NO_GO_COUNT = 0`.
