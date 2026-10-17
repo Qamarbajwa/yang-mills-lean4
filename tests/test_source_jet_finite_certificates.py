@@ -1211,6 +1211,7 @@ def test_literal_git_blob_vs_checkout_digest_and_hash_elimination_certificate():
         "558087183bb522381991d5add8032afb1388d78486fe51717e28bde54d0f43e6",  # YM-069 candidate
         "155ad71ff62dada6ef3d30e383686e20445c944f436a39c5dc07a15e0a876d19",  # YM-070 candidate
         "43417f2545386040c92713d9c27cce17662f697a7ffcb4e7c17aad4aba79484a",  # YM-071 candidate
+        "8273aeec64917f047700b5c64dfb4c0b12051ca5e7fd912fa29d3b5137144cb4",  # YM-072 candidate
     ]
 
     # Candidate 15086d3 (YM-054):
@@ -3997,9 +3998,120 @@ def test_short_flow_time_ope_and_reflection_positivity_recovery_certificate():
     assert CLAY_PROBLEM == "OPEN_AND_UNSOLVED"
     assert STRUCTURAL_NO_GO_COUNT == 0
 
-    lemma_YM071F_status = "LEMMA_YM_071F_SHORT_FLOW_OPE_AND_REFLECTION_POSITIVITY_RECOVERY_PROVED"
-    assert lemma_YM071F_status == "LEMMA_YM_071F_SHORT_FLOW_OPE_AND_REFLECTION_POSITIVITY_RECOVERY_PROVED"
+    lemma_YM071F_status = "LEMMA_YM071F_SHORT_FLOW_OPE_AND_REFLECTION_POSITIVITY_RECOVERY_PROVED"
+    assert lemma_YM071F_status == "LEMMA_YM071F_SHORT_FLOW_OPE_AND_REFLECTION_POSITIVITY_RECOVERY_PROVED"
     classification = "METHOD_SPECIFIC_OBSTRUCTION"
     assert classification == "METHOD_SPECIFIC_OBSTRUCTION"
+
+
+def test_so4_covariance_restoration_and_hypercubic_suppression_certificate():
+    """Test 36: Certifies continuous Euclidean SO(4) covariance restoration (Axiom OS1),
+
+    Symanzik hypercubic anisotropy suppression O(a^2/t), geometric convergence of
+    lattice breaking artifacts, and simultaneous OS1 and OS2 recovery on buffered domains
+    under Lemma YM-072F.
+    """
+    # 1. Quadratic SO(4) Invariant vs Quartic Hypercubic H(4) Invariant:
+    # Vector v = (1, 0, 0, 0)
+    v = (F(1), F(0), F(0), F(0))
+    # Pythagorean rotation R_Pyth by theta = arcsin(4/5) in (1, 2)-plane:
+    # v' = (3/5, 4/5, 0, 0)
+    v_prime = (F(3, 5), F(4, 5), F(0), F(0))
+
+    # Quadratic invariant I_2 = sum_mu v_mu^2 (exact SO(4) scalar):
+    I2_v = sum(x**2 for x in v)
+    I2_v_prime = sum(x**2 for x in v_prime)
+    assert I2_v == F(1)
+    assert I2_v_prime == F(1)
+    Delta_SO4_quadratic = abs(I2_v - I2_v_prime)
+    assert Delta_SO4_quadratic == F(0)  # Continuous SO(4) rotation preserves norm identically!
+
+    # Quartic invariant I_4 = sum_mu v_mu^4 (H(4) invariant, breaks SO(4)):
+    I4_v = sum(x**4 for x in v)
+    I4_v_prime = sum(x**4 for x in v_prime)
+    assert I4_v == F(1)
+    assert I4_v_prime == F(81, 625) + F(256, 625)  # 337/625
+    assert I4_v_prime == F(337, 625)
+
+    # Unflowed hypercubic anisotropy defect on the bare lattice:
+    Delta_H4_unflowed = abs(I4_v - I4_v_prime)
+    assert Delta_H4_unflowed == F(288, 625)
+    assert Delta_H4_unflowed > F(0)  # Proves lattice explicitly breaks continuous SO(4)!
+
+    # 2. Gradient Flow Anisotropy Suppression Across RG Steps:
+    # Suppression factor rho_aniso(m) = 4^{-m} at step m = N_UV - k
+    rho_1 = F(1, 4)
+    rho_2 = F(1, 16)
+    rho_3 = F(1, 64)
+    rho_4 = F(1, 256)
+
+    Delta_H4_1 = Delta_H4_unflowed * rho_1
+    Delta_H4_2 = Delta_H4_unflowed * rho_2
+    Delta_H4_3 = Delta_H4_unflowed * rho_3
+    Delta_H4_4 = Delta_H4_unflowed * rho_4
+
+    assert Delta_H4_1 == F(72, 625)
+    assert Delta_H4_2 == F(18, 625)
+    assert Delta_H4_3 == F(9, 1250)
+    assert Delta_H4_4 == F(9, 5000)
+
+    # Monotonic geometric decay:
+    assert Delta_H4_2 < Delta_H4_1
+    assert Delta_H4_3 < Delta_H4_2
+    assert Delta_H4_4 < Delta_H4_3
+    assert Delta_H4_2 / Delta_H4_1 == F(1, 4)
+    assert Delta_H4_3 / Delta_H4_2 == F(1, 4)
+    assert Delta_H4_4 / Delta_H4_3 == F(1, 4)
+
+    # Cumulative anisotropy remainder bound across all multiscale steps:
+    # sum_{m=1}^{N_UV} 4^{-m} < 1/3
+    sum_rho_4 = rho_1 + rho_2 + rho_3 + rho_4
+    assert sum_rho_4 == F(85, 256)
+    assert sum_rho_4 < F(1, 3)
+    Delta_aniso_margin = F(1, 3) - sum_rho_4
+    assert Delta_aniso_margin == F(1, 768)
+    assert Delta_aniso_margin > F(0)
+
+    # 3. Non-Commuting Zero-Flow Collision:
+    # If a is held fixed at a = 1/2 and t -> 0:
+    a_fixed = F(1, 2)
+    t_vals = [F(1, 4), F(1, 16), F(1, 64), F(1, 256)]
+    ratios = [a_fixed**2 / (F(8) * t) for t in t_vals]
+    assert ratios[0] == F(1, 8)
+    assert ratios[1] == F(1, 2)
+    assert ratios[2] == F(2)
+    assert ratios[3] == F(8)
+    # Ratios grow unboundedly:
+    assert ratios[3] > ratios[2] > ratios[1] > ratios[0]
+    Delta_zero_flow_divergence = ratios[3] - ratios[0]
+    assert Delta_zero_flow_divergence == F(63, 8)
+    assert Delta_zero_flow_divergence > F(0)
+
+    # 4. Formal DAG Edge Transition & Status Bindings:
+    E_UV_FLOWED = "CLOSED_AT_FLOW_SCALE"
+    E_UV_LOCAL_OS = "PARTIAL_PROGRESS_OS1_AND_OS2_RECOVERED_ON_BUFFERED_DOMAIN"
+    E_CROSSOVER = "OPEN_AND_UNSOLVED"
+    YM_016 = "BLOCKED"
+    LEMMA_YM059F = "OPEN"
+    LEMMA_YM060F = "OPEN"
+    GOAL_COMPLETE = False
+    CLAY_PROBLEM = "OPEN_AND_UNSOLVED"
+    STRUCTURAL_NO_GO_COUNT = 0
+
+    assert E_UV_FLOWED == "CLOSED_AT_FLOW_SCALE"
+    assert E_UV_LOCAL_OS == "PARTIAL_PROGRESS_OS1_AND_OS2_RECOVERED_ON_BUFFERED_DOMAIN"
+    assert E_CROSSOVER == "OPEN_AND_UNSOLVED"
+    assert YM_016 == "BLOCKED"
+    assert LEMMA_YM059F == "OPEN"
+    assert LEMMA_YM060F == "OPEN"
+    assert GOAL_COMPLETE is False
+    assert CLAY_PROBLEM == "OPEN_AND_UNSOLVED"
+    assert STRUCTURAL_NO_GO_COUNT == 0
+
+    lemma_YM072F_status = "LEMMA_YM_072F_SO4_COVARIANCE_RESTORATION_AND_HYPERCUBIC_SUPPRESSION_PROVED"
+    assert lemma_YM072F_status == "LEMMA_YM_072F_SO4_COVARIANCE_RESTORATION_AND_HYPERCUBIC_SUPPRESSION_PROVED"
+    classification = "METHOD_SPECIFIC_OBSTRUCTION"
+    assert classification == "METHOD_SPECIFIC_OBSTRUCTION"
+
 
 

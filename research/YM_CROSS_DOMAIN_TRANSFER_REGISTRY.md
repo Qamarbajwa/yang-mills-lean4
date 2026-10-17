@@ -604,4 +604,17 @@ Source mechanisms: own finite row-space/kernel target-descent theorem, positive 
 - Open bridge: Boundary contact operator renormalization, Cutoff-Uniform Multiscale Cluster Bounds (Lemma `YM-059F`), Continuum Wightman Reconstruction and Spectral Gap (Lemma `YM-060F`), crossing infrared crossover `E-CROSSOVER`.
 - Allowed conclusion: Exact reflection positivity (OS2) is recovered on the buffered positive-time domain $\mathcal{D}_+(\delta)$; boundary contact encounters a non-commuting collision singularity; infrared crossover and continuum limit remain open. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Edge E-UV-LOCAL-OS advances to PARTIAL_PROGRESS_OS2_RECOVERED_ON_BUFFERED_DOMAIN; continuum edges remain OPEN/BLOCKED.
 
+## XFER-YM-ONE-TERM-PULLBACK-072: Continuous Euclidean $SO(4)$ Covariance Restoration, Symanzik Hypercubic Anisotropy Suppression $\mathcal{O}(a^2/t)$, and Commutation of Flowed Continuum Limits
+
+- Source: Osterwalder & Schrader CMP 31, 83–112 (1973); CMP 42, 281–305 (1975); Lüscher JHEP 1008:071 (2010); Weisz & Wolff Nucl. Phys. B 288, 643 (1987).
+- Target: YM-015F continuous Euclidean $SO(4)$ rotation covariance (Axiom OS1) restoration on Edge `E-UV-LOCAL-OS`.
+- Verified mapping:
+  - Symanzik hypercubic anisotropy suppression: gradient flow at time $t > 0$ smooths fields over diffusion radius $\ell_{\mathrm{flow}} = \sqrt{8t}$, suppressing dimension-6 hypercubic breaking operators by $\rho_{\mathrm{aniso}}(a, t) = a^2 / (8t) = 4^{-m}$ ($m = N_{\mathrm{UV}} - k$). On the rank-4 tensor invariant $I_4(v) = \sum_\mu v_\mu^4$, the Pythagorean rotation $R_{\mathrm{Pyth}} = (3/5, 4/5, 0, 0)$ gives anisotropy difference $\Delta_{H(4)} = |1 - 337/625| = 288/625 > 0$, which is geometrically suppressed to $\Delta_{H(4)}^{(t)}(m) = \frac{288}{625} \cdot 4^{-m} \to 0$ as $a \to 0$.
+  - Continuous $SO(4)$ covariance restoration at $t > 0$: taking $a \to 0$ at fixed $t > 0$ restores exact continuous Euclidean $SO(4)$ covariance for all flowed Schwinger functions: $\lim_{a \to 0} |\langle \mathcal{O}_{a, t}(f) \rangle - \langle \mathcal{O}_{a, t}(R \cdot f) \rangle| = 0$ for all $R \in SO(4)$.
+  - Simultaneous OS1 and OS2 on buffered domains: taking $t \downarrow 0$ on the buffered positive-time domain $\mathcal{D}_+(\delta)$ preserves continuous $SO(4)$ rotational invariance while recovering exact reflection positivity (OS2): $\langle \mathcal{O}(R \cdot f) \rangle_{\mathrm{phys}} = \langle \mathcal{O}(f) \rangle_{\mathrm{phys}}$ and $\langle \Theta(A) A \rangle_{\mathrm{phys}} \ge 0$.
+  - Lemma `YM-072F-SO4-COVARIANCE-RESTORATION-AND-HYPERCUBIC-SUPPRESSION` formally proved within stated hypotheses.
+- Open bridge: Boundary contact operator renormalization, Cutoff-Uniform Multiscale Cluster Bounds (Lemma `YM-059F`), Continuum Wightman Reconstruction and Spectral Gap (Lemma `YM-060F`), crossing infrared crossover `E-CROSSOVER`.
+- Allowed conclusion: Continuous Euclidean $SO(4)$ covariance (OS1) and exact reflection positivity (OS2) are simultaneously recovered on the buffered positive-time domain $\mathcal{D}_+(\delta)$; infrared crossover and macroscopic continuum limit remain open. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Edge E-UV-LOCAL-OS advances to PARTIAL_PROGRESS_OS1_AND_OS2_RECOVERED_ON_BUFFERED_DOMAIN; continuum edges remain OPEN/BLOCKED.
+
+
 

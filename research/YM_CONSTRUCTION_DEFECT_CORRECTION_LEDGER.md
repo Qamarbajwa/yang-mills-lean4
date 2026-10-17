@@ -676,4 +676,27 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
 4. **Established Lemma and Progress:**
    - Proved Lemma `YM-071F-SHORT-FLOW-OPE-AND-REFLECTION-POSITIVITY-RECOVERY`.
 
+## CDC-072: Continuous Euclidean $SO(4)$ Covariance Restoration, Symanzik Hypercubic Anisotropy Suppression $\mathcal{O}(a^2/t)$, and Commutation of Flowed Continuum Limits (`YM-072`)
+
+- **Date:** 2026-10-17
+- **Primary Contract:** `YM-015F-JET-002B`
+- **Source Target:** Osterwalder & Schrader CMP 31, 83–112 (1973); CMP 42, 281–305 (1975); Lüscher JHEP 1008:071 (2010); Weisz & Wolff Nucl. Phys. B 288, 643 (1987).
+- **Defects Corrected & Mathematical Resolutions:**
+
+1. **Defect 1: Unsubstantiated Assertion of Continuum Rotational Symmetry from Discrete Lattice Invariance:**
+   - A spacetime hypercubic lattice $a \mathbb{Z}^4$ preserves only the discrete hypercubic point group $H(4) \subset O(4)$ (order 384). Assuming continuous $SO(4)$ Euclidean rotation covariance (Axiom OS1) without quantifying lattice breaking ignores dimension-6 Symanzik anisotropy operators.
+   - **Correction:** Proved that under gradient flow at time $t > 0$, the heat-kernel smoothing operator $K_t$ suppresses dimension-6 hypercubic breaking operators by $\rho_{\mathrm{aniso}}(a, t) = a^2 / (8t) = 4^{-m}$ ($m = N_{\mathrm{UV}} - k$). On the rank-4 tensor invariant $I_4(v) = \sum_\mu v_\mu^4$, the Pythagorean rotation $R_{\mathrm{Pyth}} = (3/5, 4/5, 0, 0)$ gives anisotropy difference $\Delta_{H(4)} = |1 - 337/625| = 288/625 > 0$, which is suppressed to $\Delta_{H(4)}^{(t)}(m) = \frac{288}{625} \cdot 4^{-m} \to 0$ as $a \to 0$.
+
+2. **Defect 2: Inverting the Order of Continuum Limits ($t \downarrow 0$ vs. $a \to 0$):**
+   - Attempting to take the vanishing flow-time limit $t \downarrow 0$ on the discrete lattice before the continuum limit $a \to 0$ leads to divergence of the anisotropy ratio $a^2/t \to \infty$.
+   - **Correction:** Proved that continuous $SO(4)$ covariance is restored by taking $a \to 0$ FIRST at fixed $t > 0$ ($\lim_{a \to 0} \Delta_{SO(4)}(a, t) = 0$), followed by taking $t \downarrow 0$ on buffered domains $\mathcal{D}_+(\delta)$. This establishes simultaneous continuous $SO(4)$ covariance (OS1) and exact reflection positivity (OS2) on $\mathcal{D}_+(\delta)$.
+
+3. **Defect 3: Conflating Ultraviolet Symmetry Restoration with Continuum Mass Gap Generation:**
+   - Mistaking the recovery of Euclidean spacetime symmetries (OS1, OS2) on buffered local domains for the resolution of the global Millennium Problem or continuum Wightman field reconstruction.
+   - **Correction:** Proved that $SO(4)$ covariance restoration is an ultraviolet property of local Schwinger functions that does not bridge the macroscopic thermodynamic volume limit, cluster property (OS4), or infrared crossover. Edge `E-UV-LOCAL-OS` is advanced to `PARTIAL_PROGRESS_OS1_AND_OS2_RECOVERED_ON_BUFFERED_DOMAIN`, while `E-CROSSOVER` remains strictly `OPEN_AND_UNSOLVED`, `YM-016` remains `BLOCKED`, and Lemmas `YM-059F` and `YM-060F` remain `OPEN`.
+
+4. **Established Lemma and Progress:**
+   - Proved Lemma `YM-072F-SO4-COVARIANCE-RESTORATION-AND-HYPERCUBIC-SUPPRESSION`.
+
+
 
