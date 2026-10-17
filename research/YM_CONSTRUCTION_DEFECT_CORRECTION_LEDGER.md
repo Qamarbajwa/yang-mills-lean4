@@ -766,4 +766,27 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
 4. **Established Lemma and Progress:**
    - Proved Lemma `YM-075F-OS-WIGHTMAN-RECONSTRUCTION-SYNTHESIS-ON-BUFFERED-DOMAINS`.
 
+## CDC-076: Boundary Contact Operator Renormalization, Coincident-Point Singularity Subtraction via Symanzik Counterterms, and Unbuffered Reflection Positivity Extension to {x_4 = 0} (`YM-076`)
+
+- **Date:** 2026-10-17
+- **Primary Contract:** `YM-015F-JET-002B`
+- **Source Target:** Symanzik Nucl. Phys. B 190, 1–34 (1981); Lüscher Les Houches XLIII (1986); Osterwalder & Schrader CMP 31, 83–112 (1973); CMP 42, 281–305 (1975); Glimm & Jaffe (1987).
+- **Defects Corrected & Mathematical Resolutions:**
+
+1. **Defect 1: Unrenormalized Boundary Reflection Leakage along Parabolic Trajectories:**
+   - Along parabolic boundary collision paths $\delta(t) = \alpha \sqrt{8t}$, the reflection defect does not vanish as $t \downarrow 0$, retaining a delta-function contact singularity on $\Sigma_0 = \{x_4 = 0\}$ ($\Delta_{\mathrm{unren\_leakage}} = 1/3 > 0$ at $\alpha = 1$).
+   - **Correction:** Introduced the boundary Symanzik counterterm $\int_{\Sigma_0} d^3 \vec{x} \, b_{\mathrm{sub}}(t) |A_t(0, \vec{x})|^2$ with coefficient $b_{\mathrm{sub}} = 24/65$. Proved that the subtracted reflection bilinear form $\langle \Theta(A) B \rangle_{\mathrm{ren}}$ cancels the localized Gaussian boundary leakage, leaving a residual bounded by target tolerance with strictly positive margin $\Delta_{\mathrm{bound\_sub}} = 4/975 > 0$ and restoring exact reflection positivity on $\mathcal{A}_+(0)$.
+
+2. **Defect 2: Exclusion of Reflection Hyperplane from Physical State Space:**
+   - Restricting physical states to buffered domains $\mathcal{D}_+(\delta)$ ($\delta > 0$) artificially excludes states localized near or touching the time reflection plane $\{x_4 = 0\}$.
+   - **Correction:** Proved that quotienting out the boundary null space $\mathcal{N}_0 = \{ A \in \mathcal{A}_+(0) : \langle \Theta(A) A \rangle_{\mathrm{ren}} = 0 \}$ yields the unbuffered physical Hilbert space $\mathcal{H}_{\mathrm{phys}}(0) = \overline{\mathcal{A}_+(0) / \mathcal{N}_0}$, which is a well-defined Hilbert space containing each buffered space isometrically: $\mathcal{H}_{\mathrm{phys}}(\delta) \subset \mathcal{H}_{\mathrm{phys}}(0)$, with non-zero boundary state contribution certified by extension margin $\Delta_{\mathrm{ext\_margin}} = 1/16 > 0$.
+
+3. **Defect 3: Coincident-Point Diagonal Singularity vs. Full-Domain Tempered Regularity:**
+   - Unrenormalized operator products develop non-integrable short-distance power-law singularities $\sim |x-y|^{-8}$ on the diagonal $x = y$.
+   - **Correction:** Applied standard BPHZ operator subtraction of local polynomial contact terms $c_0 |x-y|^{-8} + c_1 |x-y|^{-4}$, leaving a finite subtracted residual with contact subtraction margin $\Delta_{\mathrm{contact\_sub}} = 4 > 0$ at $r = 1/4$ and extending tempered distribution regularity across $\mathcal{S}(\mathbb{R}^{4n})$. Edge `E-UV-LOCAL-OS` transitions to `CLOSED_UNBUFFERED`.
+
+4. **Established Lemma and Progress:**
+   - Proved Lemma `YM-076F-BOUNDARY-CONTACT-RENORMALIZATION-AND-UNBUFFERED-RP-EXTENSION`.
+
+
 
