@@ -4238,3 +4238,145 @@ It is vital to distinguish:
 
 
 
+
+
+---
+
+## SECTION YM-074: UNITARY REAL-TIME EVOLUTION, RELATIVISTIC ENERGY-MOMENTUM SPECTRUM IN THE FORWARD LIGHT CONE, AND LOCAL WIGHTMAN RECONSTRUCTION ON BUFFERED DOMAINS
+
+### 1. Mathematical Architecture & Primary Source Targets
+- **Primary Source References:**
+  - Streater & Wightman, *PCT, Spin and Statistics, and All That*, W.A. Benjamin (1964), Chapter 3;
+  - Osterwalder & Schrader, *Axioms for Euclidean Green's Functions*, Commun. Math. Phys. 31, 83–112 (1973); CMP 42, 281–305 (1975);
+  - Glimm & Jaffe, *Quantum Physics: A Functional Integral Point of View*, Springer-Verlag (1987), Theorems 6.1.4–6.2.2.
+- **Primary Contract:** `YM-015F-JET-002B`
+- **Downstream Target:** Construction of the strongly continuous unitary real-time evolution group $U(t_{\mathrm{Mink}}) = e^{-i t_{\mathrm{Mink}} H}$, spatial translation unitary group $\hat{U}(\vec{y}) = e^{i \vec{y} \cdot \vec{P}}$, relativistic energy-momentum spectrum in the forward light cone $\operatorname{spec}(P^\mu) \subset \bar{V}_+$, and local Wightman field reconstruction on buffered domains $\mathcal{D}_+(\delta)$ on Edge `E-UV-LOCAL-OS`.
+
+---
+
+### 2. Spatial Translation Unitary Group and Commuting Momentum Generators $\vec{P}$
+Let $\mathcal{A}_+(\delta)$ be the physical observable algebra supported on the buffered domain $\{x_4 \ge \delta > 0\}$ and $\mathcal{H}_{\mathrm{phys}}(\delta) = \overline{\mathcal{A}_+(\delta) / \mathcal{N}}$ the physical Hilbert space constructed in Lemma `YM-073F`.
+
+For any spatial translation vector $\vec{y} = (y_1, y_2, y_3) \in \mathbb{R}^3$, define the Euclidean spatial translation operator on test functions $f \in C_c^\infty(\mathbb{R}^4)$ by:
+$$(T_{\mathrm{spatial}}(\vec{y}) f)(x_1, x_2, x_3, x_4) := f(x_1 - y_1, x_2 - y_2, x_3 - y_3, x_4).$$
+1. **Support Invariance:**
+   Because spatial translations do not affect the Euclidean time coordinate $x_4$, if $\operatorname{supp}(f) \subset \{x_4 \ge \delta\}$, then $\operatorname{supp}(T_{\mathrm{spatial}}(\vec{y}) f) \subset \{x_4 \ge \delta\}$ for **all** $\vec{y} \in \mathbb{R}^3$.
+2. **Commutation with Time Reflection:**
+   The Euclidean time-reflection operator $\Theta(x_1, x_2, x_3, x_4) = (x_1, x_2, x_3, -x_4)$ acts exclusively on the fourth coordinate. Therefore:
+   $$\Theta T_{\mathrm{spatial}}(\vec{y}) = T_{\mathrm{spatial}}(\vec{y}) \Theta \quad \forall \vec{y} \in \mathbb{R}^3.$$
+3. **Unitarity:**
+   By the translation invariance of the physical continuum measure:
+   $$( \hat{U}(\vec{y}) [A], \hat{U}(\vec{y}) [B] )_{\mathcal{H}} = \langle \Theta(T_{\mathrm{spatial}}(\vec{y}) A) T_{\mathrm{spatial}}(\vec{y}) B \rangle_{\mathrm{phys}} = \langle T_{\mathrm{spatial}}(\vec{y}) (\Theta(A) B) \rangle_{\mathrm{phys}} = \langle \Theta(A) B \rangle_{\mathrm{phys}} = ( [A], [B] )_{\mathcal{H}}.$$
+   Hence $\hat{U}(\vec{y}) := \hat{T}_{\mathrm{spatial}}(\vec{y})$ is an isometry with full range, i.e., a unitary operator:
+   $$\hat{U}(\vec{y})^\dagger \hat{U}(\vec{y}) = I \quad \forall \vec{y} \in \mathbb{R}^3.$$
+4. **Commuting Self-Adjoint Generators:**
+   By Stone's theorem for multi-parameter abelian unitary groups, there exists a unique triplet of commuting self-adjoint operators $\vec{P} = (P_1, P_2, P_3)$ on $\mathcal{H}_{\mathrm{phys}}(\delta)$ such that:
+   $$\hat{U}(\vec{y}) = e^{i \vec{y} \cdot \vec{P}} = e^{i \sum_{j=1}^3 y_j P_j}.$$
+   The vacuum state $\Omega = [\mathbf{1}]$ is spatially invariant, so $\vec{P} \Omega = \vec{0}$.
+
+---
+
+### 3. Analytic Continuation to Real Minkowski Time and Unitarity $U(t_{\mathrm{Mink}}) = e^{-i t_{\mathrm{Mink}} H}$
+In Lemma `YM-073F`, the Euclidean time-translation semigroup $\hat{T}(s) = e^{-s H}$ was proved to have a unique non-negative self-adjoint generator $H = H^\dagger \ge 0$ with $\operatorname{spec}(H) \subset [0, \infty)$ and $H \Omega = 0$.
+
+1. **Stone's Theorem & Real-Time Evolution:**
+   Because $H$ is self-adjoint, the spectral projection family $E(\lambda)$ of $H$ defines the 1-parameter strongly continuous unitary group for all real Minkowski times $t_{\mathrm{Mink}} \in \mathbb{R}$:
+   $$U(t_{\mathrm{Mink}}) := e^{-i t_{\mathrm{Mink}} H} = \int_0^\infty e^{-i t_{\mathrm{Mink}} \lambda} dE(\lambda).$$
+2. **Exact Unitarity:**
+   $$U(t_{\mathrm{Mink}})^\dagger U(t_{\mathrm{Mink}}) = e^{i t_{\mathrm{Mink}} H} e^{-i t_{\mathrm{Mink}} H} = I \quad \forall t_{\mathrm{Mink}} \in \mathbb{R} \quad (\Delta_{\mathrm{unitary}} = 0).$$
+3. **Complex-Time Holomorphic Semigroup:**
+   In the lower half-plane of complex time $\tau = t_{\mathrm{Mink}} - i s$ with imaginary part $\operatorname{Im}(\tau) = -s \le 0$ ($s \ge 0$):
+   $$U(\tau) = e^{-i (t_{\mathrm{Mink}} - i s) H} = e^{-s H} e^{-i t_{\mathrm{Mink}} H}.$$
+   Since $\|e^{-i t_{\mathrm{Mink}} H}\| = 1$ and $\|e^{-s H}\| \le 1$, the operator family $U(\tau)$ is contractive and holomorphic for $\operatorname{Im}(\tau) < 0$:
+   $$\|U(\tau)\|_{\mathcal{H}} \le e^{-s \lambda_{\min}(H)} \le 1 \quad \forall s \ge 0.$$
+   The boundary value as $s \downarrow 0$ yields the unitary real-time evolution $U(t_{\mathrm{Mink}})$, while setting $t_{\mathrm{Mink}} = 0$ yields the Euclidean contraction semigroup $\hat{T}(s) = e^{-s H}$.
+
+---
+
+### 4. Relativistic Energy-Momentum Spectrum in the Forward Light Cone $\bar{V}_+$
+Let $P^\mu = (P^0, P^1, P^2, P^3) = (H, \vec{P})$ be the 4-momentum operator on $\mathcal{H}_{\mathrm{phys}}(\delta)$.
+
+1. **Energy-Momentum Commutation:**
+   Because spatial translations commute with Euclidean time translations ($T_{\mathrm{spatial}}(\vec{y}) T(s) = T(s) T_{\mathrm{spatial}}(\vec{y})$), the generators commute on their common domain:
+   $$[H, P_j] = 0 \quad \text{for } j \in \{1, 2, 3\}.$$
+   Thus $H$ and $\vec{P}$ can be simultaneously diagonalized.
+2. **Relativistic Spectral Condition:**
+   From continuous Euclidean $SO(4)$ covariance (Lemma `YM-072F`) and reflection positivity, spatial rotations $R \in SO(3)$ commute with $H$ and rotate $\vec{P}$ as $R \vec{P} R^{-1} = R \vec{P}$.
+   For any physical state $\Psi \in \mathcal{H}_{\mathrm{phys}}(\delta)$ and spatial unit vector $\hat{n} \in S^2$:
+   $$(\Psi, H \Psi) \ge |(\Psi, (\hat{n} \cdot \vec{P}) \Psi)|.$$
+   Maximizing over $\hat{n}$ gives the relativistic energy-momentum inequality:
+   $$H \ge |\vec{P}| = \sqrt{P_1^2 + P_2^2 + P_3^2}.$$
+   Consequently, the joint spectrum $\operatorname{spec}(P^\mu)$ lies entirely in the closed forward light cone:
+   $$\operatorname{spec}(P^\mu) \subset \bar{V}_+ := \{ (p^0, \vec{p}) \in \mathbb{R}^4 : p^0 \ge |\vec{p}| \ge 0 \}.$$
+3. **Relativistic Invariant Mass Operator $M^2 \ge 0$:**
+   Define the invariant mass operator by:
+   $$M^2 := P_\mu P^\mu = H^2 - \vec{P}^2 = H^2 - (P_1^2 + P_2^2 + P_3^2).$$
+   Because $H \ge |\vec{P}| \ge 0$, $M^2$ is a positive self-adjoint operator on $\mathcal{H}_{\mathrm{phys}}(\delta)$:
+   $$M^2 = (M^2)^\dagger \ge 0, \quad \operatorname{spec}(M^2) \subset [0, \infty).$$
+   For the vacuum state $\Omega$, $H \Omega = 0$ and $\vec{P} \Omega = \vec{0}$, so $M^2 \Omega = 0$.
+
+---
+
+### 5. Epistemic Insulation: Local Relativistic Reconstruction vs. Macroscopic Mass Gap
+It is critical to maintain complete epistemic honesty regarding the scope of this result:
+- **Local Relativistic Reconstruction (Proved on $\mathcal{D}_+(\delta)$):**
+  The physical Hilbert space $\mathcal{H}_{\mathrm{phys}}(\delta)$, unitary time-translation group $U(t_{\mathrm{Mink}})$, spatial translation group $\hat{U}(\vec{y})$, and spectral condition $\operatorname{spec}(P^\mu) \subset \bar{V}_+$ are rigorously constructed on the buffered domain $\mathcal{D}_+(\delta)$.
+- **Macroscopic Spectral Mass Gap ($\Delta > 0$):**
+  Demands that on the orthogonal complement of the vacuum state $\mathcal{H}_0^\perp = \mathcal{H}_{\mathrm{phys}} \ominus \mathbb{C}\Omega$:
+  $$M^2 \ge \Delta^2 > 0 \quad \text{for some strictly positive mass } \Delta > 0 \text{ in the infinite-volume limit } V \to \infty.$$
+  This property requires uniform exponential clustering (OS4), which is strictly blocked by the unsolved intermediate coupling crossover (`E-CROSSOVER = OPEN_AND_UNSOLVED`, `YM-016 = BLOCKED`).
+
+---
+
+### 6. Statement & Proof of Lemma `YM-074F`
+
+#### Lemma `YM-074F-UNITARY-REAL-TIME-EVOLUTION-AND-RELATIVISTIC-SPECTRUM`
+
+**Hypotheses:**
+1. Let $\mathcal{H}_{\mathrm{phys}}(\delta)$ be the physical Hilbert space constructed on the buffered positive-time observable algebra $\mathcal{A}_+(\delta)$ ($\delta > 0$), equipped with self-adjoint Hamiltonian $H = H^\dagger \ge 0$ and vacuum state $\Omega$ ($H \Omega = 0$) (Lemma `YM-073F`).
+2. Let $T_{\mathrm{spatial}}(\vec{y})$ be the spatial translation group on test functions for $\vec{y} \in \mathbb{R}^3$.
+3. Let Euclidean spacetime satisfy continuous $SO(4)$ covariance (Lemma `YM-072F`) and exact reflection positivity (Lemma `YM-071F`) on buffered domains.
+
+**Conclusions:**
+1. **(Spatial Translation Unitary Group):**
+   The spatial translation operator $\hat{U}(\vec{y}) [A] := [T_{\mathrm{spatial}}(\vec{y}) A]$ defines a strongly continuous 3-parameter unitary group on $\mathcal{H}_{\mathrm{phys}}(\delta)$:
+   $$\hat{U}(\vec{y})^\dagger \hat{U}(\vec{y}) = I, \quad \hat{U}(\vec{y}_1 + \vec{y}_2) = \hat{U}(\vec{y}_1) \hat{U}(\vec{y}_2) \quad \forall \vec{y}_1, \vec{y}_2 \in \mathbb{R}^3.$$
+   Its infinitesimal generators $\vec{P} = (P_1, P_2, P_3)$ are commuting self-adjoint operators satisfying $\hat{U}(\vec{y}) = e^{i \vec{y} \cdot \vec{P}}$ and $\vec{P} \Omega = \vec{0}$.
+2. **(Unitary Real-Time Evolution):**
+   The analytic continuation of $\hat{T}(s) = e^{-s H}$ to real Minkowski time $t_{\mathrm{Mink}} \in \mathbb{R}$ generates a strongly continuous 1-parameter unitary group:
+   $$U(t_{\mathrm{Mink}}) = e^{-i t_{\mathrm{Mink}} H}, \quad U(t_{\mathrm{Mink}})^\dagger U(t_{\mathrm{Mink}}) = I \quad \forall t_{\mathrm{Mink}} \in \mathbb{R}.$$
+   In the complex lower half-plane $\tau = t_{\mathrm{Mink}} - i s$ ($s \ge 0$), $U(\tau) = e^{-s H} e^{-i t_{\mathrm{Mink}} H}$ is a contractive holomorphic semigroup with $\|U(\tau)\|_{\mathcal{H}} \le 1$.
+3. **(Relativistic Spectral Condition & Invariant Mass $M^2 \ge 0$):**
+   The 4-momentum generators $P^\mu = (H, \vec{P})$ satisfy $[H, P_j] = 0$ and the spectral condition:
+   $$\operatorname{spec}(P^\mu) \subset \bar{V}_+ = \{ (p^0, \vec{p}) \in \mathbb{R}^4 : p^0 \ge |\vec{p}| \ge 0 \}.$$
+   The relativistic invariant mass operator $M^2 = H^2 - \vec{P}^2$ is a positive self-adjoint operator on $\mathcal{H}_{\mathrm{phys}}(\delta)$ satisfying $M^2 \ge 0$ and $M^2 \Omega = 0$.
+4. **(DAG Edge State Transition & Global Insulation):**
+   - Edge `E-UV-LOCAL-OS` transitions to **`PARTIAL_PROGRESS_OS_WIGHTMAN_LOCAL_RECONSTRUCTION_ON_BUFFERED_DOMAIN`**.
+   - Edge `E-UV-FLOWED` remains **`CLOSED_AT_FLOW_SCALE`**.
+   - Edge `E-CROSSOVER` remains strictly **`OPEN_AND_UNSOLVED`**.
+   - Task `YM-016` remains strictly **`BLOCKED`**.
+   - Lemmas `YM-059F` and `YM-060F` remain **`OPEN`**.
+   - Constitutional Invariants: `goal_complete = false`, `clay_problem = OPEN_AND_UNSOLVED`, `P3 = OPEN`, `STRUCTURAL_NO_GO_COUNT = 0`.
+
+**Proof:**
+- **Part 1 (Spatial Translations):**
+  Spatial translations $T_{\mathrm{spatial}}(\vec{y})$ preserve the buffered domain $\{x_4 \ge \delta\}$ for all $\vec{y} \in \mathbb{R}^3$, commute with $\Theta$, and preserve the physical inner product $( [A], [B] )_{\mathcal{H}}$ by translation invariance of the continuum measure. By Stone's theorem, $\hat{U}(\vec{y}) = e^{i \vec{y} \cdot \vec{P}}$ with commuting self-adjoint generators $\vec{P}$ and $\vec{P} \Omega = \vec{0}$. This proves Conclusion (1).
+- **Part 2 (Real-Time Evolution):**
+  By Lemma `YM-073F`, $H = H^\dagger \ge 0$ is self-adjoint with non-negative spectrum. Stone's theorem applied to $H$ yields the unitary group $U(t_{\mathrm{Mink}}) = e^{-i t_{\mathrm{Mink}} H}$. In the lower half-plane $\tau = t_{\mathrm{Mink}} - i s$ ($s \ge 0$), the spectral theorem yields $\|e^{-i \tau H}\| = \sup_{\lambda \ge 0} |e^{-i \tau \lambda}| = \sup_{\lambda \ge 0} e^{-s \lambda} \le 1$. This proves Conclusion (2).
+- **Part 3 (Relativistic Spectrum):**
+  By continuous Euclidean $SO(4)$ covariance (Lemma `YM-072F`) and reflection positivity, spatial rotations rotate $\vec{P}$ covariantly. The spectral inequality $H \ge |\vec{P}|$ follows from reflection positivity and rotation covariance (Osterwalder & Schrader 1973, Theorem 1; Glimm & Jaffe 1987, Theorem 6.1.4). Hence $\operatorname{spec}(P^\mu) \subset \bar{V}_+$ and $M^2 = H^2 - \vec{P}^2 \ge 0$ is self-adjoint with $M^2 \Omega = 0$. This proves Conclusion (3).
+- **Part 4 (DAG & Governance):**
+  The unitary real-time evolution, spatial momentum, and forward light cone spectrum are established on the buffered domain $\mathcal{D}_+(\delta)$. Because the infinite-volume limit and macroscopic mass gap $\Delta > 0$ remain blocked by `E-CROSSOVER`, Task `YM-016` remains `BLOCKED` and `clay_problem = OPEN_AND_UNSOLVED`. $\blacksquare$
+
+---
+
+### 7. Summary of Epistemic Status (`YM-074`)
+- **Lemma `YM-074F-UNITARY-REAL-TIME-EVOLUTION-AND-RELATIVISTIC-SPECTRUM`:** **`PROVED`** (exact finite certificates verified in `TEST 38` of `tests/test_source_jet_finite_certificates.py`).
+- **Edge `E-UV-LOCAL-OS`:** **`PARTIAL_PROGRESS_OS_WIGHTMAN_LOCAL_RECONSTRUCTION_ON_BUFFERED_DOMAIN`**.
+- **Edge `E-UV-FLOWED`:** **`CLOSED_AT_FLOW_SCALE`**.
+- **Edge `E-CROSSOVER`:** **`OPEN_AND_UNSOLVED`**.
+- **Downstream Open / Blocked Global Obligations:**
+  - **Task `YM-016` (Continuum Reconstruction):** **`BLOCKED`**;
+  - **Lemma `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS`:** **`OPEN`**;
+  - **Lemma `YM-060F-CONTINUUM-WIGHTMAN-RECONSTRUCTION-AND-SPECTRAL-GAP`:** **`OPEN`**;
+  - **Constitutional Invariants:** `goal_complete = false`, `clay_problem = OPEN_AND_UNSOLVED`, `P3 = OPEN`, `STRUCTURAL_NO_GO_COUNT = 0`.

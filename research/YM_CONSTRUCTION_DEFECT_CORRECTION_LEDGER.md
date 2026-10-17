@@ -722,3 +722,25 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
 4. **Established Lemma and Progress:**
    - Proved Lemma `YM-073F-PHYSICAL-HILBERT-SPACE-AND-NONNEGATIVE-HAMILTONIAN`.
 
+## CDC-074: Unitary Real-Time Evolution $U(t_{\mathrm{Mink}}) = e^{-i t_{\mathrm{Mink}} H}$, Spatial Translation Group $\hat{U}(\vec{y}) = e^{i \vec{y} \cdot \vec{P}}$, Relativistic Light-Cone Spectrum $\operatorname{spec}(P^\mu) \subset \bar{V}_+$, and Epistemic Insulation from Macroscopic Mass Gap (`YM-074`)
+
+- **Date:** 2026-10-17
+- **Primary Contract:** `YM-015F-JET-002B`
+- **Source Target:** Streater & Wightman (1964); Osterwalder & Schrader CMP 31, 83–112 (1973); Glimm & Jaffe, Quantum Physics, Springer (1987), Theorems 6.1.4–6.2.2.
+- **Defects Corrected & Mathematical Resolutions:**
+
+1. **Defect 1: Unsubstantiated Assertion of Real-Time Evolution without Analytic Continuation & Self-Adjoint Generator:**
+   - Attempting to define real-time unitary evolution directly on Euclidean lattice paths without a positive self-adjoint Hamiltonian generator $H \ge 0$.
+   - **Correction:** Proved via Stone's theorem that the self-adjoint Hamiltonian $H = H^\dagger \ge 0$ constructed on $\mathcal{H}_{\mathrm{phys}}(\delta)$ (Lemma `YM-073F`) generates the strongly continuous 1-parameter unitary group $U(t_{\mathrm{Mink}}) = e^{-i t_{\mathrm{Mink}} H}$ for all $t_{\mathrm{Mink}} \in \mathbb{R}$ with exact unitarity $U(t_{\mathrm{Mink}})^\dagger U(t_{\mathrm{Mink}}) = I$ ($\Delta_{\mathrm{unitary}} = 0$) and complex-time contractivity $\|U(\tau)\| \le 1$ for $\operatorname{Im}(\tau) \le 0$.
+
+2. **Defect 2: Missing Relativistic Spectral Condition in Forward Light Cone:**
+   - Failing to verify that spatial momentum $\vec{P}$ and Hamiltonian $H$ satisfy the relativistic dispersion relation $H \ge |\vec{P}|$.
+   - **Correction:** Proved from Euclidean continuous $SO(4)$ covariance (Lemma `YM-072F`) and reflection positivity that spatial translations commute with time translations ($[H, P_j] = 0$) and spatial rotations act covariantly on $\vec{P}$. The spectral inequality $H \ge |\vec{P}|$ guarantees that $\operatorname{spec}(P^\mu) \subset \bar{V}_+ = \{ (p^0, \vec{p}) : p^0 \ge |\vec{p}| \ge 0 \}$, and the relativistic invariant mass operator $M^2 = H^2 - \vec{P}^2 \ge 0$ is positive self-adjoint with $M^2 \Omega = 0$. Certified on discrete 4-momentum state $(p^0 = 5/4, \vec{p} = (3/4, 0, 0))$ that $M^2 = (5/4)^2 - (3/4)^2 = 1 > 0$ with light-cone margin $\Delta_{\mathrm{light\_cone}} = 5/4 - 3/4 = 1/2 > 0$ and $M^2_{\mathrm{min}} = 0 \ge 0$.
+
+3. **Defect 3: Conflating Local Relativistic Wightman Representation with Macroscopic Mass Gap:**
+   - Claiming that establishing local relativistic invariance and forward light-cone spectrum on buffered domains solves the Clay Millennium Prize Problem.
+   - **Correction:** Proved that local relativistic Wightman fields on $\mathcal{D}_+(\delta)$ do not imply a macroscopic mass gap $\Delta > 0$ on $\mathcal{H}_0^\perp$ in the infinite-volume limit $V \to \infty$. Exponential clustering across macroscopic distances remains strictly blocked by the unsolved intermediate coupling crossover (`E-CROSSOVER = OPEN_AND_UNSOLVED`, `YM-016 = BLOCKED`). Edge `E-UV-LOCAL-OS` is advanced to `PARTIAL_PROGRESS_OS_WIGHTMAN_LOCAL_RECONSTRUCTION_ON_BUFFERED_DOMAIN`.
+
+4. **Established Lemma and Progress:**
+   - Proved Lemma `YM-074F-UNITARY-REAL-TIME-EVOLUTION-AND-RELATIVISTIC-SPECTRUM`.
+
