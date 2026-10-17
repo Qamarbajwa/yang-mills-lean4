@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 108
+revision: 109
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "d4b40bfa52432defb509bed26303c068b91d63d2"
-  scientific_candidate_sha: ""
-  review_bound_sha: ""
+  head: "60ecb3a2771b5b810553d429d4625b35ab36b94a"
+  scientific_candidate_sha: "0a66709848ddfa42602627f32c57e85eac741165"
+  review_bound_sha: "0a66709848ddfa42602627f32c57e85eac741165"
   evidence_closeout_head: "d4b40bfa52432defb509bed26303c068b91d63d2"
-  closeout_resolution: "evidence_closeout_head binds preceding completed YM-075 closeout commit (d4b40bfa52432defb509bed26303c068b91d63d2); candidate freeze commit for YM-076 establishes authoritative candidate SHA."
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-075 closeout commit (d4b40bfa52432defb509bed26303c068b91d63d2); scientific_candidate_sha and review_bound_sha bind accepted YM-076 candidate freeze (0a66709848ddfa42602627f32c57e85eac741165); head binds YM-076 acceptance receipt commit (60ecb3a2771b5b810553d429d4625b35ab36b94a); resolve authoritative current HEAD dynamically from Git."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,10 +32,10 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 107
-  last_updated_at: "2026-10-17T18:52:00Z"
+  last_expected_revision: 108
+  last_updated_at: "2026-10-17T19:05:00Z"
   active_contract: "YM-015F-JET-002B"
-  frozen_candidate: ""
+  frozen_candidate: "0a66709848ddfa42602627f32c57e85eac741165"
 
 current_objective: YM-015F-JET-002B
 
@@ -49,7 +49,7 @@ objectives:
     atlas_writer_and_coordinator: "primary-worker"
     reviewer_path: "verification/raw/YM-076_E4_RAW_20261017.md"
     acceptor: "verification/YM-076_TECHNICAL_ACCEPTANCE.md"
-    status: CANDIDATE_FROZEN
+    status: SCIENTIFICALLY_ACCEPTED
     scope_limitation: "UNBUFFERED_REFLECTION_POSITIVITY_CLOSED_MACROSCOPIC_GAP_AND_INFRARED_CROSSOVER_OPEN"
   - id: YM-075
     scope_in: "Bose permutation symmetry (Axiom OS3), tempered distribution regularity (Axiom OS0), spacelike microcausality (Axiom W4), complete Osterwalder-Schrader to Wightman axiom reconstruction on buffered domains (delta > 0), closure of Edge E-UV-LOCAL-OS on buffered domains, proof of Lemma YM-075F-OS-WIGHTMAN-RECONSTRUCTION-SYNTHESIS-ON-BUFFERED-DOMAINS, and Test 39 finite certificate"
