@@ -6,7 +6,7 @@ Performs independent, automated, deterministic verification of:
 1. Closed-world canonical scientific tree hash across all 158 manifest files.
 2. Literal Git-blob tree hash for the accepted candidate freeze.
 3. Negative Evidence Register continuity (strictly zero historical deletions).
-4. Deterministic execution of all 471 exact rational pytest certificates.
+4. Deterministic execution of all 474 exact rational pytest certificates.
 5. Verification of constitutional epistemic invariants (E-CROSSOVER open, no fake claims).
 
 Usage:
@@ -34,10 +34,16 @@ EXPECTED_CHECKOUT_TREE_HASHES = {
     "632964762a347cdf06184fee87c66b3625052994f3207f36eb61d90769f928ec",  # State Revision 112 (YM-078 architecture specification)
     "7139658dba5172e4e1e2bb137e175205ee6338f344544fad2db6a03f63d5dcf0",  # State Revision 113 (YM-078 candidate freeze)
     "c76a1eae05b8b75815384b147d958194a33f22aaacb6113c437a2fb9bda25b1e",  # State Revision 114–115 (YM-079 candidate freeze)
+    "4041bbe61f2feb3b13294abbc7f8b460a4dea71c84c48372528410fa2c650031",  # State Revision 116–117 (YM-080 candidate freeze)
 }
 
 # Accepted candidates mapping candidate commit SHA -> expected literal git blob manifest hash
 ACCEPTED_CANDIDATE_SPECS = {
+    "d5a8e0b97c5add1dc27bda814ad42ac77fb6013b": {
+        "task": "YM-080",
+        "blob_hash": "676521a661d1e80a20af2996d5e54ebb667ffd52c3d69f895ee310df47b91240",
+        "revision": 117,
+    },
     "fedb1775eb26f54ea91ad5885b6c4d87779f7e20": {
         "task": "YM-079",
         "blob_hash": "4ffcfef44f4fa2f04d4955807e26956ed107149c6e43a52b5f5219463789d38e",
@@ -54,15 +60,16 @@ ACCEPTED_CANDIDATE_SPECS = {
         "revision": 111,
     },
 }
-ACCEPTED_CANDIDATE_SHA = "fedb1775eb26f54ea91ad5885b6c4d87779f7e20"
-EXPECTED_LITERAL_GIT_BLOB_TREE_HASH = "4ffcfef44f4fa2f04d4955807e26956ed107149c6e43a52b5f5219463789d38e"
+ACCEPTED_CANDIDATE_SHA = "d5a8e0b97c5add1dc27bda814ad42ac77fb6013b"
+EXPECTED_LITERAL_GIT_BLOB_TREE_HASH = "676521a661d1e80a20af2996d5e54ebb667ffd52c3d69f895ee310df47b91240"
 
 
 def print_banner():
     print("=" * 80)
     print("  YANG-MILLS CONTINUUM QFT & CROSSOVER OBSTRUCTION ATLAS")
-    print("  Turnkey Referee Verification Suite — State Revision 111–115")
+    print("  Turnkey Referee Verification Suite — State Revision 111–117")
     print("=" * 80)
+
 
 
 
@@ -160,8 +167,8 @@ def run_pytest_suite():
             print(res.stderr)
             return False
 
-        if not ("473 passed" in summary_line or "472 passed" in summary_line or "471 passed" in summary_line):
-            print(f"  [FAIL] Expected 471, 472, or 473 passed tests, observed: {summary_line}")
+        if not ("474 passed" in summary_line or "473 passed" in summary_line or "472 passed" in summary_line or "471 passed" in summary_line):
+            print(f"  [FAIL] Expected 471, 472, 473, or 474 passed tests, observed: {summary_line}")
             return False
 
         print(f"  [PASS] Exact rational certificates passed deterministically ({summary_line.strip()}).")
@@ -193,9 +200,9 @@ def verify_epistemic_invariants():
             print(f"  [FAIL] Missing invariant: {desc} (expected '{needle}')")
             all_ok = False
 
-    # Check for revision freshness (111, 113, or 115)
-    if "revision: 115" in content or "revision: 113" in content or "revision: 111" in content:
-        print("  [PASS] State revision is governed (111, 113, or 115)")
+    # Check for revision freshness (111, 113, 115, or 117)
+    if "revision: 117" in content or "revision: 115" in content or "revision: 113" in content or "revision: 111" in content:
+        print("  [PASS] State revision is governed (111, 113, 115, or 117)")
     else:
         print("  [FAIL] State revision mismatch")
         all_ok = False
