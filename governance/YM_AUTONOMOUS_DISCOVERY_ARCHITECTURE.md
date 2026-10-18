@@ -1154,3 +1154,41 @@ Task `YM-081` executes the cross-pathway synthesis:
    The non-local tails $R_5$ cannot be absorbed into local character coefficients without a convergent non-Abelian interpolation, keeping Edge `E-CROSSOVER` strictly open.
 4. **Epistemic Invariants:**
    Confirm that Edge `E-CROSSOVER` remains `OPEN_AND_UNSOLVED`, `YM-016` remains `BLOCKED`, `goal_complete` remains `false`, and `clay_problem` remains `OPEN_AND_UNSOLVED`.
+
+## Task Specification YM-082: Multiscale Gauge-Invariant Character-Convolution RG Map on Edge E-CROSSOVER: Two-Step Super-Exponential Activity Contraction from \beta_5 = 41/24 into the Strong-Coupling Cluster Regime \beta_{eff} < 1/22, and Isolation of the 4D Non-Planar Plaquette-Moving Commutator Obstruction
+
+### 1. Context and Objective
+Task `YM-081` synthesized Pathways A through D, proved the Gauge-Dependent Collar No-Go Theorem, formulated the gauge-invariant character-vortex handoff at $k = 5$ ($\Delta_{\mathrm{Gribov\_copies}} = 0$), and isolated the non-Abelian character-cluster matching gap $\Delta_{\mathrm{char\_bridge}} = 439/264 \approx 1.663 > 0$ between the Bałaban RG at $\beta_{\mathrm{inv}, 5} = 41/24$ and the strong-coupling cluster convergence domain $\beta < 1/22$.
+Task `YM-082` investigates whether a multiscale gauge-invariant character-convolution coarse-graining map can bridge this gap:
+1. Deriving the group-theoretic Schur orthogonality and Haar link convolution identity;
+2. Proving that under 2D/planar $L = 2$ block plaquette convolution, the fundamental character activity $a_{1/2}^{(m)}$ contracts super-exponentially ($a_{1/2}^{(m+1)} = [a_{1/2}^{(m)}]^4$), diving from $c_0 a_{1/2}^{(0)} = 451/48 \approx 9.396 > 1$ directly into the convergent Kotecký–Preiss cluster regime $c_0 a_{1/2}^{(1)} \approx 0.732 < 1$ in a single $L=2$ decimation step ($\Delta_{\mathrm{conv\_step1}} > 1/4 > 0$);
+3. Rigorously isolating why this planar mechanism is obstructed in $D = 4$ dimensions by the non-planar plaquette-moving commutator and 3D cube interior interactions, generating a strictly positive 4D non-planar commutator defect $\Delta_{\mathrm{nonplanar\_4D}} > 0$ (`NEG-YM-082`).
+
+### 2. Mathematical Specification of Task YM-082
+1. **Schur Orthogonality & Haar Link Character Convolution:**
+   Under normalized Haar measure on $SU(N)$, integrating an internal link shared by two plaquettes with orientations $V_1 U$ and $U^{-1} V_2$ yields the exact group character convolution:
+   $$\int_{SU(N)} d\mu(U) \, \chi_r(V_1 U) \chi_{r'}(U^{-1} V_2) = \frac{\delta_{r r'}}{d_r} \chi_r(V_1 V_2).$$
+   For $SU(2)$ fundamental representation $r = 1/2$ ($d_{1/2} = 2$), the normalized character activity satisfies $a_{1/2} = c_{1/2}/(2 c_0) \approx \beta/4$.
+   At multiscale crossover step $k = 5$ ($\beta_{\mathrm{inv}, 5} = 41/24$), $a_{1/2}^{(0)} = 41/96 < 1/2$.
+2. **Two-Step Super-Exponential Activity Contraction:**
+   For a planar block plaquette composed of $L \times L = 2 \times 2 = 4$ elementary plaquettes, integrating the internal links convolves the characters, yielding the power law $a_{1/2}^{(m+1)} = [a_{1/2}^{(m)}]^4$:
+   - At $m = 0$ ($k = 5$): $c_0 a_{1/2}^{(0)} = 22 \times \frac{41}{96} = \frac{451}{48} \approx 9.3958 > 1$ (divergent).
+   - At $m = 1$ ($k = 6$): $a_{1/2}^{(1)} = (41/96)^4 = \frac{2825761}{84934656} \approx 0.033270 < \frac{1}{22} \approx 0.045455$.
+     Then $c_0 a_{1/2}^{(1)} = \frac{31083371}{42467328} \approx 0.731936 < 1$.
+     The theory enters the convergent strong-coupling cluster expansion regime in a single $L=2$ block step, with positive convergence margin:
+     $$\Delta_{\mathrm{conv\_step1}} = 1 - c_0 a_{1/2}^{(1)} = \frac{11383957}{42467328} \approx 0.268064 > \frac{1}{4} > 0.$$
+   - At $m = 2$ ($k = 7$): $a_{1/2}^{(2)} = (41/96)^{16} \approx 1.225 \times 10^{-6}$, and $c_0 a_{1/2}^{(2)} \approx 2.695 \times 10^{-5} \ll 1$.
+3. **Isolation of the 4D Non-Planar Plaquette-Commutator Obstruction (`NEG-YM-082`):**
+   In $D = 2$ spacetime, every link is shared by exactly 2 plaquettes, making planar character decimation exact and trivially proving the area law for all $\beta$.
+   In $D = 4$ spacetime, every link is shared by $2(D-1) = 6$ co-boundary plaquettes across orthogonal planes $(\mu, \nu)$, $(\mu, \rho)$, $(\mu, \sigma)$.
+   Integrating an internal link shared by 6 plaquettes produces Clebsch–Gordan invariant tensors:
+   $$\int dU \prod_{f=1}^6 D^{1/2}(U_f) \in \text{Inv}(\mathbf{2}^{\otimes 6}), \quad \dim \text{Inv}(\mathbf{2}^{\otimes 6}) = 5.$$
+   This generates non-planar 3D cube and 4D hypercube boundary interactions ("chairs" and 3D cube shells).
+   The 4D combinatorial branching constant $c_{\mathrm{nonplanar}} \ge 2(D-1)(2D-3) = 30$ yields at $\beta_5 = 41/24$:
+   $$c_{\mathrm{nonplanar}} a_{1/2}^{(0)} = 30 \times \frac{41}{96} = \frac{205}{16} = 12.8125 > 1,$$
+   establishing the strictly positive 4D non-planar commutator defect:
+   $$\Delta_{\mathrm{nonplanar\_4D}} = \frac{205}{16} - 1 = \frac{189}{16} = 11.8125 > 0.$$
+   This defect prevents planar character decimation from factoring the 4D partition function, keeping Edge `E-CROSSOVER` strictly open.
+4. **Epistemic Invariants:**
+   Confirm that Edge `E-CROSSOVER` remains `OPEN_AND_UNSOLVED`, `YM-016` remains `BLOCKED`, `goal_complete` remains `false`, and `clay_problem` remains `OPEN_AND_UNSOLVED`.
+

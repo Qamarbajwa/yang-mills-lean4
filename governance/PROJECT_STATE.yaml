@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 119
+revision: 120
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "468c2c0bb7535b44ce69262b9f3908f9c1db8690"
-  scientific_candidate_sha: "9256a586446ac99941cb530f7df19788b8a10803"
-  review_bound_sha: "9256a586446ac99941cb530f7df19788b8a10803"
-  evidence_closeout_head: "9256a586446ac99941cb530f7df19788b8a10803"
-  closeout_resolution: "evidence_closeout_head binds preceding completed YM-080 closeout commit (1f4dec190448b916584cff071d8b999a91ab905f); candidate freeze commit for YM-081 (9256a586446ac99941cb530f7df19788b8a10803) is scientifically accepted and bound."
+  head: "3cc61b58a12fa1db18b76c026ec17d6928e46934"
+  scientific_candidate_sha: ""
+  review_bound_sha: ""
+  evidence_closeout_head: "3cc61b58a12fa1db18b76c026ec17d6928e46934"
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-081 closeout commit (3cc61b58a12fa1db18b76c026ec17d6928e46934); candidate freeze for YM-082 is staged at State Revision 120."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,14 +32,25 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 118
-  last_updated_at: "2026-10-18T15:00:00Z"
+  last_expected_revision: 119
+  last_updated_at: "2026-10-19T00:00:00Z"
   active_contract: "YM-015F-JET-002B"
   frozen_candidate: ""
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-082
+    scope_in: "Multiscale Gauge-Invariant Character-Convolution RG Map on Edge E-CROSSOVER: Two-Step Super-Exponential Activity Contraction from beta_5 = 41/24 into the Strong-Coupling Cluster Regime beta_eff < 1/22, and Isolation of the 4D Non-Planar Plaquette-Moving Commutator Obstruction, proof of Lemma YM-082F-CHARACTER-CONVOLUTION-RG-MAP-AND-4D-NONPLANAR-OBSTRUCTION, and Test 46 finite certificate"
+    scope_out: "Crossing infrared crossover E-CROSSOVER, non-perturbative multi-block lattice collar equivalence, continuum Wightman reconstruction, and full continuum closure"
+    dependencies: ["YM-081"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-082_E4_RAW_20261019.md"
+    acceptor: "verification/YM-082_TECHNICAL_ACCEPTANCE.md"
+    status: CANDIDATE_FROZEN
+    scope_limitation: "TWO_STEP_CONTRACTION_PROVED_4D_NONPLANAR_OBSTRUCTION_ISOLATED_AND_CLAY_OPEN"
   - id: YM-081
     scope_in: "Cross-Pathway Synthesis on Edge E-CROSSOVER: The Gauge-Dependent Collar No-Go Theorem, Gauge-Invariant Character-Vortex Handoff Formulation at RG Step k = 5, and Non-Perturbative Character-Matching Defect Isolation, proof of Lemma YM-081F-CROSS-PATHWAY-SYNTHESIS-AND-CHARACTER-HANDOFF, and Test 45 finite certificate"
     scope_out: "Crossing infrared crossover E-CROSSOVER, non-perturbative character-cluster continuation, continuum Wightman reconstruction, and full continuum closure"

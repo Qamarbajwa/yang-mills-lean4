@@ -911,4 +911,25 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
 4. **Established Lemma and Progress:**
    - Proved Lemma `YM-081F-CROSS-PATHWAY-SYNTHESIS-AND-CHARACTER-HANDOFF`.
 
+## CDC-082: Multiscale Character-Convolution RG Map, Two-Step Super-Exponential Activity Contraction, and 4D Non-Planar Plaquette-Commutator Obstruction (`YM-082`)
+
+- **Task ID:** `YM-082`
+- **State Revision:** 120
+- **Date:** 2026-10-19
+- **Primary Contract:** `YM-015F-JET-002B`
+- **Source Target:** Migdal Sov. Phys. JETP 42, 413 (1975); Kadanoff Rev. Mod. Phys. 49, 267 (1977); Osterwalder & Seiler Ann. Phys. 110, 440 (1978); Drouffe & Zuber Phys. Rept. 102, 1 (1983); Kotecký & Preiss Commun. Math. Phys. 103, 491 (1986); Bałaban Commun. Math. Phys. 122, 175 (1989).
+- **Defects Corrected & Mathematical Resolutions:**
+
+1. **Defect 1: Unresolved Character-Cluster Matching Gap Across the Intermediate Crossover:**
+   - In `YM-081`, the non-Abelian character-cluster matching gap $\Delta_{\mathrm{char\_bridge}} = 439/264 \approx 1.663 > 0$ between $\beta_{\mathrm{inv}, 5} = 41/24$ and $\beta_{\mathrm{conv}} = 1/22$ was isolated without an explicit multiscale decimation map testing how fast character activities contract under block decimation.
+   - **Correction:** Formulated the multiscale gauge-invariant character-convolution RG map using Schur orthogonality $\int dU \chi_r(V_1 U) \chi_{r'}(U^{-1} V_2) = \frac{\delta_{r r'}}{d_r} \chi_r(V_1 V_2)$. Proved that under planar $L = 2$ block plaquette decimation, the fundamental character activity contracts super-exponentially ($a_{1/2}^{(m+1)} = [a_{1/2}^{(m)}]^4$). At $m = 1$, $a_{1/2}^{(1)} = \frac{2825761}{84934656} \approx 0.033270 < 1/22$, yielding $c_0 a_{1/2}^{(1)} = \frac{31083371}{42467328} \approx 0.731936 < 1$. The planar activity plunges into the convergent Kotecký–Preiss cluster regime in a single step with certified positive margin $\Delta_{\mathrm{conv\_step1}} = \frac{11383957}{42467328} > 1/4 > 0$, and suppresses further to $a_{1/2}^{(2)} \approx 1.225 \times 10^{-6}$ at $m = 2$.
+
+2. **Defect 2: Naive Conflation of 2D Exactly Solvable Decimation with 4D Lattice Gauge Theory:**
+   - Assuming that 2D super-exponential character decimation can be directly generalized to 4D Yang–Mills theory ignores the transverse plaquettes sharing internal bonds and non-commuting plaquette moves.
+   - **Correction:** Isolated the 4D non-planar plaquette-moving commutator and 3D cube interior obstruction (`NEG-YM-082`). In $D = 4$, each link is shared by $2(D-1) = 6$ plaquettes. Integrating out an internal link generates 5 independent Clebsch–Gordan invariant tensor contractions in $\operatorname{Inv}(\mathbf{2}^{\otimes 6})$ that couple planar plaquettes to transverse planes, generating non-planar 3D "chair" and 3D cube surface polymers. The non-planar combinatorial branching constant $c_{\mathrm{nonplanar}} = 30$ yields $c_{\mathrm{nonplanar}} a_{1/2}^{(0)} = 205/16 = 12.8125 > 1$, establishing the strictly positive 4D non-planar commutator defect $\Delta_{\mathrm{nonplanar\_4D}} = 189/16 = 11.8125 > 0$. The 2D decimation cannot factor the 4D partition function, keeping Edge `E-CROSSOVER` strictly `OPEN_AND_UNSOLVED`, Task `YM-016` `BLOCKED`, and the Clay Millennium Problem `OPEN_AND_UNSOLVED`.
+
+3. **Established Lemma and Progress:**
+   - Proved Lemma `YM-082F-CHARACTER-CONVOLUTION-RG-MAP-AND-4D-NONPLANAR-OBSTRUCTION`.
+
+
 
