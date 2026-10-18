@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 111
+revision: 112
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "3c52584b7985c0094f5730906b97c195090d29b4"
-  scientific_candidate_sha: "5f83112e6876ca14f67a8c93ece45199dbe04727"
-  review_bound_sha: "5f83112e6876ca14f67a8c93ece45199dbe04727"
-  evidence_closeout_head: "1ff9342ba8c703f8caf0e38793ffab1c859c12d5"
-  closeout_resolution: "evidence_closeout_head binds preceding completed YM-076 closeout commit (1ff9342ba8c703f8caf0e38793ffab1c859c12d5); scientific_candidate_sha and review_bound_sha bind accepted YM-077 candidate freeze (5f83112e6876ca14f67a8c93ece45199dbe04727); head binds YM-077 acceptance receipt commit (3c52584b7985c0094f5730906b97c195090d29b4); resolve authoritative current HEAD dynamically from Git."
+  head: "b4a9eac62a61ecff2a9334b923bab99f41ecd587"
+  scientific_candidate_sha: ""
+  review_bound_sha: ""
+  evidence_closeout_head: "b4a9eac62a61ecff2a9334b923bab99f41ecd587"
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-077 closeout commit (b4a9eac62a61ecff2a9334b923bab99f41ecd587); candidate freeze commit for YM-078 establishes authoritative candidate SHA."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,14 +32,25 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 110
-  last_updated_at: "2026-10-17T21:26:00Z"
+  last_expected_revision: 111
+  last_updated_at: "2026-10-18T10:20:00Z"
   active_contract: "YM-015F-JET-002B"
-  frozen_candidate: "5f83112e6876ca14f67a8c93ece45199dbe04727"
+  frozen_candidate: ""
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-078
+    scope_in: "Pathway C: Hybrid Gribov–Zwanziger horizon localization, fluctuation covariance damping, elimination of massless infrared accumulation defect, breakdown of fundamental gluon reflection positivity (OS2), color-singlet glueball spectral positivity restoration, proof of Lemma YM-078F-GRIBOV-ZWANZIGER-COVARIANCE-DAMPING-AND-GLUEBALL-POSITIVITY, and Test 42 finite certificate"
+    scope_out: "Crossing infrared crossover E-CROSSOVER, non-perturbative multi-block lattice collar equivalence, continuum Wightman reconstruction, and full continuum closure"
+    dependencies: ["YM-077"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-078_E4_RAW_20261018.md"
+    acceptor: "verification/YM-078_TECHNICAL_ACCEPTANCE.md"
+    status: CANDIDATE_FROZEN
+    scope_limitation: "GRIBOV_ZWANZIGER_HORIZON_DAMPED_GLUON_RP_VIOLATED_GLUEBALL_GAP_RESTORED_COLLAR_EQUIVALENCE_AND_CLAY_OPEN"
   - id: YM-077
     scope_in: "Quantitative non-perturbative obstruction characterization of the intermediate-to-infrared coupling crossover on Edge E-CROSSOVER, exact crossover exit threshold at RG step k = 5 (g_5^2 = 24/41 > 1/2), effective action structure at the small-to-large field boundary, tripartite infrared obstruction isolation (large-field polymer percolation, Gribov horizon and gauge slice breakdown, Savvidy chromomagnetic instability), proof of Lemma YM-077F-QUANTITATIVE-CROSSOVER-THRESHOLD-AND-TRIPARTITE-IR-OBSTRUCTIONS, and Test 41 finite certificate"
     scope_out: "Crossing infrared crossover E-CROSSOVER, non-perturbative mass gap generation, macroscopic infinite-volume thermodynamic limit, continuum Wightman reconstruction, and full continuum closure"

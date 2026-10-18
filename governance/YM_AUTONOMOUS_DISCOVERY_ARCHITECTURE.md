@@ -1026,3 +1026,40 @@ Begin now with the three synchronized tracks:
 `YM-3D4D-FAILURE-MAP-001`
 
 `YM-DISCOVERY-TRANSFER-001`.
+
+
+---
+
+# TRACK 1 EXTENSION: GOVERNED TASK SPECIFICATION YM-078
+## Pathway C: Hybrid Gribov–Zwanziger Horizon Localization & Center-Vortex Condensate Coercivity Analysis at RG Step k = 5
+
+**Task ID:** `YM-078`  
+**Primary Edge:** `E-CROSSOVER`  
+**Primary Contract:** `YM-015F-JET-002B`  
+**Downstream Dependency:** `YM-077` (Quantitative Crossover Obstruction Atlas)  
+**Target Milestone:** Formulation and rigorous test certificate for Pathway C infrared covariance modification, fundamental gluon reflection-positivity breakdown, and color-singlet glueball positivity restoration.
+
+### 1. Context and Problem Statement
+Task `YM-077` established that at multiscale RG step $k = 5$, the running coupling $g_5^2 = 24/41 > 1/2$ exits the small-field Weitzenböck stability domain, triggering the Gribov horizon obstruction $\lambda_0(\mathcal{M}_{V_0}) \to 0$ and the Savvidy chromomagnetic instability $\lambda_- = -1/2 < 0$. Under naive perturbation theory around $F = 0$, marginal dimension-4 operators suffer zero tree-level contraction ($\lambda_{\mathrm{tree}} = 1$), leading to the massless accumulation defect $\Delta_{\mathrm{massless\_IR\_defect}} = 3 > 0$.
+
+### 2. Mathematical Specification of Task YM-078
+1. **Fundamental Modular Domain ($\Omega_{\mathrm{FMD}}$) Restriction:**
+   Restrict the block gauge-field integration from the full gauge orbit space to the Fundamental Modular Domain:
+   $$\Omega_{\mathrm{FMD}} = \left\{ A_\mu : \partial_\mu A_\mu = 0, \; \mathcal{M}(A) = -\partial_\mu D_\mu(A) > 0, \; \int d^4x \, \tr(A_\mu^U A_\mu^U) \ge \int d^4x \, \tr(A_\mu A_\mu) \; \forall U \right\}.$$
+2. **Dynamical Horizon Parameter $\gamma_{\mathrm{GZ}}$ and Gap Equation at $k = 5$:**
+   Implement the restriction dynamically via the localized Zwanziger action $S_{\mathrm{GZ}} = S_{\mathrm{YM}} + S_{\mathrm{gf}} + S_{\gamma}$, where the horizon parameter $\gamma_{\mathrm{GZ}}$ satisfies the non-perturbative gap equation at scale $k = 5$:
+   $$\frac{3}{4} g_5^2 N \int \frac{d^4p}{(2\pi)^4} \frac{1}{p^4 + M^2 p^2 + \gamma_{\mathrm{GZ}}^4} = 1.$$
+3. **Fluctuation Covariance Shift:**
+   Prove that the transverse gluon fluctuation covariance shifts from the massless pole $D_0(p) = 1/p^2$ to the massive/Stingl-damped form:
+   $$D_{\mathrm{GZ}}(p) = \frac{p^2 + M_0^2}{p^4 + (M^2 + M_0^2) p^2 + \gamma_{\mathrm{GZ}}^4 + M^2 M_0^2}.$$
+   Verify that as $p^2 \to 0$, $D_{\mathrm{GZ}}(p) \to 0$ (or to a finite screening value $M_0^2 / (\gamma_{\mathrm{GZ}}^4 + M^2 M_0^2)$ when dimension-2 condensate $M^2 > 0$ is present), eliminating the massless infrared divergence.
+4. **Reflection Positivity (OS2) Violation on Fundamental Gluons:**
+   Analyze the spectral representation of $D_{\mathrm{GZ}}(p)$. Prove that for any $\gamma_{\mathrm{GZ}} > 0$, the poles in the complex $p^2$ plane form a complex conjugate pair:
+   $$p^2 = -\frac{M^2 + M_0^2}{2} \pm i \sqrt{\gamma_{\mathrm{GZ}}^4 - \frac{(M^2 - M_0^2)^2}{4}}.$$
+   Prove that the temporal Schwinger function $S_2(x_4) = \int \frac{dp_4}{2\pi} e^{i p_4 x_4} D(p_4)$ oscillates with factor $\cos(\omega x_4 - \phi)$ and becomes strictly negative for $x_4 > x_4^*$, establishing the certified reflection-positivity violation defect:
+   $$\Delta_{\mathrm{GZ\_RP}} = \inf_{x_4 > 0} S_2(x_4) < 0.$$
+   Certify that fundamental unconfined gluons CANNOT belong to the physical Hilbert space $\mathcal{H}_{\mathrm{phys}}$.
+5. **Color-Singlet Glueball Positivity Restoration:**
+   Analyze composite gauge-invariant operators $\mathcal{O}(x) = \tr(F_{\mu\nu} F^{\mu\nu})(x)$. Prove that the two-point function $\langle \mathcal{O}(x) \mathcal{O}(0) \rangle$ is given by the convolution of conjugate propagator cuts, generating a purely real, positive Källén–Lehmann spectral density $\rho_{\mathrm{glueball}}(s) \ge 0$ with an isolated threshold $M_{\mathrm{glueball}} \ge \sqrt{2} \gamma_{\mathrm{GZ}} > 0$, thereby restoring reflection positivity (OS2) on the physical color-singlet quotient space.
+6. **Epistemic Invariants:**
+   Confirm that Edge `E-CROSSOVER` remains `OPEN_AND_UNSOLVED`, `YM-016` remains `BLOCKED`, `goal_complete` remains `false`, and `clay_problem` remains `OPEN_AND_UNSOLVED`.
