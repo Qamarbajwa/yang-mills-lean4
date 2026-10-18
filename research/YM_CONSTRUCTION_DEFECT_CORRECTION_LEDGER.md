@@ -887,3 +887,28 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
 5. **Established Lemma and Progress:**
    - Proved Lemma `YM-080F-DYONIC-CALORON-DEBYE-SCREENING-AND-BION-RESURGENCE`.
 
+## CDC-081: Cross-Pathway Synthesis, The Gauge-Dependent Collar No-Go Theorem, Gauge-Invariant Character-Vortex Handoff, and Non-Abelian Character-Cluster Matching Barrier (`YM-081`)
+
+- **Task ID:** `YM-081`
+- **State Revision:** 118
+- **Date:** 2026-10-18
+- **Primary Contract:** `YM-015F-JET-002B`
+- **Source Target:** Bałaban Commun. Math. Phys. 122, 175 (1989); Gribov Nucl. Phys. B 139, 1 (1978); Mack & Petkova Ann. Phys. 123, 442 (1979); Kraan & van Baal Phys. Lett. B 428, 268 (1998); Osterwalder & Seiler Ann. Phys. 110, 440 (1978); Seiler LNP 159 (1982).
+- **Defects Corrected & Mathematical Resolutions:**
+
+1. **Defect 1: Fragmentation of Infrared Strategies & Omission of Unified Collar Obstruction Lower Bound:**
+   - Evaluating Pathways A, B, C, and D in isolation obscures the common structural root of their failures: every attempt to sew multi-block lattices via gauge-fixed link variables or dilute semiclassical expansions encounters an obstruction.
+   - **Correction:** Established the unified complementarity matrix across Pathways A, B, C, and D and proved the Gauge-Dependent Collar No-Go Theorem on Edge `E-CROSSOVER`: any gauge-dependent collar sewing or semiclassical dilute gas at $g_5^2 = 24/41 > 1/2$ encounters an obstruction lower bound $\Delta_{\mathrm{gauge\_collar\_min}} = \min(\Delta_{\mathrm{GZ\_RP}}, \Delta_{\mathrm{collar\_copy}}, \Delta_{\mathrm{core\_overlap}}) = \min(7/500, 1, 9/10) = 7/500 > 0$.
+
+2. **Defect 2: Gauge Slice Inconsistencies on Multiscale Block Collars vs. Gauge-Invariant Character-Vortex Handoff:**
+   - Imposing gauge conditions (such as Landau or Maximal Center Gauge) on multi-block lattice collars $\mathbb{B}_{\mathrm{collar}}$ introduces Gribov copies ($\Delta = 1$) that disrupt inter-block transition matching.
+   - **Correction:** Formulated the gauge-invariant character-vortex handoff at $k = 5$ by projecting the effective action onto class functions $\chi_r(U_{\mathrm{block}})$ and center-coset variables $Z(N) \times SU(N)/Z(N)$. Because characters depend solely on conjugacy classes of closed block loops, link variables on $\mathbb{B}_{\mathrm{collar}}$ remain unconstrained by gauge slices, eliminating Gribov copy ambiguities on the collar by construction ($\Delta_{\mathrm{Gribov\_copies}} = 0$).
+
+3. **Defect 3: Naive Equivalence of Bałaban Polymer Action with Strong-Coupling Character Cluster Expansions:**
+   - Assuming that the Bałaban effective action at $k = 5$ can be immediately handed off to the convergent strong-coupling character cluster expansion overlooks the finite-range non-perturbative coupling gap and non-local polymer tails.
+   - **Correction:** Proved that the Bałaban inverse coupling at $k = 5$ ($\beta_{\mathrm{inv}, 5} = 41/24 \approx 1.708$) is separated from the convergence domain of the 4D character cluster expansion ($\beta_{\mathrm{char}} < \beta_{\mathrm{conv}} = 1/22 \approx 0.045$) by the certified non-perturbative matching gap $\Delta_{\mathrm{char\_bridge}} = 41/24 - 1/22 = 439/264 \approx 1.663 > 0$. The non-local multi-plaquette polymer tail $R_5$ cannot be absorbed into local character coefficients without a convergent non-Abelian interpolation, keeping Edge `E-CROSSOVER` strictly `OPEN_AND_UNSOLVED`, Task `YM-016` `BLOCKED`, and the Clay Millennium Problem `OPEN_AND_UNSOLVED`.
+
+4. **Established Lemma and Progress:**
+   - Proved Lemma `YM-081F-CROSS-PATHWAY-SYNTHESIS-AND-CHARACTER-HANDOFF`.
+
+

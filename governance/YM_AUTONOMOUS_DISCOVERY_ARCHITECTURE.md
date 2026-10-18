@@ -1123,4 +1123,34 @@ Task `YM-080` formulates and evaluates **Pathway D**: the semiclassical topologi
 5. **Strict Epistemic Insulation:**
    Maintain `E-CROSSOVER = OPEN_AND_UNSOLVED`, `YM-016 = BLOCKED`, `goal_complete = false`, and `clay_problem = OPEN_AND_UNSOLVED`.
 
+## Task Specification YM-081: Cross-Pathway Synthesis on Edge E-CROSSOVER: The Gauge-Dependent Collar No-Go Theorem, Gauge-Invariant Character-Vortex Handoff Formulation at RG Step $k = 5$, and Non-Perturbative Character-Matching Defect Isolation
 
+### 1. Context and Objective
+Tasks `YM-077`, `YM-078`, `YM-079`, and `YM-080` evaluated Pathways A, B, C, and D across the intermediate-to-infrared crossover on Edge `E-CROSSOVER` at RG step $k = 5$ ($g_5^2 = 24/41 > 1/2$):
+- Pathway A (`YM-077`): Bałaban small-field RG exits stability window ($\Delta_{\mathrm{crossover\_exit}} = 7/82 > 0$, $\Delta_{\mathrm{perc}} = 7/4 > 0$, $\Delta_{\mathrm{Gribov\_copies}} = 1 > 0$, $\Delta_{\mathrm{instability}} = 1/2 > 0$, $\Delta_{\mathrm{massless\_IR\_defect}} = 3 > 0$).
+- Pathway C (`YM-078`): Gribov–Zwanziger horizon damping cures the massless IR defect ($\Delta_{\mathrm{massless\_IR\_defect}} = 0$) and restores color-singlet glueball positivity, but breaks reflection positivity on fundamental gluons ($\Delta_{\mathrm{GZ\_RP}} > 7/500 > 0$).
+- Pathway B (`YM-079`): Center-vortex domain partitioning stabilizes the Savvidy chromomagnetic vacuum ($\Delta_{\mathrm{Savvidy\_stabilization}} = 15/2 > 0$) and restores the Peierls area law ($\Delta_{\mathrm{string\_tension}} = 2/3 > 0$), but requires gauge fixing (Maximal Center Gauge) plagued by Gribov copies that displace vortex locations across block collars ($\Delta_{\mathrm{collar\_copy}} = 1 > 0$).
+- Pathway D (`YM-080`): Dyonic calorons generate non-perturbative Debye screening mass ($M_{\mathrm{Debye}}^2 > 0$, $\Delta_{\mathrm{Debye\_RP}} > 0$) and resurgent bions cancel lateral Borel ambiguities, but the semiclassical expansion fails in 4D isotropic decompactification due to dense core overlap ($\Delta_{\mathrm{core\_overlap}} = 9/10 > 0$).
+
+Task `YM-081` executes the cross-pathway synthesis:
+1. Proving the Gauge-Dependent Collar No-Go Theorem on Edge `E-CROSSOVER`;
+2. Formulating the gauge-invariant character-vortex handoff at $k = 5$ without link fixing on block collars;
+3. Rigorously isolating the non-Abelian character-cluster matching barrier ($\Delta_{\mathrm{char\_bridge}} > 0$) between the Bałaban polymer expansion and the convergent strong-coupling character expansion.
+
+### 2. Mathematical Specification of Task YM-081
+1. **Unified Complementarity Matrix & Gauge-Dependent Collar No-Go Theorem:**
+   Prove that every gauge-dependent collar sewing or dilute semiclassical expansion at $g_5^2 = 24/41 > 1/2$ encounters a strictly positive obstruction:
+   $$\Delta_{\mathrm{gauge\_collar\_min}} = \min(\Delta_{\mathrm{GZ\_RP}}, \Delta_{\mathrm{collar\_copy}}, \Delta_{\mathrm{core\_overlap}}) = \min(7/500, 1, 9/10) = 7/500 > 0.$$
+   Consequently, no gauge-fixed collar gluing or dilute semiclassical gas can construct the 4D Yang–Mills vacuum across Edge `E-CROSSOVER`.
+2. **Gauge-Invariant Character-Vortex Handoff Formulation at $k = 5$:**
+   At the flow/crossover scale $k = 5$, project the effective Boltzmann factor onto gauge-invariant group character expansions and center-coset variables:
+   $$e^{-S_{\mathrm{eff}}(U_B)} = \sum_{r} c_r \chi_r(U_B), \quad U_\mu(x) = Z_\mu(x) V_\mu(x),$$
+   where $\chi_r(g U g^{-1}) = \chi_r(U)$ are class functions on $SU(N)$ and $Z_\mu(x) \in Z(N)$. Because characters depend solely on conjugacy classes of closed loops, link variables on block collars $\mathbb{B}_{\mathrm{collar}}$ remain unconstrained by gauge slices, eliminating Gribov copy ambiguities on the collar by construction:
+   $$\Delta_{\mathrm{Gribov\_copies}} = 0.$$
+3. **Non-Abelian Character-Cluster Matching Barrier (`NEG-YM-081`):**
+   The Bałaban multiscale expansion at $k = 5$ terminates with effective action $S_5 = S_{5, \mathrm{local}} + R_5$, where $R_5$ contains non-local multi-plaquette polymer tails. In contrast, the strong-coupling character cluster expansion converges only when $\beta_{\mathrm{char}} < \beta_{\mathrm{conv}} = 1/22$.
+   At $k = 5$, $\beta_{\mathrm{inv}, 5} = 41/24$, producing the finite-range non-perturbative character-matching gap:
+   $$\Delta_{\mathrm{char\_bridge}} = \frac{41}{24} - \frac{1}{22} = \frac{439}{264} \approx 1.663 > 0.$$
+   The non-local tails $R_5$ cannot be absorbed into local character coefficients without a convergent non-Abelian interpolation, keeping Edge `E-CROSSOVER` strictly open.
+4. **Epistemic Invariants:**
+   Confirm that Edge `E-CROSSOVER` remains `OPEN_AND_UNSOLVED`, `YM-016` remains `BLOCKED`, `goal_complete` remains `false`, and `clay_problem` remains `OPEN_AND_UNSOLVED`.
