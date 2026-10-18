@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 114
+revision: 115
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "ac11248c8959f21f153208573efbf79282367d7c"
-  scientific_candidate_sha: ""
-  review_bound_sha: ""
+  head: "1eba56658372c2de3a9596668b2cec655c87e00d"
+  scientific_candidate_sha: "fedb1775eb26f54ea91ad5885b6c4d87779f7e20"
+  review_bound_sha: "fedb1775eb26f54ea91ad5885b6c4d87779f7e20"
   evidence_closeout_head: "ac11248c8959f21f153208573efbf79282367d7c"
-  closeout_resolution: "evidence_closeout_head binds preceding completed YM-078 closeout commit (ac11248c8959f21f153208573efbf79282367d7c); candidate freeze commit for YM-079 establishes authoritative candidate SHA."
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-078 closeout commit (ac11248c8959f21f153208573efbf79282367d7c); candidate freeze commit for YM-079 (fedb1775eb26f54ea91ad5885b6c4d87779f7e20) is scientifically accepted and bound."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,8 +32,8 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 113
-  last_updated_at: "2026-10-18T10:45:00Z"
+  last_expected_revision: 114
+  last_updated_at: "2026-10-18T11:00:00Z"
   active_contract: "YM-015F-JET-002B"
   frozen_candidate: ""
 
@@ -49,7 +49,7 @@ objectives:
     atlas_writer_and_coordinator: "primary-worker"
     reviewer_path: "verification/raw/YM-079_E4_RAW_20261018.md"
     acceptor: "verification/YM-079_TECHNICAL_ACCEPTANCE.md"
-    status: CANDIDATE_FROZEN
+    status: SCIENTIFICALLY_ACCEPTED
     scope_limitation: "CENTER_VORTEX_SAVVIDY_STABILIZED_PEIERLS_STRING_TENSION_RESTORED_COLLAR_AMBIGUITY_AND_CLAY_OPEN"
   - id: YM-078
     scope_in: "Pathway C: Hybrid Gribov–Zwanziger horizon localization, fluctuation covariance damping, elimination of massless infrared accumulation defect, breakdown of fundamental gluon reflection positivity (OS2), color-singlet glueball spectral positivity restoration, proof of Lemma YM-078F-GRIBOV-ZWANZIGER-COVARIANCE-DAMPING-AND-GLUEBALL-POSITIVITY, and Test 42 finite certificate"
