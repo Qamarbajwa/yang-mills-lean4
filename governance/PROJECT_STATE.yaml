@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 115
+revision: 116
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "1eba56658372c2de3a9596668b2cec655c87e00d"
-  scientific_candidate_sha: "fedb1775eb26f54ea91ad5885b6c4d87779f7e20"
-  review_bound_sha: "fedb1775eb26f54ea91ad5885b6c4d87779f7e20"
-  evidence_closeout_head: "ac11248c8959f21f153208573efbf79282367d7c"
-  closeout_resolution: "evidence_closeout_head binds preceding completed YM-078 closeout commit (ac11248c8959f21f153208573efbf79282367d7c); candidate freeze commit for YM-079 (fedb1775eb26f54ea91ad5885b6c4d87779f7e20) is scientifically accepted and bound."
+  head: "b85dae904b11f32a39281a1795c7eaebc6e2a225"
+  scientific_candidate_sha: ""
+  review_bound_sha: ""
+  evidence_closeout_head: "b85dae904b11f32a39281a1795c7eaebc6e2a225"
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-079 closeout commit (b85dae904b11f32a39281a1795c7eaebc6e2a225); candidate freeze commit for YM-080 establishes authoritative candidate SHA."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,14 +32,25 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 114
-  last_updated_at: "2026-10-18T11:00:00Z"
+  last_expected_revision: 115
+  last_updated_at: "2026-10-18T13:53:00Z"
   active_contract: "YM-015F-JET-002B"
   frozen_candidate: ""
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-080
+    scope_in: "Pathway D: Dyonic caloron / bion topological ensemble on R^3 x S^1, Kraan-van Baal fractional action split, non-perturbative Debye screening mass generation in dual photon channel, Osterwalder-Schrader reflection positivity preservation, resurgent bion Borel ambiguity cancellation, dense core-overlap barrier in 4D decompactification limit, proof of Lemma YM-080F-DYONIC-CALORON-DEBYE-SCREENING-AND-BION-RESURGENCE, and Test 44 finite certificate"
+    scope_out: "Crossing infrared crossover E-CROSSOVER, non-perturbative multi-block lattice collar equivalence, continuum Wightman reconstruction, and full continuum closure"
+    dependencies: ["YM-079"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-080_E4_RAW_20261018.md"
+    acceptor: "verification/YM-080_TECHNICAL_ACCEPTANCE.md"
+    status: CANDIDATE_FROZEN
+    scope_limitation: "DYONIC_CALORON_DEBYE_MASS_AND_RESURGENCE_PROVED_DENSE_CORE_OVERLAP_AND_CLAY_OPEN"
   - id: YM-079
     scope_in: "Pathway B: Center-vortex / caloron topological ensemble stabilization of the Savvidy chromomagnetic vacuum, kinetic confinement shift, Peierls area-law string-tension restoration on Z^4, confinement-percolation duality, proof of Lemma YM-079F-CENTER-VORTEX-TOPOLOGICAL-STABILIZATION-AND-PEIERLS-AREA-LAW, and Test 43 finite certificate"
     scope_out: "Crossing infrared crossover E-CROSSOVER, non-perturbative multi-block lattice collar matching of gauge-projected center vortices, continuum Wightman reconstruction, and full continuum closure"

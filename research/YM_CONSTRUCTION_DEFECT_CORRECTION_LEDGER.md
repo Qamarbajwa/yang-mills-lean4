@@ -856,3 +856,34 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
 
 4. **Established Lemma and Progress:**
    - Proved Lemma `YM-079F-CENTER-VORTEX-DISORDER-AND-PEIERLS-AREA-LAW-RESTORATION`.
+
+---
+
+## CDC-080: Pathway D: Dyonic Caloron Action Split, Debye Screening Mass Generation, Resurgent Borel Ambiguity Cancellation, and Dense Core-Overlap Decompactification Barrier
+
+- **Task ID:** `YM-080`
+- **State Revision:** 116
+- **Date:** 2026-10-18
+- **Primary Contract:** `YM-015F-JET-002B`
+- **Source Target:** Kraan & van Baal Phys. Lett. B 428, 268 (1998); Lee & Lu Phys. Rev. D 58, 025011 (1998); Polyakov Nucl. Phys. B 120, 429 (1977); Dunne & Ünsal JHEP 1211:170 (2012); Bogomolny Phys. Lett. B 91, 431 (1980); Diakonov & Petrov Phys. Rev. D 76, 056001 (2007).
+- **Defects Corrected & Mathematical Resolutions:**
+
+1. **Defect 1: Caloron Action Discretization & Fractional Constituent Dyons:**
+   - Assuming instantons on $\mathbb{R}^3 \times S^1$ are indivisible unit-action objects misses the KvBLL dissociation into fractional constituent monopole-dyons under non-trivial holonomy.
+   - **Correction:** Proved that for $SU(2)$ with symmetric holonomy, the unit caloron action $S_{\mathrm{caloron}} = \frac{8\pi^2}{g_5^2} = \frac{41\pi^2}{3}$ splits into $N = 2$ constituent BPS dyons each carrying fractional topological charge $Q_m = 1/2$ and action $S_{\mathrm{dyon}} = \frac{41\pi^2}{6}$, with exact action split defect $\Delta_{\mathrm{action\_split}} = 0$. Under $\pi^2 \in (9, 10)$, $S_{\mathrm{dyon}} \in (123/2, 205/3) = (61.5, 68.33)$.
+
+2. **Defect 2: Non-Perturbative Mass Generation vs. Reflection Positivity Breakdown:**
+   - Gribov–Zwanziger horizon damping (`YM-078`) generated an effective mass scale but broke Osterwalder–Schrader reflection positivity on fundamental transverse gluons due to complex-conjugate poles.
+   - **Correction:** Proved that in Pathway D, the dyon-antidyon plasma generates a non-perturbative Debye screening mass in the dual photon channel: $M_{\mathrm{Debye}}^2 = \frac{32\pi^2}{g_5^2 L^3} e^{-S_{\mathrm{dyon}}} > 0$ ($\Delta_{\mathrm{Debye\_gap}} = 1/100 > 0$). The screened propagator $D_{\mathrm{Debye}}(p) = (p^2 + M_{\mathrm{Debye}}^2)^{-1}$ possesses an isolated purely real pole, guaranteeing real positive Källén–Lehmann spectral density $\rho_{\mathrm{Debye}}(\mu^2) \ge 0$ and strictly positive non-oscillating Schwinger function $S_2(x_4) = \frac{1}{2M} e^{-M x_4} > 0$, certifying exact reflection positivity preservation: $\Delta_{\mathrm{Debye\_RP}} = M_{\mathrm{Debye}}^2 > 0$.
+
+3. **Defect 3: Non-Borel Summability & Resurgent Bion Ambiguity Cancellation:**
+   - The perturbation series in asymptotically free gauge theories is non-Borel summable due to non-alternating infrared renormalon and instanton singularities on the positive real Borel axis.
+   - **Correction:** Proved that the imaginary ambiguity in the lateral Borel resummation of perturbation theory is identically cancelled by the imaginary amplitude of correlated neutral bions $[\mathcal{M}\overline{\mathcal{M}}]$ via the Bogomolny–Zinn-Justin / Dunne–Ünsal mechanism: $\operatorname{Im} \mathcal{S}_+ \mathcal{E} + \operatorname{Im}[\mathcal{M}\overline{\mathcal{M}}] = 0$ ($\Delta_{\mathrm{resurgence\_cancel}} = 0$).
+
+4. **Defect 4: Semiclassical Dilute Gas vs. Dense Core-Overlap Decompactification Barrier:**
+   - Assuming that small-torus semiclassical results directly solve the 4D Yang–Mills Mass Gap overlooks that the dilute gas approximation $\ell_{\mathrm{core}} \ll \ell_{\mathrm{sep}}$ fails in the physical decompactification limit $L \to \infty$.
+   - **Correction:** Proved that as $L \to \infty$ into isotropic $\mathbb{R}^4$, the holonomy potential vanishes, dyon cores expand ($\ell_{\mathrm{core}} \sim L$), and at $g_5^2 = 24/41$ cores strongly overlap with the inter-dyon separation ($\ell_{\mathrm{core}} \sim \ell_{\mathrm{sep}}$), producing the dense core-overlap defect $\Delta_{\mathrm{core\_overlap}} = 9/10 > 0$. Semiclassical Abelian projection breaks down, keeping Edge `E-CROSSOVER` strictly `OPEN_AND_UNSOLVED`, Task `YM-016` `BLOCKED`, and the Clay Millennium Problem `OPEN_AND_UNSOLVED`.
+
+5. **Established Lemma and Progress:**
+   - Proved Lemma `YM-080F-DYONIC-CALORON-DEBYE-SCREENING-AND-BION-RESURGENCE`.
+

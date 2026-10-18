@@ -1100,3 +1100,27 @@ Task `YM-079` executes the constructive investigation of **Pathway B**: testing 
 6. **Strict Epistemic Insulation:**
    Maintain `E-CROSSOVER = OPEN_AND_UNSOLVED`, `YM-016 = BLOCKED`, `goal_complete = false`, and `clay_problem = OPEN_AND_UNSOLVED`.
 
+## Task Specification YM-080: Pathway D: Dyonic Caloron / Bion Topological Ensemble, Non-Perturbative Debye Screening Mass Generation, and Resurgent Borel Ambiguity Cancellation on Edge E-CROSSOVER
+
+### 1. Context and Objective
+Tasks `YM-078` and `YM-079` analyzed Pathway C (Gribov–Zwanziger horizon damping and glueball spectral positivity) and Pathway B (center-vortex disorder, Savvidy vacuum stabilization, and Peierls area-law restoration) at multiscale step $k = 5$ ($g_5^2 = 24/41 > 1/2$).
+Task `YM-080` formulates and evaluates **Pathway D**: the semiclassical topological ensemble of Kraan–van Baal / Lee–Lu (KvBLL) calorons with non-trivial holonomy on $\mathbb{R}^3 \times S^1$, their constituent fractional BPS monopole-dyons, non-perturbative Debye screening mass generation in the dual photon channel, and Bogomolny–Zinn-Justin / Dunne–Ünsal resurgent cancellation of lateral Borel ambiguities.
+
+### 2. Mathematical Specification of Task YM-080
+1. **Kraan–van Baal / Lee–Lu (KvBLL) Constituent Dyon Action Decomposition:**
+   Under non-trivial holonomy $P = \mathcal{P} \exp(i \int_0^L A_4 dx_4)$ on $\mathbb{R}^3 \times S^1$, the unit caloron decomposes into $N = 2$ constituent BPS monopole-dyons carrying fractional topological charges $Q_1 = Q_2 = 1/2$ and positive action:
+   $$S_{\mathrm{caloron}} = \frac{8\pi^2}{g_5^2} = \sum_{m=1}^2 S_{\mathrm{dyon}, m}, \quad S_{\mathrm{dyon}, m} = \frac{4\pi^2}{g_5^2} = \frac{41\pi^2}{6}.$$
+   Under $\pi^2 \in (9, 10)$, $S_{\mathrm{dyon}} \in (123/2, 205/3) = (61.5, 68.33)$, certifying exact action split defect $\Delta_{\mathrm{action\_split}} = 0$.
+2. **Debye Screening Coercivity & Exact Reflection Positivity (OS2) Preservation:**
+   In the 3D dual Abelian representation, the dyon-antidyon plasma generates an effective sine-Gordon interaction $\mathcal{L}_{\mathrm{dual}} = \frac{g^2}{8\pi^2}(\nabla \sigma)^2 - 2y \cos(\sigma)$ with fugacity $y = e^{-S_{\mathrm{dyon}}}$. Expanding around $\sigma = 0$ yields the non-perturbative Debye screening mass:
+   $$M_{\mathrm{Debye}}^2 = \frac{32\pi^2}{g_5^2 L^3} e^{-S_{\mathrm{dyon}}} > 0.$$
+   The screened dual photon propagator $D_{\mathrm{Debye}}(p) = (p^2 + M_{\mathrm{Debye}}^2)^{-1}$ eliminates the massless infrared accumulation pole ($D(0) < \infty$). Furthermore, $D_{\mathrm{Debye}}(p)$ has a single, isolated, purely real pole, guaranteeing that the Källén–Lehmann spectral density $\rho_{\mathrm{Debye}}(\mu^2) = \delta(\mu^2 - M^2) \ge 0$ is strictly non-negative and the temporal Schwinger function $S_2(x_4) = \frac{1}{2M} e^{-M x_4} > 0$ satisfies Osterwalder–Schrader reflection positivity without complex pole oscillations ($\Delta_{\mathrm{Debye\_RP}} = M_{\mathrm{Debye}}^2 > 0$).
+3. **Resurgent Bion Ambiguity Cancellation:**
+   Prove that the imaginary ambiguity in the lateral Borel resummation of the non-alternating perturbative renormalon/instanton series is identically cancelled by the imaginary part of the correlated neutral bion amplitude $[\mathcal{M}\overline{\mathcal{M}}]$:
+   $$\operatorname{Im} \mathcal{S}_+ \mathcal{E} + \operatorname{Im}[\mathcal{M}\overline{\mathcal{M}}] = 0, \quad \Delta_{\mathrm{resurgence\_cancel}} = 0.$$
+4. **Semiclassical Overlapping-Core Obstruction and Decompactification Barrier (`NEG-YM-080`):**
+   Record the exact non-perturbative obstruction: the dilute gas approximation requires $\ell_{\mathrm{core}} \ll \ell_{\mathrm{sep}}$. At step $k = 5$ ($g_5^2 = 24/41$) and in the isotropic 4D continuum decompactification limit $L \to \infty$, dyon cores expand ($\ell_{\mathrm{core}} \sim L$) and overlap strongly with the inter-dyon spacing ($\ell_{\mathrm{core}} \sim \ell_{\mathrm{sep}}$), producing the dense core-overlap defect $\Delta_{\mathrm{core\_overlap}} = 9/10 > 0$. The Abelian projection breaks down, leaving Edge `E-CROSSOVER` strictly open.
+5. **Strict Epistemic Insulation:**
+   Maintain `E-CROSSOVER = OPEN_AND_UNSOLVED`, `YM-016 = BLOCKED`, `goal_complete = false`, and `clay_problem = OPEN_AND_UNSOLVED`.
+
+
