@@ -1063,3 +1063,40 @@ Task `YM-077` established that at multiscale RG step $k = 5$, the running coupli
    Analyze composite gauge-invariant operators $\mathcal{O}(x) = \tr(F_{\mu\nu} F^{\mu\nu})(x)$. Prove that the two-point function $\langle \mathcal{O}(x) \mathcal{O}(0) \rangle$ is given by the convolution of conjugate propagator cuts, generating a purely real, positive Källén–Lehmann spectral density $\rho_{\mathrm{glueball}}(s) \ge 0$ with an isolated threshold $M_{\mathrm{glueball}} \ge \sqrt{2} \gamma_{\mathrm{GZ}} > 0$, thereby restoring reflection positivity (OS2) on the physical color-singlet quotient space.
 6. **Epistemic Invariants:**
    Confirm that Edge `E-CROSSOVER` remains `OPEN_AND_UNSOLVED`, `YM-016` remains `BLOCKED`, `goal_complete` remains `false`, and `clay_problem` remains `OPEN_AND_UNSOLVED`.
+
+---
+
+# TRACK 1 EXTENSION: GOVERNED TASK SPECIFICATION YM-079
+## Pathway B: Center-Vortex / Caloron Topological Ensemble Stabilization of the Savvidy Chromomagnetic Vacuum and Peierls String-Tension Restoration on $\mathbb{Z}^4$
+
+**Task ID:** `YM-079`  
+**Primary Edge:** `E-CROSSOVER`  
+**Primary Contract:** `YM-015F-JET-002B`  
+**Downstream Dependency:** `YM-078` (Pathway C: GZ Horizon Localization & Glueball Positivity)  
+**Target Milestone:** Formulation, exact rational certificates, and proof of Lemma `YM-079F-CENTER-VORTEX-DISORDER-AND-PEIERLS-AREA-LAW-RESTORATION` and Test 43.
+
+### 1. Context and Problem Statement
+In Task `YM-077`, the breakdown of small-field coercivity at step $k = 5$ ($g_5^2 = 24/41 > 1/2$) revealed two critical infrared failures:
+1. Plaquette polymer animals on $\mathbb{Z}^4$ lose Peierls suppression ($\beta_{\mathrm{inv}, 5} = 41/24 < \ln 22$), causing unsuppressed percolation of large-field defects ($\Delta_{\mathrm{perc}} = 7/4 > 0$).
+2. Homogeneous chromomagnetic background curvature induces the Savvidy vacuum instability with negative Hessian eigenvalue $\lambda_- = -1/2 < 0$ ($\Delta_{\mathrm{instability}} = 1/2 > 0$).
+
+Task `YM-079` executes the constructive investigation of **Pathway B**: testing whether organizing the non-perturbative vacuum into a topological ensemble of thin $\mathbb{Z}_2$ center vortices and dyonic calorons stabilizes the Savvidy chromomagnetic instability and restores the Peierls area-law bound.
+
+### 2. Mathematical Specification of Task YM-079
+1. **Center-Vortex / Coset Factorization on $\mathbb{Z}^4$:**
+   Decompose link variables into center and coset components: $U_\mu(x) = Z_\mu(x) V_\mu(x)$, where $Z_\mu(x) \in \mathbb{Z}_2 = \{-1, +1\}$ and $V_\mu(x) \in SO(3)$. Plaquettes factor as $U(p) = Z(p) V(p)$, where $Z(p) = -1$ designates a plaquette pierced by a closed $\mathbb{Z}_2$ vortex worldsheet on the dual lattice.
+2. **Topological Domain Partition and Savvidy Stabilization:**
+   Prove that when magnetic flux is partitioned into localized vortex domains of characteristic scale $\ell_{\mathrm{vortex}} \le 1$, the lowest fluctuation Hessian eigenvalue is shifted by kinetic Dirichlet confinement:
+   $$\lambda_{\mathrm{domain}} \ge \frac{\pi^2}{\ell_{\mathrm{vortex}}^2} - 2|F|.$$
+   For $\ell_{\mathrm{vortex}} \le 1$ and $|F| = 3/4$, $\pi^2 - 3/2 > 9 - 3/2 = 15/2 > 0$, certifying Savvidy vacuum stabilization margin $\Delta_{\mathrm{Savvidy\_stabilization}} = 15/2 > 0$.
+3. **Peierls Area-Law Decay & String Tension Restoration:**
+   For a planar Wilson loop $W(C)$ of minimal area $A(C)$, each dual vortex sheet piercing the minimal spanning surface $S$ introduces a factor of $-1$. In an independent piercing ensemble with vortex probability $p_v \in (0, 1/2)$, prove:
+   $$\langle W(C) \rangle = (1 - 2p_v)^{A(C)} = e^{-\sigma A(C)}, \quad \sigma = -\ln(1 - 2p_v) > 0.$$
+   For $p_v = 1/4$, $1 - 2p_v = 1/2$, giving $\sigma = \ln(2) > 2/3 > 0$ and string tension margin $\Delta_{\mathrm{string\_tension}} = 2/3 > 0$.
+4. **Percolation Duality:**
+   Contrast the dual roles of percolation: while electric plaquette percolation destroys perturbative small-field expansions ($\Delta_{\mathrm{perc}} = 7/4 > 0$), topological percolation of dual magnetic vortex surfaces is the exact physical mechanism generating the Wilson area law and color confinement.
+5. **Non-Perturbative Multi-Block Collar Equivalence Obstruction:**
+   Record that center vortex identification requires gauge fixing (e.g. Maximal Center Gauge), which possesses Gribov copies that shift vortex locations across multi-block lattice collars. Establishing a gauge-invariant, multiscale block RG transition with Bałaban collar matching across adjacent blocks remains an open boundary problem on $\mathbb{Z}^4$.
+6. **Strict Epistemic Insulation:**
+   Maintain `E-CROSSOVER = OPEN_AND_UNSOLVED`, `YM-016 = BLOCKED`, `goal_complete = false`, and `clay_problem = OPEN_AND_UNSOLVED`.
+
