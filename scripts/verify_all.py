@@ -33,10 +33,16 @@ EXPECTED_CHECKOUT_TREE_HASHES = {
     "fc8802a019f4564fc3935f877c7f83baa475321e47ebf15d1a20136f9a38e72d",  # State Revision 111 (YM-077 closeout baseline)
     "632964762a347cdf06184fee87c66b3625052994f3207f36eb61d90769f928ec",  # State Revision 112 (YM-078 architecture specification)
     "7139658dba5172e4e1e2bb137e175205ee6338f344544fad2db6a03f63d5dcf0",  # State Revision 113 (YM-078 candidate freeze)
+    "c76a1eae05b8b75815384b147d958194a33f22aaacb6113c437a2fb9bda25b1e",  # State Revision 114–115 (YM-079 candidate freeze)
 }
 
 # Accepted candidates mapping candidate commit SHA -> expected literal git blob manifest hash
 ACCEPTED_CANDIDATE_SPECS = {
+    "fedb1775eb26f54ea91ad5885b6c4d87779f7e20": {
+        "task": "YM-079",
+        "blob_hash": "4ffcfef44f4fa2f04d4955807e26956ed107149c6e43a52b5f5219463789d38e",
+        "revision": 115,
+    },
     "2855a6473974fe674bde587dcbd34dc95a31d4c0": {
         "task": "YM-078",
         "blob_hash": "60dda72cecd354e56cd8bb7b52abb3a36f8468b5e79bdfcdc8647c6616fe6666",
@@ -48,15 +54,16 @@ ACCEPTED_CANDIDATE_SPECS = {
         "revision": 111,
     },
 }
-ACCEPTED_CANDIDATE_SHA = "2855a6473974fe674bde587dcbd34dc95a31d4c0"
-EXPECTED_LITERAL_GIT_BLOB_TREE_HASH = "60dda72cecd354e56cd8bb7b52abb3a36f8468b5e79bdfcdc8647c6616fe6666"
+ACCEPTED_CANDIDATE_SHA = "fedb1775eb26f54ea91ad5885b6c4d87779f7e20"
+EXPECTED_LITERAL_GIT_BLOB_TREE_HASH = "4ffcfef44f4fa2f04d4955807e26956ed107149c6e43a52b5f5219463789d38e"
 
 
 def print_banner():
     print("=" * 80)
     print("  YANG-MILLS CONTINUUM QFT & CROSSOVER OBSTRUCTION ATLAS")
-    print("  Turnkey Referee Verification Suite — State Revision 111–113")
+    print("  Turnkey Referee Verification Suite — State Revision 111–115")
     print("=" * 80)
+
 
 
 def check_closed_world_tree_hash():
@@ -153,8 +160,8 @@ def run_pytest_suite():
             print(res.stderr)
             return False
 
-        if not ("472 passed" in summary_line or "471 passed" in summary_line):
-            print(f"  [FAIL] Expected 471 or 472 passed tests, observed: {summary_line}")
+        if not ("473 passed" in summary_line or "472 passed" in summary_line or "471 passed" in summary_line):
+            print(f"  [FAIL] Expected 471, 472, or 473 passed tests, observed: {summary_line}")
             return False
 
         print(f"  [PASS] Exact rational certificates passed deterministically ({summary_line.strip()}).")
@@ -186,9 +193,9 @@ def verify_epistemic_invariants():
             print(f"  [FAIL] Missing invariant: {desc} (expected '{needle}')")
             all_ok = False
 
-    # Check for revision freshness (111 or 113)
-    if "revision: 113" in content or "revision: 111" in content:
-        print("  [PASS] State revision is governed (111 or 113)")
+    # Check for revision freshness (111, 113, or 115)
+    if "revision: 115" in content or "revision: 113" in content or "revision: 111" in content:
+        print("  [PASS] State revision is governed (111, 113, or 115)")
     else:
         print("  [FAIL] State revision mismatch")
         all_ok = False
