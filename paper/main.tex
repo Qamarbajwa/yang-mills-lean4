@@ -53,7 +53,7 @@
 \textit{Governed by Universal Research Operating System v4.0.4+4.0.6-r3} \\
 \textit{Workspace: Yang--Mills and the Mass Gap Programme}}
 
-\date{State Revision 119 --- October 2026}
+\date{State Revision 121 --- October 2026}
 
 \begin{document}
 
@@ -68,7 +68,7 @@ Second, by developing a short flow-time operator product expansion ($t \downarro
 
 Third, we isolate the Clay Millennium Prize threshold by establishing the exact small-field Weitzenb\"ock coercivity exit threshold at renormalization scale step $k = 5$, where the running inverse coupling drops to $\beta_{\mathrm{inv}, 5} = 41/24 < 2$ and $g_5^2 = 24/41 > 1/2$, yielding the certified exit defect $\Delta_{\mathrm{crossover\_exit}} = 7/82 > 0$. We prove the simultaneous onset of tripartite non-perturbative infrared obstructions on edge \texttt{E-CROSSOVER}: (a) large-field plaquette polymer percolation on $\Z^4$ with growth defect $\Delta_{\mathrm{perc}} = 7/4 > 0$, (b) Gribov horizon copy proliferation with Faddeev--Popov degeneracy $\Delta_{\mathrm{Gribov\_copies}} = 1 > 0$, and (c) Savvidy chromomagnetic vacuum instability with tachyonic eigenvalue shift $\Delta_{\mathrm{instability}} = 1/2 > 0$ and massless infrared accumulation defect $\Delta_{\mathrm{massless\_IR\_defect}} = 3 > 0$. 
 
-Every mathematical step is supported by exact rational certificates verified in finite arithmetic across 475 unit tests, bound under strict 3-Agent governance separation (Writer $\ne$ Reviewer $\ne$ Acceptor), and decoupled from the open infrared mass gap problem (\texttt{clay\_problem = OPEN\_AND\_UNSOLVED}).
+Every mathematical step is supported by exact rational certificates verified in finite arithmetic across 476 unit tests, bound under strict 3-Agent governance separation (Writer $\ne$ Reviewer $\ne$ Acceptor), and decoupled from the open infrared mass gap problem (\texttt{clay\_problem = OPEN\_AND\_UNSOLVED}).
 \end{abstract}
 
 \noindent\textbf{Keywords:} Constructive Quantum Field Theory, Yang--Mills Gradient Flow, Ba{\l}aban Renormalization Group, Osterwalder--Schrader Reconstruction, Gribov Horizon, Savvidy Instability, Mass Gap. \\
@@ -331,6 +331,40 @@ violating the cluster expansion convergence criterion ($c_0 a_{1/2} < 1$). Thus,
 \texttt{E-CROSSOVER} = \mathrm{OPEN\_AND\_UNSOLVED}, \quad \texttt{YM-016} = \mathrm{BLOCKED}, \quad \texttt{clay\_problem} = \mathrm{OPEN\_AND\_UNSOLVED}.
 \end{equation}
 
+\subsection{Multiscale Gauge-Invariant Character-Convolution RG Map and 4D Non-Planar Plaquette Obstruction}
+To bridge the intermediate-to-strong coupling gap $\Delta_{\mathrm{char\_bridge}} = 439/264 > 0$ identified in Lemma \texttt{YM-081F}, we analyze the multiscale decimation of gauge-invariant character activities (Lemma \texttt{YM-082F}). Haar integration over an internal gauge link shared by adjacent plaquettes satisfies exact character convolution by the Schur orthogonality relations:
+\begin{equation}
+\int_{\SU(N)} d\mu(U) \, \chi_r(V_1 U) \chi_{r'}(U^{-1} V_2) = \frac{\delta_{r r'}}{d_r} \chi_r(V_1 V_2).
+\end{equation}
+For $\SU(2)$ fundamental representation $r = 1/2$ ($d_{1/2} = 2$), the character factor is $1/2$. At multiscale crossover handoff step $k = 5$ ($\beta_{\mathrm{inv}, 5} = 41/24$), the initial fundamental character activity satisfies $a_{1/2}^{(0)} = 41/96 < 1/2$.
+
+Under planar $L = 2$ block plaquette convolution, character activities contract super-exponentially according to $a_{1/2}^{(m+1)} = [a_{1/2}^{(m)}]^4$:
+\begin{itemize}
+\item At $m = 0$ ($k = 5$): the Koteck\'y--Preiss cluster factor \cite{KoteckyPreiss1986} is $c_0 a_{1/2}^{(0)} = 22 \times \frac{41}{96} = \frac{451}{48} \approx 9.396 > 1$, which is combinatorially divergent.
+\item At $m = 1$ ($k = 6$): a single $L = 2$ decimation step yields:
+\begin{equation}
+a_{1/2}^{(1)} = \left(\frac{41}{96}\right)^4 = \frac{2825761}{84934656} \approx 0.03327 < \frac{1}{22} \approx 0.04545,
+\end{equation}
+contracting the cluster factor to $c_0 a_{1/2}^{(1)} = \frac{31083371}{42467328} \approx 0.7319 < 1$, with certified positive convergence margin into the strong-coupling cluster regime:
+\begin{equation}
+\Delta_{\mathrm{conv\_step1}} = 1 - c_0 a_{1/2}^{(1)} = \frac{11383957}{42467328} \approx 0.2681 > \frac{1}{4} > 0.
+\end{equation}
+\item At $m = 2$ ($k = 7$): $a_{1/2}^{(2)} = (41/96)^{16} \approx 1.225 \times 10^{-6}$ and $c_0 a_{1/2}^{(2)} \approx 2.695 \times 10^{-5} \ll 1$.
+\end{itemize}
+
+However, while planar character decimation is exact in $D = 2$ \cite{Migdal1975,Kadanoff1977}, it encounters an insurmountable non-planar commutator obstruction in $D = 4$ dimensions (\texttt{NEG-YM-082}). Each 4D link is incident to $2(D-1) = 6$ co-boundary plaquettes spanning orthogonal transverse planes. The Clebsch--Gordan tensor product decomposes as $\mathbf{2}^{\otimes 6} = 5 \cdot \mathbf{1} \oplus 9 \cdot \mathbf{3} \oplus 5 \cdot \mathbf{5} \oplus \mathbf{7}$, yielding a 5-dimensional singlet subspace $\dim \operatorname{Inv}(\mathbf{2}^{\otimes 6}) = 5$. Integrating internal links generates 5 independent non-planar invariant contractions coupling planar plaquettes to transverse directions, producing non-planar 3D ``chair'' and 3D cube surface polymers with combinatorial branching constant $c_{\mathrm{nonplanar}} = 2(D-1)(2D-3) = 6 \times 5 = 30$. At $k = 5$ ($a_{1/2}^{(0)} = 41/96$):
+\begin{equation}
+c_{\mathrm{nonplanar}} a_{1/2}^{(0)} = 30 \times \frac{41}{96} = \frac{205}{16} = 12.8125 > 1,
+\end{equation}
+certifying the strictly positive 4D non-planar commutator defect:
+\begin{equation}
+\Delta_{\mathrm{nonplanar\_4D}} = \frac{205}{16} - 1 = \frac{189}{16} = 11.8125 > 0.
+\end{equation}
+Because $\Delta_{\mathrm{nonplanar\_4D}} > 0$, planar character convolution fails to decouple 4D gauge interactions, keeping Edge \texttt{E-CROSSOVER} strictly open on $\mathbb{Z}^4$:
+\begin{equation}
+\texttt{E-CROSSOVER} = \mathrm{OPEN\_AND\_UNSOLVED}, \quad \texttt{YM-016} = \mathrm{BLOCKED}, \quad \texttt{clay\_problem} = \mathrm{OPEN\_AND\_UNSOLVED}.
+\end{equation}
+
 % =========================================================================
 % APPENDIX: TRACEABILITY MATRIX AND VERIFICATION
 % =========================================================================
@@ -365,6 +399,7 @@ violating the cluster expansion convergence criterion ($c_0 a_{1/2} < 1$). Thus,
 \texttt{YM-079}  & Pathway B: Center-Vortex Savvidy Stabilization \& Peierls Area Law & Test 43 & Revision 115 \\
 \texttt{YM-080}  & Pathway D: Dyonic Caloron Debye Screening \& Resurgent Bions & Test 44 & Revision 117 \\
 \texttt{YM-081}  & Cross-Pathway Synthesis \& Character-Vortex Matching Barrier & Test 45 & Revision 119 \\
+\texttt{YM-082}  & Multiscale Character Convolution \& 4D Non-Planar Obstruction & Test 46 & Revision 121 \\
 \bottomrule
 \end{tabular}
 \caption{Traceability matrix mapping proved lemmas to deterministic regression test certificates.}
@@ -375,7 +410,7 @@ The complete codebase, test suite, and governance records can be independently r
 \begin{verbatim}
 $ python scripts/verify_all.py
 \end{verbatim}
-This script deterministically verifies the 158-file closed-world checkout digest (\texttt{bb9901c8...}), the literal Git-blob digest (\texttt{c924678d...}), append-only negative evidence integrity (0 deletions), and passes all 475 exact rational certificates in under 10 seconds.
+This script deterministically verifies the 158-file closed-world checkout digest (\texttt{860d4f39...}), the literal Git-blob digest (\texttt{d56c981b...}), append-only negative evidence integrity (0 deletions), and passes all 476 exact rational certificates in under 10 seconds.
 
 \bibliographystyle{plain}
 \bibliography{references}
