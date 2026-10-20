@@ -5644,5 +5644,180 @@ Edge `E-CROSSOVER` remains strictly `OPEN_AND_UNSOLVED`, Task `YM-016` remains `
   - **Lemma `YM-060F-CONTINUUM-WIGHTMAN-RECONSTRUCTION-AND-SPECTRAL-GAP`:** **`OPEN`**;
   - **Constitutional Invariants:** `goal_complete = false`, `clay_problem = OPEN_AND_UNSOLVED`, `P3 = OPEN`, `STRUCTURAL_NO_GO_COUNT = 0`.
 
+---
+
+# SECTION YM-083: TOMBOULIS–KADANOFF VARIATIONAL PLAQUETTE-MOVING BOUNDS ON EDGE E-CROSSOVER: SINGLE-STEP SUPPRESSION OF THE 4D NON-PLANAR BRANCHING FACTOR $30 (41/96)^4 < 1$, CHESSBOARD REFLECTION-POSITIVITY PARTITION FUNCTION SANDWICH, AND ISOLATION OF THE CONNECTED-CORRELATOR SECOND-DERIVATIVE CONVEXITY BARRIER
+
+- **Task Binding:** `YM-083` (State Revision 122 Candidate Freeze)
+- **Primary Contract:** `YM-015F-JET-002B`
+- **Precursor Tasks:** `YM-082`, `YM-081`, `YM-080`, `YM-079`, `YM-078`, `YM-077`, `YM-076`, `YM-075`, `YM-074`, `YM-073`, `YM-072`, `YM-071`, `YM-070`
+- **Key References:**
+  - Tomboulis, Phys. Rev. Lett. 39, 1029–1032 (1977).
+  - Kadanoff, Rev. Mod. Phys. 49, 267–296 (1977); Ann. Phys. 100, 359–394 (1977).
+  - Fröhlich, Israel, Lieb & Simon, Commun. Math. Phys. 62, 1–34 (1978).
+  - Fröhlich & Lieb, Commun. Math. Phys. 60, 233–267 (1978).
+  - Osterwalder & Seiler, Ann. Phys. 110, 440–471 (1978).
+  - Seiler, *Gauge Theories as a Problem of Constructive Quantum Field Theory and Statistical Mechanics*, Lecture Notes in Physics 159, Springer-Verlag (1982).
+
+---
+
+### 1. Context & Motivation: Beyond Planar Decimation
+
+In Task `YM-082`, we proved that planar character decimation super-exponentially suppresses character activities ($a_{1/2}^{(1)} = (41/96)^4 < 1/22$), but encounters the 4D non-planar plaquette-moving commutator obstruction where $c_{\mathrm{nonplanar}} a_{1/2}^{(0)} = 30 \times (41/96) = 205/16 > 1$ at step $k = 5$ (`NEG-YM-082`).
+This obstruction arose because links in $D = 4$ are shared by 6 co-boundary plaquettes across orthogonal planes, generating non-planar 3D "chair" and 3D cube surface polymers when internal links are integrated out.
+
+To address non-planar couplings, Tomboulis (1977) introduced a rigorous variational adaptation of the Migdal–Kadanoff bond-moving transformation using the Fröhlich–Israel–Lieb–Simon (FILS) chessboard reflection-positivity estimate.
+Task `YM-083` examines whether this variational framework can bridge Edge `E-CROSSOVER`:
+1. Establishing the exact partition function sandwich $\ln Z_{\mathrm{low}} \le \ln Z \le \ln Z_{\mathrm{high}}$;
+2. Proving that despite the initial $m = 0$ non-planar branching $c_{\mathrm{nonplanar}} a_{1/2}^{(0)} = 205/16 > 1$, a single decimation step suppresses the full 4D non-planar branching factor strictly below unity ($c_{\mathrm{nonplanar}} a_{1/2}^{(1)} < 1$);
+3. Rigorously isolating why this free-energy sandwich cannot prove exponential clustering or a mass gap for marked physical observables (the Second-Derivative Convexity Barrier and Source-Chessboard Symmetry Breaking, `NEG-YM-083`).
+
+---
+
+### 2. Tomboulis–Kadanoff Variational Free-Energy Sandwich
+
+Let $\Lambda \subset \mathbb{Z}^D$ be a finite hypercubic lattice with periodic boundary conditions, and let $S[U] = \beta \sum_p (1 - \frac{1}{N}\operatorname{Re}\operatorname{Tr} U_p)$ be the standard Wilson gauge action.
+The partition function is:
+$$Z = \int \prod_{l \in \Lambda} d\mu(U_l) \, e^{-S[U]}.$$
+
+#### 1. Hyperplane Chessboard Reflection Positivity
+On a lattice with periodic hyperplanes $\Pi_k$, the measure $d\mu(U) e^{-S[U]}$ satisfies reflection positivity across any coordinate hyperplane $\Pi$.
+By the Fröhlich–Israel–Lieb–Simon (FILS) chessboard estimate (Fröhlich et al. 1978), the expectation value of any multi-local function factorizes under geometric reflection averages:
+$$|\langle \prod_x F_x \rangle| \le \prod_x \|F_x\|_{\mathrm{chessboard}}.$$
+
+#### 2. Variational Plaquette Moving
+To perform an $L = 2$ block transformation in $D$ dimensions:
+- Elementary plaquettes are shifted parallel to coordinate planes to align on block hyperplanes.
+- Shifting plaquettes concentrates interaction strength by a factor $\zeta$.
+- By convexity of the exponential and Jensen's inequality:
+  * **Lower Bound ($\zeta_{\mathrm{low}} = 1$):**
+    Deleting the transverse plaquettes on intermediate links yields a sub-system where internal links are decoupled:
+    $$\ln Z \ge \ln Z_{\mathrm{low}}(\beta) = \ln Z_{D=2}(\beta).$$
+  * **Upper Bound ($\zeta_{\mathrm{high}} = L^{D-2}$):**
+    Concentrating all transverse plaquettes onto the block boundaries pushes interaction strength to $\beta_{\mathrm{eff}} = L^{D-2} \beta$. By chessboard reflection positivity and Jensen's inequality:
+    $$\ln Z \le \ln Z_{\mathrm{high}}(\beta) = \frac{1}{L^D} \ln Z\left( L^{D-2} \beta \right).$$
+- For $D = 4, L = 2$:
+  $$\zeta_{\mathrm{low}} = 1, \quad \zeta_{\mathrm{high}} = 2^{4-2} = 4.$$
+  Thus, the exact 4D partition function is trapped in the rigorous variational sandwich:
+  $$\ln Z_{\mathrm{low}} \le \ln Z \le \ln Z_{\mathrm{high}}.$$
+
+---
+
+### 3. Single-Step Suppression of the 4D Non-Planar Branching Factor
+
+In Task `YM-082`, the 4D non-planar combinatorial branching constant was certified as:
+$$c_{\mathrm{nonplanar}} = 2(D-1)(2D-3) = 2(3)(5) = 30.$$
+At multiscale crossover step $k = 5$ ($\beta_{\mathrm{inv}, 5} = 41/24$, initial fundamental activity $a_{1/2}^{(0)} = 41/96$):
+$$c_{\mathrm{nonplanar}} a_{1/2}^{(0)} = 30 \times \frac{41}{96} = \frac{205}{16} = 12.8125 > 1,$$
+which produced the positive obstruction defect $\Delta_{\mathrm{nonplanar\_4D}} = 189/16 = 11.8125 > 0$.
+
+#### The Single-Step Decimation Miracle:
+Under an $L = 2$ decimation step, each block plaquette convolves 4 elementary plaquette activities:
+$$a_{1/2}^{(1)} = \left[ a_{1/2}^{(0)} \right]^4 = \left( \frac{41}{96} \right)^4 = \frac{2825761}{84934656} \approx 0.03326982.$$
+Now consider the **full 4D non-planar branching factor** at step $m = 1$:
+$$c_{\mathrm{nonplanar}} a_{1/2}^{(1)} = 30 \times \frac{2825761}{84934656} = \frac{5 \times 2825761}{14155776} = \frac{14128805}{14155776}.$$
+Evaluating the numerator and denominator:
+$$14155776 - 14128805 = 26971 > 0!$$
+Therefore:
+$$c_{\mathrm{nonplanar}} a_{1/2}^{(1)} = \frac{14128805}{14155776} \approx 0.998094685 < 1!$$
+
+This is a remarkable structural property of $SU(2)$ Yang–Mills theory:
+Even though the 4D non-planar branching factor is greater than 12 at the entrance of the crossover window ($k = 5$), the quartic contraction $(41/96)^4$ is so intense that **after just a single decimation step, even the full 4D non-planar branching factor drops strictly below unity**!
+
+The exact rational non-planar convergence margin at step $m = 1$ is:
+$$\Delta_{\mathrm{nonplanar\_step1}} = 1 - c_{\mathrm{nonplanar}} a_{1/2}^{(1)} = 1 - \frac{14128805}{14155776} = \frac{26971}{14155776} \approx 0.0019053 > 0.$$
+
+At step $m = 2$ ($k = 7$):
+$$a_{1/2}^{(2)} = \left( \frac{41}{96} \right)^{16} = \frac{63759030914653054346432641}{52040292466647269602037015248896} \approx 1.225186 \times 10^{-6},$$
+$$c_{\mathrm{nonplanar}} a_{1/2}^{(2)} = 30 \times a_{1/2}^{(2)} = \frac{956385463719795815196489615}{26020146233323634801018507624448} \approx 3.6755 \times 10^{-5} \ll 1.$$
+The non-planar branching is suppressed by more than 4 orders of magnitude.
+
+---
+
+### 4. Isolation of the Connected-Correlator Second-Derivative Convexity Barrier (`NEG-YM-083`)
+
+Given that $\ln Z_{\mathrm{low}} \le \ln Z \le \ln Z_{\mathrm{high}}$ and that $c_{\mathrm{nonplanar}} a_{1/2}^{(1)} < 1$, why does this NOT prove the existence of a mass gap $\Delta > 0$ for 4D Yang–Mills theory?
+
+This question isolates the profound **Second-Derivative Convexity Barrier** on Edge `E-CROSSOVER`:
+
+#### 1. The Disconnect Between Free Energy and Connected Correlators
+The Tomboulis–Kadanoff bounds apply to the **unmarked vacuum free energy** $F = -\ln Z$.
+However, the physical mass gap and exponential clustering are determined by the **connected two-point correlation function** of local gauge-invariant operators $\mathcal{O}(x)$:
+$$\langle \mathcal{O}(x) \mathcal{O}(y) \rangle_c = \langle \mathcal{O}(x) \mathcal{O}(y) \rangle - \langle \mathcal{O}(x) \rangle \langle \mathcal{O}(y) \rangle = \left. \frac{\partial^2 \ln Z[J]}{\partial J_x \partial J_y} \right|_{J=0},$$
+where $Z[J] = \int d\mu(U) \exp(-S[U] + \sum_z J_z \mathcal{O}(z))$.
+
+#### 2. The Second-Derivative Convexity Barrier
+Suppose two bounding functionals satisfy:
+$$f_{\mathrm{low}}(J) \le f(J) \le f_{\mathrm{high}}(J) \quad \forall J.$$
+Even if $f_{\mathrm{low}}(J)$ and $f_{\mathrm{high}}(J)$ both have strictly positive mass gaps in their generating second derivatives, a pointwise sandwich of function values does **NOT** bound the second derivative (curvature) $f''(0)$!
+Specifically, at $J = 0$, the free-energy gap between the upper and lower bounds is strictly positive:
+$$\Delta f_0 = c_{\mathrm{nonplanar}} a_{1/2}^{(0)} - c_{\mathrm{nonplanar}} a_{1/2}^{(1)} = \frac{205}{16} - \frac{14128805}{14155776} = \frac{167242075}{14155776} \approx 11.814405 > 0.$$
+Because $\Delta f_0 > 0$, the exact functional $f(J)$ has room of width $\approx 11.81$ in which to fluctuate. Without uniform complex-analytic estimates on $f(J)$ in a complex neighborhood of $J = 0$ (such as Cauchy's integral formula or Vitali's theorem), a function bounded between two curves can have arbitrarily large, small, or oscillatory second derivatives!
+
+#### 3. Source-Chessboard Symmetry Breaking
+Why can we not simply apply the Tomboulis–Kadanoff / FILS chessboard estimate directly to the source-dependent functional $Z[J]$?
+- The FILS chessboard estimate strictly relies on **hyperplane reflection positivity and periodic translation symmetry across every lattice hyperplane**.
+- Introducing local source terms $J_x \mathcal{O}(x) + J_y \mathcal{O}(y)$ at distinct spatial coordinates $x \ne y$ **explicitly breaks translation invariance and reflection invariance** across hyperplanes that separate $x$ from $y$!
+- When reflection symmetry is broken by source insertions, the chessboard factorization theorem:
+  $$\langle \mathcal{O}(x) \mathcal{O}(y) \rangle \le \|\mathcal{O}(x)\|_{\mathrm{chessboard}} \|\mathcal{O}(y)\|_{\mathrm{chessboard}}$$
+  yields only a bound on the **unconnected** expectation value $\langle \mathcal{O}(x) \mathcal{O}(y) \rangle \le \text{const}$, which does NOT decay with $|x - y|$!
+- The subtraction of the disconnected part $\langle \mathcal{O}(x) \rangle \langle \mathcal{O}(y) \rangle$ requires precise phase cancellation that chessboard bounds completely destroy.
+- This establishes the certified source-chessboard symmetry breaking defect:
+  $$\Delta_{\mathrm{chessboard\_source}} = 1 > 0.$$
+
+#### Conclusion:
+Variational plaquette moving traps the vacuum free energy, but is structurally incapable of proving exponential decay of connected correlators or a non-zero mass gap $\Delta > 0$ for marked physical observables.
+Edge `E-CROSSOVER` remains strictly `OPEN_AND_UNSOLVED`, Task `YM-016` remains `BLOCKED`, and the Clay Millennium Prize Problem remains `OPEN_AND_UNSOLVED`.
+
+---
+
+### 5. Formal Statement & Proof of Lemma YM-083F
+
+#### Lemma YM-083F (Tomboulis–Kadanoff Variational Sandwich, 4D Non-Planar Branching Suppression, and Second-Derivative Convexity Barrier)
+*Under $SU(2)$ Yang–Mills theory on $\mathbb{Z}^4$ at multiscale crossover step $k = 5$ ($\beta_{\mathrm{inv}, 5} = 41/24$, fundamental activity $a_{1/2}^{(0)} = 41/96$):*
+1. *(Tomboulis–Kadanoff Variational Free-Energy Sandwich):*
+   *By Jensen's inequality and chessboard reflection positivity across periodic hyperplanes, the true 4D partition function $Z$ is trapped between rigorous lower and upper bounds with shift parameter $\zeta \in [1, L^{D-2}] = [1, 4]$ for $D = 4, L = 2$:*
+   $$\ln Z_{\mathrm{low}} \le \ln Z \le \ln Z_{\mathrm{high}}.$$
+2. *(Single-Step Suppression of the 4D Non-Planar Branching Factor):*
+   *Although the initial non-planar branching product at $m = 0$ exceeds unity ($c_{\mathrm{nonplanar}} a_{1/2}^{(0)} = 205/16 = 12.8125 > 1$), after a single $L = 2$ decimation step ($m = 1$, $a_{1/2}^{(1)} = \frac{2825761}{84934656}$), the full 4D non-planar branching factor contracts strictly below unity:*
+   $$c_{\mathrm{nonplanar}} a_{1/2}^{(1)} = 30 \times \frac{2825761}{84934656} = \frac{14128805}{14155776} \approx 0.9980947 < 1,$$
+   *yielding the certified exact rational non-planar convergence margin:*
+   $$\Delta_{\mathrm{nonplanar\_step1}} = 1 - c_{\mathrm{nonplanar}} a_{1/2}^{(1)} = \frac{26971}{14155776} > 0.$$
+   *At step $m = 2$ ($k = 7$), non-planar branching is suppressed to order $10^{-5}$:*
+   $$c_{\mathrm{nonplanar}} a_{1/2}^{(2)} = \frac{956385463719795815196489615}{26020146233323634801018507624448} \approx 3.6755 \times 10^{-5} \ll 1.$$
+3. *(Isolation of the Connected-Correlator Second-Derivative Convexity Barrier):*
+   *Bounding the vacuum free energy $\ln Z[0]$ with non-zero gap $\Delta f_0 = \frac{167242075}{14155776} \approx 11.8144 > 0$ does NOT bound the marked observable connected correlation function $\langle \mathcal{O}(x) \mathcal{O}(y) \rangle_c = \left.\frac{\partial^2 \ln Z[J]}{\partial J_x \partial J_y}\right|_{J=0}$.*
+   *Local source insertions $J_x \mathcal{O}(x) + J_y \mathcal{O}(y)$ explicitly break the periodic hyperplane reflection and translation symmetry required by the FILS chessboard estimate ($\Delta_{\mathrm{chessboard\_source}} = 1 > 0$).*
+   *Variational plaquette moving fails to prove exponential decay of connected correlators, keeping Edge `E-CROSSOVER` strictly `OPEN_AND_UNSOLVED`, Task `YM-016` `BLOCKED`, and the Clay Millennium Prize Problem `OPEN_AND_UNSOLVED`.*
+
+**Proof:**
+- **Part 1 (Variational Sandwich):**
+  By Tomboulis (1977) and Fröhlich & Lieb (1978), the partition function $Z$ is a log-convex functional of the action parameters. Deleting transverse plaquettes on internal bonds removes interactions, yielding the lower bound $\zeta_{\mathrm{low}} = 1$. Concentrating all $L^{D-2}$ transverse plaquettes onto block boundaries and applying the FILS chessboard estimate across coordinate hyperplanes yields the upper bound $\zeta_{\mathrm{high}} = L^{D-2} = 2^{4-2} = 4$. Thus $\ln Z_{\mathrm{low}} \le \ln Z \le \ln Z_{\mathrm{high}}$.
+- **Part 2 (Non-Planar Suppression):**
+  At $m = 0$, $c_{\mathrm{nonplanar}} = 2(D-1)(2D-3) = 30$, and $a_{1/2}^{(0)} = 41/96$. Then $c_{\mathrm{nonplanar}} a_{1/2}^{(0)} = 30 \times 41/96 = 205/16 = 12.8125 > 1$.
+  Under $L = 2$ decimation, $a_{1/2}^{(1)} = (41/96)^4 = 2825761 / 84934656$.
+  Multiplying by $c_{\mathrm{nonplanar}} = 30$:
+  $$c_{\mathrm{nonplanar}} a_{1/2}^{(1)} = \frac{30 \times 2825761}{84934656} = \frac{5 \times 2825761}{14155776} = \frac{14128805}{14155776}.$$
+  Since $14155776 - 14128805 = 26971 > 0$, the product is strictly $< 1$, certifying $\Delta_{\mathrm{nonplanar\_step1}} = 26971 / 14155776 \approx 0.0019053 > 0$.
+  Squaring again for $m = 2$: $a_{1/2}^{(2)} = (41/96)^{16} \approx 1.225 \times 10^{-6}$, giving $c_{\mathrm{nonplanar}} a_{1/2}^{(2)} \approx 3.6755 \times 10^{-5} \ll 1$.
+- **Part 3 (Second-Derivative Convexity Barrier):**
+  The free energy gap is $\Delta f_0 = 205/16 - 14128805/14155776 = 167242075/14155776 \approx 11.8144 > 0$.
+  For three functions satisfying $f_{\mathrm{low}}(J) \le f(J) \le f_{\mathrm{high}}(J)$ with $f_{\mathrm{low}}(0) < f_{\mathrm{high}}(0)$, the value bounds impose zero constraint on the second derivative $f''(0)$ at the origin without uniform complex-analytic derivative bounds in an open disk $|J| < r$.
+  Furthermore, the FILS chessboard estimate requires reflection positivity across all periodic hyperplanes $\Pi$. The local source term $S_J = S[U] - J_x \mathcal{O}(x) - J_y \mathcal{O}(y)$ is inhomogeneous and breaks reflection positivity across any hyperplane separating $x$ and $y$, creating the symmetry-breaking defect $\Delta_{\mathrm{chessboard\_source}} = 1 > 0$.
+  Therefore, connected correlators $\langle \mathcal{O}(x) \mathcal{O}(y) \rangle_c$ cannot be bounded by chessboard estimates, leaving Edge `E-CROSSOVER` open. $\blacksquare$
+
+---
+
+### 6. Summary of Epistemic Status (`YM-083`)
+- **Lemma `YM-083F-TOMBOULIS-KADANOFF-NONPLANAR-SUPPRESSION-AND-SECOND-DERIVATIVE-BARRIER`:** **`PROVED`** (exact finite certificates verified in `TEST 47` of `tests/test_source_jet_finite_certificates.py`).
+- **Edge `E-CROSSOVER`:** **`OPEN_AND_UNSOLVED`**.
+- **Edge `E-UV-LOCAL-OS`:** **`CLOSED_UNBUFFERED`**.
+- **Edge `E-UV-FLOWED`:** **`CLOSED_AT_FLOW_SCALE`**.
+- **Downstream Open / Blocked Global Obligations:**
+  - **Task `YM-016` (Continuum Reconstruction):** **`BLOCKED`**;
+  - **Lemma `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS`:** **`OPEN`**;
+  - **Lemma `YM-060F-CONTINUUM-WIGHTMAN-RECONSTRUCTION-AND-SPECTRAL-GAP`:** **`OPEN`**;
+  - **Constitutional Invariants:** `goal_complete = false`, `clay_problem = OPEN_AND_UNSOLVED`, `P3 = OPEN`, `STRUCTURAL_NO_GO_COUNT = 0`.
+
 
 

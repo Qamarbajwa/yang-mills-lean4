@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 121
+revision: 122
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "5e44297a051440d9541f411459138dffa5d60035"
-  scientific_candidate_sha: "d3f0e468983a5694e85846476c9076b60e8fd702"
-  review_bound_sha: "d3f0e468983a5694e85846476c9076b60e8fd702"
-  evidence_closeout_head: "d3f0e468983a5694e85846476c9076b60e8fd702"
-  closeout_resolution: "evidence_closeout_head binds scientific candidate commit (d3f0e468983a5694e85846476c9076b60e8fd702); YM-082 is scientifically accepted and closed out at State Revision 121."
+  head: "617602b9a1ba19b26ce9c4e0980c59e798e404bf"
+  scientific_candidate_sha: ""
+  review_bound_sha: ""
+  evidence_closeout_head: "617602b9a1ba19b26ce9c4e0980c59e798e404bf"
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-082 closeout commit (617602b9a1ba19b26ce9c4e0980c59e798e404bf); candidate freeze for YM-083 is staged at State Revision 122."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,14 +32,25 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 120
-  last_updated_at: "2026-10-19T02:00:00Z"
+  last_expected_revision: 121
+  last_updated_at: "2026-10-20T10:00:00Z"
   active_contract: "YM-015F-JET-002B"
   frozen_candidate: ""
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-083
+    scope_in: "Tomboulis–Kadanoff Variational Plaquette-Moving Bounds on Edge E-CROSSOVER: Single-Step Suppression of the 4D Non-Planar Branching Factor 30 (41/96)^4 < 1, Chessboard Reflection-Positivity Partition Function Sandwich, and Isolation of the Connected-Correlator Second-Derivative Convexity Barrier, proof of Lemma YM-083F-TOMBOULIS-KADANOFF-NONPLANAR-SUPPRESSION-AND-SECOND-DERIVATIVE-BARRIER, and Test 47 finite certificate"
+    scope_out: "Crossing infrared crossover E-CROSSOVER, non-perturbative multi-block lattice collar equivalence, continuum Wightman reconstruction, and full continuum closure"
+    dependencies: ["YM-082"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-083_E4_RAW_20261020.md"
+    acceptor: "verification/YM-083_TECHNICAL_ACCEPTANCE.md"
+    status: CANDIDATE_FROZEN
+    scope_limitation: "NONPLANAR_SUPPRESSION_PROVED_SECOND_DERIVATIVE_BARRIER_ISOLATED_AND_CLAY_OPEN"
   - id: YM-082
     scope_in: "Multiscale Gauge-Invariant Character-Convolution RG Map on Edge E-CROSSOVER: Two-Step Super-Exponential Activity Contraction from beta_5 = 41/24 into the Strong-Coupling Cluster Regime beta_eff < 1/22, and Isolation of the 4D Non-Planar Plaquette-Moving Commutator Obstruction, proof of Lemma YM-082F-CHARACTER-CONVOLUTION-RG-MAP-AND-4D-NONPLANAR-OBSTRUCTION, and Test 46 finite certificate"
     scope_out: "Crossing infrared crossover E-CROSSOVER, non-perturbative multi-block lattice collar equivalence, continuum Wightman reconstruction, and full continuum closure"

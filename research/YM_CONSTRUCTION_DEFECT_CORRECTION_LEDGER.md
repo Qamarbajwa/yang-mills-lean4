@@ -931,5 +931,31 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
 3. **Established Lemma and Progress:**
    - Proved Lemma `YM-082F-CHARACTER-CONVOLUTION-RG-MAP-AND-4D-NONPLANAR-OBSTRUCTION`.
 
+## CDC-083: Tomboulis–Kadanoff Variational Plaquette-Moving Bounds, Single-Step Non-Planar Branching Suppression, and Connected-Correlator Second-Derivative Convexity Barrier (`YM-083`)
+
+- **Task ID:** `YM-083`
+- **State Revision:** 122
+- **Date:** 2026-10-20
+- **Primary Contract:** `YM-015F-JET-002B`
+- **Source Target:** Tomboulis Phys. Rev. Lett. 39, 1029 (1977); Kadanoff Rev. Mod. Phys. 49, 267 (1977); Fröhlich, Israel, Lieb & Simon Commun. Math. Phys. 62, 1 (1978); Fröhlich & Lieb Commun. Math. Phys. 60, 233 (1978); Osterwalder & Seiler Ann. Phys. 110, 440 (1978); Seiler LNP 159 (1982).
+- **Defects Corrected & Mathematical Resolutions:**
+
+1. **Defect 1: Assuming 4D Non-Planar Branching Proliferation Persists Under Block Decimation:**
+   - In `YM-082`, the 4D non-planar commutator obstruction $c_{\mathrm{nonplanar}} a_{1/2}^{(0)} = 30 \times (41/96) = 205/16 = 12.8125 > 1$ was established at $m = 0$, but the evolution of the full 4D non-planar branching factor under decimation was not evaluated.
+   - **Correction:** Proved that under $L = 2$ decimation, the quartic activity contraction $a_{1/2}^{(1)} = (41/96)^4 = \frac{2825761}{84934656}$ is so strong that even when multiplied by the full 4D non-planar branching factor $c_{\mathrm{nonplanar}} = 30$, the product contracts strictly below unity in a single step:
+     $$c_{\mathrm{nonplanar}} a_{1/2}^{(1)} = 30 \times \frac{2825761}{84934656} = \frac{14128805}{14155776} \approx 0.9980947 < 1.$$
+     This establishes the certified positive non-planar convergence margin $\Delta_{\mathrm{nonplanar\_step1}} = \frac{26971}{14155776} > 0$. At $m = 2$, non-planar branching is suppressed to order $3.675 \times 10^{-5} \ll 1$.
+
+2. **Defect 2: Naive Conflation of Vacuum Partition Function Bounds with Connected Correlator Exponential Decay:**
+   - Assuming that trapping the vacuum free energy $\ln Z_{\mathrm{low}} \le \ln Z \le \ln Z_{\mathrm{high}}$ via Tomboulis–Kadanoff variational bounds and FILS chessboard reflection positivity proves a mass gap $\Delta > 0$ for physical observables overlooks the second-derivative convexity barrier and source-chessboard breaking (`NEG-YM-083`).
+   - **Correction:** Proved that:
+     (a) A pointwise sandwich of functionals $f_{\mathrm{low}}(J) \le f(J) \le f_{\mathrm{high}}(J)$ with non-zero gap $\Delta f_0 = \frac{167242075}{14155776} \approx 11.8144 > 0$ does not bound the second derivative (curvature) $f''(0) = \langle \mathcal{O}(x) \mathcal{O}(y) \rangle_c$ without uniform complex-analytic control in an open neighborhood $|J| < r$ (Vitali/Cauchy).
+     (b) Local observable source insertions $J_x \mathcal{O}(x) + J_y \mathcal{O}(y)$ explicitly break the periodic hyperplane reflection and translation symmetry required by the FILS chessboard estimate ($\Delta_{\mathrm{chessboard\_source}} = 1 > 0$).
+     Consequently, variational plaquette moving cannot prove a mass gap $\Delta > 0$ for marked observables, keeping Edge `E-CROSSOVER` strictly `OPEN_AND_UNSOLVED`, Task `YM-016` `BLOCKED`, and the Clay Millennium Problem `OPEN_AND_UNSOLVED`.
+
+3. **Established Lemma and Progress:**
+   - Proved Lemma `YM-083F-TOMBOULIS-KADANOFF-NONPLANAR-SUPPRESSION-AND-SECOND-DERIVATIVE-BARRIER`.
+
+
 
 

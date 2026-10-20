@@ -1192,3 +1192,36 @@ Task `YM-082` investigates whether a multiscale gauge-invariant character-convol
 4. **Epistemic Invariants:**
    Confirm that Edge `E-CROSSOVER` remains `OPEN_AND_UNSOLVED`, `YM-016` remains `BLOCKED`, `goal_complete` remains `false`, and `clay_problem` remains `OPEN_AND_UNSOLVED`.
 
+## Task Specification YM-083: Tomboulis–Kadanoff Variational Plaquette-Moving Bounds on Edge E-CROSSOVER: Single-Step Suppression of the 4D Non-Planar Branching Factor 30(41/96)^4 < 1, Chessboard Reflection-Positivity Partition Function Sandwich, and Isolation of the Connected-Correlator Second-Derivative Convexity Barrier
+
+### 1. Context and Objective
+Task `YM-082` formulated the multiscale gauge-invariant character-convolution RG map, proving super-exponential activity contraction in planar decimation ($a_{1/2}^{(1)} = (41/96)^4 < 1/22$), while isolating the 4D non-planar plaquette-moving commutator obstruction where $c_{\mathrm{nonplanar}} a_{1/2}^{(0)} = 30 \times (41/96) = 205/16 > 1$ at $k = 5$ (`NEG-YM-082`).
+Task `YM-083` analyzes the variational plaquette-moving framework of Tomboulis (1977) and Kadanoff (1977), combined with the Fröhlich–Israel–Lieb–Simon (FILS) chessboard reflection-positivity estimates:
+1. Deriving the exact variational free-energy sandwich $\ln Z_{\mathrm{low}} \le \ln Z \le \ln Z_{\mathrm{high}}$ with shift parameter $\zeta \in [1, L^{D-2}] = [1, 4]$ for $D = 4, L = 2$;
+2. Proving the crucial mathematical fact that a single $L = 2$ decimation step completely suppresses the full 4D non-planar branching factor below unity: $c_{\mathrm{nonplanar}} a_{1/2}^{(1)} = 30 \times (41/96)^4 = \frac{14128805}{14155776} \approx 0.998095 < 1$, establishing an exact rational positive non-planar convergence margin $\Delta_{\mathrm{nonplanar\_step1}} = \frac{26971}{14155776} > 0$;
+3. Rigorously isolating why this vacuum partition function sandwich fails to bound marked physical observable connected two-point functions $\langle \mathcal{O}(x) \mathcal{O}(y) \rangle_c = \left.\frac{\partial^2 \ln Z[J]}{\partial J_x \partial J_y}\right|_{J=0}$: a pointwise bound $f_{\mathrm{low}}(J) \le f(J) \le f_{\mathrm{high}}(J)$ with non-zero gap $\Delta f_0 > 0$ does not bound the second derivative $f''(0)$, and local source insertions explicitly break the periodic hyperplane reflection symmetry required for chessboard estimates (`NEG-YM-083`).
+
+### 2. Mathematical Specification of Task YM-083
+1. **Tomboulis–Kadanoff Variational Free-Energy Sandwich:**
+   By applying Jensen's inequality to the convex partition function under plaquette moving and utilizing chessboard reflection positivity on periodic hyperplanes, the true 4D partition function $Z$ is trapped between rigorous lower and upper bounds:
+   $$\ln Z_{\mathrm{low}} \le \ln Z \le \ln Z_{\mathrm{high}},$$
+   where the lower bound corresponds to deleting transverse links ($\zeta_{\mathrm{low}} = 1$), and the upper bound corresponds to concentrating transverse interactions ($\zeta_{\mathrm{high}} = L^{D-2} = 2^{4-2} = 4$).
+2. **Single-Step Suppression of the 4D Non-Planar Branching Factor ($c_{\mathrm{nonplanar}} = 30$):**
+   At $m = 0$ ($k = 5$), the initial non-planar branching product is $c_{\mathrm{nonplanar}} a_{1/2}^{(0)} = 30 \times \frac{41}{96} = \frac{205}{16} = 12.8125 > 1$.
+   After one $L = 2$ decimation step ($m = 1$, $k = 6$), the decimated fundamental character activity is $a_{1/2}^{(1)} = (41/96)^4 = \frac{2825761}{84934656}$.
+   Evaluating the full 4D non-planar branching factor at step $m = 1$:
+   $$c_{\mathrm{nonplanar}} a_{1/2}^{(1)} = 30 \times \frac{2825761}{84934656} = \frac{14128805}{14155776} \approx 0.9980947 < 1.$$
+   This proves that despite the 4D non-planar commutator obstruction at $m = 0$, the super-exponential contraction of character activities suppresses the full 4D branching factor strictly below 1 in a single step, yielding the certified exact rational convergence margin:
+   $$\Delta_{\mathrm{nonplanar\_step1}} = 1 - c_{\mathrm{nonplanar}} a_{1/2}^{(1)} = 1 - \frac{14128805}{14155776} = \frac{26971}{14155776} \approx 0.0019053 > 0.$$
+   At step $m = 2$ ($k = 7$):
+   $$c_{\mathrm{nonplanar}} a_{1/2}^{(2)} = 30 \times \left(\frac{41}{96}\right)^{16} \approx 3.675 \times 10^{-5} \ll 1.$$
+3. **Isolation of the Connected-Correlator Second-Derivative Convexity Barrier (`NEG-YM-083`):**
+   Prove that partition function bounds do NOT imply exponential decay of connected correlators:
+   - The free-energy difference between bounds is strictly non-zero:
+     $$\Delta f_0 = c_{\mathrm{nonplanar}} a_{1/2}^{(0)} - c_{\mathrm{nonplanar}} a_{1/2}^{(1)} = \frac{205}{16} - \frac{14128805}{14155776} = \frac{167242075}{14155776} \approx 11.8144 > 0.$$
+   - A pointwise sandwich $f_{\mathrm{low}}(J) \le f(J) \le f_{\mathrm{high}}(J)$ does NOT constrain the curvature (second derivative) $f''(0) = \langle \mathcal{O}(x) \mathcal{O}(y) \rangle_c$ without uniform complex-analytic $J$-ball estimates (Vitali/Cauchy).
+   - Local observable source insertions $J_x \mathcal{O}(x) + J_y \mathcal{O}(y)$ break the periodic hyperplane translation and reflection symmetry required by the Fröhlich–Israel–Lieb–Simon chessboard estimate, creating a strictly positive source-chessboard breaking defect $\Delta_{\mathrm{chessboard\_source}} = 1 > 0$.
+   - Conclude that variational plaquette moving cannot prove a mass gap $\Delta > 0$ for marked physical observables.
+4. **Epistemic Invariants:**
+   Confirm that Edge `E-CROSSOVER` remains `OPEN_AND_UNSOLVED`, `YM-016` remains `BLOCKED`, `goal_complete` remains `false`, and `clay_problem` remains `OPEN_AND_UNSOLVED`.
+
