@@ -6,7 +6,7 @@ Performs independent, automated, deterministic verification of:
 1. Closed-world canonical scientific tree hash across all 158 manifest files.
 2. Literal Git-blob tree hash for the accepted candidate freeze.
 3. Negative Evidence Register continuity (strictly zero historical deletions).
-4. Deterministic execution of all 474 exact rational pytest certificates.
+4. Deterministic execution of all 477 exact rational pytest certificates.
 5. Verification of constitutional epistemic invariants (E-CROSSOVER open, no fake claims).
 
 Usage:
@@ -37,10 +37,16 @@ EXPECTED_CHECKOUT_TREE_HASHES = {
     "4041bbe61f2feb3b13294abbc7f8b460a4dea71c84c48372528410fa2c650031",  # State Revision 116–117 (YM-080 candidate freeze)
     "bb9901c89d1a4ddd085464df5f709a4f9a66e37271600d255127d39d96d13ded",  # State Revision 118–119 (YM-081 candidate freeze)
     "860d4f39f3bcf7301e1b415122dfa928b5019ce88bad3fe0b07d108a3bd8be29",  # State Revision 120–121 (YM-082 candidate freeze)
+    "e1080e20a6f023f887c77380b2e0355c675a01d9cf831f17df5cef445c2384d2",  # State Revision 122–123 (YM-083 candidate freeze)
 }
 
 # Accepted candidates mapping candidate commit SHA -> expected literal git blob manifest hash
 ACCEPTED_CANDIDATE_SPECS = {
+    "27ade3b9d22fa43ea20c9c67253ffe146a1f24bc": {
+        "task": "YM-083",
+        "blob_hash": "22afdeaecf8876eeda646d0834a0cbcf9fe0d5c4d5cb79cc4648e17952a1b5ff",
+        "revision": 123,
+    },
     "d3f0e468983a5694e85846476c9076b60e8fd702": {
         "task": "YM-082",
         "blob_hash": "d56c981ba2d3a14e8b3b86488a538f1ddc3ffc511637855e29ce91eadb50b625",
@@ -72,14 +78,14 @@ ACCEPTED_CANDIDATE_SPECS = {
         "revision": 111,
     },
 }
-ACCEPTED_CANDIDATE_SHA = "d3f0e468983a5694e85846476c9076b60e8fd702"
-EXPECTED_LITERAL_GIT_BLOB_TREE_HASH = "d56c981ba2d3a14e8b3b86488a538f1ddc3ffc511637855e29ce91eadb50b625"
+ACCEPTED_CANDIDATE_SHA = "27ade3b9d22fa43ea20c9c67253ffe146a1f24bc"
+EXPECTED_LITERAL_GIT_BLOB_TREE_HASH = "22afdeaecf8876eeda646d0834a0cbcf9fe0d5c4d5cb79cc4648e17952a1b5ff"
 
 
 def print_banner():
     print("=" * 80)
     print("  YANG-MILLS CONTINUUM QFT & CROSSOVER OBSTRUCTION ATLAS")
-    print("  Turnkey Referee Verification Suite — State Revision 111–121")
+    print("  Turnkey Referee Verification Suite — State Revision 111–123")
     print("=" * 80)
 
 
@@ -179,8 +185,8 @@ def run_pytest_suite():
             print(res.stderr)
             return False
 
-        if not ("476 passed" in summary_line or "475 passed" in summary_line or "474 passed" in summary_line or "473 passed" in summary_line or "472 passed" in summary_line or "471 passed" in summary_line):
-            print(f"  [FAIL] Expected 471, 472, 473, 474, 475, or 476 passed tests, observed: {summary_line}")
+        if not ("477 passed" in summary_line or "476 passed" in summary_line or "475 passed" in summary_line or "474 passed" in summary_line or "473 passed" in summary_line or "472 passed" in summary_line or "471 passed" in summary_line):
+            print(f"  [FAIL] Expected 471, 472, 473, 474, 475, 476, or 477 passed tests, observed: {summary_line}")
             return False
 
         print(f"  [PASS] Exact rational certificates passed deterministically ({summary_line.strip()}).")
@@ -212,9 +218,9 @@ def verify_epistemic_invariants():
             print(f"  [FAIL] Missing invariant: {desc} (expected '{needle}')")
             all_ok = False
 
-    # Check for revision freshness (111, 113, 115, 117, 119, or 121)
-    if "revision: 121" in content or "revision: 119" in content or "revision: 117" in content or "revision: 115" in content or "revision: 113" in content or "revision: 111" in content:
-        print("  [PASS] State revision is governed (111, 113, 115, 117, 119, or 121)")
+    # Check for revision freshness (111, 113, 115, 117, 119, 121, or 123)
+    if "revision: 123" in content or "revision: 121" in content or "revision: 119" in content or "revision: 117" in content or "revision: 115" in content or "revision: 113" in content or "revision: 111" in content:
+        print("  [PASS] State revision is governed (111, 113, 115, 117, 119, 121, or 123)")
     else:
         print("  [FAIL] State revision mismatch")
         all_ok = False
