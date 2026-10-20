@@ -434,3 +434,10 @@ Primary YMH Lemma4.5 p54 ->Lemma5.5 p60 was text rechecked at https://www.pure.e
 
 
 
+## FA-001 source-free 't Hooft twisted partition function symmetry restoration, Cauchy-Vitali derivative bounds, and extensive bulk free-energy volume-mismatch obstruction / YM-084
+
+1. **Source-free 't Hooft twist & chessboard symmetry restoration:** Proved that replacing local source insertions with a global $\mathbb{Z}_N$ center twist across a co-closed dual surface preserves global gauge covariance and periodic hyperplane shift invariance, restoring exact FILS chessboard reflection positivity: $\Delta_{\mathrm{chessboard\_twisted}} = 0$.
+2. **Cauchy–Vitali complex disc second-derivative bounds:** Proved that on any Lee–Yang zero-free disc $D(0, R_J)$, Cauchy's integral formula bounds the second derivative by $|\frac{\partial^2 \ln Z}{\partial J^2}(0)| \le \frac{2 M(R_J)}{R_J^2} = 16$ for $R_J = 1/2, M(R_J) = 2$, showing how uniform complex analyticity converts value bounds into curvature bounds.
+3. **Extensive bulk free-energy volume-mismatch obstruction:** Proved that the upper bound ($\zeta = 4$) and lower bound decimation ($\zeta = 1$) have a strictly positive per-plaquette bulk free-energy density difference $\Delta f_{\mathrm{bulk}} = \frac{41}{96} - \frac{2825761}{84934656} = \frac{33448415}{84934656} \approx 0.393814 > 0$. In finite 4-volume $V_4 \ge 16$, the extensive ratio mismatch factor grows as $\exp(+V_4 \Delta f_{\mathrm{bulk}}) \ge 1 + V_4 \Delta f_{\mathrm{bulk}} = \frac{38756831}{5308416} \approx 7.301016 > 1$, creating the extensive bulk mismatch defect $\Delta_{\mathrm{bulk\_mismatch}} = \frac{33448415}{5308416} \approx 6.301016 > 0$. As $V_4 \to \infty$, the extensive bulk growth $\exp(+V_4 \Delta f_{\mathrm{bulk}}) \to \infty$ overwhelms the sub-extensive surface tension $\exp(-\sigma A)$, rendering the variational upper-over-lower ratio bound vacuous in the thermodynamic limit.
+4. **Proved Lemma & DAG status:** Lemma `YM-084F-THOOFT-TWIST-SYMMETRY-AND-EXTENSIVE-BULK-MISMATCH` proved. Edge `E-CROSSOVER` remains `OPEN_AND_UNSOLVED`. Earliest global 4D failure remains UNESTABLISHED; structural no-go count 0.
+

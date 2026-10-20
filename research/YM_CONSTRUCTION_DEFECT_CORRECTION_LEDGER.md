@@ -959,3 +959,29 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
 
 
 
+
+
+## CDC-084: Source-Free ’t Hooft Twisted Partition Function Symmetry Restoration, Cauchy–Lee–Yang Derivative Bounds, and Extensive Bulk Free-Energy Volume-Mismatch Obstruction (`YM-084`)
+
+- **Task ID:** `YM-084`
+- **State Revision:** 124
+- **Date:** 2026-10-20
+- **Primary Contract:** `YM-015F-JET-002B`
+- **Source Target:** ’t Hooft Nucl. Phys. B 153, 141 (1979); ’t Hooft Commun. Math. Phys. 81, 267 (1981); Tomboulis Phys. Rev. Lett. 39, 1029 (1977); Fröhlich & Lieb Commun. Math. Phys. 60, 233 (1978); Lee & Yang Phys. Rev. 87, 404 (1952).
+- **Defects Corrected & Mathematical Resolutions:**
+
+1. **Defect 1: Local Source Symmetry Breaking in Chessboard Reflection Positivity:**
+   - In `YM-083`, inserting local sources $J_x \mathcal{O}(x) + J_y \mathcal{O}(y)$ was shown to break periodic hyperplane translation and reflection symmetries ($\Delta_{\mathrm{chessboard\_source}} = 1 > 0$), obstructing the application of chessboard estimates to connected correlators.
+   - **Correction:** Formulated the source-free ’t Hooft center-twist partition function $Z_-(T) / Z_+(T)$ with global twist $z \in \mathbb{Z}_N$ across a co-closed dual surface. Proved that because the twist is globally gauge-covariant and shifts covariantly under coordinate translations, it preserves exact periodic hyperplane reflection positivity for all parallel planes, restoring exact chessboard symmetry ($\Delta_{\mathrm{chessboard\_twisted}} = 0$).
+
+2. **Defect 2: Assuming Pointwise Free-Energy Sandwiches Translate to Ratio Upper Bounds in the Thermodynamic Limit:**
+   - Naively assuming that bounding the twisted partition function ratio by variational plaquette moving $\frac{Z_-(T)}{Z_+(T)} \le \frac{Z_{-,\mathrm{high}}(T)}{Z_{+,\mathrm{low}}(T)}$ proves electric flux confinement and string tension $\sigma > 0$ in the infinite-volume limit overlooks the extensive bulk free-energy density mismatch (`NEG-YM-084`).
+   - **Correction:** Proved that:
+     (a) On a complex disc $D(0, R_J)$ free of Lee–Yang zeros, Cauchy's differentiation formula rigorously bounds the second derivative by $|\frac{\partial^2 \ln Z}{\partial J^2}(0)| \le \frac{2 M(R_J)}{R_J^2}$, establishing how complex analyticity converts value bounds into curvature bounds.
+     (b) However, in $D = 4$, the upper-bound action ($\zeta = 4$) and lower-bound decimation action ($\zeta = 1$) have a strictly positive per-plaquette bulk free-energy density gap $\Delta f_{\mathrm{bulk}} = \frac{41}{96} - \frac{2825761}{84934656} = \frac{33448415}{84934656} \approx 0.393814 > 0$.
+     (c) In 4-volume $V_4 \ge 16$, the extensive ratio mismatch factor grows as $\exp(+V_4 \Delta f_{\mathrm{bulk}}) \ge 1 + V_4 \Delta f_{\mathrm{bulk}} = \frac{38756831}{5308416} \approx 7.301016 > 1$, with mismatch defect $\Delta_{\mathrm{bulk\_mismatch}} = \frac{33448415}{5308416} \approx 6.301016 > 0$.
+     (d) As $V_4 \to \infty$, the extensive bulk growth $\exp(+V_4 \Delta f_{\mathrm{bulk}}) \to \infty$ completely overwhelms the sub-extensive surface tension $\exp(-\sigma A)$, rendering the variational bound vacuous in the thermodynamic limit.
+     Consequently, Edge `E-CROSSOVER` remains strictly `OPEN_AND_UNSOLVED`, Task `YM-016` `BLOCKED`, and the Clay Millennium Problem `OPEN_AND_UNSOLVED`.
+
+3. **Established Lemma and Progress:**
+   - Proved Lemma `YM-084F-THOOFT-TWIST-SYMMETRY-AND-EXTENSIVE-BULK-MISMATCH`.

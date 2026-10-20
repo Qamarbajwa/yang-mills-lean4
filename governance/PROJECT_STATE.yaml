@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 123
+revision: 124
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "a40ff66f952de7e3357871cacfaaa87bdea102d8"
-  scientific_candidate_sha: "27ade3b9d22fa43ea20c9c67253ffe146a1f24bc"
-  review_bound_sha: "27ade3b9d22fa43ea20c9c67253ffe146a1f24bc"
-  evidence_closeout_head: "27ade3b9d22fa43ea20c9c67253ffe146a1f24bc"
-  closeout_resolution: "evidence_closeout_head binds scientific candidate commit (27ade3b9d22fa43ea20c9c67253ffe146a1f24bc); YM-083 is scientifically accepted and closed out at State Revision 123."
+  head: "df2e24fa27ca1ae39b8bc73cfbb94fa3097cb006"
+  scientific_candidate_sha: ""
+  review_bound_sha: ""
+  evidence_closeout_head: "6d43348633e9d892019f2a24300d0246a47a1ea6"
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-083 closeout commit (6d43348633e9d892019f2a24300d0246a47a1ea6); candidate freeze for YM-084 is staged at State Revision 124."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,14 +32,25 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 122
-  last_updated_at: "2026-10-20T10:15:00Z"
+  last_expected_revision: 123
+  last_updated_at: "2026-10-20T23:30:00Z"
   active_contract: "YM-015F-JET-002B"
   frozen_candidate: ""
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-084
+    scope_in: "Source-Free Transfer-Matrix & ’t Hooft Twisted Partition Function Symmetry Restoration on Edge E-CROSSOVER, Cauchy–Lee–Yang Analytic Disc Derivative Bounds, and Isolation of the Extensive Bulk Free-Energy Volume-Mismatch Obstruction, proof of Lemma YM-084F-THOOFT-TWIST-SYMMETRY-AND-EXTENSIVE-BULK-MISMATCH, and Test 48 finite certificate"
+    scope_out: "Crossing infrared crossover E-CROSSOVER, non-perturbative multi-block lattice collar equivalence, continuum Wightman reconstruction, and full continuum closure"
+    dependencies: ["YM-083"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-084_E4_RAW_20261021.md"
+    acceptor: "verification/YM-084_TECHNICAL_ACCEPTANCE.md"
+    status: CANDIDATE_FROZEN
+    scope_limitation: "TWIST_SYMMETRY_RESTORED_EXTENSIVE_BULK_MISMATCH_ISOLATED_AND_CLAY_OPEN"
   - id: YM-083
     scope_in: "Tomboulis–Kadanoff Variational Plaquette-Moving Bounds on Edge E-CROSSOVER: Single-Step Suppression of the 4D Non-Planar Branching Factor 30 (41/96)^4 < 1, Chessboard Reflection-Positivity Partition Function Sandwich, and Isolation of the Connected-Correlator Second-Derivative Convexity Barrier, proof of Lemma YM-083F-TOMBOULIS-KADANOFF-NONPLANAR-SUPPRESSION-AND-SECOND-DERIVATIVE-BARRIER, and Test 47 finite certificate"
     scope_out: "Crossing infrared crossover E-CROSSOVER, non-perturbative multi-block lattice collar equivalence, continuum Wightman reconstruction, and full continuum closure"

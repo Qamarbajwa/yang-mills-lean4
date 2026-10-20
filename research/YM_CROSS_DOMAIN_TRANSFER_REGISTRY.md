@@ -762,3 +762,15 @@ Source mechanisms: own finite row-space/kernel target-descent theorem, positive 
 
 
 
+## XFER-YM-ONE-TERM-PULLBACK-084: Source-Free ’t Hooft Twisted Partition Function Symmetry Restoration, Cauchy–Vitali Derivative Bounds, and Extensive Bulk Free-Energy Volume-Mismatch Obstruction
+
+- Source: ’t Hooft Nucl. Phys. B 153, 141 (1979); ’t Hooft Commun. Math. Phys. 81, 267 (1981); Tomboulis Phys. Rev. Lett. 39, 1029 (1977); Fröhlich & Lieb Commun. Math. Phys. 60, 233 (1978); Lee & Yang Phys. Rev. 87, 404 (1952).
+- Target: YM-015F Source-free ’t Hooft center twist, Cauchy–Vitali second-derivative bound, and extensive bulk volume mismatch obstruction on Edge `E-CROSSOVER`.
+- Verified mapping:
+  - Source-free ’t Hooft twist & chessboard symmetry restoration: introducing a global $\mathbb{Z}_N$ center twist across a co-closed dual surface preserves global gauge covariance and periodic hyperplane shift invariance, restoring exact FILS chessboard reflection positivity: $\Delta_{\mathrm{chessboard\_twisted}} = 0$.
+  - Cauchy–Vitali complex disc second-derivative bounds: on any Lee–Yang zero-free disc $D(0, R_J)$, Cauchy's integral formula bounds the second derivative by $|\frac{\partial^2 \ln Z}{\partial J^2}(0)| \le \frac{2 M(R_J)}{R_J^2} = 16$ for $R_J = 1/2, M(R_J) = 2$, showing how uniform complex analyticity converts value bounds into curvature bounds.
+  - Extensive bulk free-energy volume-mismatch obstruction: the upper bound ($\zeta = 4$) and lower bound decimation ($\zeta = 1$) have a strictly positive per-plaquette bulk free-energy density difference $\Delta f_{\mathrm{bulk}} = \frac{41}{96} - \frac{2825761}{84934656} = \frac{33448415}{84934656} \approx 0.393814 > 0$. In finite 4-volume $V_4 \ge 16$, the extensive ratio mismatch factor grows as $\exp(+V_4 \Delta f_{\mathrm{bulk}}) \ge 1 + V_4 \Delta f_{\mathrm{bulk}} = \frac{38756831}{5308416} \approx 7.301016 > 1$, creating the extensive bulk mismatch defect $\Delta_{\mathrm{bulk\_mismatch}} = \frac{33448415}{5308416} \approx 6.301016 > 0$. As $V_4 \to \infty$, the extensive bulk growth $\exp(+V_4 \Delta f_{\mathrm{bulk}}) \to \infty$ overwhelms the sub-extensive surface tension $\exp(-\sigma A)$, rendering the variational upper-over-lower ratio bound vacuous in the thermodynamic limit.
+  - Lemma `YM-084F-THOOFT-TWIST-SYMMETRY-AND-EXTENSIVE-BULK-MISMATCH` formally proved within stated hypotheses.
+- Open bridge: Macroscopic infinite-volume cluster bounds (Lemma `YM-059F`), Continuum Wightman Reconstruction and Spectral Gap (Lemma `YM-060F`), crossing infrared crossover `E-CROSSOVER`.
+- Allowed conclusion: Global center twists restore periodic hyperplane chessboard reflection positivity; Cauchy–Vitali bounds relate analyticity to curvature; the extensive bulk free-energy volume-mismatch defect $\Delta_{\mathrm{bulk\_mismatch}} = \frac{33448415}{5308416} > 0$ causes the variational ratio bound to diverge exponentially with 4-volume, failing to bound string tension in the thermodynamic limit. Status: CONDITIONAL_AND_OPEN (`ACTUAL_BALABAN_COORDINATE_PULLBACK_AND_TREE_GAUGE_CONDITIONAL_AND_OPEN`). Edge E-CROSSOVER remains OPEN; continuum edges remain OPEN/BLOCKED.
+

@@ -1225,3 +1225,35 @@ Task `YM-083` analyzes the variational plaquette-moving framework of Tomboulis (
 4. **Epistemic Invariants:**
    Confirm that Edge `E-CROSSOVER` remains `OPEN_AND_UNSOLVED`, `YM-016` remains `BLOCKED`, `goal_complete` remains `false`, and `clay_problem` remains `OPEN_AND_UNSOLVED`.
 
+
+
+## Task Specification YM-084: Source-Free Transfer-Matrix & ’t Hooft Twisted Partition Function Symmetry Restoration on Edge E-CROSSOVER, Cauchy–Lee–Yang Analytic Disc Derivative Bounds, and Isolation of the Extensive Bulk Free-Energy Volume-Mismatch Obstruction
+
+### 1. Context and Objective
+Task `YM-083` derived the Tomboulis–Kadanoff variational free-energy sandwich and proved single-step suppression of the 4D non-planar branching factor ($30 (41/96)^4 < 1$), but isolated the connected-correlator second-derivative barrier (`NEG-YM-083`), showing that local source insertions $J_x \mathcal{O}(x)$ destroy the periodic hyperplane symmetries required for chessboard estimates ($\Delta_{\mathrm{chessboard\_source}} = 1 > 0$), and pointwise value bounds do not control curvature.
+Task `YM-084` addresses both obstructions by reformulating the problem in a source-free setting and using complex analysis:
+1. Replaces local sources with global, gauge-covariant ’t Hooft center-twist boundary conditions $z \in \mathbb{Z}_N$ across a co-closed dual 2-cocycle, restoring exact translation and reflection symmetry across all hyperplanes ($\Delta_{\mathrm{chessboard\_twisted}} = 0$);
+2. Formulates the Cauchy–Vitali complex disc theorem on a Lee–Yang zero-free disc $D(0, R_J)$, proving that uniform complex analyticity bounds the second derivative by $|\frac{\partial^2 \ln Z}{\partial J^2}(0)| \le \frac{2 M(R_J)}{R_J^2}$;
+3. Rigorously isolates the ultimate obstruction to variational mass gap extraction on $\mathbb{Z}^4$: the extensive bulk free-energy volume-mismatch obstruction (`NEG-YM-084`), proving that because the upper-bound action ($\zeta = 4$) and lower-bound decimation action ($\zeta = 1$) have a non-zero per-plaquette free-energy density difference $\Delta f_{\mathrm{bulk}} = \frac{41}{96} - \frac{2825761}{84934656} = \frac{33448415}{84934656} > 0$, the ratio $Z_{-,\mathrm{high}} / Z_{+,\mathrm{low}}$ acquires an extensive volume divergence factor $\exp(+V_4 \Delta f_{\mathrm{bulk}})$ that overwhelms the sub-extensive surface tension $\exp(-\sigma A)$, keeping Edge `E-CROSSOVER` strictly open.
+
+### 2. Mathematical Specification of Task YM-084
+1. **Source-Free ’t Hooft Center-Twisted Partition Function & Chessboard Symmetry Restoration:**
+   Consider $SU(N)$ lattice gauge theory on a 4-torus $T^4$ with periodic boundary conditions modified by a center twist $z \in \mathbb{Z}_N$ across a co-closed dual surface $S_{\mu\nu}$. In contrast to localized source insertions $J_x \mathcal{O}(x)$, the twist is globally gauge-covariant and preserves translation invariance under parallel hyperplane shifts. Therefore, the twisted partition functions $Z_+(T)$ (untwisted) and $Z_-(T)$ (twisted) satisfy exact Fröhlich–Lieb / FILS chessboard reflection positivity:
+   $$\Delta_{\mathrm{chessboard\_twisted}} = 0.$$
+2. **Cauchy–Vitali Complex Disc Second-Derivative Bound:**
+   Let $\ln Z(J)$ be holomorphic in a complex disc $D(0, R_J) \subset \mathbb{C}$ free of Lee–Yang partition function zeros, with $|\ln Z(J)| \le M(R_J)$ on $\partial D(0, R_J)$. By Cauchy's integral formula:
+   $$\left|\frac{\partial^2 \ln Z}{\partial J^2}(0)\right| = \left| \frac{2!}{2\pi i} \oint_{|\zeta| = R_J} \frac{\ln Z(\zeta)}{\zeta^3} d\zeta \right| \le \frac{2 M(R_J)}{R_J^2}.$$
+   For $R_J = 1/2, M(R_J) = 2$, this bounds curvature by $\frac{2 \times 2}{(1/2)^2} = 16$, demonstrating that complex-analytic disc bounds rigorously convert value bounds into curvature bounds.
+3. **Isolation of the Extensive Bulk Free-Energy Volume-Mismatch Obstruction (`NEG-YM-084`):**
+   To extract the physical string tension $\sigma > 0$ from the ratio of twisted to untwisted partition functions $Z_-(T) / Z_+(T) \le \exp(-\sigma A)$, one attempts to bound the ratio by variational plaquette moving:
+   $$\frac{Z_-(T)}{Z_+(T)} \le \frac{Z_{-,\mathrm{high}}(T)}{Z_{+,\mathrm{low}}(T)}.$$
+   However, this bound encounters an extensive bulk volume mismatch:
+   - At step $m = 1$ ($k = 6$), the lower-bound decimation action has character activity $a_{\mathrm{low}}^{(1)} = (41/96)^4 = \frac{2825761}{84934656}$, whereas the upper-bound Migdal–Kadanoff action ($\zeta = 4$, $\beta_{\mathrm{high}} = 41/6$) has character activity bounded below by $a_{\mathrm{high}}^{(1)} \ge \frac{41}{96}$.
+   - The per-plaquette bulk free-energy density difference is:
+     $$\Delta f_{\mathrm{bulk}} = \frac{41}{96} - \frac{2825761}{84934656} = \frac{33448415}{84934656} \approx 0.393814 > 0.$$
+   - In a finite 4-volume $V_4 \ge 16$, the extensive ratio mismatch factor grows as $\exp(+V_4 \Delta f_{\mathrm{bulk}}) \ge 1 + V_4 \Delta f_{\mathrm{bulk}} = 1 + 16 \times \frac{33448415}{84934656} = \frac{38756831}{5308416} \approx 7.3010 > 1$.
+   - This extensive bulk growth overwhelms the surface-law decay $\exp(-\sigma A)$, creating an extensive bulk mismatch defect:
+     $$\Delta_{\mathrm{bulk\_mismatch}} = \frac{33448415}{5308416} \approx 6.3010 > 0.$$
+   - In the infinite-volume limit $V_4 \to \infty$, $\exp(+V_4 \Delta f_{\mathrm{bulk}}) \to \infty$, proving that the Tomboulis–Kadanoff variational upper-over-lower ratio provides zero upper bound on physical string tension or connected correlators.
+4. **Epistemic Invariants:**
+   Confirm that Edge `E-CROSSOVER` remains `OPEN_AND_UNSOLVED`, `YM-016` remains `BLOCKED`, `goal_complete` remains `false`, and `clay_problem` remains `OPEN_AND_UNSOLVED`.

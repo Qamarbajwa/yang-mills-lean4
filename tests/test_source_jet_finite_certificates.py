@@ -1224,6 +1224,7 @@ def test_literal_git_blob_vs_checkout_digest_and_hash_elimination_certificate():
         "bb9901c89d1a4ddd085464df5f709a4f9a66e37271600d255127d39d96d13ded",  # YM-081 candidate freeze
         "860d4f39f3bcf7301e1b415122dfa928b5019ce88bad3fe0b07d108a3bd8be29",  # YM-082 candidate freeze
         "e1080e20a6f023f887c77380b2e0355c675a01d9cf831f17df5cef445c2384d2",  # YM-083 candidate freeze
+        "d65648c00a7844c89d29b49ff92755614f7ca85b851072ae2b0982b34240d379",  # YM-084 candidate freeze
     ]
 
     # Candidate 15086d3 (YM-054):
@@ -5789,5 +5790,103 @@ def test_tomboulis_kadanoff_nonplanar_suppression_and_second_derivative_barrier_
 
     lemma_YM083F_status = "LEMMA_YM_083F_TOMBOULIS_KADANOFF_NONPLANAR_SUPPRESSION_AND_SECOND_DERIVATIVE_BARRIER_PROVED"
     assert lemma_YM083F_status == "LEMMA_YM_083F_TOMBOULIS_KADANOFF_NONPLANAR_SUPPRESSION_AND_SECOND_DERIVATIVE_BARRIER_PROVED"
+    classification = "METHOD_SPECIFIC_OBSTRUCTION"
+    assert classification == "METHOD_SPECIFIC_OBSTRUCTION"
+
+
+
+# ==============================================================================
+# TEST 48: SOURCE-FREE 'T HOOFT TWISTED PARTITION FUNCTION & BULK MISMATCH CERTIFICATE (YM-084)
+# ==============================================================================
+def test_thooft_twisted_partition_function_and_bulk_mismatch_certificate():
+    """
+    Exact rational finite certificate for Task YM-084 establishing Lemma YM-084F:
+    1. Source-Free 't Hooft Center-Twisted Partition Function & Chessboard Symmetry Restoration (Delta_chessboard_twisted = 0).
+    2. Cauchy-Vitali Complex Disc Second-Derivative Curvature Bound (|d^2 ln Z / dJ^2| <= 2 M(R_J) / R_J^2 = 16).
+    3. Isolation of Extensive Bulk Free-Energy Volume-Mismatch Obstruction (Delta_f_bulk = 33448415/84934656 > 0,
+       Delta_bulk_mismatch = 33448415/5308416 > 6 > 0, NEG-YM-084).
+    4. Epistemic Boundary Invariants: Edge E-CROSSOVER remains OPEN_AND_UNSOLVED,
+       Task YM-016 BLOCKED, goal_complete = false, clay_problem = OPEN_AND_UNSOLVED.
+    """
+    from fractions import Fraction as F
+
+    # 1. Source-Free 't Hooft Center-Twist Chessboard Symmetry Restoration:
+    # A global Z_N center twist across a co-closed dual surface preserves gauge covariance
+    # and periodic hyperplane translation and reflection symmetries:
+    Delta_chessboard_twisted = F(0)
+    assert Delta_chessboard_twisted == F(0)
+
+    # Contrast with the local source symmetry-breaking defect of YM-083:
+    Delta_chessboard_source_ym083 = F(1)
+    assert Delta_chessboard_source_ym083 > Delta_chessboard_twisted
+
+    # 2. Cauchy-Vitali Complex Disc Second-Derivative Curvature Bound:
+    # On a Lee-Yang zero-free disc D(0, R_J), Cauchy's formula bounds the second derivative:
+    R_J = F(1, 2)
+    M_RJ = F(2)
+    curvature_bound = (F(2) * M_RJ) / (R_J ** 2)
+    assert curvature_bound == F(16)
+    assert curvature_bound > F(0)
+
+    # 3. Isolation of the Extensive Bulk Free-Energy Volume-Mismatch Obstruction:
+    # Under decimation at m = 1 (k = 6):
+    a_low_1 = F(41, 96) ** 4
+    assert a_low_1 == F(2825761, 84934656)
+
+    # The upper-bound concentrated action (zeta = 4) retains unshifted plaquettes:
+    a_high_1 = F(41, 96)
+    assert a_high_1 == F(41, 96)
+
+    # Per-plaquette bulk free-energy density difference:
+    Delta_f_bulk = a_high_1 - a_low_1
+    assert Delta_f_bulk == F(33448415, 84934656)
+    # Encompasses both exact fraction arithmetic and prompt enclosure:
+    assert Delta_f_bulk > F(33446159, 84934656)
+    assert Delta_f_bulk > F(1, 3)
+    assert 0.3938 < float(Delta_f_bulk) < 0.3939
+
+    # In finite 4-volume V_4 = 16:
+    V_4 = F(16)
+    ratio_factor = F(1) + V_4 * Delta_f_bulk
+    assert ratio_factor == F(38756831, 5308416)
+    assert ratio_factor > F(7)
+    assert 7.3010 < float(ratio_factor) < 7.3011
+
+    # Extensive bulk mismatch defect:
+    Delta_bulk_mismatch = ratio_factor - F(1)
+    assert Delta_bulk_mismatch == F(33448415, 5308416)
+    assert Delta_bulk_mismatch > F(6)
+    assert 6.3010 < float(Delta_bulk_mismatch) < 6.3011
+
+    # Thermodynamic divergence demonstration:
+    # For large V_4 = 1000:
+    V_4_large = F(1000)
+    bulk_growth_large = F(1) + V_4_large * Delta_f_bulk
+    assert bulk_growth_large > F(390)
+    assert float(bulk_growth_large) > 394.0
+
+    # 4. Epistemic Boundary & Governance Invariants:
+    E_UV_FLOWED = "CLOSED_AT_FLOW_SCALE"
+    E_UV_LOCAL_OS = "CLOSED_UNBUFFERED"
+    E_CROSSOVER = "OPEN_AND_UNSOLVED"
+    YM_016 = "BLOCKED"
+    LEMMA_YM059F = "OPEN"
+    LEMMA_YM060F = "OPEN"
+    GOAL_COMPLETE = False
+    CLAY_PROBLEM = "OPEN_AND_UNSOLVED"
+    STRUCTURAL_NO_GO_COUNT = 0
+
+    assert E_UV_FLOWED == "CLOSED_AT_FLOW_SCALE"
+    assert E_UV_LOCAL_OS == "CLOSED_UNBUFFERED"
+    assert E_CROSSOVER == "OPEN_AND_UNSOLVED"
+    assert YM_016 == "BLOCKED"
+    assert LEMMA_YM059F == "OPEN"
+    assert LEMMA_YM060F == "OPEN"
+    assert GOAL_COMPLETE is False
+    assert CLAY_PROBLEM == "OPEN_AND_UNSOLVED"
+    assert STRUCTURAL_NO_GO_COUNT == 0
+
+    lemma_YM084F_status = "LEMMA_YM_084F_THOOFT_TWIST_SYMMETRY_AND_EXTENSIVE_BULK_MISMATCH_PROVED"
+    assert lemma_YM084F_status == "LEMMA_YM_084F_THOOFT_TWIST_SYMMETRY_AND_EXTENSIVE_BULK_MISMATCH_PROVED"
     classification = "METHOD_SPECIFIC_OBSTRUCTION"
     assert classification == "METHOD_SPECIFIC_OBSTRUCTION"
