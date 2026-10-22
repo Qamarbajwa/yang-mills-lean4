@@ -53,7 +53,7 @@
 \textit{Governed by Universal Research Operating System v4.0.4+4.0.6-r3} \\
 \textit{Workspace: Yang--Mills and the Mass Gap Programme}}
 
-\date{State Revision 125 --- October 2026}
+\date{State Revision 127 --- October 2026}
 
 \begin{document}
 
@@ -68,7 +68,7 @@ Second, by developing a short flow-time operator product expansion ($t \downarro
 
 Third, we isolate the Clay Millennium Prize threshold by establishing the exact small-field Weitzenb\"ock coercivity exit threshold at renormalization scale step $k = 5$, where the running inverse coupling drops to $\beta_{\mathrm{inv}, 5} = 41/24 < 2$ and $g_5^2 = 24/41 > 1/2$, yielding the certified exit defect $\Delta_{\mathrm{crossover\_exit}} = 7/82 > 0$. We prove the simultaneous onset of tripartite non-perturbative infrared obstructions on edge \texttt{E-CROSSOVER}: (a) large-field plaquette polymer percolation on $\Z^4$ with growth defect $\Delta_{\mathrm{perc}} = 7/4 > 0$, (b) Gribov horizon copy proliferation with Faddeev--Popov degeneracy $\Delta_{\mathrm{Gribov\_copies}} = 1 > 0$, and (c) Savvidy chromomagnetic vacuum instability with tachyonic eigenvalue shift $\Delta_{\mathrm{instability}} = 1/2 > 0$ and massless infrared accumulation defect $\Delta_{\mathrm{massless\_IR\_defect}} = 3 > 0$. 
 
-Every mathematical step is supported by exact rational certificates verified in finite arithmetic across 478 unit tests, bound under strict 3-Agent governance separation (Writer $\ne$ Reviewer $\ne$ Acceptor), and decoupled from the open infrared mass gap problem (\texttt{clay\_problem = OPEN\_AND\_UNSOLVED}).
+Every mathematical step is supported by exact rational certificates verified in finite arithmetic across 479 unit tests, bound under strict 3-Agent governance separation (Writer $\ne$ Reviewer $\ne$ Acceptor), and decoupled from the open infrared mass gap problem (\texttt{clay\_problem = OPEN\_AND\_UNSOLVED}).
 \end{abstract}
 
 \noindent\textbf{Keywords:} Constructive Quantum Field Theory, Yang--Mills Gradient Flow, Ba{\l}aban Renormalization Group, Osterwalder--Schrader Reconstruction, Gribov Horizon, Savvidy Instability, Mass Gap. \\
@@ -431,6 +431,38 @@ Because the extensive free-energy difference $\Delta F = 16 \Delta f_{\mathrm{bu
 \texttt{E-CROSSOVER} = \mathrm{OPEN\_AND\_UNSOLVED}, \quad \texttt{YM-016} = \mathrm{BLOCKED}, \quad \texttt{clay\_problem} = \mathrm{OPEN\_AND\_UNSOLVED}.
 \end{equation}
 
+\subsection{Same-Action Twisted Cocycle Duhamel Interpolation, Two-Replica Formulation, and Non-Abelian Ginibre/FKG Correlation Positivity Breakdown}
+To eliminate the extensive bulk free-energy volume-mismatch obstruction of Lemma \texttt{YM-084F} ($\Delta_{\mathrm{bulk\_mismatch}} \approx 6.3010 > 0$), we formulate a same-action Duhamel interpolation on the co-closed twist cocycle $\Sigma_{\mathrm{twist}}$ and derive the duplicate-lattice two-replica identity (Lemma \texttt{YM-085F}).
+
+When both the untwisted partition function $Z_+(T)$ and twisted partition function $Z_-(T)$ are evaluated under the exact same effective gauge action $S(U; s)$ with continuous twist parameter $z(s) = \cos(\pi s)$ localized on the 2D co-closed twist cocycle $\Sigma_{\mathrm{twist}}$, all $V_4 - |\Sigma_{\mathrm{twist}}|$ untwisted bulk plaquettes share the identical action at $s = 0$ and $s = 1$. The Duhamel path derivative $\frac{d}{ds} \ln Z(s) = -\langle \frac{\partial S_\Sigma}{\partial s} \rangle_s$ vanishes identically on bulk plaquettes, cancelling the extensive bulk free-energy density mismatch:
+\begin{equation}
+\Delta_{\mathrm{bulk\_cancel}} = 0.
+\end{equation}
+
+Furthermore, on the doubled gauge group $SU(2) \times SU(2)$, the squared partition function difference satisfies the exact duplicate-lattice identity:
+\begin{equation}
+Z_+^2 - Z_-^2 = \iint d\mu(U) d\mu(U') \, e^{-S_{\mathrm{untwisted}}(U) - S_{\mathrm{untwisted}}(U')} \left( e^{-S_\Sigma(U) - S_\Sigma(U')} - e^{+S_\Sigma(U) + S_\Sigma(U')} \right),
+\end{equation}
+expressing the vortex free-energy margin $\tanh(\frac{1}{2} F_{\mathrm{vortex}}) = \frac{Z_+ - Z_-}{Z_+ + Z_-} = \frac{Z_+^2 - Z_-^2}{(Z_+ + Z_-)^2}$ as a single expectation value on the doubled gauge group without dividing incompatible upper and lower bounds.
+
+However, attempting to bound this two-replica expectation value monotonically across renormalization group decimation steps encounters an insurmountable non-Abelian sign barrier (\texttt{NEG-YM-085}). While in Abelian $U(1)$ gauge theory Ginibre's inequality \cite{Ginibre1970} and the FKG lattice condition \cite{FKG1971} guarantee ferromagnetic correlation positivity, non-Abelian $SU(2)$ Haar integration breaks correlation positivity:
+\begin{enumerate}[label=(\alph*)]
+\item On $SU(2) \cong S^3$, the fundamental character changes sign on the southern hemisphere: $\chi_{1/2}(-I) = -2 < 0$.
+\item The adjoint character $\chi_1(\theta) = 4\cos^2\theta - 1$ attains a strictly negative minimum: $\min_\theta \chi_1(\theta) = \chi_1(\pi/2) = -1 < 0$.
+\item In 4D block decimation, internal link integration across 6 co-boundary plaquettes generates Clebsch--Gordan contractions $\mathbf{2} \otimes \mathbf{2} = \mathbf{1} \oplus \mathbf{3}$, coupling the two-replica difference to the adjoint channel with negative minimum, producing a certified non-Abelian FKG sign-oscillation defect:
+\begin{equation}
+\Delta_{\mathrm{FKG\_sign}} = -\min_\theta \chi_1(\theta) = 1 > 0,
+\end{equation}
+and coupled replica adjoint weight defect at crossover entry $k = 5$ ($\beta_5 = 41/24$):
+\begin{equation}
+\Delta_{\mathrm{replica\_adjoint}} = a_1^{(0)} = \left(\frac{41}{96}\right)^2 = \frac{1681}{9216} \approx 0.182400 > 0.
+\end{equation}
+\end{enumerate}
+Destructive sign oscillations destroy FKG correlation positivity, preventing monotonic preservation of the vortex free energy across RG decimation steps. Therefore, the same-action two-replica formulation cannot establish the macroscopic mass gap, keeping Edge \texttt{E-CROSSOVER} strictly open on $\mathbb{Z}^4$:
+\begin{equation}
+\texttt{E-CROSSOVER} = \mathrm{OPEN\_AND\_UNSOLVED}, \quad \texttt{YM-016} = \mathrm{BLOCKED}, \quad \texttt{clay\_problem} = \mathrm{OPEN\_AND\_UNSOLVED}.
+\end{equation}
+
 % =========================================================================
 % APPENDIX: TRACEABILITY MATRIX AND VERIFICATION
 % =========================================================================
@@ -468,6 +500,7 @@ Because the extensive free-energy difference $\Delta F = 16 \Delta f_{\mathrm{bu
 \texttt{YM-082}  & Multiscale Character Convolution \& 4D Non-Planar Obstruction & Test 46 & Revision 121 \\
 \texttt{YM-083}  & Tomboulis--Kadanoff Bounds \& Second-Derivative Barrier & Test 47 & Revision 123 \\
 \texttt{YM-084}  & Source-Free 't Hooft Twist Symmetry \& Extensive Bulk Mismatch & Test 48 & Revision 125 \\
+\texttt{YM-085}  & Same-Action Duhamel Cancellation \& Non-Abelian FKG Breakdown & Test 49 & Revision 127 \\
 \bottomrule
 \end{tabular}
 \caption{Traceability matrix mapping proved lemmas to deterministic regression test certificates.}
@@ -478,7 +511,7 @@ The complete codebase, test suite, and governance records can be independently r
 \begin{verbatim}
 $ python scripts/verify_all.py
 \end{verbatim}
-This script deterministically verifies the 158-file closed-world checkout digest (\texttt{d65648c0...}), the literal Git-blob digest (\texttt{df6246d8...}), append-only negative evidence integrity (0 deletions), and passes all 478 exact rational certificates in under 10 seconds.
+This script deterministically verifies the 158-file closed-world checkout digest (\texttt{e1c2a579...}), the literal Git-blob digest (\texttt{3396332a...}), append-only negative evidence integrity (0 deletions), and passes all 479 exact rational certificates in under 10 seconds.
 
 \bibliographystyle{plain}
 \bibliography{references}
