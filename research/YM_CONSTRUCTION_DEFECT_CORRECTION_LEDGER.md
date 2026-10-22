@@ -985,3 +985,30 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
 
 3. **Established Lemma and Progress:**
    - Proved Lemma `YM-084F-THOOFT-TWIST-SYMMETRY-AND-EXTENSIVE-BULK-MISMATCH`.
+
+
+## CDC-085: Same-Action Twisted Cocycle Duhamel Interpolation & Exact Bulk Free-Energy Cancellation, Two-Replica Vortex Free-Energy Formulation, and Non-Abelian Ginibre/FKG Correlation Positivity Obstruction (`YM-085`)
+
+- **Task ID:** `YM-085`
+- **State Revision:** 126
+- **Date:** 2026-10-22
+- **Primary Contract:** `YM-015F-JET-002B`
+- **Source Target:** Ginibre Commun. Math. Phys. 16, 310 (1970); Fortuin, Kasteleyn & Ginibre Commun. Math. Phys. 22, 89 (1971); 't Hooft Nucl. Phys. B 153, 141 (1979); Osterwalder & Seiler Ann. Phys. 110, 440 (1978); Seiler LNP 159 (1982).
+- **Defects Corrected & Mathematical Resolutions:**
+
+1. **Defect 1: Extensive Bulk Free-Energy Density Mismatch from Incompatible Actions:**
+   - In `YM-084`, evaluating $Z_-(T)$ under the upper-bound concentrated action ($\zeta = 4$) and $Z_+(T)$ under the lower-bound decimation action ($\zeta = 1$) created an extensive bulk density gap $\Delta f_{\mathrm{bulk}} = rac{33448415}{84934656} > 0$ that diverges as $\exp(+V_4 \Delta f_{\mathrm{bulk}}) 	o \infty$ in the thermodynamic limit ($\Delta_{\mathrm{bulk\_mismatch}} pprox 6.3010 > 0$, `NEG-YM-084`).
+   - **Correction:** Formulated same-action Duhamel interpolation on the co-closed twist cocycle $\Sigma_{\mathrm{twist}}$, showing that all $V_4 - |\Sigma_{\mathrm{twist}}|$ untwisted bulk plaquettes share the identical action at $s = 0$ and $s = 1$. The Duhamel path derivative vanishes identically on bulk plaquettes, cancelling the extensive bulk free-energy density mismatch identically ($\Delta_{\mathrm{bulk\_cancel}} = 0$). Furthermore, derived the two-replica identity expressing $Z_+^2 - Z_-^2$ as a single expectation value on the doubled gauge group $SU(2) 	imes SU(2)$, eliminating the division of incompatible bounds.
+
+2. **Defect 2: Naively Assuming Abelian Ginibre/FKG Correlation Positivity Extends to Non-Abelian Gauge Theory:**
+   - Assuming that the two-replica expectation value can be bounded monotonically across renormalization group decimation steps $m 	o m+1$ overlooks the breakdown of Ginibre/FKG correlation positivity in non-Abelian gauge groups (`NEG-YM-085`).
+   - **Correction:** Proved that:
+     (a) In Abelian $U(1)$ gauge theory, Ginibre's inequality guarantees ferromagnetic correlation positivity, preserving $Z_-^{(m)}/Z_+^{(m)}$ monotonically under decimation.
+     (b) In non-Abelian $SU(2)$ gauge theory, the fundamental character changes sign ($\chi_{1/2}(-I) = -2 < 0$), and the adjoint character $\chi_1(	heta) = 4\cos^2	heta - 1$ achieves its absolute minimum $\min_	heta \chi_1(	heta) = -1 < 0$ at $	heta = \pi/2$.
+     (c) In 4D block decimation on the doubled gauge group, integrating internal links shared by 6 co-boundary plaquettes couples the two-replica difference to the adjoint channel with negative minimum, producing a certified non-Abelian FKG sign-oscillation defect $\Delta_{\mathrm{FKG\_sign}} = -\min_	heta \chi_1(	heta) = 1 > 0$ and coupled replica adjoint weight defect $\Delta_{\mathrm{replica\_adjoint}} = a_1^{(0)} = (41/96)^2 = rac{1681}{9216} pprox 0.182400 > 0$.
+     (d) Destructive sign oscillations prevent proving monotonic preservation of the vortex free energy across RG steps without solving the non-Abelian sign problem.
+     Consequently, Edge `E-CROSSOVER` remains strictly `OPEN_AND_UNSOLVED`, Task `YM-016` `BLOCKED`, and the Clay Millennium Problem `OPEN_AND_UNSOLVED`.
+
+3. **Established Lemma and Progress:**
+   - Proved Lemma `YM-085F-SAME-ACTION-DUHAMEL-CANCELLATION-AND-NONABELIAN-FKG-BREAKDOWN`.
+

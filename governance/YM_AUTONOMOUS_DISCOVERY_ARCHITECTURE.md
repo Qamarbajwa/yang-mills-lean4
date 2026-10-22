@@ -1257,3 +1257,41 @@ Task `YM-084` addresses both obstructions by reformulating the problem in a sour
    - In the infinite-volume limit $V_4 \to \infty$, $\exp(+V_4 \Delta f_{\mathrm{bulk}}) \to \infty$, proving that the Tomboulis–Kadanoff variational upper-over-lower ratio provides zero upper bound on physical string tension or connected correlators.
 4. **Epistemic Invariants:**
    Confirm that Edge `E-CROSSOVER` remains `OPEN_AND_UNSOLVED`, `YM-016` remains `BLOCKED`, `goal_complete` remains `false`, and `clay_problem` remains `OPEN_AND_UNSOLVED`.
+
+
+## Task Specification YM-085: Same-Action Twisted Cocycle Duhamel Interpolation & Exact Bulk Free-Energy Cancellation on Edge E-CROSSOVER, Two-Replica Vortex Free-Energy Formulation, and Isolation of the Non-Abelian Ginibre/FKG Correlation Positivity Obstruction
+
+### 1. Context and Objective
+Task `YM-084` resolved the source-chessboard symmetry breaking barrier via 't Hooft center-twist boundary conditions ($\Delta_{\mathrm{chessboard\_twisted}} = 0$) and proved the Cauchy–Vitali curvature bound (16), but discovered the extensive bulk free-energy volume-mismatch obstruction (`NEG-YM-084`): evaluating $Z_-$ and $Z_+$ with differing effective actions ($\zeta = 4$ vs $\zeta = 1$) generates an extensive bulk density gap $\Delta f_{\mathrm{bulk}} = \frac{33448415}{84934656} > 0$ with ratio mismatch defect $\Delta_{\mathrm{bulk\_mismatch}} \approx 6.3010 > 0$ that diverges in the thermodynamic limit.
+Task `YM-085` cures this volume-mismatch defect by formulating a **same-action** Duhamel interpolation where both twisted and untwisted ensembles are governed by the exact same effective action:
+1. Interpolates the $\mathbb{Z}_2$ center twist $z(s) = \cos(\pi s)$ along $s \in [0, 1]$ solely on the 2D co-closed twist cocycle $\Sigma_{\mathrm{twist}}$, proving that all $V_4 - |\Sigma_{\mathrm{twist}}|$ untwisted bulk plaquettes are completely identical at $s = 0$ and $s = 1$, cancelling the extensive bulk free-energy density mismatch identically ($\Delta_{\mathrm{bulk\_cancel}} = 0$);
+2. Derives the two-replica vortex free-energy identity on the doubled gauge group $SU(2) \times SU(2)$:
+   $$Z_+^2 - Z_-^2 = \iint d\mu(U) d\mu(U') \, e^{-S_{\mathrm{untwisted}}(U) - S_{\mathrm{untwisted}}(U')} \left( e^{-S_\Sigma(U) - S_\Sigma(U')} - e^{+S_\Sigma(U) + S_\Sigma(U')} \right),$$
+   which expresses the vortex free-energy margin $\tanh(\frac{1}{2} F_{\mathrm{vortex}}) = \frac{Z_+ - Z_-}{Z_+ + Z_-}$ as a single expectation value without dividing incompatible upper and lower bounds;
+3. Rigorously isolates the ultimate algebraic obstruction preventing monotonic RG decimation preservation in non-Abelian gauge theory: the **Non-Abelian Ginibre/FKG Correlation Positivity Breakdown** (`NEG-YM-085`), showing that while Abelian $U(1)$ gauge theory preserves $Z_-^{(m)}/Z_+^{(m)}$ monotonically via Ginibre's inequality, non-Abelian $SU(2)$ character oscillations and the negative minimum of the adjoint character $\min_\theta \chi_1(\theta) = -1 < 0$ produce a certified sign defect $\Delta_{\mathrm{FKG\_sign}} = 1 > 0$ and replica adjoint weight defect $\Delta_{\mathrm{replica\_adjoint}} = a_1^{(0)} = \frac{1681}{9216} > 0$, keeping Edge `E-CROSSOVER` strictly open.
+
+### 2. Mathematical Specification of Task YM-085
+1. **Same-Action Cocycle Duhamel Interpolation & Bulk Volume Cancellation:**
+   Let $S(U; s) = S_{\mathrm{untwisted}}(U) + S_\Sigma(U; s)$ where $s \in [0, 1]$ parameterizes the continuous twist deformation on co-closed 2-cocycle $\Sigma_{\mathrm{twist}}$, with $z(s) = \cos(\pi s)$ such that $z(0) = +1$ (untwisted) and $z(1) = -1$ (twisted).
+   Because $S_{\mathrm{untwisted}}(U)$ is independent of $s$, the Duhamel derivative satisfies:
+   $$\frac{d}{ds} \ln Z(s) = -\left\langle \frac{\partial S_\Sigma}{\partial s} \right\rangle_s.$$
+   The bulk free-energy density difference on all $V_4 - |\Sigma_{\mathrm{twist}}|$ plaquettes vanishes identically, cancelling the extensive volume divergence of `NEG-YM-084`:
+   $$\Delta_{\mathrm{bulk\_cancel}} = 0.$$
+2. **Two-Replica Vortex Free-Energy Formulation:**
+   On the duplicate lattice system $SU(2) \times SU(2)$, the difference of squared partition functions is given by:
+   $$Z_+^2 - Z_-^2 = \iint d\mu(U) d\mu(U') \, e^{-S_{\mathrm{untwisted}}(U) - S_{\mathrm{untwisted}}(U')} \left( e^{-S_\Sigma(U) - S_\Sigma(U')} - e^{+S_\Sigma(U) + S_\Sigma(U')} \right).$$
+   This identity expresses the vortex free-energy margin $\tanh(\frac{1}{2} F_{\mathrm{vortex}}) = \frac{Z_+ - Z_-}{Z_+ + Z_-} = \frac{Z_+^2 - Z_-^2}{(Z_+ + Z_-)^2}$ as a single expectation value on the doubled gauge group.
+3. **Isolation of the Non-Abelian Ginibre/FKG Correlation Positivity Breakdown (`NEG-YM-085`):**
+   In Abelian $U(1)$ gauge theory, Ginibre's inequality ensures that $Z_-^{(m)}/Z_+^{(m)}$ is monotonically non-decreasing under RG decimation.
+   In non-Abelian $SU(2)$ lattice gauge theory, this correlation positivity fails:
+   - On $SU(2) \cong S^3$, the fundamental character $\chi_{1/2}(U) = 2\cos\theta$ changes sign on the southern hemisphere $\theta \in (\pi/2, \pi]$, with $\chi_{1/2}(-I) = -2 < 0$.
+   - The adjoint character $\chi_1(\theta) = \frac{\sin(3\theta)}{\sin\theta} = 4\cos^2\theta - 1$ attains its minimum $\chi_1(\pi/2) = -1 < 0$.
+   - In the two-replica product, integrating out internal links shared by 6 co-boundary plaquettes couples the fundamental twist to the adjoint channel with negative minimum $\min_\theta \chi_1(\theta) = -1$.
+   - This produces a non-Abelian FKG sign-oscillation defect:
+     $$\Delta_{\mathrm{FKG\_sign}} = -\min_\theta \chi_1(\theta) = 1 > 0.$$
+   - The coupled 2-replica adjoint weight defect is:
+     $$\Delta_{\mathrm{replica\_adjoint}} = a_1^{(0)} = \left(\frac{41}{96}\right)^2 = \frac{1681}{9216} \approx 0.182400 > 0.$$
+   Consequently, the same-action two-replica formulation cannot establish monotonic preservation of vortex free energy across RG steps without solving the non-Abelian sign problem.
+4. **Epistemic Invariants:**
+   Confirm that Edge `E-CROSSOVER` remains `OPEN_AND_UNSOLVED`, `YM-016` remains `BLOCKED`, `goal_complete` remains `false`, and `clay_problem` remains `OPEN_AND_UNSOLVED`.
+

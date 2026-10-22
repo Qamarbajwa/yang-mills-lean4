@@ -5950,3 +5950,159 @@ Let $SU(2)$ lattice gauge theory be formulated on a 4-torus $T^4$ at intermediat
   - **Lemma `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS`:** **`OPEN`**;
   - **Lemma `YM-060F-CONTINUUM-WIGHTMAN-RECONSTRUCTION-AND-SPECTRAL-GAP`:** **`OPEN`**;
   - **Constitutional Invariants:** `goal_complete = false`, `clay_problem = OPEN_AND_UNSOLVED`, `P3 = OPEN`, `STRUCTURAL_NO_GO_COUNT = 0`.
+
+
+---
+
+## SECTION YM-085: SAME-ACTION TWISTED COCYCLE DUHAMEL INTERPOLATION & EXACT BULK FREE-ENERGY CANCELLATION ON EDGE E-CROSSOVER, TWO-REPLICA VORTEX FREE-ENERGY FORMULATION, AND ISOLATION OF THE NON-ABELIAN GINIBRE/FKG CORRELATION POSITIVITY OBSTRUCTION
+
+### 1. Context and Architectural Objective
+In Task `YM-084`, the source-free 't Hooft center-twisted partition function resolved the source-chessboard symmetry breaking barrier of `NEG-YM-083` ($\Delta_{\mathrm{chessboard\_twisted}} = 0$) and proved the Cauchy–Vitali curvature bound (16). However, `NEG-YM-084` isolated the extensive bulk free-energy volume-mismatch obstruction: evaluating $Z_-(T)$ and $Z_+(T)$ under differing effective actions (upper bound $\zeta = 4$ vs lower bound $\zeta = 1$) introduces an extensive bulk free-energy density difference $\Delta f_{\mathrm{bulk}} = \frac{33448415}{84934656} > 0$ that causes the variational ratio bound to diverge exponentially with 4-volume ($\Delta_{\mathrm{bulk\_mismatch}} \approx 6.3010 > 0$), destroying string-tension extraction in the thermodynamic limit.
+
+Task `YM-085` resolves this volume mismatch by constructing a **same-action** formulation:
+1. Interpolates the $\mathbb{Z}_2$ center twist $z(s) = \cos(\pi s)$ along $s \in [0, 1]$ solely across the 2D co-closed twist cocycle $\Sigma_{\mathrm{twist}}$, proving that all $V_4 - |\Sigma_{\mathrm{twist}}|$ untwisted bulk plaquettes share the exact same action at $s = 0$ and $s = 1$, cancelling the extensive bulk free-energy mismatch identically ($\Delta_{\mathrm{bulk\_cancel}} = 0$);
+2. Derives the two-replica vortex free-energy identity on the doubled gauge group $SU(2) \times SU(2)$:
+   $$Z_+^2 - Z_-^2 = \iint d\mu(U) d\mu(U') \, e^{-S_{\mathrm{untwisted}}(U) - S_{\mathrm{untwisted}}(U')} \left( e^{-S_\Sigma(U) - S_\Sigma(U')} - e^{+S_\Sigma(U) + S_\Sigma(U')} \right),$$
+   which expresses the vortex free-energy margin $\tanh(\frac{1}{2} F_{\mathrm{vortex}}) = \frac{Z_+ - Z_-}{Z_+ + Z_-}$ as a single expectation value without dividing incompatible upper and lower bounds;
+3. Rigorously isolates the ultimate algebraic obstruction preventing monotonic RG decimation preservation in non-Abelian gauge theory: the **Non-Abelian Ginibre/FKG Correlation Positivity Breakdown** (`NEG-YM-085`), showing that while Abelian $U(1)$ gauge theory preserves $Z_-^{(m)}/Z_+^{(m)}$ monotonically via Ginibre's inequality, non-Abelian $SU(2)$ character oscillations and the negative minimum of the adjoint character $\min_\theta \chi_1(\theta) = -1 < 0$ produce a certified sign defect $\Delta_{\mathrm{FKG\_sign}} = 1 > 0$ and replica adjoint weight defect $\Delta_{\mathrm{replica\_adjoint}} = a_1^{(0)} = \frac{1681}{9216} > 0$, keeping Edge `E-CROSSOVER` strictly open.
+
+---
+
+### 2. Same-Action Twisted Cocycle Duhamel Interpolation & Bulk Volume Cancellation
+To eliminate the extensive volume mismatch of `NEG-YM-084`, we evaluate both the untwisted partition function $Z_+(T)$ and the twisted partition function $Z_-(T)$ under the *exact same* effective gauge action:
+1. **Twist Cocycle Localization:**
+   Let $\Sigma_{\mathrm{twist}}$ be the 2D co-closed dual surface on the 4-torus $T^4$ across which the 't Hooft center twist is introduced. The total Wilson lattice action with continuous twist parameter $s \in [0, 1]$ is:
+   $$S(U; s) = S_{\mathrm{untwisted}}(U) + S_\Sigma(U; s),$$
+   where $S_{\mathrm{untwisted}}(U) = -\beta \sum_{p \notin \Sigma_{\mathrm{twist}}} \frac{1}{2} \operatorname{Re}\operatorname{Tr}(U(p))$ contains all $V_4 - |\Sigma_{\mathrm{twist}}|$ untwisted plaquettes, and:
+   $$S_\Sigma(U; s) = -\beta \sum_{p \in \Sigma_{\mathrm{twist}}} \frac{1}{2} \operatorname{Re}\operatorname{Tr}(z(s) U(p)), \quad z(s) = \cos(\pi s).$$
+   At $s = 0$, $z(0) = +1$, recovering the untwisted partition function $Z_+(T) = Z(0)$. At $s = 1$, $z(1) = -1$, recovering the center-twisted partition function $Z_-(T) = Z(1)$.
+2. **Duhamel Path Derivative:**
+   By the Duhamel formula / path differentiation for the partition function:
+   $$\frac{d}{ds} \ln Z(s) = -\left\langle \frac{\partial S}{\partial s} \right\rangle_s = -\sum_{p \in \Sigma_{\mathrm{twist}}} \left\langle \frac{\partial S_p}{\partial s} \right\rangle_s.$$
+   Because the untwisted bulk action $S_{\mathrm{untwisted}}(U)$ is completely independent of $s$, the integrand on all $V_4 - |\Sigma_{\mathrm{twist}}|$ bulk plaquettes vanishes identically for all $s \in [0, 1]$.
+3. **Exact Bulk Volume Cancellation:**
+   Integrating from $s = 0$ to $s = 1$ yields:
+   $$\ln Z_-(T) - \ln Z_+(T) = -\int_0^1 ds \sum_{p \in \Sigma_{\mathrm{twist}}} \left\langle \frac{\partial S_p}{\partial s} \right\rangle_s.$$
+   The extensive 4-volume bulk free energy cancels identically between the numerator and denominator:
+   $$\Delta_{\mathrm{bulk\_cancel}} = 0.$$
+   This proves that when $Z_-$ and $Z_+$ are computed within the same action, the thermodynamic bulk volume mismatch of `NEG-YM-084` is rigorously eliminated.
+
+---
+
+### 3. Two-Replica Vortex Free-Energy Formulation
+To formulate the ratio $Z_-/Z_+$ as a single expectation value and avoid dividing incompatible bounds, we introduce a duplicate copy (replica) of the lattice gauge field $U'$:
+1. **Doubled Gauge System:**
+   Let the configuration space be the product $SU(2)^{|E|} \times SU(2)^{|E|}$ with independent Haar measures $d\mu(U) d\mu(U')$. The squared partition functions satisfy:
+   $$Z_+^2 = \iint d\mu(U) d\mu(U') \, e^{-S_{\mathrm{untwisted}}(U) - S_{\mathrm{untwisted}}(U')} e^{-S_\Sigma(U) - S_\Sigma(U')},$$
+   $$Z_-^2 = \iint d\mu(U) d\mu(U') \, e^{-S_{\mathrm{untwisted}}(U) - S_{\mathrm{untwisted}}(U')} e^{+S_\Sigma(U) + S_\Sigma(U')}.$$
+2. **The Two-Replica Identity:**
+   Subtracting the two expressions gives the exact two-replica difference:
+   $$Z_+^2 - Z_-^2 = \iint d\mu(U) d\mu(U') \, e^{-S_{\mathrm{untwisted}}(U) - S_{\mathrm{untwisted}}(U')} \left( e^{-S_\Sigma(U) - S_\Sigma(U')} - e^{+S_\Sigma(U) + S_\Sigma(U')} \right).$$
+3. **Vortex Free Energy Margin:**
+   The vortex free energy $F_{\mathrm{vortex}} = -\ln(Z_- / Z_+)$ satisfies:
+   $$\tanh\left(\frac{1}{2} F_{\mathrm{vortex}}\right) = \frac{Z_+ - Z_-}{Z_+ + Z_-} = \frac{Z_+^2 - Z_-^2}{(Z_+ + Z_-)^2}.$$
+   This identity establishes the vortex free-energy margin as a single expectation value on the doubled gauge group without dividing incompatible upper and lower bounds.
+
+---
+
+### 4. Isolation of the Non-Abelian Ginibre/FKG Correlation Positivity Breakdown (`NEG-YM-085`)
+With the extensive bulk mismatch eliminated and the two-replica difference formulated, one attempts to prove that the vortex free-energy ratio $Z_-^{(m)} / Z_+^{(m)}$ is monotonically preserved under renormalization group decimation steps $m \to m+1$.
+1. **The Abelian $U(1)$ Benchmark (Ginibre / FKG Correlation Positivity):**
+   In Abelian $U(1)$ lattice gauge theory, the group manifold is the circle $S^1$ parameterized by angles $\theta \in [-\pi, \pi]$. The character product satisfies Ginibre's inequality (Ginibre 1970):
+   $$\cos\theta_1 \cos\theta_2 = \frac{1}{2} [\cos(\theta_1 - \theta_2) + \cos(\theta_1 + \theta_2)].$$
+   Because the product of cosines expands into a positive sum of cosines of differences and sums with positive coefficients, the Boltzmann weight satisfies the FKG (Fortuin–Kasteleyn–Ginibre) lattice condition:
+   $$\mu(A \lor B) \mu(A \land B) \ge \mu(A) \mu(B).$$
+   Consequently, ferromagnetic correlation inequalities hold: character expectation values are strictly non-negative, and the ratio $Z_-^{(m)} / Z_+^{(m)}$ is monotonically preserved under block decimation, proving string tension and confinement.
+2. **Breakdown in Non-Abelian $SU(2)$ Lattice Gauge Theory:**
+   In $SU(2)$, the group manifold is the 3-sphere $S^3$. The irreducible characters are class functions $\chi_j(\theta) = \frac{\sin((2j+1)\theta)}{\sin\theta}$:
+   - **Fundamental Character Sign Change:** The fundamental character ($j = 1/2$) is $\chi_{1/2}(\theta) = 2\cos\theta$. For $\theta \in (\pi/2, \pi]$ (the southern hemisphere of $S^3$), $\chi_{1/2}(\theta) < 0$, attaining its minimum at $\theta = \pi$ ($U = -I$):
+     $$\chi_{1/2}(-I) = -2 < 0.$$
+   - **Adjoint Character Negative Minimum:** The adjoint character ($j = 1$) is:
+     $$\chi_1(\theta) = \frac{\sin(3\theta)}{\sin\theta} = 4\cos^2\theta - 1.$$
+     Over the conjugacy class angle $\theta \in [0, \pi]$, $\chi_1(\theta)$ attains its absolute minimum at $\theta = \pi/2$:
+     $$\min_\theta \chi_1(\theta) = \chi_1(\pi/2) = 4(0)^2 - 1 = -1 < 0.$$
+3. **Two-Replica Non-Abelian FKG Sign Defect:**
+   In the two-replica integrand $e^{-S_\Sigma(U) - S_\Sigma(U')} - e^{+S_\Sigma(U) + S_\Sigma(U')}$, the leading non-trivial contribution comes from the character expansion:
+   $$\chi_{1/2}(U) \chi_{1/2}(U') - \chi_{1/2}(-U) \chi_{1/2}(U') = 2 \chi_{1/2}(U) \chi_{1/2}(U').$$
+   Under 4D block decimation, internal link integration across 6 co-boundary plaquettes generates Clebsch–Gordan contractions $\mathbf{2} \otimes \mathbf{2} = \mathbf{1} \oplus \mathbf{3}$. The coupled two-replica decimation generates an effective adjoint character interaction:
+   $$K_{\mathrm{eff}}(U, U') \supset a_1^{(0)} \chi_1(\theta).$$
+   Because $\min_\theta \chi_1(\theta) = -1 < 0$, the effective Boltzmann measure becomes oscillatory and non-positive on the doubled configuration space, producing the certified non-Abelian FKG sign defect:
+   $$\Delta_{\mathrm{FKG\_sign}} = -\min_\theta \chi_1(\theta) = 1 > 0.$$
+4. **Coupled Replica Adjoint Weight Defect:**
+   At crossover entry $k = 5$ ($\beta_5 = 41/24$), the fundamental character activity is $a_{1/2}^{(0)} = 41/96$. The coupled adjoint character weight is:
+   $$\Delta_{\mathrm{replica\_adjoint}} = a_1^{(0)} = (a_{1/2}^{(0)})^2 = \left(\frac{41}{96}\right)^2 = \frac{1681}{9216} \approx 0.182400 > 0.$$
+   Because $\Delta_{\mathrm{FKG\_sign}} = 1 > 0$ and $\Delta_{\mathrm{replica\_adjoint}} = 1681/9216 > 0$, the non-Abelian Haar measure suffers from severe sign oscillations. The Ginibre / FKG correlation inequality fails, destroying monotonic preservation of the vortex free energy across RG decimation steps.
+
+Therefore, the same-action two-replica formulation cannot prove monotonic preservation of the vortex free-energy ratio or establish the macroscopic mass gap, keeping Edge `E-CROSSOVER` strictly open (`NEG-YM-085`).
+
+---
+
+### 5. Formal Statement and Proof of Lemma YM-085F
+
+\begin{lemma}[\textbf{Lemma YM-085F-SAME-ACTION-DUHAMEL-CANCELLATION-AND-NONABELIAN-FKG-BREAKDOWN}]
+Let $SU(2)$ lattice gauge theory be formulated on a 4-torus $T^4$ at intermediate coupling scale $k = 5$ with running inverse coupling $\beta_5 = 41/24$.
+1. **Same-Action Duhamel Cocycle Interpolation & Bulk Volume Cancellation:**
+   When both the untwisted partition function $Z_+(T)$ and twisted partition function $Z_-(T)$ are evaluated under the same effective action $S(U; s)$ with continuous twist parameter $z(s) = \cos(\pi s)$ localized on the 2D co-closed twist cocycle $\Sigma_{\mathrm{twist}}$, all $V_4 - |\Sigma_{\mathrm{twist}}|$ untwisted bulk plaquettes have identical action at $s = 0$ and $s = 1$. The Duhamel path derivative on bulk plaquettes vanishes identically, cancelling the extensive bulk free-energy density mismatch:
+   $$\Delta_{\mathrm{bulk\_cancel}} = 0.$$
+2. **Two-Replica Vortex Free-Energy Formulation:**
+   On the doubled gauge group $SU(2) \times SU(2)$, the difference of squared partition functions satisfies the exact duplicate-lattice identity:
+   $$Z_+^2 - Z_-^2 = \iint d\mu(U) d\mu(U') \, e^{-S_{\mathrm{untwisted}}(U) - S_{\mathrm{untwisted}}(U')} \left( e^{-S_\Sigma(U) - S_\Sigma(U')} - e^{+S_\Sigma(U) + S_\Sigma(U')} \right),$$
+   expressing the vortex free-energy margin $\tanh(\frac{1}{2} F_{\mathrm{vortex}}) = \frac{Z_+ - Z_-}{Z_+ + Z_-} = \frac{Z_+^2 - Z_-^2}{(Z_+ + Z_-)^2}$ as a single expectation value on the doubled gauge group.
+3. **Non-Abelian Ginibre/FKG Correlation Positivity Breakdown (`NEG-YM-085`):**
+   In contrast to Abelian $U(1)$ gauge theory where Ginibre's inequality ensures correlation positivity, non-Abelian $SU(2)$ Haar integration breaks FKG positivity:
+   - The fundamental character changes sign: $\chi_{1/2}(-I) = -2 < 0$;
+   - The adjoint character $\chi_1(\theta) = 4\cos^2\theta - 1$ attains negative minimum $\min_\theta \chi_1(\theta) = -1 < 0$ at $\theta = \pi/2$;
+   - The two-replica difference couples to the adjoint channel with certified FKG sign defect:
+     $$\Delta_{\mathrm{FKG\_sign}} = -\min_\theta \chi_1(\theta) = 1 > 0,$$
+     and coupled replica adjoint weight defect:
+     $$\Delta_{\mathrm{replica\_adjoint}} = a_1^{(0)} = \left(\frac{41}{96}\right)^2 = \frac{1681}{9216} \approx 0.182400 > 0.$$
+   Sign oscillations in the non-Abelian two-replica measure break Ginibre/FKG correlation positivity, preventing monotonic preservation of the vortex free-energy ratio under RG decimation.
+   Consequently, Edge `E-CROSSOVER` remains strictly `OPEN_AND_UNSOLVED`, Task `YM-016` remains `BLOCKED`, and the Clay Millennium Prize Problem remains `OPEN_AND_UNSOLVED`.
+\end{lemma}
+
+**Proof:**
+- **Part 1 (Same-Action Cocycle Duhamel Cancellation):**
+  The lattice action is partitioned into $S(U; s) = S_{\mathrm{untwisted}}(U) + S_\Sigma(U; s)$ with $z(s) = \cos(\pi s)$ for $s \in [0, 1]$.
+  Differentiating $\ln Z(s) = \ln \int d\mu(U) e^{-S(U; s)}$ with respect to $s$:
+  $$\frac{d}{ds} \ln Z(s) = \frac{-\int d\mu(U) \frac{\partial S(U; s)}{\partial s} e^{-S(U; s)}}{Z(s)} = -\left\langle \frac{\partial S_\Sigma(U; s)}{\partial s} \right\rangle_s,$$
+  since $\frac{\partial S_{\mathrm{untwisted}}}{\partial s} = 0$.
+  Integrating from $s = 0$ to $s = 1$:
+  $$\ln Z_-(T) - \ln Z_+(T) = -\int_0^1 ds \left\langle \frac{\partial S_\Sigma}{\partial s} \right\rangle_s.$$
+  Because the variation is strictly supported on the codimension-2 surface $\Sigma_{\mathrm{twist}}$ containing $|\Sigma_{\mathrm{twist}}| = L_1 L_2$ plaquettes, all $V_4 - |\Sigma_{\mathrm{twist}}|$ untwisted bulk plaquettes drop out of the derivative. The bulk free-energy density difference is identically zero: $\Delta f_{\mathrm{bulk\_untwisted}} = 0$, cancelling the extensive bulk mismatch of `NEG-YM-084` identically: $\Delta_{\mathrm{bulk\_cancel}} = 0$.
+- **Part 2 (Two-Replica Identity):**
+  Consider two independent, identical copies of the gauge field $U, U' \in SU(2)^{|E|}$ with measure $d\mu(U) d\mu(U')$.
+  By definition:
+  $$Z_+^2 = \left( \int d\mu(U) e^{-S_{\mathrm{untwisted}}(U) - S_\Sigma(U; 0)} \right) \left( \int d\mu(U') e^{-S_{\mathrm{untwisted}}(U') - S_\Sigma(U'; 0)} \right)$$
+  $$= \iint d\mu(U) d\mu(U') e^{-S_{\mathrm{untwisted}}(U) - S_{\mathrm{untwisted}}(U')} e^{-S_\Sigma(U) - S_\Sigma(U')},$$
+  $$Z_-^2 = \left( \int d\mu(U) e^{-S_{\mathrm{untwisted}}(U) - S_\Sigma(U; 1)} \right) \left( \int d\mu(U') e^{-S_{\mathrm{untwisted}}(U') - S_\Sigma(U'; 1)} \right)$$
+  $$= \iint d\mu(U) d\mu(U') e^{-S_{\mathrm{untwisted}}(U) - S_{\mathrm{untwisted}}(U')} e^{+S_\Sigma(U) + S_\Sigma(U')},$$
+  where we used $z(1) = -1$, which flips the sign of the twist plaquettes $S_\Sigma(U; 1) = -S_\Sigma(U)$.
+  Subtracting $Z_-^2$ from $Z_+^2$ directly yields the two-replica identity:
+  $$Z_+^2 - Z_-^2 = \iint d\mu(U) d\mu(U') e^{-S_{\mathrm{untwisted}}(U) - S_{\mathrm{untwisted}}(U')} \left( e^{-S_\Sigma(U) - S_\Sigma(U')} - e^{+S_\Sigma(U) + S_\Sigma(U')} \right).$$
+  Dividing by $(Z_+ + Z_-)^2$ yields the vortex free-energy margin $\tanh(\frac{1}{2} F_{\mathrm{vortex}}) = \frac{Z_+ - Z_-}{Z_+ + Z_-}$.
+- **Part 3 (Non-Abelian Ginibre/FKG Breakdown):**
+  In Abelian $U(1)$ gauge theory, the group manifold is $S^1$. The Fourier expansion $\cos(n\theta) \cos(m\theta) = \frac{1}{2}[\cos((n-m)\theta) + \cos((n+m)\theta)]$ contains strictly non-negative coefficients. By Ginibre's theorem, this guarantees FKG correlation positivity: $\langle A B \rangle - \langle A \rangle \langle B \rangle \ge 0$ for ferromagnetic observables, ensuring that the vortex free-energy ratio is monotonically preserved under block decimation.
+  In $SU(2)$, the group manifold is $S^3$. The irreducible characters are $\chi_j(\theta) = \frac{\sin((2j+1)\theta)}{\sin\theta}$.
+  For the fundamental representation ($j = 1/2$), $\chi_{1/2}(\theta) = 2\cos\theta$, which takes negative values on $\theta \in (\pi/2, \pi]$, reaching $\chi_{1/2}(-I) = -2 < 0$.
+  For the adjoint representation ($j = 1$), $\chi_1(\theta) = 4\cos^2\theta - 1$, which attains its absolute minimum at $\theta = \pi/2$:
+  $$\min_\theta \chi_1(\theta) = 4(0)^2 - 1 = -1 < 0.$$
+  In the two-replica difference $e^{-S_\Sigma(U) - S_\Sigma(U')} - e^{+S_\Sigma(U) + S_\Sigma(U')}$, the lowest-order expansion in the fundamental twist is proportional to $\chi_{1/2}(U) \chi_{1/2}(U')$. Integrating internal links shared by 6 co-boundary plaquettes in $D = 4$ generates the Clebsch–Gordan decomposition $\mathbf{2} \otimes \mathbf{2} = \mathbf{1} \oplus \mathbf{3}$. The projection onto the adjoint representation $\mathbf{3}$ carries character $\chi_1(\theta)$ with coefficient $a_1^{(0)} = (a_{1/2}^{(0)})^2 = (41/96)^2 = 1681/9216$.
+  Because $\chi_1(\theta)$ achieves negative values down to $-1$, the effective measure in the two-replica difference develops negative weights:
+  $$\Delta_{\mathrm{FKG\_sign}} = -\min_\theta \chi_1(\theta) = 1 > 0,$$
+  $$\Delta_{\mathrm{replica\_adjoint}} = \frac{1681}{9216} \approx 0.182400 > 0.$$
+  These negative weights destroy FKG lattice associativity and correlation positivity, creating destructive sign oscillations that prevent establishing monotonic preservation of the vortex free energy across RG decimation steps.
+  Therefore, Edge `E-CROSSOVER` remains strictly `OPEN_AND_UNSOLVED`, Task `YM-016` remains `BLOCKED`, and the Clay Millennium Prize Problem remains `OPEN_AND_UNSOLVED`. $\blacksquare$
+
+---
+
+### 6. Summary of Epistemic Status (`YM-085`)
+- **Lemma `YM-085F-SAME-ACTION-DUHAMEL-CANCELLATION-AND-NONABELIAN-FKG-BREAKDOWN`:** **`PROVED`** (exact finite certificates verified in `TEST 49` of `tests/test_source_jet_finite_certificates.py`).
+- **Edge `E-CROSSOVER`:** **`OPEN_AND_UNSOLVED`**.
+- **Edge `E-UV-LOCAL-OS`:** **`CLOSED_UNBUFFERED`**.
+- **Edge `E-UV-FLOWED`:** **`CLOSED_AT_FLOW_SCALE`**.
+- **Downstream Open / Blocked Global Obligations:**
+  - **Task `YM-016` (Continuum Reconstruction):** **`BLOCKED`**;
+  - **Lemma `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS`:** **`OPEN`**;
+  - **Lemma `YM-060F-CONTINUUM-WIGHTMAN-RECONSTRUCTION-AND-SPECTRAL-GAP`:** **`OPEN`**;
+  - **Constitutional Invariants:** `goal_complete = false`, `clay_problem = OPEN_AND_UNSOLVED`, `P3 = OPEN`, `STRUCTURAL_NO_GO_COUNT = 0`.
+

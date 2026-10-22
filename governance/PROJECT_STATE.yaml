@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 125
+revision: 126
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "127ab3e3d576e5a9c2f599720c933b58857a5954"
-  scientific_candidate_sha: "dcb1a70df49b69d5f24e41133b2025ab02aaf15c"
-  review_bound_sha: "dcb1a70df49b69d5f24e41133b2025ab02aaf15c"
-  evidence_closeout_head: "dcb1a70df49b69d5f24e41133b2025ab02aaf15c"
-  closeout_resolution: "evidence_closeout_head binds scientific candidate commit (dcb1a70df49b69d5f24e41133b2025ab02aaf15c); YM-084 is scientifically accepted and closed out at State Revision 125."
+  head: "fee2484937104a5c3b6b30fe6cfa298a003b6a41"
+  scientific_candidate_sha: ""
+  review_bound_sha: ""
+  evidence_closeout_head: "893a4092c9f84b2580bc61c870feedef082de5b0"
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-084 closeout commit (893a4092c9f84b2580bc61c870feedef082de5b0); candidate freeze for YM-085 is staged at State Revision 126."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,14 +32,25 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 124
-  last_updated_at: "2026-10-20T23:45:00Z"
+  last_expected_revision: 125
+  last_updated_at: "2026-10-22T04:20:00Z"
   active_contract: "YM-015F-JET-002B"
   frozen_candidate: ""
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-085
+    scope_in: "Same-Action Twisted Cocycle Duhamel Interpolation & Exact Bulk Free-Energy Cancellation on Edge E-CROSSOVER, Two-Replica Vortex Free-Energy Formulation, and Isolation of the Non-Abelian Ginibre/FKG Correlation Positivity Obstruction, proof of Lemma YM-085F-SAME-ACTION-DUHAMEL-CANCELLATION-AND-NONABELIAN-FKG-BREAKDOWN, and Test 49 finite certificate"
+    scope_out: "Crossing infrared crossover E-CROSSOVER, non-perturbative multi-block lattice collar equivalence, continuum Wightman reconstruction, and full continuum closure"
+    dependencies: ["YM-084"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-085_E4_RAW_20261022.md"
+    acceptor: "verification/YM-085_TECHNICAL_ACCEPTANCE.md"
+    status: CANDIDATE_FROZEN
+    scope_limitation: "SAME_ACTION_DUHAMEL_CANCELLATION_PROVED_NONABELIAN_FKG_BREAKDOWN_ISOLATED_AND_CLAY_OPEN"
   - id: YM-084
     scope_in: "Source-Free Transfer-Matrix & ’t Hooft Twisted Partition Function Symmetry Restoration on Edge E-CROSSOVER, Cauchy–Lee–Yang Analytic Disc Derivative Bounds, and Isolation of the Extensive Bulk Free-Energy Volume-Mismatch Obstruction, proof of Lemma YM-084F-THOOFT-TWIST-SYMMETRY-AND-EXTENSIVE-BULK-MISMATCH, and Test 48 finite certificate"
     scope_out: "Crossing infrared crossover E-CROSSOVER, non-perturbative multi-block lattice collar equivalence, continuum Wightman reconstruction, and full continuum closure"
