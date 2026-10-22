@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 126
+revision: 127
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "fee2484937104a5c3b6b30fe6cfa298a003b6a41"
-  scientific_candidate_sha: ""
-  review_bound_sha: ""
-  evidence_closeout_head: "893a4092c9f84b2580bc61c870feedef082de5b0"
-  closeout_resolution: "evidence_closeout_head binds preceding completed YM-084 closeout commit (893a4092c9f84b2580bc61c870feedef082de5b0); candidate freeze for YM-085 is staged at State Revision 126."
+  head: "b77a3c11d3926220cc3c2f2e15cc7e435ab01951"
+  scientific_candidate_sha: "ff0337727195cffd25610a0fadff91592db2b783"
+  review_bound_sha: "ff0337727195cffd25610a0fadff91592db2b783"
+  evidence_closeout_head: "ff0337727195cffd25610a0fadff91592db2b783"
+  closeout_resolution: "evidence_closeout_head binds scientific candidate commit (ff0337727195cffd25610a0fadff91592db2b783); YM-085 is scientifically accepted and closed out at State Revision 127."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,8 +32,8 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 125
-  last_updated_at: "2026-10-22T04:20:00Z"
+  last_expected_revision: 126
+  last_updated_at: "2026-10-22T04:35:00Z"
   active_contract: "YM-015F-JET-002B"
   frozen_candidate: ""
 
@@ -49,7 +49,7 @@ objectives:
     atlas_writer_and_coordinator: "primary-worker"
     reviewer_path: "verification/raw/YM-085_E4_RAW_20261022.md"
     acceptor: "verification/YM-085_TECHNICAL_ACCEPTANCE.md"
-    status: CANDIDATE_FROZEN
+    status: SCIENTIFICALLY_ACCEPTED
     scope_limitation: "SAME_ACTION_DUHAMEL_CANCELLATION_PROVED_NONABELIAN_FKG_BREAKDOWN_ISOLATED_AND_CLAY_OPEN"
   - id: YM-084
     scope_in: "Source-Free Transfer-Matrix & ’t Hooft Twisted Partition Function Symmetry Restoration on Edge E-CROSSOVER, Cauchy–Lee–Yang Analytic Disc Derivative Bounds, and Isolation of the Extensive Bulk Free-Energy Volume-Mismatch Obstruction, proof of Lemma YM-084F-THOOFT-TWIST-SYMMETRY-AND-EXTENSIVE-BULK-MISMATCH, and Test 48 finite certificate"
