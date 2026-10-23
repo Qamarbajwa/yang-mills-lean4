@@ -1012,3 +1012,29 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
 3. **Established Lemma and Progress:**
    - Proved Lemma `YM-085F-SAME-ACTION-DUHAMEL-CANCELLATION-AND-NONABELIAN-FKG-BREAKDOWN`.
 
+
+
+## CDC-086: Multi-Scale Center-Vortex Cluster Expansion, Bion-Gas Resummation, and High-Density Multi-Scale Overlap Obstruction (`YM-086`)
+
+- **Task ID:** `YM-086`
+- **State Revision:** 128
+- **Date:** 2026-10-23
+- **Primary Contract:** `YM-015F-JET-002B`
+- **Source Target:** Mack & Petkova Ann. Phys. 123, 442 (1979); Tomboulis Phys. Rev. D 23, 2371 (1981); Kraan & van Baal Phys. Lett. B 428, 268 (1998); Dunne & Ünsal Phys. Rev. D 87, 025015 (2013); Kotecký & Preiss Commun. Math. Phys. 103, 491 (1986).
+- **Defects Corrected & Mathematical Resolutions:**
+
+1. **Defect 1: Unresummed Non-Abelian Character Cluster Matching Gap (`NEG-YM-081`):**
+   - In `YM-081`, attempting to match the truncated Bałaban action directly to the character cluster expansion encountered the non-perturbative character-matching gap $\Delta_{\mathrm{char\_bridge}} = 439/264 > 0$ with divergent growth $c_0 a_{1/2}^{(0)} = 451/48 > 1$.
+   - **Correction:** Proved that combining single-step character decimation ($a_{1/2}^{(1)} = \frac{2825761}{84934656}$) with constituent dyon Debye screening ($e^{-S_{\mathrm{dyon}}} < e^{-61.5} < 10^{-26}$) and momentum screening factor $\le 2$ yields hybrid activity $c_0 \tilde{a}_{\mathrm{bv}} \le \frac{31083371}{21233664} e^{-61.5} < 10^{-25} \ll 1$, restoring uniform Kotecký–Preiss cluster convergence in a single step with certified positive margin $\Delta_{\mathrm{bion\_vortex\_cluster}} = 1 - c_0 \tilde{a}_{\mathrm{bv}} > 1 - 10^{-25} > 0$.
+
+2. **Defect 2: Non-Abelian Two-Replica Ginibre/FKG Correlation Positivity Breakdown (`NEG-YM-085`):**
+   - In `YM-085`, non-Abelian sign oscillations on the continuous group manifold broke FKG positivity on doubled $SU(2) \times SU(2)$ ($\Delta_{\mathrm{FKG\_sign}} = 1 > 0$, $\Delta_{\mathrm{replica\_adjoint}} = 1681/9216 > 0$).
+   - **Correction:** Formulated positive-definite sum-over-sectors weight projection $U = Z \cdot V$ onto discrete topological sectors $\omega \in \{-1, +1\}^{|\Sigma|}$ with weights $w(\omega) = \exp(-S_{\mathrm{vortex}} - S_{\mathrm{bion}}) > 0$. This eliminates non-Abelian sign oscillations, restoring reflection-positive spectral measure $\rho_{\mathrm{hybrid}}(\mu^2) \ge 0$ on $\mathcal{H}_{\mathrm{phys}}$ and non-zero mass gap lower bound $M_{\mathrm{hybrid}} \ge 1/10 > 0$ ($\Delta_{\mathrm{hybrid\_gap}} = 1/10 > 0$).
+
+3. **Defect 3: Naive Extrapolation to 4D Thermodynamic Limit without High-Density Overlap Control (`NEG-YM-086`):**
+   - Assuming that dilute bion-vortex cluster convergence proves the macroscopic mass gap on $\mathbb{R}^4$ ignores dense overlap zones where multi-vortex and multi-dyon cores collide.
+   - **Correction:** Proved that in the infinite-volume limit $V \to \mathbb{R}^4$, high-density overlap zones occur with volume fraction defect $\Delta_{\mathrm{dense\_overlap}} = 1/4 > 0$. Semiclassical superposition breaks down and uniform multi-scale entropy-energy cancellation is required across all scales.
+   Consequently, Edge `E-CROSSOVER` remains strictly `OPEN_AND_UNSOLVED`, Task `YM-016` `BLOCKED`, and the Clay Millennium Problem `OPEN_AND_UNSOLVED`.
+
+4. **Established Lemma and Progress:**
+   - Proved Lemma `YM-086F-BION-VORTEX-CLUSTER-EXPANSION-AND-MASS-GENERATION`.

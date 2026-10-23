@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 127
+revision: 128
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "b77a3c11d3926220cc3c2f2e15cc7e435ab01951"
-  scientific_candidate_sha: "ff0337727195cffd25610a0fadff91592db2b783"
-  review_bound_sha: "ff0337727195cffd25610a0fadff91592db2b783"
-  evidence_closeout_head: "ff0337727195cffd25610a0fadff91592db2b783"
-  closeout_resolution: "evidence_closeout_head binds scientific candidate commit (ff0337727195cffd25610a0fadff91592db2b783); YM-085 is scientifically accepted and closed out at State Revision 127."
+  head: "535adabea850f2be18b9a05178cd88becc52f6e5"
+  scientific_candidate_sha: ""
+  review_bound_sha: ""
+  evidence_closeout_head: "25698d6da8cd31daab900a32c325684d94dfe886"
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-085 closeout commit (25698d6da8cd31daab900a32c325684d94dfe886); candidate freeze for YM-086 is staged at State Revision 128."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,8 +32,8 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 126
-  last_updated_at: "2026-10-22T04:35:00Z"
+  last_expected_revision: 127
+  last_updated_at: "2026-10-23T04:55:00Z"
   active_contract: "YM-015F-JET-002B"
   frozen_candidate: ""
 
