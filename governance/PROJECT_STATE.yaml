@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 129
+revision: 130
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "2b4c35df1ce192135c91f095d67683d73f1d8ef3"
-  scientific_candidate_sha: "c6470ae693266c66a017551c231e8e89cc6f8d36"
-  review_bound_sha: "c6470ae693266c66a017551c231e8e89cc6f8d36"
-  evidence_closeout_head: "c6470ae693266c66a017551c231e8e89cc6f8d36"
-  closeout_resolution: "evidence_closeout_head binds scientific candidate commit (c6470ae693266c66a017551c231e8e89cc6f8d36); YM-086 is scientifically accepted and closed out at State Revision 129."
+  head: "b8eb91d794cbdb9bfe8d36b8568c0490b4d4b1f4"
+  scientific_candidate_sha: ""
+  review_bound_sha: ""
+  evidence_closeout_head: "0b1a9b9a696bb49793132e485e9ae5e40e695d73"
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-086 closeout commit (0b1a9b9a696bb49793132e485e9ae5e40e695d73); candidate freeze for YM-087 is staged at State Revision 130."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,14 +32,25 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 128
-  last_updated_at: "2026-10-23T05:10:00Z"
+  last_expected_revision: 129
+  last_updated_at: "2026-10-24T02:05:00Z"
   active_contract: "YM-015F-JET-002B"
   frozen_candidate: ""
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-087
+    scope_in: "Swiss-Cheese Polymer Excision of High-Density Topological Collision Zones on Edge E-CROSSOVER, Maximal-Frustration Peierls Entropy Suppression at beta_5 = 41/24, and Isolation of the Intermediate-Field Entropy-Energy Window, proof of Lemma YM-087F-SWISS-CHEESE-PEIERLS-SUPPRESSION-AND-INTERMEDIATE-FIELD-WINDOW, and Test 51 finite certificate"
+    scope_out: "Crossing infrared crossover E-CROSSOVER, non-perturbative multi-block lattice collar equivalence, continuum Wightman reconstruction, and full continuum closure"
+    dependencies: ["YM-086"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-087_E4_RAW_20261024.md"
+    acceptor: "verification/YM-087_TECHNICAL_ACCEPTANCE.md"
+    status: CANDIDATE_FROZEN
+    scope_limitation: "SWISS_CHEESE_EXCISION_PROVED_INTERMEDIATE_FIELD_WINDOW_ISOLATED_AND_CLAY_OPEN"
   - id: YM-086
     scope_in: "Constructive Non-Abelian Mass Generation via Multi-Scale Center-Vortex Cluster Expansion and Bion-Gas Resummation on Edge E-CROSSOVER, proof of Lemma YM-086F-BION-VORTEX-CLUSTER-EXPANSION-AND-MASS-GENERATION, and Test 50 finite certificate"
     scope_out: "Crossing infrared crossover E-CROSSOVER, non-perturbative multi-block lattice collar equivalence, continuum Wightman reconstruction, and full continuum closure"

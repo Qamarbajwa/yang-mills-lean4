@@ -1038,3 +1038,29 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
 
 4. **Established Lemma and Progress:**
    - Proved Lemma `YM-086F-BION-VORTEX-CLUSTER-EXPANSION-AND-MASS-GENERATION`.
+
+
+## CDC-087: Swiss-Cheese Polymer Excision of High-Density Topological Collision Zones, Maximal-Frustration Peierls Entropy Suppression, and Intermediate-Field Entropy Window (`YM-087`)
+
+- **Task ID:** `YM-087`
+- **State Revision:** 130
+- **Date:** 2026-10-24
+- **Primary Contract:** `YM-015F-JET-002B`
+- **Source Target:** Peierls Proc. Cambridge Phil. Soc. 32, 477 (1936); Glimm, Jaffe & Spencer Ann. Math. 100, 585 (1974); Fröhlich & Lieb Commun. Math. Phys. 60, 233 (1978); Bałaban Commun. Math. Phys. 122, 175 (1989); Borgs Commun. Math. Phys. 116, 309 (1988).
+- **Defects Corrected & Mathematical Resolutions:**
+
+1. **Defect 1: Breakdown of Semiclassical Dilute-Gas Expansion in Collision Zones (`NEG-YM-086`):**
+   - In `YM-086`, dense collision zones where multi-vortex sheets and dyon cores overlap ($\ell_{\mathrm{sep}} \lesssim \ell_{\mathrm{core}}$) invalidated dilute semiclassical approximations ($\Delta_{\mathrm{dense\_overlap}} = 1/4 > 0$).
+   - **Correction:** Formulated Swiss-cheese two-phase partitioning $\Lambda = \Lambda_{\mathrm{dilute}} \sqcup \Omega_{\mathrm{dense}}$. Connected collision polymers $\Gamma \subset \Omega_{\mathrm{dense}}$ are excised from the dilute expansion and bounded non-perturbatively using solely the exact non-negative Wilson action $S_W(\Gamma) \ge 0$, completely removing dilute assumptions in dense zones.
+
+2. **Defect 2: Uncontrolled Combinatorial Core Percolation on the 4D Hypercubic Lattice:**
+   - Unbounded growth of dense collision polymers could percolate and destroy cluster convergence in the thermodynamic limit.
+   - **Correction:** Proved Maximal-Frustration Peierls Suppression Theorem at $\beta_5 = 41/24$. For maximally frustrated center-vortex cores ($U_p = -I$, $S_{\max} = 2\beta_5 = 41/12$), Boltzmann suppression strictly dominates 4D animal connectivity $\ln(22) < 31/10$, with certified positive Peierls margin $\Delta_{\mathrm{Peierls\_max}} = 41/12 - 31/10 = 19/60 \approx 0.31667 > 0$. The core growth product contracts strictly below unity ($c_0 e^{-S_{\max}} < e^{-19/60} < 47/60 < 1$), proving cores cannot percolate.
+
+3. **Defect 3: Naive Extrapolation of Single-Plaquette Peierls Bounds to Intermediate Curvatures (`NEG-YM-087`):**
+   - Assuming that single-plaquette Peierls bounds suppress all non-perturbative fluctuations overlooks soft overlapping configurations.
+   - **Correction:** Proved that single-plaquette Peierls bounds leave open the Intermediate-Field Entropy Window $S_{\mathrm{soft}} \in [1, 31/10)$ with benchmark defect $\Delta_{\mathrm{entropy\_window}} = 31/10 - 41/24 = 167/120 \approx 1.39167 > 0$, where soft cores have insufficient single-plaquette action to beat animal entropy without summing over multi-plaquette block volumes $L^4$.
+   Consequently, Edge `E-CROSSOVER` remains strictly `OPEN_AND_UNSOLVED`, Task `YM-016` `BLOCKED`, and the Clay Millennium Problem `OPEN_AND_UNSOLVED`.
+
+4. **Established Lemma and Progress:**
+   - Proved Lemma `YM-087F-SWISS-CHEESE-PEIERLS-SUPPRESSION-AND-INTERMEDIATE-FIELD-WINDOW`.

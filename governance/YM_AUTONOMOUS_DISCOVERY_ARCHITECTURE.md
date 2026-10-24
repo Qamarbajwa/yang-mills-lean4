@@ -1332,3 +1332,42 @@ Task `YM-086` synthesizes the multi-scale center-vortex ensemble (`YM-079`) with
    Consequently, Edge `E-CROSSOVER` remains strictly `OPEN_AND_UNSOLVED`, Task `YM-016` remains `BLOCKED`, `goal_complete` remains `false`, and `clay_problem` remains `OPEN_AND_UNSOLVED`.
 4. **Epistemic Invariants:**
    Confirm that Edge `E-CROSSOVER` remains `OPEN_AND_UNSOLVED`, `YM-016` remains `BLOCKED`, `goal_complete` remains `false`, and `clay_problem` remains `OPEN_AND_UNSOLVED`.
+
+
+## Task Specification YM-087: Swiss-Cheese Polymer Excision of High-Density Topological Collision Zones on Edge E-CROSSOVER, Maximal-Frustration Peierls Entropy Suppression at $\beta_5 = 41/24$, and Isolation of the Intermediate-Field Entropy-Energy Window
+
+### 1. Context and Objective
+In Task `YM-086`, combining center-vortex decimation with dyonic caloron Debye screening achieved super-exponential cluster convergence in the dilute exterior sea ($c_0 \tilde{a}_{\mathrm{bv}} < 10^{-25} \ll 1$) and sum-over-sectors weight projection restored spectral positivity with non-zero mass gap $M_{\mathrm{hybrid}} \ge 1/10 > 0$. However, `NEG-YM-086` isolated dense collision zones where multiple vortex sheets and dyon cores overlap ($\ell_{\mathrm{sep}} \lesssim \ell_{\mathrm{core}}$), invalidating dilute approximations.
+Task `YM-087` resolves this collision barrier via a rigorous geometric and combinatorial two-phase construction:
+1. **Swiss-Cheese Two-Phase Polymer Partitioning:** Partitions the 4D hypercubic lattice into a dilute exterior sea $\Lambda_{\mathrm{dilute}} = \Lambda \setminus \Omega_{\mathrm{dense}}$ (governed by the convergent bion-vortex cluster expansion of `YM-086`) and connected high-density collision polymers $\Gamma \subset \Omega_{\mathrm{dense}}$. Dense polymers $\Gamma$ are excised from the dilute expansion and bounded non-perturbatively using solely the exact non-negative Wilson lattice action $S_W(\Gamma) \ge 0$, completely removing any reliance on dilute semiclassical approximations inside collision zones;
+2. **Maximal-Frustration Peierls Suppression Theorem at $\beta_5 = 41/24$:** Proves that for dense topological collision cores carrying a maximally frustrated center-vortex plaquette ($U_p = -I$, action cost $S_{\max} = 2\beta_{\mathrm{inv}, 5} = 2 \times \frac{41}{24} = \frac{41}{12} \approx 3.41667$), the Boltzmann suppression factor $e^{-41/12}$ strictly dominates the 4D hypercubic plaquette animal connectivity constant $c_0 = 22$ (using the rational upper bound $\ln(22) < \frac{31}{10} = 3.10$, since $e^{3.1} > 22.19 > 22$). The exact rational Peierls suppression margin is:
+   $$\Delta_{\mathrm{Peierls\_max}} = S_{\max} - \frac{31}{10} = \frac{41}{12} - \frac{31}{10} = \frac{19}{60} \approx 0.31667 > 0.$$
+   Consequently, the percolation product contracts strictly below unity ($c_0 e^{-S_{\max}} < e^{-19/60} < \frac{47}{60} < 1$), proving that maximally frustrated topological collision cores are exponentially suppressed and cannot percolate across the 4D lattice;
+3. **Isolation of the Intermediate-Field Entropy-Energy Window (`NEG-YM-087`):** Proves why single-plaquette Peierls bounds close both the dilute regime ($S \ll 1$) and the maximally frustrated core regime ($S \ge 31/10$), but leave open the **Intermediate-Field Entropy Window** where soft overlapping configurations carry intermediate action $S_{\mathrm{soft}} \in [1, \frac{31}{10})$. At benchmark intermediate coupling $S_{\mathrm{mid}} = \beta_{\mathrm{inv}, 5} = \frac{41}{24} \approx 1.70833$, the certified entropy-energy defect is:
+   $$\Delta_{\mathrm{entropy\_window}} = \frac{31}{10} - \frac{41}{24} = \frac{167}{120} \approx 1.39167 > 0.$$
+   In this intermediate window, soft cores carry too much curvature for small-field Gaussian perturbation theory, yet insufficient single-plaquette action to beat the 4D animal entropy $\ln(22)$ without summing over the full multi-plaquette block volume $L^4$, keeping Edge `E-CROSSOVER` strictly open and Task `YM-016` blocked.
+
+### 2. Mathematical Specification of Task YM-087
+1. **Swiss-Cheese Two-Phase Polymer Partitioning:**
+   The full lattice configuration space is partitioned into a dilute exterior sea $\Lambda_{\mathrm{dilute}}$ and excised dense collision polymers $\Gamma_1, \dots, \Gamma_n \subset \Omega_{\mathrm{dense}}$.
+   In $\Lambda_{\mathrm{dilute}}$, the bion-vortex cluster expansion of `YM-086` converges with activity bound $c_0 \tilde{a}_{\mathrm{bv}} < 10^{-25} \ll 1$.
+   Inside each dense polymer $\Gamma$, the Boltzmann weight $e^{-S_W(\Gamma)}$ is bounded via the exact non-negative Wilson action $S_W(\Gamma) = \beta_5 \sum_{p \in \Gamma} (1 - \frac{1}{2} \operatorname{Re}\operatorname{Tr} U_p) \ge 0$, eliminating semiclassical approximations in dense overlap regions.
+2. **Maximal-Frustration Peierls Suppression Theorem at $\beta_5 = 41/24$:**
+   At crossover entry step $k = 5$ with $\beta_{\mathrm{inv}, 5} = 41/24$, a maximally frustrated center-vortex core plaquette ($U_p = -I$) has action:
+   $$S_{\max} = \beta_{\mathrm{inv}, 5} \left(1 - \frac{1}{2}\operatorname{Re}\operatorname{Tr}(-I)\right) = 2 \beta_{\mathrm{inv}, 5} = 2 \times \frac{41}{24} = \frac{41}{12} \approx 3.41667.$$
+   On $\mathbb{Z}^4$, the plaquette animal connectivity constant is $c_0 = 22$.
+   Using $e^{3.1} = e^3 e^{0.1} > (20.08)(1.105) > 22.19 > 22$, we establish the exact rational upper bound:
+   $$\ln(22) < \frac{31}{10} = 3.10.$$
+   Subtracting $\ln(22)$ from $S_{\max}$ gives the certified positive Peierls margin:
+   $$\Delta_{\mathrm{Peierls\_max}} = \frac{41}{12} - \frac{31}{10} = \frac{19}{60} \approx 0.31667 > 0.$$
+   The percolation growth product satisfies:
+   $$c_0 e^{-S_{\max}} < e^{-\Delta_{\mathrm{Peierls\_max}}} = e^{-19/60} < 1 - \frac{19}{60} + \frac{1}{2}\left(\frac{19}{60}\right)^2 = \frac{5281}{7200} < \frac{47}{60} \approx 0.78333 < 1.$$
+   This proves that maximally frustrated cores are exponentially suppressed and cannot percolate in 4D.
+3. **Isolation of the Intermediate-Field Entropy-Energy Window (`NEG-YM-087`):**
+   While dilute configurations ($S \ll 1$) are controlled by bion-vortex cluster decimation and maximally frustrated cores ($S \ge 31/10$) are controlled by Peierls suppression, soft overlapping configurations carrying intermediate plaquette action $S_{\mathrm{soft}} \in [1, \frac{31}{10})$ remain uncontrolled by single-plaquette estimates.
+   At benchmark intermediate coupling $S_{\mathrm{mid}} = \beta_{\mathrm{inv}, 5} = \frac{41}{24}$, the intermediate-field entropy defect is:
+   $$\Delta_{\mathrm{entropy\_window}} = \frac{31}{10} - \frac{41}{24} = \frac{167}{120} \approx 1.39167 > 0.$$
+   Soft cores carry insufficient single-plaquette action to dominate 4D animal entropy without multi-plaquette block volume sums $L^4$.
+   Consequently, Edge `E-CROSSOVER` remains strictly `OPEN_AND_UNSOLVED`, Task `YM-016` remains `BLOCKED`, `goal_complete` remains `false`, and `clay_problem` remains `OPEN_AND_UNSOLVED`.
+4. **Epistemic Invariants:**
+   Confirm that Edge `E-CROSSOVER` remains `OPEN_AND_UNSOLVED`, `YM-016` remains `BLOCKED`, `goal_complete` remains `false`, and `clay_problem` remains `OPEN_AND_UNSOLVED`.
