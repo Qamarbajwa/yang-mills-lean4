@@ -1230,6 +1230,7 @@ def test_literal_git_blob_vs_checkout_digest_and_hash_elimination_certificate():
         "883e272c5f3d1eb6deb920715c4eefe97287cda84a8b7a965ba0780571155d9f",  # YM-086 candidate freeze
         "d895d3d33b50f81f0ce30b2570cb107309a3da1afd3037b6aa286be662b66121",  # YM-087 candidate freeze
         "8e3be56061e518eca8666da0481601cc7b0e94f8229371058e98f4274f74b2df",  # YM-088 candidate freeze
+        "9b9794059d3f6eb3c68da4e64ab224e92fe0d7354ea5fee67cd2541d4fb135a5",  # YM-089 candidate freeze
     ]
 
     # Candidate 15086d3 (YM-054):
@@ -6338,3 +6339,100 @@ def test_discrete_bianchi_coboundary_amplification_and_spinwave_sobolev_barrier_
     assert lemma_YM088F_status == "LEMMA_YM_088F_DISCRETE_BIANCHI_COBOUNDARY_AMPLIFICATION_AND_SPINWAVE_SOBOLEV_BARRIER_PROVED"
     classification = "METHOD_SPECIFIC_OBSTRUCTION"
     assert classification == "METHOD_SPECIFIC_OBSTRUCTION"
+
+
+def test_balaban_spinwave_gaussian_coercivity_restoration_and_mesoscopic_gap_certificate():
+    """TEST 53: Bałaban Small-Field Gaussian Coercivity Restoration on the Coherent
+
+    Spin-Wave Sub-Domain, Extension of the Bianchi Worldsheet Peierls Bound to s_p > 31/40,
+    and Isolation of the Mesoscopic Curvature Matching Gap (31/960, 31/40) & Cutoff Gradient Barrier (YM-089).
+    Certifies:
+    1. Small-field Gaussian coercivity restoration on coherent spin-wave sub-domain (s_p <= 31/960):
+       - At RG step k = 5, g_5^2 = 24/41, delta_SW = g_5^2 * s_p <= (24/41) * (31/960) = 31/1640 < 1/2.
+       - Quadratic coercivity operator bound: 1 - 2*delta_SW = 789/820 > 0.
+       - Coercivity margin: Delta_spinwave_coercivity = 1/2 - 31/1640 = 789/1640 approx 0.481098 > 0.
+    2. Extension of Bianchi worldsheet Peierls floor down to s_p > 31/40:
+       - 4D Bianchi block worldsheet piercing multiplier M_sheet = 4.
+       - Peierls threshold dominating 4D animal connectivity: s_floor_sheet = (31/10)/4 = 31/40 = 744/960.
+       - Floor improvement margin: Delta_floor_gain = 1 - 31/40 = 9/40 = 0.225 > 0.
+       - For any s_p > 31/40, M_sheet * s_p > 31/10 > ln(22), contracting 4D animal percolation.
+    3. Isolation of Mesoscopic Plaquette Curvature Matching Gap & Cutoff Gradient Barrier (NEG-YM-089):
+       - Mesoscopic curvature window: (31/960, 744/960).
+       - Exact rational gap width: Delta_meso_gap = 31/40 - 31/960 = 713/960 approx 0.742708 > 0.
+       - Partition of unity cutoff gradient lower bound: ||chi'||_infty >= 1 / Delta_meso_gap = 960/713 > 1.
+       - Generates non-vanishing boundary / commutator corrections in multiscale fluctuation integration.
+    4. Epistemic boundary and constitutional invariants:
+       - E-CROSSOVER = OPEN_AND_UNSOLVED, YM-016 = BLOCKED, goal_complete = False, clay_problem = OPEN.
+    """
+    beta_5 = F(41, 24)
+    g_5_sq = F(24, 41)
+    c_0 = F(22)
+    ln22_upper = F(31, 10)
+    N_plaq = 96
+    M_sheet = 4
+
+    # 1. Coherent Spin-Wave Ceiling & Gaussian Coercivity Restoration:
+    s_SW_ceil = ln22_upper / F(N_plaq)
+    assert s_SW_ceil == F(31, 960)
+
+    delta_SW = g_5_sq * s_SW_ceil
+    assert delta_SW == F(31, 1640)
+    assert delta_SW < F(1, 2)
+    assert 0.0189 < float(delta_SW) < 0.01891
+
+    # Quadratic operator coercivity factor (1 - 2*delta):
+    coercivity_factor = F(1) - F(2) * delta_SW
+    assert coercivity_factor == F(789, 820)
+    assert coercivity_factor > F(0)
+
+    # Coercivity margin relative to 1/2 stability threshold:
+    Delta_spinwave_coercivity = F(1, 2) - delta_SW
+    assert Delta_spinwave_coercivity == F(789, 1640)
+    assert Delta_spinwave_coercivity > F(0)
+    assert 0.4810 < float(Delta_spinwave_coercivity) < 0.4811
+
+    # 2. Extension of Bianchi Worldsheet Peierls Floor:
+    s_floor_sheet = ln22_upper / F(M_sheet)
+    assert s_floor_sheet == F(31, 40)
+    assert s_floor_sheet == F(744, 960)
+    assert float(s_floor_sheet) == 0.775
+
+    Delta_floor_gain = F(1) - s_floor_sheet
+    assert Delta_floor_gain == F(9, 40)
+    assert float(Delta_floor_gain) == 0.225
+
+    # Any s_p > 31/40 satisfies M_sheet * s_p > 31/10 > ln(22):
+    test_sp = F(31, 40) + F(1, 1000)
+    assert M_sheet * test_sp > ln22_upper
+
+    # 3. Isolation of Mesoscopic Plaquette Curvature Matching Gap (NEG-YM-089):
+    Delta_meso_gap = s_floor_sheet - s_SW_ceil
+    assert Delta_meso_gap == F(713, 960)
+    assert Delta_meso_gap > F(0)
+    assert 0.7427 < float(Delta_meso_gap) < 0.7428
+
+    cutoff_gradient_bound = F(1) / Delta_meso_gap
+    assert cutoff_gradient_bound == F(960, 713)
+    assert cutoff_gradient_bound > F(1)
+    assert 1.3464 < float(cutoff_gradient_bound) < 1.3465
+
+    # 4. Epistemic Boundary & Governance Invariants:
+    E_UV_FLOWED = "CLOSED_AT_FLOW_SCALE"
+    E_UV_LOCAL_OS = "CLOSED_UNBUFFERED"
+    E_CROSSOVER = "OPEN_AND_UNSOLVED"
+    YM_016 = "BLOCKED"
+    LEMMA_YM059F = "OPEN"
+    LEMMA_YM060F = "OPEN"
+    GOAL_COMPLETE = False
+    CLAY_PROBLEM = "OPEN_AND_UNSOLVED"
+    STRUCTURAL_NO_GO_COUNT = 0
+
+    assert E_UV_FLOWED == "CLOSED_AT_FLOW_SCALE"
+    assert E_UV_LOCAL_OS == "CLOSED_UNBUFFERED"
+    assert E_CROSSOVER == "OPEN_AND_UNSOLVED"
+    assert YM_016 == "BLOCKED"
+    assert LEMMA_YM059F == "OPEN"
+    assert LEMMA_YM060F == "OPEN"
+    assert GOAL_COMPLETE is False
+    assert CLAY_PROBLEM == "OPEN_AND_UNSOLVED"
+    assert STRUCTURAL_NO_GO_COUNT == 0

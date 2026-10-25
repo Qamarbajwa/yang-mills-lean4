@@ -1401,3 +1401,11 @@ Task `YM-088` resolves this single-plaquette defect by incorporating the geometr
    Consequently, Edge `E-CROSSOVER` remains strictly `OPEN_AND_UNSOLVED`, Task `YM-016` remains `BLOCKED`, `goal_complete` remains `false`, and `clay_problem` remains `OPEN_AND_UNSOLVED`.
 4. **Epistemic Invariants:**
    Confirm that Edge `E-CROSSOVER` remains `OPEN_AND_UNSOLVED`, `YM-016` remains `BLOCKED`, `goal_complete` remains `false`, and `clay_problem` remains `OPEN_AND_UNSOLVED`.
+
+### Task Specification YM-089: Bałaban Small-Field Gaussian Coercivity Restoration on the Coherent Spin-Wave Sub-Domain, Bianchi Peierls Floor Extension, and Isolation of the Mesoscopic Curvature Matching Gap & Cutoff Gradient Barrier
+- **Contract:** `YM-015F-JET-002B`
+- **Objective:** Prove Lemma `YM-089F` and certify:
+  1. Small-field Gaussian coercivity restoration on coherent spin-wave sub-domain $s_p \le 31/960$: $\delta_{\mathrm{SW}} \le 31/1640 < 1/2$, yielding certified margin $\Delta_{\mathrm{spinwave\_coercivity}} = 789/1640 \approx 0.481098 > 0$.
+  2. Extension of Bianchi worldsheet Peierls floor to $s_{\mathrm{floor}}^{\mathrm{sheet}} = 31/40 = 744/960 < 1$, gaining $\Delta_{\mathrm{floor\_gain}} = 9/40 = 0.225 > 0$.
+  3. Isolation of Mesoscopic Plaquette Curvature Matching Gap $(\frac{31}{960}, \frac{31}{40})$ of width $\Delta_{\mathrm{meso\_gap}} = 713/960 \approx 0.742708 > 0$ and cutoff gradient barrier $\|\chi'\|_{\infty} \ge 960/713 > 1$ (`NEG-YM-089`).
+  4. Preservation of epistemic invariants: `E-CROSSOVER = OPEN_AND_UNSOLVED`, `YM-016 = BLOCKED`, `goal_complete = false`, and `clay_problem = OPEN_AND_UNSOLVED`.

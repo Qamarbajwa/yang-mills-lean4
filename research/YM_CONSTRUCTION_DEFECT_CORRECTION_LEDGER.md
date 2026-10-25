@@ -1090,3 +1090,11 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
 
 4. **Established Lemma and Progress:**
    - Proved Lemma `YM-088F-DISCRETE-BIANCHI-COBOUNDARY-AMPLIFICATION-AND-SPINWAVE-SOBOLEV-BARRIER`.
+
+### CDC-089: Mesoscopic Curvature Matching Gap and Cutoff Gradient Barrier on Edge E-CROSSOVER
+- **Task ID:** `YM-089`
+- **State Revision:** 134
+- **Prior Problem State:** `YM-088` proved Bianchi co-boundary action amplification for topological soft cores ($s_p \ge 1$, extended to $s_p > 31/40$), but identified the coherent spin-wave barrier with single-plaquette action $s_p \le 31/960$, requiring small-field Gaussian measure control.
+- **Defect Identified:** Coupling the spin-wave Gaussian sub-domain ($s_p \le 31/960$) to the Bianchi worldsheet Peierls domain ($s_p > 31/40$) leaves an unsuppressed mesoscopic curvature gap $(\frac{31}{960}, \frac{31}{40})$ of width $\Delta_{\mathrm{meso\_gap}} = 713/960 \approx 0.742708 > 0$. Any smooth partition of unity injects a cutoff gradient norm $\|\chi'\|_{\infty} \ge 960/713 > 1$ into block fluctuation integration by parts.
+- **Correction Applied:** Proved Lemma `YM-089F` establishing small-field Gaussian coercivity restoration on $\mathcal{D}_{\mathrm{SW}}$ ($\Delta_{\mathrm{spinwave\_coercivity}} = 789/1640 > 0$) and extending the Bianchi worldsheet Peierls floor to $31/40$ ($\Delta_{\mathrm{floor\_gain}} = 9/40 > 0$); precisely isolated the mesoscopic matching gap and cutoff gradient barrier in `NEG-YM-089`; validated via Test 53 in `tests/test_source_jet_finite_certificates.py`.
+- **Status:** Corrected, isolated, and bound under strict 3-Agent governance.

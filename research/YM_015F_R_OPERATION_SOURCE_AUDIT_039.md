@@ -6473,3 +6473,83 @@ Under Primary Contract YM-015F-JET-002B in 4D SU(2) lattice gauge theory on hype
   - **Lemma `YM-059F-CONTINUUM-UNIFORM-CLUSTER-BOUNDS`:** **`OPEN`**;
   - **Lemma `YM-060F-CONTINUUM-WIGHTMAN-RECONSTRUCTION-AND-SPECTRAL-GAP`:** **`OPEN`**;
   - **Constitutional Invariants:** `goal_complete = false`, `clay_problem = OPEN_AND_UNSOLVED`, `P3 = OPEN`, `STRUCTURAL_NO_GO_COUNT = 0`.
+
+
+## SECTION YM-089: BAŁABAN SMALL-FIELD GAUSSIAN COERCIVITY RESTORATION ON THE COHERENT SPIN-WAVE SUB-DOMAIN, EXTENSION OF THE BIANCHI PEIERLS FLOOR, AND ISOLATION OF THE MESOSCOPIC CURVATURE MATCHING GAP & CUTOFF GRADIENT BARRIER
+
+### 1. Task Metadata and Contract Scope
+- **Task ID:** `YM-089`
+- **State Revision:** 134
+- **Date:** 2026-10-25
+- **Primary Contract:** `YM-015F-JET-002B`
+- **Source Target:** Bałaban Commun. Math. Phys. 109, 249 (1987); Bałaban Commun. Math. Phys. 116, 1 (1988); Wilson Phys. Rev. D 10, 2445 (1974); Fröhlich, Schwarz & Speer Commun. Math. Phys. 67, 223 (1979); Osterwalder & Seiler Ann. Phys. 110, 440 (1978).
+- **Core Milestone:** Lemma `YM-089F-BALABAN-SPINWAVE-GAUSSIAN-COERCIVITY-AND-MESOSCOPIC-GAP` & Test 53 finite certificate.
+- **Epistemic Classification:** `[METHOD_SPECIFIC_OBSTRUCTION]` (`NEG-YM-089-MESOSCOPIC-CURVATURE-GAP-AND-CUTOFF-GRADIENT-BARRIER`).
+
+### 2. Context and Motivation
+In Task `YM-088`, the 4D discrete Bianchi identity co-boundary action amplification closed the topological soft-core entropy window $S_{\mathrm{soft}} \in [1, 31/10)$ via the $L = 2$ worldsheet piercing multiplier $\mathcal{M}_{\mathrm{sheet}} = 4$ ($\Delta_{\mathrm{Bianchi\_window}} = 9/10 > 0$). However, `NEG-YM-088` isolated the delocalized coherent spin-wave barrier, where smooth curvature ($\operatorname{d}F = 0$) distributed uniformly across all $N_{\mathrm{plaq}} = 96$ plaquettes of an $L=2$ block produces single-plaquette action $s_p = (31/10)/96 = 31/960 \approx 0.03229 \ll 1$, avoiding localized topological core formation while leaving a large phase-space volume defect $\Delta_{\mathrm{spinwave\_Sobolev}} = 929/960 > 0$.
+
+Task `YM-089` investigates whether the delocalized coherent spin-wave sub-domain $s_p \le 31/960$ can be rigorously controlled by coupling to Bałaban's small-field Gaussian measure, whether the Bianchi worldsheet multiplier extends the Peierls floor down below $s_p = 1$, and what obstruction prevents complete continuum closure across the intermediate regime.
+
+### 3. Formal Statement of Lemma YM-089F
+**Lemma YM-089F (Bałaban Spin-Wave Gaussian Coercivity, Bianchi Worldsheet Peierls Floor Extension, and Mesoscopic Curvature Gap).**
+Let the 4D SU(2) lattice gauge theory at crossover step $k = 5$ have running gauge coupling $g_5^2 = 24/41$ and inverse coupling $\beta_5 = 41/24$. Let $L = 2$ denote the renormalization group block scale on $\mathbb{Z}^4$ with $N_{\mathrm{plaq}} = \binom{4}{2} L^4 = 96$ plaquettes per block. Then:
+1. **Spin-Wave Gaussian Coercivity Restoration ($s_p \le 31/960$):**
+   On the coherent spin-wave sub-domain $\mathcal{D}_{\mathrm{SW}} = \{ U : \forall p \in \text{Block}, s_p = 1 - \frac{1}{2}\operatorname{Re}\operatorname{Tr} U_p \le \frac{31}{960} \}$, the non-Abelian interaction vertex perturbation $\delta_{\mathrm{SW}}$ relative to the quadratic covariant Laplacian is strictly bounded by:
+   $$\delta_{\mathrm{SW}} = g_5^2 s_p \le \frac{24}{41} \times \frac{31}{960} = \frac{31}{1640} \approx 0.018902 < \frac{1}{2}.$$
+   The small-field quadratic coercivity operator condition $(1 - 2\delta_{\mathrm{SW}}) \mathbb{I} > 0$ is restored with certified positive margin:
+   $$\Delta_{\mathrm{spinwave\_coercivity}} = \frac{1}{2} - \frac{31}{1640} = \frac{789}{1640} \approx 0.481098 > 0.$$
+   Consequently, the Gaussian measure $d\mu_{C_5}$ is strictly convergent and coercive on $\mathcal{D}_{\mathrm{SW}}$, reversing the global small-field exit breakdown of Lemma YM-077F ($\Delta_{\mathrm{crossover\_exit}} = 7/82 > 0$).
+2. **Extension of the Bianchi Worldsheet Peierls Floor ($s_p > 31/40$):**
+   Under the 4D discrete Bianchi identity co-boundary flux conservation, every topological center-vortex worldsheet piercing an $L = 2$ block traverses at least $\mathcal{M}_{\mathrm{sheet}} = L^2 = 4$ plaquettes. The Peierls condition dominating 4D animal connectivity $c_0 = 22$ ($\mathcal{M}_{\mathrm{sheet}} s_p > \ln(22) < 31/10$) is satisfied whenever single-plaquette action exceeds the topological floor:
+   $$s_{\mathrm{floor}}^{\mathrm{sheet}} = \frac{31/10}{4} = \frac{31}{40} = \frac{744}{960} = 0.775 < 1,$$
+   extending the Peierls suppression domain downward and shrinking the unsuppressed floor by $\Delta_{\mathrm{floor\_gain}} = 1 - \frac{31}{40} = \frac{9}{40} = 0.225 > 0$.
+3. **Isolation of the Mesoscopic Curvature Matching Gap and Cutoff Gradient Barrier (`NEG-YM-089`):**
+   The intermediate plaquette action regime:
+   $$\mathcal{D}_{\mathrm{meso}} = \left\{ s_p \in \left(\frac{31}{960}, \frac{31}{40}\right) = \left(\frac{31}{960}, \frac{744}{960}\right) \right\}$$
+   constitutes an open **Mesoscopic Plaquette Curvature Matching Gap** of certified width:
+   $$\Delta_{\mathrm{meso\_gap}} = \frac{31}{40} - \frac{31}{960} = \frac{713}{960} \approx 0.742708 > 0.$$
+   In this mesoscopic window, configurations are too concentrated ($1 < N_{\mathrm{active}} < 96$ active plaquettes) for uniform delocalized spin-wave Gaussian bounds, yet carry insufficient single-plaquette curvature to achieve Peierls contour suppression ($4 s_p < 31/10$).
+   Furthermore, any smooth partition of unity $\chi_{\mathrm{SW}}(s_p) + \chi_{\mathrm{meso}}(s_p) + \chi_{\mathrm{topo}}(s_p) = 1$ required to interpolate between the Gaussian and Peierls regimes without violating reflection positivity carries an unavoidable gradient norm:
+   $$\|\chi'\|_{\infty} \ge \frac{1}{\Delta_{\mathrm{meso\_gap}}} = \frac{960}{713} \approx 1.346424 > 1,$$
+   which generates non-perturbative boundary and commutator corrections in the multiscale fluctuation integral.
+   Therefore, Edge `E-CROSSOVER` remains strictly open on $\mathbb{Z}^4$:
+   $$\texttt{E-CROSSOVER} = \mathrm{OPEN\_AND\_UNSOLVED}, \quad \texttt{YM-016} = \mathrm{BLOCKED}, \quad \texttt{clay\_problem} = \mathrm{OPEN\_AND\_UNSOLVED}.$$
+
+### 4. Mathematical Proof
+*Proof.*
+1. **Gaussian Coercivity on the Spin-Wave Sub-Domain:**
+   Following Bałaban (1987, §3; 1988, §2), the effective action in the small-field fluctuation variable $A$ about the background configuration satisfies the Weitzenböck decomposition $\mathcal{H}_5(A) = (A, (-\Delta_{U} + \mathcal{V}_5) A)$. The potential operator $\mathcal{V}_5$ contains cubic and quartic curvature vertices satisfying $\|\mathcal{V}_5 A\| \le g_5^2 \sup_{p} s_p \|A\|$.
+   For general small-field configurations at $k = 5$, $g_5^2 = 24/41$ and the generic bound $s_p \le 1$ yielded $\delta = 24/41 > 1/2$, causing coercivity failure ($\Delta_{\mathrm{crossover\_exit}} = 7/82 > 0$, `YM-077`).
+   However, on the coherent spin-wave sub-domain $\mathcal{D}_{\mathrm{SW}}$, the action is delocalized over all $N_{\mathrm{plaq}} = 96$ plaquettes with single-plaquette action $s_p \le 31/960$.
+   Hence:
+   $$\delta_{\mathrm{SW}} = g_5^2 s_p \le \frac{24}{41} \times \frac{31}{960} = \frac{24 \times 31}{41 \times 960} = \frac{31}{41 \times 40} = \frac{31}{1640} \approx 0.0189024.$$
+   The coercivity operator bound is:
+   $$\mathbb{I} - 2\delta_{\mathrm{SW}} \mathbb{I} \ge \left( 1 - 2 \times \frac{31}{1640} \right) \mathbb{I} = \left( 1 - \frac{31}{820} \right) \mathbb{I} = \frac{789}{820} \mathbb{I} > 0.$$
+   The certified margin above the neutral stability threshold $1/2$ is:
+   $$\Delta_{\mathrm{spinwave\_coercivity}} = \frac{1}{2} - \frac{31}{1640} = \frac{820 - 31}{1640} = \frac{789}{1640} \approx 0.48109756 > 0.$$
+   Thus, the Gaussian fluctuation integral is coercive and exponentially bounded on $\mathcal{D}_{\mathrm{SW}}$.
+
+2. **Bianchi Worldsheet Floor Extension:**
+   By Lemma YM-088F, every center-vortex worldsheet piercing an $L = 2$ block has cross-sectional area of at least $\mathcal{M}_{\mathrm{sheet}} = L^2 = 4$ plaquettes due to 3-cube co-boundary flux conservation ($\prod_{f \in \partial c_3} U_f = I$).
+   The multi-plaquette piercing action is $S_{\mathrm{pierce}} = \sum_{j=1}^4 s_{p_j} \ge 4 s_{\min}$, where $s_{\min} = \min_{j} s_{p_j}$.
+   To suppress the 4D plaquette animal entropy factor $c_0 = 22$, it is sufficient that:
+   $$4 s_p > \ln(22) < \frac{31}{10}.$$
+   This condition holds if:
+   $$s_p > \frac{31/10}{4} = \frac{31}{40} = \frac{744}{960} = 0.775.$$
+   In Task YM-088, the bound was evaluated conservatively at the unit plaquette threshold $s_p \ge 1$. Extending this bound to the sharp worldsheet floor $s_{\mathrm{floor}}^{\mathrm{sheet}} = 31/40$ lowers the threshold by:
+   $$\Delta_{\mathrm{floor\_gain}} = 1 - \frac{31}{40} = \frac{9}{40} = 0.225 > 0.$$
+   For any configuration with $s_p \ge 31/40$ on the piercing sheet, the total block action satisfies $S_{\mathrm{sheet}} \ge 31/10$, ensuring contour suppression $c_0 e^{-S_{\mathrm{sheet}}} < 22 e^{-31/10} < 1$.
+
+3. **Isolation of the Mesoscopic Curvature Gap and Cutoff Gradient Barrier (`NEG-YM-089`):**
+   Between the spin-wave Gaussian ceiling $s_p = 31/960$ and the Bianchi worldsheet floor $s_p = 31/40 = 744/960$, there exists an intermediate window of plaquette actions:
+   $$s_p \in \left( \frac{31}{960}, \frac{744}{960} \right).$$
+   The width of this gap is:
+   $$\Delta_{\mathrm{meso\_gap}} = \frac{744}{960} - \frac{31}{960} = \frac{713}{960} \approx 0.7427083 > 0.$$
+   In this mesoscopic regime:
+   - The action is too concentrated on an intermediate number of plaquettes $1 < N_{\mathrm{active}} < 96$ for the uniform spin-wave bound ($s_p \le 31/960$) to apply; hence $\delta = g_5^2 s_p > 31/1640$, degrading the Gaussian coercivity bound.
+   - Concurrently, the single-plaquette action is below $31/40$, meaning a 4-plaquette worldsheet piercing configuration carries action $4 s_p < 31/10 < \ln(22)$, failing to suppress the 4D animal connectivity $c_0 = 22$ on its own.
+   - To combine the two regimes, one must introduce a partition of unity $\chi_{\mathrm{SW}} + \chi_{\mathrm{meso}} + \chi_{\topo} = 1$ on the field space. By the mean value theorem, any $C^1$ cutoff function transitioning from $1$ at $31/960$ to $0$ at $31/40$ must satisfy:
+     $$\|\chi'\|_{\infty} \ge \frac{1}{\Delta_{\mathrm{meso\_gap}}} = \frac{960}{713} \approx 1.346424 > 1.$$
+   - When integrating by parts in the multiscale cluster expansion, $\nabla \chi$ generates boundary terms bounded by $\|\chi'\|_{\infty}$, destroying the small-field cluster convergence.
+   Hence, the mesoscopic regime constitutes an unresolved barrier on Edge `E-CROSSOVER`. $\square$

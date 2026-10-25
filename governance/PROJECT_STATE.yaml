@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 133
+revision: 134
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "3793fe50aef7c124bb1bd374b67e55daa7db9f65"
-  scientific_candidate_sha: "ddf85bcf911c74efb8d7e816f06e503de298327a"
-  review_bound_sha: "ddf85bcf911c74efb8d7e816f06e503de298327a"
-  evidence_closeout_head: "ddf85bcf911c74efb8d7e816f06e503de298327a"
-  closeout_resolution: "evidence_closeout_head binds scientific candidate commit (ddf85bcf911c74efb8d7e816f06e503de298327a); YM-088 is scientifically accepted and closed out at State Revision 133."
+  head: "c64b71f98a2eb835bf0ffddbe0bb6e2a229a4a75"
+  scientific_candidate_sha: ""
+  review_bound_sha: ""
+  evidence_closeout_head: "80a3966aa9b8a598592d2afa5e6dd04a788417f5"
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-088 closeout commit (80a3966aa9b8a598592d2afa5e6dd04a788417f5); candidate freeze for YM-089 is staged at State Revision 134."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,14 +32,25 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 132
-  last_updated_at: "2026-10-25T07:00:00Z"
+  last_expected_revision: 133
+  last_updated_at: "2026-10-25T11:00:00Z"
   active_contract: "YM-015F-JET-002B"
   frozen_candidate: ""
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-089
+    scope_in: "Bałaban Small-Field Gaussian Coercivity Restoration on the Coherent Spin-Wave Sub-Domain s_p <= 31/960 at RG Step k = 5, Extension of the Bianchi Worldsheet Peierls Bound to s_p > 31/40, and Isolation of the Mesoscopic Curvature Matching Gap (31/960, 31/40) & Cutoff Gradient Barrier on Edge E-CROSSOVER, proof of Lemma YM-089F-BALABAN-SPINWAVE-GAUSSIAN-COERCIVITY-AND-MESOSCOPIC-GAP, and Test 53 finite certificate"
+    scope_out: "Crossing infrared crossover E-CROSSOVER, non-perturbative multi-block lattice collar equivalence, continuum Wightman reconstruction, and full continuum closure"
+    dependencies: ["YM-088"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-089_E4_RAW_20261025.md"
+    acceptor: "verification/YM-089_TECHNICAL_ACCEPTANCE.md"
+    status: CANDIDATE_FROZEN
+    scope_limitation: "SPINWAVE_GAUSSIAN_COERCIVITY_RESTORED_MESOSCOPIC_GAP_ISOLATED_AND_CLAY_OPEN"
   - id: YM-088
     scope_in: "4D Discrete Bianchi Identity Co-Boundary Action Amplification on Edge E-CROSSOVER, Closure of the Topological Soft-Core Entropy Window via L=2 Worldsheet Flux Conservation, Isolation of the Coherent Spin-Wave Block-Sobolev Accumulation Barrier, proof of Lemma YM-088F-DISCRETE-BIANCHI-COBOUNDARY-AMPLIFICATION-AND-SPINWAVE-SOBOLEV-BARRIER, and Test 52 finite certificate"
     scope_out: "Crossing infrared crossover E-CROSSOVER, non-perturbative multi-block lattice collar equivalence, continuum Wightman reconstruction, and full continuum closure"
