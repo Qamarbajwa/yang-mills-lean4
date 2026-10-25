@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 134
+revision: 135
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "c64b71f98a2eb835bf0ffddbe0bb6e2a229a4a75"
-  scientific_candidate_sha: ""
-  review_bound_sha: ""
-  evidence_closeout_head: "80a3966aa9b8a598592d2afa5e6dd04a788417f5"
-  closeout_resolution: "evidence_closeout_head binds preceding completed YM-088 closeout commit (80a3966aa9b8a598592d2afa5e6dd04a788417f5); candidate freeze for YM-089 is staged at State Revision 134."
+  head: "813a321ac789ba53058955fee447e9e6691d47ff"
+  scientific_candidate_sha: "5f9784700542f7a2069c804daef78f5bdf8d4aea"
+  review_bound_sha: "5f9784700542f7a2069c804daef78f5bdf8d4aea"
+  evidence_closeout_head: "5f9784700542f7a2069c804daef78f5bdf8d4aea"
+  closeout_resolution: "evidence_closeout_head binds scientific candidate commit (5f9784700542f7a2069c804daef78f5bdf8d4aea); YM-089 is scientifically accepted and closed out at State Revision 135."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,8 +32,8 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 133
-  last_updated_at: "2026-10-25T11:00:00Z"
+  last_expected_revision: 134
+  last_updated_at: "2026-10-25T11:15:00Z"
   active_contract: "YM-015F-JET-002B"
   frozen_candidate: ""
 
@@ -49,7 +49,7 @@ objectives:
     atlas_writer_and_coordinator: "primary-worker"
     reviewer_path: "verification/raw/YM-089_E4_RAW_20261025.md"
     acceptor: "verification/YM-089_TECHNICAL_ACCEPTANCE.md"
-    status: CANDIDATE_FROZEN
+    status: SCIENTIFICALLY_ACCEPTED
     scope_limitation: "SPINWAVE_GAUSSIAN_COERCIVITY_RESTORED_MESOSCOPIC_GAP_ISOLATED_AND_CLAY_OPEN"
   - id: YM-088
     scope_in: "4D Discrete Bianchi Identity Co-Boundary Action Amplification on Edge E-CROSSOVER, Closure of the Topological Soft-Core Entropy Window via L=2 Worldsheet Flux Conservation, Isolation of the Coherent Spin-Wave Block-Sobolev Accumulation Barrier, proof of Lemma YM-088F-DISCRETE-BIANCHI-COBOUNDARY-AMPLIFICATION-AND-SPINWAVE-SOBOLEV-BARRIER, and Test 52 finite certificate"
