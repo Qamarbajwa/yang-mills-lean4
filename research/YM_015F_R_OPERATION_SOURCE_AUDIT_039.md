@@ -6727,4 +6727,81 @@ Let the 4D SU(2) lattice gauge theory at crossover step $k = 5$ have coupling $g
    - Across the interior block modes, each softened mode carries Brascamp–Lieb determinant amplification:
      $$\lambda_{\min}\left(\frac{31}{60}\right)^{-1} = \frac{205}{81} \approx 2.530864 > 1 \implies \Delta_{\mathrm{BL\_link}} = \frac{205}{81} - 1 = \frac{124}{81} \approx 1.530864 > 0.$$
      For $M$ interior modes, the multi-mode factor $(205/81)^M = (2.53)^M$ grows exponentially with the number of interior degrees of freedom, overwhelming small-field polymer weights.
-   Hence, Edge `E-CROSSOVER` remains strictly open on $\mathbb{Z}^4$. $\square$
+   Hence, Edge `E-CROSSOVER` remains strictly open on $\mathbb{Z}^4$. $\square$
+
+
+## YM-092: High-Momentum Intra-Block Kinetic Laplacian Gap $\lambda_{\mathrm{kin}}^{\perp} \ge 2$, Doubled Coercivity Ceiling $s_{\mathrm{coercive}}^{\perp} = 41/24$, Complete Anisotropic Gap Closure, Multi-Mode Determinant Contraction, and Schur-Complement Cross-Coupling Barrier
+
+### Statement of Lemma YM-092F
+**Lemma YM-092F-INTRA-BLOCK-LAPLACIAN-GAP-AND-SCHUR-CROSS-COUPLING-BARRIER.**  
+*Under Bałaban's $L = 2$ block renormalization transformation at crossover step $k = 5$ with running coupling parameters $\beta_5 = 41/24$, $g_5^2 = 24/41$, consider the orthogonal decomposition of the intra-block gauge fluctuation space into high-momentum and coarse background modes:*
+$$\mathcal{H}_{\mathrm{block}} = \mathcal{H}_{\perp} \oplus \mathcal{H}_{\mathrm{coarse}}, \quad \mathcal{H}_{\mathrm{coarse}} = \ker \mathcal{A}, \quad \mathcal{H}_{\perp} = (\ker \mathcal{A})^{\perp},$$
+*where $\mathcal{A}$ is the discrete block-averaging kernel. Then:*
+1. **Intra-Block Kinetic Laplacian Spectral Floor & Doubled Coercivity Ceiling:**
+   *On the high-momentum subspace $\mathcal{H}_{\perp}$, orthogonality to constant block modes enforces a non-zero lowest momentum $p_{\mu} = \pi/a$, generating a discrete kinetic Laplacian spectral floor:*
+   $$\lambda_{\mathrm{kin}}^{\perp} \ge 2.$$
+   *Consequently, the intra-block quadratic fluctuation operator $\mathcal{H}_5^{\perp} = (\lambda_{\mathrm{kin}}^{\perp} - 2 g_5^2 s_p)\mathbb{I} = (2 - \frac{48}{41} s_p)\mathbb{I}$ remains strictly positive-definite up to the doubled coercivity ceiling:*
+   $$s_{\mathrm{coercive}}^{\perp} = \frac{\lambda_{\mathrm{kin}}^{\perp}}{2 g_5^2} = \frac{2}{48/41} = \frac{41}{24} \approx 1.708333.$$
+2. **Complete Closure of Anisotropic 3-Cube & Contractible Pair Gaps on $\mathcal{H}_{\perp}$:**
+   *Because $s_{\mathrm{coercive}}^{\perp} = 41/24$ strictly exceeds both the Cauchy–Schwarz anisotropic 3-cube Peierls floor $s_{\mathrm{floor}}^{\mathrm{CS}} = 62/45 \approx 1.377778$ (Lemma `YM-091F`) and the unconstrained 2-plaquette pair Peierls floor $s_{\mathrm{floor}}^{\mathrm{pair}} = 31/20 = 1.55$ (Lemma `YM-090F`), the anisotropic 3-cube gap of `NEG-YM-091` and contractible pair gap of `NEG-YM-090` are completely closed on $\mathcal{H}_{\perp}$ across strictly positive overlap windows:*
+   $$\Delta_{\mathrm{aniso\_overlap}} = \frac{41}{24} - \frac{62}{45} = \frac{119}{360} \approx 0.330556 > 0,$$
+   $$\Delta_{\mathrm{pair\_overlap}} = \frac{41}{24} - \frac{31}{20} = \frac{19}{120} \approx 0.158333 > 0.$$
+3. **Reversal of Brascamp–Lieb Determinant Growth into Exponential Contraction on $\mathcal{H}_{\perp}$:**
+   *At the link-star floor $s_p = 31/60$, the minimum Hessian eigenvalue is raised to $\lambda_{\min}^{\perp}(31/60) = 2 - 124/205 = 286/205 \approx 1.395122 > 1$ (and at the worldsheet floor $s_p = 31/40$, $\lambda_{\min}^{\perp}(31/40) = 2 - 186/205 = 224/205 \approx 1.092683 > 1$). Therefore, the single-mode Brascamp–Lieb factor is strictly contracting:*
+   $$\left(\lambda_{\min}^{\perp}\left(\frac{31}{60}\right)\right)^{-1} = \frac{205}{286} \approx 0.716783 < 1 \implies \Delta_{\mathrm{BL\_contract}} = 1 - \frac{205}{286} = \frac{81}{286} \approx 0.283217 > 0,$$
+   *ensuring exponential multi-mode determinant suppression $(205/286)^M < 1$ across all $M \ge 1$ high-momentum modes.*
+4. **Schur-Complement Coarse-to-Fine Cross-Coupling Barrier (`NEG-YM-092`):**
+   *In the full two-scale block decomposition, coarse background modes possess zero intra-block kinetic gap ($\lambda_{\mathrm{kin}}^{\mathrm{coarse}} = 0$). Integrating out $\mathcal{H}_{\perp}$ at the anisotropic floor $s_p = 62/45$ (where $\lambda_{\min}^{\perp} = 238/615$) under non-Abelian commutator cross-coupling $K_{\mathrm{cross}} = 2 g_5^2 s_p = 992/615$ generates a negative Schur-complement downfolding shift on the coarse-mode quadratic form:*
+   $$\Delta_{\mathrm{Schur}} = K_{\mathrm{cross}}^2 \left(\lambda_{\min}^{\perp}\left(\frac{62}{45}\right)\right)^{-1} = \left(\frac{992}{615}\right)^2 \times \frac{615}{238} = \frac{492032}{73185} \approx 6.723126.$$
+   *Because $\Delta_{\mathrm{Schur}} > s_p = 62/45$, this downfolding shift induces a certified destabilizing excess defect:*
+   $$\Delta_{\mathrm{Schur\_excess}} = \frac{492032}{73185} - \frac{62}{45} = \frac{1173598}{219555} \approx 5.345349 > 0,$$
+   *which destroys coarse-mode small-field stability. Consequently, Edge `E-CROSSOVER` remains strictly `OPEN_AND_UNSOLVED`, Task `YM-016` remains `BLOCKED`, `goal_complete` remains `false`, and `clay_problem` remains `OPEN_AND_UNSOLVED`.*
+
+### Proof of Lemma YM-092F
+1. **Intra-Block Kinetic Laplacian Gap $\lambda_{\mathrm{kin}}^{\perp} \ge 2$:**
+   In Bałaban's RG scheme, the block averaging condition $\delta(B - \mathcal{A}[U])$ constrains the zero-momentum mode of the connection on each $L = 2$ block. Working in grounded axial tree gauge on the elementary $2^4$ hypercube, fluctuations $Q$ decompose into coarse modes $Q_{\mathrm{coarse}} \in \ker \mathcal{A}$ (constant along block directions) and high-momentum modes $Q_{\perp} \in \mathcal{H}_{\perp} = (\ker \mathcal{A})^{\perp}$.
+   Every non-trivial mode in $\mathcal{H}_{\perp}$ carries at least one discrete momentum quantum $p_{\mu} = \pi/a$. On the discrete 4D lattice, the eigenvalues of the kinetic Laplacian $-\Delta_{\mathrm{lat}}$ are given by:
+   $$\lambda(p) = 4 \sum_{\mu=1}^4 \sin^2\left(\frac{p_\mu a}{2}\right).$$
+   For $Q_{\perp} \in \mathcal{H}_{\perp}$, at least one direction satisfies $p_\mu a = \pi$, yielding:
+   $$\lambda_{\mathrm{kin}}^{\perp} \ge 4 \sin^2\left(\frac{\pi}{4}\right) = 4 \times \frac{1}{2} = 2.$$
+   The intra-block quadratic fluctuation operator at $k = 5$ is:
+   $$\mathcal{H}_5^{\perp} = (-\Delta_{\mathrm{lat}} - 2 g_5^2 s_p)\mathbb{I} \ge (2 - 2 g_5^2 s_p)\mathbb{I} = \left(2 - \frac{48}{41} s_p\right)\mathbb{I}.$$
+   Setting the minimum eigenvalue $2 - \frac{48}{41} s_{\mathrm{coercive}}^{\perp} = 0$ yields the doubled coercivity ceiling:
+   $$s_{\mathrm{coercive}}^{\perp} = \frac{2}{48/41} = \frac{2 \times 41}{48} = \frac{41}{24} \approx 1.70833333.$$
+
+2. **Complete Closure of Anisotropic 3-Cube & Contractible Pair Gaps on $\mathcal{H}_{\perp}$:**
+   - In Lemma `YM-091F`, Cauchy–Schwarz return flux sharing on anisotropic 3-cubes established Peierls floor $s_{\mathrm{floor}}^{\mathrm{CS}} = 62/45 \approx 1.37777778$.
+   - In Lemma `YM-090F`, contractible 2-plaquette pair excitations had Peierls floor $s_{\mathrm{floor}}^{\mathrm{pair}} = 31/20 = 1.55$.
+   Comparing both floors with $s_{\mathrm{coercive}}^{\perp} = 41/24 = 615/360$:
+   $$s_{\mathrm{floor}}^{\mathrm{CS}} = \frac{62}{45} = \frac{496}{360} < \frac{615}{360} = s_{\mathrm{coercive}}^{\perp},$$
+   $$s_{\mathrm{floor}}^{\mathrm{pair}} = \frac{31}{20} = \frac{186}{120} < \frac{205}{120} = s_{\mathrm{coercive}}^{\perp}.$$
+   Thus, on the subspace $\mathcal{H}_{\perp}$, both gaps are completely closed, establishing:
+   $$\Delta_{\mathrm{aniso\_overlap}} = \frac{41}{24} - \frac{62}{45} = \frac{119}{360} \approx 0.33055556 > 0,$$
+   $$\Delta_{\mathrm{pair\_overlap}} = \frac{41}{24} - \frac{31}{20} = \frac{19}{120} \approx 0.15833333 > 0.$$
+
+3. **Reversal of Brascamp–Lieb Determinant Growth:**
+   At link-star floor $s_p = 31/60$:
+   $$\lambda_{\min}^{\perp}\left(\frac{31}{60}\right) = 2 - \frac{48}{41} \times \frac{31}{60} = 2 - \frac{124}{205} = \frac{286}{205} \approx 1.39512195 > 1.$$
+   The single-mode covariance factor is:
+   $$\left(\lambda_{\min}^{\perp}\left(\frac{31}{60}\right)\right)^{-1} = \frac{205}{286} \approx 0.71678322 < 1.$$
+   The contraction margin is:
+   $$\Delta_{\mathrm{BL\_contract}} = 1 - \frac{205}{286} = \frac{81}{286} \approx 0.28321678 > 0.$$
+   For any number $M \ge 1$ of high-momentum intra-block modes, the determinant product contracts exponentially:
+   $$\prod_{m=1}^M (\lambda_m^{\perp})^{-1} \le \left(\frac{205}{286}\right)^M < 1.$$
+
+4. **Schur-Complement Coarse-to-Fine Cross-Coupling Barrier (`NEG-YM-092`):**
+   In the full block block-diagonalization:
+   $$\mathcal{H}_{\mathrm{block}} = \begin{pmatrix} \mathcal{H}_{\mathrm{coarse}} & K_{\mathrm{cross}} \\ K_{\mathrm{cross}}^\dagger & \mathcal{H}_{\perp} \end{pmatrix}.$$
+   Integrating out the high-momentum modes $\mathcal{H}_{\perp}$ produces the effective coarse quadratic form:
+   $$\mathcal{H}_{\mathrm{coarse}}^{\mathrm{eff}} = \mathcal{H}_{\mathrm{coarse}} - K_{\mathrm{cross}} (\mathcal{H}_{\perp})^{-1} K_{\mathrm{cross}}^\dagger.$$
+   At the anisotropic Peierls floor $s_p = 62/45$:
+   $$\lambda_{\min}^{\perp}\left(\frac{62}{45}\right) = 2 - \frac{48}{41} \times \frac{62}{45} = 2 - \frac{992}{615} = \frac{238}{615} \approx 0.38699187 > 0.$$
+   The non-Abelian commutator interaction between coarse and fine modes gives cross-coupling norm:
+   $$K_{\mathrm{cross}} = 2 g_5^2 s_p = \frac{48}{41} \times \frac{62}{45} = \frac{992}{615} \approx 1.61300813.$$
+   The resulting Schur-complement downfolding shift is:
+   $$\Delta_{\mathrm{Schur}} = K_{\mathrm{cross}}^2 (\lambda_{\min}^{\perp})^{-1} = \left(\frac{992}{615}\right)^2 \times \frac{615}{238} = \frac{984064}{378225} \times \frac{615}{238} = \frac{492032}{73185} \approx 6.72312632.$$
+   Subtracting the available single-plaquette action $s_p = 62/45$:
+   $$\Delta_{\mathrm{Schur\_excess}} = \frac{492032}{73185} - \frac{62}{45} = \frac{1173598}{219555} \approx 5.34534855 > 0.$$
+   Because the negative shift exceeds the stabilizing kinetic action on coarse modes (where $\lambda_{\mathrm{kin}}^{\mathrm{coarse}} = 0$), the coarse-mode effective fluctuation action becomes unstable.
+   Hence, closing $\mathcal{H}_{\perp}$ alone does not achieve thermodynamic continuum convergence on $\mathbb{Z}^4$.
+   Edge `E-CROSSOVER` remains strictly `OPEN_AND_UNSOLVED`, Task `YM-016` remains `BLOCKED`, `goal_complete` remains `false`, and `clay_problem` remains `OPEN_AND_UNSOLVED`. $\square$

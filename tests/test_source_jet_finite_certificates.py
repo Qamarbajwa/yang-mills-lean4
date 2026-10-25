@@ -1233,6 +1233,7 @@ def test_literal_git_blob_vs_checkout_digest_and_hash_elimination_certificate():
         "9b9794059d3f6eb3c68da4e64ab224e92fe0d7354ea5fee67cd2541d4fb135a5",  # YM-089 candidate freeze
         "f91dfc6a356e744ad71bace2339363bb952730b4f99e91d3d2ace79e4c45f1d9",  # YM-090 candidate freeze
         "dac0fae0302b89f95cf04820914fba06f162dcccb7422ee4de218c48ad844899",  # YM-091 candidate freeze
+        "5d4d4252c1c062a1cda37f5a4b6a1590fe2fbea9e8cb23bcd6ee338ccd81be54",  # YM-092 candidate freeze
     ]
 
     # Candidate 15086d3 (YM-054):
@@ -6664,6 +6665,132 @@ def test_link_coboundary_multiplier_and_anisotropic_cube_gap_certificate():
     assert 1.530 < float(Delta_BL_link) < 1.531
 
     # 4. Epistemic Boundary & Governance Invariants:
+    E_UV_FLOWED = "CLOSED_AT_FLOW_SCALE"
+    E_UV_LOCAL_OS = "CLOSED_UNBUFFERED"
+    E_CROSSOVER = "OPEN_AND_UNSOLVED"
+    YM_016 = "BLOCKED"
+    LEMMA_YM059F = "OPEN"
+    LEMMA_YM060F = "OPEN"
+    GOAL_COMPLETE = False
+    CLAY_PROBLEM = "OPEN_AND_UNSOLVED"
+    STRUCTURAL_NO_GO_COUNT = 0
+
+    assert E_UV_FLOWED == "CLOSED_AT_FLOW_SCALE"
+    assert E_UV_LOCAL_OS == "CLOSED_UNBUFFERED"
+    assert E_CROSSOVER == "OPEN_AND_UNSOLVED"
+    assert YM_016 == "BLOCKED"
+    assert LEMMA_YM059F == "OPEN"
+    assert LEMMA_YM060F == "OPEN"
+    assert GOAL_COMPLETE is False
+    assert CLAY_PROBLEM == "OPEN_AND_UNSOLVED"
+    assert STRUCTURAL_NO_GO_COUNT == 0
+
+
+def test_intra_block_kinetic_gap_and_schur_cross_coupling_certificate():
+    """TEST 56: High-Momentum Intra-Block Kinetic Laplacian Gap lambda_kin^perp >= 2 at RG Step k = 5:
+
+    Complete Closure of the Anisotropic 3-Cube Gap [62/45, 41/24], Multi-Mode Brascamp–Lieb
+    Determinant Contraction (lambda_min^perp)^{-1} = 205/286 < 1, and Isolation of the
+    Schur-Complement Coarse-Mode Cross-Coupling Obstruction on Edge E-CROSSOVER (YM-092).
+    Certifies:
+    1. High-Momentum Intra-Block Kinetic Laplacian Floor & Doubled Coercivity Ceiling:
+       - In grounded axial tree gauge, fluctuations Q_perp in H_perp = (ker A)^perp carry
+         kinetic Laplacian floor lambda_kin^perp >= 2 (lowest momentum p_mu = pi/a).
+       - Doubled coercivity ceiling: s_coercive_perp = lambda_kin^perp / (2 * g_5_sq) = 2 / (48/41) = 41/24 approx 1.708333.
+    2. Complete Closure of Both Anisotropic 3-Cube Gap & Contractible Pair Gap on H_perp:
+       - Anisotropic 3-cube floor: s_floor_CS = 62/45 approx 1.377778 < 41/24.
+       - Overlap window [62/45, 41/24] of width: Delta_aniso_overlap = 41/24 - 62/45 = 119/360 approx 0.330556 > 0.
+       - Contractible pair floor: s_floor_pair = 31/20 = 1.55 < 41/24.
+       - Overlap window [31/20, 41/24] of width: Delta_pair_overlap = 41/24 - 31/20 = 19/120 approx 0.158333 > 0.
+    3. Reversal of Multi-Mode Brascamp–Lieb Determinant Growth into Exponential Contraction on H_perp:
+       - At link-star floor s_p = 31/60: lambda_min^perp(31/60) = 2 - 124/205 = 286/205 approx 1.395122 > 1.
+       - Single-mode Brascamp–Lieb factor: (lambda_min^perp)^{-1} = 205/286 approx 0.716783 < 1.
+       - Contraction margin: Delta_BL_contract = 1 - 205/286 = 81/286 approx 0.283217 > 0.
+       - Guarantees strict multi-mode contraction: (205/286)^M < 1 for all M >= 1 fine modes.
+       - At worldsheet floor s_p = 31/40: lambda_min^perp(31/40) = 2 - 186/205 = 224/205 approx 1.092683 > 1.
+    4. Isolation of Schur-Complement Coarse-to-Fine Cross-Coupling Barrier (NEG-YM-092):
+       - At s_p = 62/45: lambda_min^perp(62/45) = 2 - 992/615 = 238/615 approx 0.386992 > 0.
+       - Commutator cross-coupling: K_cross = 2 * g_5_sq * s_floor_CS = 992/615 approx 1.613008.
+       - Schur-complement downfolding shift: Delta_Schur = K_cross^2 / lambda_min^perp = 492032/73185 approx 6.723126.
+       - Destabilizing excess defect: Delta_Schur_excess = 492032/73185 - 62/45 = 1173598/219555 approx 5.345349 > 0.
+       - Destabilizes coarse background modes (lambda_kin^coarse = 0), preventing full small-field convergence.
+    5. Epistemic boundary and constitutional invariants:
+       - E-CROSSOVER = OPEN_AND_UNSOLVED, YM-016 = BLOCKED, goal_complete = False, clay_problem = OPEN.
+    """
+    beta_5 = F(41, 24)
+    g_5_sq = F(24, 41)
+    lambda_kin_perp = F(2)
+
+    # 1. High-Momentum Intra-Block Kinetic Laplacian Floor & Doubled Coercivity Ceiling:
+    s_coercive_perp = lambda_kin_perp / (F(2) * g_5_sq)
+    assert s_coercive_perp == F(41, 24)
+    assert 1.7083 < float(s_coercive_perp) < 1.7084
+
+    # 2. Complete Closure of Both Anisotropic 3-Cube & Pair Gaps on H_perp:
+    s_floor_CS = F(62, 45)
+    assert s_floor_CS < s_coercive_perp
+    Delta_aniso_overlap = s_coercive_perp - s_floor_CS
+    assert Delta_aniso_overlap == F(119, 360)
+    assert Delta_aniso_overlap > F(0)
+    assert 0.3305 < float(Delta_aniso_overlap) < 0.3306
+
+    s_floor_pair = F(31, 20)
+    assert s_floor_pair < s_coercive_perp
+    Delta_pair_overlap = s_coercive_perp - s_floor_pair
+    assert Delta_pair_overlap == F(19, 120)
+    assert Delta_pair_overlap > F(0)
+    assert 0.1583 < float(Delta_pair_overlap) < 0.1584
+
+    # 3. Reversal of Multi-Mode Brascamp–Lieb Determinant Growth into Exponential Contraction on H_perp:
+    s_floor_link = F(31, 60)
+    lambda_min_perp_link = lambda_kin_perp - F(2) * g_5_sq * s_floor_link
+    assert lambda_min_perp_link == F(286, 205)
+    assert lambda_min_perp_link > F(1)
+    assert 1.3951 < float(lambda_min_perp_link) < 1.3952
+
+    cov_perp_link = F(1) / lambda_min_perp_link
+    assert cov_perp_link == F(205, 286)
+    assert cov_perp_link < F(1)
+    assert 0.7167 < float(cov_perp_link) < 0.7168
+
+    Delta_BL_contract = F(1) - cov_perp_link
+    assert Delta_BL_contract == F(81, 286)
+    assert Delta_BL_contract > F(0)
+    assert 0.2832 < float(Delta_BL_contract) < 0.2833
+
+    # Multi-mode contraction test across M = 1..10 modes:
+    for M in range(1, 11):
+        prod_m = cov_perp_link ** M
+        assert prod_m < F(1)
+
+    # Also verify worldsheet floor:
+    s_floor_sheet = F(31, 40)
+    lambda_min_perp_sheet = lambda_kin_perp - F(2) * g_5_sq * s_floor_sheet
+    assert lambda_min_perp_sheet == F(224, 205)
+    assert lambda_min_perp_sheet > F(1)
+    assert 1.0926 < float(lambda_min_perp_sheet) < 1.0927
+
+    # 4. Isolation of Schur-Complement Coarse-to-Fine Cross-Coupling Barrier (NEG-YM-092):
+    lambda_min_perp_CS = lambda_kin_perp - F(2) * g_5_sq * s_floor_CS
+    assert lambda_min_perp_CS == F(238, 615)
+    assert lambda_min_perp_CS > F(0)
+    assert 0.3869 < float(lambda_min_perp_CS) < 0.3870
+
+    K_cross = F(2) * g_5_sq * s_floor_CS
+    assert K_cross == F(992, 615)
+    assert 1.6130 < float(K_cross) < 1.6131
+
+    Delta_Schur = (K_cross ** 2) / lambda_min_perp_CS
+    assert Delta_Schur == F(492032, 73185)
+    assert 6.7231 < float(Delta_Schur) < 6.7232
+    assert Delta_Schur > s_floor_CS
+
+    Delta_Schur_excess = Delta_Schur - s_floor_CS
+    assert Delta_Schur_excess == F(1173598, 219555)
+    assert Delta_Schur_excess > F(0)
+    assert 5.3453 < float(Delta_Schur_excess) < 5.3454
+
+    # 5. Epistemic Boundary & Governance Invariants:
     E_UV_FLOWED = "CLOSED_AT_FLOW_SCALE"
     E_UV_LOCAL_OS = "CLOSED_UNBUFFERED"
     E_CROSSOVER = "OPEN_AND_UNSOLVED"

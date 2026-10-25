@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 139
+revision: 140
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "6420cdbe6ec3fee4f19c1435fecdb0716a3d8e9f"
-  scientific_candidate_sha: "4b0a2a0f1d7476e81eab5c677e03a40a730a9998"
-  review_bound_sha: "4b0a2a0f1d7476e81eab5c677e03a40a730a9998"
-  evidence_closeout_head: "4b0a2a0f1d7476e81eab5c677e03a40a730a9998"
-  closeout_resolution: "evidence_closeout_head binds scientific candidate commit (4b0a2a0f1d7476e81eab5c677e03a40a730a9998); YM-091 is scientifically accepted and closed out at State Revision 139."
+  head: "0e38d421b4e9cef02da935081f4c1846557ebab5"
+  scientific_candidate_sha: ""
+  review_bound_sha: ""
+  evidence_closeout_head: "33648d2bc27943ce0ee611d279cf48bbfbda9bf9"
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-091 closeout commit (33648d2bc27943ce0ee611d279cf48bbfbda9bf9); candidate freeze for YM-092 is staged at State Revision 140."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,14 +32,25 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 138
-  last_updated_at: "2026-10-25T14:25:00Z"
+  last_expected_revision: 139
+  last_updated_at: "2026-10-26T00:20:00Z"
   active_contract: "YM-015F-JET-002B"
   frozen_candidate: ""
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-092
+    scope_in: "High-Momentum Intra-Block Kinetic Laplacian Gap lambda_kin^perp >= 2 at RG Step k = 5: Complete Closure of the Anisotropic 3-Cube Gap [62/45, 41/24], Multi-Mode Brascamp-Lieb Determinant Contraction (lambda_min^perp)^{-1} = 205/286 < 1, and Isolation of the Schur-Complement Coarse-Mode Cross-Coupling Obstruction on Edge E-CROSSOVER, proof of Lemma YM-092F-INTRA-BLOCK-LAPLACIAN-GAP-AND-SCHUR-CROSS-COUPLING-BARRIER, and Test 56 finite certificate"
+    scope_out: "Crossing infrared crossover E-CROSSOVER, non-perturbative multi-block lattice collar equivalence, continuum Wightman reconstruction, and full continuum closure"
+    dependencies: ["YM-091"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-092_E4_RAW_20261026.md"
+    acceptor: "verification/YM-092_TECHNICAL_ACCEPTANCE.md"
+    status: CANDIDATE_FROZEN
+    scope_limitation: "INTRA_BLOCK_GAP_AND_ANISOTROPIC_OVERLAP_PROVED_SCHUR_BARRIER_ISOLATED_AND_CLAY_OPEN"
   - id: YM-091
     scope_in: "4D Interior-Link 6-Plaquette Coboundary Multiplier M_link = 6 & Overlap Closure [31/60, 41/48] at RG Step k = 5, Cauchy-Schwarz 3-Cube Curvature Sharing M_CS = 9/4, and Isolation of the Anisotropic Cube Gap (41/48, 62/45) & Multi-Mode Brascamp-Lieb Determinant Barrier on Edge E-CROSSOVER, proof of Lemma YM-091F-LINK-COBOUNDARY-MULTIPLIER-AND-ANISOTROPIC-CUBE-GAP, and Test 55 finite certificate"
     scope_out: "Crossing infrared crossover E-CROSSOVER, non-perturbative multi-block lattice collar equivalence, continuum Wightman reconstruction, and full continuum closure"
