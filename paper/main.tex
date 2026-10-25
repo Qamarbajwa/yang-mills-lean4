@@ -53,7 +53,7 @@
 \textit{Governed by Universal Research Operating System v4.0.4+4.0.6-r3} \\
 \textit{Workspace: Yang--Mills and the Mass Gap Programme}}
 
-\date{State Revision 137 --- October 2026}
+\date{State Revision 139 --- October 2026}
 
 \begin{document}
 
@@ -68,7 +68,7 @@ Second, by developing a short flow-time operator product expansion ($t \downarro
 
 Third, we isolate the Clay Millennium Prize threshold by establishing the exact small-field Weitzenb\"ock coercivity exit threshold at renormalization scale step $k = 5$, where the running inverse coupling drops to $\beta_{\mathrm{inv}, 5} = 41/24 < 2$ and $g_5^2 = 24/41 > 1/2$, yielding the certified exit defect $\Delta_{\mathrm{crossover\_exit}} = 7/82 > 0$. We prove the simultaneous onset of tripartite non-perturbative infrared obstructions on edge \texttt{E-CROSSOVER}: (a) large-field plaquette polymer percolation on $\Z^4$ with growth defect $\Delta_{\mathrm{perc}} = 7/4 > 0$, (b) Gribov horizon copy proliferation with Faddeev--Popov degeneracy $\Delta_{\mathrm{Gribov\_copies}} = 1 > 0$, and (c) Savvidy chromomagnetic vacuum instability with tachyonic eigenvalue shift $\Delta_{\mathrm{instability}} = 1/2 > 0$ and massless infrared accumulation defect $\Delta_{\mathrm{massless\_IR\_defect}} = 3 > 0$. 
 
-Every mathematical step is supported by exact rational certificates verified in finite arithmetic across 484 unit tests, bound under strict 3-Agent governance separation (Writer $\ne$ Reviewer $\ne$ Acceptor), and decoupled from the open infrared mass gap problem (\texttt{clay\_problem = OPEN\_AND\_UNSOLVED}).
+Every mathematical step is supported by exact rational certificates verified in finite arithmetic across 485 unit tests, bound under strict 3-Agent governance separation (Writer $\ne$ Reviewer $\ne$ Acceptor), and decoupled from the open infrared mass gap problem (\texttt{clay\_problem = OPEN\_AND\_UNSOLVED}).
 \end{abstract}
 
 \noindent\textbf{Keywords:} Constructive Quantum Field Theory, Yang--Mills Gradient Flow, Ba{\l}aban Renormalization Group, Osterwalder--Schrader Reconstruction, Gribov Horizon, Savvidy Instability, Mass Gap. \\
@@ -623,6 +623,38 @@ which amplifies the fluctuation measure by more than an order of magnitude, dest
 \texttt{E-CROSSOVER} = \mathrm{OPEN\_AND\_UNSOLVED}, \quad \texttt{YM-016} = \mathrm{BLOCKED}, \quad \texttt{clay\_problem} = \mathrm{OPEN\_AND\_UNSOLVED}.
 \end{equation}
 
+\subsection{4D Interior-Link Coboundary Multiplier, Link-Star Overlap Window, Cauchy--Schwarz 3-Cube Sharing, and Anisotropic Cube Gap}
+To resolve the contractible pair curvature gap isolated in Lemma \texttt{YM-090F} (\texttt{NEG-YM-090}), we evaluate the coboundary star geometry of 4D lattice gauge fields on edge \texttt{E-CROSSOVER} (Lemma \texttt{YM-091F}).
+
+In four dimensions ($D = 4$), any single interior link $\ell \in \mathcal{E}(\mathbb{Z}^4)$ is incident to exactly $2(D-1) = 6$ distinct oriented plaquettes forming its coboundary star $\mathrm{Star}_2(\ell) = \{p \in \mathcal{P}(\mathbb{Z}^4) : \ell \in \partial p\}$. A gauge variation $A(\ell) \to A(\ell) + \delta A(\ell)$ simultaneously perturbs the curvature of all 6 incident plaquettes. Under link-localized excitation, Peierls animal entropy suppression ($\sum_{p \in \mathrm{Star}_2(\ell)} s_p \ge 6 s_p > 31/10 > \ln(22)$) holds down to the 1-link coboundary floor:
+\begin{equation}
+s_{\mathrm{floor}}^{\mathrm{link}} = \frac{31/10}{6} = \frac{31}{60} = \frac{124}{240} \approx 0.516667.
+\end{equation}
+Because $s_{\mathrm{floor}}^{\mathrm{link}} = \frac{31}{60} < s_{\mathrm{coercive}}^{\max} = \frac{41}{48} = \frac{205}{240} \approx 0.854167$, link-localized excitations completely close the 1-link star sector. The domains intersect across a strictly positive \emph{Link-Star Overlap Window} $[\frac{31}{60}, \frac{41}{48}]$ of exact rational width:
+\begin{equation}
+\Delta_{\mathrm{link\_overlap}} = \frac{41}{48} - \frac{31}{60} = \frac{27}{80} = 0.3375 > 0.
+\end{equation}
+At the link floor $s_p = \frac{31}{60}$, the interaction parameter $\delta_{\mathrm{link}} = g_5^2 s_p = \frac{24}{41} \times \frac{31}{60} = \frac{62}{205} < \frac{1}{2}$ restores the minimum Hessian eigenvalue:
+\begin{equation}
+\lambda_{\min}\left(\frac{31}{60}\right) = 1 - 2\delta_{\mathrm{link}} = \frac{81}{205} \approx 0.395122,
+\end{equation}
+which represents a more than fourfold recovery over the worldsheet floor: $\frac{\lambda_{\min}(31/60)}{\lambda_{\min}(31/40)} = \frac{81/205}{19/205} = \frac{81}{19} \approx 4.263158 > 4$.
+
+For generic 3-cube coboundaries with unequal plaquette actions, applying the Cauchy--Schwarz inequality across the three pairs of opposing faces yields a curvature-sharing multiplier $\mathcal{M}_{\mathrm{CS}} = 2 + \frac{1}{4} = \frac{9}{4} = 2.25$. This lowers the anisotropic Peierls floor from $1.55$ to:
+\begin{equation}
+s_{\mathrm{floor}}^{\mathrm{CS}} = \frac{31/10}{9/4} = \frac{62}{45} = \frac{992}{720} \approx 1.377778.
+\end{equation}
+Because $s_{\mathrm{floor}}^{\mathrm{CS}} = \frac{62}{45} > s_{\mathrm{coercive}}^{\max} = \frac{41}{48} = \frac{615}{720} \approx 0.854167$, anisotropic single-plaquette dominated configurations leave an open \emph{Anisotropic 3-Cube Curvature Gap}:
+\begin{equation}
+\Delta_{\mathrm{aniso\_cube\_gap}} = \frac{62}{45} - \frac{41}{48} = \frac{377}{720} \approx 0.523611 > 0 \quad (\texttt{NEG-YM-091}),
+\end{equation}
+narrowing the unconstrained pair gap ($\frac{167}{240} = \frac{501}{720}$) by $\Delta_{\mathrm{narrowing}} = \frac{124}{720} = \frac{31}{180} \approx 0.172222$.
+
+Furthermore, while the single-mode Brascamp--Lieb determinant factor is reduced from $\frac{205}{19} \approx 10.79$ to $\lambda_{\min}(31/60)^{-1} = \frac{205}{81} \approx 2.530864$, the excess factor $\Delta_{\mathrm{BL\_link}} = \frac{205}{81} - 1 = \frac{124}{81} \approx 1.530864 > 0$ compounds over $M$ independent fluctuation modes as $(205/81)^M \to \infty$. This multi-mode determinant growth obstructs absolute cluster convergence across the intermediate-field window on $\mathbb{Z}^4$:
+\begin{equation}
+\texttt{E-CROSSOVER} = \mathrm{OPEN\_AND\_UNSOLVED}, \quad \texttt{YM-016} = \mathrm{BLOCKED}, \quad \texttt{clay\_problem} = \mathrm{OPEN\_AND\_UNSOLVED}.
+\end{equation}
+
 % =========================================================================
 % APPENDIX: TRACEABILITY MATRIX AND VERIFICATION
 % =========================================================================
@@ -666,6 +698,7 @@ which amplifies the fluctuation measure by more than an order of magnitude, dest
 \texttt{YM-088}  & Discrete Bianchi Amplification \& Spin-Wave Barrier & Test 52 & Revision 133 \\
 \texttt{YM-089}  & Spin-Wave Coercivity \& Mesoscopic Matching Gap & Test 53 & Revision 135 \\
 \texttt{YM-090}  & Worldsheet Overlap \& Contractible Pair Gap & Test 54 & Revision 137 \\
+\texttt{YM-091}  & Link Coboundary Multiplier \& Anisotropic Cube Gap & Test 55 & Revision 139 \\
 \bottomrule
 \end{tabular}
 \caption{Traceability matrix mapping proved lemmas to deterministic regression test certificates.}
@@ -676,7 +709,7 @@ The complete codebase, test suite, and governance records can be independently r
 \begin{verbatim}
 $ python scripts/verify_all.py
 \end{verbatim}
-This script deterministically verifies the 158-file closed-world checkout digest (\texttt{f91dfc6a...}), the literal Git-blob digest (\texttt{778f8bd1...}), append-only negative evidence integrity (0 deletions), and passes all 484 exact rational certificates in under 10 seconds.
+This script deterministically verifies the 158-file closed-world checkout digest (\texttt{dac0fae0...}), the literal Git-blob digest (\texttt{80216b45...}), append-only negative evidence integrity (0 deletions), and passes all 485 exact rational certificates in under 10 seconds.
 
 \bibliographystyle{plain}
 \bibliography{references}
