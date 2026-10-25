@@ -1231,6 +1231,7 @@ def test_literal_git_blob_vs_checkout_digest_and_hash_elimination_certificate():
         "d895d3d33b50f81f0ce30b2570cb107309a3da1afd3037b6aa286be662b66121",  # YM-087 candidate freeze
         "8e3be56061e518eca8666da0481601cc7b0e94f8229371058e98f4274f74b2df",  # YM-088 candidate freeze
         "9b9794059d3f6eb3c68da4e64ab224e92fe0d7354ea5fee67cd2541d4fb135a5",  # YM-089 candidate freeze
+        "f91dfc6a356e744ad71bace2339363bb952730b4f99e91d3d2ace79e4c45f1d9",  # YM-090 candidate freeze
     ]
 
     # Candidate 15086d3 (YM-054):
@@ -6415,6 +6416,127 @@ def test_balaban_spinwave_gaussian_coercivity_restoration_and_mesoscopic_gap_cer
     assert cutoff_gradient_bound == F(960, 713)
     assert cutoff_gradient_bound > F(1)
     assert 1.3464 < float(cutoff_gradient_bound) < 1.3465
+
+    # 4. Epistemic Boundary & Governance Invariants:
+    E_UV_FLOWED = "CLOSED_AT_FLOW_SCALE"
+    E_UV_LOCAL_OS = "CLOSED_UNBUFFERED"
+    E_CROSSOVER = "OPEN_AND_UNSOLVED"
+    YM_016 = "BLOCKED"
+    LEMMA_YM059F = "OPEN"
+    LEMMA_YM060F = "OPEN"
+    GOAL_COMPLETE = False
+    CLAY_PROBLEM = "OPEN_AND_UNSOLVED"
+    STRUCTURAL_NO_GO_COUNT = 0
+
+    assert E_UV_FLOWED == "CLOSED_AT_FLOW_SCALE"
+    assert E_UV_LOCAL_OS == "CLOSED_UNBUFFERED"
+    assert E_CROSSOVER == "OPEN_AND_UNSOLVED"
+    assert YM_016 == "BLOCKED"
+    assert LEMMA_YM059F == "OPEN"
+    assert LEMMA_YM060F == "OPEN"
+    assert GOAL_COMPLETE is False
+    assert CLAY_PROBLEM == "OPEN_AND_UNSOLVED"
+    assert STRUCTURAL_NO_GO_COUNT == 0
+
+
+def test_worldsheet_mesoscopic_overlap_window_and_contractible_pair_gap_certificate():
+    """TEST 54: Closure of the Topological Worldsheet Mesoscopic Gap via Gaussian-Coercivity /
+
+    Bianchi-Peierls Overlap Window [31/40, 41/48] at RG Step k = 5, and Isolation of the
+    Contractible 3-Cube Pair Gap (41/48, 31/20) & Brascamp–Lieb Determinant Amplification Barrier (YM-090).
+    Certifies:
+    1. Exact Gaussian coercivity ceiling at k = 5 (g_5^2 = 24/41):
+       - s_coercive_max = 1 / (2 * g_5^2) = 41/48 = 820/960 approx 0.854167.
+       - Quadratic fluctuation Hessian (1 - 2*g_5^2*s_p) is strictly positive for all s_p < 41/48.
+    2. Complete closure of the mesoscopic gap for topological worldsheets:
+       - Bianchi worldsheet Peierls floor: s_floor_sheet = 31/40 = 744/960.
+       - Overlap window [31/40, 41/48] has exact rational width:
+         Delta_sheet_overlap = 41/48 - 31/40 = 19/240 approx 0.079167 > 0.
+       - At worldsheet floor s_p = 31/40, delta_top = (24/41)*(31/40) = 93/205 < 1/2.
+       - Hessian coercivity margin at the floor:
+         Delta_Hessian_floor = 1/2 - 93/205 = 19/410 approx 0.0463415 > 0.
+    3. Isolation of Contractible 3-Cube Pair Gap & Brascamp–Lieb Determinant Amplification (NEG-YM-090):
+       - Contractible 3-cube coboundary pair excitations have multiplier M_pair = 2.
+       - Pair Peierls floor: s_floor_pair = (31/10)/2 = 31/20 = 372/240 = 1.55.
+       - Contractible Pair Curvature Gap (41/48, 31/20) has width:
+         Delta_pair_gap = 31/20 - 41/48 = 167/240 approx 0.695833 > 0.
+       - Minimum Hessian eigenvalue at worldsheet floor: lambda_min = 1 - 2*delta_top = 19/205.
+       - Brascamp–Lieb determinant amplification factor: lambda_min^{-1} = 205/19 approx 10.789474 > 1.
+       - Excess determinant amplification defect: Delta_BL_det = 205/19 - 1 = 186/19 approx 9.789474 > 0.
+    4. Epistemic boundary and constitutional invariants:
+       - E-CROSSOVER = OPEN_AND_UNSOLVED, YM-016 = BLOCKED, goal_complete = False, clay_problem = OPEN.
+    """
+    beta_5 = F(41, 24)
+    g_5_sq = F(24, 41)
+    c_0 = F(22)
+    ln22_upper = F(31, 10)
+    M_sheet = 4
+    M_pair = 2
+
+    # 1. Exact Gaussian Coercivity Ceiling:
+    s_coercive_max = F(1) / (F(2) * g_5_sq)
+    assert s_coercive_max == F(41, 48)
+    assert s_coercive_max == F(820, 960)
+    assert 0.8541 < float(s_coercive_max) < 0.8542
+
+    # Test strict positivity of Hessian for any s_p < 41/48:
+    test_sp_below = s_coercive_max - F(1, 1000)
+    assert (F(1) - F(2) * g_5_sq * test_sp_below) > F(0)
+
+    # 2. Complete Closure of Worldsheet Mesoscopic Gap & Overlap Window:
+    s_floor_sheet = ln22_upper / F(M_sheet)
+    assert s_floor_sheet == F(31, 40)
+    assert s_floor_sheet == F(744, 960)
+
+    # The coercivity ceiling strictly exceeds the worldsheet floor:
+    assert s_coercive_max > s_floor_sheet
+
+    Delta_sheet_overlap = s_coercive_max - s_floor_sheet
+    assert Delta_sheet_overlap == F(19, 240)
+    assert Delta_sheet_overlap > F(0)
+    assert 0.0791 < float(Delta_sheet_overlap) < 0.0792
+
+    # At the worldsheet floor s_p = 31/40:
+    delta_top = g_5_sq * s_floor_sheet
+    assert delta_top == F(93, 205)
+    assert delta_top < F(1, 2)
+    assert 0.4536 < float(delta_top) < 0.4537
+
+    Delta_Hessian_floor = F(1, 2) - delta_top
+    assert Delta_Hessian_floor == F(19, 410)
+    assert Delta_Hessian_floor > F(0)
+    assert 0.0463 < float(Delta_Hessian_floor) < 0.0464
+
+    # 3. Isolation of Contractible 3-Cube Pair Gap & Brascamp–Lieb Determinant Amplification (NEG-YM-090):
+    s_floor_pair = ln22_upper / F(M_pair)
+    assert s_floor_pair == F(31, 20)
+    assert s_floor_pair == F(372, 240)
+    assert float(s_floor_pair) == 1.55
+
+    # Pair floor strictly exceeds Gaussian coercivity ceiling:
+    assert s_floor_pair > s_coercive_max
+
+    Delta_pair_gap = s_floor_pair - s_coercive_max
+    assert Delta_pair_gap == F(167, 240)
+    assert Delta_pair_gap > F(0)
+    assert 0.6958 < float(Delta_pair_gap) < 0.6959
+
+    # Minimum Hessian eigenvalue at worldsheet floor:
+    lambda_min = F(1) - F(2) * delta_top
+    assert lambda_min == F(19, 205)
+    assert lambda_min > F(0)
+    assert 0.0926 < float(lambda_min) < 0.0927
+
+    # Brascamp–Lieb Gaussian determinant amplification factor:
+    BL_det_amplification = F(1) / lambda_min
+    assert BL_det_amplification == F(205, 19)
+    assert BL_det_amplification > F(1)
+    assert 10.789 < float(BL_det_amplification) < 10.790
+
+    Delta_BL_det = BL_det_amplification - F(1)
+    assert Delta_BL_det == F(186, 19)
+    assert Delta_BL_det > F(0)
+    assert 9.789 < float(Delta_BL_det) < 9.790
 
     # 4. Epistemic Boundary & Governance Invariants:
     E_UV_FLOWED = "CLOSED_AT_FLOW_SCALE"

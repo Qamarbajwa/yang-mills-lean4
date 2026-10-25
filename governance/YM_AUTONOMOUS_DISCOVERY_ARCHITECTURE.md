@@ -1409,3 +1409,11 @@ Task `YM-088` resolves this single-plaquette defect by incorporating the geometr
   2. Extension of Bianchi worldsheet Peierls floor to $s_{\mathrm{floor}}^{\mathrm{sheet}} = 31/40 = 744/960 < 1$, gaining $\Delta_{\mathrm{floor\_gain}} = 9/40 = 0.225 > 0$.
   3. Isolation of Mesoscopic Plaquette Curvature Matching Gap $(\frac{31}{960}, \frac{31}{40})$ of width $\Delta_{\mathrm{meso\_gap}} = 713/960 \approx 0.742708 > 0$ and cutoff gradient barrier $\|\chi'\|_{\infty} \ge 960/713 > 1$ (`NEG-YM-089`).
   4. Preservation of epistemic invariants: `E-CROSSOVER = OPEN_AND_UNSOLVED`, `YM-016 = BLOCKED`, `goal_complete = false`, and `clay_problem = OPEN_AND_UNSOLVED`.
+
+### Task Specification YM-090: Closure of the Topological Worldsheet Mesoscopic Gap via Gaussian-Coercivity / Bianchi-Peierls Overlap, and Isolation of the Contractible 3-Cube Pair Gap & Brascamp–Lieb Determinant Amplification Barrier
+- **Contract:** `YM-015F-JET-002B`
+- **Objective:** Prove Lemma `YM-090F` and certify:
+  1. Exact Gaussian coercivity ceiling $s_{\mathrm{coercive}}^{\max} = 1/(2g_5^2) = 41/48 = 820/960 \approx 0.854167$ at $k = 5$.
+  2. Complete closure of the mesoscopic gap for topological worldsheets via overlap window $[31/40, 41/48]$ of width $\Delta_{\mathrm{sheet\_overlap}} = 19/240 \approx 0.079167 > 0$ and Hessian coercivity margin at the floor $\Delta_{\mathrm{Hessian\_floor}} = 19/410 \approx 0.0463415 > 0$.
+  3. Isolation of Contractible 3-Cube Pair Curvature Gap $(\frac{41}{48}, \frac{31}{20})$ of width $\Delta_{\mathrm{pair\_gap}} = 167/240 \approx 0.695833 > 0$ and Brascamp–Lieb determinant amplification factor $\lambda_{\min}^{-1} = 205/19 \approx 10.789474 > 1$ with excess defect $\Delta_{\mathrm{BL\_det}} = 186/19 \approx 9.789474 > 0$ (`NEG-YM-090`).
+  4. Preservation of epistemic invariants: `E-CROSSOVER = OPEN_AND_UNSOLVED`, `YM-016 = BLOCKED`, `goal_complete = false`, and `clay_problem = OPEN_AND_UNSOLVED`.
