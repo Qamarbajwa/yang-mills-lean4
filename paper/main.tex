@@ -53,7 +53,7 @@
 \textit{Governed by Universal Research Operating System v4.0.4+4.0.6-r3} \\
 \textit{Workspace: Yang--Mills and the Mass Gap Programme}}
 
-\date{State Revision 131 --- October 2026}
+\date{State Revision 133 --- October 2026}
 
 \begin{document}
 
@@ -68,7 +68,7 @@ Second, by developing a short flow-time operator product expansion ($t \downarro
 
 Third, we isolate the Clay Millennium Prize threshold by establishing the exact small-field Weitzenb\"ock coercivity exit threshold at renormalization scale step $k = 5$, where the running inverse coupling drops to $\beta_{\mathrm{inv}, 5} = 41/24 < 2$ and $g_5^2 = 24/41 > 1/2$, yielding the certified exit defect $\Delta_{\mathrm{crossover\_exit}} = 7/82 > 0$. We prove the simultaneous onset of tripartite non-perturbative infrared obstructions on edge \texttt{E-CROSSOVER}: (a) large-field plaquette polymer percolation on $\Z^4$ with growth defect $\Delta_{\mathrm{perc}} = 7/4 > 0$, (b) Gribov horizon copy proliferation with Faddeev--Popov degeneracy $\Delta_{\mathrm{Gribov\_copies}} = 1 > 0$, and (c) Savvidy chromomagnetic vacuum instability with tachyonic eigenvalue shift $\Delta_{\mathrm{instability}} = 1/2 > 0$ and massless infrared accumulation defect $\Delta_{\mathrm{massless\_IR\_defect}} = 3 > 0$. 
 
-Every mathematical step is supported by exact rational certificates verified in finite arithmetic across 481 unit tests, bound under strict 3-Agent governance separation (Writer $\ne$ Reviewer $\ne$ Acceptor), and decoupled from the open infrared mass gap problem (\texttt{clay\_problem = OPEN\_AND\_UNSOLVED}).
+Every mathematical step is supported by exact rational certificates verified in finite arithmetic across 482 unit tests, bound under strict 3-Agent governance separation (Writer $\ne$ Reviewer $\ne$ Acceptor), and decoupled from the open infrared mass gap problem (\texttt{clay\_problem = OPEN\_AND\_UNSOLVED}).
 \end{abstract}
 
 \noindent\textbf{Keywords:} Constructive Quantum Field Theory, Yang--Mills Gradient Flow, Ba{\l}aban Renormalization Group, Osterwalder--Schrader Reconstruction, Gribov Horizon, Savvidy Instability, Mass Gap. \\
@@ -530,6 +530,38 @@ Because $S_{\mathrm{mid}} < \ln(22)$, the single-plaquette Boltzmann weight cann
 \texttt{E-CROSSOVER} = \mathrm{OPEN\_AND\_UNSOLVED}, \quad \texttt{YM-016} = \mathrm{BLOCKED}, \quad \texttt{clay\_problem} = \mathrm{OPEN\_AND\_UNSOLVED}.
 \end{equation}
 
+\subsection{4D Discrete Bianchi Co-Boundary Action Amplification, Closure of Topological Soft-Core Window, and Coherent Spin-Wave Barrier}
+To resolve the single-plaquette intermediate-field soft-core window of Lemma \texttt{YM-087F} (\texttt{NEG-YM-087}), where an isolated plaquette carrying action $S_{\mathrm{mid}} = 41/24 < \ln(22)$ fails to suppress 4D animal percolation, we incorporate the geometric co-boundary constraints enforced by the \emph{4D non-Abelian Discrete Bianchi Identity} \cite{Wilson1974,FrohlichSchwarzSpeer1979,Balaban1987CMP109} (Lemma \texttt{YM-088F}).
+
+Around every elementary 3-cube $c_3 \subset \mathbb{Z}^4$ bounded by 6 oriented plaquettes $\partial c_3$, the lattice link holonomies satisfy the exact non-Abelian Bianchi identity $\prod_{f=1}^6 U_{p_f}^{\epsilon_f} = I \in \SU(2)$. Consequently, non-trivial magnetic curvature cannot terminate inside any 3-cube. In $D = 4$ dimensions, each plaquette $p_0$ is shared by $N_{\mathrm{cobound}} = 2(D-2) = 4$ distinct 3-cubes, inducing a minimal pair multiplier $\mathcal{M}_{\mathrm{pair}} = 2$ on adjacent plaquettes and an $L = 2$ hypercubic block worldsheet piercing cross-sectional multiplier $\mathcal{M}_{\mathrm{sheet}} = L^2 = 4$.
+
+At benchmark intermediate action $S_{\mathrm{mid}} = \beta_5 = 41/24$, the co-boundary pair multiplier amplifies the action to $S_{\mathrm{pair}} = 2 S_{\mathrm{mid}} = 41/12 > 31/10 > \ln(22)$, reversing the \texttt{NEG-YM-087} defect into a strictly positive Peierls margin:
+\begin{equation}
+\Delta_{\mathrm{Bianchi\_mid}} = \frac{41}{12} - \frac{31}{10} = \frac{19}{60} \approx 0.316667 > 0.
+\end{equation}
+Furthermore, across the entire intermediate-field window $S_{\mathrm{soft}} \in [1, 31/10)$, the block cross-sectional multiplier $\mathcal{M}_{\mathrm{sheet}} = 4$ enforces total block piercing action $S_{\mathrm{sheet}} \ge 4 > 31/10$, closing the soft-core window with certified margin:
+\begin{equation}
+\Delta_{\mathrm{Bianchi\_window}} = 4 - \frac{31}{10} = \frac{9}{10} = 0.90 > 0.
+\end{equation}
+Using the rational lower bound $e^4 > (19/7)^4 = 130321/2401 > 54.27 > 54$, the block percolation factor contracts strictly below unity:
+\begin{equation}
+c_0 e^{-4} < 22 \times \frac{1}{54} = \frac{11}{27} \approx 0.407407 < 1,
+\end{equation}
+ruling out percolation of topological flux tubes and center vortices through $L = 2$ blocks.
+
+However, this co-boundary amplification applies strictly to topological flux tubes carrying non-zero co-homology. For \emph{coherent spin-wave fluctuations} with smooth curvature ($\operatorname{d}F = 0$), the Bianchi identity is identically satisfied without enforcing multi-plaquette correlation. Delocalized spin-waves distributed uniformly across all $N_{\mathrm{plaq}} = \binom{4}{2} L^4 = 96$ plaquettes of an $L=2$ block carry individual plaquette action:
+\begin{equation}
+s_p = \frac{31/10}{96} = \frac{31}{960} \approx 0.03229167 \ll 1.
+\end{equation}
+These smooth fluctuations accumulate total block action $31/10$ while leaving a massive single-plaquette Sobolev volume defect:
+\begin{equation}
+\Delta_{\mathrm{spinwave\_Sobolev}} = 1 - \frac{31}{960} = \frac{929}{960} \approx 0.967708 > 0 \quad (\texttt{NEG-YM-088}).
+\end{equation}
+Coherent spin-waves bypass discrete Peierls contour suppression, requiring multiscale coupling to Ba{\l}aban small-field Gaussian measures. Therefore, Edge \texttt{E-CROSSOVER} remains open on $\mathbb{Z}^4$:
+\begin{equation}
+\texttt{E-CROSSOVER} = \mathrm{OPEN\_AND\_UNSOLVED}, \quad \texttt{YM-016} = \mathrm{BLOCKED}, \quad \texttt{clay\_problem} = \mathrm{OPEN\_AND\_UNSOLVED}.
+\end{equation}
+
 % =========================================================================
 % APPENDIX: TRACEABILITY MATRIX AND VERIFICATION
 % =========================================================================
@@ -570,6 +602,7 @@ Because $S_{\mathrm{mid}} < \ln(22)$, the single-plaquette Boltzmann weight cann
 \texttt{YM-085}  & Same-Action Duhamel Cancellation \& Non-Abelian FKG Breakdown & Test 49 & Revision 127 \\
 \texttt{YM-086}  & Bion-Vortex Cluster Expansion \& Non-Zero Mass Gap & Test 50 & Revision 129 \\
 \texttt{YM-087}  & Swiss-Cheese Excision \& Peierls Entropy Suppression & Test 51 & Revision 131 \\
+\texttt{YM-088}  & Discrete Bianchi Amplification \& Spin-Wave Barrier & Test 52 & Revision 133 \\
 \bottomrule
 \end{tabular}
 \caption{Traceability matrix mapping proved lemmas to deterministic regression test certificates.}
@@ -580,7 +613,7 @@ The complete codebase, test suite, and governance records can be independently r
 \begin{verbatim}
 $ python scripts/verify_all.py
 \end{verbatim}
-This script deterministically verifies the 158-file closed-world checkout digest (\texttt{d895d3d3...}), the literal Git-blob digest (\texttt{c99a3513...}), append-only negative evidence integrity (0 deletions), and passes all 481 exact rational certificates in under 10 seconds.
+This script deterministically verifies the 158-file closed-world checkout digest (\texttt{8e3be560...}), the literal Git-blob digest (\texttt{a6181756...}), append-only negative evidence integrity (0 deletions), and passes all 482 exact rational certificates in under 10 seconds.
 
 \bibliographystyle{plain}
 \bibliography{references}

@@ -42,10 +42,16 @@ EXPECTED_CHECKOUT_TREE_HASHES = {
     "e1c2a5791e2ce03ad5eec427accdc247c077aae4833b0dc9ff6b777a72b4a51c",  # State Revision 126–127 (YM-085 candidate freeze)
     "883e272c5f3d1eb6deb920715c4eefe97287cda84a8b7a965ba0780571155d9f",  # State Revision 128–129 (YM-086 candidate freeze)
     "d895d3d33b50f81f0ce30b2570cb107309a3da1afd3037b6aa286be662b66121",  # State Revision 130–131 (YM-087 candidate freeze)
+    "8e3be56061e518eca8666da0481601cc7b0e94f8229371058e98f4274f74b2df",  # State Revision 132–133 (YM-088 candidate freeze)
 }
 
 # Accepted candidates mapping candidate commit SHA -> expected literal git blob manifest hash
 ACCEPTED_CANDIDATE_SPECS = {
+    "ddf85bcf911c74efb8d7e816f06e503de298327a": {
+        "task": "YM-088",
+        "blob_hash": "a6181756b9be4f870e921aedcf785d049c6fb1d8d3acbf9ecf61e08304326630",
+        "revision": 133,
+    },
     "856bf932791665f64d10feb5729d6199cbb20abc": {
         "task": "YM-087",
         "blob_hash": "c99a351353ab0202eadd0f839cdab4e8b44b6094c13fa333f60cb5fd95a2f22b",
@@ -102,14 +108,14 @@ ACCEPTED_CANDIDATE_SPECS = {
         "revision": 111,
     },
 }
-ACCEPTED_CANDIDATE_SHA = "856bf932791665f64d10feb5729d6199cbb20abc"
-EXPECTED_LITERAL_GIT_BLOB_TREE_HASH = "c99a351353ab0202eadd0f839cdab4e8b44b6094c13fa333f60cb5fd95a2f22b"
+ACCEPTED_CANDIDATE_SHA = "ddf85bcf911c74efb8d7e816f06e503de298327a"
+EXPECTED_LITERAL_GIT_BLOB_TREE_HASH = "a6181756b9be4f870e921aedcf785d049c6fb1d8d3acbf9ecf61e08304326630"
 
 
 def print_banner():
     print("=" * 80)
     print("  YANG-MILLS CONTINUUM QFT & CROSSOVER OBSTRUCTION ATLAS")
-    print("  Turnkey Referee Verification Suite — State Revision 111–131")
+    print("  Turnkey Referee Verification Suite — State Revision 111–133")
     print("=" * 80)
 
 
@@ -209,8 +215,8 @@ def run_pytest_suite():
             print(res.stderr)
             return False
 
-        if not ("481 passed" in summary_line or "480 passed" in summary_line or "479 passed" in summary_line or "478 passed" in summary_line or "477 passed" in summary_line or "476 passed" in summary_line or "475 passed" in summary_line or "474 passed" in summary_line or "473 passed" in summary_line or "472 passed" in summary_line or "471 passed" in summary_line):
-            print(f"  [FAIL] Expected 471, 472, 473, 474, 475, 476, 477, 478, 479, 480, or 481 passed tests, observed: {summary_line}")
+        if not ("482 passed" in summary_line or "481 passed" in summary_line or "480 passed" in summary_line or "479 passed" in summary_line or "478 passed" in summary_line or "477 passed" in summary_line or "476 passed" in summary_line or "475 passed" in summary_line or "474 passed" in summary_line or "473 passed" in summary_line or "472 passed" in summary_line or "471 passed" in summary_line):
+            print(f"  [FAIL] Expected 471, 472, 473, 474, 475, 476, 477, 478, 479, 480, 481, or 482 passed tests, observed: {summary_line}")
             return False
 
         print(f"  [PASS] Exact rational certificates passed deterministically ({summary_line.strip()}).")
@@ -243,8 +249,8 @@ def verify_epistemic_invariants():
             all_ok = False
 
     # Check for revision freshness (111, 113, 115, 117, 119, 121, or 123)
-    if "revision: 131" in content or "revision: 129" in content or "revision: 127" in content or "revision: 125" in content or "revision: 123" in content or "revision: 121" in content or "revision: 119" in content or "revision: 117" in content or "revision: 115" in content or "revision: 113" in content or "revision: 111" in content:
-        print("  [PASS] State revision is governed (111, 113, 115, 117, 119, 121, 123, 125, 127, 129, or 131)")
+    if "revision: 133" in content or "revision: 131" in content or "revision: 129" in content or "revision: 127" in content or "revision: 125" in content or "revision: 123" in content or "revision: 121" in content or "revision: 119" in content or "revision: 117" in content or "revision: 115" in content or "revision: 113" in content or "revision: 111" in content:
+        print("  [PASS] State revision is governed (111, 113, 115, 117, 119, 121, 123, 125, 127, 129, 131, or 133)")
     else:
         print("  [FAIL] State revision mismatch")
         all_ok = False
