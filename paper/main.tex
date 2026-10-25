@@ -53,7 +53,7 @@
 \textit{Governed by Universal Research Operating System v4.0.4+4.0.6-r3} \\
 \textit{Workspace: Yang--Mills and the Mass Gap Programme}}
 
-\date{State Revision 139 --- October 2026}
+\date{State Revision 141 --- October 2026}
 
 \begin{document}
 
@@ -68,7 +68,7 @@ Second, by developing a short flow-time operator product expansion ($t \downarro
 
 Third, we isolate the Clay Millennium Prize threshold by establishing the exact small-field Weitzenb\"ock coercivity exit threshold at renormalization scale step $k = 5$, where the running inverse coupling drops to $\beta_{\mathrm{inv}, 5} = 41/24 < 2$ and $g_5^2 = 24/41 > 1/2$, yielding the certified exit defect $\Delta_{\mathrm{crossover\_exit}} = 7/82 > 0$. We prove the simultaneous onset of tripartite non-perturbative infrared obstructions on edge \texttt{E-CROSSOVER}: (a) large-field plaquette polymer percolation on $\Z^4$ with growth defect $\Delta_{\mathrm{perc}} = 7/4 > 0$, (b) Gribov horizon copy proliferation with Faddeev--Popov degeneracy $\Delta_{\mathrm{Gribov\_copies}} = 1 > 0$, and (c) Savvidy chromomagnetic vacuum instability with tachyonic eigenvalue shift $\Delta_{\mathrm{instability}} = 1/2 > 0$ and massless infrared accumulation defect $\Delta_{\mathrm{massless\_IR\_defect}} = 3 > 0$. 
 
-Every mathematical step is supported by exact rational certificates verified in finite arithmetic across 485 unit tests, bound under strict 3-Agent governance separation (Writer $\ne$ Reviewer $\ne$ Acceptor), and decoupled from the open infrared mass gap problem (\texttt{clay\_problem = OPEN\_AND\_UNSOLVED}).
+Every mathematical step is supported by exact rational certificates verified in finite arithmetic across 486 unit tests, bound under strict 3-Agent governance separation (Writer $\ne$ Reviewer $\ne$ Acceptor), and decoupled from the open infrared mass gap problem (\texttt{clay\_problem = OPEN\_AND\_UNSOLVED}).
 \end{abstract}
 
 \noindent\textbf{Keywords:} Constructive Quantum Field Theory, Yang--Mills Gradient Flow, Ba{\l}aban Renormalization Group, Osterwalder--Schrader Reconstruction, Gribov Horizon, Savvidy Instability, Mass Gap. \\
@@ -655,6 +655,40 @@ Furthermore, while the single-mode Brascamp--Lieb determinant factor is reduced 
 \texttt{E-CROSSOVER} = \mathrm{OPEN\_AND\_UNSOLVED}, \quad \texttt{YM-016} = \mathrm{BLOCKED}, \quad \texttt{clay\_problem} = \mathrm{OPEN\_AND\_UNSOLVED}.
 \end{equation}
 
+\subsection{High-Momentum Intra-Block Kinetic Laplacian Gap, Anisotropic Gap Closure, and Schur-Complement Cross-Coupling Barrier}
+To resolve the anisotropic 3-cube curvature gap and multi-mode Brascamp--Lieb determinant growth isolated in Lemma \texttt{YM-091F} (\texttt{NEG-YM-091}), we evaluate the spectral structure of the discrete kinetic Laplacian on Ba{\l}aban's $L = 2$ block averaging constraint (Lemma \texttt{YM-092F}).
+
+Fluctuations on the elementary $2^4$ block decompose orthogonally into coarse background modes $\mathcal{H}_{\mathrm{coarse}} = \ker \mathcal{A}$ and high-momentum modes $\mathcal{H}_{\perp} = (\ker \mathcal{A})^{\perp}$. In grounded axial tree gauge, every non-zero mode in $\mathcal{H}_{\perp}$ carries at least one discrete momentum quantum $p_{\mu} = \pi/a$, generating a strictly positive kinetic Laplacian spectral floor:
+\begin{equation}
+\lambda_{\mathrm{kin}}^{\perp} \ge 4 \sin^2\left(\frac{\pi}{4}\right) = 2.
+\end{equation}
+The intra-block quadratic fluctuation operator $\mathcal{H}_5^{\perp} = (-\Delta_{\mathrm{lat}} - 2 g_5^2 s_p)\mathbb{I} \ge (2 - \frac{48}{41} s_p)\mathbb{I}$ remains strictly positive-definite up to the doubled coercivity ceiling:
+\begin{equation}
+s_{\mathrm{coercive}}^{\perp} = \frac{\lambda_{\mathrm{kin}}^{\perp}}{2 g_5^2} = \frac{2}{48/41} = \frac{41}{24} \approx 1.708333.
+\end{equation}
+Because $s_{\mathrm{coercive}}^{\perp} = \frac{41}{24} = \frac{615}{360}$ strictly exceeds both the Cauchy--Schwarz anisotropic 3-cube floor $s_{\mathrm{floor}}^{\mathrm{CS}} = \frac{62}{45} = \frac{496}{360} \approx 1.377778$ and the unconstrained 2-plaquette pair floor $s_{\mathrm{floor}}^{\mathrm{pair}} = \frac{31}{20} = \frac{186}{120} = 1.55$, both gaps are completely closed on $\mathcal{H}_{\perp}$ across strictly positive overlap windows:
+\begin{equation}
+\Delta_{\mathrm{aniso\_overlap}} = \frac{41}{24} - \frac{62}{45} = \frac{119}{360} \approx 0.330556 > 0, \quad \Delta_{\mathrm{pair\_overlap}} = \frac{41}{24} - \frac{31}{20} = \frac{19}{120} \approx 0.158333 > 0.
+\end{equation}
+Furthermore, at the link-star floor $s_p = \frac{31}{60}$, the minimum Hessian eigenvalue is $\lambda_{\min}^{\perp}(\frac{31}{60}) = 2 - \frac{124}{205} = \frac{286}{205} \approx 1.395122 > 1$. The single-mode Brascamp--Lieb covariance factor is strictly contracting:
+\begin{equation}
+\left(\lambda_{\min}^{\perp}\left(\frac{31}{60}\right)\right)^{-1} = \frac{205}{286} \approx 0.716783 < 1 \implies \Delta_{\mathrm{BL\_contract}} = 1 - \frac{205}{286} = \frac{81}{286} \approx 0.283217 > 0,
+\end{equation}
+guaranteeing strict multi-mode determinant contraction $(205/286)^M < 1$ across all $M \ge 1$ fine modes.
+
+However, in the full block decomposition $\mathcal{H}_{\mathrm{block}} = \mathcal{H}_{\perp} \oplus \mathcal{H}_{\mathrm{coarse}}$, the coarse background modes possess zero intra-block kinetic gap ($\lambda_{\mathrm{kin}}^{\mathrm{coarse}} = 0$). Integrating out $\mathcal{H}_{\perp}$ at the anisotropic floor $s_p = \frac{62}{45}$ (where $\lambda_{\min}^{\perp} = \frac{238}{615}$) under non-Abelian commutator cross-coupling $K_{\mathrm{cross}} = 2 g_5^2 s_p = \frac{992}{615}$ induces a negative Schur-complement downfolding shift on the coarse effective action:
+\begin{equation}
+\Delta_{\mathrm{Schur}} = K_{\mathrm{cross}}^2 \left(\lambda_{\min}^{\perp}\left(\frac{62}{45}\right)\right)^{-1} = \left(\frac{992}{615}\right)^2 \times \frac{615}{238} = \frac{492032}{73185} \approx 6.723126.
+\end{equation}
+Because $\Delta_{\mathrm{Schur}} > s_p = \frac{62}{45}$, this generates a certified destabilizing excess defect:
+\begin{equation}
+\Delta_{\mathrm{Schur\_excess}} = \frac{492032}{73185} - \frac{62}{45} = \frac{1173598}{219555} \approx 5.345349 > 0 \quad (\texttt{NEG-YM-092}),
+\end{equation}
+which destabilizes the coarse quadratic form. Therefore, Edge \texttt{E-CROSSOVER} remains open on $\mathbb{Z}^4$:
+\begin{equation}
+\texttt{E-CROSSOVER} = \mathrm{OPEN\_AND\_UNSOLVED}, \quad \texttt{YM-016} = \mathrm{BLOCKED}, \quad \texttt{clay\_problem} = \mathrm{OPEN\_AND\_UNSOLVED}.
+\end{equation}
+
 % =========================================================================
 % APPENDIX: TRACEABILITY MATRIX AND VERIFICATION
 % =========================================================================
@@ -699,6 +733,7 @@ Furthermore, while the single-mode Brascamp--Lieb determinant factor is reduced 
 \texttt{YM-089}  & Spin-Wave Coercivity \& Mesoscopic Matching Gap & Test 53 & Revision 135 \\
 \texttt{YM-090}  & Worldsheet Overlap \& Contractible Pair Gap & Test 54 & Revision 137 \\
 \texttt{YM-091}  & Link Coboundary Multiplier \& Anisotropic Cube Gap & Test 55 & Revision 139 \\
+\texttt{YM-092}  & Intra-Block Kinetic Gap \& Schur Cross-Coupling & Test 56 & Revision 141 \\
 \bottomrule
 \end{tabular}
 \caption{Traceability matrix mapping proved lemmas to deterministic regression test certificates.}
@@ -709,7 +744,7 @@ The complete codebase, test suite, and governance records can be independently r
 \begin{verbatim}
 $ python scripts/verify_all.py
 \end{verbatim}
-This script deterministically verifies the 158-file closed-world checkout digest (\texttt{dac0fae0...}), the literal Git-blob digest (\texttt{80216b45...}), append-only negative evidence integrity (0 deletions), and passes all 485 exact rational certificates in under 10 seconds.
+This script deterministically verifies the 158-file closed-world checkout digest (\texttt{5d4d4252...}), the literal Git-blob digest (\texttt{f40a2181...}), append-only negative evidence integrity (0 deletions), and passes all 486 exact rational certificates in under 10 seconds.
 
 \bibliographystyle{plain}
 \bibliography{references}
