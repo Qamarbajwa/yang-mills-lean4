@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 131
+revision: 132
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "eaf699639570f5f1e6f02f38dde27ad2cc8c159b"
-  scientific_candidate_sha: "856bf932791665f64d10feb5729d6199cbb20abc"
-  review_bound_sha: "856bf932791665f64d10feb5729d6199cbb20abc"
-  evidence_closeout_head: "856bf932791665f64d10feb5729d6199cbb20abc"
-  closeout_resolution: "evidence_closeout_head binds scientific candidate commit (856bf932791665f64d10feb5729d6199cbb20abc); YM-087 is scientifically accepted and closed out at State Revision 131."
+  head: "8335b44227e80d87c2f302d572fada2331bc646b"
+  scientific_candidate_sha: ""
+  review_bound_sha: ""
+  evidence_closeout_head: "4f44a6da1d6ab64214480ac1d98c257c9bed6b51"
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-087 closeout commit (4f44a6da1d6ab64214480ac1d98c257c9bed6b51); candidate freeze for YM-088 is staged at State Revision 132."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,14 +32,25 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 130
-  last_updated_at: "2026-10-24T02:15:00Z"
+  last_expected_revision: 131
+  last_updated_at: "2026-10-25T06:45:00Z"
   active_contract: "YM-015F-JET-002B"
   frozen_candidate: ""
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-088
+    scope_in: "4D Discrete Bianchi Identity Co-Boundary Action Amplification on Edge E-CROSSOVER, Closure of the Topological Soft-Core Entropy Window via L=2 Worldsheet Flux Conservation, Isolation of the Coherent Spin-Wave Block-Sobolev Accumulation Barrier, proof of Lemma YM-088F-DISCRETE-BIANCHI-COBOUNDARY-AMPLIFICATION-AND-SPINWAVE-SOBOLEV-BARRIER, and Test 52 finite certificate"
+    scope_out: "Crossing infrared crossover E-CROSSOVER, non-perturbative multi-block lattice collar equivalence, continuum Wightman reconstruction, and full continuum closure"
+    dependencies: ["YM-087"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-088_E4_RAW_20261025.md"
+    acceptor: "verification/YM-088_TECHNICAL_ACCEPTANCE.md"
+    status: CANDIDATE_FROZEN
+    scope_limitation: "DISCRETE_BIANCHI_AMPLIFICATION_PROVED_SPINWAVE_SOBOLEV_BARRIER_ISOLATED_AND_CLAY_OPEN"
   - id: YM-087
     scope_in: "Swiss-Cheese Polymer Excision of High-Density Topological Collision Zones on Edge E-CROSSOVER, Maximal-Frustration Peierls Entropy Suppression at beta_5 = 41/24, and Isolation of the Intermediate-Field Entropy-Energy Window, proof of Lemma YM-087F-SWISS-CHEESE-PEIERLS-SUPPRESSION-AND-INTERMEDIATE-FIELD-WINDOW, and Test 51 finite certificate"
     scope_out: "Crossing infrared crossover E-CROSSOVER, non-perturbative multi-block lattice collar equivalence, continuum Wightman reconstruction, and full continuum closure"

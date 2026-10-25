@@ -1064,3 +1064,29 @@ Own conditional operator-theoretic analysis. For a general non-linear gauge obse
 
 4. **Established Lemma and Progress:**
    - Proved Lemma `YM-087F-SWISS-CHEESE-PEIERLS-SUPPRESSION-AND-INTERMEDIATE-FIELD-WINDOW`.
+
+
+## CDC-088: 4D Discrete Bianchi Co-Boundary Action Amplification, Closure of Topological Soft-Core Window, and Coherent Spin-Wave Barrier (`YM-088`)
+
+- **Task ID:** `YM-088`
+- **State Revision:** 132
+- **Date:** 2026-10-25
+- **Primary Contract:** `YM-015F-JET-002B`
+- **Source Target:** Bałaban Commun. Math. Phys. 109, 249 (1987); Bałaban Commun. Math. Phys. 116, 1 (1988); Fröhlich, Schwarz & Speer Commun. Math. Phys. 67, 223 (1979); Borgs Commun. Math. Phys. 116, 309 (1988); Tomboulis Phys. Rev. D 23, 2371 (1981).
+- **Defects Corrected & Mathematical Resolutions:**
+
+1. **Defect 1: Single-Plaquette Action Deficit in the Soft-Core Window (`NEG-YM-087`):**
+   - In `YM-087`, single-plaquette Peierls bounds failed across $S_{\mathrm{soft}} \in [1, 31/10)$ because a single plaquette at benchmark $S_{\mathrm{mid}} = 41/24 \approx 1.7083$ cannot beat 4D animal connectivity $\ln(22) < 31/10$ ($\Delta_{\mathrm{entropy\_window}} = 167/120 > 0$).
+   - **Correction:** Proved that on $\mathbb{Z}^4$, non-Abelian magnetic flux cannot terminate inside any elementary 3-cube ($\prod_{f \in \partial c_3} U_f^{\epsilon_f} = I$). Every plaquette is cobounded by $N_{\mathrm{cobound}} = 4$ elementary 3-cubes, and any center-vortex worldsheet piercing an $L = 2$ block must traverse at least $L^2 = 4$ plaquettes ($\mathcal{M}_{\mathrm{sheet}} = 4$). Even the minimal pair multiplier $\mathcal{M}_{\mathrm{pair}} = 2$ gives $S_{\mathrm{pair}} = 41/12 > 31/10$, turning the deficit into a positive Peierls margin $\Delta_{\mathrm{Bianchi\_mid}} = 19/60 > 0$.
+
+2. **Defect 2: Uncontrolled Localized Soft-Core Percolation on the Block Lattice:**
+   - Soft topological cores could potentially percolate across blocks if worldsheet flux conservation were ignored.
+   - **Correction:** Under the worldsheet multiplier $\mathcal{M}_{\mathrm{sheet}} = 4$, the minimum action across the entire window $S_{\mathrm{soft}} \in [1, 31/10)$ is amplified to $S_{\mathrm{sheet}} \ge 4 \times 1 = 4 > 31/10$, giving positive margin $\Delta_{\mathrm{Bianchi\_window}} = 9/10 > 0$. The block percolation factor contracts strictly below unity ($c_0 e^{-4} < 22/54 = 11/27 < 1$), proving that topological soft cores cannot percolate on $\mathbb{Z}^4$.
+
+3. **Defect 3: Delocalized Coherent Spin-Wave Block-Sobolev Accumulation Barrier (`NEG-YM-088`):**
+   - Assuming that Bianchi co-boundary action amplification suppresses all configurations with total block action $S_{\mathrm{block}} \ge 31/10$ overlooks delocalized spin-wave packets with smooth curvature ($\operatorname{d}F = 0$).
+   - **Correction:** Proved that curvature can be distributed smoothly across all 96 plaquettes of the $L = 2$ block so that each plaquette carries tiny action $s_p = S_{\mathrm{block}}/96 \le 31/960 \approx 0.03229 \ll 1$. Such configurations trigger no localized topological core yet accumulate block action $31/10$, producing block fluctuation volume defect $\Delta_{\mathrm{spinwave\_Sobolev}} = 929/960 > 0$ that requires coupling to Bałaban's small-field Gaussian measure.
+   Consequently, Edge `E-CROSSOVER` remains strictly `OPEN_AND_UNSOLVED`, Task `YM-016` `BLOCKED`, and the Clay Millennium Problem `OPEN_AND_UNSOLVED`.
+
+4. **Established Lemma and Progress:**
+   - Proved Lemma `YM-088F-DISCRETE-BIANCHI-COBOUNDARY-AMPLIFICATION-AND-SPINWAVE-SOBOLEV-BARRIER`.

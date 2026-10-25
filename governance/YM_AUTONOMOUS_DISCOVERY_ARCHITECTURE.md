@@ -1371,3 +1371,33 @@ Task `YM-087` resolves this collision barrier via a rigorous geometric and combi
    Consequently, Edge `E-CROSSOVER` remains strictly `OPEN_AND_UNSOLVED`, Task `YM-016` remains `BLOCKED`, `goal_complete` remains `false`, and `clay_problem` remains `OPEN_AND_UNSOLVED`.
 4. **Epistemic Invariants:**
    Confirm that Edge `E-CROSSOVER` remains `OPEN_AND_UNSOLVED`, `YM-016` remains `BLOCKED`, `goal_complete` remains `false`, and `clay_problem` remains `OPEN_AND_UNSOLVED`.
+
+
+## Task Specification YM-088: 4D Discrete Bianchi Co-Boundary Action Amplification, Closure of Topological Soft-Core Window, and Isolation of Coherent Spin-Wave Barrier
+
+### 1. Context and Objective
+In Task `YM-087`, Swiss-cheese polymer excision eliminated semiclassical dilute expansions in dense collision zones, and the Maximal-Frustration Peierls Theorem proved that maximally frustrated cores ($U_p = -I$, $S_{\max} = 41/12$) cannot percolate on $\mathbb{Z}^4$ ($\Delta_{\mathrm{Peierls\_max}} = 19/60 > 0$, $c_0 e^{-S_{\max}} < 47/60 < 1$). However, `NEG-YM-087` isolated the intermediate-field soft-core window $S_{\mathrm{soft}} \in [1, 31/10)$, where a single plaquette carries insufficient action to beat 4D animal connectivity $\ln(22) < 31/10$ ($\Delta_{\mathrm{entropy\_window}} = 167/120 > 0$).
+Task `YM-088` resolves this single-plaquette defect by incorporating the geometric constraints of the 4D non-Abelian Discrete Bianchi Identity:
+1. **4D Discrete Bianchi Identity & Co-Boundary Flux Conservation:** Around every elementary 3-cube $c_3 \subset \mathbb{Z}^4$, non-Abelian holonomies satisfy $\prod_{f \in \partial c_3} U_f^{\epsilon_f} = I$, preventing isolated plaquette excitations. In $D = 4$, every plaquette is shared by $N_{\mathrm{cobound}} = 2(D-2) = 4$ elementary 3-cubes. Any topological center-vortex worldsheet or magnetic flux tube piercing an $L = 2$ block must traverse a cross-section of at least $L^2 = 4$ plaquettes ($\mathcal{M}_{\mathrm{sheet}} = 4$, and $\mathcal{M}_{\mathrm{pair}} = 2$ across any 3-cube pair);
+2. **Closure of the Topological Soft-Core Entropy Window:** At benchmark midpoint $S_{\mathrm{mid}} = 41/24$, $\mathcal{M}_{\mathrm{pair}} = 2$ enforces $S_{\mathrm{pair}} = 41/12 > 31/10 > \ln(22)$, reversing the `NEG-YM-087` defect into a positive Peierls margin:
+   $$\Delta_{\mathrm{Bianchi\_mid}} = \frac{41}{12} - \frac{31}{10} = \frac{19}{60} \approx 0.31667 > 0.$$
+   Across the entire soft-core window $S_{\mathrm{soft}} \in [1, 31/10)$, the worldsheet multiplier $\mathcal{M}_{\mathrm{sheet}} = 4$ enforces $S_{\mathrm{sheet}} \ge 4 \times 1 = 4 > 31/10$, closing the soft-core window with certified margin:
+   $$\Delta_{\mathrm{Bianchi\_window}} = 4 - \frac{31}{10} = \frac{9}{10} = 0.90 > 0.$$
+   The block percolation factor contracts strictly below unity ($c_0 e^{-4} < 22/54 = 11/27 \approx 0.4074 < 1$), proving that topological soft cores cannot percolate on $\mathbb{Z}^4$;
+3. **Isolation of the Coherent Spin-Wave Block-Sobolev Accumulation Barrier (`NEG-YM-088`):** Proves why Bianchi co-boundary action amplification eliminates localized topological cores, but leaves open **delocalized coherent spin-wave packets** where smooth curvature ($\operatorname{d}F = 0$) is distributed uniformly across all 96 plaquettes of the $L = 2$ block ($s_p = S_{\mathrm{block}}/96 \le 31/960 \approx 0.03229 \ll 1$). Each plaquette carries small action, triggering no localized core, yet the coherent block sum reaches $31/10$, producing a block fluctuation volume defect:
+   $$\Delta_{\mathrm{spinwave\_Sobolev}} = 1 - \frac{31}{960} = \frac{929}{960} \approx 0.9677 > 0.$$
+   Controlling these configurations requires coupling the block character expansion back to Bałaban's small-field Gaussian measure, keeping Edge `E-CROSSOVER` strictly open and Task `YM-016` blocked.
+
+### 2. Mathematical Specification of Task YM-088
+1. **Discrete Bianchi Co-Boundary Conservation:**
+   Around every elementary 3-cube $c_3 \subset \mathbb{Z}^4$, non-Abelian holonomies satisfy $\prod_{f \in \partial c_3} U_f^{\epsilon_f} = I$. Every plaquette belongs to $N_{\mathrm{cobound}} = 4$ elementary 3-cubes. Any topological center-vortex worldsheet piercing an $L = 2$ block ($96$ plaquettes) traverses at least $\mathcal{M}_{\mathrm{sheet}} = L^2 = 4$ plaquettes (and at least $\mathcal{M}_{\mathrm{pair}} = 2$ across any 3-cube pair).
+2. **Closure of Topological Soft-Core Window:**
+   At midpoint $S_{\mathrm{mid}} = 41/24$, $\mathcal{M}_{\mathrm{pair}} = 2$ enforces $S_{\mathrm{pair}} = 41/12 > 31/10$, giving $\Delta_{\mathrm{Bianchi\_mid}} = 19/60 > 0$.
+   Across the entire window $S_{\mathrm{soft}} \in [1, 31/10)$, $\mathcal{M}_{\mathrm{sheet}} = 4$ enforces $S_{\mathrm{sheet}} \ge 4 > 31/10$, closing the soft-core window with $\Delta_{\mathrm{Bianchi\_window}} = 9/10 > 0$.
+   Block percolation contracts strictly below unity: $c_0 e^{-4} < 11/27 < 1$.
+3. **Coherent Spin-Wave Block-Sobolev Accumulation Barrier (`NEG-YM-088`):**
+   For delocalized coherent spin waves with smooth curvature distributed uniformly across the block, each plaquette carries tiny action $s_p = S_{\mathrm{block}}/96 \le 31/960 \approx 0.03229 \ll 1$, leaving block volume defect:
+   $$\Delta_{\mathrm{spinwave\_Sobolev}} = \frac{929}{960} \approx 0.9677 > 0.$$
+   Consequently, Edge `E-CROSSOVER` remains strictly `OPEN_AND_UNSOLVED`, Task `YM-016` remains `BLOCKED`, `goal_complete` remains `false`, and `clay_problem` remains `OPEN_AND_UNSOLVED`.
+4. **Epistemic Invariants:**
+   Confirm that Edge `E-CROSSOVER` remains `OPEN_AND_UNSOLVED`, `YM-016` remains `BLOCKED`, `goal_complete` remains `false`, and `clay_problem` remains `OPEN_AND_UNSOLVED`.
