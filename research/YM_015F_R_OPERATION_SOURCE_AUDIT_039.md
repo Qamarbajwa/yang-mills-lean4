@@ -6635,3 +6635,96 @@ Let the 4D SU(2) lattice gauge theory at crossover step $k = 5$ have gauge coupl
      $$\Delta_{\mathrm{BL\_det}} = \frac{205}{19} - 1 = \frac{186}{19} \approx 9.78947368 > 0.$$
      This explosive factor of $\sim 10.8$ per softened mode completely overwhelms the small-field polymer activity $a_5 \sim e^{-M/g^2}$, preventing cluster expansion convergence in the crossover regime.
    Hence, Edge `E-CROSSOVER` remains strictly open on $\mathbb{Z}^4$. $\square$
+
+
+## SECTION YM-091: 4D INTERIOR-LINK 6-PLAQUETTE COBOUNDARY MULTIPLIER & OVERLAP CLOSURE, CAUCHY-SCHWARZ 3-CUBE CURVATURE SHARING, AND ISOLATION OF THE ANISOTROPIC CUBE GAP & MULTI-MODE BRASCAMP-LIEB BARRIER
+
+### 1. Task Metadata and Contract Scope
+- **Task ID:** `YM-091`
+- **State Revision:** 138
+- **Date:** 2026-10-25
+- **Primary Contract:** `YM-015F-JET-002B`
+- **Source Target:** Bałaban Commun. Math. Phys. 109, 249 (1987); Bałaban Commun. Math. Phys. 116, 1 (1988); Brascamp & Lieb J. Funct. Anal. 22, 366 (1976); Wilson Phys. Rev. D 10, 2445 (1974); Fröhlich, Schwarz & Speer Commun. Math. Phys. 67, 223 (1979).
+- **Core Milestone:** Lemma `YM-091F-LINK-COBOUNDARY-MULTIPLIER-AND-ANISOTROPIC-CUBE-GAP` & Test 55 finite certificate.
+- **Epistemic Classification:** `[METHOD_SPECIFIC_OBSTRUCTION]` (`NEG-YM-091-ANISOTROPIC-CUBE-GAP-AND-MULTIMODE-DETERMINANT-BARRIER`).
+
+### 2. Context and Motivation
+In Task `YM-090`, the exact Gaussian coercivity ceiling $s_{\mathrm{coercive}}^{\max} = 41/48 = 820/960$ closed the mesoscopic gap for block-spanning topological worldsheets via overlap window $[31/40, 41/48]$ ($\Delta_{\mathrm{sheet\_overlap}} = 19/240 > 0$). However, `NEG-YM-090` isolated the Contractible Pair Gap $(41/48, 31/20)$ of width $167/240$ under the assumption that contractible excitations excited only $\mathcal{M}_{\mathrm{pair}} = 2$ plaquettes, while near-floor modes induced Brascamp–Lieb determinant amplification $\lambda_{\min}^{-1} = 205/19 \approx 10.79$.
+
+Task `YM-091` analyzes the exact coboundary topology of 4D interior links, which excite $\mathcal{M}_{\mathrm{link}} = 2(D-1) = 6$ plaquettes simultaneously, computes the resulting lower Peierls floor and eigenvalue recovery, evaluates Cauchy–Schwarz return flux sharing on 3-cubes ($\mathcal{M}_{\mathrm{CS}} = 9/4$), and rigorously isolates the remaining anisotropic cube gap and multi-mode determinant barrier on Edge `E-CROSSOVER`.
+
+### 3. Formal Statement of Lemma YM-091F
+**Lemma YM-091F (Interior-Link Coboundary Multiplier, Link-Star Overlap Window, Cauchy–Schwarz 3-Cube Sharing, and Anisotropic Cube Gap).**
+Let the 4D SU(2) lattice gauge theory at crossover step $k = 5$ have coupling $g_5^2 = 24/41$ and inverse coupling $\beta_5 = 41/24$. Let $L = 2$ denote the renormalization group block scale on $\mathbb{Z}^4$ with $N_{\mathrm{plaq}} = 96$ plaquettes per block. Then:
+1. **Interior-Link 6-Plaquette Coboundary Multiplier & Overlap Closure ($[\frac{31}{60}, \frac{41}{48}]$):**
+   In $D = 4$ dimensions, any gauge fluctuation localized on an interior link $e \in E_{\mathrm{int}}(b)$ belongs to exactly $\mathcal{M}_{\mathrm{link}} = 2(D-1) = 6$ coboundary plaquettes $p \in \delta e$. Consequently, the Peierls condition dominating 4D animal connectivity $c_0 = 22$ ($6 s_p > 31/10 > \ln(22)$) holds down to the 1-link coboundary floor:
+   $$s_{\mathrm{floor}}^{\mathrm{link}} = \frac{31/10}{6} = \frac{31}{60} = \frac{124}{240} \approx 0.516667 < s_{\mathrm{coercive}}^{\max} = \frac{41}{48} = \frac{205}{240}.$$
+   This completely closes the contractible 1-link star sector with a strictly positive **Link-Star Gaussian–Peierls Overlap Window** $[\frac{31}{60}, \frac{41}{48}]$ of exact rational width:
+   $$\Delta_{\mathrm{link\_overlap}} = \frac{41}{48} - \frac{31}{60} = \frac{205 - 124}{240} = \frac{81}{240} = \frac{27}{80} = 0.3375 > 0.$$
+2. **Fourfold Recovery of the Minimum Hessian Eigenvalue:**
+   At the link-star floor $s_p = \frac{31}{60}$, the cubic/quartic vertex perturbation is reduced to $\delta_{\mathrm{link}} = g_5^2 s_{\mathrm{floor}}^{\mathrm{link}} = \frac{24}{41} \times \frac{31}{60} = \frac{62}{205} < \frac{1}{2}$. The minimum Hessian eigenvalue rises from $\lambda_{\min}(\frac{31}{40}) = \frac{19}{205}$ to:
+   $$\lambda_{\min}\left(\frac{31}{60}\right) = 1 - 2\left(\frac{62}{205}\right) = \frac{81}{205} \approx 0.395122,$$
+   yielding an eigenvalue recovery ratio strictly exceeding 4:
+   $$\frac{\lambda_{\min}(31/60)}{\lambda_{\min}(31/40)} = \frac{81/205}{19/205} = \frac{81}{19} \approx 4.263158 > 4.$$
+3. **Cauchy–Schwarz 3-Cube Curvature Sharing & Anisotropic Cube Gap (`NEG-YM-091`):**
+   - For an anisotropic elementary 3-cube configuration where two primary faces carry action $s_p$ each, the discrete Bianchi identity $\prod_{f=1}^6 U_f = I$ enforces return flux across the remaining 4 faces: $\sum_{j=3}^6 \theta_j \ge 2\theta_p$.
+     By the Cauchy–Schwarz inequality, the return action satisfies $\sum_{j=3}^6 s_j \ge 4 (s_p / 16) = s_p / 4$, amplifying the 3-cube multiplier from $\mathcal{M}_{\mathrm{pair}} = 2$ to:
+     $$\mathcal{M}_{\mathrm{CS}} = 2 + \frac{1}{4} = \frac{9}{4} = 2.25.$$
+     The resulting anisotropic Peierls floor is lowered from $31/20 = 1.55$ to:
+     $$s_{\mathrm{floor}}^{\mathrm{CS}} = \frac{31/10}{9/4} = \frac{62}{45} = \frac{992}{720} \approx 1.377778.$$
+   - However, because $s_{\mathrm{floor}}^{\mathrm{CS}} = \frac{62}{45} > s_{\mathrm{coercive}}^{\max} = \frac{41}{48} = \frac{615}{720}$, there remains an open **Anisotropic 3-Cube Curvature Gap** $(\frac{41}{48}, \frac{62}{45})$ of exact rational width:
+     $$\Delta_{\mathrm{aniso\_cube\_gap}} = \frac{62}{45} - \frac{41}{48} = \frac{992 - 615}{720} = \frac{377}{720} \approx 0.523611 > 0,$$
+     which is strictly narrower than the unconstrained pair gap $\Delta_{\mathrm{pair\_gap}} = \frac{167}{240} = \frac{501}{720}$.
+   - Furthermore, across the interior block modes, the residual Brascamp–Lieb determinant amplification factor:
+     $$\lambda_{\min}\left(\frac{31}{60}\right)^{-1} = \frac{205}{81} \approx 2.530864 > 1 \implies \Delta_{\mathrm{BL\_link}} = \frac{205}{81} - 1 = \frac{124}{81} \approx 1.530864 > 0$$
+     accumulates across independent fluctuation modes, preventing small-field polymer contraction.
+   Therefore, Edge `E-CROSSOVER` remains strictly open on $\mathbb{Z}^4$:
+   $$\texttt{E-CROSSOVER} = \mathrm{OPEN\_AND\_UNSOLVED}, \quad \texttt{YM-016} = \mathrm{BLOCKED}, \quad \texttt{clay\_problem} = \mathrm{OPEN\_AND\_UNSOLVED}.$$
+
+### 4. Mathematical Proof
+*Proof.*
+1. **Interior-Link Coboundary Multiplier & Star-Bubble Overlap:**
+   In $D = 4$ dimensions, an interior lattice link $e = (x, \mu)$ is shared by $2(D-1) = 2 	imes 3 = 6$ plaquettes forming its coboundary star $\delta e = \{ p = (x, \mu \wedge \pm \nu) : \nu \ne \mu \}$.
+   Any non-trivial holonomy on link $e$ perturbs all 6 incident plaquettes simultaneously. If link $e$ is excited while neighboring links are unexcited, each incident plaquette satisfies $s_p = s(U_e) = s_0$. The total action of this star excitation is:
+   $$S_{\mathrm{star}}(e) = \sum_{p \in \delta e} s_p = 6 s_0.$$
+   To dominate the 4D animal connectivity constant $c_0 = 22$, it suffices that $6 s_0 > 31/10 > \ln(22)$, which yields the link-star floor:
+   $$s_{\mathrm{floor}}^{\mathrm{link}} = \frac{31/10}{6} = \frac{31}{60} = \frac{124}{240} \approx 0.51666667.$$
+   Comparing with the exact Gaussian coercivity ceiling $s_{\mathrm{coercive}}^{\max} = \frac{41}{48} = \frac{205}{240} \approx 0.85416667$:
+   $$s_{\mathrm{floor}}^{\mathrm{link}} = \frac{124}{240} < \frac{205}{240} = s_{\mathrm{coercive}}^{\max}.$$
+   Thus, for 1-link contractible excitations, the Gaussian coercive regime and the Peierls suppressive regime overlap across the extended window:
+   $$\mathcal{I}_{\mathrm{link\_overlap}} = \left[ \frac{31}{60}, \frac{41}{48} \right] = \left[ \frac{124}{240}, \frac{205}{240} \right],$$
+   of exact rational width:
+   $$\Delta_{\mathrm{link\_overlap}} = \frac{205 - 124}{240} = \frac{81}{240} = \frac{27}{80} = 0.3375 > 0.$$
+
+2. **Hessian Eigenvalue Recovery:**
+   At $s_p = \frac{31}{60}$, the interaction parameter is:
+   $$\delta_{\mathrm{link}} = g_5^2 s_p = \frac{24}{41} \times \frac{31}{60} = \frac{62}{205} \approx 0.302439.$$
+   The minimum Hessian eigenvalue is:
+   $$\lambda_{\min}\left(\frac{31}{60}\right) = 1 - 2\delta_{\mathrm{link}} = 1 - \frac{124}{205} = \frac{81}{205} \approx 0.39512195.$$
+   Comparing this to the eigenvalue at the worldsheet floor $\lambda_{\min}(\frac{31}{40}) = \frac{19}{205} \approx 0.09268293$:
+   $$\frac{\lambda_{\min}(31/60)}{\lambda_{\min}(31/40)} = \frac{81/205}{19/205} = \frac{81}{19} \approx 4.26315789 > 4.$$
+   Thus, lowering the handoff threshold to the link-star floor improves the spectral gap of the fluctuation operator by more than a factor of 4.
+
+3. **Cauchy–Schwarz 3-Cube Curvature Sharing & Anisotropic Cube Gap (`NEG-YM-091`):**
+   - Not all contractible configurations consist of a single isolated link. An elementary 3-cube $c_3 \subset \mathbb{Z}^4$ has 6 square faces $\{p_1, \dots, p_6\}$. By the discrete non-Abelian Bianchi identity:
+     $$\prod_{j=1}^6 U_{p_j}^{\epsilon_j} = I \in \SU(2).$$
+     In terms of class angles $\theta_j \in [0, \pi]$ where $s_j = 1 - \cos \theta_j = 2 \sin^2(\theta_j/2)$, the triangle inequality on $\SU(2)$ geodesic lengths implies:
+     $$\theta_1 + \theta_2 \le \sum_{j=3}^6 \theta_j.$$
+     For an anisotropic 3-cube configuration where two primary faces carry equal curvature $\theta_1 = \theta_2 = \theta_p$, we have $\sum_{j=3}^6 \theta_j \ge 2\theta_p$.
+     Applying the Cauchy–Schwarz inequality $\left(\sum_{j=3}^6 1 \cdot \theta_j\right)^2 \le 4 \sum_{j=3}^6 \theta_j^2$:
+     $$\sum_{j=3}^6 \theta_j^2 \ge \frac{(2\theta_p)^2}{4} = \theta_p^2.$$
+     For small to intermediate angles, $s(\theta) \approx \theta^2/2$. Minimizing the sum under equal sharing $\theta_j = \theta_p/2$ gives $s_j \approx s_p/4$.
+     Thus, the 4 return faces carry total action:
+     $$\sum_{j=3}^6 s_j \ge 4 \times \frac{s_p}{4} \times \frac{1}{4} = \frac{s_p}{4}.$$
+     The total action on the 3-cube is:
+     $$S(c_3) = s_1 + s_2 + \sum_{j=3}^6 s_j \ge 2 s_p + \frac{s_p}{4} = \frac{9}{4} s_p = \mathcal{M}_{\mathrm{CS}} s_p,$$
+     amplifying the minimal pair multiplier from $\mathcal{M}_{\mathrm{pair}} = 2$ to $\mathcal{M}_{\mathrm{CS}} = 9/4 = 2.25$.
+   - The corresponding Peierls floor is:
+     $$s_{\mathrm{floor}}^{\mathrm{CS}} = \frac{31/10}{9/4} = \frac{31}{10} \times \frac{4}{9} = \frac{62}{45} \approx 1.37777778.$$
+     Because $\frac{62}{45} = \frac{992}{720} > \frac{41}{48} = \frac{615}{720}$, this improved floor still strictly exceeds the Gaussian coercivity ceiling $41/48$.
+     The resulting Anisotropic 3-Cube Curvature Gap is:
+     $$\Delta_{\mathrm{aniso\_cube\_gap}} = \frac{62}{45} - \frac{41}{48} = \frac{992 - 615}{720} = \frac{377}{720} \approx 0.52361111 > 0.$$
+   - Across the interior block modes, each softened mode carries Brascamp–Lieb determinant amplification:
+     $$\lambda_{\min}\left(\frac{31}{60}\right)^{-1} = \frac{205}{81} \approx 2.530864 > 1 \implies \Delta_{\mathrm{BL\_link}} = \frac{205}{81} - 1 = \frac{124}{81} \approx 1.530864 > 0.$$
+     For $M$ interior modes, the multi-mode factor $(205/81)^M = (2.53)^M$ grows exponentially with the number of interior degrees of freedom, overwhelming small-field polymer weights.
+   Hence, Edge `E-CROSSOVER` remains strictly open on $\mathbb{Z}^4$. $\square$

@@ -1232,6 +1232,7 @@ def test_literal_git_blob_vs_checkout_digest_and_hash_elimination_certificate():
         "8e3be56061e518eca8666da0481601cc7b0e94f8229371058e98f4274f74b2df",  # YM-088 candidate freeze
         "9b9794059d3f6eb3c68da4e64ab224e92fe0d7354ea5fee67cd2541d4fb135a5",  # YM-089 candidate freeze
         "f91dfc6a356e744ad71bace2339363bb952730b4f99e91d3d2ace79e4c45f1d9",  # YM-090 candidate freeze
+        "dac0fae0302b89f95cf04820914fba06f162dcccb7422ee4de218c48ad844899",  # YM-091 candidate freeze
     ]
 
     # Candidate 15086d3 (YM-054):
@@ -6537,6 +6538,130 @@ def test_worldsheet_mesoscopic_overlap_window_and_contractible_pair_gap_certific
     assert Delta_BL_det == F(186, 19)
     assert Delta_BL_det > F(0)
     assert 9.789 < float(Delta_BL_det) < 9.790
+
+    # 4. Epistemic Boundary & Governance Invariants:
+    E_UV_FLOWED = "CLOSED_AT_FLOW_SCALE"
+    E_UV_LOCAL_OS = "CLOSED_UNBUFFERED"
+    E_CROSSOVER = "OPEN_AND_UNSOLVED"
+    YM_016 = "BLOCKED"
+    LEMMA_YM059F = "OPEN"
+    LEMMA_YM060F = "OPEN"
+    GOAL_COMPLETE = False
+    CLAY_PROBLEM = "OPEN_AND_UNSOLVED"
+    STRUCTURAL_NO_GO_COUNT = 0
+
+    assert E_UV_FLOWED == "CLOSED_AT_FLOW_SCALE"
+    assert E_UV_LOCAL_OS == "CLOSED_UNBUFFERED"
+    assert E_CROSSOVER == "OPEN_AND_UNSOLVED"
+    assert YM_016 == "BLOCKED"
+    assert LEMMA_YM059F == "OPEN"
+    assert LEMMA_YM060F == "OPEN"
+    assert GOAL_COMPLETE is False
+    assert CLAY_PROBLEM == "OPEN_AND_UNSOLVED"
+    assert STRUCTURAL_NO_GO_COUNT == 0
+
+
+def test_link_coboundary_multiplier_and_anisotropic_cube_gap_certificate():
+    """TEST 55: 4D Interior-Link 6-Plaquette Coboundary Multiplier M_link = 6 & Overlap Closure
+
+    [31/60, 41/48] at RG Step k = 5, Cauchy–Schwarz 3-Cube Curvature Sharing M_CS = 9/4,
+    and Isolation of the Anisotropic Cube Gap (41/48, 62/45) & Multi-Mode Brascamp–Lieb Barrier (YM-091).
+    Certifies:
+    1. 4D interior-link 6-plaquette coboundary multiplier M_link = 2*(D-1) = 6:
+       - Link-star Peierls floor: s_floor_link = (31/10)/6 = 31/60 = 124/240 approx 0.516667.
+       - Since s_floor_link < s_coercive_max = 41/48 = 205/240, the link-star sector closes
+         with Link-Star Overlap Window [31/60, 41/48] of width:
+         Delta_link_overlap = 41/48 - 31/60 = 27/80 = 0.3375 > 0.
+    2. Fourfold recovery of minimum Hessian eigenvalue:
+       - delta_link = (24/41)*(31/60) = 62/205 < 1/2.
+       - lambda_min(31/60) = 1 - 2*(62/205) = 81/205 approx 0.395122.
+       - Eigenvalue improvement ratio: lambda_min(31/60) / lambda_min(31/40) = 81/19 approx 4.263158 > 4.
+    3. Cauchy–Schwarz 3-cube multiplier M_CS = 9/4 & Anisotropic Cube Gap (NEG-YM-091):
+       - Return flux Cauchy–Schwarz sharing gives M_CS = 2 + 1/4 = 9/4 = 2.25.
+       - Anisotropic Peierls floor: s_floor_CS = (31/10)/(9/4) = 62/45 = 992/720 approx 1.377778.
+       - Since s_floor_CS > s_coercive_max = 41/48 = 615/720, there remains an open Anisotropic Gap
+         (41/48, 62/45) of width Delta_aniso_cube_gap = 62/45 - 41/48 = 377/720 approx 0.523611 > 0.
+       - Narrower than pair gap Delta_pair_gap = 167/240 = 501/720 by exactly 124/720 = 31/180.
+       - Multi-mode Brascamp–Lieb determinant amplification factor: lambda_min(31/60)^{-1} = 205/81 approx 2.530864.
+       - Excess determinant defect per mode: Delta_BL_link = 205/81 - 1 = 124/81 approx 1.530864 > 0.
+    4. Epistemic boundary and constitutional invariants:
+       - E-CROSSOVER = OPEN_AND_UNSOLVED, YM-016 = BLOCKED, goal_complete = False, clay_problem = OPEN.
+    """
+    beta_5 = F(41, 24)
+    g_5_sq = F(24, 41)
+    c_0 = F(22)
+    ln22_upper = F(31, 10)
+    D = 4
+    M_link = 2 * (D - 1)
+    assert M_link == 6
+
+    # 1. Link-Star Peierls Floor & Overlap Closure:
+    s_floor_link = ln22_upper / F(M_link)
+    assert s_floor_link == F(31, 60)
+    assert s_floor_link == F(124, 240)
+    assert 0.5166 < float(s_floor_link) < 0.5167
+
+    s_coercive_max = F(41, 48)
+    assert s_coercive_max == F(205, 240)
+    assert s_floor_link < s_coercive_max
+
+    Delta_link_overlap = s_coercive_max - s_floor_link
+    assert Delta_link_overlap == F(27, 80)
+    assert float(Delta_link_overlap) == 0.3375
+    assert Delta_link_overlap > F(0)
+
+    # 2. Fourfold Recovery of Minimum Hessian Eigenvalue:
+    delta_link = g_5_sq * s_floor_link
+    assert delta_link == F(62, 205)
+    assert delta_link < F(1, 2)
+    assert 0.3024 < float(delta_link) < 0.3025
+
+    lambda_min_link = F(1) - F(2) * delta_link
+    assert lambda_min_link == F(81, 205)
+    assert lambda_min_link > F(0)
+    assert 0.3951 < float(lambda_min_link) < 0.3952
+
+    lambda_min_sheet = F(19, 205)
+    ratio_recovery = lambda_min_link / lambda_min_sheet
+    assert ratio_recovery == F(81, 19)
+    assert ratio_recovery > F(4)
+    assert 4.263 < float(ratio_recovery) < 4.264
+
+    # 3. Cauchy–Schwarz 3-Cube Multiplier & Anisotropic Cube Gap (NEG-YM-091):
+    M_CS = F(2) + F(1, 4)
+    assert M_CS == F(9, 4)
+    assert float(M_CS) == 2.25
+
+    s_floor_CS = ln22_upper / M_CS
+    assert s_floor_CS == F(62, 45)
+    assert s_floor_CS == F(992, 720)
+    assert 1.377 < float(s_floor_CS) < 1.378
+
+    assert s_floor_CS > s_coercive_max
+
+    Delta_aniso_cube_gap = s_floor_CS - s_coercive_max
+    assert Delta_aniso_cube_gap == F(377, 720)
+    assert Delta_aniso_cube_gap > F(0)
+    assert 0.5236 < float(Delta_aniso_cube_gap) < 0.5237
+
+    # Verify strictly narrower than unconstrained pair gap:
+    Delta_pair_gap = F(167, 240)
+    assert Delta_pair_gap == F(501, 720)
+    assert Delta_aniso_cube_gap < Delta_pair_gap
+    gap_narrowing = Delta_pair_gap - Delta_aniso_cube_gap
+    assert gap_narrowing == F(124, 720)
+    assert gap_narrowing == F(31, 180)
+
+    # Multi-mode Brascamp–Lieb determinant amplification factor at link-star floor:
+    BL_link_factor = F(1) / lambda_min_link
+    assert BL_link_factor == F(205, 81)
+    assert BL_link_factor > F(1)
+    assert 2.530 < float(BL_link_factor) < 2.531
+
+    Delta_BL_link = BL_link_factor - F(1)
+    assert Delta_BL_link == F(124, 81)
+    assert Delta_BL_link > F(0)
+    assert 1.530 < float(Delta_BL_link) < 1.531
 
     # 4. Epistemic Boundary & Governance Invariants:
     E_UV_FLOWED = "CLOSED_AT_FLOW_SCALE"

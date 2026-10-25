@@ -1417,3 +1417,11 @@ Task `YM-088` resolves this single-plaquette defect by incorporating the geometr
   2. Complete closure of the mesoscopic gap for topological worldsheets via overlap window $[31/40, 41/48]$ of width $\Delta_{\mathrm{sheet\_overlap}} = 19/240 \approx 0.079167 > 0$ and Hessian coercivity margin at the floor $\Delta_{\mathrm{Hessian\_floor}} = 19/410 \approx 0.0463415 > 0$.
   3. Isolation of Contractible 3-Cube Pair Curvature Gap $(\frac{41}{48}, \frac{31}{20})$ of width $\Delta_{\mathrm{pair\_gap}} = 167/240 \approx 0.695833 > 0$ and Brascamp–Lieb determinant amplification factor $\lambda_{\min}^{-1} = 205/19 \approx 10.789474 > 1$ with excess defect $\Delta_{\mathrm{BL\_det}} = 186/19 \approx 9.789474 > 0$ (`NEG-YM-090`).
   4. Preservation of epistemic invariants: `E-CROSSOVER = OPEN_AND_UNSOLVED`, `YM-016 = BLOCKED`, `goal_complete = false`, and `clay_problem = OPEN_AND_UNSOLVED`.
+
+### Task Specification YM-091: 4D Interior-Link 6-Plaquette Coboundary Multiplier & Overlap Closure, Cauchy-Schwarz 3-Cube Curvature Sharing, and Isolation of the Anisotropic Cube Gap & Multi-Mode Brascamp-Lieb Barrier
+- **Contract:** `YM-015F-JET-002B`
+- **Objective:** Prove Lemma `YM-091F` and certify:
+  1. 4D interior-link 6-plaquette coboundary multiplier $\mathcal{M}_{\mathrm{link}} = 2(D-1) = 6$ and link-star floor $s_{\mathrm{floor}}^{\mathrm{link}} = 31/60 = 124/240 < 41/48$, establishing Link-Star Overlap Window $[31/60, 41/48]$ of width $\Delta_{\mathrm{link\_overlap}} = 27/80 = 0.3375 > 0$.
+  2. Fourfold recovery of minimum Hessian eigenvalue: $\lambda_{\min}(31/60) = 81/205 \approx 0.395122$ with ratio $\frac{\lambda_{\min}(31/60)}{\lambda_{\min}(31/40)} = 81/19 \approx 4.263158 > 4$.
+  3. Cauchy–Schwarz 3-cube multiplier $\mathcal{M}_{\mathrm{CS}} = 9/4$ and isolation of Anisotropic 3-Cube Curvature Gap $(\frac{41}{48}, \frac{62}{45})$ of width $\Delta_{\mathrm{aniso\_cube\_gap}} = 377/720 \approx 0.523611 > 0$ and multi-mode Brascamp–Lieb determinant excess $\Delta_{\mathrm{BL\_link}} = 124/81 \approx 1.530864 > 0$ per mode (`NEG-YM-091`).
+  4. Preservation of epistemic invariants: `E-CROSSOVER = OPEN_AND_UNSOLVED`, `YM-016 = BLOCKED`, `goal_complete = false`, and `clay_problem = OPEN_AND_UNSOLVED`.
