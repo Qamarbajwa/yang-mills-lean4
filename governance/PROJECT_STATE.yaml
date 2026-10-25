@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 136
+revision: 137
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "cc5a63d56983a76cb8a6864cc5bb1531e17dbe73"
-  scientific_candidate_sha: ""
-  review_bound_sha: ""
-  evidence_closeout_head: "4df5e3c8c49186044468f7c40abb4d9caca954ac"
-  closeout_resolution: "evidence_closeout_head binds preceding completed YM-089 closeout commit (4df5e3c8c49186044468f7c40abb4d9caca954ac); candidate freeze for YM-090 is staged at State Revision 136."
+  head: "e396cfbc27f7105173e361a024fb7d8b560894bc"
+  scientific_candidate_sha: "2c137117cbfb4c63384e0734c01114c2e0187426"
+  review_bound_sha: "2c137117cbfb4c63384e0734c01114c2e0187426"
+  evidence_closeout_head: "2c137117cbfb4c63384e0734c01114c2e0187426"
+  closeout_resolution: "evidence_closeout_head binds scientific candidate commit (2c137117cbfb4c63384e0734c01114c2e0187426); YM-090 is scientifically accepted and closed out at State Revision 137."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,8 +32,8 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 135
-  last_updated_at: "2026-10-25T13:10:00Z"
+  last_expected_revision: 136
+  last_updated_at: "2026-10-25T13:25:00Z"
   active_contract: "YM-015F-JET-002B"
   frozen_candidate: ""
 
@@ -49,7 +49,7 @@ objectives:
     atlas_writer_and_coordinator: "primary-worker"
     reviewer_path: "verification/raw/YM-090_E4_RAW_20261025.md"
     acceptor: "verification/YM-090_TECHNICAL_ACCEPTANCE.md"
-    status: CANDIDATE_FROZEN
+    status: SCIENTIFICALLY_ACCEPTED
     scope_limitation: "WORLDSHEET_OVERLAP_WINDOW_PROVED_CONTRACTIBLE_PAIR_GAP_ISOLATED_AND_CLAY_OPEN"
   - id: YM-089
     scope_in: "Bałaban Small-Field Gaussian Coercivity Restoration on the Coherent Spin-Wave Sub-Domain s_p <= 31/960 at RG Step k = 5, Extension of the Bianchi Worldsheet Peierls Bound to s_p > 31/40, and Isolation of the Mesoscopic Curvature Matching Gap (31/960, 31/40) & Cutoff Gradient Barrier on Edge E-CROSSOVER, proof of Lemma YM-089F-BALABAN-SPINWAVE-GAUSSIAN-COERCIVITY-AND-MESOSCOPIC-GAP, and Test 53 finite certificate"
