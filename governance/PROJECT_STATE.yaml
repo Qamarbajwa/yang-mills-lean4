@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 138
+revision: 139
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "5b6224a358d5f4c9e67aa7302a015c84e608c7ac"
-  scientific_candidate_sha: ""
-  review_bound_sha: ""
-  evidence_closeout_head: "0f8ff360d88058534554a2d6d82511655d7024f8"
-  closeout_resolution: "evidence_closeout_head binds preceding completed YM-090 closeout commit (0f8ff360d88058534554a2d6d82511655d7024f8); candidate freeze for YM-091 is staged at State Revision 138."
+  head: "6420cdbe6ec3fee4f19c1435fecdb0716a3d8e9f"
+  scientific_candidate_sha: "4b0a2a0f1d7476e81eab5c677e03a40a730a9998"
+  review_bound_sha: "4b0a2a0f1d7476e81eab5c677e03a40a730a9998"
+  evidence_closeout_head: "4b0a2a0f1d7476e81eab5c677e03a40a730a9998"
+  closeout_resolution: "evidence_closeout_head binds scientific candidate commit (4b0a2a0f1d7476e81eab5c677e03a40a730a9998); YM-091 is scientifically accepted and closed out at State Revision 139."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,8 +32,8 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 137
-  last_updated_at: "2026-10-25T14:10:00Z"
+  last_expected_revision: 138
+  last_updated_at: "2026-10-25T14:25:00Z"
   active_contract: "YM-015F-JET-002B"
   frozen_candidate: ""
 
@@ -49,7 +49,7 @@ objectives:
     atlas_writer_and_coordinator: "primary-worker"
     reviewer_path: "verification/raw/YM-091_E4_RAW_20261025.md"
     acceptor: "verification/YM-091_TECHNICAL_ACCEPTANCE.md"
-    status: CANDIDATE_FROZEN
+    status: SCIENTIFICALLY_ACCEPTED
     scope_limitation: "LINK_COBOUNDARY_OVERLAP_PROVED_ANISOTROPIC_GAP_ISOLATED_AND_CLAY_OPEN"
   - id: YM-090
     scope_in: "Closure of the Topological Worldsheet Mesoscopic Gap via Gaussian-Coercivity / Bianchi-Peierls Overlap Window [31/40, 41/48] at RG Step k = 5, and Isolation of the Contractible 3-Cube Pair Gap (41/48, 31/20) & Brascamp-Lieb Determinant Amplification Barrier on Edge E-CROSSOVER, proof of Lemma YM-090F-WORLDSHEET-MESOSCOPIC-OVERLAP-AND-CONTRACTIBLE-PAIR-GAP, and Test 54 finite certificate"
