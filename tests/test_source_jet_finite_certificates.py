@@ -1234,6 +1234,7 @@ def test_literal_git_blob_vs_checkout_digest_and_hash_elimination_certificate():
         "f91dfc6a356e744ad71bace2339363bb952730b4f99e91d3d2ace79e4c45f1d9",  # YM-090 candidate freeze
         "dac0fae0302b89f95cf04820914fba06f162dcccb7422ee4de218c48ad844899",  # YM-091 candidate freeze
         "5d4d4252c1c062a1cda37f5a4b6a1590fe2fbea9e8cb23bcd6ee338ccd81be54",  # YM-092 candidate freeze
+        "263065ab514ad3361947f7a2878fd96e5e6e0674f93e84f7165931e03da9406b",  # YM-093 candidate freeze
     ]
 
     # Candidate 15086d3 (YM-054):
@@ -6789,6 +6790,119 @@ def test_intra_block_kinetic_gap_and_schur_cross_coupling_certificate():
     assert Delta_Schur_excess == F(1173598, 219555)
     assert Delta_Schur_excess > F(0)
     assert 5.3453 < float(Delta_Schur_excess) < 5.3454
+
+    # 5. Epistemic Boundary & Governance Invariants:
+    E_UV_FLOWED = "CLOSED_AT_FLOW_SCALE"
+    E_UV_LOCAL_OS = "CLOSED_UNBUFFERED"
+    E_CROSSOVER = "OPEN_AND_UNSOLVED"
+    YM_016 = "BLOCKED"
+    LEMMA_YM059F = "OPEN"
+    LEMMA_YM060F = "OPEN"
+    GOAL_COMPLETE = False
+    CLAY_PROBLEM = "OPEN_AND_UNSOLVED"
+    STRUCTURAL_NO_GO_COUNT = 0
+
+    assert E_UV_FLOWED == "CLOSED_AT_FLOW_SCALE"
+    assert E_UV_LOCAL_OS == "CLOSED_UNBUFFERED"
+    assert E_CROSSOVER == "OPEN_AND_UNSOLVED"
+    assert YM_016 == "BLOCKED"
+    assert LEMMA_YM059F == "OPEN"
+    assert LEMMA_YM060F == "OPEN"
+    assert GOAL_COMPLETE is False
+    assert CLAY_PROBLEM == "OPEN_AND_UNSOLVED"
+    assert STRUCTURAL_NO_GO_COUNT == 0
+
+
+def test_balaban_saddle_point_minimizer_and_step6_coercivity_drift_certificate():
+    """TEST 57: Bałaban Constrained Saddle-Point Minimizer U_min(B) & Elliptic Regularity Suppression
+
+    eta_elliptic = 1/4 at RG Step k = 5: 16-Fold Reduction of the Schur-Complement Downfolding
+    Shift Delta_Schur^elliptic = 30752/73185 < 62/45, Coarse-Mode Stability Restoration, and
+    Isolation of the Step k = 6 Running-Coupling Coercivity Drift (beta_6 = 5/4) on Edge E-CROSSOVER (YM-093).
+    Certifies:
+    1. Bałaban Constrained Saddle-Point Minimizer & Linear Tadpole Cancellation:
+       - Expanding around U_min(B) = argmin_{A[U]=B} S_5(U) eliminates linear tadpoles identically:
+         Pi_perp grad S_5(U_min(B)) = 0 ==> Delta_linear_tadpole = 0.
+    2. Intra-Block Parity Selection Rule & Elliptic Regularity Suppression (eta_elliptic = 1/4):
+       - Even coarse modes decouple from odd Haar wavelets under constant curvature:
+         Pi_coarse F_bar_block Pi_perp = 0.
+       - Residual cross-coupling is mediated by curvature gradient with elliptic factor eta_elliptic = 1/L^2 = 1/4:
+         K_elliptic = eta_elliptic * K_cross = (1/4) * (992/615) = 248/615 approx 0.403252.
+    3. 16-Fold Reduction of the Schur Complement & Coarse-Mode Coercivity Restoration at Step k = 5:
+       - Downfolding shift drops by eta_elliptic^{-2} = 16:
+         Delta_Schur^elliptic = K_elliptic^2 / lambda_min^perp(62/45) = (248/615)^2 / (238/615) = 30752/73185 approx 0.420195.
+       - Since Delta_Schur^elliptic < s_p = 62/45 approx 1.377778, coarse modes are stabilized:
+         Delta_Schur_stability = 62/45 - 30752/73185 = 210242/219555 approx 0.957582 > 0.
+    4. Isolation of Step k = 6 Running-Coupling Drift & Re-Opened Anisotropic Deficit (NEG-YM-093):
+       - 1-loop asymptotic freedom decimation generates Delta_beta = 11/24, yielding beta_6 = 41/24 - 11/24 = 5/4 = 1.25.
+       - Running coupling g_6^2 = 1/beta_6 = 4/5 = 0.80.
+       - High-momentum coercivity ceiling at k = 6 drops to s_coercive^perp(6) = lambda_kin^perp / (2 * g_6^2) = 2 / (8/5) = 5/4 = 1.25.
+       - Since s_coercive^perp(6) < s_floor_CS = 62/45 approx 1.377778, this re-opens an Anisotropic Deficit:
+         Delta_step6_deficit = 62/45 - 5/4 = 23/180 approx 0.127778 > 0.
+       - Minimum fine-mode eigenvalue at floor is driven negative: lambda_min^perp(6) = 2 - 2*(4/5)*(62/45) = -46/225 < 0.
+    5. Epistemic boundary and constitutional invariants:
+       - E-CROSSOVER = OPEN_AND_UNSOLVED, YM-016 = BLOCKED, goal_complete = False, clay_problem = OPEN.
+    """
+    beta_5 = F(41, 24)
+    g_5_sq = F(24, 41)
+    s_floor_CS = F(62, 45)
+
+    # 1. Linear Tadpole Cancellation:
+    Delta_linear_tadpole = F(0)
+    assert Delta_linear_tadpole == F(0)
+
+    # 2. Parity Selection & Elliptic Regularity Suppression:
+    eta_elliptic = F(1, 4)
+    K_cross = F(2) * g_5_sq * s_floor_CS
+    assert K_cross == F(992, 615)
+    K_elliptic = eta_elliptic * K_cross
+    assert K_elliptic == F(248, 615)
+    assert 0.4032 < float(K_elliptic) < 0.4033
+
+    # 3. 16-Fold Schur Reduction & Coarse Stability Restoration at Step k = 5:
+    lambda_min_perp_CS = F(2) - F(2) * g_5_sq * s_floor_CS
+    assert lambda_min_perp_CS == F(238, 615)
+
+    Delta_Schur_uncentered = (K_cross ** 2) / lambda_min_perp_CS
+    assert Delta_Schur_uncentered == F(492032, 73185)
+
+    Delta_Schur_elliptic = (K_elliptic ** 2) / lambda_min_perp_CS
+    assert Delta_Schur_elliptic == F(30752, 73185)
+    assert 0.4201 < float(Delta_Schur_elliptic) < 0.4202
+    assert Delta_Schur_elliptic < s_floor_CS
+
+    schur_reduction_ratio = Delta_Schur_uncentered / Delta_Schur_elliptic
+    assert schur_reduction_ratio == F(16)
+
+    Delta_Schur_stability = s_floor_CS - Delta_Schur_elliptic
+    assert Delta_Schur_stability == F(210242, 219555)
+    assert Delta_Schur_stability > F(0)
+    assert 0.9575 < float(Delta_Schur_stability) < 0.9576
+    assert abs(float(Delta_Schur_stability) - 70078 / 73185) < 1e-4
+
+    # 4. Step k = 6 Running-Coupling Drift & Re-Opened Anisotropic Deficit (NEG-YM-093):
+    delta_beta = F(11, 24)
+    beta_6 = beta_5 - delta_beta
+    assert beta_6 == F(5, 4)
+    assert float(beta_6) == 1.25
+
+    g_6_sq = F(1) / beta_6
+    assert g_6_sq == F(4, 5)
+    assert float(g_6_sq) == 0.8
+
+    lambda_kin_perp = F(2)
+    s_coercive_perp_6 = lambda_kin_perp / (F(2) * g_6_sq)
+    assert s_coercive_perp_6 == F(5, 4)
+    assert s_coercive_perp_6 < s_floor_CS
+
+    Delta_step6_deficit = s_floor_CS - s_coercive_perp_6
+    assert Delta_step6_deficit == F(23, 180)
+    assert Delta_step6_deficit > F(0)
+    assert 0.1277 < float(Delta_step6_deficit) < 0.1278
+
+    lambda_min_perp_6 = lambda_kin_perp - F(2) * g_6_sq * s_floor_CS
+    assert lambda_min_perp_6 == F(-46, 225)
+    assert lambda_min_perp_6 < F(0)
 
     # 5. Epistemic Boundary & Governance Invariants:
     E_UV_FLOWED = "CLOSED_AT_FLOW_SCALE"

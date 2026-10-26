@@ -1434,3 +1434,12 @@ Task `YM-088` resolves this single-plaquette defect by incorporating the geometr
   3. Reversal of multi-mode Brascamp–Lieb determinant growth into exponential contraction: $(\lambda_{\min}^{\perp}(31/60))^{-1} = \frac{205}{286} \approx 0.716783 < 1$ with margin $\Delta_{\mathrm{BL\_contract}} = \frac{81}{286} \approx 0.283217 > 0$, guaranteeing $(205/286)^M < 1$ across all $M \ge 1$ fine modes.
   4. Isolation of Schur-Complement Coarse-to-Fine Cross-Coupling Barrier (`NEG-YM-092`): downfolding shift $\Delta_{\mathrm{Schur}} = \frac{492032}{73185} \approx 6.723126$ and destabilizing excess defect $\Delta_{\mathrm{Schur\_excess}} = \frac{1173598}{219555} \approx 5.345349 > 0$ on coarse background modes ($\lambda_{\mathrm{kin}}^{\mathrm{coarse}} = 0$).
   5. Preservation of epistemic invariants: `E-CROSSOVER = OPEN_AND_UNSOLVED`, `YM-016 = BLOCKED`, `goal_complete = false`, and `clay_problem = OPEN_AND_UNSOLVED`.
+
+### Task Specification YM-093: Bałaban Constrained Saddle-Point Minimizer, 16-Fold Schur Reduction, and Step k=6 Running-Coupling Coercivity Drift
+- **Contract:** `YM-015F-JET-002B`
+- **Objective:** Prove Lemma `YM-093F` and certify:
+  1. Bałaban constrained saddle-point minimizer $U_{\min}(B) = \arg\min_{\mathcal{A}[U]=B} S_5(U)$ and linear tadpole cancellation on $\mathcal{H}_{\perp}$ ($\Pi_{\perp} \nabla S_5(U_{\min}) = 0 \implies \Delta_{\mathrm{linear\_tadpole}} = 0$).
+  2. Parity selection rule ($\Pi_{\mathrm{coarse}} \bar{F}_{\mathrm{block}} \Pi_{\perp} = 0$) and elliptic regularity suppression $\eta_{\mathrm{elliptic}} = 1/L^2 = 1/4$, reducing cross-coupling to $K_{\mathrm{elliptic}} = \frac{248}{615} \approx 0.403252$.
+  3. 16-fold reduction of Schur-complement downfolding shift to $\Delta_{\mathrm{Schur}}^{\mathrm{elliptic}} = \frac{30752}{73185} \approx 0.420195 < s_p = \frac{62}{45}$, establishing strictly positive coarse-mode stability margin $\Delta_{\mathrm{Schur\_stability}} = \frac{210242}{219555} \approx 0.957582 > 0$ at step $k = 5$.
+  4. Isolation of Step $k = 6$ Running-Coupling Drift ($\beta_6 = 5/4$, $g_6^2 = 4/5$) and re-opened Anisotropic Coercivity Deficit $\Delta_{\mathrm{step6\_deficit}} = \frac{62}{45} - \frac{5}{4} = \frac{23}{180} \approx 0.127778 > 0$ (`NEG-YM-093`).
+  5. Preservation of epistemic invariants: `E-CROSSOVER = OPEN_AND_UNSOLVED`, `YM-016 = BLOCKED`, `goal_complete = false`, and `clay_problem = OPEN_AND_UNSOLVED`.

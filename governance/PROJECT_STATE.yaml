@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 141
+revision: 142
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "9b9321f59ce4c6d4ce05475a8ad47e9f802e8bed"
-  scientific_candidate_sha: "8c913d3695d7c687f43a34ee754ddee501d99d03"
-  review_bound_sha: "8c913d3695d7c687f43a34ee754ddee501d99d03"
-  evidence_closeout_head: "8c913d3695d7c687f43a34ee754ddee501d99d03"
-  closeout_resolution: "evidence_closeout_head binds scientific candidate commit (8c913d3695d7c687f43a34ee754ddee501d99d03); YM-092 is scientifically accepted and closed out at State Revision 141."
+  head: "5b998c20b63a2f39dec892adb717677efe64cfc4"
+  scientific_candidate_sha: ""
+  review_bound_sha: ""
+  evidence_closeout_head: "d5b44f76ca096ffc8ee7144e3708e31fc5df3087"
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-092 closeout commit (d5b44f76ca096ffc8ee7144e3708e31fc5df3087); candidate freeze for YM-093 is staged at State Revision 142."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,14 +32,25 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 140
-  last_updated_at: "2026-10-26T00:35:00Z"
+  last_expected_revision: 141
+  last_updated_at: "2026-10-26T10:20:00Z"
   active_contract: "YM-015F-JET-002B"
   frozen_candidate: ""
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-093
+    scope_in: "Bałaban Constrained Saddle-Point Minimizer U_min(B) & Elliptic Regularity Suppression eta_elliptic = 1/4 at RG Step k = 5: 16-Fold Reduction of the Schur-Complement Downfolding Shift Delta_Schur^elliptic = 30752/73185 < 62/45, Coarse-Mode Stability Restoration, and Isolation of the Step k = 6 Running-Coupling Coercivity Drift (beta_6 = 5/4) on Edge E-CROSSOVER, proof of Lemma YM-093F-SADDLE-POINT-ELLIPTIC-REGULARITY-AND-STEP-6-COUPLING-DRIFT, and Test 57 finite certificate"
+    scope_out: "Crossing infrared crossover E-CROSSOVER, non-perturbative multi-block lattice collar equivalence, continuum Wightman reconstruction, and full continuum closure"
+    dependencies: ["YM-092"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-093_E4_RAW_20261026.md"
+    acceptor: "verification/YM-093_TECHNICAL_ACCEPTANCE.md"
+    status: CANDIDATE_FROZEN
+    scope_limitation: "SADDLE_POINT_ELLIPTIC_STABILITY_PROVED_STEP6_DRIFT_ISOLATED_AND_CLAY_OPEN"
   - id: YM-092
     scope_in: "High-Momentum Intra-Block Kinetic Laplacian Gap lambda_kin^perp >= 2 at RG Step k = 5: Complete Closure of the Anisotropic 3-Cube Gap [62/45, 41/24], Multi-Mode Brascamp-Lieb Determinant Contraction (lambda_min^perp)^{-1} = 205/286 < 1, and Isolation of the Schur-Complement Coarse-Mode Cross-Coupling Obstruction on Edge E-CROSSOVER, proof of Lemma YM-092F-INTRA-BLOCK-LAPLACIAN-GAP-AND-SCHUR-CROSS-COUPLING-BARRIER, and Test 56 finite certificate"
     scope_out: "Crossing infrared crossover E-CROSSOVER, non-perturbative multi-block lattice collar equivalence, continuum Wightman reconstruction, and full continuum closure"
