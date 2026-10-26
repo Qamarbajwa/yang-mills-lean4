@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 142
+revision: 143
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "5b998c20b63a2f39dec892adb717677efe64cfc4"
-  scientific_candidate_sha: ""
-  review_bound_sha: ""
-  evidence_closeout_head: "d5b44f76ca096ffc8ee7144e3708e31fc5df3087"
-  closeout_resolution: "evidence_closeout_head binds preceding completed YM-092 closeout commit (d5b44f76ca096ffc8ee7144e3708e31fc5df3087); candidate freeze for YM-093 is staged at State Revision 142."
+  head: "f825e47b21bea3675028ab72702d3ed08ecf1353"
+  scientific_candidate_sha: "2a0d33f2aef73a3a8c32e2c50bf3f60bb764ffbb"
+  review_bound_sha: "2a0d33f2aef73a3a8c32e2c50bf3f60bb764ffbb"
+  evidence_closeout_head: "2a0d33f2aef73a3a8c32e2c50bf3f60bb764ffbb"
+  closeout_resolution: "evidence_closeout_head binds scientific candidate commit (2a0d33f2aef73a3a8c32e2c50bf3f60bb764ffbb); YM-093 is scientifically accepted and closed out at State Revision 143."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,8 +32,8 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 141
-  last_updated_at: "2026-10-26T10:20:00Z"
+  last_expected_revision: 142
+  last_updated_at: "2026-10-26T10:35:00Z"
   active_contract: "YM-015F-JET-002B"
   frozen_candidate: ""
 
@@ -49,7 +49,7 @@ objectives:
     atlas_writer_and_coordinator: "primary-worker"
     reviewer_path: "verification/raw/YM-093_E4_RAW_20261026.md"
     acceptor: "verification/YM-093_TECHNICAL_ACCEPTANCE.md"
-    status: CANDIDATE_FROZEN
+    status: SCIENTIFICALLY_ACCEPTED
     scope_limitation: "SADDLE_POINT_ELLIPTIC_STABILITY_PROVED_STEP6_DRIFT_ISOLATED_AND_CLAY_OPEN"
   - id: YM-092
     scope_in: "High-Momentum Intra-Block Kinetic Laplacian Gap lambda_kin^perp >= 2 at RG Step k = 5: Complete Closure of the Anisotropic 3-Cube Gap [62/45, 41/24], Multi-Mode Brascamp-Lieb Determinant Contraction (lambda_min^perp)^{-1} = 205/286 < 1, and Isolation of the Schur-Complement Coarse-Mode Cross-Coupling Obstruction on Edge E-CROSSOVER, proof of Lemma YM-092F-INTRA-BLOCK-LAPLACIAN-GAP-AND-SCHUR-CROSS-COUPLING-BARRIER, and Test 56 finite certificate"
