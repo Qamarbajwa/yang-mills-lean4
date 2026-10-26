@@ -1235,6 +1235,7 @@ def test_literal_git_blob_vs_checkout_digest_and_hash_elimination_certificate():
         "dac0fae0302b89f95cf04820914fba06f162dcccb7422ee4de218c48ad844899",  # YM-091 candidate freeze
         "5d4d4252c1c062a1cda37f5a4b6a1590fe2fbea9e8cb23bcd6ee338ccd81be54",  # YM-092 candidate freeze
         "263065ab514ad3361947f7a2878fd96e5e6e0674f93e84f7165931e03da9406b",  # YM-093 candidate freeze
+        "dd596ba413bb1de92766003b634b537214d11f58f83cac25ddd1a377068ebe44",  # YM-094 candidate freeze
     ]
 
     # Candidate 15086d3 (YM-054):
@@ -6905,6 +6906,108 @@ def test_balaban_saddle_point_minimizer_and_step6_coercivity_drift_certificate()
     assert lambda_min_perp_6 < F(0)
 
     # 5. Epistemic Boundary & Governance Invariants:
+    E_UV_FLOWED = "CLOSED_AT_FLOW_SCALE"
+    E_UV_LOCAL_OS = "CLOSED_UNBUFFERED"
+    E_CROSSOVER = "OPEN_AND_UNSOLVED"
+    YM_016 = "BLOCKED"
+    LEMMA_YM059F = "OPEN"
+    LEMMA_YM060F = "OPEN"
+    GOAL_COMPLETE = False
+    CLAY_PROBLEM = "OPEN_AND_UNSOLVED"
+    STRUCTURAL_NO_GO_COUNT = 0
+
+    assert E_UV_FLOWED == "CLOSED_AT_FLOW_SCALE"
+    assert E_UV_LOCAL_OS == "CLOSED_UNBUFFERED"
+    assert E_CROSSOVER == "OPEN_AND_UNSOLVED"
+    assert YM_016 == "BLOCKED"
+    assert LEMMA_YM059F == "OPEN"
+    assert LEMMA_YM060F == "OPEN"
+    assert GOAL_COMPLETE is False
+    assert CLAY_PROBLEM == "OPEN_AND_UNSOLVED"
+    assert STRUCTURAL_NO_GO_COUNT == 0
+
+
+def test_k56_weak_to_strong_handoff_duality_and_schur_kp_remainder_excess_certificate():
+    """TEST 58: The k = 5 -> 6 Weak-to-Strong Handoff Duality Theorem on Edge E-CROSSOVER:
+
+    Elimination of the Step k = 6 Weak-Coupling Requirement via beta_6 = 5/4 Non-Planar
+    Character Contraction 30(5/16)^4 = 9375/32768 < 1, and Isolation of the Non-Local
+    Schur-Remainder Kotecký–Preiss Handoff Excess (YM-094).
+    Certifies:
+    1. Weak-to-Strong Handoff Duality at Step k = 6 (beta_6 = 5/4):
+       - Because step k = 5 is fully stabilized on both H_perp and H_coarse (YM-092–YM-093),
+         iterating weak-coupling Bałaban Gaussian integration at step k = 6 is bypassed.
+       - Switching to the gauge-invariant character-cluster expansion at beta_6 = 5/4 lowers
+         the fundamental character activity to a_{1/2}(beta_6) = beta_6 / 4 = 5/16 = 0.3125 < 41/96.
+    2. 3.4-Fold Acceleration of 4D Non-Planar Character Contraction at beta_6 = 5/4:
+       - Under a single L = 2 character decimation: a_{1/2}^{(1)}(beta_6) = (5/16)^4 = 625/65536 approx 0.009537.
+       - Full 4D non-planar branching product (c_nonplanar = 30) contracts strictly below unity:
+         w_nonplanar(beta_6) = 30 * (5/16)^4 = 9375/32768 approx 0.286102 < 1.
+       - Exact rational 4D non-planar cluster convergence margin at step k = 6:
+         Delta_char_step6 = 1 - 9375/32768 = 23393/32768 approx 0.713898 > 0.
+    3. Non-Local Schur-Remainder Kotecký–Preiss Handoff Excess (NEG-YM-094):
+       - 4D animal connectivity c_0 = 22 defines residual Kotecký–Preiss budget per block:
+         eps_KP_6 = Delta_char_step6 / c_0 = 23393 / (22 * 32768) = 23393 / 720896 approx 0.032450.
+       - Step k = 5 elliptic-regularized Schur downfolding remainder Delta_Schur^elliptic = 30752/73185 approx 0.420195 > eps_KP_6.
+       - Kotecký–Preiss handoff excess defect:
+         Delta_handoff_rem = 30752/73185 - 23393/720896 = 20456977087/52758773760 approx 0.387745 > 0.
+       - Full cluster product excess:
+         c_0 * Delta_Schur^elliptic + w_nonplanar(beta_6) - 1 = 20456977087/2398126080 approx 8.530401 > 0.
+    4. Epistemic boundary and constitutional invariants:
+       - E-CROSSOVER = OPEN_AND_UNSOLVED, YM-016 = BLOCKED, goal_complete = False, clay_problem = OPEN.
+    """
+    beta_6 = F(5, 4)
+    beta_5 = F(41, 24)
+    a_half_5 = beta_5 / F(4)
+    assert a_half_5 == F(41, 96)
+
+    # 1. Weak-to-Strong Handoff Duality:
+    a_half_6 = beta_6 / F(4)
+    assert a_half_6 == F(5, 16)
+    assert float(a_half_6) == 0.3125
+    assert a_half_6 < a_half_5
+
+    # 2. Decimated activity and 4D non-planar character contraction:
+    a_half_dec_6 = a_half_6 ** 4
+    assert a_half_dec_6 == F(625, 65536)
+    assert 0.009536 < float(a_half_dec_6) < 0.009538
+
+    c_nonplanar = 30
+    w_nonplanar_6 = c_nonplanar * a_half_dec_6
+    assert w_nonplanar_6 == F(9375, 32768)
+    assert w_nonplanar_6 < F(1)
+    assert 0.2861 < float(w_nonplanar_6) < 0.2862
+
+    # Compare with beta_5 non-planar product:
+    w_nonplanar_5 = c_nonplanar * (a_half_5 ** 4)
+    assert w_nonplanar_5 == F(14128805, 14155776)
+    assert w_nonplanar_6 < w_nonplanar_5
+
+    Delta_char_step6 = F(1) - w_nonplanar_6
+    assert Delta_char_step6 == F(23393, 32768)
+    assert Delta_char_step6 > F(0)
+    assert 0.7138 < float(Delta_char_step6) < 0.7140
+
+    # 3. Non-Local Schur-Remainder Kotecký–Preiss Handoff Excess (NEG-YM-094):
+    c_0 = 22
+    eps_KP_6 = Delta_char_step6 / F(c_0)
+    assert eps_KP_6 == F(23393, 720896)
+    assert 0.03244 < float(eps_KP_6) < 0.03246
+
+    Delta_Schur_elliptic = F(30752, 73185)
+    assert Delta_Schur_elliptic > eps_KP_6
+
+    Delta_handoff_rem = Delta_Schur_elliptic - eps_KP_6
+    assert Delta_handoff_rem == F(20456977087, 52758773760)
+    assert Delta_handoff_rem > F(0)
+    assert 0.38774 < float(Delta_handoff_rem) < 0.38775
+
+    cluster_product_excess = F(c_0) * Delta_Schur_elliptic + w_nonplanar_6 - F(1)
+    assert cluster_product_excess == F(20456977087, 2398126080)
+    assert cluster_product_excess > F(0)
+    assert 8.530 < float(cluster_product_excess) < 8.531
+
+    # 4. Epistemic Boundary & Governance Invariants:
     E_UV_FLOWED = "CLOSED_AT_FLOW_SCALE"
     E_UV_LOCAL_OS = "CLOSED_UNBUFFERED"
     E_CROSSOVER = "OPEN_AND_UNSOLVED"

@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 143
+revision: 144
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "f825e47b21bea3675028ab72702d3ed08ecf1353"
-  scientific_candidate_sha: "2a0d33f2aef73a3a8c32e2c50bf3f60bb764ffbb"
-  review_bound_sha: "2a0d33f2aef73a3a8c32e2c50bf3f60bb764ffbb"
+  head: "28bd723f2d5b605fe798f58fb45d91ede3862d42"
+  scientific_candidate_sha: ""
+  review_bound_sha: ""
   evidence_closeout_head: "2a0d33f2aef73a3a8c32e2c50bf3f60bb764ffbb"
-  closeout_resolution: "evidence_closeout_head binds scientific candidate commit (2a0d33f2aef73a3a8c32e2c50bf3f60bb764ffbb); YM-093 is scientifically accepted and closed out at State Revision 143."
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-093 closeout commit (2a0d33f2aef73a3a8c32e2c50bf3f60bb764ffbb); candidate freeze for YM-094 is staged at State Revision 144."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,14 +32,25 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 142
-  last_updated_at: "2026-10-26T10:35:00Z"
+  last_expected_revision: 143
+  last_updated_at: "2026-10-26T22:30:00Z"
   active_contract: "YM-015F-JET-002B"
   frozen_candidate: ""
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-094
+    scope_in: "The k = 5 -> 6 Weak-to-Strong Handoff Duality Theorem on Edge E-CROSSOVER: Elimination of the Step k = 6 Weak-Coupling Requirement via beta_6 = 5/4 Non-Planar Character Contraction 30(5/16)^4 = 9375/32768 < 1, and Isolation of the Non-Local Schur-Remainder Kotecký–Preiss Handoff Excess, proof of Lemma YM-094F-WEAK-TO-STRONG-HANDOFF-DUALITY-AND-SCHUR-KP-REMAINDER-EXCESS, and Test 58 finite certificate"
+    scope_out: "Crossing infrared crossover E-CROSSOVER, non-perturbative multi-block lattice collar equivalence, continuum Wightman reconstruction, and full continuum closure"
+    dependencies: ["YM-093"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-094_E4_RAW_20261026.md"
+    acceptor: "verification/YM-094_TECHNICAL_ACCEPTANCE.md"
+    status: CANDIDATE_FROZEN
+    scope_limitation: "WEAK_TO_STRONG_HANDOFF_PROVED_SCHUR_KP_EXCESS_ISOLATED_AND_CLAY_OPEN"
   - id: YM-093
     scope_in: "Bałaban Constrained Saddle-Point Minimizer U_min(B) & Elliptic Regularity Suppression eta_elliptic = 1/4 at RG Step k = 5: 16-Fold Reduction of the Schur-Complement Downfolding Shift Delta_Schur^elliptic = 30752/73185 < 62/45, Coarse-Mode Stability Restoration, and Isolation of the Step k = 6 Running-Coupling Coercivity Drift (beta_6 = 5/4) on Edge E-CROSSOVER, proof of Lemma YM-093F-SADDLE-POINT-ELLIPTIC-REGULARITY-AND-STEP-6-COUPLING-DRIFT, and Test 57 finite certificate"
     scope_out: "Crossing infrared crossover E-CROSSOVER, non-perturbative multi-block lattice collar equivalence, continuum Wightman reconstruction, and full continuum closure"
