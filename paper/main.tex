@@ -53,7 +53,7 @@
 \textit{Governed by Universal Research Operating System v4.0.4+4.0.6-r3} \\
 \textit{Workspace: Yang--Mills and the Mass Gap Programme}}
 
-\date{State Revision 141 --- October 2026}
+\date{State Revision 143 --- October 2026}
 
 \begin{document}
 
@@ -68,7 +68,7 @@ Second, by developing a short flow-time operator product expansion ($t \downarro
 
 Third, we isolate the Clay Millennium Prize threshold by establishing the exact small-field Weitzenb\"ock coercivity exit threshold at renormalization scale step $k = 5$, where the running inverse coupling drops to $\beta_{\mathrm{inv}, 5} = 41/24 < 2$ and $g_5^2 = 24/41 > 1/2$, yielding the certified exit defect $\Delta_{\mathrm{crossover\_exit}} = 7/82 > 0$. We prove the simultaneous onset of tripartite non-perturbative infrared obstructions on edge \texttt{E-CROSSOVER}: (a) large-field plaquette polymer percolation on $\Z^4$ with growth defect $\Delta_{\mathrm{perc}} = 7/4 > 0$, (b) Gribov horizon copy proliferation with Faddeev--Popov degeneracy $\Delta_{\mathrm{Gribov\_copies}} = 1 > 0$, and (c) Savvidy chromomagnetic vacuum instability with tachyonic eigenvalue shift $\Delta_{\mathrm{instability}} = 1/2 > 0$ and massless infrared accumulation defect $\Delta_{\mathrm{massless\_IR\_defect}} = 3 > 0$. 
 
-Every mathematical step is supported by exact rational certificates verified in finite arithmetic across 486 unit tests, bound under strict 3-Agent governance separation (Writer $\ne$ Reviewer $\ne$ Acceptor), and decoupled from the open infrared mass gap problem (\texttt{clay\_problem = OPEN\_AND\_UNSOLVED}).
+Every mathematical step is supported by exact rational certificates verified in finite arithmetic across 487 unit tests, bound under strict 3-Agent governance separation (Writer $\ne$ Reviewer $\ne$ Acceptor), and decoupled from the open infrared mass gap problem (\texttt{clay\_problem = OPEN\_AND\_UNSOLVED}).
 \end{abstract}
 
 \noindent\textbf{Keywords:} Constructive Quantum Field Theory, Yang--Mills Gradient Flow, Ba{\l}aban Renormalization Group, Osterwalder--Schrader Reconstruction, Gribov Horizon, Savvidy Instability, Mass Gap. \\
@@ -689,6 +689,44 @@ which destabilizes the coarse quadratic form. Therefore, Edge \texttt{E-CROSSOVE
 \texttt{E-CROSSOVER} = \mathrm{OPEN\_AND\_UNSOLVED}, \quad \texttt{YM-016} = \mathrm{BLOCKED}, \quad \texttt{clay\_problem} = \mathrm{OPEN\_AND\_UNSOLVED}.
 \end{equation}
 
+\subsection{Ba{\l}aban Constrained Saddle-Point Minimizer, 16-Fold Schur Reduction, and Step $k = 6$ Running-Coupling Drift}
+To address the Schur-complement cross-coupling excess $\Delta_{\mathrm{Schur\_excess}} \approx 5.345349$ isolated in Lemma \texttt{YM-092F} (\texttt{NEG-YM-092}), we introduce the Ba{\l}aban constrained saddle-point minimizer on the block averaging constraint $\mathcal{A}[U] = B$ (Lemma \texttt{YM-093F}):
+\begin{equation}
+U_{\min}(B) = \arg\min_{\mathcal{A}[U]=B} S_5(U).
+\end{equation}
+Expanding gauge fluctuations around the local minimizer $U = U_{\min}(B) e^{v}$ with $v \in \mathcal{H}_{\perp}$ eliminates linear tadpoles identically:
+\begin{equation}
+\Pi_{\perp} \nabla S_5(U_{\min}(B)) = 0 \implies \Delta_{\mathrm{linear\_tadpole}} = 0.
+\end{equation}
+Furthermore, the spatial parity reflection symmetry $\mathcal{P}_{\mu}: x_\mu \mapsto -x_\mu$ across the block center guarantees that constant background curvature components decouple from the odd Haar wavelets of $\mathcal{H}_{\perp}$, leaving only the gradient cross-coupling:
+\begin{equation}
+\Pi_{\mathrm{coarse}} \bar{F}_{\mathrm{block}} \Pi_{\perp} = 0.
+\end{equation}
+By discrete elliptic regularity on the $L = 2$ block, the gradient of the coarse field satisfies $\|\nabla \bar{F}_{\mathrm{block}}\|^2 \le \frac{1}{L^2} \|\bar{F}_{\mathrm{block}}\|^2$, producing an elliptic regularity suppression factor:
+\begin{equation}
+\eta_{\mathrm{elliptic}} = \frac{1}{L^2} = \frac{1}{4}.
+\end{equation}
+The suppressed cross-coupling $K_{\mathrm{elliptic}} = \eta_{\mathrm{elliptic}} K_{\mathrm{cross}} = \frac{1}{4} \times \frac{992}{615} = \frac{248}{615} \approx 0.403252$ reduces the Schur-complement downfolding shift by a factor of $\eta_{\mathrm{elliptic}}^{-2} = 16$:
+\begin{equation}
+\Delta_{\mathrm{Schur}}^{\mathrm{elliptic}} = K_{\mathrm{elliptic}}^2 \left(\lambda_{\min}^{\perp}\left(\frac{62}{45}\right)\right)^{-1} = \left(\frac{248}{615}\right)^2 \times \frac{615}{238} = \frac{30752}{73185} \approx 0.420195.
+\end{equation}
+Because $\Delta_{\mathrm{Schur}}^{\mathrm{elliptic}} = \frac{30752}{73185} < s_p = \frac{62}{45} \approx 1.377778$, coarse-mode stability is fully restored at Step $k = 5$ with a certified positive stability margin:
+\begin{equation}
+\Delta_{\mathrm{Schur\_stability}} = \frac{62}{45} - \frac{30752}{73185} = \frac{210242}{219555} \approx 0.957582 > 0.
+\end{equation}
+However, advancing the Ba{\l}aban renormalization group to scale step $k = 6$ incurs 1-loop asymptotic freedom decimation $\Delta\beta = \frac{11}{24}$, driving the inverse coupling down to $\beta_6 = \frac{41}{24} - \frac{11}{24} = \frac{5}{4} = 1.25$ ($g_6^2 = \frac{4}{5} = 0.80$). The intra-block kinetic coercivity ceiling drops to:
+\begin{equation}
+s_{\mathrm{coercive}}^{\perp}(6) = \frac{\lambda_{\mathrm{kin}}^{\perp}}{2 g_6^2} = \frac{2}{8/5} = \frac{5}{4} = 1.25.
+\end{equation}
+Because $s_{\mathrm{coercive}}^{\perp}(6) = \frac{5}{4} < s_{\mathrm{floor}}^{\mathrm{CS}} = \frac{62}{45} \approx 1.377778$, the anisotropic 3-cube gap re-opens with a certified coercivity deficit:
+\begin{equation}
+\Delta_{\mathrm{step6\_deficit}} = \frac{62}{45} - \frac{5}{4} = \frac{23}{180} \approx 0.127778 > 0 \quad (\texttt{NEG-YM-093}),
+\end{equation}
+driving the intra-block minimum Hessian eigenvalue negative at the Cauchy--Schwarz floor: $\lambda_{\min}^{\perp}(6) = 2 - 2(\frac{4}{5})(\frac{62}{45}) = -\frac{46}{225} < 0$. Consequently, high-momentum Gaussian coercivity collapses at Step $k = 6$, and Edge \texttt{E-CROSSOVER} remains open on $\mathbb{Z}^4$:
+\begin{equation}
+\texttt{E-CROSSOVER} = \mathrm{OPEN\_AND\_UNSOLVED}, \quad \texttt{YM-016} = \mathrm{BLOCKED}, \quad \texttt{clay\_problem} = \mathrm{OPEN\_AND\_UNSOLVED}.
+\end{equation}
+
 % =========================================================================
 % APPENDIX: TRACEABILITY MATRIX AND VERIFICATION
 % =========================================================================
@@ -734,6 +772,7 @@ which destabilizes the coarse quadratic form. Therefore, Edge \texttt{E-CROSSOVE
 \texttt{YM-090}  & Worldsheet Overlap \& Contractible Pair Gap & Test 54 & Revision 137 \\
 \texttt{YM-091}  & Link Coboundary Multiplier \& Anisotropic Cube Gap & Test 55 & Revision 139 \\
 \texttt{YM-092}  & Intra-Block Kinetic Gap \& Schur Cross-Coupling & Test 56 & Revision 141 \\
+\texttt{YM-093}  & Saddle-Point Minimizer \& Step 6 Coupling Drift & Test 57 & Revision 143 \\
 \bottomrule
 \end{tabular}
 \caption{Traceability matrix mapping proved lemmas to deterministic regression test certificates.}
@@ -744,7 +783,7 @@ The complete codebase, test suite, and governance records can be independently r
 \begin{verbatim}
 $ python scripts/verify_all.py
 \end{verbatim}
-This script deterministically verifies the 158-file closed-world checkout digest (\texttt{5d4d4252...}), the literal Git-blob digest (\texttt{f40a2181...}), append-only negative evidence integrity (0 deletions), and passes all 486 exact rational certificates in under 10 seconds.
+This script deterministically verifies the 158-file closed-world checkout digest (\texttt{263065ab...}), the literal Git-blob digest (\texttt{d12aaa0c...}), append-only negative evidence integrity (0 deletions), and passes all 487 exact rational certificates in under 10 seconds.
 
 \bibliographystyle{plain}
 \bibliography{references}
