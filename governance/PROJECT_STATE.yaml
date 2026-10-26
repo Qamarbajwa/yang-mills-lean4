@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 144
+revision: 145
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "28bd723f2d5b605fe798f58fb45d91ede3862d42"
-  scientific_candidate_sha: ""
-  review_bound_sha: ""
-  evidence_closeout_head: "2a0d33f2aef73a3a8c32e2c50bf3f60bb764ffbb"
-  closeout_resolution: "evidence_closeout_head binds preceding completed YM-093 closeout commit (2a0d33f2aef73a3a8c32e2c50bf3f60bb764ffbb); candidate freeze for YM-094 is staged at State Revision 144."
+  head: "6d720e4c07f5dc6da9c1938c1c7cdd260245b88b"
+  scientific_candidate_sha: "99936e3a73399a7a285e147c9909e606e64c2c04"
+  review_bound_sha: "99936e3a73399a7a285e147c9909e606e64c2c04"
+  evidence_closeout_head: "99936e3a73399a7a285e147c9909e606e64c2c04"
+  closeout_resolution: "evidence_closeout_head binds scientific candidate commit (99936e3a73399a7a285e147c9909e606e64c2c04); YM-094 is scientifically accepted and closed out at State Revision 145."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,8 +32,8 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 143
-  last_updated_at: "2026-10-26T22:30:00Z"
+  last_expected_revision: 144
+  last_updated_at: "2026-10-26T22:40:00Z"
   active_contract: "YM-015F-JET-002B"
   frozen_candidate: ""
 
@@ -49,7 +49,7 @@ objectives:
     atlas_writer_and_coordinator: "primary-worker"
     reviewer_path: "verification/raw/YM-094_E4_RAW_20261026.md"
     acceptor: "verification/YM-094_TECHNICAL_ACCEPTANCE.md"
-    status: CANDIDATE_FROZEN
+    status: SCIENTIFICALLY_ACCEPTED
     scope_limitation: "WEAK_TO_STRONG_HANDOFF_PROVED_SCHUR_KP_EXCESS_ISOLATED_AND_CLAY_OPEN"
   - id: YM-093
     scope_in: "Bałaban Constrained Saddle-Point Minimizer U_min(B) & Elliptic Regularity Suppression eta_elliptic = 1/4 at RG Step k = 5: 16-Fold Reduction of the Schur-Complement Downfolding Shift Delta_Schur^elliptic = 30752/73185 < 62/45, Coarse-Mode Stability Restoration, and Isolation of the Step k = 6 Running-Coupling Coercivity Drift (beta_6 = 5/4) on Edge E-CROSSOVER, proof of Lemma YM-093F-SADDLE-POINT-ELLIPTIC-REGULARITY-AND-STEP-6-COUPLING-DRIFT, and Test 57 finite certificate"
