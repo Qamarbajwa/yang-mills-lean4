@@ -6996,3 +6996,58 @@ Then:
    $$w_{\mathrm{dressed}} = 0.85588997 + 0.57776867 = 1.43365864 > 1,$$
    exceeding the Kotecký–Preiss threshold by $\Delta_{\mathrm{dressed\_excess}} \approx 0.43365864 > 0$. This 20-fold reduction of the excess (from $8.5304$ down to $0.4337$) localizes the non-perturbative barrier to the competition between local coupling dressing and non-local polymer propagation.
    Edge `E-CROSSOVER` remains strictly `OPEN_AND_UNSOLVED`, Task `YM-016` remains `BLOCKED`, `goal_complete` remains `false`, and `clay_problem` remains `OPEN_AND_UNSOLVED`. $\square$
+
+
+## YM-096: Schur-Screening Sign-Orientation Theorem, Two-Species Kotecký–Preiss Convergence, and Isolation of Unified Three-Species Overlap Excess
+
+### Mathematical Statement (Lemma YM-096F)
+Let $\beta_6 = 5/4$ be the bare running coupling at RG step $k = 6$ on edge `E-CROSSOVER` resulting from integrating out the high-momentum intra-block fluctuations $\mathcal{H}_5^{\perp}$ with 1-loop asymptotic freedom shift $\Delta\beta = 11/24$. Let $\Delta_{\mathrm{Schur}}^{\mathrm{local}} = \frac{1922}{4879} \approx 0.393933$ and $\Delta_{\mathrm{Schur}}^{\mathrm{nonlocal}} = \frac{1922}{73185} \approx 0.026262$ be the Combes–Thomas local-vs-nonlocal operator product decomposition of the elliptic Schur complement $\Delta_{\mathrm{Schur}}^{\mathrm{elliptic}} = \frac{30752}{73185}$ from step $k = 5$ (Lemma `YM-095F`).
+
+Then:
+1. **Schur-Screening Sign-Orientation Theorem:** The Gaussian Schur-complement downfolding functional $-\frac{1}{2} \langle J_{\mathrm{elliptic}}, (\mathcal{H}_5^{\perp})^{-1} J_{\mathrm{elliptic}} \rangle$ enters the coarse effective action $S_{\mathrm{eff}}^{(6)}(B)$ with a negative (screening) sign relative to the bare curvature action $S_6(B) = \frac{\beta_6}{2} \sum_p \mathrm{Tr}(I - U_p(B))$. Consequently, absorbing the single-block local component $\Delta_{\mathrm{Schur}}^{\mathrm{local}} = \frac{1922}{4879}$ into the local coarse plaquette action screens (reduces) the effective inverse coupling:
+   $$\beta_6^{\mathrm{screened}} = \beta_6 - \Delta_{\mathrm{Schur}}^{\mathrm{local}} = \frac{5}{4} - \frac{1922}{4879} = \frac{16707}{19516} \approx 0.85606682 > 0,$$
+   yielding fundamental character expansion parameter:
+   $$a_{1/2}(\beta_6^{\mathrm{screened}}) = \frac{\beta_6^{\mathrm{screened}}}{4} = \frac{16707}{78064} \approx 0.21401670.$$
+
+2. **Complete Resolution of the Two-Species Kotecký–Preiss Sum (`NEG-YM-095` Resolved):** At the true screened coupling $\beta_6^{\mathrm{screened}} = \frac{16707}{19516}$, 4D non-planar character branching ($c_{\mathrm{nonplanar}} = 30$) contracts to:
+   $$w_{\mathrm{char}}(\beta_6^{\mathrm{screened}}) = 30 \times \left(\frac{16707}{78064}\right)^4 = \frac{1168651846208622015}{18568345457094852608} \approx 0.06293786 < 1.$$
+   Combining the screened character weight with the non-local Combes–Thomas Schur tail $c_0 \Delta_{\mathrm{Schur}}^{\mathrm{nonlocal}} = 22 \times \frac{1922}{73185} = \frac{42284}{73185} \approx 0.57776867$, the **Two-Species Kotecký–Preiss Sum** contracts strictly below unity:
+   $$w_{\mathrm{2species}}^{(6)} = w_{\mathrm{char}}(\beta_6^{\mathrm{screened}}) + c_0 \Delta_{\mathrm{Schur}}^{\mathrm{nonlocal}} = \frac{178452901142155513393}{278525181856422789120} \approx 0.64070652 < 1,$$
+   with an exact rational Two-Species Convergence Margin:
+   $$\Delta_{\mathrm{2species\_margin}} = 1 - w_{\mathrm{2species}}^{(6)} = \frac{100072280714267275727}{278525181856422789120} \approx 0.35929348 > \frac{1}{3} > 0,$$
+   completely eliminating the dressed-coupling tradeoff excess isolated in `NEG-YM-095`.
+
+3. **Unified Three-Species Overlap Excess (`NEG-YM-096`):** On the full coarse lattice $\mathbb{Z}^4$, the complete polymer partition function $Z^{(6)}$ must sum over three concurrent polymer species:
+   (a) Screened character polymers $w_{\mathrm{char}}(\beta_6^{\mathrm{screened}}) \approx 0.062938$,
+   (b) Non-local Schur tail polymers $w_{\mathrm{Schur\_tail}} = \frac{42284}{73185} \approx 0.577769$, and
+   (c) Excised large-field Bianchi–Peierls worldsheets $w_{\mathrm{Peierls}}^{\mathrm{sheet}} = \frac{11}{27} \approx 0.40740741$ inherited from step $k = 5$ (Lemma `YM-088F`).
+   Summing all three species without disjoint support exclusion gives the **Unified Three-Species Kotecký–Preiss Weight**:
+   $$w_{\mathrm{3species}}^{(6)} = w_{\mathrm{2species}}^{(6)} + w_{\mathrm{Peierls}}^{\mathrm{sheet}} = \frac{2627335110419616513977}{2506726636707805102080} \approx 1.04811393 > 1,$$
+   isolating an exact rational $4.81\%$ **Three-Species Overlap Excess** defect:
+   $$\Delta_{\mathrm{3species\_excess}} = w_{\mathrm{3species}}^{(6)} - 1 = \frac{120608473711811411897}{2506726636707805102080} \approx 0.04811393 > 0.$$
+   This reduces the residual cluster excess from $0.433659$ down to $0.048114$ (a 9-fold compression, and overall a 177-fold compression from $8.5304$). Edge `E-CROSSOVER` remains strictly `OPEN_AND_UNSOLVED`, Task `YM-016` remains `BLOCKED`, `goal_complete` remains `false`, and `clay_problem` remains `OPEN_AND_UNSOLVED`.
+
+**Proof:**
+1. *Sign Orientation of Gaussian Schur Complement:* In Bałaban's multi-scale integration, the partition function at scale $k = 5$ after fixing the background gauge and saddle point $U_{\min}(B)$ is given by:
+   $$\int \mathcal{D}Q_{\perp} \exp\left( - \frac{1}{2} \langle Q_{\perp}, \mathcal{H}_5^{\perp} Q_{\perp} \rangle + \langle J_{\mathrm{elliptic}}[B], Q_{\perp} \rangle - S_5(U_{\min}(B)) \right).$$
+   Performing the Gaussian Berezin/Wiener integral over $Q_{\perp}$ yields the standard Gaussian formula:
+   $$\exp\left( - S_5(U_{\min}(B)) + \frac{1}{2} \langle J_{\mathrm{elliptic}}[B], (\mathcal{H}_5^{\perp})^{-1} J_{\mathrm{elliptic}}[B] \rangle \right) (\det \mathcal{H}_5^{\perp})^{-1/2}.$$
+   In terms of the action $S_{\mathrm{eff}}^{(6)}(B) = - \ln Z[B]$, this produces:
+   $$S_{\mathrm{eff}}^{(6)}(B) = S_5(U_{\min}(B)) - \frac{1}{2} \langle J_{\mathrm{elliptic}}[B], (\mathcal{H}_5^{\perp})^{-1} J_{\mathrm{elliptic}}[B] \rangle + \frac{1}{2} \mathrm{Tr}\ln \mathcal{H}_5^{\perp}.$$
+   The downfolding quadratic term carries an explicit minus sign. Expanding around the identity or background curvature, the local diagonal piece satisfies:
+   $$-\frac{1}{2} \langle J_{\mathrm{elliptic}}^{\mathrm{local}}[B], (\mathcal{H}_5^{\perp})^{-1} J_{\mathrm{elliptic}}^{\mathrm{local}}[B] \rangle = - \Delta_{\mathrm{Schur}}^{\mathrm{local}} \sum_{p} s_p(B).$$
+   Adding this to the bare action $S_6(B) = \beta_6 \sum_p s_p(B)$ gives the net screened action:
+   $$S_{\mathrm{screened}}(B) = (\beta_6 - \Delta_{\mathrm{Schur}}^{\mathrm{local}}) \sum_p s_p(B) = \beta_6^{\mathrm{screened}} \sum_p s_p(B).$$
+   With $\beta_6 = 5/4$ and $\Delta_{\mathrm{Schur}}^{\mathrm{local}} = 1922/4879$, this yields $\beta_6^{\mathrm{screened}} = \frac{5}{4} - \frac{1922}{4879} = \frac{16707}{19516} \approx 0.856067$.
+
+2. *Two-Species Cluster Contraction:* The reduced inverse coupling $\beta_6^{\mathrm{screened}}$ corresponds to a smaller fundamental activity $a_{1/2}(\beta_6^{\mathrm{screened}}) = \frac{16707}{78064} \approx 0.214017 < 5/16 \approx 0.3125$. The four-step decimation on 4D hypercubes suppresses the character weight to:
+   $$w_{\mathrm{char}}(\beta_6^{\mathrm{screened}}) = 30 \times (0.2140167)^4 \approx 0.062938.$$
+   Adding the non-local Combes–Thomas Schur tail weight $c_0 \Delta_{\mathrm{Schur}}^{\mathrm{nonlocal}} = 22 \times \frac{1922}{73185} = \frac{42284}{73185} \approx 0.577769$:
+   $$w_{\mathrm{2species}}^{(6)} = 0.06293786 + 0.57776867 = 0.64070652 < 1.$$
+   The Two-Species Convergence Margin is $\Delta_{\mathrm{2species\_margin}} = 1 - w_{\mathrm{2species}}^{(6)} \approx 0.359293 > 1/3 > 0$. Thus, when only character excitations and Schur tails interact, the polymer expansion converges absolutely.
+
+3. *Three-Species Overlap and 4.81% Excess Defect:* However, the small-field Gaussian decimation at step $k = 5$ relied on the Swiss-cheese polymer excision of large-field center-vortex cores (Lemma `YM-087F`, `YM-088F`). These excised cores form closed 2-surfaces on the dual lattice with Peierls suppression weight $w_{\mathrm{Peierls}}^{\mathrm{sheet}} = \frac{11}{27} \approx 0.407407$.
+   In the unconstrained polymer expansion on $\mathbb{Z}^4$, all three classes of polymers—screened character loops, Combes–Thomas Schur lines, and excised worldsheets—compete for occupancy on the coarse lattice. Summing their individual activities without geometric non-overlapping projection constraints yields:
+   $$w_{\mathrm{3species}}^{(6)} = w_{\mathrm{2species}}^{(6)} + w_{\mathrm{Peierls}}^{\mathrm{sheet}} \approx 0.640707 + 0.407407 = 1.048114 > 1.$$
+   This violates the unit Kotecký–Preiss threshold by $\Delta_{\mathrm{3species\_excess}} \approx 0.048114 > 0$ ($4.81\%$).
+   Because this remaining $4.81\%$ excess prevents uniform exponential cluster summability across all three polymer species on $\mathbb{Z}^4$, Edge `E-CROSSOVER` remains strictly `OPEN_AND_UNSOLVED`, Task `YM-016` remains `BLOCKED`, `goal_complete` remains `false`, and `clay_problem` remains `OPEN_AND_UNSOLVED`. $\square$

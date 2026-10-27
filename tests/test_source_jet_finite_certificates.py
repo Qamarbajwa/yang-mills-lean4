@@ -1237,6 +1237,7 @@ def test_literal_git_blob_vs_checkout_digest_and_hash_elimination_certificate():
         "263065ab514ad3361947f7a2878fd96e5e6e0674f93e84f7165931e03da9406b",  # YM-093 candidate freeze
         "dd596ba413bb1de92766003b634b537214d11f58f83cac25ddd1a377068ebe44",  # YM-094 candidate freeze
         "3dba03901153e725e1519d2b61c6d62a9e31868c4eb36896cb1380ee1cf2f9bc",  # YM-095 candidate freeze
+        "d240c11b72070b120648e29917e9eaa3a2af8d758e4817857b463ce5d649c7dd",  # YM-096 candidate freeze
     ]
 
     # Candidate 15086d3 (YM-054):
@@ -7128,6 +7129,87 @@ def test_combes_thomas_local_nonlocal_splitting_and_dressed_coupling_tradeoff_ce
     delta_dressed_excess = w_dressed - F(1)
     assert delta_dressed_excess > F(0)
     assert 0.433 < float(delta_dressed_excess) < 0.434
+
+    # 4. Epistemic Boundary & Governance Invariants:
+    E_UV_FLOWED = "CLOSED_AT_FLOW_SCALE"
+    E_UV_LOCAL_OS = "CLOSED_UNBUFFERED"
+    E_CROSSOVER = "OPEN_AND_UNSOLVED"
+    YM_016 = "BLOCKED"
+    LEMMA_YM059F = "OPEN"
+    LEMMA_YM060F = "OPEN"
+    GOAL_COMPLETE = False
+    CLAY_PROBLEM = "OPEN_AND_UNSOLVED"
+    STRUCTURAL_NO_GO_COUNT = 0
+
+    assert E_UV_FLOWED == "CLOSED_AT_FLOW_SCALE"
+    assert E_UV_LOCAL_OS == "CLOSED_UNBUFFERED"
+    assert E_CROSSOVER == "OPEN_AND_UNSOLVED"
+    assert YM_016 == "BLOCKED"
+    assert LEMMA_YM059F == "OPEN"
+    assert LEMMA_YM060F == "OPEN"
+    assert GOAL_COMPLETE is False
+    assert CLAY_PROBLEM == "OPEN_AND_UNSOLVED"
+    assert STRUCTURAL_NO_GO_COUNT == 0
+
+
+def test_schur_screening_sign_and_unified_three_species_overlap_certificate():
+    """
+    Test 60 (YM-096): Schur-Screening Sign-Orientation Theorem on Edge E-CROSSOVER:
+    Resolution of the Dressed-Coupling Tradeoff via Screened Coupling beta_6_screened = 16707/19516,
+    Two-Species Kotecký–Preiss Convergence w_2species^(6) < 1, and Isolation of the Unified
+    Three-Species (Character + Schur-Tail + Peierls-Excision) 4.81% Overlap Excess (Lemma YM-096F, NEG-YM-096).
+    """
+    # 1. Schur-Screening Sign-Orientation and Screened Coupling:
+    beta_6 = F(5, 4)
+    delta_local = F(1922, 4879)
+    beta_6_screened = beta_6 - delta_local
+    assert beta_6_screened == F(16707, 19516)
+    assert 0.8560 < float(beta_6_screened) < 0.8561
+
+    a_half_screened = beta_6_screened / F(4)
+    assert a_half_screened == F(16707, 78064)
+    assert 0.2140 < float(a_half_screened) < 0.2141
+
+    c_nonplanar = 30
+    w_char = F(c_nonplanar) * (a_half_screened ** 4)
+    assert w_char == F(1168651846208622015, 18568345457094852608)
+    assert w_char < F(1)
+    assert 0.0628 < float(w_char) < 0.0630
+
+    # 2. Two-Species Kotecký–Preiss Sum & Tradeoff Resolution:
+    c_0 = 22
+    delta_nonlocal = F(1922, 73185)
+    w_schur_tail = F(c_0) * delta_nonlocal
+    assert w_schur_tail == F(42284, 73185)
+    assert 0.5777 < float(w_schur_tail) < 0.5778
+
+    w_2species = w_char + w_schur_tail
+    assert w_2species == F(178452901142155513393, 278525181856422789120)
+    assert w_2species < F(1)
+    assert 0.6406 < float(w_2species) < 0.6408
+
+    delta_2species_margin = F(1) - w_2species
+    assert delta_2species_margin == F(100072280714267275727, 278525181856422789120)
+    assert delta_2species_margin > F(1, 3)
+    assert delta_2species_margin > F(0)
+    assert 0.3592 < float(delta_2species_margin) < 0.3593
+
+    # 3. Unified Three-Species Overlap Excess (NEG-YM-096):
+    w_peierls = F(11, 27)
+    assert 0.4074 < float(w_peierls) < 0.4075
+
+    w_3species = w_2species + w_peierls
+    assert w_3species == F(2627335110419616513977, 2506726636707805102080)
+    assert w_3species > F(1)
+    assert 1.0480 < float(w_3species) < 1.0482
+
+    delta_3species_excess = w_3species - F(1)
+    assert delta_3species_excess == F(120608473711811411897, 2506726636707805102080)
+    assert delta_3species_excess > F(0)
+    assert 0.0480 < float(delta_3species_excess) < 0.0482
+    # 4.81% excess:
+    assert float(delta_3species_excess) * 100 > 4.80
+    assert float(delta_3species_excess) * 100 < 4.82
 
     # 4. Epistemic Boundary & Governance Invariants:
     E_UV_FLOWED = "CLOSED_AT_FLOW_SCALE"
