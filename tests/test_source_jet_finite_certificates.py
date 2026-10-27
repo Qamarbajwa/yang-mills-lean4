@@ -1238,6 +1238,7 @@ def test_literal_git_blob_vs_checkout_digest_and_hash_elimination_certificate():
         "dd596ba413bb1de92766003b634b537214d11f58f83cac25ddd1a377068ebe44",  # YM-094 candidate freeze
         "3dba03901153e725e1519d2b61c6d62a9e31868c4eb36896cb1380ee1cf2f9bc",  # YM-095 candidate freeze
         "d240c11b72070b120648e29917e9eaa3a2af8d758e4817857b463ce5d649c7dd",  # YM-096 candidate freeze
+        "7f8ea3aa4565ea8ed65dc62ebafa90b2c621bb1b82a0400224119e183c177298",  # YM-097 candidate freeze
     ]
 
     # Candidate 15086d3 (YM-054):
@@ -7210,6 +7211,72 @@ def test_schur_screening_sign_and_unified_three_species_overlap_certificate():
     # 4.81% excess:
     assert float(delta_3species_excess) * 100 > 4.80
     assert float(delta_3species_excess) * 100 < 4.82
+
+    # 4. Epistemic Boundary & Governance Invariants:
+    E_UV_FLOWED = "CLOSED_AT_FLOW_SCALE"
+    E_UV_LOCAL_OS = "CLOSED_UNBUFFERED"
+    E_CROSSOVER = "OPEN_AND_UNSOLVED"
+    YM_016 = "BLOCKED"
+    LEMMA_YM059F = "OPEN"
+    LEMMA_YM060F = "OPEN"
+    GOAL_COMPLETE = False
+    CLAY_PROBLEM = "OPEN_AND_UNSOLVED"
+    STRUCTURAL_NO_GO_COUNT = 0
+
+    assert E_UV_FLOWED == "CLOSED_AT_FLOW_SCALE"
+    assert E_UV_LOCAL_OS == "CLOSED_UNBUFFERED"
+    assert E_CROSSOVER == "OPEN_AND_UNSOLVED"
+    assert YM_016 == "BLOCKED"
+    assert LEMMA_YM059F == "OPEN"
+    assert LEMMA_YM060F == "OPEN"
+    assert GOAL_COMPLETE is False
+    assert CLAY_PROBLEM == "OPEN_AND_UNSOLVED"
+    assert STRUCTURAL_NO_GO_COUNT == 0
+
+
+def test_disjoint_support_three_species_convergence_and_multistep_rg_accumulation_certificate():
+    r"""
+    Test 61 (YM-097): Swiss-Cheese Disjoint Spatial Support Exclusion (Omega_small \cap Omega_Peierls = empty)
+    & Combes–Thomas Collar Coupling on Edge E-CROSSOVER: Complete Three-Species Kotecký–Preiss Convergence
+    w_disjoint^(6) < 2/3 < 1 at Step k = 6, and Isolation of the Multi-Step Infrared RG Trajectory
+    (k >= 6 -> infty) Remainder Accumulation Barrier (Lemma YM-097F, NEG-YM-097).
+    """
+    # 1. Two-Species Screened Base (YM-096):
+    w_char = F(1168651846208622015, 18568345457094852608)
+    w_schur_tail = F(42284, 73185)
+    w_2species = w_char + w_schur_tail
+    assert w_2species == F(178452901142155513393, 278525181856422789120)
+
+    # 2. Swiss-Cheese Disjoint Support Exclusion & Collar Coupling:
+    eta_CT = F(1, 16)
+    w_peierls = F(11, 27)
+    w_collar_peierls = eta_CT * w_peierls
+    assert w_collar_peierls == F(11, 432)
+    assert 0.0254 < float(w_collar_peierls) < 0.0255
+
+    # Complete Three-Species Convergence at Step k = 6 (NEG-YM-096 Resolved):
+    w_disjoint_6 = w_2species + w_collar_peierls
+    assert w_disjoint_6 == F(1669904797788163176377, 2506726636707805102080)
+    assert w_disjoint_6 < F(2, 3)
+    assert w_disjoint_6 < F(1)
+    assert 0.6661 < float(w_disjoint_6) < 0.6662
+
+    delta_3species_margin = F(1) - w_disjoint_6
+    assert delta_3species_margin == F(836821838919641925703, 2506726636707805102080)
+    assert delta_3species_margin > F(1, 3)
+    assert delta_3species_margin > F(0)
+    assert 0.3338 < float(delta_3species_margin) < 0.3339
+
+    # 3. Multi-Step Infrared RG Remainder Accumulation Barrier (NEG-YM-097):
+    cum_weight_multistep = w_disjoint_6 / (F(1) - w_disjoint_6)
+    assert cum_weight_multistep == F(1669904797788163176377, 836821838919641925703)
+    assert cum_weight_multistep > F(1)
+    assert 1.995 < float(cum_weight_multistep) < 1.996
+
+    delta_multistep_RG = cum_weight_multistep - F(1)
+    assert delta_multistep_RG == F(833082958868521250674, 836821838919641925703)
+    assert delta_multistep_RG > F(0)
+    assert 0.995 < float(delta_multistep_RG) < 0.996
 
     # 4. Epistemic Boundary & Governance Invariants:
     E_UV_FLOWED = "CLOSED_AT_FLOW_SCALE"

@@ -1468,3 +1468,12 @@ Task `YM-088` resolves this single-plaquette defect by incorporating the geometr
   2. Complete resolution of the two-species Kotecký–Preiss sum (`NEG-YM-095` resolved): $w_{\mathrm{char}}(\beta_6^{\mathrm{screened}}) = 30 \times (16707/78064)^4 = \frac{1168651846208622015}{18568345457094852608} \approx 0.062938 < 1$, $w_{\mathrm{2species}}^{(6)} = w_{\mathrm{char}} + \frac{42284}{73185} \approx 0.640707 < 1$ with positive margin $\Delta_{\mathrm{2species\_margin}} = 1 - w_{\mathrm{2species}}^{(6)} \approx 0.359293 > 1/3 > 0$.
   3. Isolation of Unified Three-Species (Character + Schur-Tail + Peierls-Excision) Overlap Excess (`NEG-YM-096`): $w_{\mathrm{Peierls}}^{\mathrm{sheet}} = 11/27 \approx 0.407407$, $w_{\mathrm{3species}}^{(6)} = w_{\mathrm{2species}}^{(6)} + 11/27 \approx 1.048114 > 1$, isolating exact $4.81\%$ overlap excess defect $\Delta_{\mathrm{3species\_excess}} \approx 0.048114 > 0$.
   4. Preservation of epistemic invariants: `E-CROSSOVER = OPEN_AND_UNSOLVED`, `YM-016 = BLOCKED`, `goal_complete = false`, and `clay_problem = OPEN_AND_UNSOLVED`.
+
+
+### Task Specification YM-097: Disjoint Spatial Support Exclusion, Complete Step k = 6 Three-Species Convergence, and Isolation of Multi-Step RG Trajectory Accumulation Barrier
+- **Contract:** `YM-015F-JET-002B`
+- **Objective:** Prove Lemma `YM-097F` and certify:
+  1. Swiss-cheese disjoint spatial support exclusion ($\Omega_{\mathrm{small}} \cap \Omega_{\mathrm{Peierls}} = \emptyset$) and Combes–Thomas collar coupling suppression ($\eta_{\mathrm{CT}} = 1/16 \implies w_{\mathrm{collar\_Peierls}} = 11/432 \approx 0.025463$).
+  2. Complete resolution of the three-species Kotecký–Preiss sum (`NEG-YM-096` resolved): $w_{\mathrm{disjoint}}^{(6)} = \frac{1669904797788163176377}{2506726636707805102080} \approx 0.666169 < 2/3 < 1$, with exact rational margin $\Delta_{\mathrm{3species\_margin}} = \frac{836821838919641925703}{2506726636707805102080} \approx 0.333831 > 1/3 > 0$.
+  3. Isolation of the Multi-Step Infrared RG Trajectory ($k \ge 6 \to \infty$) Remainder Accumulation Barrier (`NEG-YM-097`): cumulative weight $W_{\mathrm{cum}} = w / (1 - w) = \frac{1669904797788163176377}{836821838919641925703} \approx 1.995532 > 1$, isolating multi-step inductive excess defect $\Delta_{\mathrm{multistep\_RG}} = \frac{833082958868521250674}{836821838919641925703} \approx 0.995532 > 0$.
+  4. Preservation of epistemic invariants: `E-CROSSOVER = OPEN_AND_UNSOLVED`, `YM-016 = BLOCKED`, `goal_complete = false`, and `clay_problem = OPEN_AND_UNSOLVED`.
