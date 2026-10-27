@@ -53,7 +53,7 @@
 \textit{Governed by Universal Research Operating System v4.0.4+4.0.6-r3} \\
 \textit{Workspace: Yang--Mills and the Mass Gap Programme}}
 
-\date{State Revision 145 --- October 2026}
+\date{State Revision 147 --- October 2026}
 
 \begin{document}
 
@@ -68,7 +68,7 @@ Second, by developing a short flow-time operator product expansion ($t \downarro
 
 Third, we isolate the Clay Millennium Prize threshold by establishing the exact small-field Weitzenb\"ock coercivity exit threshold at renormalization scale step $k = 5$, where the running inverse coupling drops to $\beta_{\mathrm{inv}, 5} = 41/24 < 2$ and $g_5^2 = 24/41 > 1/2$, yielding the certified exit defect $\Delta_{\mathrm{crossover\_exit}} = 7/82 > 0$. We prove the simultaneous onset of tripartite non-perturbative infrared obstructions on edge \texttt{E-CROSSOVER}: (a) large-field plaquette polymer percolation on $\Z^4$ with growth defect $\Delta_{\mathrm{perc}} = 7/4 > 0$, (b) Gribov horizon copy proliferation with Faddeev--Popov degeneracy $\Delta_{\mathrm{Gribov\_copies}} = 1 > 0$, and (c) Savvidy chromomagnetic vacuum instability with tachyonic eigenvalue shift $\Delta_{\mathrm{instability}} = 1/2 > 0$ and massless infrared accumulation defect $\Delta_{\mathrm{massless\_IR\_defect}} = 3 > 0$. 
 
-Every mathematical step is supported by exact rational certificates verified in finite arithmetic across 488 unit tests, bound under strict 3-Agent governance separation (Writer $\ne$ Reviewer $\ne$ Acceptor), and decoupled from the open infrared mass gap problem (\texttt{clay\_problem = OPEN\_AND\_UNSOLVED}).
+Every mathematical step is supported by exact rational certificates verified in finite arithmetic across 489 unit tests, bound under strict 3-Agent governance separation (Writer $\ne$ Reviewer $\ne$ Acceptor), and decoupled from the open infrared mass gap problem (\texttt{clay\_problem = OPEN\_AND\_UNSOLVED}).
 \end{abstract}
 
 \noindent\textbf{Keywords:} Constructive Quantum Field Theory, Yang--Mills Gradient Flow, Ba{\l}aban Renormalization Group, Osterwalder--Schrader Reconstruction, Gribov Horizon, Savvidy Instability, Mass Gap. \\
@@ -755,6 +755,34 @@ with full cluster growth excess $c_0 \Delta_{\mathrm{Schur}}^{\mathrm{elliptic}}
 \texttt{E-CROSSOVER} = \mathrm{OPEN\_AND\_UNSOLVED}, \quad \texttt{YM-016} = \mathrm{BLOCKED}, \quad \texttt{clay\_problem} = \mathrm{OPEN\_AND\_UNSOLVED}.
 \end{equation}
 
+\subsection{Combes--Thomas Local-vs-Nonlocal Splitting, Non-Local Tail Compression, and Dressed-Coupling Tradeoff Excess}
+To address the non-local Schur-remainder Koteck\'y--Preiss handoff excess $\Delta_{\mathrm{handoff\_rem}} \approx 0.387745$ isolated in Lemma \texttt{YM-094F} (\texttt{NEG-YM-094}), we formulate the Combes--Thomas local-vs-nonlocal operator splitting on the gapped intra-block covariance $\mathcal{G}_{\perp} = (\mathcal{H}_5^{\perp})^{-1}$ (Lemma \texttt{YM-095F}).
+
+On the elementary $L = 2$ hypercubic block, the discrete nearest-neighbor hopping ratio satisfies $\gamma_{\mathrm{CT}} \le 1/4$. Traversing between distinct coarse blocks across the block boundary requires at least $L = 2$ lattice hops, suppressing the strictly non-local inter-block polymer tail by the Combes--Thomas factor $\eta_{\mathrm{CT}} = (1/4)^2 = 1/16$:
+\begin{equation}
+\Delta_{\mathrm{Schur}}^{\mathrm{nonlocal}} = \frac{1}{16} \Delta_{\mathrm{Schur}}^{\mathrm{elliptic}} = \frac{1}{16} \times \frac{30752}{73185} = \frac{1922}{73185} \approx 0.026262.
+\end{equation}
+The local single-block diagonal part carries weight $15/16$:
+\begin{equation}
+\Delta_{\mathrm{Schur}}^{\mathrm{local}} = \frac{15}{16} \Delta_{\mathrm{Schur}}^{\mathrm{elliptic}} = \frac{1922}{4879} \approx 0.393933.
+\end{equation}
+Because $\Delta_{\mathrm{Schur}}^{\mathrm{nonlocal}} = \frac{1922}{73185} \approx 0.026262$ is strictly smaller than the step $k = 6$ residual Koteck\'y--Preiss budget $\epsilon_{\mathrm{KP}}^{(6)} = \frac{23393}{720896} \approx 0.032450$, the raw handoff excess is completely closed with positive slot margin:
+\begin{equation}
+\Delta_{\mathrm{slot\_margin}} = \frac{23393}{720896} - \frac{1922}{73185} = \frac{326454593}{52758773760} \approx 0.006188 > 0.
+\end{equation}
+At the unshifted coupling $\beta_6 = 5/4$, the combined 4D non-planar character + non-local Schur tail cluster sum contracts strictly below unity:
+\begin{equation}
+w_{\mathrm{unshifted}}^{(6)} = \frac{9375}{32768} + 22 \times \frac{1922}{73185} = \frac{2071671487}{2398126080} \approx 0.863871 < 1 \quad \left(\text{margin } \Delta_{\mathrm{KP\_unshifted}} = \frac{326454593}{2398126080} \approx 0.136129 > 0\right).
+\end{equation}
+However, absorbing the local component $\Delta_{\mathrm{Schur}}^{\mathrm{local}} = \frac{1922}{4879}$ into the local coarse plaquette action shifts the coupling to $\tilde{\beta}_6 = \frac{5}{4} + \frac{1922}{4879} = \frac{32083}{19516} \approx 1.643933$. While both the dressed 4D character weight $w_{\mathrm{nonplanar}}(\tilde{\beta}_6) \approx 0.855890 < 1$ and the non-local polymer weight $c_0 \Delta_{\mathrm{Schur}}^{\mathrm{nonlocal}} \approx 0.577769 < 1$ are individually bounded, their combined sum reaches:
+\begin{equation}
+w_{\mathrm{dressed}} = w_{\mathrm{nonplanar}}(\tilde{\beta}_6) + c_0 \Delta_{\mathrm{Schur}}^{\mathrm{nonlocal}} \approx 1.433659 > 1,
+\end{equation}
+leaving an open Dressed-Coupling Tradeoff Excess $\Delta_{\mathrm{dressed\_excess}} \approx 0.433659 > 0$ (\texttt{NEG-YM-095}) representing an almost 20-fold reduction from the $8.5304$ excess of \texttt{YM-094}. Edge \texttt{E-CROSSOVER} remains open on $\mathbb{Z}^4$:
+\begin{equation}
+\texttt{E-CROSSOVER} = \mathrm{OPEN\_AND\_UNSOLVED}, \quad \texttt{YM-016} = \mathrm{BLOCKED}, \quad \texttt{clay\_problem} = \mathrm{OPEN\_AND\_UNSOLVED}.
+\end{equation}
+
 % =========================================================================
 % APPENDIX: TRACEABILITY MATRIX AND VERIFICATION
 % =========================================================================
@@ -802,6 +830,7 @@ with full cluster growth excess $c_0 \Delta_{\mathrm{Schur}}^{\mathrm{elliptic}}
 \texttt{YM-092}  & Intra-Block Kinetic Gap \& Schur Cross-Coupling & Test 56 & Revision 141 \\
 \texttt{YM-093}  & Saddle-Point Minimizer \& Step 6 Coupling Drift & Test 57 & Revision 143 \\
 \texttt{YM-094}  & Weak-to-Strong Handoff \& Schur Remainder Excess & Test 58 & Revision 145 \\
+\texttt{YM-095}  & Combes--Thomas Splitting \& Dressed Tradeoff Excess & Test 59 & Revision 147 \\
 \bottomrule
 \end{tabular}
 \caption{Traceability matrix mapping proved lemmas to deterministic regression test certificates.}
@@ -812,7 +841,7 @@ The complete codebase, test suite, and governance records can be independently r
 \begin{verbatim}
 $ python scripts/verify_all.py
 \end{verbatim}
-This script deterministically verifies the 158-file closed-world checkout digest (\texttt{dd596ba4...}), the literal Git-blob digest (\texttt{8cffbef1...}), append-only negative evidence integrity (0 deletions), and passes all 488 exact rational certificates in under 10 seconds.
+This script deterministically verifies the 158-file closed-world checkout digest (\texttt{3dba0390...}), the literal Git-blob digest (\texttt{3f8e1647...}), append-only negative evidence integrity (0 deletions), and passes all 489 exact rational certificates in under 10 seconds.
 
 \bibliographystyle{plain}
 \bibliography{references}
