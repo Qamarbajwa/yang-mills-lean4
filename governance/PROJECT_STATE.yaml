@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 148
+revision: 149
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "99340659b6e651e6981587cedd871e58a49b06df"
-  scientific_candidate_sha: ""
-  review_bound_sha: ""
-  evidence_closeout_head: "99340659b6e651e6981587cedd871e58a49b06df"
-  closeout_resolution: "evidence_closeout_head binds preceding completed YM-095 closeout commit (99340659b6e651e6981587cedd871e58a49b06df); candidate freeze for YM-096 is staged at State Revision 148."
+  head: "8b1e35c497d69b4654a9b08b93499fe0b21811b0"
+  scientific_candidate_sha: "a07b3c82fb3fcd6c45f09eb42e9332dd74bdc1cf"
+  review_bound_sha: "a07b3c82fb3fcd6c45f09eb42e9332dd74bdc1cf"
+  evidence_closeout_head: "a07b3c82fb3fcd6c45f09eb42e9332dd74bdc1cf"
+  closeout_resolution: "evidence_closeout_head binds scientific candidate commit (a07b3c82fb3fcd6c45f09eb42e9332dd74bdc1cf); YM-096 is scientifically accepted and closed out at State Revision 149."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,8 +32,8 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 147
-  last_updated_at: "2026-10-27T12:30:00Z"
+  last_expected_revision: 148
+  last_updated_at: "2026-10-27T12:43:00Z"
   active_contract: "YM-015F-JET-002B"
   frozen_candidate: ""
 
@@ -49,7 +49,7 @@ objectives:
     atlas_writer_and_coordinator: "primary-worker"
     reviewer_path: "verification/raw/YM-096_E4_RAW_20261027.md"
     acceptor: "verification/YM-096_TECHNICAL_ACCEPTANCE.md"
-    status: CANDIDATE_FROZEN
+    status: SCIENTIFICALLY_ACCEPTED
     scope_limitation: "SCHUR_SCREENING_SIGN_PROVED_THREE_SPECIES_OVERLAP_ISOLATED_AND_CLAY_OPEN"
   - id: YM-095
     scope_in: "Combes–Thomas Local-vs-Nonlocal Operator Splitting of the Step k = 5 Schur Complement (eta_CT = 1/16) on Edge E-CROSSOVER: Compression of the Non-Local Polymer Tail Delta_Schur^nonlocal = 1922/73185 < eps_KP^(6) = 23393/720896, Unshifted Kotecký–Preiss Convergence w_total^(6) = 2071671487/2398126080 < 1, and Isolation of the Dressed-Coupling beta_6_tilde = 32083/19516 Tradeoff Excess, proof of Lemma YM-095F-COMBES-THOMAS-LOCAL-NONLOCAL-SPLITTING-AND-DRESSED-COUPLING-TRADEOFF, and Test 59 finite certificate"
