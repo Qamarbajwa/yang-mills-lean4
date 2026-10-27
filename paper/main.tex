@@ -53,7 +53,7 @@
 \textit{Governed by Universal Research Operating System v4.0.4+4.0.6-r3} \\
 \textit{Workspace: Yang--Mills and the Mass Gap Programme}}
 
-\date{State Revision 147 --- October 2026}
+\date{State Revision 149 --- October 2026}
 
 \begin{document}
 
@@ -68,7 +68,7 @@ Second, by developing a short flow-time operator product expansion ($t \downarro
 
 Third, we isolate the Clay Millennium Prize threshold by establishing the exact small-field Weitzenb\"ock coercivity exit threshold at renormalization scale step $k = 5$, where the running inverse coupling drops to $\beta_{\mathrm{inv}, 5} = 41/24 < 2$ and $g_5^2 = 24/41 > 1/2$, yielding the certified exit defect $\Delta_{\mathrm{crossover\_exit}} = 7/82 > 0$. We prove the simultaneous onset of tripartite non-perturbative infrared obstructions on edge \texttt{E-CROSSOVER}: (a) large-field plaquette polymer percolation on $\Z^4$ with growth defect $\Delta_{\mathrm{perc}} = 7/4 > 0$, (b) Gribov horizon copy proliferation with Faddeev--Popov degeneracy $\Delta_{\mathrm{Gribov\_copies}} = 1 > 0$, and (c) Savvidy chromomagnetic vacuum instability with tachyonic eigenvalue shift $\Delta_{\mathrm{instability}} = 1/2 > 0$ and massless infrared accumulation defect $\Delta_{\mathrm{massless\_IR\_defect}} = 3 > 0$. 
 
-Every mathematical step is supported by exact rational certificates verified in finite arithmetic across 489 unit tests, bound under strict 3-Agent governance separation (Writer $\ne$ Reviewer $\ne$ Acceptor), and decoupled from the open infrared mass gap problem (\texttt{clay\_problem = OPEN\_AND\_UNSOLVED}).
+Every mathematical step is supported by exact rational certificates verified in finite arithmetic across 490 unit tests, bound under strict 3-Agent governance separation (Writer $\ne$ Reviewer $\ne$ Acceptor), and decoupled from the open infrared mass gap problem (\texttt{clay\_problem = OPEN\_AND\_UNSOLVED}).
 \end{abstract}
 
 \noindent\textbf{Keywords:} Constructive Quantum Field Theory, Yang--Mills Gradient Flow, Ba{\l}aban Renormalization Group, Osterwalder--Schrader Reconstruction, Gribov Horizon, Savvidy Instability, Mass Gap. \\
@@ -783,6 +783,40 @@ leaving an open Dressed-Coupling Tradeoff Excess $\Delta_{\mathrm{dressed\_exces
 \texttt{E-CROSSOVER} = \mathrm{OPEN\_AND\_UNSOLVED}, \quad \texttt{YM-016} = \mathrm{BLOCKED}, \quad \texttt{clay\_problem} = \mathrm{OPEN\_AND\_UNSOLVED}.
 \end{equation}
 
+\subsection{Schur-Screening Sign-Orientation, Two-Species Convergence, and Unified Three-Species Overlap Excess}
+To address the dressed-coupling tradeoff excess $\Delta_{\mathrm{dressed\_excess}} \approx 0.433659$ of Lemma \texttt{YM-095F} (\texttt{NEG-YM-095}), we prove the Schur-Screening Sign-Orientation Theorem (Lemma \texttt{YM-096F}).
+
+In Ba{\l}aban's multi-scale integration, the Gaussian functional integral over high-momentum intra-block fluctuations $Q_{\perp}$ yields the downfolded effective action:
+\begin{equation}
+S_{\mathrm{eff}}^{(6)}(B) = S_5(U_{\min}(B)) - \frac{1}{2} \langle J_{\mathrm{elliptic}}[B], (\mathcal{H}_5^{\perp})^{-1} J_{\mathrm{elliptic}}[B] \rangle + \frac{1}{2} \mathrm{Tr}\ln \mathcal{H}_5^{\perp}.
+\end{equation}
+Because the quadratic Schur downfolding term enters with an explicit negative (screening) sign, absorbing the local diagonal part $\Delta_{\mathrm{Schur}}^{\mathrm{local}} = \frac{1922}{4879}$ into the single-plaquette action screens (reduces) the inverse coupling rather than increasing it:
+\begin{equation}
+\beta_6^{\mathrm{screened}} = \beta_6 - \Delta_{\mathrm{Schur}}^{\mathrm{local}} = \frac{5}{4} - \frac{1922}{4879} = \frac{16707}{19516} \approx 0.856067.
+\end{equation}
+The corresponding fundamental character activity drops to $a_{1/2}(\beta_6^{\mathrm{screened}}) = \frac{16707}{78064} \approx 0.214017$, reducing 4D non-planar character branching to:
+\begin{equation}
+w_{\mathrm{char}}(\beta_6^{\mathrm{screened}}) = 30 \times \left(\frac{16707}{78064}\right)^4 = \frac{1168651846208622015}{18568345457094852608} \approx 0.062938 < 1.
+\end{equation}
+Combining this with the non-local Combes--Thomas Schur tail $w_{\mathrm{Schur\_tail}} = \frac{42284}{73185} \approx 0.577769$, the \textbf{Two-Species Koteck\'y--Preiss Sum} contracts strictly below unity:
+\begin{equation}
+w_{\mathrm{2species}}^{(6)} = w_{\mathrm{char}} + \frac{42284}{73185} = \frac{178452901142155513393}{278525181856422789120} \approx 0.640707 < 1,
+\end{equation}
+with an exact rational convergence margin $\Delta_{\mathrm{2species\_margin}} = 1 - w_{\mathrm{2species}}^{(6)} \approx 0.359293 > 1/3 > 0$, completely resolving the tradeoff excess of \texttt{NEG-YM-095}.
+
+However, on the coarse lattice $\mathbb{Z}^4$, the complete polymer partition function contains three concurrent polymer species: (1) screened characters ($w_{\mathrm{char}} \approx 0.062938$), (2) non-local Schur tails ($w_{\mathrm{Schur\_tail}} \approx 0.577769$), and (3) the excised large-field Bianchi--Peierls worldsheets ($w_{\mathrm{Peierls}}^{\mathrm{sheet}} = \frac{11}{27} \approx 0.407407$) from step $k = 5$ (Lemma \texttt{YM-088F}). Summing all three species without disjoint support exclusion gives:
+\begin{equation}
+w_{\mathrm{3species}}^{(6)} = w_{\mathrm{2species}}^{(6)} + \frac{11}{27} = \frac{2627335110419616513977}{2506726636707805102080} \approx 1.048114 > 1,
+\end{equation}
+isolating an exact $4.81\%$ \textbf{Three-Species Overlap Excess} defect:
+\begin{equation}
+\Delta_{\mathrm{3species\_excess}} = w_{\mathrm{3species}}^{(6)} - 1 = \frac{120608473711811411897}{2506726636707805102080} \approx 0.048114 > 0 \quad (\texttt{NEG-YM-096}).
+\end{equation}
+This achieves a further 9-fold compression from $0.4337$ (and an overall 177-fold reduction from $8.5304$), localizing the remaining barrier to geometric multi-species coexistence on $\mathbb{Z}^4$. Edge \texttt{E-CROSSOVER} remains open on $\mathbb{Z}^4$:
+\begin{equation}
+\texttt{E-CROSSOVER} = \mathrm{OPEN\_AND\_UNSOLVED}, \quad \texttt{YM-016} = \mathrm{BLOCKED}, \quad \texttt{clay\_problem} = \mathrm{OPEN\_AND\_UNSOLVED}.
+\end{equation}
+
 % =========================================================================
 % APPENDIX: TRACEABILITY MATRIX AND VERIFICATION
 % =========================================================================
@@ -831,6 +865,7 @@ leaving an open Dressed-Coupling Tradeoff Excess $\Delta_{\mathrm{dressed\_exces
 \texttt{YM-093}  & Saddle-Point Minimizer \& Step 6 Coupling Drift & Test 57 & Revision 143 \\
 \texttt{YM-094}  & Weak-to-Strong Handoff \& Schur Remainder Excess & Test 58 & Revision 145 \\
 \texttt{YM-095}  & Combes--Thomas Splitting \& Dressed Tradeoff Excess & Test 59 & Revision 147 \\
+\texttt{YM-096}  & Schur-Screening Sign \& Three-Species Overlap Excess & Test 60 & Revision 149 \\
 \bottomrule
 \end{tabular}
 \caption{Traceability matrix mapping proved lemmas to deterministic regression test certificates.}
@@ -841,7 +876,7 @@ The complete codebase, test suite, and governance records can be independently r
 \begin{verbatim}
 $ python scripts/verify_all.py
 \end{verbatim}
-This script deterministically verifies the 158-file closed-world checkout digest (\texttt{3dba0390...}), the literal Git-blob digest (\texttt{3f8e1647...}), append-only negative evidence integrity (0 deletions), and passes all 489 exact rational certificates in under 10 seconds.
+This script deterministically verifies the 158-file closed-world checkout digest (\texttt{d240c11b...}), the literal Git-blob digest (\texttt{2ed57110...}), append-only negative evidence integrity (0 deletions), and passes all 490 exact rational certificates in under 10 seconds.
 
 \bibliographystyle{plain}
 \bibliography{references}
