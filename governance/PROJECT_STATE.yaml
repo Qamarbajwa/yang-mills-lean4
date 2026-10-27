@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 145
+revision: 146
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "6d720e4c07f5dc6da9c1938c1c7cdd260245b88b"
-  scientific_candidate_sha: "99936e3a73399a7a285e147c9909e606e64c2c04"
-  review_bound_sha: "99936e3a73399a7a285e147c9909e606e64c2c04"
+  head: "d69dcf0b2b9ad8a6e0d739d9b869ddced17fb0ee"
+  scientific_candidate_sha: ""
+  review_bound_sha: ""
   evidence_closeout_head: "99936e3a73399a7a285e147c9909e606e64c2c04"
-  closeout_resolution: "evidence_closeout_head binds scientific candidate commit (99936e3a73399a7a285e147c9909e606e64c2c04); YM-094 is scientifically accepted and closed out at State Revision 145."
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-094 closeout commit (99936e3a73399a7a285e147c9909e606e64c2c04); candidate freeze for YM-095 is staged at State Revision 146."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,14 +32,25 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 144
-  last_updated_at: "2026-10-26T22:40:00Z"
+  last_expected_revision: 145
+  last_updated_at: "2026-10-27T01:25:00Z"
   active_contract: "YM-015F-JET-002B"
   frozen_candidate: ""
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-095
+    scope_in: "Combes–Thomas Local-vs-Nonlocal Operator Splitting of the Step k = 5 Schur Complement (eta_CT = 1/16) on Edge E-CROSSOVER: Compression of the Non-Local Polymer Tail Delta_Schur^nonlocal = 1922/73185 < eps_KP^(6) = 23393/720896, Unshifted Kotecký–Preiss Convergence w_total^(6) = 2071671487/2398126080 < 1, and Isolation of the Dressed-Coupling beta_6_tilde = 32083/19516 Tradeoff Excess, proof of Lemma YM-095F-COMBES-THOMAS-LOCAL-NONLOCAL-SPLITTING-AND-DRESSED-COUPLING-TRADEOFF, and Test 59 finite certificate"
+    scope_out: "Crossing infrared crossover E-CROSSOVER, non-perturbative multi-block lattice collar equivalence, continuum Wightman reconstruction, and full continuum closure"
+    dependencies: ["YM-094"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-095_E4_RAW_20261027.md"
+    acceptor: "verification/YM-095_TECHNICAL_ACCEPTANCE.md"
+    status: CANDIDATE_FROZEN
+    scope_limitation: "COMBES_THOMAS_SPLITTING_PROVED_DRESSED_TRADEOFF_EXCESS_ISOLATED_AND_CLAY_OPEN"
   - id: YM-094
     scope_in: "The k = 5 -> 6 Weak-to-Strong Handoff Duality Theorem on Edge E-CROSSOVER: Elimination of the Step k = 6 Weak-Coupling Requirement via beta_6 = 5/4 Non-Planar Character Contraction 30(5/16)^4 = 9375/32768 < 1, and Isolation of the Non-Local Schur-Remainder Kotecký–Preiss Handoff Excess, proof of Lemma YM-094F-WEAK-TO-STRONG-HANDOFF-DUALITY-AND-SCHUR-KP-REMAINDER-EXCESS, and Test 58 finite certificate"
     scope_out: "Crossing infrared crossover E-CROSSOVER, non-perturbative multi-block lattice collar equivalence, continuum Wightman reconstruction, and full continuum closure"

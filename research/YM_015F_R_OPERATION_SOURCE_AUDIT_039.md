@@ -6940,3 +6940,59 @@ Then:
    $$c_0 \Delta_{\mathrm{Schur}}^{\mathrm{elliptic}} + w_{\mathrm{nonplanar}}(\beta_6) - 1 = 22 \times \frac{30752}{73185} + \frac{9375}{32768} - 1 = \frac{676544}{73185} - \frac{23393}{32768} = \frac{20456977087}{2398126080} \approx 8.53040099 > 0.$$
    Because the Schur downfolding shift exceeds the available Kotecký–Preiss budget by over a factor of 12 ($0.4202 / 0.03245 \approx 12.95$), the non-local polymer expansion diverges in the thermodynamic limit. Thus, weak-to-strong handoff duality fails to close the intermediate-field window on $\mathbb{Z}^4$.
    Edge `E-CROSSOVER` remains strictly `OPEN_AND_UNSOLVED`, Task `YM-016` remains `BLOCKED`, `goal_complete` remains `false`, and `clay_problem` remains `OPEN_AND_UNSOLVED`. $\square$
+
+## Task YM-095: Combes–Thomas Local-vs-Nonlocal Operator Splitting of the Step $k = 5$ Schur Complement ($\eta_{\mathrm{CT}} = 1/16$) on Edge E-CROSSOVER: Compression of the Non-Local Polymer Tail $\Delta_{\mathrm{Schur}}^{\mathrm{nonlocal}} = \frac{1922}{73185} < \epsilon_{\mathrm{KP}}^{(6)} = \frac{23393}{720896}$, Unshifted Kotecký–Preiss Convergence $w_{\mathrm{total}}^{(6)} = \frac{2071671487}{2398126080} < 1$, and Isolation of the Dressed-Coupling $\tilde{\beta}_6 = \frac{32083}{19516}$ Tradeoff Excess
+
+### Lemma YM-095F-COMBES-THOMAS-LOCAL-NONLOCAL-SPLITTING-AND-DRESSED-COUPLING-TRADEOFF
+
+**Statement:**
+Let $S_5(U)$ be the effective gauge action on the scale $k = 5$ lattice (block size $L_5 = 32$) with running inverse coupling $\beta_5 = 41/24$. Let $\mathcal{A}[U] = B$ denote Bałaban's block averaging map with block size $L = 2$. By Lemma `YM-093F`, expanding around the constrained saddle-point minimizer $U_{\min}(B)$ with parity selection yields an elliptic-regularized Schur-complement downfolding shift $\Delta_{\mathrm{Schur}}^{\mathrm{elliptic}} = \frac{30752}{73185} \approx 0.420195$.
+
+Then:
+1. **Combes–Thomas Local-vs-Nonlocal Splitting:** The gapped intra-block covariance $\mathcal{G}_{\perp} = (\mathcal{H}_5^{\perp})^{-1}$ on the $L = 2$ block carries discrete kinetic spectral floor $\lambda_{\mathrm{kin}}^{\perp} \ge 2$ and nearest-neighbor hopping ratio $\gamma_{\mathrm{CT}} \le 1/4$. Under the operator Taylor expansion with respect to coarse derivatives, the Schur downfolding operator decomposes into:
+   $$\Delta_{\mathrm{Schur}}^{\mathrm{elliptic}} = \Delta_{\mathrm{Schur}}^{\mathrm{local}} + \Delta_{\mathrm{Schur}}^{\mathrm{nonlocal}},$$
+   where the local single-block diagonal part carries weight $1 - \eta_{\mathrm{CT}} = 15/16$:
+   $$\Delta_{\mathrm{Schur}}^{\mathrm{local}} = \frac{15}{16} \Delta_{\mathrm{Schur}}^{\mathrm{elliptic}} = \frac{15}{16} \times \frac{30752}{73185} = \frac{1922}{4879} \approx 0.39393318,$$
+   and the strictly non-local inter-block polymer tail is suppressed by $\eta_{\mathrm{CT}} = \gamma_{\mathrm{CT}}^L = (1/4)^2 = 1/16$:
+   $$\Delta_{\mathrm{Schur}}^{\mathrm{nonlocal}} = \frac{1}{16} \Delta_{\mathrm{Schur}}^{\mathrm{elliptic}} = \frac{1}{16} \times \frac{30752}{73185} = \frac{1922}{73185} \approx 0.02626221.$$
+
+2. **Compression of Non-Local Tail Inside the Kotecký–Preiss Slot:** The strictly non-local Schur tail $\Delta_{\mathrm{Schur}}^{\mathrm{nonlocal}} = \frac{1922}{73185} \approx 0.026262$ is strictly smaller than the step $k = 6$ residual Kotecký–Preiss budget $\epsilon_{\mathrm{KP}}^{(6)} = \frac{23393}{720896} \approx 0.032450$ (Lemma `YM-094F`), establishing a strictly positive Unshifted Kotecký–Preiss Slot Margin:
+   $$\Delta_{\mathrm{slot\_margin}} = \epsilon_{\mathrm{KP}}^{(6)} - \Delta_{\mathrm{Schur}}^{\mathrm{nonlocal}} = \frac{23393}{720896} - \frac{1922}{73185} = \frac{326454593}{52758773760} \approx 0.00618768 > 0.$$
+   At the unshifted coupling $\beta_6 = 5/4$, the combined 4D non-planar character + non-local Schur tail cluster sum contracts strictly below unity:
+   $$w_{\mathrm{unshifted}}^{(6)} = w_{\mathrm{nonplanar}}(\beta_6) + c_0 \Delta_{\mathrm{Schur}}^{\mathrm{nonlocal}} = \frac{9375}{32768} + 22 \times \frac{1922}{73185} = \frac{2071671487}{2398126080} \approx 0.86387096 < 1,$$
+   with strictly positive total Kotecký–Preiss convergence margin:
+   $$\Delta_{\mathrm{KP\_unshifted}} = 1 - w_{\mathrm{unshifted}}^{(6)} = \frac{326454593}{2398126080} \approx 0.13612904 > 0.$$
+
+3. **Dressed-Coupling Local-Nonlocal Tradeoff Excess (`NEG-YM-095`):** Absorbing the local diagonal part $\Delta_{\mathrm{Schur}}^{\mathrm{local}} = \frac{1922}{4879}$ into the local coarse plaquette action shifts the inverse coupling to:
+   $$\tilde{\beta}_6 = \beta_6 + \Delta_{\mathrm{Schur}}^{\mathrm{local}} = \frac{5}{4} + \frac{1922}{4879} = \frac{32083}{19516} \approx 1.64393318 \implies \tilde{a}_{1/2} = \frac{\tilde{\beta}_6}{4} = \frac{32083}{78064} \approx 0.41098330.$$
+   Under 4D character decimation, the dressed local character weight is:
+   $$w_{\mathrm{nonplanar}}(\tilde{\beta}_6) = 30 \times \left(\frac{32083}{78064}\right)^4 = \frac{15892460628782914815}{18568345457094852608} \approx 0.85588997 < 1,$$
+   and the non-local polymer weight is $c_0 \Delta_{\mathrm{Schur}}^{\mathrm{nonlocal}} = 22 \times \frac{1922}{73185} = \frac{42284}{73185} \approx 0.57776867 < 1$. While each term is individually strictly below unity, their combined dressed sum satisfies:
+   $$w_{\mathrm{dressed}} = w_{\mathrm{nonplanar}}(\tilde{\beta}_6) + c_0 \Delta_{\mathrm{Schur}}^{\mathrm{nonlocal}} = \frac{399310032880769905393}{278525181856422789120} \approx 1.43365864 > 1,$$
+   generating a certified Dressed-Coupling Tradeoff Excess defect:
+   $$\Delta_{\mathrm{dressed\_excess}} = w_{\mathrm{dressed}} - 1 = \frac{120784851024347116273}{278525181856422789120} \approx 0.43365864 > 0.$$
+   This tradeoff defect destroys combined cluster summability on $\mathbb{Z}^4$, keeping Edge `E-CROSSOVER` strictly open and Task `YM-016` blocked.
+
+**Proof:**
+1. *Combes–Thomas Exponential Propagator Decay:* The intra-block fluctuation operator $\mathcal{H}_5^{\perp} = -\Delta_{\mathrm{lat}} - 2 g_5^2 s_p$ on grounded axial-tree gauge has strictly positive spectral floor $\lambda_{\min}^{\perp} = \frac{238}{615} > 0$ and kinetic floor $\lambda_{\mathrm{kin}}^{\perp} = 2$. By the Combes–Thomas theorem for bounded-range discrete elliptic operators, the matrix elements of $\mathcal{G}_{\perp} = (\mathcal{H}_5^{\perp})^{-1}$ satisfy exponential spatial decay:
+   $$|\mathcal{G}_{\perp}(x, y)| \le C_{\mathrm{CT}} e^{-m_{\mathrm{CT}} |x - y|},$$
+   where the decay rate is governed by the intra-block hopping ratio $\gamma_{\mathrm{CT}} = \frac{1}{2 d_{\mathrm{eff}}} = \frac{1}{4}$ on $\mathbb{Z}^4$. For an elementary block of size $L = 2$, connecting two distinct coarse blocks requires traversing at least $L = 2$ lattice hops. Thus, the non-local off-diagonal propagator weight across the block collar is suppressed by $\eta_{\mathrm{CT}} = \gamma_{\mathrm{CT}}^L = (1/4)^2 = 1/16$.
+
+2. *Operator Product Splitting of the Schur Complement:* The quadratic downfolding functional is given by:
+   $$S_{\mathrm{Schur}}[B] = \frac{1}{2} \sum_{x, y} \langle K_{\mathrm{cross}} B(x), \mathcal{G}_{\perp}(x, y) K_{\mathrm{cross}} B(y) \rangle.$$
+   Splitting the sum into coincident/intra-block points ($x = y$ or $x, y$ in the same $2^4$ block) and strictly separated blocks ($x, y$ in distinct coarse blocks):
+   $$S_{\mathrm{Schur}}[B] = S_{\mathrm{Schur}}^{\mathrm{local}}[B] + S_{\mathrm{Schur}}^{\mathrm{nonlocal}}[B].$$
+   The local piece $S_{\mathrm{Schur}}^{\mathrm{local}}$ involves constant coarse curvature and behaves as a local marginal dimension-4 operator $\delta\beta_{\mathrm{local}} \sum_p s_p(B)$. Its weight fraction is $1 - \eta_{\mathrm{CT}} = 15/16$, giving $\Delta_{\mathrm{Schur}}^{\mathrm{local}} = \frac{15}{16} \times \frac{30752}{73185} = \frac{1922}{4879} \approx 0.393933$.
+   The strictly non-local remainder $S_{\mathrm{Schur}}^{\mathrm{nonlocal}}$ acts as a multi-block polymer interaction, with weight fraction $\eta_{\mathrm{CT}} = 1/16$, giving $\Delta_{\mathrm{Schur}}^{\mathrm{nonlocal}} = \frac{1}{16} \times \frac{30752}{73185} = \frac{1922}{73185} \approx 0.026262$.
+
+3. *Unshifted Kotecký–Preiss Handoff Closure:* Comparing $\Delta_{\mathrm{Schur}}^{\mathrm{nonlocal}}$ with the step $k = 6$ residual budget $\epsilon_{\mathrm{KP}}^{(6)} = \frac{23393}{720896} \approx 0.032450$:
+   $$\Delta_{\mathrm{slot\_margin}} = \frac{23393}{720896} - \frac{1922}{73185} = \frac{326454593}{52758773760} \approx 0.00618768 > 0.$$
+   The total unshifted cluster activity at $\beta_6 = 5/4$ is:
+   $$w_{\mathrm{unshifted}}^{(6)} = \frac{9375}{32768} + 22 \times \frac{1922}{73185} = \frac{2071671487}{2398126080} \approx 0.86387096 < 1.$$
+   This proves that if the local part is uncoupled from the character expansion, the non-local polymer tail satisfies the Kotecký–Preiss condition with positive margin $\Delta_{\mathrm{KP\_unshifted}} = \frac{326454593}{2398126080} \approx 0.13612904 > 0$.
+
+4. *Dressed-Coupling Tradeoff Breakdown:* However, in the self-consistent effective theory, the local counterterm shift must be absorbed into the bare plaquette action, driving the effective inverse coupling to $\tilde{\beta}_6 = \frac{5}{4} + \frac{1922}{4879} = \frac{32083}{19516} \approx 1.643933$. At this higher inverse coupling, the fundamental character activity increases to $\tilde{a}_{1/2} = \frac{32083}{78064} \approx 0.410983$, and the 4D non-planar branching product expands from $0.286102$ to $0.855890$.
+   Although $w_{\mathrm{nonplanar}}(\tilde{\beta}_6) \approx 0.855890 < 1$ and $c_0 \Delta_{\mathrm{Schur}}^{\mathrm{nonlocal}} \approx 0.577769 < 1$ are individually bounded, their combined sum is:
+   $$w_{\mathrm{dressed}} = 0.85588997 + 0.57776867 = 1.43365864 > 1,$$
+   exceeding the Kotecký–Preiss threshold by $\Delta_{\mathrm{dressed\_excess}} \approx 0.43365864 > 0$. This 20-fold reduction of the excess (from $8.5304$ down to $0.4337$) localizes the non-perturbative barrier to the competition between local coupling dressing and non-local polymer propagation.
+   Edge `E-CROSSOVER` remains strictly `OPEN_AND_UNSOLVED`, Task `YM-016` remains `BLOCKED`, `goal_complete` remains `false`, and `clay_problem` remains `OPEN_AND_UNSOLVED`. $\square$

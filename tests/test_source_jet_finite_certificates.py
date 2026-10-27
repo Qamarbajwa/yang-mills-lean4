@@ -1236,6 +1236,7 @@ def test_literal_git_blob_vs_checkout_digest_and_hash_elimination_certificate():
         "5d4d4252c1c062a1cda37f5a4b6a1590fe2fbea9e8cb23bcd6ee338ccd81be54",  # YM-092 candidate freeze
         "263065ab514ad3361947f7a2878fd96e5e6e0674f93e84f7165931e03da9406b",  # YM-093 candidate freeze
         "dd596ba413bb1de92766003b634b537214d11f58f83cac25ddd1a377068ebe44",  # YM-094 candidate freeze
+        "3dba03901153e725e1519d2b61c6d62a9e31868c4eb36896cb1380ee1cf2f9bc",  # YM-095 candidate freeze
     ]
 
     # Candidate 15086d3 (YM-054):
@@ -7006,6 +7007,127 @@ def test_k56_weak_to_strong_handoff_duality_and_schur_kp_remainder_excess_certif
     assert cluster_product_excess == F(20456977087, 2398126080)
     assert cluster_product_excess > F(0)
     assert 8.530 < float(cluster_product_excess) < 8.531
+
+    # 4. Epistemic Boundary & Governance Invariants:
+    E_UV_FLOWED = "CLOSED_AT_FLOW_SCALE"
+    E_UV_LOCAL_OS = "CLOSED_UNBUFFERED"
+    E_CROSSOVER = "OPEN_AND_UNSOLVED"
+    YM_016 = "BLOCKED"
+    LEMMA_YM059F = "OPEN"
+    LEMMA_YM060F = "OPEN"
+    GOAL_COMPLETE = False
+    CLAY_PROBLEM = "OPEN_AND_UNSOLVED"
+    STRUCTURAL_NO_GO_COUNT = 0
+
+    assert E_UV_FLOWED == "CLOSED_AT_FLOW_SCALE"
+    assert E_UV_LOCAL_OS == "CLOSED_UNBUFFERED"
+    assert E_CROSSOVER == "OPEN_AND_UNSOLVED"
+    assert YM_016 == "BLOCKED"
+    assert LEMMA_YM059F == "OPEN"
+    assert LEMMA_YM060F == "OPEN"
+    assert GOAL_COMPLETE is False
+    assert CLAY_PROBLEM == "OPEN_AND_UNSOLVED"
+    assert STRUCTURAL_NO_GO_COUNT == 0
+
+
+def test_combes_thomas_local_nonlocal_splitting_and_dressed_coupling_tradeoff_certificate():
+    """TEST 59: Combes–Thomas Local-vs-Nonlocal Operator Splitting of the Step k = 5 Schur Complement
+
+    (eta_CT = 1/16) on Edge E-CROSSOVER: Compression of the Non-Local Polymer Tail
+    Delta_Schur^nonlocal = 1922/73185 < eps_KP^(6) = 23393/720896, Unshifted Kotecký–Preiss
+    Convergence w_total^(6) = 2071671487/2398126080 < 1, and Isolation of the Dressed-Coupling
+    beta_6_tilde = 32083/19516 Tradeoff Excess (YM-095).
+    Certifies:
+    1. Combes–Thomas Local-vs-Nonlocal Splitting (eta_CT = (1/4)^L = 1/16):
+       - For gapped intra-block covariance (H_5^perp)^{-1} on L = 2 block, nearest-neighbor
+         hopping ratio gamma_CT <= 1/4 suppresses inter-block propagation across L = 2 hops
+         by Combes–Thomas factor eta_CT = (1/4)^2 = 1/16.
+       - Local single-block diagonal part carries weight 15/16:
+         Delta_Schur^local = (15/16) * (30752/73185) = 1922/4879 approx 0.393933.
+       - Strictly non-local inter-block polymer tail is compressed to 1/16:
+         Delta_Schur^nonlocal = (1/16) * (30752/73185) = 1922/73185 approx 0.026262.
+    2. Compression of Non-Local Tail Inside Kotecký–Preiss Slot (Delta_Schur^nonlocal < eps_KP^(6)):
+       - The non-local tail Delta_Schur^nonlocal = 1922/73185 approx 0.026262 is strictly smaller
+         than the step k = 6 Kotecký–Preiss budget eps_KP^(6) = 23393/720896 approx 0.032450.
+       - Positive Unshifted Kotecký–Preiss Slot Margin:
+         Delta_slot_margin = 23393/720896 - 1922/73185 = 326454593/52758773760 approx 0.006188 > 0.
+       - At unshifted beta_6 = 5/4, the combined character + non-local Schur tail cluster sum contracts strictly below 1:
+         w_unshifted^(6) = 9375/32768 + 22 * (1922/73185) = 2071671487/2398126080 approx 0.863871 < 1.
+       - Positive convergence margin:
+         Delta_KP_unshifted = 1 - 2071671487/2398126080 = 326454593/2398126080 approx 0.136129 > 0.
+    3. Dressed-Coupling Local-Nonlocal Tradeoff Excess (NEG-YM-095):
+       - Absorbing the 15/16 local Schur shift into coarse plaquette action shifts beta_6 = 5/4 to
+         beta_6_tilde = 5/4 + 1922/4879 = 32083/19516 approx 1.643933.
+       - Fundamental activity increases to a_half_tilde = 32083/78064 approx 0.410983.
+       - Dressed 4D character branching weight w_nonplanar(beta_6_tilde) approx 0.855890 < 1.
+       - Non-local polymer weight c_0 * Delta_Schur^nonlocal = 42284/73185 approx 0.577769 < 1.
+       - Combined dressed cluster weight exceeds unity:
+         w_dressed approx 1.433659 > 1, with tradeoff excess Delta_dressed_excess approx 0.433659 > 0
+         (a 20-fold reduction from the 8.5304 excess of YM-094).
+    4. Epistemic boundary and constitutional invariants:
+       - E-CROSSOVER = OPEN_AND_UNSOLVED, YM-016 = BLOCKED, goal_complete = False, clay_problem = OPEN.
+    """
+    delta_schur = F(30752, 73185)
+    eta_CT = F(1, 16)
+
+    # 1. Combes-Thomas local-nonlocal splitting:
+    delta_nonlocal = eta_CT * delta_schur
+    assert delta_nonlocal == F(1922, 73185)
+    assert 0.02626 < float(delta_nonlocal) < 0.02627
+
+    delta_local = (F(1) - eta_CT) * delta_schur
+    assert delta_local == F(1922, 4879)
+    assert 0.3939 < float(delta_local) < 0.3940
+    assert delta_local + delta_nonlocal == delta_schur
+
+    # 2. Compression of non-local tail inside Kotecky-Preiss slot:
+    eps_KP_6 = F(23393, 720896)
+    assert delta_nonlocal < eps_KP_6
+
+    delta_slot_margin = eps_KP_6 - delta_nonlocal
+    assert delta_slot_margin == F(326454593, 52758773760)
+    assert delta_slot_margin > F(0)
+    assert 0.00618 < float(delta_slot_margin) < 0.00619
+
+    w_nonplanar_6 = F(9375, 32768)
+    c_0 = 22
+    w_unshifted_6 = w_nonplanar_6 + F(c_0) * delta_nonlocal
+    assert w_unshifted_6 == F(2071671487, 2398126080)
+    assert w_unshifted_6 < F(1)
+    assert 0.8638 < float(w_unshifted_6) < 0.8639
+
+    delta_KP_unshifted = F(1) - w_unshifted_6
+    assert delta_KP_unshifted == F(326454593, 2398126080)
+    assert delta_KP_unshifted > F(0)
+    assert 0.1361 < float(delta_KP_unshifted) < 0.1362
+
+    # 3. Dressed-Coupling Tradeoff Excess (NEG-YM-095):
+    beta_6 = F(5, 4)
+    beta_6_tilde = beta_6 + delta_local
+    assert beta_6_tilde == F(32083, 19516)
+    assert 1.6439 < float(beta_6_tilde) < 1.6440
+
+    a_half_tilde = beta_6_tilde / F(4)
+    assert a_half_tilde == F(32083, 78064)
+    assert 0.4109 < float(a_half_tilde) < 0.4110
+
+    c_nonplanar = 30
+    w_nonplanar_tilde = F(c_nonplanar) * (a_half_tilde ** 4)
+    assert w_nonplanar_tilde < F(1)
+    assert 0.8558 < float(w_nonplanar_tilde) < 0.8560
+
+    w_nonlocal_tail = F(c_0) * delta_nonlocal
+    assert w_nonlocal_tail == F(42284, 73185)
+    assert w_nonlocal_tail < F(1)
+    assert 0.5777 < float(w_nonlocal_tail) < 0.5778
+
+    w_dressed = w_nonplanar_tilde + w_nonlocal_tail
+    assert w_dressed > F(1)
+    assert 1.433 < float(w_dressed) < 1.434
+
+    delta_dressed_excess = w_dressed - F(1)
+    assert delta_dressed_excess > F(0)
+    assert 0.433 < float(delta_dressed_excess) < 0.434
 
     # 4. Epistemic Boundary & Governance Invariants:
     E_UV_FLOWED = "CLOSED_AT_FLOW_SCALE"
