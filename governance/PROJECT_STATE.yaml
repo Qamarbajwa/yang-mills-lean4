@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 150
+revision: 151
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "ee299db84e3194b0ba915234c39411aca91de538"
-  scientific_candidate_sha: ""
-  review_bound_sha: ""
-  evidence_closeout_head: "ee299db84e3194b0ba915234c39411aca91de538"
-  closeout_resolution: "evidence_closeout_head binds preceding completed YM-096 closeout commit (ee299db84e3194b0ba915234c39411aca91de538); candidate freeze for YM-097 is staged at State Revision 150."
+  head: "727e586f17decf43164d72979936fa59aab9fea0"
+  scientific_candidate_sha: "80804782604756dc56234aad55c9ac7a1b2554ab"
+  review_bound_sha: "80804782604756dc56234aad55c9ac7a1b2554ab"
+  evidence_closeout_head: "80804782604756dc56234aad55c9ac7a1b2554ab"
+  closeout_resolution: "evidence_closeout_head binds scientific candidate commit (80804782604756dc56234aad55c9ac7a1b2554ab); YM-097 is scientifically accepted and closed out at State Revision 151."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,8 +32,8 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 149
-  last_updated_at: "2026-10-27T16:15:00Z"
+  last_expected_revision: 150
+  last_updated_at: "2026-10-27T16:25:00Z"
   active_contract: "YM-015F-JET-002B"
   frozen_candidate: ""
 
@@ -49,7 +49,7 @@ objectives:
     atlas_writer_and_coordinator: "primary-worker"
     reviewer_path: "verification/raw/YM-097_E4_RAW_20261027.md"
     acceptor: "verification/YM-097_TECHNICAL_ACCEPTANCE.md"
-    status: CANDIDATE_FROZEN
+    status: SCIENTIFICALLY_ACCEPTED
     scope_limitation: "DISJOINT_THREE_SPECIES_CONVERGENCE_PROVED_MULTISTEP_RG_BARRIER_ISOLATED_AND_CLAY_OPEN"
   - id: YM-096
     scope_in: "Schur-Screening Sign-Orientation Theorem on Edge E-CROSSOVER: Resolution of the Dressed-Coupling Tradeoff via Screened Coupling beta_6^screened = 16707/19516, Two-Species Kotecký–Preiss Convergence w_2species^(6) < 1, and Isolation of the Unified Three-Species (Character + Schur-Tail + Peierls-Excision) 4.81% Overlap Excess, proof of Lemma YM-096F-SCHUR-SCREENING-SIGN-ORIENTATION-AND-THREE-SPECIES-OVERLAP, and Test 60 finite certificate"
