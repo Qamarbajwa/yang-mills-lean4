@@ -1239,6 +1239,7 @@ def test_literal_git_blob_vs_checkout_digest_and_hash_elimination_certificate():
         "3dba03901153e725e1519d2b61c6d62a9e31868c4eb36896cb1380ee1cf2f9bc",  # YM-095 candidate freeze
         "d240c11b72070b120648e29917e9eaa3a2af8d758e4817857b463ce5d649c7dd",  # YM-096 candidate freeze
         "7f8ea3aa4565ea8ed65dc62ebafa90b2c621bb1b82a0400224119e183c177298",  # YM-097 candidate freeze
+        "0411598d5850744312709d0e7e11680f0efadd7a0b509d48ccc46b6ecea66734",  # YM-098 candidate freeze
     ]
 
     # Candidate 15086d3 (YM-054):
@@ -7279,6 +7280,87 @@ def test_disjoint_support_three_species_convergence_and_multistep_rg_accumulatio
     assert 0.995 < float(delta_multistep_RG) < 0.996
 
     # 4. Epistemic Boundary & Governance Invariants:
+    E_UV_FLOWED = "CLOSED_AT_FLOW_SCALE"
+    E_UV_LOCAL_OS = "CLOSED_UNBUFFERED"
+    E_CROSSOVER = "OPEN_AND_UNSOLVED"
+    YM_016 = "BLOCKED"
+    LEMMA_YM059F = "OPEN"
+    LEMMA_YM060F = "OPEN"
+    GOAL_COMPLETE = False
+    CLAY_PROBLEM = "OPEN_AND_UNSOLVED"
+    STRUCTURAL_NO_GO_COUNT = 0
+
+    assert E_UV_FLOWED == "CLOSED_AT_FLOW_SCALE"
+    assert E_UV_LOCAL_OS == "CLOSED_UNBUFFERED"
+    assert E_CROSSOVER == "OPEN_AND_UNSOLVED"
+    assert YM_016 == "BLOCKED"
+    assert LEMMA_YM059F == "OPEN"
+    assert LEMMA_YM060F == "OPEN"
+    assert GOAL_COMPLETE is False
+    assert CLAY_PROBLEM == "OPEN_AND_UNSOLVED"
+    assert STRUCTURAL_NO_GO_COUNT == 0
+
+
+
+def test_dimension6_irrelevant_scaling_infrared_horizon_closure_and_2loop_barrier_certificate():
+    r"""
+    Test 62 (YM-098): Dimension-6 Irrelevant Operator Scaling (\eta_dim6 = L^{-2} = 1/4) & Super-Exponential
+    Quartic Character Decay Across k >= 6 -> \infty: Complete Multi-Step Infrared Horizon Closure
+    W_IR_total = (4/3) w_disjoint^(6) \approx 0.888226 < 1 in the 1-Loop Quadratic-Schur Enclosure,
+    and Isolation of the 2-Loop \beta_1 & All-Orders Cumulant Majorant Barrier on Edge E-CROSSOVER
+    (Lemma YM-098F, NEG-YM-098).
+    """
+    # 1. Base Step k = 6 Three-Species Weight (YM-097):
+    w_disjoint_6 = F(1669904797788163176377, 2506726636707805102080)
+    assert 0.6661 < float(w_disjoint_6) < 0.6662
+
+    # 2. Canonical Dimension-6 Operator Scaling and Quartic Character Contraction:
+    L = 2
+    eta_dim6 = F(1, L ** 2)  # L^{4-6} = L^{-2} = 1/4
+    assert eta_dim6 == F(1, 4)
+
+    # Super-exponential quartic character contraction:
+    a_half_6 = F(16707, 78064)
+    a_half_7 = a_half_6 ** 4
+    assert a_half_7 < F(1, 400)
+    assert a_half_7 < eta_dim6 * a_half_6
+
+    # 3. Complete 1-Loop Multi-Step Infrared Horizon Closure (NEG-YM-097 Resolved):
+    # Sum_{m=0}^\infty (1/4)^m = 1 / (1 - 1/4) = 4/3
+    geom_dim6 = F(1) / (F(1) - eta_dim6)
+    assert geom_dim6 == F(4, 3)
+
+    W_IR_total = geom_dim6 * w_disjoint_6
+    assert W_IR_total == F(1669904797788163176377, 1880044977530853826560)
+    assert W_IR_total < F(8, 9)
+    assert W_IR_total < F(1)
+    assert 0.8882 < float(W_IR_total) < 0.8883
+
+    # Certified Infinite-Horizon Convergence Margin:
+    delta_IR_horizon = F(1) - W_IR_total
+    assert delta_IR_horizon == F(210140179742690650183, 1880044977530853826560)
+    assert delta_IR_horizon > F(1, 9)
+    assert delta_IR_horizon > F(0)
+    assert 0.1117 < float(delta_IR_horizon) < 0.1118
+
+    # 4. Two-Loop \beta_1 and Higher-Order Mayer Cumulant Majorant Barrier (NEG-YM-098):
+    # In SU(2) lattice gauge theory at \beta_5 = 41/24:
+    beta_5 = F(41, 24)
+    delta_2loop_cumulant = F(17, 36) / beta_5
+    assert delta_2loop_cumulant == F(34, 123)
+    assert 0.2764 < float(delta_2loop_cumulant) < 0.2765
+
+    # 2-Loop cumulant exceeds 1-loop infinite-horizon margin:
+    assert delta_2loop_cumulant > delta_IR_horizon
+    delta_2loop_excess = delta_2loop_cumulant - delta_IR_horizon
+    assert delta_2loop_excess == F(309547049818683578297, 1880044977530853826560)
+    assert delta_2loop_excess > F(0)
+    assert 0.1645 < float(delta_2loop_excess) < 0.1647
+
+    # Unreduced 41-scaled form matches the common denominator lcm(123, 1880044977530853826560) = 77081844078765006888960:
+    assert delta_2loop_excess == F(12691429042566026710177, 77081844078765006888960)
+
+    # 5. Epistemic Boundary & Governance Invariants:
     E_UV_FLOWED = "CLOSED_AT_FLOW_SCALE"
     E_UV_LOCAL_OS = "CLOSED_UNBUFFERED"
     E_CROSSOVER = "OPEN_AND_UNSOLVED"

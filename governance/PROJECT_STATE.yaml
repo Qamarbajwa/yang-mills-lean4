@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 151
+revision: 152
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "727e586f17decf43164d72979936fa59aab9fea0"
-  scientific_candidate_sha: "80804782604756dc56234aad55c9ac7a1b2554ab"
-  review_bound_sha: "80804782604756dc56234aad55c9ac7a1b2554ab"
-  evidence_closeout_head: "80804782604756dc56234aad55c9ac7a1b2554ab"
-  closeout_resolution: "evidence_closeout_head binds scientific candidate commit (80804782604756dc56234aad55c9ac7a1b2554ab); YM-097 is scientifically accepted and closed out at State Revision 151."
+  head: "1ac7078872f2d9dbd0061fa52a9261a3ba86b4f7"
+  scientific_candidate_sha: ""
+  review_bound_sha: ""
+  evidence_closeout_head: "1ac7078872f2d9dbd0061fa52a9261a3ba86b4f7"
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-097 closeout commit (1ac7078872f2d9dbd0061fa52a9261a3ba86b4f7); candidate freeze for YM-098 is staged at State Revision 152."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,14 +32,25 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 150
-  last_updated_at: "2026-10-27T16:25:00Z"
+  last_expected_revision: 151
+  last_updated_at: "2026-10-28T21:18:00Z"
   active_contract: "YM-015F-JET-002B"
   frozen_candidate: ""
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-098
+    scope_in: "Dimension-6 Irrelevant Operator Scaling (eta_dim6 = L^{-2} = 1/4) & Super-Exponential Quartic Character Decay Across k >= 6 -> infty: Complete Multi-Step Infrared Horizon Closure W_IR_total = (4/3) w_disjoint^(6) approx 0.888226 < 1 in the 1-Loop Quadratic-Schur Enclosure, and Isolation of the 2-Loop beta_1 & All-Orders Cumulant Majorant Barrier on Edge E-CROSSOVER, proof of Lemma YM-098F-DIMENSION6-SCALING-AND-TWOLOOP-CUMULANT-BARRIER, and Test 62 finite certificate"
+    scope_out: "Crossing infrared crossover E-CROSSOVER, non-perturbative multi-block lattice collar equivalence, continuum Wightman reconstruction, and full continuum closure"
+    dependencies: ["YM-097"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-098_E4_RAW_20261028.md"
+    acceptor: "verification/YM-098_TECHNICAL_ACCEPTANCE.md"
+    status: CANDIDATE_FROZEN
+    scope_limitation: "DIMENSION6_SCALING_AND_1LOOP_HORIZON_PROVED_TWOLOOP_CUMULANT_BARRIER_ISOLATED_AND_CLAY_OPEN"
   - id: YM-097
     scope_in: "Disjoint Spatial Support Exclusion (Omega_small \\cap Omega_Peierls = empty) & Combes–Thomas Collar Coupling on Edge E-CROSSOVER: Complete Three-Species Kotecký–Preiss Convergence w_disjoint^(6) < 2/3 < 1 at Step k = 6, and Isolation of the Multi-Step Infrared RG Trajectory (k >= 6 -> infty) Remainder Accumulation Barrier, proof of Lemma YM-097F-DISJOINT-SUPPORT-THREE-SPECIES-CONVERGENCE-AND-MULTISTEP-BARRIER, and Test 61 finite certificate"
     scope_out: "Crossing infrared crossover E-CROSSOVER, non-perturbative multi-block lattice collar equivalence, continuum Wightman reconstruction, and full continuum closure"

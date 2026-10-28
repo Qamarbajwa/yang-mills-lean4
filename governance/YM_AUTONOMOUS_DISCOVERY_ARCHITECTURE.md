@@ -1477,3 +1477,12 @@ Task `YM-088` resolves this single-plaquette defect by incorporating the geometr
   2. Complete resolution of the three-species Kotecký–Preiss sum (`NEG-YM-096` resolved): $w_{\mathrm{disjoint}}^{(6)} = \frac{1669904797788163176377}{2506726636707805102080} \approx 0.666169 < 2/3 < 1$, with exact rational margin $\Delta_{\mathrm{3species\_margin}} = \frac{836821838919641925703}{2506726636707805102080} \approx 0.333831 > 1/3 > 0$.
   3. Isolation of the Multi-Step Infrared RG Trajectory ($k \ge 6 \to \infty$) Remainder Accumulation Barrier (`NEG-YM-097`): cumulative weight $W_{\mathrm{cum}} = w / (1 - w) = \frac{1669904797788163176377}{836821838919641925703} \approx 1.995532 > 1$, isolating multi-step inductive excess defect $\Delta_{\mathrm{multistep\_RG}} = \frac{833082958868521250674}{836821838919641925703} \approx 0.995532 > 0$.
   4. Preservation of epistemic invariants: `E-CROSSOVER = OPEN_AND_UNSOLVED`, `YM-016 = BLOCKED`, `goal_complete = false`, and `clay_problem = OPEN_AND_UNSOLVED`.
+
+
+### Task Specification YM-098: Dimension-6 Irrelevant Operator Scaling, 1-Loop Multi-Step Infrared Horizon Closure, and Two-Loop Cumulant Majorant Barrier
+- **Contract:** `YM-015F-JET-002B`
+- **Objective:** Prove Lemma `YM-098F` and certify:
+  1. Dimension-6 canonical operator scaling $\eta_{\mathrm{dim6}} = L^{4-6} = 1/4$ for non-local downfolded remainder operators $\operatorname{Tr}(D_\mu F_{\nu\rho})^2$ and super-exponential quartic character contraction $a_{1/2}^{(6+m)} = (a_{1/2}^{(6)})^{4^m}$.
+  2. Complete resolution of the multi-step remainder accumulation barrier (`NEG-YM-097` resolved): $\sum_{m=0}^{\infty} (1/4)^m = 4/3 \implies W_{\mathrm{IR\_total}} = \frac{4}{3} w_{\mathrm{disjoint}}^{(6)} = \frac{1669904797788163176377}{1880044977530853826560} \approx 0.888226 < 8/9 < 1$, with certified infinite-horizon margin $\Delta_{\mathrm{IR\_horizon}} = \frac{210140179742690650183}{1880044977530853826560} \approx 0.111774 > 1/9 > 0$.
+  3. Isolation of the Two-Loop $\beta_1$ and Higher-Order Mayer Cumulant Majorant Barrier (`NEG-YM-098`): $\Delta_{\mathrm{2loop\_cumulant}} = \frac{17}{36\beta_5} = \frac{34}{123} \approx 0.276423 > \Delta_{\mathrm{IR\_horizon}}$, isolating the exact rational defect $\Delta_{\mathrm{2loop\_excess}} = \frac{309547049818683578297}{1880044977530853826560} \approx 0.164649 > 0$.
+  4. Preservation of epistemic invariants: `E-CROSSOVER = OPEN_AND_UNSOLVED`, `YM-016 = BLOCKED`, `goal_complete = false`, and `clay_problem = OPEN_AND_UNSOLVED`.
