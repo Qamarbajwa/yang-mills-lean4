@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 152
+revision: 153
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "1ac7078872f2d9dbd0061fa52a9261a3ba86b4f7"
-  scientific_candidate_sha: ""
-  review_bound_sha: ""
-  evidence_closeout_head: "1ac7078872f2d9dbd0061fa52a9261a3ba86b4f7"
-  closeout_resolution: "evidence_closeout_head binds preceding completed YM-097 closeout commit (1ac7078872f2d9dbd0061fa52a9261a3ba86b4f7); candidate freeze for YM-098 is staged at State Revision 152."
+  head: "8673b6e82c5eeb2b289c09538805f88923a10972"
+  scientific_candidate_sha: "1f528e5f375014518dae5cd595a71c936d72b7d9"
+  review_bound_sha: "1f528e5f375014518dae5cd595a71c936d72b7d9"
+  evidence_closeout_head: "1f528e5f375014518dae5cd595a71c936d72b7d9"
+  closeout_resolution: "evidence_closeout_head binds scientific candidate commit (1f528e5f375014518dae5cd595a71c936d72b7d9); YM-098 is scientifically accepted and closed out at State Revision 153."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,8 +32,8 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 151
-  last_updated_at: "2026-10-28T21:18:00Z"
+  last_expected_revision: 152
+  last_updated_at: "2026-10-28T21:35:00Z"
   active_contract: "YM-015F-JET-002B"
   frozen_candidate: ""
 
@@ -49,7 +49,7 @@ objectives:
     atlas_writer_and_coordinator: "primary-worker"
     reviewer_path: "verification/raw/YM-098_E4_RAW_20261028.md"
     acceptor: "verification/YM-098_TECHNICAL_ACCEPTANCE.md"
-    status: CANDIDATE_FROZEN
+    status: SCIENTIFICALLY_ACCEPTED
     scope_limitation: "DIMENSION6_SCALING_AND_1LOOP_HORIZON_PROVED_TWOLOOP_CUMULANT_BARRIER_ISOLATED_AND_CLAY_OPEN"
   - id: YM-097
     scope_in: "Disjoint Spatial Support Exclusion (Omega_small \\cap Omega_Peierls = empty) & Combes–Thomas Collar Coupling on Edge E-CROSSOVER: Complete Three-Species Kotecký–Preiss Convergence w_disjoint^(6) < 2/3 < 1 at Step k = 6, and Isolation of the Multi-Step Infrared RG Trajectory (k >= 6 -> infty) Remainder Accumulation Barrier, proof of Lemma YM-097F-DISJOINT-SUPPORT-THREE-SPECIES-CONVERGENCE-AND-MULTISTEP-BARRIER, and Test 61 finite certificate"
