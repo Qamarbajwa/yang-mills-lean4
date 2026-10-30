@@ -316,6 +316,7 @@ def test_14_scientific_candidate_and_evidence_closeout_head_remain_distinct():
         "d240c11b72070b120648e29917e9eaa3a2af8d758e4817857b463ce5d649c7dd",
         "7f8ea3aa4565ea8ed65dc62ebafa90b2c621bb1b82a0400224119e183c177298",
         "0411598d5850744312709d0e7e11680f0efadd7a0b509d48ccc46b6ecea66734",
+        "a5fb81482c1c6803fd709d3e996a72f34dca8e6b024f034d8daf4b8c2c45e4e0",  # YM-099 candidate freeze
     ]
 
 

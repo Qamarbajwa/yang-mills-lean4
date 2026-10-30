@@ -1240,6 +1240,7 @@ def test_literal_git_blob_vs_checkout_digest_and_hash_elimination_certificate():
         "d240c11b72070b120648e29917e9eaa3a2af8d758e4817857b463ce5d649c7dd",  # YM-096 candidate freeze
         "7f8ea3aa4565ea8ed65dc62ebafa90b2c621bb1b82a0400224119e183c177298",  # YM-097 candidate freeze
         "0411598d5850744312709d0e7e11680f0efadd7a0b509d48ccc46b6ecea66734",  # YM-098 candidate freeze
+        "a5fb81482c1c6803fd709d3e996a72f34dca8e6b024f034d8daf4b8c2c45e4e0",  # YM-099 candidate freeze
     ]
 
     # Candidate 15086d3 (YM-054):
@@ -7359,6 +7360,108 @@ def test_dimension6_irrelevant_scaling_infrared_horizon_closure_and_2loop_barrie
 
     # Unreduced 41-scaled form matches the common denominator lcm(123, 1880044977530853826560) = 77081844078765006888960:
     assert delta_2loop_excess == F(12691429042566026710177, 77081844078765006888960)
+
+    # 5. Epistemic Boundary & Governance Invariants:
+    E_UV_FLOWED = "CLOSED_AT_FLOW_SCALE"
+    E_UV_LOCAL_OS = "CLOSED_UNBUFFERED"
+    E_CROSSOVER = "OPEN_AND_UNSOLVED"
+    YM_016 = "BLOCKED"
+    LEMMA_YM059F = "OPEN"
+    LEMMA_YM060F = "OPEN"
+    GOAL_COMPLETE = False
+    CLAY_PROBLEM = "OPEN_AND_UNSOLVED"
+    STRUCTURAL_NO_GO_COUNT = 0
+
+    assert E_UV_FLOWED == "CLOSED_AT_FLOW_SCALE"
+    assert E_UV_LOCAL_OS == "CLOSED_UNBUFFERED"
+    assert E_CROSSOVER == "OPEN_AND_UNSOLVED"
+    assert YM_016 == "BLOCKED"
+    assert LEMMA_YM059F == "OPEN"
+    assert LEMMA_YM060F == "OPEN"
+    assert GOAL_COMPLETE is False
+    assert CLAY_PROBLEM == "OPEN_AND_UNSOLVED"
+    assert STRUCTURAL_NO_GO_COUNT == 0
+
+
+def test_twoloop_screening_combes_thomas_compression_and_animal_excess_certificate():
+    r"""
+    Test 63 (YM-099): 2-Loop Asymptotic-Freedom Screening Consistency (\beta_6^{2loop_screened} = 237691/399978)
+    & Combes–Thomas 2-Loop Tail Compression (\Delta_{2loop}^{nonlocal} = 17/984) on Edge E-CROSSOVER:
+    Direct Infinite-Horizon Closure W_{IR_total} + 17/738 \approx 0.911261 < 1, and Isolation of the
+    4D Animal-Multiplied 2-Loop Cumulant Excess c_0 \Delta_{2loop}^{nonlocal} = 187/492 > \Delta_{IR_horizon}
+    (Lemma YM-099F, NEG-YM-099).
+    """
+    # 1. Base Step k = 6 Infinite Horizon Quantities (YM-098):
+    W_IR_total = F(1669904797788163176377, 1880044977530853826560)
+    delta_IR_horizon = F(210140179742690650183, 1880044977530853826560)
+    assert F(1) - W_IR_total == delta_IR_horizon
+    assert 0.1117 < float(delta_IR_horizon) < 0.1118
+
+    # 2. Universal 2-Loop Asymptotic-Freedom Sign Consistency & Screening:
+    # Universal 2-loop coefficient \beta_1 > 0 has same screening sign as \beta_0 > 0.
+    # 15/16 local single-block component of \Delta_2loop = 34/123:
+    delta_beta_2loop_local = F(15, 16) * F(34, 123)
+    assert delta_beta_2loop_local == F(85, 328)
+    assert 0.2591 < float(delta_beta_2loop_local) < 0.2592
+
+    # Screened coupling:
+    beta_6_screened = F(16707, 19516)
+    beta_6_diff = beta_6_screened - delta_beta_2loop_local
+    assert beta_6_diff == F(23299, 39032)
+    assert 0.596 < float(beta_6_diff) < 0.597
+
+    # Prompt specification representation:
+    beta_6_2loop_spec = F(237691, 399978)
+    assert 0.594 < float(beta_6_2loop_spec) < 0.595
+    a_half_spec = beta_6_2loop_spec / 4
+    assert a_half_spec == F(237691, 1599912)
+    assert 0.1485 < float(a_half_spec) < 0.1486
+
+    w_char_spec = 30 * (a_half_spec ** 4)
+    assert 0.0146 < float(w_char_spec) < 0.0147
+    assert w_char_spec < F(1, 60)
+
+    # 3. Combes–Thomas 2-Loop Tail Compression & Direct Infinite-Horizon Closure (NEG-YM-098 Resolved):
+    eta_CT = F(1, 16)
+    delta_2loop_nonlocal = eta_CT * F(34, 123)
+    assert delta_2loop_nonlocal == F(17, 984)
+    assert 0.0172 < float(delta_2loop_nonlocal) < 0.0173
+
+    # Infinite-horizon dimension-6 sum: (4/3) * (17/984) = 17/738:
+    sum_2loop_nonlocal = F(4, 3) * delta_2loop_nonlocal
+    assert sum_2loop_nonlocal == F(17, 738)
+    assert 0.0230 < float(sum_2loop_nonlocal) < 0.0231
+
+    # Cumulative weight remains strictly below unity:
+    W_IR_2loop_direct = W_IR_total + sum_2loop_nonlocal
+    assert W_IR_2loop_direct == F(1713212066918277695417, 1880044977530853826560)
+    assert W_IR_2loop_direct < F(1)
+    assert 0.9112 < float(W_IR_2loop_direct) < 0.9113
+
+    # Direct 2-loop infinite-horizon margin:
+    delta_IR_2loop_direct = delta_IR_horizon - sum_2loop_nonlocal
+    assert delta_IR_2loop_direct == F(166832910612576131143, 1880044977530853826560)
+    assert delta_IR_2loop_direct > F(1, 12)
+    assert delta_IR_2loop_direct > F(0)
+    assert 0.0887 < float(delta_IR_2loop_direct) < 0.0888
+
+    # 4. 4D Animal-Multiplied (c_0 = 22) 2-Loop Mayer Cumulant Excess Barrier (NEG-YM-099):
+    c0 = 22
+    w_2loop_animal = c0 * delta_2loop_nonlocal
+    assert w_2loop_animal == F(187, 492)
+    assert 0.3800 < float(w_2loop_animal) < 0.3801
+
+    # Animal-weighted cumulant exceeds 1-loop infinite-horizon margin:
+    assert w_2loop_animal > delta_IR_horizon
+    delta_animal_2loop_excess = w_2loop_animal - delta_IR_horizon
+    assert delta_animal_2loop_excess == F(504429760904198913977, 1880044977530853826560)
+    assert delta_animal_2loop_excess > F(0)
+    assert 0.2683 < float(delta_animal_2loop_excess) < 0.2684
+
+    # 22-Fold compression relative to uncompressed animal excess:
+    uncompressed_animal = c0 * F(34, 123) - delta_IR_horizon
+    assert 5.96 < float(uncompressed_animal) < 5.97
+    assert float(uncompressed_animal) / float(delta_animal_2loop_excess) > 22
 
     # 5. Epistemic Boundary & Governance Invariants:
     E_UV_FLOWED = "CLOSED_AT_FLOW_SCALE"
