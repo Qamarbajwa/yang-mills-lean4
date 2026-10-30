@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 154
+revision: 155
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "d7698db847ea610ff9c00c735d4fa3f6fa3eb565"
-  scientific_candidate_sha: ""
-  review_bound_sha: ""
-  evidence_closeout_head: "d7698db847ea610ff9c00c735d4fa3f6fa3eb565"
-  closeout_resolution: "evidence_closeout_head binds preceding completed YM-098 closeout commit (d7698db847ea610ff9c00c735d4fa3f6fa3eb565); candidate freeze for YM-099 is staged at State Revision 154."
+  head: "1a8ae64b63b257e27f32f5e5b83be71dfcd7e070"
+  scientific_candidate_sha: "18d352588e95b0d85545d9eba4c1be5f40a0667e"
+  review_bound_sha: "18d352588e95b0d85545d9eba4c1be5f40a0667e"
+  evidence_closeout_head: "18d352588e95b0d85545d9eba4c1be5f40a0667e"
+  closeout_resolution: "evidence_closeout_head binds scientific candidate commit (18d352588e95b0d85545d9eba4c1be5f40a0667e); YM-099 is scientifically accepted and closed out at State Revision 155."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,8 +32,8 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 153
-  last_updated_at: "2026-10-30T01:45:00Z"
+  last_expected_revision: 154
+  last_updated_at: "2026-10-30T02:05:00Z"
   active_contract: "YM-015F-JET-002B"
   frozen_candidate: ""
 
@@ -49,7 +49,7 @@ objectives:
     atlas_writer_and_coordinator: "primary-worker"
     reviewer_path: "verification/raw/YM-099_E4_RAW_20261030.md"
     acceptor: "verification/YM-099_TECHNICAL_ACCEPTANCE.md"
-    status: CANDIDATE_FROZEN
+    status: SCIENTIFICALLY_ACCEPTED
     scope_limitation: "TWOLOOP_SCREENING_AND_COMBES_THOMAS_COMPRESSION_PROVED_ANIMAL_CUMULANT_BARRIER_ISOLATED_AND_CLAY_OPEN"
   - id: YM-098
     scope_in: "Dimension-6 Irrelevant Operator Scaling (eta_dim6 = L^{-2} = 1/4) & Super-Exponential Quartic Character Decay Across k >= 6 -> infty: Complete Multi-Step Infrared Horizon Closure W_IR_total = (4/3) w_disjoint^(6) approx 0.888226 < 1 in the 1-Loop Quadratic-Schur Enclosure, and Isolation of the 2-Loop beta_1 & All-Orders Cumulant Majorant Barrier on Edge E-CROSSOVER, proof of Lemma YM-098F-DIMENSION6-SCALING-AND-TWOLOOP-CUMULANT-BARRIER, and Test 62 finite certificate"
