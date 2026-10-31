@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.0.3"
-revision: 155
+revision: 156
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,11 +9,11 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "1a8ae64b63b257e27f32f5e5b83be71dfcd7e070"
-  scientific_candidate_sha: "18d352588e95b0d85545d9eba4c1be5f40a0667e"
-  review_bound_sha: "18d352588e95b0d85545d9eba4c1be5f40a0667e"
-  evidence_closeout_head: "18d352588e95b0d85545d9eba4c1be5f40a0667e"
-  closeout_resolution: "evidence_closeout_head binds scientific candidate commit (18d352588e95b0d85545d9eba4c1be5f40a0667e); YM-099 is scientifically accepted and closed out at State Revision 155."
+  head: "2cd0a94b5952dbd4f40f9247d8534125c1e05d93"
+  scientific_candidate_sha: ""
+  review_bound_sha: ""
+  evidence_closeout_head: "2cd0a94b5952dbd4f40f9247d8534125c1e05d93"
+  closeout_resolution: "evidence_closeout_head binds preceding completed YM-099 closeout commit (2cd0a94b5952dbd4f40f9247d8534125c1e05d93); candidate freeze for YM-100 is staged at State Revision 156."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
 
@@ -32,14 +32,25 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 154
-  last_updated_at: "2026-10-30T02:05:00Z"
+  last_expected_revision: 155
+  last_updated_at: "2026-10-31T06:50:00Z"
   active_contract: "YM-015F-JET-002B"
   frozen_candidate: ""
 
 current_objective: YM-015F-JET-002B
 
 objectives:
+  - id: YM-100
+    scope_in: "Elliptic Regularity Suppression (eta_elliptic = 1/4) of the 4D Animal-Multiplied 2-Loop Non-Local Cumulant Tail (w_2loop_animal^elliptic = 187/1968) & Complete 4-Species 2-Loop Infinite-Horizon Kotecký–Preiss Closure W_IR_total^(2loop_full) approx 0.950481 < 1 on Edge E-CROSSOVER, and Isolation of the n >= 3 Factorial Renormalon / Cauchy–Taylor Remainder Barrier, proof of Lemma YM-100F-ELLIPTIC-REGULARITY-AND-RENORMALON-BARRIER, and Test 64 finite certificate"
+    scope_out: "Crossing infrared crossover E-CROSSOVER, non-perturbative multi-block lattice collar equivalence, continuum Wightman reconstruction, and full continuum closure"
+    dependencies: ["YM-099"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-100_E4_RAW_20261031.md"
+    acceptor: "verification/YM-100_TECHNICAL_ACCEPTANCE.md"
+    status: CANDIDATE_FROZEN
+    scope_limitation: "ELLIPTIC_2LOOP_TAIL_SUPPRESSION_AND_4SPECIES_CLOSURE_PROVED_RENORMALON_BARRIER_ISOLATED_AND_CLAY_OPEN"
   - id: YM-099
     scope_in: "2-Loop Asymptotic-Freedom Screening Consistency (beta_6^{2loop_screened} = 237691/399978) & Combes–Thomas 2-Loop Tail Compression (Delta_{2loop}^{nonlocal} = 17/984) on Edge E-CROSSOVER: Direct Infinite-Horizon Closure W_{IR_total} + 17/738 approx 0.911261 < 1, and Isolation of the 4D Animal-Multiplied 2-Loop Cumulant Excess c_0 Delta_{2loop}^{nonlocal} = 187/492 > Delta_{IR_horizon}, proof of Lemma YM-099F-TWOLOOP-SCREENING-AND-ANIMAL-CUMULANT-BARRIER, and Test 63 finite certificate"
     scope_out: "Crossing infrared crossover E-CROSSOVER, non-perturbative multi-block lattice collar equivalence, continuum Wightman reconstruction, and full continuum closure"

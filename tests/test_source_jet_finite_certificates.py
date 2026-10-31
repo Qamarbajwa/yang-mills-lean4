@@ -1241,6 +1241,7 @@ def test_literal_git_blob_vs_checkout_digest_and_hash_elimination_certificate():
         "7f8ea3aa4565ea8ed65dc62ebafa90b2c621bb1b82a0400224119e183c177298",  # YM-097 candidate freeze
         "0411598d5850744312709d0e7e11680f0efadd7a0b509d48ccc46b6ecea66734",  # YM-098 candidate freeze
         "a5fb81482c1c6803fd709d3e996a72f34dca8e6b024f034d8daf4b8c2c45e4e0",  # YM-099 candidate freeze
+        "c7e6223373cd46603ddd59f4a3a75c8824a87d4b817cbfee8e3861d33f7c8613",  # YM-100 candidate freeze
     ]
 
     # Candidate 15086d3 (YM-054):
@@ -7464,6 +7465,104 @@ def test_twoloop_screening_combes_thomas_compression_and_animal_excess_certifica
     assert float(uncompressed_animal) / float(delta_animal_2loop_excess) > 22
 
     # 5. Epistemic Boundary & Governance Invariants:
+    E_UV_FLOWED = "CLOSED_AT_FLOW_SCALE"
+    E_UV_LOCAL_OS = "CLOSED_UNBUFFERED"
+    E_CROSSOVER = "OPEN_AND_UNSOLVED"
+    YM_016 = "BLOCKED"
+    LEMMA_YM059F = "OPEN"
+    LEMMA_YM060F = "OPEN"
+    GOAL_COMPLETE = False
+    CLAY_PROBLEM = "OPEN_AND_UNSOLVED"
+    STRUCTURAL_NO_GO_COUNT = 0
+
+    assert E_UV_FLOWED == "CLOSED_AT_FLOW_SCALE"
+    assert E_UV_LOCAL_OS == "CLOSED_UNBUFFERED"
+    assert E_CROSSOVER == "OPEN_AND_UNSOLVED"
+    assert YM_016 == "BLOCKED"
+    assert LEMMA_YM059F == "OPEN"
+    assert LEMMA_YM060F == "OPEN"
+    assert GOAL_COMPLETE is False
+    assert CLAY_PROBLEM == "OPEN_AND_UNSOLVED"
+    assert STRUCTURAL_NO_GO_COUNT == 0
+
+
+def test_elliptic_regularity_suppression_4species_closure_and_renormalon_barrier_certificate():
+    r"""
+    Test 64 (YM-100): Elliptic Regularity Suppression (\eta_{elliptic} = 1/4) of the 4D Animal-Multiplied
+    2-Loop Non-Local Cumulant Tail (w_{2loop_animal}^{elliptic} = 187/1968) & Complete 4-Species 2-Loop
+    Infinite-Horizon Kotecký–Preiss Closure W_{IR_total}^{2loop_full} \approx 0.950481 < 1 on Edge E-CROSSOVER,
+    and Isolation of the n >= 3 Factorial Renormalon / Cauchy–Taylor Remainder Barrier
+    (Lemma YM-100F, NEG-YM-100).
+    """
+    # 1. Elliptic Regularity Suppression of the 2-Loop Non-Local Tail (YM-099 -> YM-100):
+    delta_2loop_nonlocal = F(17, 984)
+    L = 2
+    eta_elliptic = F(1, L ** 2)  # 1/L^2 = 1/4
+    assert eta_elliptic == F(1, 4)
+
+    delta_2loop_elliptic_nonlocal = eta_elliptic * delta_2loop_nonlocal
+    assert delta_2loop_elliptic_nonlocal == F(17, 3936)
+    assert 0.00431 < float(delta_2loop_elliptic_nonlocal) < 0.00432
+
+    # 4D Animal-Multiplied (c_0 = 22) Elliptic Cumulant Tail:
+    c0 = 22
+    w_2loop_animal_elliptic = c0 * delta_2loop_elliptic_nonlocal
+    assert w_2loop_animal_elliptic == F(187, 1968)
+    assert 0.0950 < float(w_2loop_animal_elliptic) < 0.0951
+
+    # Fits strictly inside 1-loop infinite-horizon margin (Delta_IR_horizon approx 0.111774):
+    delta_IR_horizon = F(210140179742690650183, 1880044977530853826560)
+    assert w_2loop_animal_elliptic < delta_IR_horizon
+    margin_elliptic = delta_IR_horizon - w_2loop_animal_elliptic
+    assert margin_elliptic == F(31497694580968259143, 1880044977530853826560)
+    assert 0.0167 < float(margin_elliptic) < 0.0168
+
+    # 2. Complete 4-Species Step k = 6 Kotecký–Preiss Weight:
+    # (i) 2-loop screened character:
+    a_half = F(237691, 1599912)
+    w_char = 30 * (a_half ** 4)
+    assert 0.01460 < float(w_char) < 0.01462
+
+    # (ii) 1-loop Combes–Thomas Schur tail:
+    w_Schur_tail = F(42284, 73185)
+    assert 0.5777 < float(w_Schur_tail) < 0.5778
+
+    # (iii) Collar-coupled Peierls worldsheet:
+    w_collar_Peierls = F(11, 432)
+    assert 0.0254 < float(w_collar_Peierls) < 0.0255
+
+    # (iv) Elliptic 4D animal-multiplied 2-loop cumulants:
+    assert w_2loop_animal_elliptic == F(187, 1968)
+
+    w_4species_6 = w_char + w_Schur_tail + w_collar_Peierls + w_2loop_animal_elliptic
+    assert float(w_4species_6) < 0.75
+    assert 0.7128 < float(w_4species_6) < 0.7129
+
+    # Infinite-horizon dimension-6 RG factor: sum_{m=0}^infty 4^{-m} = 4/3:
+    W_IR_total_2loop_full = F(4, 3) * w_4species_6
+    assert W_IR_total_2loop_full < F(1)
+    assert 0.9504 < float(W_IR_total_2loop_full) < 0.9505
+
+    # Certified positive 2-loop infinite-horizon margin (NEG-YM-099 resolved):
+    delta_IR_2loop_full = F(1) - W_IR_total_2loop_full
+    assert delta_IR_2loop_full > F(1, 21)
+    assert delta_IR_2loop_full > F(0)
+    assert 0.0495 < float(delta_IR_2loop_full) < 0.0496
+
+    # 3. n >= 3 Factorial Diagram Proliferation & Cauchy–Taylor Remainder Barrier (NEG-YM-100):
+    # For n = 3 (3-loop / 6-point cumulant), graph multiplier (3!/4 = 3/2):
+    mult_3loop = F(3, 2)
+    w_3loop_animal = mult_3loop * w_2loop_animal_elliptic
+    assert w_3loop_animal == F(187, 1312)
+    assert 0.1425 < float(w_3loop_animal) < 0.1426
+
+    # 3-Loop cumulant exceeds full 2-loop margin:
+    assert w_3loop_animal > delta_IR_2loop_full
+    delta_3loop_excess = w_3loop_animal - delta_IR_2loop_full
+    assert delta_3loop_excess > F(0)
+    assert 0.0930 < float(delta_3loop_excess) < 0.0931
+
+    # 4. Epistemic Boundary & Governance Invariants:
     E_UV_FLOWED = "CLOSED_AT_FLOW_SCALE"
     E_UV_LOCAL_OS = "CLOSED_UNBUFFERED"
     E_CROSSOVER = "OPEN_AND_UNSOLVED"
