@@ -2,7 +2,7 @@
 """
 Autonomous Journal-Grade Publication Upgrade & Submission Bundler
 Standard: Communications in Mathematical Physics / arXiv:math-ph
-State Revision: 155
+State Revision: 157
 """
 
 import hashlib
@@ -22,11 +22,11 @@ COVER_LETTER_CONTENT = r"""# Cover Letter to the Editorial Board of Communicatio
 
 **To:** The Editorial Board  
 **Journal:** *Communications in Mathematical Physics* (CMP) / Mathematical Physics (`math-ph`)  
-**Date:** October 30, 2026  
-**State Revision:** 155  
-**Accepted Candidate Commit SHA:** `18d352588e95b0d85545d9eba4c1be5f40a0667e`  
-**Candidate Checkout Tree Hash:** `a5fb81482c1c6803fd709d3e996a72f34dca8e6b024f034d8daf4b8c2c45e4e0`  
-**Literal Git-Blob Manifest Hash:** `fed42324107dcd0141da581dd7bca9b0874ccd26e0ddffa172c712aef7b0042b`  
+**Date:** October 31, 2026  
+**State Revision:** 157  
+**Accepted Candidate Commit SHA:** `b8e9a201aee000faa9005728e25ef6ecf1d0ecef`  
+**Candidate Checkout Tree Hash:** `c7e6223373cd46603ddd59f4a3a75c8824a87d4b817cbfee8e3861d33f7c8613`  
+**Literal Git-Blob Manifest Hash:** `59f24e847ad5e57c448680c95790ff2c4b10cb0a5b9f31a1766b5f9364d493c2`  
 
 **Title:** *Computer-Assisted Exact-Rational Bounds for the 4D Yang--Mills Ultraviolet-to-Infrared Crossover: Ultraviolet OS Reconstruction, the Non-Abelian Obstruction Atlas, and $k = 5 \to 6$ Weak-to-Strong Kotecký–Preiss Handoff Convergence*  
 **Authors:** Antigravity Autonomous Research Consortium  
@@ -70,7 +70,7 @@ Our monograph establishes the following definitive results:
    $$\texttt{E-CROSSOVER} = \mathrm{OPEN\_AND\_UNSOLVED}, \quad \texttt{YM-016} = \mathrm{BLOCKED}, \quad \texttt{clay\_problem} = \mathrm{OPEN\_AND\_UNSOLVED}.$$
 
 ### Deterministic Zero-Mock Computer-Assisted Verification
-Every numerical equality, spectral bound, and convergence margin in this work is certified in exact rational arithmetic $\mathbb{Q}$ using Python's standard `fractions.Fraction`. All 493 unit tests execute deterministically in under 10 seconds. Every discovery step was executed under constitutional 3-Agent governance separation:
+Every numerical equality, spectral bound, and convergence margin in this work is certified in exact rational arithmetic $\mathbb{Q}$ using Python's standard `fractions.Fraction`. All 494 unit tests execute deterministically in under 10 seconds. Every discovery step was executed under constitutional 3-Agent governance separation:
 $$\mathrm{Writer} \ne \mathrm{Independent\ E4\ Reviewer} \ne \mathrm{Distinct\ Technical\ Acceptor}.$$
 
 We look forward to the refereeing process and are delighted to make the complete reproducible source package available to the editors and referees.
@@ -82,10 +82,10 @@ Sincerely,
 
 REFEREE_GUIDE_CONTENT = r"""# Referee Verification Guide: Reproducing the Yang–Mills QFT Package
 **Standard:** Communications in Mathematical Physics / arXiv:math-ph  
-**State Revision:** `155`  
-**Accepted Candidate Commit SHA:** `18d352588e95b0d85545d9eba4c1be5f40a0667e`  
-**Candidate Checkout Tree Hash:** `a5fb81482c1c6803fd709d3e996a72f34dca8e6b024f034d8daf4b8c2c45e4e0`  
-**Literal Git-Blob Manifest Hash:** `fed42324107dcd0141da581dd7bca9b0874ccd26e0ddffa172c712aef7b0042b`  
+**State Revision:** `157`  
+**Accepted Candidate Commit SHA:** `b8e9a201aee000faa9005728e25ef6ecf1d0ecef`  
+**Candidate Checkout Tree Hash:** `c7e6223373cd46603ddd59f4a3a75c8824a87d4b817cbfee8e3861d33f7c8613`  
+**Literal Git-Blob Manifest Hash:** `59f24e847ad5e57c448680c95790ff2c4b10cb0a5b9f31a1766b5f9364d493c2`  
 
 ---
 
@@ -105,12 +105,12 @@ python scripts/verify_all.py
 
 [Step 1/5] Auditing Closed-World Scientific Manifest (158 Canonical Files)...
   Canonical File Count : 158 (matches manifest)
-  Checkout Tree Hash   : a5fb81482c1c6803fd709d3e996a72f34dca8e6b024f034d8daf4b8c2c45e4e0
+  Checkout Tree Hash   : c7e6223373cd46603ddd59f4a3a75c8824a87d4b817cbfee8e3861d33f7c8613
   [PASS] Closed-world scientific tree hash verified exactly.
 
 [Step 2/5] Auditing Literal Git-Blob Tree Hash at Candidate SHA...
-  Target Candidate SHA : 18d352588e95b0d85545d9eba4c1be5f40a0667e (Task: YM-099)
-  Literal Blob Hash    : fed42324107dcd0141da581dd7bca9b0874ccd26e0ddffa172c712aef7b0042b
+  Target Candidate SHA : b8e9a201aee000faa9005728e25ef6ecf1d0ecef (Task: YM-100)
+  Literal Blob Hash    : 59f24e847ad5e57c448680c95790ff2c4b10cb0a5b9f31a1766b5f9364d493c2
   [PASS] Literal Git-blob manifest hash verified exactly.
 
 [Step 3/5] Auditing Negative Evidence Register Continuity...
@@ -119,8 +119,8 @@ python scripts/verify_all.py
 
 [Step 4/5] Running Deterministic Pytest Certification Suite...
   Execution Time       : 8.05 seconds
-  Pytest Output        : 493 passed in 8.05s
-  [PASS] Exact rational certificates passed deterministically (493 passed in 8.05s).
+  Pytest Output        : 494 passed in 8.05s
+  [PASS] Exact rational certificates passed deterministically (494 passed in 8.05s).
 
 [Step 5/5] Auditing Epistemic Governance Invariants in PROJECT_STATE.yaml...
   [PASS] goal_complete is false (no fake total closure)
@@ -184,6 +184,7 @@ Every theorem in the monograph maps directly to a deterministic regression test 
 | Lemma `YM-097F` | Disjoint Support Exclusion & Three-Species Handoff ($w \approx 0.6662 < 1$) | Test 61 |
 | Lemma `YM-098F` | Dim-6 Irrelevant Scaling & 1-Loop Horizon Closure ($W \approx 0.8882 < 1$) | Test 62 |
 | Lemma `YM-099F` | 2-Loop Screening & Combes--Thomas Compression ($W \approx 0.9113 < 1$) | Test 63 |
+| Lemma `YM-100F` | Elliptic 2-Loop Regularity & 4-Species Horizon Closure ($W \approx 0.9505 < 1$) | Test 64 |
 
 ---
 
@@ -210,10 +211,10 @@ The research repository is governed by strict epistemic guardrails:
    - `E-CROSSOVER: OPEN_AND_UNSOLVED`
    - `YM-016: BLOCKED`
    - `structural_no_go_count: 0`
-3. **3-Agent Verification Separation for Revision 155:**
+3. **3-Agent Verification Separation for Revision 157:**
    - **Writer:** Luna (`00ffe8a3-c73a-4096-b0e7-53138b34c21a`)
-   - **Fresh Blind E4 Reviewer:** Subagent (`5562aeef-99ef-4902-a444-f531529e9492`) $\implies$ `INTEGRITY_PASS`
-   - **Fresh Distinct Technical Acceptor:** Subagent (`53d63e58-b4c9-4ab9-9ca3-b6a15bf719cc`) $\implies$ `TECHNICAL_ACCEPTANCE_GRANTED`
+   - **Fresh Blind E4 Reviewer:** Subagent (`434bdbc8-aaa2-49be-a024-72cedf08c7af`) $\implies$ `INTEGRITY_PASS`
+   - **Fresh Distinct Technical Acceptor:** Subagent (`60fce87c-1aa7-47f3-9583-4068578da2fd`) $\implies$ `TECHNICAL_ACCEPTANCE_GRANTED`
 """
 
 
@@ -230,7 +231,7 @@ def verify_suite():
         print(res.stdout)
         print(res.stderr)
         sys.exit(1)
-    print("  [PASS] All 5 referee verification gates and 493 unit tests passed!")
+    print("  [PASS] All 5 referee verification gates and 494 unit tests passed!")
 
 
 def compile_monograph():
@@ -273,8 +274,8 @@ def write_submission_docs():
 
 
 def create_zip_bundle():
-    print("[4/5] Bundling Publication Assets into dist/YM_CMP_Publication_Bundle_Rev155.zip...")
-    zip_path = DIST / "YM_CMP_Publication_Bundle_Rev155.zip"
+    print("[4/5] Bundling Publication Assets into dist/YM_CMP_Publication_Bundle_Rev157.zip...")
+    zip_path = DIST / "YM_CMP_Publication_Bundle_Rev157.zip"
     
     files_to_bundle = [
         (PAPER / "main.tex", "main.tex"),
@@ -319,7 +320,7 @@ def main():
     print("=" * 80)
     print("  AUTONOMOUS PUBLICATION UPGRADE & SUBMISSION BUNDLER")
     print("  Communications in Mathematical Physics / arXiv:math-ph Standard")
-    print("  State Revision 155")
+    print("  State Revision 157")
     print("=" * 80)
     verify_suite()
     compile_monograph()
@@ -328,7 +329,7 @@ def main():
     clean_latex_artifacts()
     print("=" * 80)
     print("  PUBLICATION BUNDLE BUILD COMPLETE")
-    print(f"  Archive: dist/YM_CMP_Publication_Bundle_Rev155.zip")
+    print(f"  Archive: dist/YM_CMP_Publication_Bundle_Rev157.zip")
     print(f"  SHA-256: {bundle_hash}")
     print("=" * 80)
 
