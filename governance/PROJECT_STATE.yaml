@@ -1,7 +1,7 @@
-# LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project Strengthening
+# LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 + v4.1.0-r3 Project Strengthening
 # Single source of truth for active project coordination.
-schema_version: "4.0.3"
-revision: 157
+schema_version: "4.1.0-r3"
+revision: 158
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -9,37 +9,105 @@ clay_problem: OPEN_AND_UNSOLVED
 project:
   id: YANG_MILLS_MASS_GAP
   root: "D:\\Comfy UI\\yang mills and the mass gap"
-  head: "57adcf2584b09107d81c606a49033c2dd9dcefae"
+  head: "840584589d81dbe52c4b814a0ad3a94840bf2b6b"
   scientific_candidate_sha: "b8e9a201aee000faa9005728e25ef6ecf1d0ecef"
   review_bound_sha: "b8e9a201aee000faa9005728e25ef6ecf1d0ecef"
   evidence_closeout_head: "b8e9a201aee000faa9005728e25ef6ecf1d0ecef"
-  closeout_resolution: "evidence_closeout_head binds scientific candidate commit (b8e9a201aee000faa9005728e25ef6ecf1d0ecef); Milestone Task YM-100 is scientifically accepted and closed out at State Revision 157."
+  closeout_resolution: "evidence_closeout_head binds scientific candidate commit (b8e9a201aee000faa9005728e25ef6ecf1d0ecef); Milestone Task YM-100 is scientifically accepted at Revision 157; Task YM-GOV-ADOPT-0410R3 candidate frozen at State Revision 158."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
+  adoption_mode: "MIGRATION_GOVERNED"
+  product_archetype: "LIBRARY_SDK"
+  active_paradigms:
+    - "FUNCTIONAL"
+    - "DATA_ORIENTED"
+    - "RELATIONAL_LOGIC"
 
 governance_binding:
   canonical_universal_baseline: "UNIVERSAL_GOVERNANCE_MINIMAL_v4.0.4"
-  project_specific_strengthening: "UNIVERSAL_GOVERNANCE_MINIMAL_v4.0.6-r3_ADOPTED_CONTROLS"
-  active_version: "4.0.4+4.0.6-r3-strengthening"
-  source_manifest_ref: "_staging_gov_v406r3/PACKAGE_MANIFEST.json"
-  source_package_sha256: "1200e60450d1d2f13dc607ec82101cdfcbe6690020645fb6db0ac0c7f8140ccc"
+  project_specific_strengthening: "UNIVERSAL_GOVERNANCE_MINIMAL_v4.1.0-r3_ADOPTED_CONTROLS"
+  active_version: "4.0.4+4.0.6-r3+4.1.0-r3-strengthening"
+  proposed_version: "4.1.0-r3"
+  source_manifest_ref: "_staging_gov_v410r3/PACKAGE_MANIFEST.json"
+  source_package_sha256: "c563ba3175275c4792e031497b2543a02cc92720be944e19779075c264c36087"
   project_binding_ref: "governance/GOVERNANCE.md#section-13"
   readiness_rule_ref: "governance/PROJECT_BOUND_READINESS_RULE.yaml"
-  envelope_ref: "governance/envelopes/YM-GOV-ADOPT-0406R3.yaml"
-  migration_receipt_ref: "verification/YM-GOV-ADOPT-0406R3_TECHNICAL_ACCEPTANCE.md"
+  envelope_ref: "governance/envelopes/YM-GOV-ADOPT-0410R3.yaml"
+  migration_receipt_ref: "verification/YM-GOV-ADOPT-0410R3_TECHNICAL_ACCEPTANCE.md"
+  evidence_companion_ref: "_staging_gov_v410r3/EVIDENCE_AND_MIGRATION.md"
+  standards_registry_ref: "governance/PROJECT_DIRECTION.md#architecture-stability-and-characterization"
+  diagram_registry_ref: "governance/PROJECT_DIRECTION.md#as-is-reverse-engineered-architecture-diagrams"
+  ui_philosophy_ref: "NONE_BY_DESIGN"
   autonomous_repair_amendment_ref: "governance/PORTABLE_AUTONOMOUS_REPAIR_AMENDMENT_v1.1.md"
 
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 156
-  last_updated_at: "2026-10-31T07:06:00Z"
-  active_contract: "YM-015F-JET-002B"
+  last_expected_revision: 157
+  last_updated_at: "2026-11-02T19:50:00Z"
+  active_contract: "YM-GOV-ADOPT-0410R3"
+  execution_envelope_ref: "governance/envelopes/YM-GOV-ADOPT-0410R3.yaml"
+  last_handoff_ref: "governance/PROJECT_STATE.yaml"
   frozen_candidate: ""
+  active_role_assignment:
+    worker_id: "primary-worker (00ffe8a3-c73a-4096-b0e7-53138b34c21a)"
+    reviewer_id: "fresh-blind-research-subagent-IND2"
+    acceptor_id: "distinct-technical-acceptor"
+    reviewer_independence: "IND2"
+    router_id: "resident-policy-router-no-mutation"
+    watchdog_id: "independent-watchdog-process"
 
-current_objective: YM-015F-JET-002B
+specification_gate:
+  status: "SPEC_VERIFIED"
+  missing_specification_prompts: []
+  diagram_first_status: "DIAGRAM_LOCKED"
+  relative_search_refs:
+    - "REF-STD-001: UGM v4.1.0-r3 Autonomous Runtime Specification"
+    - "REF-STD-002: IEEE 1012 Standard for System, Software, and Hardware Verification and Validation"
+  dimension_refs:
+    intent_actors: "governance/PROJECT_DIRECTION.md#intent-and-boundaries"
+    data_interfaces: "src/ymmg/ros.py"
+    paradigm_boundaries: "governance/PROJECT_DIRECTION.md#architecture-stability-and-characterization"
+    diagrams: "governance/PROJECT_DIRECTION.md#as-is-reverse-engineered-architecture-diagrams"
+    relative_standards: "governance/envelopes/YM-GOV-ADOPT-0410R3.yaml#specification_gate"
+    acceptance_negative: "NEGATIVE_EVIDENCE_REGISTER.md"
+  diagram_refs:
+    - "C4_CONTAINER: As-Is Mathematical Research Operating System Architecture"
+    - "STATE_MACHINE: Autonomous Scientific Discovery and Repair Cycle"
+  diagram_approval_ref: "verification/raw/YM-GOV-ADOPT-0410R3_DIAGRAM_APPROVAL.md"
+  diagram_lock_subject_digest: "c563ba3175275c4792e031497b2543a02cc92720be944e19779075c264c36087"
+  subject_scope_ref: "governance/envelopes/YM-GOV-ADOPT-0410R3.yaml"
+  missing_kind: null
+
+required_hard_gates:
+  - "1_candidate_frozen"
+  - "2_candidate_bound_review"
+  - "3_scientific_review_pass"
+  - "4_negative_evidence_preserved"
+  - "5_dependencies_satisfied"
+  - "6_scientific_tree_identity"
+  - "7_state_revision_freshness"
+  - "8_no_unresolved_mandatory_blocker"
+  - "9_goal_complete_false_invariant"
+  - "10_clay_problem_unsolved_invariant"
+  - "11_scientific_acceptance_authority_separation"
+  - "12_regression_protection_for_consequential_defects"
+
+current_objective: YM-GOV-ADOPT-0410R3
 
 objectives:
+  - id: YM-GOV-ADOPT-0410R3
+    scope_in: "Universal Governance Minimal v4.1.0-r3 candidate evaluation, staging, and project-bound strengthening adoption, including 10-phase autonomous cycle, pre-code authorization adapter, diagram-first enforcement with DIAGRAM_LOCKED, relative standards search protocol, 5-actor Super-Agent role separation with IND2+ minimum for reviews, and required_hard_gates enforcement"
+    scope_out: "Claiming proof of the Clay Millennium Problem, modifying closed-world 158-file scientific manifest, promoting v4.1.0-r3 to canonical baseline, public release or deployment"
+    dependencies: ["YM-100"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-GOV-ADOPT-0410R3_E4_RAW_20261102.md"
+    acceptor: "verification/YM-GOV-ADOPT-0410R3_TECHNICAL_ACCEPTANCE.md"
+    status: CANDIDATE_FREEZE
+    scope_limitation: "GOVERNANCE_STRENGTHENING_ADOPTED_AND_CLAY_OPEN"
+
   - id: YM-100
     scope_in: "Elliptic Regularity Suppression (eta_elliptic = 1/4) of the 4D Animal-Multiplied 2-Loop Non-Local Cumulant Tail (w_2loop_animal^elliptic = 187/1968) & Complete 4-Species 2-Loop Infinite-Horizon Kotecký–Preiss Closure W_IR_total^(2loop_full) approx 0.950481 < 1 on Edge E-CROSSOVER, and Isolation of the n >= 3 Factorial Renormalon / Cauchy–Taylor Remainder Barrier, proof of Lemma YM-100F-ELLIPTIC-REGULARITY-AND-RENORMALON-BARRIER, and Test 64 finite certificate"
     scope_out: "Crossing infrared crossover E-CROSSOVER, non-perturbative multi-block lattice collar equivalence, continuum Wightman reconstruction, and full continuum closure"

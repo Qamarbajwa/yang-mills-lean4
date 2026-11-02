@@ -139,11 +139,11 @@ def test_09_no_stale_governance_authority_used():
     assert proj_state.exists()
     state_data = yaml.safe_load(proj_state.read_text(encoding="utf-8"))
     assert state_data["activation"] == "ACTIVE"
-    assert state_data["schema_version"] == "4.0.3"
+    assert state_data["schema_version"] in ["4.0.3", "4.1.0-r3"]
     assert state_data["current_objective"] in [
         "YM-004", "YM-005", "YM-006", "YM-007", "YM-008", "YM-009", "YM-010",
         "YM-GOV-011", "YM-GOV-012", "YM-GOV-013", "YM-GOV-014", "YM-GOV-015",
-        "YM-011-PRE", "YM-011-OBS-MAP", "YM-011-PLAQUETTE-EXP", "YM-011-PLAQUETTE-EXP-R1", "YM-011-PLAQUETTE-EXP-R2", "YM-GOV-ADOPT-0406R3", "YM-011-TREE-GAUGE", "YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB", "YM-011", "YM-012", "E-CROSSOVER", "YM-013", "YM-014", "YM-015", "YM-015R", "YM-015R2", "YM-015F-JET-002A", "YM-015F-JET-002B",
+        "YM-011-PRE", "YM-011-OBS-MAP", "YM-011-PLAQUETTE-EXP", "YM-011-PLAQUETTE-EXP-R1", "YM-011-PLAQUETTE-EXP-R2", "YM-GOV-ADOPT-0406R3", "YM-GOV-ADOPT-0410R3", "YM-011-TREE-GAUGE", "YM-011-TORON-QUARTIC-AND-BRASCAMP-LIEB", "YM-011", "YM-012", "E-CROSSOVER", "YM-013", "YM-014", "YM-015", "YM-015R", "YM-015R2", "YM-015F-JET-002A", "YM-015F-JET-002B",
     ]
 
 

@@ -1,13 +1,13 @@
 # Yang-Mills Project-Bound Readiness and Consequential Effect Rule
 # Rule ID: YM-READINESS-RULE-001
-# Binding Task: YM-GOV-ADOPT-0406R3
-# Universal Governance Reference: UNIVERSAL_GOVERNANCE_MINIMAL_v4.0.6-r3
+# Binding Tasks: YM-GOV-ADOPT-0406R3, YM-GOV-ADOPT-0410R3
+# Universal Governance Reference: UNIVERSAL_GOVERNANCE_MINIMAL_v4.0.4 + v4.0.6-r3 + v4.1.0-r3
 
-schema_version: "1.0"
+schema_version: "1.1"
 rule_id: "YM-READINESS-RULE-001"
 title: "Yang-Mills Project-Bound Scientific Readiness and Governance Gate Inventory"
 canonical_universal_baseline: "UNIVERSAL_GOVERNANCE_MINIMAL_v4.0.4"
-project_specific_strengthening: "UNIVERSAL_GOVERNANCE_MINIMAL_v4.0.6-r3_ADOPTED_CONTROLS"
+project_specific_strengthening: "UNIVERSAL_GOVERNANCE_MINIMAL_v4.1.0-r3_ADOPTED_CONTROLS"
 
 disposition_of_review_findings:
   F1_hard_gate_inventory:
@@ -41,6 +41,37 @@ disposition_of_review_findings:
     test_result: "pass=114 fail=0"
     executed_by: "Luna (Antigravity primary worker)"
     execution_timestamp: "2026-09-26T02:16:53Z"
+  F6_v410r3_package_verification:
+    status: "RESOLVED"
+    verification_result: "PACKAGE_VERIFY_PASS (11 files, 3 active authorities)"
+    test_result: "test-verify-package: pass=213 fail=0; test-autonomy-engine: pass=51 fail=0"
+    candidate_zip_sha256: "c563ba3175275c4792e031497b2543a02cc92720be944e19779075c264c36087"
+    executed_by: "Antigravity primary worker (00ffe8a3-c73a-4096-b0e7-53138b34c21a)"
+    execution_timestamp: "2026-11-02T19:52:00Z"
+  F7_specification_predefinition_gate:
+    status: "RESOLVED"
+    rationale: >
+      Specification gate status must be SPEC_VERIFIED with empty missing_specification_prompts
+      before code implementation. Any missing specification dimension triggers BLOCKED_MISSING_SPEC
+      and issues a structured Clarification Request Packet (CRP).
+  F8_diagram_first_enforcement:
+    status: "RESOLVED"
+    rationale: >
+      Intent-relative diagrams must be locked (DIAGRAM_LOCKED) prior to post-diagram implementation.
+      Code introducing unmapped module edges or transitions absent from the locked diagram triggers
+      a DIAGRAM_DRIFT failure in independent review.
+  F9_autonomous_lifecycle_engine:
+    status: "RESOLVED"
+    rationale: >
+      The formal 10-phase lifecycle (DISCOVER -> SPECIFY -> STANDARDS -> DIAGRAM -> IMPLEMENT ->
+      TEST -> REVIEW -> ACCEPT -> RECORD -> EVOLVE) governs autonomous execution with exclusive
+      scope lease and CAS state commits.
+  F10_superagent_separation_of_powers:
+    status: "RESOLVED"
+    rationale: >
+      Tri-Agent separation is strictly enforced across worker_id, reviewer_id, and acceptor_id,
+      alongside distinct resident router_id and independent watchdog_id. Reviewer independence
+      requires IND2+ minimum for all risk tiers.
 
 required_hard_gate_inventory:
   1_candidate_frozen:
@@ -135,3 +166,13 @@ adopted_controls:
     principle: "Every consequential defect receives durable regression protection unless technically inapplicable with explicit rationale."
   intent_fidelity:
     principle: "Acceptance distinguishes CONTRACT_CONFORMANCE from RESEARCH_INTENT_FIDELITY; solving an irrelevant theorem correctly fails intent fidelity."
+  specification_gate:
+    principle: "Pre-defined specification dimensions required (SPEC_VERIFIED) before code implementation; gaps trigger BLOCKED_MISSING_SPEC and Clarification Request Packet (CRP)."
+  diagram_first_mandate:
+    principle: "Intent-relative diagrams must be locked (DIAGRAM_LOCKED) before post-diagram implementation; diagram drift fails independent review."
+  relative_standards_search:
+    principle: "Standards queries follow the 5-axis context vector across 4 authority tiers before custom schemas/protocols are designed."
+  autonomous_lifecycle_engine:
+    principle: "10-phase autonomous development cycle with exclusive scope lease and CAS state commits."
+  superagent_separation:
+    principle: "Five distinct actor assignments (worker, reviewer IND2+, acceptor, router, watchdog) across all risk tiers."

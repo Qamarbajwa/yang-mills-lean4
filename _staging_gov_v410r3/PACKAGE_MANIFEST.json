@@ -1,0 +1,23 @@
+{
+  "manifest_schema": "UGM-PACKAGE-MANIFEST-1",
+  "package": "UNIVERSAL_GOVERNANCE_MINIMAL",
+  "version": "4.1.0-r3",
+  "active_authorities": [
+    "governance/GOVERNANCE.md",
+    "governance/PROJECT_DIRECTION.md",
+    "governance/PROJECT_STATE.yaml"
+  ],
+  "files": {
+    "ADOPTION_PROMPT.md": "26f1ea0449472c00e4b10b2cb56828ccf942959cfb9371f00320f15e3d63ee5e",
+    "AUTONOMY_RUNTIME.md": "019f93c2744b8cebb909ba39230d8d7d31b2314c6aba6207a3782503f1ad0321",
+    "EVIDENCE_AND_MIGRATION.md": "c85e2b872e6f1355d507d34052380889e02cec2e01e07be12d510be76fe48037",
+    "README.md": "ae83557862462c3766da5ecc521a8a02a006ed71c8ef3e57e3919121bfb400ea",
+    "governance/GOVERNANCE.md": "25ecb8074f986e8edbaeb6e99a15c9e79551759fc49c134892ae85220f3c8f58",
+    "governance/PROJECT_DIRECTION.md": "acea740aa8b13fde7c54b34a2ce2eb4590d55212b934ea6dd8988abf5d69d5a1",
+    "governance/PROJECT_STATE.yaml": "ac44dbe064f0375af5705c3f5acf09f373ebdb0e255bccf99a60a60fd53ebf2b",
+    "tools/autonomy-engine.mjs": "5d53250a0c2d5bae77ce3133a31ebbe3e1a14bd47d99fc6f09c0f51e89e931bb",
+    "tools/test-autonomy-engine.mjs": "ca74254aee5ebf0c0996a52272e0864c4f6961cd4082b1cb5a502eeefbead477",
+    "tools/test-verify-package.mjs": "b56283a75eda0a5d4adf2afc4bc7f686dba0bd22aad019f018681f1ad83d5a96",
+    "tools/verify-package.mjs": "e2066396868f15ef58d0a9cc1ec94fda4d800f955b7b76158ccbfcb50672460c"
+  }
+}

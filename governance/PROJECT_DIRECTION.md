@@ -1,6 +1,9 @@
 # Project Direction — Yang–Mills Mass Gap
 
-Governance Baseline: Universal Governance Minimal v4.0.4 with v4.0.6-r3 Project-Specific Strengthening.
+Governance Baseline: Universal Governance Minimal v4.0.4 with v4.0.6-r3 and v4.1.0-r3 Project-Specific Strengthening.
+Adoption Mode: MIGRATION_GOVERNED (Brownfield repository operating under Universal Governance v4.0.4 + project strengthening)
+Product Archetype: LIBRARY_SDK (Mathematical QFT Proof & Computation Engine)
+Active Paradigms: FUNCTIONAL, DATA_ORIENTED, RELATIONAL_LOGIC
 This file defines intended scope, capability contracts, and architecture, not live task progress.
 
 ## Intent and boundaries
@@ -88,10 +91,15 @@ This file defines intended scope, capability contracts, and architecture, not li
 - **Entry surface:** NONE_BY_DESIGN
 - **Status:** SCIENTIFICALLY_ACCEPTED (YM-011-PLAQUETTE-EXP-R2)
 
-### CAP-008: Universal Governance Strengthening
+### CAP-008: Universal Governance v4.0.6-r3 Strengthening
 - **Actors:** Primary worker (writer), fresh blind verifier (reviewer), technical acceptor
 - **Entry surface:** NONE_BY_DESIGN
-- **Status:** IN_PROGRESS (YM-GOV-ADOPT-0406R3)
+- **Status:** CLOSED (YM-GOV-ADOPT-0406R3)
+
+### CAP-009: Universal Governance Minimal v4.1.0-r3 Strengthening
+- **Actors:** Primary worker (writer), fresh blind verifier (reviewer IND2+), technical acceptor, resident router, watchdog
+- **Entry surface:** NONE_BY_DESIGN
+- **Status:** IN_PROGRESS (YM-GOV-ADOPT-0410R3)
 
 ## Architecture, stability, and characterization
 
@@ -105,6 +113,43 @@ Before rewriting any accepted component:
 3. Record regression baseline.
 4. Define intended delta.
 5. Prove preserved or explicitly migrated invariants.
+
+### As-Is Reverse-Engineered Architecture Diagrams
+
+```mermaid
+flowchart TD
+    subgraph CoreEngine [src/ymmg Python QFT Engine]
+        ROS[ros.py: Closed-World Manifest & Verification]
+        OBS[observable_transfer.py: Observable Maps]
+        PLAQ[plaquette_expectation.py: Plaquette Range]
+        FLOW[precursor_flow.py: Precursor Flow]
+    end
+    subgraph OperationalAuthorities [governance/ Three Operational Authorities]
+        GOV[GOVERNANCE.md: Operational How]
+        DIR[PROJECT_DIRECTION.md: Strategic What/Why]
+        STATE[PROJECT_STATE.yaml: Live Status & CAS Revision]
+    end
+    subgraph VerificationSuite [tests/ & scripts/]
+        PYTEST[pytest suite: 494 Deterministic Tests]
+        VERIFY[scripts/verify_all.py: Turnkey Referee Verifier]
+    end
+    ROS --> STATE
+    STATE --> VERIFY
+    PYTEST --> ROS
+```
+
+```mermaid
+stateDiagram-v2
+    [*] --> CANDIDATE: Writer implementation & frozen candidate SHA
+    CANDIDATE --> INDEPENDENT_REVIEW: Fresh blind reviewer (IND2+) audit
+    INDEPENDENT_REVIEW --> TECHNICAL_ACCEPTANCE: Reviewer INTEGRITY_PASS verdict
+    INDEPENDENT_REVIEW --> REPAIR_REQUIRED: Mathematical or governance defect
+    REPAIR_REQUIRED --> BOUNDED_REPAIR: Autonomous repair loop
+    BOUNDED_REPAIR --> REVERIFICATION: Repair complete
+    REVERIFICATION --> INDEPENDENT_REVIEW: Re-submit for independent review
+    TECHNICAL_ACCEPTANCE --> STATE_CLOSEOUT: Distinct Technical Acceptor grants acceptance
+    STATE_CLOSEOUT --> [*]: State Revision incremented & closeout committed
+```
 
 ### Research Intent Fidelity
 Acceptance separately verifies:
@@ -134,12 +179,13 @@ Acceptance separately verifies:
 | YM-011-PRE-R1: Precursor gradient flow lemma | YM-005-R2 | CAP-006 | SCIENTIFICALLY_ACCEPTED |
 | YM-011-OBS-MAP: Finite-lattice observable map | YM-011-PRE-R1 | CAP-006 | SCIENTIFICALLY_ACCEPTED |
 | YM-011-PLAQUETTE-EXP-R2: Plaquette expectation | YM-011-OBS-MAP | CAP-007 | SCIENTIFICALLY_ACCEPTED |
-| YM-GOV-ADOPT-0406R3: Universal Gov v4.0.6-r3 | YM-011-PLAQUETTE-EXP-R2 | CAP-008 | **IN_PROGRESS (ACTIVE)** |
-| YM-011-TREE-GAUGE: Tree-gauge weak-coupling bound | YM-GOV-ADOPT-0406R3 | CAP-007 | **BLOCKED_PENDING_GOVERNANCE_ADOPTION_CLOSEOUT** |
+| YM-GOV-ADOPT-0406R3: Universal Gov v4.0.6-r3 | YM-011-PLAQUETTE-EXP-R2 | CAP-008 | CLOSED |
+| YM-012 through YM-100: Bałaban RG & Crossover Atlas | YM-011 | CAP-007 | SCIENTIFICALLY_ACCEPTED (Milestone 100) |
+| YM-GOV-ADOPT-0410R3: Universal Gov v4.1.0-r3 | YM-100 | CAP-009 | **IN_PROGRESS (ACTIVE)** |
 
 ### Next Authorized Scientific Task
-Only after `YM-GOV-ADOPT-0406R3` is independently reviewed, technically accepted, and closed:
-`NEXT_AUTHORIZED_SCIENTIFIC_TASK = YM-011-TREE-GAUGE`
+Following `YM-GOV-ADOPT-0410R3` independent review, technical acceptance, and state closeout:
+`NEXT_AUTHORIZED_SCIENTIFIC_TASK = YM-101` (Infinite-Volume Continuum Reconstruction & Wightman Axiom Verification).
 
 ## Completion
 

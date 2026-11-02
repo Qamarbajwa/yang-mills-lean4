@@ -1,0 +1,134 @@
+{
+  "schema_version": "4.1.0-r3",
+  "revision": 0,
+  "activation": "UNBOUND",
+  "project": {
+    "id": null,
+    "root": null,
+    "head": null,
+    "dirty": null,
+    "adoption_mode": null,
+    "product_archetype": null,
+    "active_paradigms": []
+  },
+  "governance_binding": {
+    "active_version": null,
+    "proposed_version": "4.1.0-r3",
+    "source_manifest_ref": null,
+    "project_binding_ref": null,
+    "evidence_companion_ref": null,
+    "migration_receipt_ref": null,
+    "standards_registry_ref": null,
+    "diagram_registry_ref": null,
+    "ui_philosophy_ref": null
+  },
+  "coordination": {
+    "state_writer": null,
+    "serialization_method": null,
+    "last_expected_revision": null,
+    "last_updated_at": null,
+    "active_contract": null,
+    "execution_envelope_ref": null,
+    "last_handoff_ref": null,
+    "active_role_assignment": {
+      "worker_id": null,
+      "reviewer_id": null,
+      "acceptor_id": null,
+      "reviewer_independence": null,
+      "router_id": null,
+      "watchdog_id": null
+    }
+  },
+  "specification_gate": {
+    "status": "UNVERIFIED",
+    "missing_specification_prompts": [],
+    "diagram_first_status": "UNVERIFIED",
+    "relative_search_refs": [],
+    "dimension_refs": {
+      "intent_actors": null,
+      "data_interfaces": null,
+      "paradigm_boundaries": null,
+      "diagrams": null,
+      "relative_standards": null,
+      "acceptance_negative": null
+    },
+    "diagram_refs": [],
+    "diagram_approval_ref": null,
+    "diagram_lock_subject_digest": null,
+    "subject_scope_ref": null,
+    "missing_kind": null
+  },
+  "candidate_identity": {
+    "subject_ref": null,
+    "subject_digest": null,
+    "subject_scope": [],
+    "frozen_at_state_revision": null
+  },
+  "current_objective": null,
+  "objectives": [],
+  "capabilities": {},
+  "external_systems": {},
+  "required_hard_gates": [],
+  "hard_gates": {},
+  "evidence_refs": [],
+  "negative_history_refs": [],
+  "regression_protection_refs": [],
+  "operational_diagnostics_refs": [],
+  "blockers": [],
+  "known_risks": [],
+  "reserved_actions": [],
+  "release": {
+    "eligibility": {
+      "status": "NO-GO",
+      "candidate_ref": null,
+      "environment_ref": null,
+      "scope_ref": null,
+      "evidence_refs": [],
+      "decision_ref": null,
+      "decided_at": null,
+      "valid_until": null,
+      "freshness_ref": null,
+      "reason": "PROJECT_NOT_BOUND_OR_VERIFIED"
+    },
+    "deployment_authorization": {
+      "status": "NONE",
+      "grant_ref": null,
+      "candidate_ref": null,
+      "environment_ref": null,
+      "scope_ref": null,
+      "action": null,
+      "granted_at": null,
+      "valid_until": null,
+      "freshness_ref": null,
+      "revoked_at": null
+    },
+    "deployment_observations": []
+  },
+  "last_verified_checkpoint": null,
+  "overhead": {
+    "measurement": "UNKNOWN",
+    "last_sampled_at": null,
+    "notes": []
+  },
+  "views": {
+    "last_validated_revision": null,
+    "evidence_refs": []
+  },
+  "lifecycle_review_refs": [],
+  "autonomy": {
+    "enabled": false,
+    "mode": "DISABLED",
+    "phase": "IDLE",
+    "objective_ref": null,
+    "subject_scope": null,
+    "lease_ref": null,
+    "budget_ref": null,
+    "last_receipt_ref": null,
+    "last_failure_ref": null,
+    "retry_count": 0,
+    "max_retries": 0,
+    "last_reconciled_revision": null,
+    "review_receipt_ref": null,
+    "review_subject_digest": null
+  }
+}

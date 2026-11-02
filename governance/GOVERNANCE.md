@@ -1,8 +1,8 @@
-# Yang–Mills Project Governance (Universal Governance Baseline v4.0.4 + v4.0.6-r3 Project-Specific Strengthening)
+# Yang–Mills Project Governance (Universal Governance Baseline v4.0.4 + v4.0.6-r3 + v4.1.0-r3 Project-Specific Strengthening)
 
-Status: ACTIVE — Project-bound governance strengthening adopted under Task YM-GOV-ADOPT-0406R3.
+Status: ACTIVE — Project-bound governance strengthening adopted under Task YM-GOV-ADOPT-0406R3 and upgraded under Task YM-GOV-ADOPT-0410R3.
 Canonical Universal Baseline: UNIVERSAL_GOVERNANCE_MINIMAL_v4.0.4
-Project-Specific Strengthening: Adopted controls derived from UNIVERSAL_GOVERNANCE_MINIMAL_v4.0.6-r3
+Project-Specific Strengthening: Adopted controls derived from UNIVERSAL_GOVERNANCE_MINIMAL_v4.0.6-r3 and UNIVERSAL_GOVERNANCE_MINIMAL_v4.1.0-r3
 Scientific Governance: Autonomous scientific repair + candidate-bound independent scientific verification + negative-evidence preservation + research-intent fidelity.
 
 ## 1. Authority and truth
@@ -144,10 +144,10 @@ Maintain exactly three active operational authorities: `GOVERNANCE.md`, `PROJECT
 
 Adoption of universal governance controls is governed as project-specific strengthening:
 - Canonical universal baseline remains `UNIVERSAL_GOVERNANCE_MINIMAL_v4.0.4`.
-- v4.0.6-r3 candidate controls are adopted as project-specific strengthening.
-- Universal promotion/cutover to v4.0.6-r3 is NOT claimed.
+- v4.0.6-r3 and v4.1.0-r3 candidate controls are adopted as project-specific strengthening.
+- Universal promotion/cutover to v4.0.6-r3 or v4.1.0-r3 is NOT claimed.
 - Stronger scientific governance (autonomous repair, candidate binding, closed-world scientific tree hash, negative memory) is strictly preserved.
-- Staged candidate artifacts are maintained alongside active files.
+- Staged candidate artifacts (`_staging_gov_v406r3/`, `_staging_gov_v410r3/`) are maintained alongside active files.
 - Rollback preserves all pre-migration scientific commits, theorem ledgers, and evidence.
 
 ## 12. Completion, release, and readiness rule
@@ -169,6 +169,9 @@ A generic release-readiness PASS cannot establish readiness for Yang–Mills. Pr
 11. `scientific_acceptance_authority_separation`
 12. `regression_protection_for_consequential_defects`
 
+**Specification Gate and Diagram-First Enforcement (v4.1.0-r3):**
+Pre-defined specification dimensions (status == `SPEC_VERIFIED`) and locked intent-relative diagrams (diagram_first_status == `DIAGRAM_LOCKED`) are mandatory before implementation. Undocumented module dependencies or state transitions absent from locked diagrams trigger `DIAGRAM_DRIFT` in independent review.
+
 **Deployment and Consequential Effect Controls (F2 Resolution):**
 Deployment adapter: `NONE_BY_DESIGN / NOT_APPLICABLE`.
 Where any consequential external effect is executed, receipts must explicitly bind:
@@ -185,7 +188,10 @@ Milestone completion requires every declared supported capability to satisfy its
 - **Repository root:** `D:\Comfy UI\yang mills and the mass gap`
 - **Branch:** `master`
 - **Canonical universal baseline:** `UNIVERSAL_GOVERNANCE_MINIMAL_v4.0.4`
-- **Project-specific strengthening:** Adopted controls derived from `UNIVERSAL_GOVERNANCE_MINIMAL_v4.0.6-r3`
+- **Project-specific strengthening:** Adopted controls derived from `UNIVERSAL_GOVERNANCE_MINIMAL_v4.0.6-r3` and `UNIVERSAL_GOVERNANCE_MINIMAL_v4.1.0-r3`
+- **Adoption mode:** `MIGRATION_GOVERNED` (Brownfield repository operating under Universal Governance v4.0.4 + project strengthening)
+- **Product archetype:** `LIBRARY_SDK` (Mathematical QFT Proof & Computation Engine)
+- **Active paradigms:** `FUNCTIONAL`, `DATA_ORIENTED`, `RELATIONAL_LOGIC`
 - **Scientific governance:** Autonomous scientific repair + candidate-bound independent verification + negative-evidence preservation + research-intent fidelity
 
 ### Authorized scope
@@ -204,21 +210,23 @@ Milestone completion requires every declared supported capability to satisfy its
 - **Scientific prohibitions:** Claiming proof of Yang–Mills mass gap PROHIBITED; promoting unproved steps to PROVED PROHIBITED; writer self-acceptance PROHIBITED; authoring own E4 verifier transcripts PROHIBITED
 
 ### Qualified roles
-- **Writer:** Primary worker (Luna / Antigravity agent); qualified for implementation tasks up to R3
-- **Reviewer:** Fresh blind research subagent (IND1); read-only inspection; distinct conversation per review
+- **Writer:** Primary worker (00ffe8a3-c73a-4096-b0e7-53138b34c21a); qualified for implementation tasks up to R3
+- **Reviewer:** Fresh blind research subagent (IND2+); read-only inspection; distinct conversation per review
 - **Technical Acceptor:** Distinct qualified technical acceptor role / process
+- **Router:** Resident policy router; no-mutation and no-release privilege boundaries
+- **Watchdog:** Independent scheduled watchdog process; budget, liveness, and drift monitoring
 - **Constitutional Owner:** Human project owner; reserved exclusively for the 6 reserved owner actions
 
 ### Risk and acceptance minima
 - **Risk ceiling:** R3
 - **Acceptance minima:**
-  - R0: SELF_CHECKED (targeted inspection)
+  - R0: Three-role verification (distinct Worker, Reviewer IND2+, Acceptor)
   - R1: Automated tests + affected regressions
   - R2: R1 + integration/negative/failure tests + candidate-bound execution
   - R3: R2 + fresh blind independent E4 verification + distinct technical acceptance
 
 ### State writer and serialization
-- **Designated state writer:** Primary worker (Luna)
+- **Designated state writer:** Primary worker (00ffe8a3-c73a-4096-b0e7-53138b34c21a)
 - **Serialization method:** `revision-increment-atomic-file-replace`
 - **State files:** Exactly three operational authorities: `governance/GOVERNANCE.md`, `governance/PROJECT_DIRECTION.md`, `governance/PROJECT_STATE.yaml`
 
@@ -249,7 +257,8 @@ Milestone completion requires every declared supported capability to satisfy its
 ### Required validators
 - `src/ymmg/ros.py` — closed-world scientific fingerprint validator and project readiness rule
 - `tests/test_research_operating_system.py` — ROS conformance tests
-- `tests/test_governance_v406r3_adoption.py` — 18 adoption tests
+- `tests/test_governance_v406r3_adoption.py` — 18 v4.0.6-r3 adoption tests
+- `tests/test_governance_v410r3_adoption.py` — 18 v4.1.0-r3 adoption tests
 - `tests/test_ym_gov_014_autonomous_repair.py` — failure-driven autonomous repair tests
 - Full repository test suite (`pytest`)
 
@@ -259,6 +268,6 @@ Milestone completion requires every declared supported capability to satisfy its
 - No remote, sandbox, or production environments
 
 ### Migration review and technical acceptance authority
-- **Reviewer:** Fresh blind research subagent (IND1)
+- **Reviewer:** Fresh blind research subagent (IND2+)
 - **Technical Acceptor:** Distinct qualified technical acceptor role
 - **Rollback:** Restores pre-adoption governance state while preserving all scientific commits and negative evidence

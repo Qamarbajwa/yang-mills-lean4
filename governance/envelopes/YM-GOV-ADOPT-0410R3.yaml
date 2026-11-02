@@ -1,0 +1,186 @@
+task_execution_envelope:
+  schema_version: "4.1.0-r3"
+  identity:
+    task_id: "YM-GOV-ADOPT-0410R3"
+    project_id: "YANG_MILLS_MASS_GAP"
+    project_name: "Yang-Mills and the Mass Gap"
+    canonical_universal_baseline: "UNIVERSAL_GOVERNANCE_MINIMAL_v4.0.4"
+    governance_version: "4.1.0-r3-project-strengthened"
+    adoption_mode: "MIGRATION_GOVERNED"
+    product_archetype: "LIBRARY_SDK"
+    active_paradigms:
+      - "FUNCTIONAL"
+      - "DATA_ORIENTED"
+      - "RELATIONAL_LOGIC"
+  direction:
+    intent_refs:
+      - "PROJECT_INTENT.md"
+      - "governance/PROJECT_DIRECTION.md"
+    roadmap_objective: "YM-GOV-ADOPT-0410R3"
+    owner_non_goals:
+      - "No change to Clay problem identity (OPEN_AND_UNSOLVED)"
+      - "No public release or deployment (NONE_BY_DESIGN / NOT_APPLICABLE)"
+      - "No UI creation (NONE_BY_DESIGN)"
+      - "No promotion of v4.1.0-r3 to canonical universal baseline"
+    owner_reserved_boundaries:
+      - "CHANGE_PROJECT_MISSION_OR_TARGET"
+      - "CLAIM_GOAL_COMPLETE_OR_CLAY_SOLUTION"
+      - "EXTERNAL_PUBLICATION_OR_RELEASE"
+      - "DESTRUCTIVE_DELETION_OF_HISTORY"
+      - "MODIFY_EXTERNAL_REPOSITORY"
+      - "UNBOUNDED_EXTERNAL_RESOURCE_EXPENDITURE"
+  objective:
+    exact_objective: >
+      Evaluate, stage, and bind Universal Governance Minimal v4.1.0-r3 controls as
+      project-specific strengthening to Yang-Mills, preserving stronger scientific governance,
+      the canonical v4.0.4 baseline, and the 158-file closed-world scientific manifest.
+    rationale: >
+      Adopt v4.1.0-r3 advanced autonomous lifecycle controls (10-phase autonomous cycle,
+      pre-code authorization adapter, diagram-first enforcement with DIAGRAM_LOCKED, relative
+      standards search protocol, 5-actor Super-Agent role separation with IND2+ minimum for
+      reviews, and mandatory required_hard_gates enforcement) while maintaining the 12
+      project-bound hard gates, append-only negative evidence register, and Clay problem invariants.
+    done_boundary: >
+      18 adoption tests passing in test_governance_v410r3_adoption.py, staged test suites passing
+      in _staging_gov_v410r3/ (verify-package.mjs, test-verify-package.mjs, test-autonomy-engine.mjs),
+      PROJECT_BOUND_READINESS_RULE.yaml updated, GOVERNANCE.md and PROJECT_DIRECTION.md updated,
+      PROJECT_STATE.yaml incremented to Revision 158 for candidate freeze, fresh blind E4 review
+      completed (INTEGRITY_PASS), distinct technical acceptance recorded, and state closeout at
+      Revision 159 verified by turnkey referee verify_all.py.
+  base_state:
+    repository_or_workspace: "D:\\Comfy UI\\yang mills and the mass gap"
+    branch_or_state_channel: "master"
+    base_head: "840584589d81dbe52c4b814a0ad3a94840bf2b6b"
+    pre_adoption_state_revision: 157
+    scientific_candidate_sha: "b8e9a201aee000faa9005728e25ef6ecf1d0ecef"
+    evidence_closeout_head: "b8e9a201aee000faa9005728e25ef6ecf1d0ecef"
+    scientific_tree_hash: "c7e6223373cd46603ddd59f4a3a75c8824a87d4b817cbfee8e3861d33f7c8613"
+    preserved_unrelated_work:
+      - "All 100 mathematical theorems, lemmas, and literature artifacts"
+      - "All negative scientific findings and counterexamples (zero deletions)"
+      - "Failure-driven autonomous repair state machine"
+      - "158-file closed-world canonical scientific manifest"
+  eligibility:
+    dependencies:
+      - id: "v4.1.0-r3 candidate package"
+        state: "VERIFIED"
+        evidence_ref: "_staging_gov_v410r3/tools/verify-package.mjs (PASS) + test-verify-package.mjs (213 pass) + test-autonomy-engine.mjs (51 pass)"
+      - id: "YM-100"
+        state: "SCIENTIFICALLY_ACCEPTED"
+        evidence_ref: "verification/YM-100_TECHNICAL_ACCEPTANCE.md"
+    technical_inputs_available: true
+    traceable_to_intent: true
+    architecture_permits: true
+    inside_standing_mandate: true
+    candidate_state_known: true
+    risk_inside_ceiling: true
+    blocking_invariant_present: false
+    reserved_authority_required_for_technical_mutation: false
+    eligible: true
+    blocker_class: null
+    blocker_detail: null
+  classification:
+    risk_tier: "R3"
+    action_class: "B"
+    risk_reasons:
+      - "Updates active operational governance controls"
+      - "Binds v4.1.0-r3 autonomy engine dispatch and pre-code authorization controls"
+      - "Requires independent E4 review (IND2+) before distinct technical acceptance"
+    active_modules:
+      - "CORE-PROJECT-BINDING"
+      - "CORE-AUTHORITY"
+      - "CORE-RISK"
+      - "CORE-DEPENDENCY"
+      - "CORE-EVIDENCE"
+      - "CORE-TEST-INTEGRITY"
+      - "CORE-GIT-STATE"
+      - "GOVERNANCE-STRENGTHENING"
+      - "AI-AUTONOMY"
+      - "RESEARCH-SCIENTIFIC"
+      - "ARTIFACT-DATA"
+    not_activated_material_modules:
+      - module: "FINANCIAL"
+        reason: "No financial scope / zero spend"
+      - module: "DEPLOYMENT"
+        reason: "NONE_BY_DESIGN / NOT_APPLICABLE (internal mathematical research repository)"
+      - module: "UI-PRESENTATION"
+        reason: "NONE_BY_DESIGN (internal mathematical research repository)"
+  roles_and_authority:
+    orchestrator: "primary-worker"
+    writer:
+      id: "primary-worker (00ffe8a3-c73a-4096-b0e7-53138b34c21a)"
+      qualified: true
+      risk_ceiling: "R3"
+    reviewer_or_verifier:
+      id: "fresh-blind-research-subagent-IND2"
+      qualified: true
+      expected_independence: "IND2"
+    acceptance_authority:
+      id: "distinct-technical-acceptor"
+      qualified: true
+      authority_type: "TECHNICAL_ACCEPTOR"
+    router_id: "resident-policy-router-no-mutation"
+    watchdog_id: "independent-watchdog-process"
+    implementation_authority: "AUTONOMOUS_WITHIN_ENVELOPE"
+    verification_authority: "EVIDENCE_BASED"
+    release_eligibility_authority: "NOT_APPLICABLE"
+    reserved_external_authority:
+      required: false
+      type: "NONE"
+      trigger: null
+  specification_gate:
+    status: "SPEC_VERIFIED"
+    diagram_first_status: "DIAGRAM_LOCKED"
+    relative_search_refs:
+      - "REF-STD-001: UGM v4.1.0-r3 Autonomous Runtime Specification"
+      - "REF-STD-002: IEEE 1012 Standard for System, Software, and Hardware Verification and Validation"
+    dimension_refs:
+      intent_actors: "governance/PROJECT_DIRECTION.md#intent-and-boundaries"
+      data_interfaces: "src/ymmg/ros.py"
+      paradigm_boundaries: "governance/PROJECT_DIRECTION.md#architecture-stability-and-characterization"
+      diagrams: "governance/PROJECT_DIRECTION.md#as-is-reverse-engineered-architecture-diagrams"
+      relative_standards: "governance/envelopes/YM-GOV-ADOPT-0410R3.yaml#specification_gate"
+      acceptance_negative: "NEGATIVE_EVIDENCE_REGISTER.md"
+    diagram_refs:
+      - "C4_CONTAINER: As-Is Mathematical Research Operating System Architecture"
+      - "STATE_MACHINE: Autonomous Scientific Discovery and Repair Cycle"
+    diagram_approval_ref: "verification/raw/YM-GOV-ADOPT-0410R3_DIAGRAM_APPROVAL.md"
+    diagram_lock_subject_digest: "c563ba3175275c4792e031497b2543a02cc92720be944e19779075c264c36087"
+    subject_scope_ref: "governance/envelopes/YM-GOV-ADOPT-0410R3.yaml"
+    missing_kind: null
+    missing_specification_prompts: []
+  mutation_scope:
+    allowed:
+      - "_staging_gov_v410r3/**"
+      - "governance/PROJECT_BOUND_READINESS_RULE.yaml"
+      - "governance/GOVERNANCE.md"
+      - "governance/PROJECT_DIRECTION.md"
+      - "governance/PROJECT_STATE.yaml"
+      - "governance/envelopes/YM-GOV-ADOPT-0410R3.yaml"
+      - "tests/test_governance_v410r3_adoption.py"
+      - "TASK_GRAPH.md"
+      - "CURRENT_SCIENTIFIC_STATE.md"
+      - "NEXT_ACTION.md"
+      - "scripts/verify_all.py"
+      - "verification/YM-GOV-ADOPT-0410R3_*.md"
+      - "verification/raw/YM-GOV-ADOPT-0410R3_*.md"
+    prohibited:
+      - "literature/* (mathematical artifacts sealed)"
+      - "NEGATIVE_EVIDENCE_REGISTER.md (sealed, append-only)"
+      - "THEOREM_LEDGER.md (sealed, append-only)"
+      - "src/ymmg/plaquette_expectation.py (sealed)"
+      - "src/ymmg/precursor_flow.py (sealed)"
+      - "src/ymmg/observable_transfer.py (sealed)"
+  invariants:
+    - id: "INV-YM-GOV-01"
+      statement: "CANONICAL_UNIVERSAL_BASELINE = UNIVERSAL_GOVERNANCE_MINIMAL_v4.0.4; v4.1.0-r3 is adopted as project-specific strengthening."
+    - id: "INV-YM-GOV-02"
+      statement: "GOAL_COMPLETE = FALSE and CLAY_PROBLEM = OPEN_AND_UNSOLVED."
+    - id: "INV-YM-GOV-03"
+      statement: "E-CROSSOVER = OPEN_AND_UNSOLVED."
+    - id: "INV-YM-GOV-04"
+      statement: "SCIENTIFIC_TREE_HASH remains exactly c7e6223373cd46603ddd59f4a3a75c8824a87d4b817cbfee8e3861d33f7c8613 across 158 canonical manifest files."
+    - id: "INV-YM-GOV-05"
+      statement: "Autonomous scientific repair state machine without routine owner gates is preserved."
+    - id: "INV-YM-GOV-06"
+      statement: "Negative evidence register maintains strictly zero historical deletions."
