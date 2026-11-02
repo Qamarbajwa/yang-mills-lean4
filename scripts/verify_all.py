@@ -322,7 +322,7 @@ def verify_epistemic_invariants():
 
     # Check for revision freshness (111, 113, 115, 117, 119, 121, or 123)
     if "revision: 159" in content or "revision: 158" in content or "revision: 157" in content or "revision: 155" in content or "revision: 153" in content or "revision: 151" in content or "revision: 149" in content or "revision: 147" in content or "revision: 145" in content or "revision: 143" in content or "revision: 141" in content or "revision: 139" in content or "revision: 137" in content or "revision: 135" in content or "revision: 133" in content or "revision: 131" in content or "revision: 129" in content or "revision: 127" in content or "revision: 125" in content or "revision: 123" in content or "revision: 121" in content or "revision: 119" in content or "revision: 117" in content or "revision: 115" in content or "revision: 113" in content or "revision: 111" in content:
-        print("  [PASS] State revision is governed (111, 113, 115, 117, 119, 121, 123, 125, 127, 129, 131, 133, 135, 137, 139, 141, 143, 145, 147, 149, 151, 153, 155, or 157)")
+        print("  [PASS] State revision is governed (111 through 159)")
     else:
         print("  [FAIL] State revision mismatch")
         all_ok = False

@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 + v4.1.0-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.1.0-r3"
-revision: 158
+revision: 159
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -11,9 +11,9 @@ project:
   root: "D:\\Comfy UI\\yang mills and the mass gap"
   head: "840584589d81dbe52c4b814a0ad3a94840bf2b6b"
   scientific_candidate_sha: "b8e9a201aee000faa9005728e25ef6ecf1d0ecef"
-  review_bound_sha: "b8e9a201aee000faa9005728e25ef6ecf1d0ecef"
-  evidence_closeout_head: "b8e9a201aee000faa9005728e25ef6ecf1d0ecef"
-  closeout_resolution: "evidence_closeout_head binds scientific candidate commit (b8e9a201aee000faa9005728e25ef6ecf1d0ecef); Milestone Task YM-100 is scientifically accepted at Revision 157; Task YM-GOV-ADOPT-0410R3 candidate frozen at State Revision 158."
+  review_bound_sha: "9c48ddd452a6a399eb1146609065a290012c247f"
+  evidence_closeout_head: "9c48ddd452a6a399eb1146609065a290012c247f"
+  closeout_resolution: "evidence_closeout_head binds candidate commit (9c48ddd452a6a399eb1146609065a290012c247f); Task YM-GOV-ADOPT-0410R3 is technically accepted and closed out at State Revision 159."
   dirty: false
   candidate_manifest_ref: "governance/SCIENTIFIC_ARTIFACT_CLASSIFICATION.yaml"
   adoption_mode: "MIGRATION_GOVERNED"
@@ -43,8 +43,8 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 157
-  last_updated_at: "2026-11-02T19:50:00Z"
+  last_expected_revision: 158
+  last_updated_at: "2026-11-02T20:20:00Z"
   active_contract: "YM-GOV-ADOPT-0410R3"
   execution_envelope_ref: "governance/envelopes/YM-GOV-ADOPT-0410R3.yaml"
   last_handoff_ref: "governance/PROJECT_STATE.yaml"
@@ -105,7 +105,7 @@ objectives:
     atlas_writer_and_coordinator: "primary-worker"
     reviewer_path: "verification/raw/YM-GOV-ADOPT-0410R3_E4_RAW_20261102.md"
     acceptor: "verification/YM-GOV-ADOPT-0410R3_TECHNICAL_ACCEPTANCE.md"
-    status: CANDIDATE_FREEZE
+    status: SCIENTIFICALLY_ACCEPTED
     scope_limitation: "GOVERNANCE_STRENGTHENING_ADOPTED_AND_CLAY_OPEN"
 
   - id: YM-100
