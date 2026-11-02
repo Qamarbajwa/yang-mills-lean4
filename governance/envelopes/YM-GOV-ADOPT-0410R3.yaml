@@ -152,6 +152,7 @@ task_execution_envelope:
   mutation_scope:
     allowed:
       - "_staging_gov_v410r3/**"
+      - "src/ymmg/ros.py"
       - "governance/PROJECT_BOUND_READINESS_RULE.yaml"
       - "governance/GOVERNANCE.md"
       - "governance/PROJECT_DIRECTION.md"
