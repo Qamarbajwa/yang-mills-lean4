@@ -53,6 +53,7 @@ This file defines intended scope, capability contracts, and architecture, not li
 | `tests/test_*.py` | Deterministic test suite | Primary worker | Living | Must pass before acceptance |
 | `verification/*` | E4 raw receipts and review reports | Verifier subagents | Per-task | Append-only |
 | `governance/HUMAN_OWNER_ACCEPTANCE_*.md` | Human owner acceptance records | Historical / Reserved | Sealed | Preserved |
+| `governance/PROJECT_CHRYSALIS_ARCHITECTURE_ANALYSIS.md` | Google Cloud Project Chrysalis in-memory topology and credit assignment specification | Primary worker | v1.0 | Architectural reference; non-competing live authority |
 
 ## Capability contracts and actors
 
@@ -99,7 +100,12 @@ This file defines intended scope, capability contracts, and architecture, not li
 ### CAP-009: Universal Governance Minimal v4.1.0-r3 Strengthening
 - **Actors:** Primary worker (writer), fresh blind verifier (reviewer IND2+), technical acceptor, resident router, watchdog
 - **Entry surface:** NONE_BY_DESIGN
-- **Status:** IN_PROGRESS (YM-GOV-ADOPT-0410R3)
+- **Status:** CLOSED (YM-GOV-ADOPT-0410R3)
+
+### CAP-010: Dynamic In-Memory Research Topology & Chrysalis Adapter
+- **Actors:** Primary worker (orchestrator), ephemeral specialist subagents (in-memory only), fresh blind verifier (reviewer IND2+), technical acceptor, resident router, watchdog
+- **Entry surface:** NONE_BY_DESIGN
+- **Status:** SPECIFIED (governance/PROJECT_CHRYSALIS_ARCHITECTURE_ANALYSIS.md)
 
 ## Architecture, stability, and characterization
 
