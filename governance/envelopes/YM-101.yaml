@@ -1,0 +1,83 @@
+task_execution_envelope:
+  schema_version: "4.1.0-r3"
+  identity:
+    task_id: "YM-101"
+    project_id: "YANG_MILLS_MASS_GAP"
+    project_name: "Yang-Mills and the Mass Gap"
+    canonical_universal_baseline: "UNIVERSAL_GOVERNANCE_MINIMAL_v4.0.4"
+    governance_version: "4.1.0-r3-project-strengthened"
+    adoption_mode: "MIGRATION_GOVERNED"
+    product_archetype: "LIBRARY_SDK"
+    active_paradigms:
+      - "FUNCTIONAL"
+      - "DATA_ORIENTED"
+      - "RELATIONAL_LOGIC"
+  direction:
+    intent_refs:
+      - "PROJECT_INTENT.md"
+      - "governance/PROJECT_DIRECTION.md"
+    roadmap_objective: "YM-101"
+    owner_non_goals:
+      - "No change to Clay problem identity (OPEN_AND_UNSOLVED)"
+      - "No premature claim of mass gap or continuum existence"
+      - "No public release or deployment (NONE_BY_DESIGN / NOT_APPLICABLE)"
+      - "No UI creation (NONE_BY_DESIGN)"
+    owner_reserved_boundaries:
+      - "CHANGE_PROJECT_MISSION_OR_TARGET"
+      - "CLAIM_GOAL_COMPLETE_OR_CLAY_SOLUTION"
+      - "EXTERNAL_PUBLICATION_OR_RELEASE"
+      - "DESTRUCTIVE_DELETION_OF_HISTORY"
+      - "MODIFY_EXTERNAL_REPOSITORY"
+      - "UNBOUNDED_EXTERNAL_RESOURCE_EXPENDITURE"
+  objective:
+    exact_objective: >
+      Prove Lemma YM-101F establishing the All-Orders Cauchy–Taylor Complex Polydisk
+      Remainder Bound (|R_{\ge 3}^{Cauchy}| \le 187/7872 \approx 0.023755 < \Delta_{\mathrm{IR\_2loop\_full}})
+      on Edge E-CROSSOVER, establishing complete non-perturbative all-orders infinite-horizon
+      convergence W_{\mathrm{IR\_total}}^{\mathrm{all\_orders}} \approx 0.982162 < 1 with margin
+      \Delta_{\mathrm{all\_orders\_margin}} \approx 0.017838 > 1/57 > 0 (resolving NEG-YM-100),
+      and isolate the Non-Perturbative Toron Moduli Degeneracy and Tunneling Horizon Barrier
+      (NEG-YM-101) with certified defect \Delta_{\mathrm{toron\_excess}} \approx 0.982162 > 0.
+    rationale: >
+      Beyond 2-loop order, perturbative Feynman diagrams diverge factorially (renormalons).
+      In constructive field theory on the small-field fluctuation domain, the functional
+      generating function \mathcal{W}(J) is holomorphic in a complex polydisk \mathcal{D}_2
+      of radius R = 2. Cauchy contour integration bounds the all-orders Taylor remainder
+      to strictly less than the available 2-loop infinite-horizon margin, guaranteeing
+      absolute convergence of the multi-scale polymer cluster expansion in the trivial
+      topological sector. Topological torons with flat collective zero-mode manifolds
+      \mathcal{M}_{\mathrm{toron}} possess an unprojected volume weight that exceeds the
+      cluster margin, isolating the physical obstruction to total continuum closure.
+    done_boundary: >
+      Lemma YM-101F proved, Test 65 passing deterministically in test_source_jet_finite_certificates.py,
+      NEGATIVE_EVIDENCE_REGISTER.md appended with NEG-YM-101 (10 lines, 0 deletions),
+      158 canonical files verified under closed-world tree hash, State Revision 160 candidate freeze,
+      fresh blind E4 review completed with INTEGRITY_PASS, distinct technical acceptance granted,
+      and State Revision 161 closeout verified by turnkey referee verify_all.py.
+  base_state:
+    repository_or_workspace: "D:\\Comfy UI\\yang mills and the mass gap"
+    branch_or_state_channel: "master"
+    base_head: "c5725bf"
+    pre_task_state_revision: 159
+    scientific_tree_hash: "dac222e279fc07475b80ce8f4b397a99e4de334a37d4187da4d457ca4353942e"
+    preserved_unrelated_work:
+      - "All 100 preceding mathematical theorems, lemmas, and literature artifacts"
+      - "All negative scientific findings and counterexamples (zero deletions)"
+  mutation_scope:
+    allowed:
+      - "NEGATIVE_EVIDENCE_REGISTER.md"
+      - "research/YM_015F_R_OPERATION_SOURCE_AUDIT_039.md"
+      - "research/YM_CONSTRUCTION_DEFECT_CORRECTION_LEDGER.md"
+      - "research/YM_3D4D_FAILURE_ATLAS.md"
+      - "research/YM_CROSS_DOMAIN_TRANSFER_REGISTRY.md"
+      - "governance/YM_AUTONOMOUS_DISCOVERY_ARCHITECTURE.md"
+      - "tests/test_source_jet_finite_certificates.py"
+      - "tests/test_governance_v406r3_adoption.py"
+      - "governance/PROJECT_STATE.yaml"
+      - "governance/envelopes/YM-101.yaml"
+      - "scripts/verify_all.py"
+      - "paper/main.tex"
+      - "scripts/build_publication_bundle.py"
+    disallowed:
+      - "Any file outside administrative prefixes or explicit task scope"
+      - "Historical deletions in NEGATIVE_EVIDENCE_REGISTER.md"

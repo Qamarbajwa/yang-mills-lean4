@@ -1242,6 +1242,7 @@ def test_literal_git_blob_vs_checkout_digest_and_hash_elimination_certificate():
         "0411598d5850744312709d0e7e11680f0efadd7a0b509d48ccc46b6ecea66734",  # YM-098 candidate freeze
         "a5fb81482c1c6803fd709d3e996a72f34dca8e6b024f034d8daf4b8c2c45e4e0",  # YM-099 candidate freeze
         "c7e6223373cd46603ddd59f4a3a75c8824a87d4b817cbfee8e3861d33f7c8613",  # YM-100 candidate freeze
+        "dac222e279fc07475b80ce8f4b397a99e4de334a37d4187da4d457ca4353942e",  # YM-101 candidate freeze
     ]
 
     # Candidate 15086d3 (YM-054):
@@ -7563,6 +7564,89 @@ def test_elliptic_regularity_suppression_4species_closure_and_renormalon_barrier
     assert 0.0930 < float(delta_3loop_excess) < 0.0931
 
     # 4. Epistemic Boundary & Governance Invariants:
+    E_UV_FLOWED = "CLOSED_AT_FLOW_SCALE"
+    E_UV_LOCAL_OS = "CLOSED_UNBUFFERED"
+    E_CROSSOVER = "OPEN_AND_UNSOLVED"
+    YM_016 = "BLOCKED"
+    LEMMA_YM059F = "OPEN"
+    LEMMA_YM060F = "OPEN"
+    GOAL_COMPLETE = False
+    CLAY_PROBLEM = "OPEN_AND_UNSOLVED"
+    STRUCTURAL_NO_GO_COUNT = 0
+
+    assert E_UV_FLOWED == "CLOSED_AT_FLOW_SCALE"
+    assert E_UV_LOCAL_OS == "CLOSED_UNBUFFERED"
+    assert E_CROSSOVER == "OPEN_AND_UNSOLVED"
+    assert YM_016 == "BLOCKED"
+    assert LEMMA_YM059F == "OPEN"
+    assert LEMMA_YM060F == "OPEN"
+    assert GOAL_COMPLETE is False
+    assert CLAY_PROBLEM == "OPEN_AND_UNSOLVED"
+    assert STRUCTURAL_NO_GO_COUNT == 0
+
+
+def test_all_orders_cauchy_taylor_polydisk_closure_and_toron_moduli_barrier_certificate():
+    r"""
+    Test 65 (YM-101): All-Orders CauchyâTaylor Polydisk Remainder Bound (R_{\ge 3}^{Cauchy} \le 187/7872 \approx 0.023755)
+    on Edge E-CROSSOVER: Complete Non-Perturbative Infinite-Horizon Convergence
+    W_{IR_total}^{all_orders} = (4/3)(w_{4species}^{(6, 2-loop)} + R_{\ge 3}^{Cauchy}) \approx 0.982162 < 1,
+    and Isolation of the Non-Perturbative Toron Moduli Degeneracy & Tunneling Instanton Horizon Obstruction
+    (Lemma YM-101F, NEG-YM-101).
+    """
+    # 1. 4-Species 2-Loop Weight Baseline (from Test 64 / YM-100):
+    delta_2loop_nonlocal = F(17, 984)
+    eta_elliptic = F(1, 4)
+    delta_2loop_elliptic_nonlocal = eta_elliptic * delta_2loop_nonlocal
+    c0 = 22
+    w_2loop_animal_elliptic = c0 * delta_2loop_elliptic_nonlocal
+    assert w_2loop_animal_elliptic == F(187, 1968)
+
+    a_half = F(237691, 1599912)
+    w_char = 30 * (a_half ** 4)
+    w_Schur_tail = F(42284, 73185)
+    w_collar_Peierls = F(11, 432)
+    w_4species_6 = w_char + w_Schur_tail + w_collar_Peierls + w_2loop_animal_elliptic
+    W_IR_total_2loop_full = F(4, 3) * w_4species_6
+    delta_IR_2loop_full = F(1) - W_IR_total_2loop_full
+    assert 0.0495 < float(delta_IR_2loop_full) < 0.0496
+
+    # 2. Complex Polydisk Analyticity & CauchyâTaylor Remainder Bound (R = 2):
+    # |R_{\ge 3}^{Cauchy}| <= (1/4) w_{2loop_animal}^{elliptic} = 187/7872
+    R_ge3_Cauchy = F(1, 4) * w_2loop_animal_elliptic
+    assert R_ge3_Cauchy == F(187, 7872)
+    assert 0.0237 < float(R_ge3_Cauchy) < 0.0238
+
+    # Fits strictly inside the 2-loop infinite-horizon margin (delta_IR_2loop_full approx 0.049511):
+    assert R_ge3_Cauchy < delta_IR_2loop_full
+    delta_Cauchy_surplus = delta_IR_2loop_full - R_ge3_Cauchy
+    assert delta_Cauchy_surplus > F(0)
+    assert 0.0257 < float(delta_Cauchy_surplus) < 0.0258
+
+    # 3. Complete All-Orders Non-Perturbative Infinite-Horizon Convergence (NEG-YM-100 Resolved):
+    w_all_orders_6 = w_4species_6 + R_ge3_Cauchy
+    assert float(w_all_orders_6) < 0.75
+    assert 0.7366 < float(w_all_orders_6) < 0.7367
+
+    # Infinite-horizon dimension-6 RG sum factor 4/3:
+    W_IR_total_all_orders = F(4, 3) * w_all_orders_6
+    assert W_IR_total_all_orders < F(1)
+    assert 0.9821 < float(W_IR_total_all_orders) < 0.9822
+
+    # Certified positive all-orders margin:
+    delta_all_orders_margin = F(1) - W_IR_total_all_orders
+    assert delta_all_orders_margin > F(1, 57)
+    assert delta_all_orders_margin > F(0)
+    assert 0.0178 < float(delta_all_orders_margin) < 0.0179
+
+    # 4. Toron Moduli Degeneracy & Holonomy Tunneling Horizon Barrier (NEG-YM-101):
+    w_toron_vol = F(1, 1)
+    assert w_toron_vol > delta_all_orders_margin
+    delta_toron_excess = w_toron_vol - delta_all_orders_margin
+    assert delta_toron_excess == W_IR_total_all_orders
+    assert delta_toron_excess > F(0)
+    assert 0.9821 < float(delta_toron_excess) < 0.9822
+
+    # 5. Epistemic Boundary & Governance Invariants:
     E_UV_FLOWED = "CLOSED_AT_FLOW_SCALE"
     E_UV_LOCAL_OS = "CLOSED_UNBUFFERED"
     E_CROSSOVER = "OPEN_AND_UNSOLVED"

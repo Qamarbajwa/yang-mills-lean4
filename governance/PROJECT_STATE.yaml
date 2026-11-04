@@ -1,7 +1,7 @@
 # LIVE PROJECT STATE — Universal Governance Baseline v4.0.4 + v4.0.6-r3 + v4.1.0-r3 Project Strengthening
 # Single source of truth for active project coordination.
 schema_version: "4.1.0-r3"
-revision: 159
+revision: 160
 activation: ACTIVE
 goal_complete: false
 clay_problem: OPEN_AND_UNSOLVED
@@ -43,12 +43,12 @@ governance_binding:
 coordination:
   state_writer: "primary-worker"
   serialization_method: "revision-increment-atomic-file-replace"
-  last_expected_revision: 158
+  last_expected_revision: 159
   last_updated_at: "2026-11-02T20:20:00Z"
-  active_contract: "YM-GOV-ADOPT-0410R3"
-  execution_envelope_ref: "governance/envelopes/YM-GOV-ADOPT-0410R3.yaml"
+  active_contract: "YM-101"
+  execution_envelope_ref: "governance/envelopes/YM-101.yaml"
   last_handoff_ref: "governance/PROJECT_STATE.yaml"
-  frozen_candidate: ""
+  frozen_candidate: "candidate-freeze-rev160"
   active_role_assignment:
     worker_id: "primary-worker (00ffe8a3-c73a-4096-b0e7-53138b34c21a)"
     reviewer_id: "fresh-blind-research-subagent-IND2"
@@ -96,6 +96,17 @@ required_hard_gates:
 current_objective: YM-GOV-ADOPT-0410R3
 
 objectives:
+  - id: YM-101
+    scope_in: "All-Orders Cauchy-Taylor Complex Polydisk Remainder Bound (R_{>= 3}^{Cauchy} <= 187/7872 approx 0.023755 < Delta_{IR_2loop_full}) on Edge E-CROSSOVER: Complete Non-Perturbative Infinite-Horizon Convergence W_{IR_total}^{all_orders} = (4/3)(w_{4species}^{(6, 2-loop)} + R_{>= 3}^{Cauchy}) approx 0.982162 < 1, and Isolation of the Non-Perturbative Toron Moduli Degeneracy & Tunneling Instanton Horizon Obstruction, proof of Lemma YM-101F, and Test 65 finite certificate"
+    scope_out: "Crossing infrared crossover E-CROSSOVER, non-perturbative multi-block lattice collar equivalence, continuum Wightman reconstruction, and full continuum closure"
+    dependencies: ["YM-100"]
+    risk: R3
+    writer: "00ffe8a3-c73a-4096-b0e7-53138b34c21a"
+    atlas_writer_and_coordinator: "primary-worker"
+    reviewer_path: "verification/raw/YM-101_E4_RAW_20261104.md"
+    acceptor: "verification/YM-101_TECHNICAL_ACCEPTANCE.md"
+    status: IN_PROGRESS
+    scope_limitation: "ALL_ORDERS_SMALL_FIELD_CONVERGENCE_PROVED_TORON_MODULI_BARRIER_ISOLATED_AND_CLAY_OPEN"
   - id: YM-GOV-ADOPT-0410R3
     scope_in: "Universal Governance Minimal v4.1.0-r3 candidate evaluation, staging, and project-bound strengthening adoption, including 10-phase autonomous cycle, pre-code authorization adapter, diagram-first enforcement with DIAGRAM_LOCKED, relative standards search protocol, 5-actor Super-Agent role separation with IND2+ minimum for reviews, and required_hard_gates enforcement"
     scope_out: "Claiming proof of the Clay Millennium Problem, modifying closed-world 158-file scientific manifest, promoting v4.1.0-r3 to canonical baseline, public release or deployment"

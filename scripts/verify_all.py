@@ -47,6 +47,7 @@ EXPECTED_CHECKOUT_TREE_HASHES = {
     "0411598d5850744312709d0e7e11680f0efadd7a0b509d48ccc46b6ecea66734",  # State Revision 152–153 (YM-098 candidate freeze)
     "a5fb81482c1c6803fd709d3e996a72f34dca8e6b024f034d8daf4b8c2c45e4e0",  # State Revision 154–155 (YM-099 candidate freeze)
     "c7e6223373cd46603ddd59f4a3a75c8824a87d4b817cbfee8e3861d33f7c8613",  # State Revision 156–157 (YM-100 candidate freeze)
+    "dac222e279fc07475b80ce8f4b397a99e4de334a37d4187da4d457ca4353942e",  # State Revision 160–161 (YM-101 candidate freeze)
     "7f8ea3aa4565ea8ed65dc62ebafa90b2c621bb1b82a0400224119e183c177298",  # State Revision 150–151 (YM-097 candidate freeze)
     "d240c11b72070b120648e29917e9eaa3a2af8d758e4817857b463ce5d649c7dd",  # State Revision 148–149 (YM-096 candidate freeze)
     "3dba03901153e725e1519d2b61c6d62a9e31868c4eb36896cb1380ee1cf2f9bc",  # State Revision 146–147 (YM-095 candidate freeze)
@@ -287,7 +288,7 @@ def run_pytest_suite():
             print(res.stderr)
             return False
 
-        if not ("531 passed" in summary_line or "512 passed" in summary_line or "494 passed" in summary_line or "493 passed" in summary_line or "492 passed" in summary_line or "491 passed" in summary_line or "490 passed" in summary_line or "489 passed" in summary_line or "488 passed" in summary_line or "487 passed" in summary_line or "486 passed" in summary_line or "485 passed" in summary_line or "484 passed" in summary_line or "483 passed" in summary_line or "482 passed" in summary_line or "481 passed" in summary_line or "480 passed" in summary_line or "479 passed" in summary_line or "478 passed" in summary_line or "477 passed" in summary_line or "476 passed" in summary_line or "475 passed" in summary_line or "474 passed" in summary_line or "473 passed" in summary_line or "472 passed" in summary_line or "471 passed" in summary_line):
+        if not ("532 passed" in summary_line or "531 passed" in summary_line or "512 passed" in summary_line or "494 passed" in summary_line or "493 passed" in summary_line or "492 passed" in summary_line or "491 passed" in summary_line or "490 passed" in summary_line or "489 passed" in summary_line or "488 passed" in summary_line or "487 passed" in summary_line or "486 passed" in summary_line or "485 passed" in summary_line or "484 passed" in summary_line or "483 passed" in summary_line or "482 passed" in summary_line or "481 passed" in summary_line or "480 passed" in summary_line or "479 passed" in summary_line or "478 passed" in summary_line or "477 passed" in summary_line or "476 passed" in summary_line or "475 passed" in summary_line or "474 passed" in summary_line or "473 passed" in summary_line or "472 passed" in summary_line or "471 passed" in summary_line):
             print(f"  [FAIL] Expected 471, 472, 473, 474, 475, 476, 477, 478, 479, 480, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, or 492 passed tests, observed: {summary_line}")
             return False
 
@@ -321,7 +322,7 @@ def verify_epistemic_invariants():
             all_ok = False
 
     # Check for revision freshness (111, 113, 115, 117, 119, 121, or 123)
-    if "revision: 159" in content or "revision: 158" in content or "revision: 157" in content or "revision: 155" in content or "revision: 153" in content or "revision: 151" in content or "revision: 149" in content or "revision: 147" in content or "revision: 145" in content or "revision: 143" in content or "revision: 141" in content or "revision: 139" in content or "revision: 137" in content or "revision: 135" in content or "revision: 133" in content or "revision: 131" in content or "revision: 129" in content or "revision: 127" in content or "revision: 125" in content or "revision: 123" in content or "revision: 121" in content or "revision: 119" in content or "revision: 117" in content or "revision: 115" in content or "revision: 113" in content or "revision: 111" in content:
+    if "revision: 161" in content or "revision: 160" in content or "revision: 159" in content or "revision: 158" in content or "revision: 157" in content or "revision: 155" in content or "revision: 153" in content or "revision: 151" in content or "revision: 149" in content or "revision: 147" in content or "revision: 145" in content or "revision: 143" in content or "revision: 141" in content or "revision: 139" in content or "revision: 137" in content or "revision: 135" in content or "revision: 133" in content or "revision: 131" in content or "revision: 129" in content or "revision: 127" in content or "revision: 125" in content or "revision: 123" in content or "revision: 121" in content or "revision: 119" in content or "revision: 117" in content or "revision: 115" in content or "revision: 113" in content or "revision: 111" in content:
         print("  [PASS] State revision is governed (111 through 159)")
     else:
         print("  [FAIL] State revision mismatch")

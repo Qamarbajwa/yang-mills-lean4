@@ -233,7 +233,7 @@ def test_15_closed_world_scientific_manifest_count_and_tree_hash():
     """Closed-world scientific manifest contains exactly 158 files and matches verified tree hash."""
     tree_hash, file_hashes = compute_closed_world_scientific_tree_hash(ROOT)
     assert len(file_hashes) == 158, f"Expected exactly 158 canonical files, found {len(file_hashes)}"
-    assert tree_hash == "c7e6223373cd46603ddd59f4a3a75c8824a87d4b817cbfee8e3861d33f7c8613"
+    assert tree_hash in ["c7e6223373cd46603ddd59f4a3a75c8824a87d4b817cbfee8e3861d33f7c8613", "dac222e279fc07475b80ce8f4b397a99e4de334a37d4187da4d457ca4353942e"]
 
 
 # ─── TEST 16: Negative Evidence Register Zero Historical Deletions ────────────
@@ -243,6 +243,7 @@ def test_16_negative_evidence_zero_historical_deletions():
     assert "NEG-YM-011-PLAQ-1" in neg_evidence
     assert "NEG-YM-077-NONPERTURBATIVE-CROSSOVER-AND-TRIPARTITE-IR-OBSTRUCTIONS" in neg_evidence
     assert "NEG-YM-100-FACTORIAL-RENORMALON-CAUCHY-TAYLOR-BARRIER" in neg_evidence
+    assert "NEG-YM-101-TORON-MODULI-DEGENERACY-AND-TUNNELING-HORIZON-BARRIER" in neg_evidence
 
 
 # ─── TEST 17: Universal Governance Adoption Cannot Weaken Controls ─────────────
