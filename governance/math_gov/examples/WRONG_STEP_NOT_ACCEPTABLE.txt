@@ -1,0 +1,5 @@
+Mathematical error to test during a real session:
+  Input: x^2 = x for x in a field
+  Candidate step: Divide both sides by x, infer x=1 without establishing x!=0.
+  Failure: x=0 is a counterexample; the missing obligation x != 0 blocks the inference.
+  Formalized statements require explicit hypotheses and branch handling.

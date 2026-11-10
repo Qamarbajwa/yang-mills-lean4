@@ -1,0 +1,6 @@
+name = "MathGovLeanDemo"
+version = "0.1.0"
+defaultTargets = ["ProofSteps"]
+
+[[lean_lib]]
+name = "ProofSteps"

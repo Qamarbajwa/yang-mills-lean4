@@ -1,0 +1,111 @@
+# Local Policy-as-Code Configuration for Google Cloud Project Chrysalis Reference Architecture
+policy_version: "1.0.0"
+framework: "Google Cloud Project Chrysalis Local Reference Architecture"
+workspace: "yang mills and the mass gap"
+
+gate_1_ast_ingress:
+  forbidden_calls:
+    - "os.system"
+    - "posix.system"
+    - "nt.system"
+  forbidden_modules:
+    - "socket"
+    - "urllib"
+    - "urllib.request"
+    - "requests"
+    - "http.client"
+    - "aiohttp"
+    - "httpx"
+    - "ftplib"
+    - "telnetlib"
+  forbidden_subprocess_commands:
+    - "curl"
+    - "wget"
+    - "ssh"
+    - "nc"
+    - "netcat"
+    - "ping"
+    - "telnet"
+    - "ftp"
+  exact_rational_certificate_rules:
+    enforce_on_candidate_certificates: true
+    enforce_on_pragma: "EXACT_RATIONAL_CERTIFICATE"
+    disallow_float_calls: true
+    disallow_float_literals: true
+
+gate_2_policy_rules:
+  rational_bounds:
+    min_margin_threshold: "1/57"
+    strict_positivity_required: true
+    max_cluster_weight: "1"
+    max_cauchy_remainder: "187/7872"
+  claim_evidence_matrix:
+    source_file: "CLAIM_EVIDENCE_MATRIX.md"
+    require_all_mapped: true
+    allowed_statuses:
+      - "VERIFIED_FROM_PRIMARY_SOURCE"
+      - "PARTIAL_SOURCE_DEFINITION"
+    claim_test_mapping:
+      YM-REQ-001: "tests/test_official_specification.py::test_central_exact_invariants"
+      YM-REQ-002: "tests/test_official_specification.py::test_central_exact_invariants"
+      YM-REQ-003: "tests/test_official_specification.py::test_spec_file_exists"
+      YM-REQ-004: "tests/test_official_specification.py::test_central_exact_invariants"
+      YM-REQ-005: "tests/test_official_specification.py::test_central_exact_invariants"
+      YM-REQ-006: "tests/test_official_specification.py::test_central_exact_invariants"
+      YM-REQ-007: "tests/test_official_specification.py::test_central_exact_invariants"
+      YM-REQ-008: "tests/test_official_specification.py::test_central_exact_invariants"
+      YM-REQ-009: "tests/test_official_specification.py::test_spec_file_exists"
+      YM-REQ-010: "tests/test_official_specification.py::test_spec_file_exists"
+      YM-REQ-011: "tests/test_official_specification.py::test_spec_file_exists"
+      YM-REQ-012: "tests/test_official_specification.py::test_spec_file_exists"
+      YM-REQ-013: "tests/test_official_specification.py::test_spec_file_exists"
+      YM-REQ-014: "tests/test_official_specification.py::test_central_exact_invariants"
+      YM-REQ-015: "tests/test_official_specification.py::test_bibliographic_coverage"
+      YM-REQ-016: "tests/test_official_specification.py::test_bibliographic_coverage"
+      YM-REQ-017: "tests/test_official_specification.py::test_weak_compactness_boundary_preserved"
+      YM-REQ-018: "tests/test_official_specification.py::test_spec_file_exists"
+      YM-REQ-019: "tests/test_official_specification.py::test_central_exact_invariants"
+      YM-REQ-020: "tests/test_official_specification.py::test_spec_file_exists"
+      YM-REQ-021: "tests/test_official_specification.py::test_required_vs_extensions_separated"
+      YM-REQ-022: "tests/test_official_specification.py::test_required_vs_extensions_separated"
+      YM-REQ-023: "tests/test_official_specification.py::test_required_vs_extensions_separated"
+      YM-REQ-024: "tests/test_official_specification.py::test_required_vs_extensions_separated"
+      YM-REQ-025: "tests/test_official_specification.py::test_required_vs_extensions_separated"
+      YM-REQ-026: "tests/test_official_specification.py::test_required_vs_extensions_separated"
+      YM-REQ-027: "tests/test_official_specification.py::test_required_vs_extensions_separated"
+      YM-REQ-028: "tests/test_official_specification.py::test_required_vs_extensions_separated"
+      YM-REQ-029: "tests/test_official_specification.py::test_required_vs_extensions_separated"
+      YM-REQ-030: "tests/test_official_specification.py::test_required_vs_extensions_separated"
+      THM-YM-0001: "tests/test_foundational_literature.py"
+      THM-YM-0002: "tests/test_foundational_literature.py"
+      THM-YM-0003: "tests/test_foundational_literature.py"
+      THM-YM-0004: "tests/test_foundational_literature.py"
+      THM-YM-0005: "tests/test_foundational_literature.py"
+      THM-YM-0006: "tests/test_foundational_literature.py"
+      THM-YM-0007: "tests/test_foundational_literature.py"
+      THM-YM-0008: "tests/test_foundational_literature.py"
+      THM-YM-0009: "tests/test_foundational_literature.py"
+      THM-YM-0010: "tests/test_foundational_literature.py"
+      THM-YM-0011: "tests/test_foundational_literature.py"
+      THM-YM-0012: "tests/test_foundational_literature.py"
+
+gate_3_cryptographic_provenance:
+  manifest_file: "governance/chrysalis_manifest.json"
+  keystore_file: "governance/chrysalis_keystore.json"
+  signing_algorithm: "HMAC-SHA256"
+  tracked_patterns:
+    - "tests/test_*.py"
+    - "governance/envelopes/*.yaml"
+    - "paper/main.tex"
+
+gate_4_dual_custody:
+  audit_chain_file: "governance/chrysalis_audit_chain.jsonl"
+  require_human_token_for_layer3: true
+  allowed_human_owners:
+    - "human-owner"
+    - "lead-investigator"
+    - "constitutional-owner"
+  allowed_reviewers:
+    - "distinct-technical-acceptor"
+    - "fresh-blind-research-subagent-IND2"
+    - "independent-reviewer"

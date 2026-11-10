@@ -195,7 +195,7 @@ def print_banner():
 
 
 def check_closed_world_tree_hash():
-    print("\n[Step 1/5] Auditing Closed-World Scientific Manifest (158 Canonical Files)...")
+    print("\n[Step 1/6] Auditing Closed-World Scientific Manifest (158 Canonical Files)...")
     manifest = sorted(SCIENTIFIC_FINGERPRINT_MANIFEST)
     if len(manifest) != EXPECTED_CANONICAL_COUNT:
         print(f"  [FAIL] Expected {EXPECTED_CANONICAL_COUNT} files, found {len(manifest)}")
@@ -214,7 +214,7 @@ def check_closed_world_tree_hash():
 
 
 def check_literal_git_blob_tree_hash():
-    print("\n[Step 2/5] Auditing Literal Git-Blob Tree Hash at Candidate SHA...")
+    print("\n[Step 2/6] Auditing Literal Git-Blob Tree Hash at Candidate SHA...")
     target_sha = ACCEPTED_CANDIDATE_SHA
     target_spec = ACCEPTED_CANDIDATE_SPECS.get(target_sha)
     expected_blob = target_spec["blob_hash"] if target_spec else EXPECTED_LITERAL_GIT_BLOB_TREE_HASH
@@ -233,7 +233,7 @@ def check_literal_git_blob_tree_hash():
 
 
 def check_negative_evidence_integrity():
-    print("\n[Step 3/5] Auditing Negative Evidence Register Continuity...")
+    print("\n[Step 3/6] Auditing Negative Evidence Register Continuity...")
     neg_file = ROOT / "NEGATIVE_EVIDENCE_REGISTER.md"
     if not neg_file.exists():
         print("  [FAIL] NEGATIVE_EVIDENCE_REGISTER.md not found!")
@@ -267,7 +267,7 @@ def check_negative_evidence_integrity():
 
 
 def run_pytest_suite():
-    print("\n[Step 4/5] Running Deterministic Pytest Certification Suite...")
+    print("\n[Step 4/6] Running Deterministic Pytest Certification Suite...")
     start_time = time.time()
     try:
         res = subprocess.run(
@@ -288,7 +288,7 @@ def run_pytest_suite():
             print(res.stderr)
             return False
 
-        if not ("532 passed" in summary_line or "531 passed" in summary_line or "512 passed" in summary_line or "494 passed" in summary_line or "493 passed" in summary_line or "492 passed" in summary_line or "491 passed" in summary_line or "490 passed" in summary_line or "489 passed" in summary_line or "488 passed" in summary_line or "487 passed" in summary_line or "486 passed" in summary_line or "485 passed" in summary_line or "484 passed" in summary_line or "483 passed" in summary_line or "482 passed" in summary_line or "481 passed" in summary_line or "480 passed" in summary_line or "479 passed" in summary_line or "478 passed" in summary_line or "477 passed" in summary_line or "476 passed" in summary_line or "475 passed" in summary_line or "474 passed" in summary_line or "473 passed" in summary_line or "472 passed" in summary_line or "471 passed" in summary_line):
+        if not ("662 passed" in summary_line or "553 passed" in summary_line or "532 passed" in summary_line or "531 passed" in summary_line or "512 passed" in summary_line or "494 passed" in summary_line or "493 passed" in summary_line or "492 passed" in summary_line or "491 passed" in summary_line or "490 passed" in summary_line or "489 passed" in summary_line or "488 passed" in summary_line or "487 passed" in summary_line or "486 passed" in summary_line or "485 passed" in summary_line or "484 passed" in summary_line or "483 passed" in summary_line or "482 passed" in summary_line or "481 passed" in summary_line or "480 passed" in summary_line or "479 passed" in summary_line or "478 passed" in summary_line or "477 passed" in summary_line or "476 passed" in summary_line or "475 passed" in summary_line or "474 passed" in summary_line or "473 passed" in summary_line or "472 passed" in summary_line or "471 passed" in summary_line):
             print(f"  [FAIL] Expected 471, 472, 473, 474, 475, 476, 477, 478, 479, 480, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, or 492 passed tests, observed: {summary_line}")
             return False
 
@@ -300,7 +300,7 @@ def run_pytest_suite():
 
 
 def verify_epistemic_invariants():
-    print("\n[Step 5/5] Auditing Epistemic Governance Invariants in PROJECT_STATE.yaml...")
+    print("\n[Step 5/6] Auditing Epistemic Governance Invariants in PROJECT_STATE.yaml...")
     state_file = ROOT / "governance" / "PROJECT_STATE.yaml"
     if not state_file.exists():
         print("  [FAIL] PROJECT_STATE.yaml not found!")
@@ -331,6 +331,29 @@ def verify_epistemic_invariants():
     return all_ok
 
 
+def verify_chrysalis_security_gates():
+    print("\n[Step 6/6] Auditing Chrysalis Local Reference Architecture Security Gates...")
+    try:
+        from scripts.chrysalis_gates import ChrysalisGates
+        gates = ChrysalisGates(root_dir=ROOT)
+        res = gates.run_all_gates()
+        for g_num in range(1, 5):
+            g = res["gates"][g_num]
+            status_str = "[PASS]" if g["passed"] else "[FAIL]"
+            print(f"  Gate {g_num}: {g['name']:<50} {status_str}")
+            if not g["passed"]:
+                for v in g["violations"]:
+                    print(f"    - {v}")
+        if not res["all_passed"]:
+            print("  [FAIL] Chrysalis security gates verification failed!")
+            return False
+        print("  [PASS] All 4 Chrysalis Security Gates verified cleanly.")
+        return True
+    except Exception as e:
+        print(f"  [FAIL] Error running Chrysalis security gates: {e}")
+        return False
+
+
 def main():
     print_banner()
     results = [
@@ -339,6 +362,7 @@ def main():
         check_negative_evidence_integrity(),
         run_pytest_suite(),
         verify_epistemic_invariants(),
+        verify_chrysalis_security_gates(),
     ]
 
     print("\n" + "=" * 80)

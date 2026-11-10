@@ -1,0 +1,16 @@
+APPLY MATH-GOV TO MY EXISTING MATHEMATICAL RESEARCH PROJECT.
+
+Read ALL files in the attached MATH_GOV_v0_6_PROJECT_GOVERNANCE_ADOPTION_CANDIDATE package. This is an UNBOUND CANDIDATE, not permission to overwrite my existing live governance.
+
+FIRST ACTION MUST BE READ-ONLY:
+1. Enumerate the actual project and research conversation sources, exact original mathematical question, repositories, existing three canonical authority files, current task/step/lemma/proof artifacts, Lean toolchain/manifest, known source/approval receipts, agents and tool rights. If inaccessible, report NOT INSPECTED; do not fabricate.
+2. Produce a diff and conflict review between the current live system and the candidate. Preserve original prompts and responses exactly; do not replace with a summary.
+3. Show whether each H01–H20 hard rule, S01–S08 soft guideline and G0–G12 hard gate is IMPLEMENTED, STRUCTURAL_ONLY, DOCUMENTED_ONLY, FAILED or NOT_INSPECTED, with exact evidence. No generic PASS labels.
+4. Propose safe integration using exactly three project authority files. If active files differ, create a non-destructive candidate branch and do not override canonical universal governance without qualified owner-approved cutover.
+5. Prepare the ONE supervisor + dynamically assigned isolated workers, external policy host, independent watchdog/reviewer/acceptor, stepwise mathematical reasoning ledger, trusted evidence archive, Lean statement fidelity and axiom gates, context capsules and capability checks.
+6. Simulate a 10-task project, showing partial work (e.g., 5 executed, only evidenced accepted tasks) and zero unjustified claims of theorem completion. Then perform adverse tests A01–A26. Run a genuine isolated Lean target check only if available with pinned exact source and approved theorem statement; otherwise mark NOT RUN.
+7. Return the exact current blockers and authorized next action. Never report rollout, proof verification, release or publication if no trusted execution evidence exists.
+
+Use adoption/GEMINI_SUPERVISOR_MASTER_DIRECTIVE.md as operating directive subordinate to the existing approved project authority and trustworthy host gates. A model's prose is not a policy enforcement mechanism.
+
+8. YOU ARE THE IMPLEMENTER: execute the P0–P9 self-application procedure in adoption/GEMINI_SELF_APPLICATION_PROTOCOL.md in the real project to the extent your actual tool permissions allow. Do not stop at saying you understood; create a candidate branch and real diffs when authorized. Prove each changed control using raw test output, scope-specific file hashes and actual external verification; do not self-certify live installation. Report skipped, blocked and uninspected steps explicitly.

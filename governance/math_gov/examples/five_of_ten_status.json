@@ -1,0 +1,9 @@
+{
+  "verdict": "DESCRIPTIVE_UNVERIFIED",
+  "tasks_total": 10,
+  "tasks_execution_finished": 5,
+  "steps_with_open_obligations": 2,
+  "theorem_progress_percent": "UNKNOWN",
+  "proof_verified": false,
+  "note": "Task and obligation counts are descriptive; no verified theorem progress percentage inferred."
+}

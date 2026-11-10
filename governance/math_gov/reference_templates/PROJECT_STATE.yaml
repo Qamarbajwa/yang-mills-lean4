@@ -1,0 +1,75 @@
+{
+  "schema": "MATH-GOV-PROJECT-STATE-0.6",
+  "status": "UNBOUND_NO_LIVE_AUTHORITY",
+  "revision": 0,
+  "authority_files": [
+    "governance/GOVERNANCE.md",
+    "governance/PROJECT_DIRECTION.md",
+    "governance/PROJECT_STATE.yaml"
+  ],
+  "project": {
+    "id": null,
+    "owner_grant_ref": null,
+    "original_archive_ref": null,
+    "original_digest": null,
+    "formal_target_ref": null,
+    "formal_target_digest": null,
+    "approved_contract_digest": null,
+    "research_scope": null
+  },
+  "supervisor": {
+    "identity": null,
+    "lease_ref": null,
+    "authorized": false
+  },
+  "external_host": {
+    "authenticated": false,
+    "policy_engine_ref": null,
+    "cas_store_ref": null,
+    "independent_watchdog_ref": null,
+    "archive_anchor_ref": null
+  },
+  "toolchain": {
+    "lean_version": null,
+    "lake_manifest_digest": null,
+    "isolated_runner_ref": null,
+    "independent_replay_ref": null
+  },
+  "actors": {
+    "workers": [],
+    "reviewers": [],
+    "acceptors": []
+  },
+  "status_counts": {
+    "tasks_executed": 0,
+    "tasks_verified": 0,
+    "steps_formally_checked": 0,
+    "open_obligations": null,
+    "theorem_progress": "UNKNOWN"
+  },
+  "hard_gates": {
+    "G0": "UNVERIFIED",
+    "G1": "UNVERIFIED",
+    "G2": "UNVERIFIED",
+    "G3": "UNVERIFIED",
+    "G4": "UNVERIFIED",
+    "G5": "UNVERIFIED",
+    "G6": "UNVERIFIED",
+    "G7": "UNVERIFIED",
+    "G8": "UNVERIFIED",
+    "G9": "UNVERIFIED",
+    "G10": "UNVERIFIED",
+    "G11": "UNVERIFIED",
+    "G12": "UNVERIFIED"
+  },
+  "blockers": [
+    {
+      "id": "BOUND-001",
+      "priority": "P0",
+      "reason": "Exact owner intent, real host authority, Lean runner and reviewer credentials not bound",
+      "status": "OPEN"
+    }
+  ],
+  "last_validated_at": null,
+  "release_authorized": false
+}

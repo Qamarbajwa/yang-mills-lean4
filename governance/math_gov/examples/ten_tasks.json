@@ -1,0 +1,219 @@
+{
+  "schema": "MATH-GOV-PLAN-0.6",
+  "project_id": "DEMO-NOT-REAL",
+  "project_status": "ILLUSTRATIVE_ONLY",
+  "original_question_ref": "EXAMPLE-Q1",
+  "original_question_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "formal_target_ref": "EXAMPLE-TARGET1",
+  "formal_target_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "snapshot_digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "model_capability": {
+    "math_reasoning": "UNVERIFIED",
+    "lean": "UNVERIFIED"
+  },
+  "branches": [
+    {
+      "id": "B1",
+      "visibility": "ISOLATED",
+      "purpose": "algebraic proof"
+    },
+    {
+      "id": "B2",
+      "visibility": "ISOLATED",
+      "purpose": "independent alternate proof"
+    },
+    {
+      "id": "B3",
+      "visibility": "ISOLATED",
+      "purpose": "counterexample search"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "T01",
+      "branch": "B1",
+      "title": "Inventory definitions",
+      "state": "EXECUTED",
+      "deps_all": [],
+      "deps_any": [],
+      "proof_steps": [
+        "S1"
+      ]
+    },
+    {
+      "id": "T02",
+      "branch": "B1",
+      "title": "Propose first lemma",
+      "state": "SUBMITTED",
+      "deps_all": [
+        "T01"
+      ],
+      "deps_any": [],
+      "proof_steps": [
+        "S2"
+      ]
+    },
+    {
+      "id": "T03",
+      "branch": "B2",
+      "title": "Alternative lemma",
+      "state": "EXECUTED",
+      "deps_all": [],
+      "deps_any": [],
+      "proof_steps": [
+        "S3"
+      ]
+    },
+    {
+      "id": "T04",
+      "branch": "B3",
+      "title": "Counterexample exploration",
+      "state": "SUBMITTED",
+      "deps_all": [],
+      "deps_any": [],
+      "proof_steps": [
+        "S4"
+      ]
+    },
+    {
+      "id": "T05",
+      "branch": "B1",
+      "title": "Check side conditions",
+      "state": "EXECUTED",
+      "deps_all": [
+        "T01"
+      ],
+      "deps_any": [],
+      "proof_steps": [
+        "S5"
+      ]
+    },
+    {
+      "id": "T06",
+      "branch": "B1",
+      "title": "Formalize lemma",
+      "state": "PLANNED",
+      "deps_all": [
+        "T02",
+        "T05"
+      ],
+      "deps_any": [],
+      "proof_steps": [
+        "S6"
+      ]
+    },
+    {
+      "id": "T07",
+      "branch": "B2",
+      "title": "Independent formalization",
+      "state": "PLANNED",
+      "deps_all": [
+        "T03"
+      ],
+      "deps_any": [],
+      "proof_steps": [
+        "S7"
+      ]
+    },
+    {
+      "id": "T08",
+      "branch": "B1",
+      "title": "Lean verification",
+      "state": "PLANNED",
+      "deps_all": [
+        "T06"
+      ],
+      "deps_any": [],
+      "proof_steps": [
+        "S8"
+      ]
+    },
+    {
+      "id": "T09",
+      "branch": "B1",
+      "title": "Synthesize alternative results",
+      "state": "PLANNED",
+      "deps_all": [],
+      "deps_any": [
+        [
+          "T08",
+          "T07"
+        ]
+      ],
+      "proof_steps": [
+        "S9"
+      ]
+    },
+    {
+      "id": "T10",
+      "branch": "B1",
+      "title": "Independent review and reporting",
+      "state": "PLANNED",
+      "deps_all": [
+        "T09"
+      ],
+      "deps_any": [],
+      "proof_steps": [
+        "S10"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "id": "S1",
+      "status": "NOT_FORMALLY_VERIFIED",
+      "open_obligations": null
+    },
+    {
+      "id": "S2",
+      "status": "OPEN_OBLIGATIONS",
+      "open_obligations": 1
+    },
+    {
+      "id": "S3",
+      "status": "NOT_FORMALLY_VERIFIED",
+      "open_obligations": null
+    },
+    {
+      "id": "S4",
+      "status": "NOT_FORMALLY_VERIFIED",
+      "open_obligations": null
+    },
+    {
+      "id": "S5",
+      "status": "OPEN_OBLIGATIONS",
+      "open_obligations": 1
+    },
+    {
+      "id": "S6",
+      "status": "NOT_FORMALLY_VERIFIED",
+      "open_obligations": null
+    },
+    {
+      "id": "S7",
+      "status": "NOT_FORMALLY_VERIFIED",
+      "open_obligations": null
+    },
+    {
+      "id": "S8",
+      "status": "NOT_FORMALLY_VERIFIED",
+      "open_obligations": null
+    },
+    {
+      "id": "S9",
+      "status": "NOT_FORMALLY_VERIFIED",
+      "open_obligations": null
+    },
+    {
+      "id": "S10",
+      "status": "NOT_FORMALLY_VERIFIED",
+      "open_obligations": null
+    }
+  ],
+  "host_attestations": [],
+  "verified_task_receipts": [],
+  "lean_receipts": [],
+  "positive_findings": [],
+  "negative_findings": [],
+  "claims": []
+}
