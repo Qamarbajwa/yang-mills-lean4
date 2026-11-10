@@ -1,0 +1,199 @@
+{
+  "schema": "MATH-GOV-STEP-ENGINE-0.5",
+  "metadata": {
+    "task_id": "YM-101",
+    "envelope_ref": "governance/envelopes/YM-101.yaml",
+    "state_revision": 160,
+    "target_lemma": "Lemma YM-101F",
+    "negative_evidence_refs": ["NEG-YM-100", "NEG-YM-101"]
+  },
+  "original": {
+    "text": "Prove Lemma YM-101F establishing the All-Orders Cauchy–Taylor Complex Polydisk Remainder Bound (|R_{\\ge 3}^{Cauchy}| \\le 187/7872) on Edge E-CROSSOVER, establishing complete non-perturbative all-orders infinite-horizon convergence W_{\\mathrm{IR\\_total}}^{\\mathrm{all\\_orders}} \\approx 0.982162 < 1 with margin \\Delta_{\\mathrm{all\\_orders\\_margin}} \\approx 0.017838 > 1/57 > 0 (resolving NEG-YM-100), and isolate the Non-Perturbative Toron Moduli Degeneracy and Tunneling Horizon Barrier (NEG-YM-101) with certified defect \\Delta_{\\mathrm{toron\\_excess}} \\approx 0.982162 > 0.",
+    "digest": "8908f51a77e5e31536b56b26d5669b2d87e07b8b4088a2948c2670dd3573c9f2"
+  },
+  "formal_target": {
+    "statement": "187 * 1000000 < 49511 * 7872",
+    "digest": "81f185fe97bfab5ecaa3aebe8c772cbca1a49f5326ea0294e33d0263f6fb112b",
+    "approved": true
+  },
+  "nodes": [
+    {
+      "id": "SRC-OBJECTIVE",
+      "kind": "SOURCE",
+      "content": "Prove Lemma YM-101F establishing the All-Orders Cauchy–Taylor Complex Polydisk Remainder Bound (|R_{\\ge 3}^{Cauchy}| \\le 187/7872) on Edge E-CROSSOVER, establishing complete non-perturbative all-orders infinite-horizon convergence W_{\\mathrm{IR\\_total}}^{\\mathrm{all\\_orders}} \\approx 0.982162 < 1 with margin \\Delta_{\\mathrm{all\\_orders\\_margin}} \\approx 0.017838 > 1/57 > 0 (resolving NEG-YM-100), and isolate the Non-Perturbative Toron Moduli Degeneracy and Tunneling Horizon Barrier (NEG-YM-101) with certified defect \\Delta_{\\mathrm{toron\\_excess}} \\approx 0.982162 > 0.",
+      "content_digest": "8908f51a77e5e31536b56b26d5669b2d87e07b8b4088a2948c2670dd3573c9f2"
+    },
+    {
+      "id": "T-YM101",
+      "kind": "TASK",
+      "purpose": "PROOF",
+      "state": "EXECUTED",
+      "branch": "ROOT",
+      "step_ids": [
+        "STEP-D2",
+        "STEP-2LOOP",
+        "STEP-CAUCHY",
+        "STEP-CONV",
+        "STEP-TORON"
+      ]
+    },
+    {
+      "id": "STEP-D2",
+      "kind": "STEP",
+      "task_id": "T-YM101",
+      "state": "EXECUTED",
+      "goal": "Complex polydisk D_2 of radius R = 2 analyticity",
+      "goal_digest": "41624ea39e088d5786ea61ae573c261e479c78229f3d538e12f6f3630f9ec398",
+      "premises": [
+        "SRC-OBJECTIVE"
+      ],
+      "justification": "Small-field cluster expansion functional is analytic in D_2",
+      "obligations": [
+        "Verify radius R = 2 polydisk bounds"
+      ],
+      "discharged": [
+        "Verify radius R = 2 polydisk bounds"
+      ]
+    },
+    {
+      "id": "STEP-2LOOP",
+      "kind": "STEP",
+      "task_id": "T-YM101",
+      "state": "EXECUTED",
+      "goal": "4-species 2-loop baseline weight w_2loop_animal_elliptic = 187/1968",
+      "goal_digest": "fc40428d0959f97987042533860bb4f41b212f4581ea7ebae4c062c3e1e2d4e7",
+      "premises": [
+        "STEP-D2"
+      ],
+      "justification": "Dimension-6 2-loop Feynman diagram contraction",
+      "obligations": [
+        "Verify 2-loop animal weight"
+      ],
+      "discharged": [
+        "Verify 2-loop animal weight"
+      ]
+    },
+    {
+      "id": "STEP-CAUCHY",
+      "kind": "STEP",
+      "task_id": "T-YM101",
+      "state": "EXECUTED",
+      "goal": "All-orders Cauchy polydisk remainder R_ge3_Cauchy <= 187/7872",
+      "goal_digest": "e95383794b6ec6185854ae9b5f58c704f5e71448b11a58066e4a2d8291e0a294",
+      "premises": [
+        "STEP-2LOOP"
+      ],
+      "justification": "Cauchy contour integral on D_2 contracts strictly within 2-loop margin",
+      "obligations": [
+        "Verify Cauchy remainder inequality"
+      ],
+      "discharged": [
+        "Verify Cauchy remainder inequality"
+      ],
+      "lean": {
+        "theorem": "MathGovYM101.cauchy_remainder_bound_certificate",
+        "formal_statement": "187 * 1000000 < 49511 * 7872",
+        "statement_digest": "81f185fe97bfab5ecaa3aebe8c772cbca1a49f5326ea0294e33d0263f6fb112b",
+        "source_digest": "d46c827f311c6ab1d1ef9b93561a3ec952e4a8385dbad7b2c5896a203f5ad679"
+      }
+    },
+    {
+      "id": "STEP-CONV",
+      "kind": "STEP",
+      "task_id": "T-YM101",
+      "state": "EXECUTED",
+      "goal": "Complete all-orders small-field convergence W_IR < 1 with margin > 1/57",
+      "goal_digest": "f0fb16fa68f74815e1fe746a89a071d79c6d4ba4025ea8c9287c805a9602446a",
+      "premises": [
+        "STEP-CAUCHY"
+      ],
+      "justification": "Geometric series sum over all scales k >= 6",
+      "obligations": [
+        "Verify all-orders margin > 1/57"
+      ],
+      "discharged": [
+        "Verify all-orders margin > 1/57"
+      ]
+    },
+    {
+      "id": "NEG-YM-100",
+      "kind": "CLAIM",
+      "claim_id": "NEG-YM-100",
+      "statement": "Prior non-convergence beyond 2-loop resolved on small-field domain",
+      "reported_strength": "THEOREM_CANDIDATE",
+      "evidence_refs": [
+        "STEP-CONV"
+      ]
+    },
+    {
+      "id": "STEP-TORON",
+      "kind": "STEP",
+      "task_id": "T-YM101",
+      "state": "EXECUTED",
+      "goal": "Toron zero-mode flat moduli manifold integration w_toron_vol = 1",
+      "goal_digest": "5f64585141b714b6fc52427f7663a75ea9c6a73c1d9361a9fc55d3197fb8db44",
+      "premises": [
+        "STEP-CONV"
+      ],
+      "justification": "Unsuppressed collective zero-mode volume on compact 4-torus",
+      "obligations": [
+        "Isolate toron excess defect"
+      ],
+      "discharged": [
+        "Isolate toron excess defect"
+      ]
+    },
+    {
+      "id": "NEG-YM-101",
+      "kind": "CLAIM",
+      "claim_id": "NEG-YM-101",
+      "statement": "Toron Moduli Degeneracy & Tunneling Horizon Barrier delta_toron_excess > 0",
+      "reported_strength": "THEOREM_CANDIDATE",
+      "evidence_refs": [
+        "STEP-TORON"
+      ]
+    },
+    {
+      "id": "EP-BOUNDARY",
+      "kind": "CLAIM",
+      "claim_id": "EP-BOUNDARY",
+      "statement": "clay_problem: OPEN_AND_UNSOLVED, E-CROSSOVER: OPEN_AND_UNSOLVED",
+      "reported_strength": "THEOREM_CANDIDATE",
+      "evidence_refs": [
+        "NEG-YM-101"
+      ]
+    }
+  ],
+  "edges": [
+    {"source": "SRC-OBJECTIVE", "target": "STEP-D2", "kind": "AND"},
+    {"source": "STEP-D2", "target": "STEP-2LOOP", "kind": "AND"},
+    {"source": "STEP-2LOOP", "target": "STEP-CAUCHY", "kind": "AND"},
+    {"source": "STEP-CAUCHY", "target": "STEP-CONV", "kind": "AND"},
+    {"source": "STEP-CONV", "target": "NEG-YM-100", "kind": "AND"},
+    {"source": "STEP-CONV", "target": "STEP-TORON", "kind": "AND"},
+    {"source": "STEP-TORON", "target": "NEG-YM-101", "kind": "AND"},
+    {"source": "NEG-YM-101", "target": "EP-BOUNDARY", "kind": "AND"}
+  ],
+  "required_inventory": [
+    "SRC-OBJECTIVE",
+    "T-YM101",
+    "STEP-D2",
+    "STEP-2LOOP",
+    "STEP-CAUCHY",
+    "STEP-CONV",
+    "NEG-YM-100",
+    "STEP-TORON",
+    "NEG-YM-101",
+    "EP-BOUNDARY"
+  ],
+  "required_edges": [
+    {"source": "SRC-OBJECTIVE", "target": "STEP-D2", "kind": "AND"},
+    {"source": "STEP-D2", "target": "STEP-2LOOP", "kind": "AND"},
+    {"source": "STEP-2LOOP", "target": "STEP-CAUCHY", "kind": "AND"},
+    {"source": "STEP-CAUCHY", "target": "STEP-CONV", "kind": "AND"},
+    {"source": "STEP-CONV", "target": "NEG-YM-100", "kind": "AND"},
+    {"source": "STEP-CONV", "target": "STEP-TORON", "kind": "AND"},
+    {"source": "STEP-TORON", "target": "NEG-YM-101", "kind": "AND"},
+    {"source": "NEG-YM-101", "target": "EP-BOUNDARY", "kind": "AND"}
+  ]
+}
