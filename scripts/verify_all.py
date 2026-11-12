@@ -13,6 +13,7 @@ Usage:
     python scripts/verify_all.py
 """
 
+import re
 import sys
 import subprocess
 import time
@@ -288,8 +289,10 @@ def run_pytest_suite():
             print(res.stderr)
             return False
 
-        if not ("662 passed" in summary_line or "553 passed" in summary_line or "532 passed" in summary_line or "531 passed" in summary_line or "512 passed" in summary_line or "494 passed" in summary_line or "493 passed" in summary_line or "492 passed" in summary_line or "491 passed" in summary_line or "490 passed" in summary_line or "489 passed" in summary_line or "488 passed" in summary_line or "487 passed" in summary_line or "486 passed" in summary_line or "485 passed" in summary_line or "484 passed" in summary_line or "483 passed" in summary_line or "482 passed" in summary_line or "481 passed" in summary_line or "480 passed" in summary_line or "479 passed" in summary_line or "478 passed" in summary_line or "477 passed" in summary_line or "476 passed" in summary_line or "475 passed" in summary_line or "474 passed" in summary_line or "473 passed" in summary_line or "472 passed" in summary_line or "471 passed" in summary_line):
-            print(f"  [FAIL] Expected 471, 472, 473, 474, 475, 476, 477, 478, 479, 480, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, or 492 passed tests, observed: {summary_line}")
+        m = re.search(r"(\d+)\s+passed", summary_line)
+        passed_count = int(m.group(1)) if m else 0
+        if passed_count < 662 or "failed" in summary_line.lower() or "error" in summary_line.lower():
+            print(f"  [FAIL] Expected >= 662 passed tests with 0 failures, observed: {summary_line}")
             return False
 
         print(f"  [PASS] Exact rational certificates passed deterministically ({summary_line.strip()}).")
