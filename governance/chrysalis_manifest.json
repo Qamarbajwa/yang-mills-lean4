@@ -2,7 +2,7 @@
   "manifest_version": "1.0.0",
   "key_id": "chrysalis-local-hmac-2026",
   "algorithm": "HMAC-SHA256",
-  "generated_at": "2026-11-15T17:18:26.277241+00:00",
+  "generated_at": "2026-11-15T17:32:44.545478+00:00",
   "total_artifacts": 74,
   "files": {
     "governance/envelopes/YM-002E.yaml": {
@@ -91,9 +91,9 @@
       "size_bytes": 6364
     },
     "paper/main.tex": {
-      "sha256": "f8eb1ac8be22e6a30ae7b7b01243c47ce1d7e283312d10c31231542f07d53f7e",
-      "hmac_sha256": "92db7ebcdb080beb8c0c192c6583ce4088dd23cc4b420570a2ae6fed41b7e2a8",
-      "size_bytes": 128363
+      "sha256": "e90ab613a8dbd2fd5867e870433908fee6da6f573b4fa1b9c1aa40466d8ca4ec",
+      "hmac_sha256": "52a26eb21262fef6c68759b8b0cf9bf052f459e75e4347893889283fa66f12e6",
+      "size_bytes": 38949
     },
     "tests/test_acceptance_identity_separation.py": {
       "sha256": "d108d4e11466e458ea61629b45138b821715a6909adebf18e7ff6916bd9f7952",
