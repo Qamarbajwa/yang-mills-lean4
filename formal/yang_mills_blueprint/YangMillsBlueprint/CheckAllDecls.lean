@@ -74,3 +74,33 @@ import YangMillsBlueprint
 
 #check MathlibPR.Data.RationalPairs.geometric_margin_conservation
 #print axioms MathlibPR.Data.RationalPairs.geometric_margin_conservation
+
+#check YangMillsBlueprint.BlockWeylCollar.weyl_collar_composition_eqv
+#print axioms YangMillsBlueprint.BlockWeylCollar.weyl_collar_composition_eqv
+
+#check YangMillsBlueprint.BlockWeylCollar.weyl_cubic_collar_upper_bound
+#print axioms YangMillsBlueprint.BlockWeylCollar.weyl_cubic_collar_upper_bound
+
+#check YangMillsBlueprint.BlockWeylCollar.weyl_cubic_collar_lt_one_fifth_margin
+#print axioms YangMillsBlueprint.BlockWeylCollar.weyl_cubic_collar_lt_one_fifth_margin
+
+#check YangMillsBlueprint.BlockWeylCollar.local_block_total_fits_margin
+#print axioms YangMillsBlueprint.BlockWeylCollar.local_block_total_fits_margin
+
+#check YangMillsBlueprint.BlockWeylCollar.local_block_collar_bulk_contraction_bound
+#print axioms YangMillsBlueprint.BlockWeylCollar.local_block_collar_bulk_contraction_bound
+
+#check YangMillsBlueprint.BlockWeylCollar.discrete_poincare_dyadic_block_gap
+#print axioms YangMillsBlueprint.BlockWeylCollar.discrete_poincare_dyadic_block_gap
+
+#check MathlibPR.LinearAlgebra.two_point_zero_sum_sq_diff_eq
+#print axioms MathlibPR.LinearAlgebra.two_point_zero_sum_sq_diff_eq
+
+#check MathlibPR.CubicCollar.cubic_collar_eval_eq
+#print axioms MathlibPR.CubicCollar.cubic_collar_eval_eq
+
+#check MathlibPR.CubicCollar.cubic_collar_eval_lt_target_margin
+#print axioms MathlibPR.CubicCollar.cubic_collar_eval_lt_target_margin
+
+#check MathlibPR.CubicCollar.cubic_collar_eval_lt_decimal_bound
+#print axioms MathlibPR.CubicCollar.cubic_collar_eval_lt_decimal_bound

@@ -2,8 +2,8 @@
   "manifest_version": "1.0.0",
   "key_id": "chrysalis-local-hmac-2026",
   "algorithm": "HMAC-SHA256",
-  "generated_at": "2026-11-15T16:45:39.333956+00:00",
-  "total_artifacts": 72,
+  "generated_at": "2026-11-15T17:04:39.001816+00:00",
+  "total_artifacts": 73,
   "files": {
     "governance/envelopes/YM-002E.yaml": {
       "sha256": "ae09781544dfa741edc0fc3c42a515389621b54a9f75f7becdc74a4c2af95519",
@@ -91,9 +91,9 @@
       "size_bytes": 6364
     },
     "paper/main.tex": {
-      "sha256": "58a4d3475d6d00bf069177983b4e4d12c46ef39752a27f56b5c3ca42fd699db8",
-      "hmac_sha256": "41f1b5816bd981ceec6449e0e6c83804b22b8b065c14ad1ba5c406138a587cdd",
-      "size_bytes": 126334
+      "sha256": "5cdfc47feda311af29011409b404381bff33f6f039883b4f7d986b077003a55c",
+      "hmac_sha256": "dbcca04e4d3f2ee7376122c10680e15085f3e12768c3b908d96c021016a2ea0a",
+      "size_bytes": 127099
     },
     "tests/test_acceptance_identity_separation.py": {
       "sha256": "d108d4e11466e458ea61629b45138b821715a6909adebf18e7ff6916bd9f7952",
@@ -109,6 +109,11 @@
       "sha256": "6d9e23b91202ae04d768f7b6fc2a9d2d1c3b3b20c5ee4ef3b1139b0e5ece1695",
       "hmac_sha256": "72aa1d2e7c35e1f3e6048760b19215c7dab5b5c3cd131e5876eea1212a2320eb",
       "size_bytes": 9780
+    },
+    "tests/test_block_weyl_collar_and_lean.py": {
+      "sha256": "b9f751d7d6615742bade40afd0db6fc516d8734e53d4992caa70aa1f1c956979",
+      "hmac_sha256": "3214830eda23cb9b9efca38329eec73d894f67798793a8ff1288caaac7db57c5",
+      "size_bytes": 6946
     },
     "tests/test_certified_linalg_and_lean_blueprint.py": {
       "sha256": "0725f7c479a15bdd3b2718a327c8f290cee653f820c0f673f5260801a8d4d9ea",

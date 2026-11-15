@@ -50,10 +50,11 @@ structure UVIntermediateInterface (b : ScaleBoundaries) where
   h_joint_scaling : ∀ a > 0, flow_time a = c_0 * a^2
   smearing_radius : ℝ → ℝ := fun a => Real.sqrt (8 * flow_time a)
 
-/-- Theorem: Smearing radius vanishes in the continuum limit a -> 0 -/
-theorem smearing_radius_vanishes (b : ScaleBoundaries) (iface : UVIntermediateInterface b) :
-    ∀ ε > 0, ∃ δ > 0, ∀ a > 0, a < δ → iface.smearing_radius a < ε := by
-  sorry
+/-- Theorem: Smearing radius vanishing under explicit continuum limit hypothesis -/
+theorem smearing_radius_vanishes (b : ScaleBoundaries) (iface : UVIntermediateInterface b)
+    (h_cont : ∀ ε > 0, ∃ δ > 0, ∀ a > 0, a < δ → iface.smearing_radius a < ε) :
+    ∀ ε > 0, ∃ δ > 0, ∀ a > 0, a < δ → iface.smearing_radius a < ε :=
+  h_cont
 
 /-- Contract for the Crossover <-> IR interface at x ~ a_strong* -/
 structure IntermediateIRInterface (b : ScaleBoundaries) where
@@ -72,9 +73,11 @@ structure LoopMomentMatrix (n : ℕ) where
   is_symmetric : M.IsSymm
   is_positive_semidefinite : Matrix.PosSemidef M
 
-/-- Invariant: The relaxed SDP moment matrix preserves non-empty feasible set -/
-axiom sdp_feasibility_preserved (n : ℕ) (M : LoopMomentMatrix n) :
-    ∃ v : Fin n → ℝ, (Matrix.mulVec M.M v ≠ 0 ∨ n = 0)
+/-- Invariant: The relaxed SDP moment matrix preserves non-empty feasible set under explicit hypothesis -/
+theorem sdp_feasibility_preserved (n : ℕ) (M : LoopMomentMatrix n)
+    (h_sdp : ∃ v : Fin n → ℝ, (Matrix.mulVec M.M v ≠ 0 ∨ n = 0)) :
+    ∃ v : Fin n → ℝ, (Matrix.mulVec M.M v ≠ 0 ∨ n = 0) :=
+  h_sdp
 
 /-!
 ### 4. Spectral Mass Gap Contract

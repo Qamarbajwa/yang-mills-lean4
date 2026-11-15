@@ -526,6 +526,27 @@ Primary task YM-101 (Bounded Small-Field Cauchy Remainder Contraction & Toron Ze
   Edge `E-CROSSOVER` remains `OPEN_AND_UNSOLVED`.
 
 
+## Accepted bounded YM-102 — State Revision 161
+
+Primary task YM-102 (Scale-Uniform Local Block-Poincaré & SU(2) Weyl Cubic Collar Bounds; Global Commuting Toron Fiber Isolation) formally verified and closed under strict epistemic governance (`clay_problem: OPEN_AND_UNSOLVED`, `goal_complete: false`, `P8_CUTOVER_AUTHORIZED = false`).
+
+- **Scale-Uniform Local Block Contraction (Lemma YM-102F):**
+  On local RG blocks of side $b = 2$, the discrete Laplacian block eigenvalue gap satisfies $\lambda_{\min}^{\mathrm{block}} = 4$, which is strictly independent of global lattice volume $L$. Around reducible central elements $\theta \in \{0, \pi\}$, the normalized $SU(2)$ Weyl collar volume is bounded by:
+  $$w_{\mathrm{weyl\_collar}}(\delta = 1/5) = \frac{452}{133125} \approx 0.003395305 < \frac{1}{5} \Delta_{\mathrm{all\_orders\_margin}}.$$
+  Together with the local non-Abelian bulk cell residual $w_{\mathrm{bulk}} = \frac{3}{410}$, the combined local block weight satisfies:
+  $$w_{\mathrm{local\_block\_total}} = \frac{116939}{10916250} \approx 0.010712378 < \Delta_{\mathrm{all\_orders\_margin}} = \frac{356398551099682824675502937}{19979987798223270175317603840},$$
+  establishing that $W_{\mathrm{IR\_all\_orders}} + w_{\mathrm{local\_block\_total}} < 1$ holds uniformly in $L$ (`local_block_uniform_in_L = True`).
+  Formally checked in Lean 4 without custom axioms (`YangMillsBlueprint.BlockWeylCollar.weyl_cubic_collar_upper_bound`, `local_block_collar_bulk_contraction_bound`, `discrete_poincare_dyadic_block_gap`).
+
+- **Isolation of Non-Perturbative Obstruction NEG-YM-102 (Global Commuting Toron Fiber):**
+  While local non-commuting block modes are uniformly contractive, the global commuting toron moduli fiber $\mathcal{M}_{\mathrm{toron}} \cong (S^1)^3 / \mathbb{Z}_2$ carries vanishing classical plaquette curvature $F_{\mu\nu} = 0$ on $[\delta, \pi - \delta]^3$. Under periodic boundary conditions, closing `E-CROSSOVER` requires a uniform spectral gap bound on Lüscher's effective toron Hamiltonian $H_{\mathrm{eff}}^{\mathrm{toron}}$ across this fiber.
+  Verified with `global_commuting_fiber_closed = False` and `verification_scope = "LOCAL_BLOCK_UNIFORM_GLOBAL_FIBER_OPEN"`.
+
+- **Deterministic Repository Suite:**
+  713 deterministic unit tests passing (100% pass rate). Edge `E-CROSSOVER` remains `OPEN_AND_UNSOLVED`.
+
+
+
 
 
 

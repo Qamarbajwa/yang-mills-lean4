@@ -26,6 +26,10 @@ import uuid
 from scripts.chrysalis_apex import ApexHotpatchSandbox
 from scripts.chrysalis_dream_rsi import DreamRsiRunner
 from scripts.chrysalis_gates import ChrysalisGates
+from src.ymmg.block_weyl_collar_bound import (
+    BlockWeylCollarCertificate,
+    evaluate_local_block_collar_bulk_certificate,
+)
 from src.ymmg.certified_linalg import (
     certify_rational_rank_crt,
     evaluate_toron_bulk_schur_audit,
@@ -202,6 +206,32 @@ class CoScientistVerifierBridge:
         }
         return len(failures) == 0, failures, details
 
+    def verify_block_weyl_collar(
+        self,
+        hyp: YangMillsHypothesis,
+    ) -> Tuple[bool, List[str], Dict[str, Any]]:
+        """
+        Audits local block-Poincare gap and SU(2) Weyl collar bound (YM-102),
+        confirming L-uniform local block contraction while verifying that the
+        global commuting toron fiber remains honestly open (NEG-YM-102).
+        """
+        cert = evaluate_local_block_collar_bulk_certificate()
+        failures: List[str] = []
+        if not cert.is_certified:
+            failures.append(f"BLOCK_WEYL_COLLAR_FAILED: {cert.failure_reason}")
+
+        details = {
+            "local_poincare_gap": str(cert.local_poincare_gap),
+            "weyl_collar_bound": str(cert.weyl_collar_bound),
+            "local_bulk_nonabelian_residual": str(cert.local_bulk_nonabelian_residual),
+            "local_block_total_weight": str(cert.local_block_total_weight),
+            "local_block_uniform_in_L": cert.local_block_uniform_in_L,
+            "global_commuting_fiber_closed": cert.global_commuting_fiber_closed,
+            "verification_scope": cert.verification_scope,
+            "is_certified": cert.is_certified,
+        }
+        return cert.is_certified, failures, details
+
     def verify_lean_step(
         self,
         hyp: YangMillsHypothesis,
@@ -286,6 +316,10 @@ class CoScientistVerifierBridge:
         if not linalg_ok:
             failures.extend(linalg_failures)
 
+        block_ok, block_failures, block_details = self.verify_block_weyl_collar(hyp)
+        if not block_ok:
+            failures.extend(block_failures)
+
         lean_res: Dict[str, Any]
         if enable_lean:
             lean_res = self.verify_lean_step(hyp)
@@ -304,7 +338,7 @@ class CoScientistVerifierBridge:
         # A FINITE_DIMENSIONAL_MATRIX_AUDIT or fixed-L rational certificate can validate
         # a bounded single-block RG lemma (e.g. HYP-YM-TWIST-HOLONOMY-v1-HYBRID), but is strictly
         # barred from closing asymptotic edges (E-THERMO, E-LATTICE-CONT, E-CROSSOVER) without
-        # an accompanying uniform-in-L analytic certificate.
+        # an accompanying uniform-in-L analytic certificate and closed global fiber.
         asymptotic_edges = {"E-THERMO", "E-LATTICE-CONT", "E-CROSSOVER"}
         claimed_edge = hyp.rational_parameters.get("target_edge") or hyp.rational_parameters.get("claimed_edge")
         claim_continuum = hyp.rational_parameters.get("claim_total_continuum_closure", Fraction(0))
@@ -323,14 +357,15 @@ class CoScientistVerifierBridge:
                 claims_asymptotic = True
 
         uniform_in_L_ok = bool(linalg_details.get("uniform_in_L_gap", False))
+        global_fiber_closed = bool(block_details.get("global_commuting_fiber_closed", False))
 
-        if (claims_asymptotic or claim_continuum != Fraction(0)) and not uniform_in_L_ok:
+        if (claims_asymptotic or claim_continuum != Fraction(0)) and (not uniform_in_L_ok or not global_fiber_closed):
             failures.append(
                 "ASYMPTOTIC_EDGE_UNAUTHORIZED_FROM_FINITE_AUDIT: "
                 "FINITE_DIMENSIONAL_MATRIX_AUDIT or fixed-L rational certificate can validate "
                 "a bounded single-block RG lemma (e.g. HYP-YM-TWIST-HOLONOMY-v1-HYBRID), but is strictly "
                 "barred from closing asymptotic edges (E-THERMO, E-LATTICE-CONT, E-CROSSOVER) "
-                "without an accompanying uniform-in-L analytic certificate."
+                "without an accompanying uniform-in-L analytic certificate and closed global commuting fiber."
             )
 
         all_passed = (
@@ -339,6 +374,7 @@ class CoScientistVerifierBridge:
             and dream_ok
             and gates_ok
             and linalg_ok
+            and block_ok
             and (lean_ok if require_lean else True)
         )
 
@@ -354,6 +390,8 @@ class CoScientistVerifierBridge:
             "gate_details": gate_details,
             "certified_linalg_ok": linalg_ok,
             "certified_linalg_details": linalg_details,
+            "block_weyl_collar_ok": block_ok,
+            "block_weyl_collar_details": block_details,
             "lean_ok": lean_ok,
             "lean_status": lean_status,
             "lean_res": lean_res,

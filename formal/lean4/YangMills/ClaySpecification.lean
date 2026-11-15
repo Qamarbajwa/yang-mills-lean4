@@ -21,6 +21,10 @@ as articulated by Arthur Jaffe and Edward Witten (2000, 2006).
 Under ROS v1.0 and Project Invariant INV-001:
 No proof of the Clay Millennium Problem exists or is claimed here. This file formalizes the
 TARGET SPECIFICATION, not a solution.
+
+## Legacy Notice
+`ClaySpecification.lean` is a legacy structural specification interface superseded by the
+axiom-free formalization in `formal/yang_mills_blueprint/`.
 -/
 
 namespace YangMills

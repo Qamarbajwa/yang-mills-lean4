@@ -1,7 +1,7 @@
 # NEXT ACTION
 
 ## Current primary action
-`YM-101 ACCEPTED_WITH_LIMITATIONS; State Revision 160; 708 tests passing; P3 OPEN; CLAY_PROBLEM OPEN_AND_UNSOLVED; YM-016 BLOCKED`
+`YM-102 ACCEPTED_WITH_LIMITATIONS; State Revision 161; 713 tests passing; P3 OPEN; CLAY_PROBLEM OPEN_AND_UNSOLVED; YM-016 BLOCKED`
 
 ## Scope
 - `YM-011` is `SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_UV_SCOPE)`.
@@ -249,6 +249,15 @@ Task YM-101 ACCEPTED_WITH_LIMITATIONS under State Revision 160.
 - **Non-Perturbative Obstruction Isolation (NEG-YM-101):** On periodic $T^4$, flat Cartan toron zero-modes contribute unsuppressed moduli volume $w_{\mathrm{toron\_vol}} = 1 > \Delta_{\mathrm{all\_orders\_margin}}$, strictly blocking naive continuation across Edge `E-CROSSOVER`.
 - **Finite-vs-Asymptotic Separation:** All certificate receipts carry `verification_scope = "FINITE_DIMENSIONAL_MATRIX_AUDIT"` and are barred from closing asymptotic continuum edges (`E-THERMO`, `E-LATTICE-CONT`, `E-CROSSOVER`) without uniform-in-$L$ analytic certificates.
 - **Epistemic Invariants:** 708 tests passing; Edge `E-CROSSOVER` remains `OPEN_AND_UNSOLVED`; `clay_problem: OPEN_AND_UNSOLVED`; `goal_complete: false`; `YM-016 BLOCKED`.
+
+
+## Accepted bounded YM-102 — State Revision 161
+
+Task YM-102 ACCEPTED_WITH_LIMITATIONS under State Revision 161.
+- **Scale-Uniform Local Block Contraction (Lemma YM-102F):** On local RG blocks of side $b = 2$, $\lambda_{\min}^{\mathrm{block}} = 4$ independent of $L$. Around reducible central elements $\theta \in \{0, \pi\}$, normalized $SU(2)$ Weyl collar volume satisfies $w_{\mathrm{weyl\_collar}}(1/5) = 452/133125 < \frac{1}{5} \Delta_{\mathrm{all\_orders\_margin}}$. Combined local block weight $w_{\mathrm{local\_block\_total}} = 116939/10916250 < \Delta_{\mathrm{all\_orders\_margin}}$, certifying $L$-uniform local block contraction. Machine-checked in Lean 4 without custom axioms.
+- **Non-Perturbative Obstruction Isolation (NEG-YM-102):** The 3D global commuting toron moduli fiber $\mathcal{M}_{\mathrm{toron}} \cong (S^1)^3/\mathbb{Z}_2$ carries vanishing classical plaquette curvature on $[\delta, \pi - \delta]^3$. Under periodic boundary conditions, closing `E-CROSSOVER` requires a uniform spectral gap bound on Lüscher's effective toron Hamiltonian across this fiber (`global_commuting_fiber_closed = False`).
+- **Epistemic Invariants:** 713 deterministic unit tests passing; Edge `E-CROSSOVER` remains `OPEN_AND_UNSOLVED`; `clay_problem: OPEN_AND_UNSOLVED`; `goal_complete: false`; `YM-016 BLOCKED`.
+
 
 
 
