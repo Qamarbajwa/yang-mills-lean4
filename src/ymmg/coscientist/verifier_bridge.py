@@ -51,6 +51,7 @@ class VerificationBundleReport:
     evidence_digest: str
     details: Dict[str, Any] = field(default_factory=dict)
     failures: List[str] = field(default_factory=list)
+    verification_scope: str = "FINITE_DIMENSIONAL_MATRIX_AUDIT"
 
 
 class CoScientistVerifierBridge:
@@ -114,7 +115,11 @@ class CoScientistVerifierBridge:
         """
         Replays candidate rational parameters across all historical failure cases in NEGATIVE_EVIDENCE_REGISTER.md.
         """
-        result = self.dream_runner.replay_candidate_parameters(dict(hyp.rational_parameters))
+        numeric_params = {
+            k: v for k, v in hyp.rational_parameters.items()
+            if isinstance(v, (int, Fraction))
+        }
+        result = self.dream_runner.replay_candidate_parameters(numeric_params)
         return (
             result.passed,
             result.regressions,
@@ -135,7 +140,7 @@ class CoScientistVerifierBridge:
         bounds_for_policy: Dict[str, Any] = {
             k: v
             for k, v in hyp.rational_parameters.items()
-            if k != "claim_total_continuum_closure"
+            if k != "claim_total_continuum_closure" and isinstance(v, (int, Fraction))
         }
         if not bounds_for_policy:
             return False, ["No positive rational certificate bounds supplied."], {}
@@ -295,11 +300,52 @@ class CoScientistVerifierBridge:
             if require_lean:
                 failures.append("LEAN_REQUIRED_BUT_DISABLED")
 
-        all_passed = rational_ok and dream_ok and gates_ok and linalg_ok and (lean_ok if require_lean else True)
+        # Finite-vs-Asymptotic Separation Invariant:
+        # A FINITE_DIMENSIONAL_MATRIX_AUDIT or fixed-L rational certificate can validate
+        # a bounded single-block RG lemma (e.g. HYP-YM-TWIST-HOLONOMY-v1-HYBRID), but is strictly
+        # barred from closing asymptotic edges (E-THERMO, E-LATTICE-CONT, E-CROSSOVER) without
+        # an accompanying uniform-in-L analytic certificate.
+        asymptotic_edges = {"E-THERMO", "E-LATTICE-CONT", "E-CROSSOVER"}
+        claimed_edge = hyp.rational_parameters.get("target_edge") or hyp.rational_parameters.get("claimed_edge")
+        claim_continuum = hyp.rational_parameters.get("claim_total_continuum_closure", Fraction(0))
+
+        claims_asymptotic = False
+        if claimed_edge in asymptotic_edges:
+            claims_asymptotic = True
+        if str(hyp.goal_id).strip() in asymptotic_edges:
+            claims_asymptotic = True
+        for pred in hyp.predictions:
+            for edge in asymptotic_edges:
+                if f"close {edge}" in pred.lower() or f"closes {edge}" in pred.lower() or f"closure of {edge}" in pred.lower():
+                    claims_asymptotic = True
+        for edge in asymptotic_edges:
+            if f"closes {edge}" in hyp.statement.lower() or f"closing {edge}" in hyp.statement.lower() or f"closed {edge}" in hyp.statement.lower():
+                claims_asymptotic = True
+
+        uniform_in_L_ok = bool(linalg_details.get("uniform_in_L_gap", False))
+
+        if (claims_asymptotic or claim_continuum != Fraction(0)) and not uniform_in_L_ok:
+            failures.append(
+                "ASYMPTOTIC_EDGE_UNAUTHORIZED_FROM_FINITE_AUDIT: "
+                "FINITE_DIMENSIONAL_MATRIX_AUDIT or fixed-L rational certificate can validate "
+                "a bounded single-block RG lemma (e.g. HYP-YM-TWIST-HOLONOMY-v1-HYBRID), but is strictly "
+                "barred from closing asymptotic edges (E-THERMO, E-LATTICE-CONT, E-CROSSOVER) "
+                "without an accompanying uniform-in-L analytic certificate."
+            )
+
+        all_passed = (
+            (len(failures) == 0)
+            and rational_ok
+            and dream_ok
+            and gates_ok
+            and linalg_ok
+            and (lean_ok if require_lean else True)
+        )
 
         evidence_payload = {
             "hypothesis_id": hyp.hypothesis_id,
             "content_digest": hyp.content_digest,
+            "verification_scope": "FINITE_DIMENSIONAL_MATRIX_AUDIT",
             "rational_ok": rational_ok,
             "rational_details": rational_details,
             "dream_rsi_ok": dream_ok,
@@ -328,6 +374,7 @@ class CoScientistVerifierBridge:
             evidence_digest=evidence_digest,
             details=evidence_payload,
             failures=failures,
+            verification_scope="FINITE_DIMENSIONAL_MATRIX_AUDIT",
         )
 
     def build_verification_receipt(
@@ -359,5 +406,6 @@ class CoScientistVerifierBridge:
             protected_suite_passed=True,
             semantic_review_passed=semantic_review_passed,
             verifier_authority_bound=True,
+            verification_scope=report.verification_scope,
         )
         return receipt, report

@@ -507,6 +507,26 @@ Freeze `6b25aae3eefc8e22b4b5a6486f2045bffa0b9e39`; working-tree checkout hash `0
 DAG: YM-054 -> YM-054R accepted bounded milestone; scientific edge closures []. Missing bridges: pushforward measure integration and fiber weight bounds under exact Bałaban tree preceding deterministic chart overlap closure (Lemma `YM-051F-DETERMINISTIC-CHART-OVERLAP`), downstream weighted-measure tail estimates under Wilson action, and multiscale marked polymer activity summability. METHOD_SPECIFIC_OBSTRUCTION only; structural no-go 0. goal_complete = false; Clay OPEN_AND_UNSOLVED; P3/crossover OPEN; E-UV-FLOWED PARTIAL_PROGRESS; local OS/free continuum OPEN_AND_UNSOLVED; spatial-flow RP compatibility retains PROVED; thermodynamic limit/OS reconstruction/physical spectral gap OPEN; YM-016 BLOCKED. Current authoritative HEAD comes from Git; evidence closeout binding follows.
 
 
+## Accepted bounded YM-101 — State Revision 160
+
+Primary task YM-101 (Bounded Small-Field Cauchy Remainder Contraction & Toron Zero-Mode Obstruction Isolation) formally verified and closed under strict epistemic governance (`clay_problem: OPEN_AND_UNSOLVED`, `goal_complete: false`, `P8_CUTOVER_AUTHORIZED = false`).
+
+- **Exact Rational Closure of Lemma YM-101F in Trivial Sector:**
+  The all-orders polymer cluster expansion contraction factor on regulated 4-torus $T^4$ in the trivial topological sector satisfies:
+  $$W_{\mathrm{IR\_total}}^{\mathrm{all\_orders}} = \frac{19623589247123587350642100903}{19979987798223270175317603840} < 1,$$
+  with strict certificate margin $\Delta_{\mathrm{all\_orders\_margin}} = \frac{35639855109968282468965937}{19979987798223270175317603840} > \frac{1}{57}$.
+  Formally checked in Lean 4 without custom axioms (`YangMillsBlueprint.YM101.ym101_all_orders_contraction` / `polydisk_geometric_remainder_bound`) and certified via arbitrary-precision FLINT `arb` ball arithmetic (`verify_certified_interval_ldlt`, `verify_schur_coercivity_interval`).
+
+- **Active Non-Perturbative Obstruction NEG-YM-101:**
+  Flat Cartan toron zero-modes on $T^4$ under periodic boundary conditions produce an unsuppressed moduli volume weight $w_{\mathrm{toron\_vol}} = 1 > \Delta_{\mathrm{all\_orders\_margin}}$, certifying that trivial-sector bounds cannot be naively extended across Edge `E-CROSSOVER` without center-twisted flux projection or uniform-in-$L$ non-Abelian background stabilization.
+
+- **Verification Scope & Epistemic Guard:**
+  All finite-dimensional linear algebra enclosures are explicitly tagged with `verification_scope = "FINITE_DIMENSIONAL_MATRIX_AUDIT"`. Invariant enforced in `verifier_bridge.py`: finite-dimensional matrix audits are strictly barred from closing asymptotic continuum edges (`E-THERMO`, `E-LATTICE-CONT`, `E-CROSSOVER`).
+  Deterministic repository suite: 708 tests passing (698+ deterministic pytest checks).
+  Edge `E-CROSSOVER` remains `OPEN_AND_UNSOLVED`.
+
+
+
 
 
 

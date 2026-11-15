@@ -1,14 +1,17 @@
 /-
   YangMillsBlueprint.MissingBridgeInterfaces
   ==========================================
-  Part II of the Two-Part Axiom-Free Proof Architecture (modeled on
-  ClassicalAnalyticInterface / UniversalClayHodgeInterface):
-  - ZERO `sorry`
-  - ZERO custom `axiom` declarations
-  - Every remaining unproved Clay Millennium bridge obligation from
-    `literature/OPEN_EDGE_REGISTER.md` is explicitly typed as a field of
-    `ClassicalYangMillsBridgeInterface`, cleanly separating verified algebraic /
-    finite-step theorems (Part I) from conditional continuum closure (Part II).
+  Specification checklist of open analytic obligations separating Part I
+  from continuum constructive Yang-Mills closure:
+  - Edge E-CROSSOVER (YM-059F, YM-060F, YM-101F): Non-perturbative toron zero-mode projection.
+  - Edge E-LATTICE-CONT: Uniform non-perturbative RG continuum step (a -> 0).
+  - Edge E-THERMO: Uniform thermodynamic limit (L -> infinity) at fixed spectral gap.
+  - Edges E-CONT-SCHWINGER & OS0..OS4: Temperedness, Euclidean symmetry, reflection positivity, clustering.
+  - Edge E-NONTRIV-WITNESS: Non-trivial scattering / non-Gaussianity witness.
+  - Edge E-GROUP-GEN: Extension across all compact simple Lie groups.
+
+  NOTE: This file defines a typed specification checklist and internal
+  dependency-completeness check. It is NOT a mathematical proof of the Clay problem.
 -/
 import YangMillsBlueprint.BasicTypes
 
@@ -30,8 +33,11 @@ structure OpenBridgeEdge where
   status : BridgeEdgeStatus
   deriving Repr
 
-/-- Typed interface isolating every open mathematical obligation separating Part I from Clay closure. -/
-structure ClassicalYangMillsBridgeInterface where
+/--
+  Typed specification checklist isolating every open analytic obligation
+  separating finite/algebraic theorems from continuum constructive QFT.
+-/
+structure ContinuumTransferObligations where
   /-- Edge E-CROSSOVER (YM-059F, YM-060F, YM-101F): Uniform IR toron projection below 17838/1000000 margin. -/
   e_crossover_toron_projection : Prop
   /-- Edge E-LATTICE-CONT: Uniform non-perturbative RG step across crossover to continuum limit a -> 0. -/
@@ -71,8 +77,11 @@ structure ClassicalYangMillsBridgeInterface where
     e_group_gen_sun →
     clay_existence_and_mass_gap
 
-/-- Explicit witness bundle packing proofs of all fields of `ClassicalYangMillsBridgeInterface`. -/
-structure BridgeAssumptions (I : ClassicalYangMillsBridgeInterface) : Prop where
+/-- Backwards-compatible alias for specification interface. -/
+abbrev ClassicalYangMillsBridgeInterface := ContinuumTransferObligations
+
+/-- Explicit witness bundle packing proofs of all fields of `ContinuumTransferObligations`. -/
+structure BridgeAssumptions (I : ContinuumTransferObligations) : Prop where
   h_cross : I.e_crossover_toron_projection
   h_cont : I.e_lattice_cont_rg_step
   h_thermo : I.e_thermo_infinite_volume
@@ -86,18 +95,23 @@ structure BridgeAssumptions (I : ClassicalYangMillsBridgeInterface) : Prop where
   h_group : I.e_group_gen_sun
 
 /--
-  Theorem (Part II Conditional Clay Closure):
-  Purely constructive, zero custom axioms (`axioms: []`), deriving Clay Millennium
-  closure ONLY conditionally on explicit `BridgeAssumptions I`.
+  Internal dependency-completeness check:
+  Purely constructive, zero custom axioms (`axioms: []`), checking that the
+  target continuum properties follow IF all explicit transfer obligations in
+  `BridgeAssumptions I` are satisfied.
+  This is an internal specification check, NOT an independent mathematical proof.
 -/
-theorem conditional_clay_mass_gap_of_bridges
-    (I : ClassicalYangMillsBridgeInterface)
+theorem check_continuum_obligations_deduction
+    (I : ContinuumTransferObligations)
     (h : BridgeAssumptions I) :
     I.clay_existence_and_mass_gap :=
   I.os_reconstruction_implies_clay
     h.h_cross h.h_cont h.h_thermo h.h_dist
     h.h_os0 h.h_os1 h.h_os2 h.h_os3 h.h_os4
     h.h_nontriv h.h_group
+
+/-- Backwards-compatible alias for the dependency-completeness check. -/
+abbrev conditional_clay_mass_gap_of_bridges := @check_continuum_obligations_deduction
 
 /-- Canonical remaining open edges tracked from `literature/OPEN_EDGE_REGISTER.md`. -/
 def openClayBridgeEdges : List OpenBridgeEdge :=

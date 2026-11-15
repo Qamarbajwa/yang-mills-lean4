@@ -80,6 +80,7 @@ class VerificationReceipt:
     protected_suite_passed: bool
     semantic_review_passed: bool
     verifier_authority_bound: bool
+    verification_scope: str = "FINITE_DIMENSIONAL_MATRIX_AUDIT"
 
 
 def digest(text: str) -> str:

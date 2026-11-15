@@ -66,8 +66,8 @@ def leviUnbrokenBulkModes (d N S : Nat) : Nat :=
 /-- Broken off-diagonal Levi roots with nonzero commutator gaps: d * (S - k). -/
 def leviBrokenModes (d S k : Nat) : Nat := d * (S - k)
 
-/-- Theorem (Part I): Exact Levi-stratum dimension conservation on T^d for SU(N). -/
-theorem levi_stratum_mode_conservation
+/-- Theorem: Mode count partition identity for block decompositions on T^d. -/
+theorem block_mode_dimension_additivity
     (d N S k : Nat)
     (hd : 1 ≤ d) (hk : 1 ≤ k) (hkS : k ≤ S) (hSN : S ≤ N * N) :
     toronModuliModes d k + leviUnbrokenBulkModes d N S + leviBrokenModes d S k =
@@ -88,6 +88,9 @@ theorem levi_stratum_mode_conservation
     _ = d * ((k - 1) + (N * N - S) + (S - k)) := by rw [← Nat.mul_add]
     _ = d * (N * N - 1) := by rw [hpart]
 
+/-- Backwards-compatible alias for the block mode dimension additivity theorem. -/
+abbrev levi_stratum_mode_conservation := @block_mode_dimension_additivity
+
 /-- Two-block quadratic form Q(z_b, z_c) = a_cc * z_c^2 - 2 * a_cb * z_c * z_b + a_bb * z_b^2. -/
 def twoBlockQuadForm (a_bb a_cb a_cc z_b z_c : Int) : Int :=
   a_cc * (z_c * z_c) - 2 * a_cb * z_c * z_b + a_bb * (z_b * z_b)
@@ -97,12 +100,13 @@ def twoBlockSchurDet (a_bb a_cb a_cc : Int) : Int :=
   a_cc * a_bb - a_cb * a_cb
 
 /--
-  Theorem (Quadratic-Residual Schur Congruence Identity, Part I):
-  Multiplied by the bulk block pivot `a_bb`, the full 2-block quadratic form splits
-  into the Schur-complement energy plus a squared off-diagonal residual:
+  Theorem (Schur Complement Quadratic Identity):
+  Exact algebraic completion of the square for 2x2 block forms:
+  multiplied by the pivot `a_bb`, the form splits into the Schur-complement
+  energy plus a squared off-diagonal residual:
     delta * z_c^2 + (a_bb * z_b - a_cb * z_c)^2 = a_bb * Q(z_b, z_c).
 -/
-theorem schur_quadratic_residual_identity (a_bb a_cb a_cc z_b z_c : Int) :
+theorem schur_complement_quadratic_identity (a_bb a_cb a_cc z_b z_c : Int) :
     twoBlockSchurDet a_bb a_cb a_cc * (z_c * z_c) +
         (a_bb * z_b - a_cb * z_c) * (a_bb * z_b - a_cb * z_c) =
       a_bb * twoBlockQuadForm a_bb a_cb a_cc z_b z_c := by
@@ -130,6 +134,9 @@ theorem schur_quadratic_residual_identity (a_bb a_cb a_cc z_b z_c : Int) :
   simp only [Int.sub_mul, Int.mul_sub, Int.mul_add]
   rw [h1, hcross1, hcross2, hsqb, hsqc, h2rhs]
   omega
+
+/-- Backwards-compatible alias for the Schur complement quadratic identity. -/
+abbrev schur_quadratic_residual_identity := @schur_complement_quadratic_identity
 
 private theorem int_sq_nonneg (x : Int) : 0 ≤ x * x := by
   rcases Int.le_total 0 x with hx | hx

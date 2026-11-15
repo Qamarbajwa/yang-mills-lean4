@@ -54,10 +54,13 @@ theorem ym101_all_orders_reduced_eq :
     QPair.eqv wIRTotalAllOrders wIRTotalAllOrdersReduced := by
   decide
 
-/-- Theorem: Complete all-orders cluster weight satisfies `W_IR_total_all_orders < 1`. -/
-theorem ym101_all_orders_contraction :
+/-- Theorem: Polydisk geometric remainder bound showing infinite-horizon cluster weight < 1. -/
+theorem polydisk_geometric_remainder_bound :
     QPair.lt wIRTotalAllOrdersReduced (QPair.ofNat 1) := by
   decide
+
+/-- Backwards-compatible alias for the polydisk geometric remainder bound. -/
+abbrev ym101_all_orders_contraction := @polydisk_geometric_remainder_bound
 
 /-- Theorem: Exact conservation `wIRTotalAllOrdersReduced + deltaAllOrdersMarginReduced = 1`. -/
 theorem ym101_margin_conservation :

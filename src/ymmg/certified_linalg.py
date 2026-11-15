@@ -97,6 +97,7 @@ class CRTRankCertificate:
     verified_exact_mk_zero: bool
     verified_rank_nullity: bool
     failure_reason: Optional[str] = None
+    verification_scope: str = "FINITE_DIMENSIONAL_MATRIX_AUDIT"
 
 
 def wang_rational_reconstruct(residue: int, modulus: int) -> Optional[Fraction]:
@@ -355,6 +356,7 @@ class CertifiedLDLTCertificate:
     backend: str
     dps: int
     failure_reason: Optional[str] = None
+    verification_scope: str = "FINITE_DIMENSIONAL_MATRIX_AUDIT"
 
 
 @dataclass(frozen=True)
@@ -371,6 +373,7 @@ class CertifiedSchurCertificate:
     schur_pivots_str: Tuple[str, ...]
     dps: int
     failure_reason: Optional[str] = None
+    verification_scope: str = "FINITE_DIMENSIONAL_MATRIX_AUDIT"
 
 
 def verify_certified_interval_ldlt(
@@ -686,6 +689,7 @@ class ToronBulkSchurAudit:
     ir_barrier_isolated: bool
     uniform_in_L_gap: bool
     epistemic_status: str
+    verification_scope: str = "FINITE_DIMENSIONAL_MATRIX_AUDIT"
 
 
 def evaluate_toron_bulk_schur_audit(

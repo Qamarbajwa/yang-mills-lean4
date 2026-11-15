@@ -2,7 +2,7 @@
   "manifest_version": "1.0.0",
   "key_id": "chrysalis-local-hmac-2026",
   "algorithm": "HMAC-SHA256",
-  "generated_at": "2026-11-15T09:46:51.079833+00:00",
+  "generated_at": "2026-11-15T16:45:39.333956+00:00",
   "total_artifacts": 72,
   "files": {
     "governance/envelopes/YM-002E.yaml": {
@@ -91,9 +91,9 @@
       "size_bytes": 6364
     },
     "paper/main.tex": {
-      "sha256": "47a86fcc3966e627a6f3171e4ffaced885f641a0f351694059d8c27939dfd5eb",
-      "hmac_sha256": "55285b7ef27f518e792752653503933ddae82432b4bc03abbf852cf2206b860d",
-      "size_bytes": 126097
+      "sha256": "58a4d3475d6d00bf069177983b4e4d12c46ef39752a27f56b5c3ca42fd699db8",
+      "hmac_sha256": "41f1b5816bd981ceec6449e0e6c83804b22b8b065c14ad1ba5c406138a587cdd",
+      "size_bytes": 126334
     },
     "tests/test_acceptance_identity_separation.py": {
       "sha256": "d108d4e11466e458ea61629b45138b821715a6909adebf18e7ff6916bd9f7952",
@@ -111,9 +111,9 @@
       "size_bytes": 9780
     },
     "tests/test_certified_linalg_and_lean_blueprint.py": {
-      "sha256": "8b2576b4a02df5c247959da58bb624811a831bd369579f0de2d079a1445fc586",
-      "hmac_sha256": "a365bc5b6f551238728c2e3d4bc6057fb75597301698e65e891374e3ac82d7aa",
-      "size_bytes": 11233
+      "sha256": "0725f7c479a15bdd3b2718a327c8f290cee653f820c0f673f5260801a8d4d9ea",
+      "hmac_sha256": "e91e8c27675064150d56d33d45f7f72ee602a81f765351a95af1b65752d623d6",
+      "size_bytes": 13060
     },
     "tests/test_chrysalis_governance.py": {
       "sha256": "9e0ea4d2c2da103744dca4166e70f4fb2ced31cc72a85856d780ad5951ac8428",

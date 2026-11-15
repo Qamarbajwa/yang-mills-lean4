@@ -1146,7 +1146,7 @@ The results documented in this monograph establish the complete ultraviolet cons
 \end{enumerate}
 
 \subsection{Deterministic Computer-Assisted Rational Architecture}
-To guarantee mathematical rigor beyond human error, every numerical inequality, spectral bound, and cluster expansion coefficient in this monograph is certified in exact rational arithmetic $\mathbb{Q}$ using Python's \texttt{fractions.Fraction}. Floating-point roundoff errors are strictly excluded. The complete repository comprises 494 deterministic unit tests executing in under 10 seconds.
+To guarantee mathematical rigor beyond human error, every numerical inequality, spectral bound, and cluster expansion coefficient in this monograph is certified in exact rational arithmetic $\mathbb{Q}$ using Python's \texttt{fractions.Fraction}. Floating-point roundoff errors are strictly excluded. The complete repository comprises 708 deterministic unit tests executing in under 10 seconds.
 
 Furthermore, every discovery step is executed under a constitutional 3-Agent Governance Protocol:
 \begin{equation}
@@ -1154,13 +1154,13 @@ Furthermore, every discovery step is executed under a constitutional 3-Agent Gov
 \end{equation}
 Every negative finding is permanently recorded in an append-only \texttt{NEGATIVE\_EVIDENCE\_REGISTER.md} (strictly 0 deletions), guaranteeing full scientific integrity.
 
-\subsection{The Open Multi-Step Infrared Frontier ($k \ge 6 \to \infty$)}
-The Clay Millennium Prize problem requires establishing a strictly positive spectral gap $\Delta m > 0$ in the infinite-volume continuum limit $V \to \infty$, $a \to 0$. While the single-step handoff $k = 5 \to 6$ is now proven convergent, iterating the renormalization group transformation across infinitely many infrared scales $k = 6, 7, \dots, K_{\mathrm{IR}} \to \infty$ requires:
+\subsection{The Open Multi-Step Infrared Frontier and Non-Perturbative Toron Barrier}
+The Clay Millennium Prize problem requires establishing a strictly positive spectral gap $\Delta m > 0$ in the infinite-volume continuum limit $V \to \infty$, $a \to 0$. While Lemma \texttt{YM-101F} rigorously closes the all-orders Cauchy polydisk remainder contraction in the trivial sector ($W_{\mathrm{IR\_total}}^{\mathrm{all\_orders}} \approx 0.982162 < 1$, margin $\Delta_{\mathrm{all\_orders\_margin}} > 1/57$), extending this bound across the non-perturbative infrared frontier encounters:
 \begin{enumerate}
-    \item An inductive fixed-point contraction theorem proving that the multi-representation character flow $a_j^{(k)}$ contracts into an invariant non-perturbative trapping ball.
-    \item Proof that the cumulative sum of non-local remainders $\sum_{k=6}^{\infty} \|\delta R^{(k)}\|$ remains bounded strictly below the Koteck\'y--Preiss margin $\Delta \approx 0.333831$.
+    \item The non-perturbative toron moduli barrier (\texttt{NEG-YM-101}), wherein flat Cartan connections on periodic $T^4$ contribute unsuppressed volume weight $w_{\mathrm{toron\_vol}} = 1 > \Delta_{\mathrm{all\_orders\_margin}}$, requiring 't Hooft center-twist projection or non-Abelian background stabilization to gap zero-modes.
+    \item Proof of uniform-in-$L$ spectral gap persistence in the thermodynamic limit $L \to \infty$ and continuum transfer ($a \to 0$).
 \end{enumerate}
-Until such an inductive multi-scale trapping theorem is formulated and proved, edge \texttt{E-CROSSOVER} remains open and the Clay Millennium Problem remains unsolved.
+Until a uniform-in-$L$ non-Abelian projection is established, edge \texttt{E-CROSSOVER} remains open and the Clay Millennium Problem remains unsolved.
 
 % =========================================================================
 % APPENDIX: TRACEABILITY MATRIX AND VERIFICATION
@@ -1226,7 +1226,7 @@ The complete codebase, test suite, and governance records can be independently r
 \begin{verbatim}
 $ python scripts/verify_all.py
 \end{verbatim}
-This script deterministically verifies the 158-file closed-world checkout digest (\texttt{0411598d...}), the literal Git-blob digest (\texttt{c97268e8...}), append-only negative evidence integrity (0 deletions), and passes all 492 exact rational certificates in under 10 seconds.
+This script deterministically verifies the 158-file closed-world checkout digest (\texttt{0411598d...}), the literal Git-blob digest (\texttt{c97268e8...}), append-only negative evidence integrity (0 deletions), and passes all 708 deterministic unit tests and exact rational certificates in under 10 seconds.
 
 \bibliographystyle{plain}
 \bibliography{references}

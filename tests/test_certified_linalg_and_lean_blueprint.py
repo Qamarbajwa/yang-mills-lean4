@@ -249,3 +249,38 @@ def test_stage3_coscientist_bridge_verifies_blueprint_lean_and_rejects_perturbat
     assert bad_rep.passed is False
     assert bad_rep.rational_ok is False
     assert bad_rep.details["certified_linalg_ok"] is False
+
+
+def test_stage2_scope_tagging_and_asymptotic_separation():
+    # 1. Certificate scope tagging
+    crt = certify_rational_rank_crt([[F(1, 1), F(2, 1)], [F(2, 1), F(4, 1)]])
+    assert crt.verification_scope == "FINITE_DIMENSIONAL_MATRIX_AUDIT"
+
+    ldlt = verify_certified_interval_ldlt([[F(2, 1), F(1, 1)], [F(1, 1), F(2, 1)]])
+    assert ldlt.verification_scope == "FINITE_DIMENSIONAL_MATRIX_AUDIT"
+
+    schur = verify_schur_coercivity_interval([[F(2, 1), F(1, 1)], [F(1, 1), F(2, 1)]], split_index=1)
+    assert schur.verification_scope == "FINITE_DIMENSIONAL_MATRIX_AUDIT"
+
+    audit = evaluate_toron_bulk_schur_audit(L=4, d=4, N=2, twisted=True)
+    assert audit.verification_scope == "FINITE_DIMENSIONAL_MATRIX_AUDIT"
+
+    # 2. Receipt and Report scope tagging
+    gen = YMGenerationAgent()
+    bridge = CoScientistVerifierBridge(root_dir=ROOT)
+    goal = YangMillsCoScientistOrchestrator.default_goal()
+    twist = gen.generate_candidates(goal, run_id="RUN-SCOPE", include_adversarial_flawed=False)[0]
+
+    receipt, report = bridge.build_verification_receipt(twist, enable_lean=False, require_lean=False)
+    assert report.verification_scope == "FINITE_DIMENSIONAL_MATRIX_AUDIT"
+    assert receipt is not None
+    assert receipt.verification_scope == "FINITE_DIMENSIONAL_MATRIX_AUDIT"
+
+    # 3. Hard invariant barring finite-dimensional audit from closing asymptotic edges
+    for edge in ("E-CROSSOVER", "E-THERMO", "E-LATTICE-CONT"):
+        asymp_cand = gen.generate_candidates(goal, run_id="RUN-ASYMP", include_adversarial_flawed=False)[0]
+        asymp_cand.goal_id = edge
+        rep_asymp = bridge.evaluate_candidate(asymp_cand, enable_lean=False, require_lean=False)
+        assert rep_asymp.passed is False
+        assert any("ASYMPTOTIC_EDGE_UNAUTHORIZED_FROM_FINITE_AUDIT" in f for f in rep_asymp.failures)
+
