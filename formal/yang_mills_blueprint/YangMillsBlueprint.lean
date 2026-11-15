@@ -4,3 +4,5 @@ import YangMillsBlueprint.MissingBridgeInterfaces
 import YangMillsBlueprint.MathlibPR_SchurComplementForms
 import YangMillsBlueprint.BlockWeylCollar
 import YangMillsBlueprint.MathlibPR_CubicCollarBounds
+import YangMillsBlueprint.MathlibPR_QuaternionTwistRigidity
+import YangMillsBlueprint.TwistedFluxonRigidity

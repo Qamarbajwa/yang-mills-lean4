@@ -104,3 +104,24 @@ import YangMillsBlueprint
 
 #check MathlibPR.CubicCollar.cubic_collar_eval_lt_decimal_bound
 #print axioms MathlibPR.CubicCollar.cubic_collar_eval_lt_decimal_bound
+
+#check MathlibPR.QuaternionAlgebra.quat_imag_comm_i_j_trivial
+#print axioms MathlibPR.QuaternionAlgebra.quat_imag_comm_i_j_trivial
+
+#check MathlibPR.QuaternionAlgebra.quat_imag_ad_norm_sq_eq
+#print axioms MathlibPR.QuaternionAlgebra.quat_imag_ad_norm_sq_eq
+
+#check MathlibPR.QuaternionAlgebra.quat_imag_ad_spectral_gap
+#print axioms MathlibPR.QuaternionAlgebra.quat_imag_ad_spectral_gap
+
+#check YangMillsBlueprint.TwistedFluxonRigidity.twisted_sector_all_orders_contraction
+#print axioms YangMillsBlueprint.TwistedFluxonRigidity.twisted_sector_all_orders_contraction
+
+#check YangMillsBlueprint.TwistedFluxonRigidity.twisted_residual_margin_gt_one_141th
+#print axioms YangMillsBlueprint.TwistedFluxonRigidity.twisted_residual_margin_gt_one_141th
+
+#check YangMillsBlueprint.TwistedFluxonRigidity.twisted_fluxon_zero_mode_kill
+#print axioms YangMillsBlueprint.TwistedFluxonRigidity.twisted_fluxon_zero_mode_kill
+
+#check YangMillsBlueprint.TwistedFluxonRigidity.twisted_fluxon_adjoint_spectral_gap
+#print axioms YangMillsBlueprint.TwistedFluxonRigidity.twisted_fluxon_adjoint_spectral_gap

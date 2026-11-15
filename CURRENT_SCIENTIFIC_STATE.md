@@ -546,6 +546,37 @@ Primary task YM-102 (Scale-Uniform Local Block-Poincaré & SU(2) Weyl Cubic Coll
   713 deterministic unit tests passing (100% pass rate). Edge `E-CROSSOVER` remains `OPEN_AND_UNSOLVED`.
 
 
+## Accepted bounded YM-103 — State Revision 162
+
+Primary task YM-103 (Quaternion Twist-Eater Centralizer Rigidity, Adjoint Commutator Spectral Gap, and Twisted-Sector Contraction; Thermodynamic Twist-Decoupling Barrier Isolation) formally verified and closed under strict epistemic governance (`clay_problem: OPEN_AND_UNSOLVED`, `goal_complete: false`, `P8_CUTOVER_AUTHORIZED = false`).
+
+- **Orthogonal 't Hooft Twist-Eater Rigidity & Zero-Mode Elimination (Lemma YM-103F):**
+  Under orthogonal 't Hooft boundary conditions with non-zero center flux $z_{12} = -1 \in Z(SU(2))$, the twist-eater generators $P = \mathbf{i} = (0, 1, 0, 0)$ and $Q = \mathbf{j} = (0, 0, 1, 0)$ in $\mathbb{H}(\mathbb{Q})$ satisfy $P^2 = Q^2 = -1$ and anticommute ($P Q + Q P = 0$).
+  The combined adjoint commutator mapping $\mathrm{ad}_P \oplus \mathrm{ad}_Q : \mathfrak{su}(2) \to \mathfrak{su}(2) \oplus \mathfrak{su}(2)$ has exact rank 3 and trivial kernel:
+  $$[P, X] = 0 \land [Q, X] = 0 \implies b = 0 \land c = 0 \land d = 0 \quad \text{for } X = (0, b, c, d) \in \mathfrak{su}(2),$$
+  completely eliminating the continuous flat abelian toron zero-mode fiber: $\dim \mathcal{M}_{\mathrm{toron}}^{\mathrm{twisted}} = 0$ (down from $\dim \mathcal{M}_{\mathrm{toron}}^{\mathrm{periodic}} = 3$).
+  The discrete fluxon adjoint Hessian $H = \mathrm{ad}_P^T \mathrm{ad}_P + \mathrm{ad}_Q^T \mathrm{ad}_Q = \operatorname{diag}(4, 4, 8)$ satisfies an exact spectral gap $\lambda_{\min}(H) = 4$:
+  $$\| [P, X] \|^2 + \| [Q, X] \|^2 = 4b^2 + 4c^2 + 8d^2 \ge 4 (b^2 + c^2 + d^2).$$
+  Formally checked in Lean 4 without custom axioms (`MathlibPR.QuaternionAlgebra.quat_imag_comm_i_j_trivial`, `quat_imag_ad_spectral_gap`, `YangMillsBlueprint.TwistedFluxonRigidity.twisted_fluxon_zero_mode_kill`).
+
+- **Twisted-Sector All-Orders Polymer Contraction:**
+  With zero-modes eliminated in the orthogonal twisted sector, the total infrared polymer weight satisfies:
+  $$W_{\mathrm{IR\_total}}^{\mathrm{twisted}} = W_{\mathrm{IR\_total}}^{\mathrm{all\_orders}} + w_{\mathrm{local\_block\_total}} = \frac{19623589247123587350642100903}{19979987798223270175317603840} + \frac{116939}{10916250} \approx 0.992875 < 1,$$
+  preserving an exact positive residual safety margin:
+  $$\Delta_{\mathrm{twisted\_residual}} = \Delta_{\mathrm{all\_orders\_margin}} - w_{\mathrm{local\_block\_total}} = \frac{1263492593744294019376011106163}{177322391709231522805943734080000} \approx 0.007125 > \frac{1}{141} > 0.$$
+  Formally checked in Lean 4 without custom axioms (`YangMillsBlueprint.TwistedFluxonRigidity.twisted_sector_all_orders_contraction`, `twisted_residual_margin_gt_one_141th`).
+
+- **Isolation of Non-Perturbative Obstruction NEG-YM-103 (Thermodynamic Twist Decoupling):**
+  While the orthogonal twisted sector is uniformly contractive in $L$ (`twisted_sector_contractive_uniform_in_L = True`), translating this bound to the untwisted Osterwalder–Schrader physical vacuum requires proving the exponential suppression of the $\mathbb{Z}_2$ center-vortex free-energy difference:
+  $$|F_{\mathrm{twisted}}(L) - F_{\mathrm{periodic}}(L)| \le C e^{-\sigma_{\mathrm{vortex}} L^2}$$
+  across the intermediate coupling crossover region on Edge `E-CROSSOVER`.
+  Verified with `periodic_twist_decoupling_closed = False` and `verification_scope = "TWISTED_SECTOR_CLOSED_PERIODIC_DECOUPLING_OPEN"`. Invariant enforced in `verifier_bridge.py`: barring unauthorized closure of asymptotic edges (`E-THERMO`, `E-LATTICE-CONT`, `E-CROSSOVER`).
+
+- **Deterministic Repository Suite:**
+  718 deterministic unit tests passing (100% pass rate). Edge `E-CROSSOVER` remains `OPEN_AND_UNSOLVED`.
+
+
+
 
 
 

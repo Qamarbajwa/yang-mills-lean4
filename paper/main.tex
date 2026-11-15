@@ -1144,10 +1144,11 @@ The results documented in this monograph establish the complete ultraviolet cons
     \item Milestone \texttt{YM-100}: Complete 4-species 2-loop infinite-horizon closure across all scales $k \ge 6 \to \infty$ under elliptic regularity suppression ($W_{\mathrm{IR\_total}}^{\mathrm{2loop\_full}} \approx 0.950481 < 1$, margin $\Delta > 1/21$), resolving \texttt{NEG-YM-099}, and the rigorous isolation of the $n \ge 3$ factorial renormalon and Cauchy--Taylor remainder barrier (\texttt{NEG-YM-100}).
     \item Task \texttt{YM-101}: All-orders Cauchy--Taylor polydisk remainder bound ($|R_{\ge 3}^{\mathrm{Cauchy}}| \le 187/7872 \approx 0.023755 < \Delta_{\mathrm{IR\_2loop\_full}}$) and complete non-perturbative all-orders infinite-horizon closure ($W_{\mathrm{IR\_total}}^{\mathrm{all\_orders}} \approx 0.982162 < 1$, margin $\Delta > 1/57$), resolving \texttt{NEG-YM-100}, and the isolation of the Non-Perturbative Toron Moduli Degeneracy and Tunneling Horizon Barrier (\texttt{NEG-YM-101}).
     \item Task \texttt{YM-102}: Scale-uniform local block-Poincar\'e gap ($\lambda_{\min}^{\mathrm{block}} = 4$) and $\SU(2)$ Weyl cubic collar bound ($w_{\mathrm{weyl\_collar}}(1/5) = 452/133125 < \frac{1}{5}\Delta_{\mathrm{all\_orders\_margin}}$), proving $L$-uniform local block contraction ($W_{\mathrm{IR\_all\_orders}} + w_{\mathrm{local\_block\_total}} < 1$), and the rigorous isolation of the residual 3D Global Commuting Toron Moduli Fiber Barrier (\texttt{NEG-YM-102}).
+    \item Task \texttt{YM-103}: Orthogonal 't Hooft twist-eater quaternion centralizer rigidity ($\dim \mathcal{M}_{\mathrm{toron}}^{\mathrm{twisted}} = 0$, adjoint commutator spectral gap $\lambda_{\mathrm{fluxon}} = 4$), twisted-sector all-orders contraction ($W_{\mathrm{IR\_total}}^{\mathrm{twisted}} \approx 0.992875 < 1$, residual margin $\Delta_{\mathrm{twisted\_residual}} > 1/141$), and the rigorous isolation of the Thermodynamic Twist-Decoupling / $\mathbb{Z}_2$ Center-Vortex Surface Tension Barrier (\texttt{NEG-YM-103}).
 \end{enumerate}
 
 \subsection{Deterministic Computer-Assisted Rational Architecture}
-To guarantee mathematical rigor beyond human error, every numerical inequality, spectral bound, and cluster expansion coefficient in this monograph is certified in exact rational arithmetic $\mathbb{Q}$ using Python's \texttt{fractions.Fraction}. Floating-point roundoff errors are strictly excluded. The complete repository comprises 713 deterministic unit tests executing in under 10 seconds.
+To guarantee mathematical rigor beyond human error, every numerical inequality, spectral bound, and cluster expansion coefficient in this monograph is certified in exact rational arithmetic $\mathbb{Q}$ using Python's \texttt{fractions.Fraction}. Floating-point roundoff errors are strictly excluded. The complete repository comprises 718 deterministic unit tests executing in under 10 seconds.
 
 Furthermore, every discovery step is executed under a constitutional 3-Agent Governance Protocol:
 \begin{equation}
@@ -1156,9 +1157,10 @@ Furthermore, every discovery step is executed under a constitutional 3-Agent Gov
 Every negative finding is permanently recorded in an append-only \texttt{NEGATIVE\_EVIDENCE\_REGISTER.md} (strictly 0 deletions), guaranteeing full scientific integrity.
 
 \subsection{The Open Multi-Step Infrared Frontier and Non-Perturbative Toron Barrier}
-The Clay Millennium Prize problem requires establishing a strictly positive spectral gap $\Delta m > 0$ in the infinite-volume continuum limit $V \to \infty$, $a \to 0$. While Lemma \texttt{YM-101F} and Lemma \texttt{YM-102F} rigorously close the all-orders Cauchy polydisk remainder contraction and $L$-uniform local block contraction ($w_{\mathrm{local\_block\_total}} \approx 0.010712 < \Delta_{\mathrm{all\_orders\_margin}}$), extending this bound across the non-perturbative infrared frontier encounters:
+The Clay Millennium Prize problem requires establishing a strictly positive spectral gap $\Delta m > 0$ in the infinite-volume continuum limit $V \to \infty$, $a \to 0$. While Lemma \texttt{YM-101F}, Lemma \texttt{YM-102F}, and Lemma \texttt{YM-103F} rigorously close the all-orders Cauchy polydisk remainder contraction, $L$-uniform local block contraction ($w_{\mathrm{local\_block\_total}} \approx 0.010712 < \Delta_{\mathrm{all\_orders\_margin}}$), and orthogonal 't Hooft twist-eater zero-mode elimination ($\dim \mathcal{M}_{\mathrm{toron}}^{\mathrm{twisted}} = 0$, $W_{\mathrm{IR\_total}}^{\mathrm{twisted}} \approx 0.992875 < 1$, residual margin $> 1/141$), extending this bound across the non-perturbative infrared frontier encounters:
 \begin{enumerate}
-    \item The non-perturbative toron moduli barrier (\texttt{NEG-YM-101}) and global commuting toron fiber (\texttt{NEG-YM-102}), wherein flat Cartan connections on periodic $T^4$ contribute unsuppressed volume weight $w_{\mathrm{toron\_vol}} = 1 > \Delta_{\mathrm{all\_orders\_margin}}$ with vanishing classical plaquette curvature on $[\delta, \pi - \delta]^3$, requiring 't Hooft center-twist projection or non-Abelian background stabilization to gap zero-modes.
+    \item The non-perturbative toron moduli barrier (\texttt{NEG-YM-101}) and global commuting toron fiber (\texttt{NEG-YM-102}) under periodic boundary conditions, wherein flat Cartan connections on periodic $T^4$ contribute unsuppressed volume weight $w_{\mathrm{toron\_vol}} = 1 > \Delta_{\mathrm{all\_orders\_margin}}$ with vanishing classical plaquette curvature on $[\delta, \pi - \delta]^3$.
+    \item The thermodynamic twist-decoupling barrier (\texttt{NEG-YM-103}), wherein transferring the contractive twisted-sector bound to the physical periodic Osterwalder--Schrader vacuum as $L \to \infty$ requires establishing exponential suppression of the $\mathbb{Z}_2$ center-vortex free-energy difference $|F_{\mathrm{twisted}}(L) - F_{\mathrm{periodic}}(L)| \le C e^{-\sigma_{\mathrm{vortex}} L^2}$ across the intermediate coupling crossover region.
     \item Proof of uniform-in-$L$ spectral gap persistence in the thermodynamic limit $L \to \infty$ on L\"uscher's effective toron Hamiltonian and continuum transfer ($a \to 0$).
 \end{enumerate}
 Until a uniform-in-$L$ non-Abelian projection is established, edge \texttt{E-CROSSOVER} remains open and the Clay Millennium Problem remains unsolved.
@@ -1218,6 +1220,7 @@ Until a uniform-in-$L$ non-Abelian projection is established, edge \texttt{E-CRO
 \texttt{YM-100}  & Elliptic 2-Loop Regularity \& 4-Species Horizon Closure & Test 64 & Revision 157 \\
 \texttt{YM-101}  & All-Orders Cauchy--Taylor Polydisk Closure & Test 65 & Revision 161 \\
 \texttt{YM-102}  & Local Block-Poincar\'e \& Weyl Cubic Collar Bounds & Test 66 & Revision 161 \\
+\texttt{YM-103}  & Quaternion Twist-Eater Rigidity \& Sector Contraction & Test 67 & Revision 162 \\
 \bottomrule
 \end{tabular}
 \caption{Traceability matrix mapping proved lemmas to deterministic regression test certificates.}
@@ -1228,7 +1231,7 @@ The complete codebase, test suite, and governance records can be independently r
 \begin{verbatim}
 $ python scripts/verify_all.py
 \end{verbatim}
-This script deterministically verifies the 158-file closed-world checkout digest (\texttt{0411598d...}), the literal Git-blob digest (\texttt{c97268e8...}), append-only negative evidence integrity (0 deletions), and passes all 713 deterministic unit tests and exact rational certificates in under 10 seconds.
+This script deterministically verifies the 158-file closed-world checkout digest (\texttt{0411598d...}), the literal Git-blob digest (\texttt{c97268e8...}), append-only negative evidence integrity (0 deletions), and passes all 718 deterministic unit tests and exact rational certificates in under 10 seconds.
 
 \bibliographystyle{plain}
 \bibliography{references}

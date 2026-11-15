@@ -30,6 +30,10 @@ from src.ymmg.block_weyl_collar_bound import (
     BlockWeylCollarCertificate,
     evaluate_local_block_collar_bulk_certificate,
 )
+from src.ymmg.twisted_fluxon_rigidity import (
+    TwistedFluxonRigidityCertificate,
+    evaluate_twisted_fluxon_sector_certificate,
+)
 from src.ymmg.certified_linalg import (
     certify_rational_rank_crt,
     evaluate_toron_bulk_schur_audit,
@@ -232,6 +236,37 @@ class CoScientistVerifierBridge:
         }
         return cert.is_certified, failures, details
 
+    def verify_twisted_fluxon_rigidity(
+        self,
+        hyp: YangMillsHypothesis,
+    ) -> Tuple[bool, List[str], Dict[str, Any]]:
+        """
+        Audits quaternion twist-eater centralizer rigidity, zero-mode elimination,
+        and twisted-sector all-orders contraction (YM-103), while confirming that
+        thermodynamic twist decoupling remains open (NEG-YM-103).
+        """
+        cert = evaluate_twisted_fluxon_sector_certificate()
+        failures: List[str] = []
+        if not cert.is_certified:
+            failures.append(f"TWISTED_FLUXON_RIGIDITY_FAILED: {cert.failure_reason}")
+
+        details = {
+            "w_ir_all_orders": str(cert.w_ir_all_orders),
+            "w_local_block_total": str(cert.w_local_block_total),
+            "w_ir_twisted_total": str(cert.w_ir_twisted_total),
+            "delta_all_orders_margin": str(cert.delta_all_orders_margin),
+            "delta_twisted_residual_margin": str(cert.delta_twisted_residual_margin),
+            "twisted_toron_zero_mode_dim": cert.twisted_toron_zero_mode_dim,
+            "periodic_toron_zero_mode_dim": cert.periodic_toron_zero_mode_dim,
+            "fluxon_spectral_gap": str(cert.fluxon_spectral_gap),
+            "twisted_sector_contractive_uniform_in_L": cert.twisted_sector_contractive_uniform_in_L,
+            "periodic_twist_decoupling_closed": cert.periodic_twist_decoupling_closed,
+            "verification_scope": cert.verification_scope,
+            "barrier_id": cert.barrier_id,
+            "is_certified": cert.is_certified,
+        }
+        return cert.is_certified, failures, details
+
     def verify_lean_step(
         self,
         hyp: YangMillsHypothesis,
@@ -320,6 +355,10 @@ class CoScientistVerifierBridge:
         if not block_ok:
             failures.extend(block_failures)
 
+        twisted_ok, twisted_failures, twisted_details = self.verify_twisted_fluxon_rigidity(hyp)
+        if not twisted_ok:
+            failures.extend(twisted_failures)
+
         lean_res: Dict[str, Any]
         if enable_lean:
             lean_res = self.verify_lean_step(hyp)
@@ -358,14 +397,18 @@ class CoScientistVerifierBridge:
 
         uniform_in_L_ok = bool(linalg_details.get("uniform_in_L_gap", False))
         global_fiber_closed = bool(block_details.get("global_commuting_fiber_closed", False))
+        periodic_decoupling_closed = bool(twisted_details.get("periodic_twist_decoupling_closed", False))
 
-        if (claims_asymptotic or claim_continuum != Fraction(0)) and (not uniform_in_L_ok or not global_fiber_closed):
+        if (claims_asymptotic or claim_continuum != Fraction(0)) and (
+            not uniform_in_L_ok or not global_fiber_closed or not periodic_decoupling_closed
+        ):
             failures.append(
                 "ASYMPTOTIC_EDGE_UNAUTHORIZED_FROM_FINITE_AUDIT: "
                 "FINITE_DIMENSIONAL_MATRIX_AUDIT or fixed-L rational certificate can validate "
                 "a bounded single-block RG lemma (e.g. HYP-YM-TWIST-HOLONOMY-v1-HYBRID), but is strictly "
                 "barred from closing asymptotic edges (E-THERMO, E-LATTICE-CONT, E-CROSSOVER) "
-                "without an accompanying uniform-in-L analytic certificate and closed global commuting fiber."
+                "without an accompanying uniform-in-L analytic certificate, closed global commuting fiber, "
+                "and proven periodic twist decoupling."
             )
 
         all_passed = (
@@ -375,6 +418,7 @@ class CoScientistVerifierBridge:
             and gates_ok
             and linalg_ok
             and block_ok
+            and twisted_ok
             and (lean_ok if require_lean else True)
         )
 
@@ -392,6 +436,8 @@ class CoScientistVerifierBridge:
             "certified_linalg_details": linalg_details,
             "block_weyl_collar_ok": block_ok,
             "block_weyl_collar_details": block_details,
+            "twisted_fluxon_rigidity_ok": twisted_ok,
+            "twisted_fluxon_rigidity_details": twisted_details,
             "lean_ok": lean_ok,
             "lean_status": lean_status,
             "lean_res": lean_res,
