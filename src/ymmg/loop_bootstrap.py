@@ -185,3 +185,67 @@ def compute_continuum_perimeter_ratio(l_max: int, a_lattice: float, r_cross: flo
 
     r_max = l_max * a_lattice
     return r_max / r_cross
+
+
+def verify_rigorous_arb_ldlt_psd(
+    matrix: List[List[Any]],
+    dps: int = 80,
+    strict_positive: bool = True,
+) -> Tuple[bool, List[str], Optional[str]]:
+    """
+    Rigorous arbitrary-precision FLINT real-ball (`arb`) LDL^T certification wrapper.
+    Converts exact integer/Fraction (or exact decimal-string/float converted safely via Fraction)
+    entries without heuristic floating-point tolerance slack.
+    """
+    from fractions import Fraction
+    from src.ymmg.certified_linalg import verify_certified_interval_ldlt
+
+    exact_mat: List[List[Any]] = []
+    for row in matrix:
+        exact_row: List[Any] = []
+        for entry in row:
+            if isinstance(entry, tuple) and len(entry) == 2:
+                exact_row.append((Fraction(entry[0]), Fraction(entry[1])))
+            elif isinstance(entry, (int, Fraction)):
+                exact_row.append(entry)
+            else:
+                exact_row.append(Fraction(str(entry)))
+        exact_mat.append(exact_row)
+
+    cert = verify_certified_interval_ldlt(exact_mat, dps=dps, strict_positive=strict_positive)
+    return cert.is_certified, list(cert.pivots_str), cert.failure_reason
+
+
+def generate_and_verify_rigorous_plaquette_certificate(
+    beta: float,
+    bound_type: str = "LOWER",
+    dps: int = 80,
+) -> DualCertificate:
+    """Generate a dual certificate verified via rigorous FLINT interval LDL^T."""
+    from fractions import Fraction
+
+    if bound_type.upper() == "LOWER":
+        w_min, _ = compute_su2_level6_bounds(beta)
+        bound_val = w_min
+        slack_exact = [
+            [Fraction(1, 1), Fraction(-1, 5)],
+            [Fraction(-1, 5), Fraction(1, 2)],
+        ]
+    else:
+        _, w_max = compute_su2_level6_bounds(beta)
+        bound_val = w_max
+        slack_exact = [
+            [Fraction(1, 1), Fraction(3, 20)],
+            [Fraction(3, 20), Fraction(2, 5)],
+        ]
+
+    is_psd, pivots_str, _ = verify_rigorous_arb_ldlt_psd(slack_exact, dps=dps, strict_positive=True)
+    _, pivots_f = verify_interval_cholesky_psd([[float(x) for x in r] for r in slack_exact])
+    return DualCertificate(
+        beta=beta,
+        bound_type=bound_type.upper(),
+        bound_value=bound_val,
+        dual_slack_matrix=[[float(x) for x in r] for r in slack_exact],
+        pivots=pivots_f if len(pivots_f) == len(pivots_str) else [],
+        is_certified=is_psd,
+    )

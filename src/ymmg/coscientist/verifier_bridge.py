@@ -23,8 +23,14 @@ import tempfile
 from typing import Any, Dict, List, Optional, Tuple
 import uuid
 
+from scripts.chrysalis_apex import ApexHotpatchSandbox
 from scripts.chrysalis_dream_rsi import DreamRsiRunner
 from scripts.chrysalis_gates import ChrysalisGates
+from src.ymmg.certified_linalg import (
+    certify_rational_rank_crt,
+    evaluate_toron_bulk_schur_audit,
+    verify_schur_coercivity_interval,
+)
 from src.ymmg.coscientist.kernel import VerificationReceipt
 from src.ymmg.coscientist.schemas import YangMillsHypothesis
 from src.ymmg.lean_step_runner import check_step
@@ -60,8 +66,10 @@ class CoScientistVerifierBridge:
         self.root = Path(root_dir) if root_dir else ROOT
         self.verifier_identity = verifier_identity
         self.lean_project_dir = self.root / "governance" / "math_gov" / "examples" / "LeanDemoProject"
+        self.blueprint_project_dir = self.root / "formal" / "yang_mills_blueprint"
         self.dream_runner = DreamRsiRunner(root_dir=self.root)
         self.gates = ChrysalisGates(root_dir=self.root)
+        self.apex_l1 = ApexHotpatchSandbox(root_dir=self.root, gates=self.gates)
 
     def verify_rational_bounds(
         self,
@@ -133,7 +141,61 @@ class CoScientistVerifierBridge:
             return False, ["No positive rational certificate bounds supplied."], {}
 
         g2_res = self.gates.run_gate_2_policy(candidate_bounds=bounds_for_policy)
-        return g2_res.passed, g2_res.violations, g2_res.details
+        l1_res = self.apex_l1.evaluate_candidate_bounds_in_memory(candidate_bounds=bounds_for_policy)
+        violations = list(g2_res.violations)
+        if not l1_res.success or not l1_res.disk_preserved:
+            violations.append(f"CHRYSALIS_L1_SANDBOX_FAILED: {l1_res.error or 'disk mutation detected'}")
+        details = dict(g2_res.details)
+        details["chrysalis_l1_disk_preserved"] = l1_res.disk_preserved
+        return g2_res.passed and l1_res.success and l1_res.disk_preserved, violations, details
+
+    def verify_certified_linalg(
+        self,
+        hyp: YangMillsHypothesis,
+    ) -> Tuple[bool, List[str], Dict[str, Any]]:
+        """
+        Runs arbitrary-precision FLINT interval Schur Congruence & 62-bit multi-prime
+        CRT nullspace certification tailored to the candidate's toron margin parameters.
+        """
+        margin = hyp.rational_parameters.get("delta_all_orders_margin")
+        w_toron = hyp.rational_parameters.get("w_toron_vol")
+        if not isinstance(margin, Fraction) or not isinstance(w_toron, Fraction):
+            return False, ["Missing exact Fraction parameters for certified linalg check."], {}
+
+        failures: List[str] = []
+        # 2-block candidate headroom Schur matrix: [[bulk=1, coupling=1], [coupling=1, 1 + (margin - w_toron)]]
+        # Strict positivity of Schur complement holds iff (margin - w_toron) > 0!
+        margin_gap = margin - w_toron
+        candidate_block = [
+            [Fraction(1, 1), Fraction(1, 1)],
+            [Fraction(1, 1), Fraction(1, 1) + margin_gap],
+        ]
+        cand_schur = verify_schur_coercivity_interval(candidate_block, split_index=1, dps=80)
+        if not cand_schur.is_coercive:
+            failures.append(f"CERTIFIED_SCHUR_FAILED: {cand_schur.failure_reason}")
+
+        # Physics T^4 L=8 twisted vs untwisted benchmark audit
+        twisted = evaluate_toron_bulk_schur_audit(L=8, d=4, N=2, twisted=True, dps=80)
+        untwisted = evaluate_toron_bulk_schur_audit(L=8, d=4, N=2, twisted=False, dps=80)
+        untwisted_crt = untwisted.crt_untwisted_nullspace_rank_cert
+        if not twisted.schur_cert.is_coercive:
+            failures.append("TWISTED_T4_L8_SCHUR_FAILED")
+        if untwisted.schur_cert.is_coercive:
+            failures.append("UNTWISTED_T4_L8_FALSE_POSITIVITY")
+        if untwisted_crt is None or not untwisted_crt.verified_exact_mk_zero or untwisted_crt.nullity != 1:
+            failures.append("UNTWISTED_CRT_NULLSPACE_VERIFICATION_FAILED")
+
+        details = {
+            "candidate_schur_coercive": cand_schur.is_coercive,
+            "candidate_schur_min_pivot_lower": cand_schur.min_schur_pivot_lower_str,
+            "twisted_t4_l8_schur_coercive": twisted.schur_cert.is_coercive,
+            "untwisted_t4_l8_schur_coercive": untwisted.schur_cert.is_coercive,
+            "untwisted_crt_rank": untwisted_crt.rank if untwisted_crt else None,
+            "untwisted_crt_nullity": untwisted_crt.nullity if untwisted_crt else None,
+            "untwisted_crt_exact_mk_zero": untwisted_crt.verified_exact_mk_zero if untwisted_crt else False,
+            "uniform_in_L_gap": False,
+        }
+        return len(failures) == 0, failures, details
 
     def verify_lean_step(
         self,
@@ -141,7 +203,8 @@ class CoScientistVerifierBridge:
         timeout: int = 120,
     ) -> Dict[str, Any]:
         """
-        Compiles and kernel-checks hyp.lean_candidate_code inside LeanDemoProject via lean_step_runner.
+        Compiles and kernel-checks hyp.lean_candidate_code inside YangMillsBlueprint (when
+        importing `YangMillsBlueprint`) or LeanDemoProject via lean_step_runner.
         Fail-closed: returns LEAN_UNAVAILABLE if lake/lean missing, never simulates pass.
         """
         if not hyp.lean_candidate_code or not hyp.lean_theorem_name or not hyp.lean_formal_statement:
@@ -151,7 +214,12 @@ class CoScientistVerifierBridge:
                 "axioms": [],
             }
 
-        if not self.lean_project_dir.is_dir():
+        target_project_dir = (
+            self.blueprint_project_dir
+            if "import YangMillsBlueprint" in hyp.lean_candidate_code
+            else self.lean_project_dir
+        )
+        if not target_project_dir.is_dir():
             return {
                 "verdict": "LEAN_PROJECT_NOT_FOUND",
                 "lean_kernel_check_passed": False,
@@ -165,13 +233,13 @@ class CoScientistVerifierBridge:
         raw_bytes = lean_src.encode("utf-8")
         file_sha256 = hashlib.sha256(raw_bytes).hexdigest()
 
-        # Write temporary .lean module inside LeanDemoProject and clean up unconditionally in finally
+        # Write temporary .lean module inside target Lean project and clean up unconditionally in finally
         temp_filename = f"_coscientist_tmp_{uuid.uuid4().hex[:12]}.lean"
-        temp_path = self.lean_project_dir / temp_filename
+        temp_path = target_project_dir / temp_filename
         try:
             temp_path.write_bytes(raw_bytes)
             result = check_step(
-                project_root=str(self.lean_project_dir),
+                project_root=str(target_project_dir),
                 relative_source=temp_filename,
                 theorem=hyp.lean_theorem_name,
                 expected_statement=hyp.lean_formal_statement,
@@ -209,6 +277,10 @@ class CoScientistVerifierBridge:
         if not gates_ok:
             failures.extend(f"CHRYSALIS_GATE_2_VIOLATION: {v}" for v in gate_violations)
 
+        linalg_ok, linalg_failures, linalg_details = self.verify_certified_linalg(hyp)
+        if not linalg_ok:
+            failures.extend(linalg_failures)
+
         lean_res: Dict[str, Any]
         if enable_lean:
             lean_res = self.verify_lean_step(hyp)
@@ -223,7 +295,7 @@ class CoScientistVerifierBridge:
             if require_lean:
                 failures.append("LEAN_REQUIRED_BUT_DISABLED")
 
-        all_passed = rational_ok and dream_ok and gates_ok and (lean_ok if require_lean else True)
+        all_passed = rational_ok and dream_ok and gates_ok and linalg_ok and (lean_ok if require_lean else True)
 
         evidence_payload = {
             "hypothesis_id": hyp.hypothesis_id,
@@ -234,6 +306,8 @@ class CoScientistVerifierBridge:
             "dream_details": dream_details,
             "chrysalis_gates_ok": gates_ok,
             "gate_details": gate_details,
+            "certified_linalg_ok": linalg_ok,
+            "certified_linalg_details": linalg_details,
             "lean_ok": lean_ok,
             "lean_status": lean_status,
             "lean_res": lean_res,

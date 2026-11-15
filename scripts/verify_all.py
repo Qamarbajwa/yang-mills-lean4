@@ -291,8 +291,8 @@ def run_pytest_suite():
 
         m = re.search(r"(\d+)\s+passed", summary_line)
         passed_count = int(m.group(1)) if m else 0
-        if passed_count < 662 or "failed" in summary_line.lower() or "error" in summary_line.lower():
-            print(f"  [FAIL] Expected >= 662 passed tests with 0 failures, observed: {summary_line}")
+        if passed_count < 707 or "failed" in summary_line.lower() or "error" in summary_line.lower():
+            print(f"  [FAIL] Expected >= 707 passed tests with 0 failures, observed: {summary_line}")
             return False
 
         print(f"  [PASS] Exact rational certificates passed deterministically ({summary_line.strip()}).")

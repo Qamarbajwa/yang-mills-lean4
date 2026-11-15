@@ -12,6 +12,8 @@ build/
 dist/
 *.egg-info/
 .worktrees/
+.lake/
+**/.lake/
 .DS_Store
 Thumbs.db
 _staging_gov_v403/

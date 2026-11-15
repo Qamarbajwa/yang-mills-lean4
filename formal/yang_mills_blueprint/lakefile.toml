@@ -1,0 +1,6 @@
+name = "YangMillsBlueprint"
+version = "0.1.0"
+defaultTargets = ["YangMillsBlueprint"]
+
+[[lean_lib]]
+name = "YangMillsBlueprint"

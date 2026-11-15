@@ -496,7 +496,7 @@ perm_matrix = """permissions:
 print("Wrote governance/TOOL_PERMISSION_MATRIX.yaml")
 
 # 11. Truth Control Plane & Supporting Policies
-truth_control = """# TRUTH CONTROL PLANE (v2.9.3)
+truth_control = r"""# TRUTH CONTROL PLANE (v2.9.3)
 
 ## 1. Core Invariants
 - **Primary Source Hegemony:** Primary mathematical and physical literature outranks secondary surveys, model reconstructions, and LLM completions.

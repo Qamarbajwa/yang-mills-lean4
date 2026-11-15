@@ -509,3 +509,38 @@ def evaluate_periodic_plaquette_hierarchy_guardrail(
             "P3_CONTINUUM_UNIFORM_CONTROL is OPEN / NOT_ESTABLISHED: cannot be claimed before P2 is established."
         )
     raise ValueError(f"Unknown claim_level {claim_level!r}.")
+
+
+def audit_levi_stratum_mode_balance_and_schur(L: int = 8, d: int = 4, N: int = 2) -> Dict[str, Any]:
+    """
+    Combine exact SU(N) Levi-stratum dimension conservation with certified
+    Toron-Bulk Schur Congruence audits (`twisted=True` vs. `twisted=False`).
+    """
+    from src.ymmg.certified_linalg import evaluate_toron_bulk_schur_audit
+
+    levi = audit_commuting_variety_and_levi_strata(L=L, d=d, N=N)
+    twisted_audit = evaluate_toron_bulk_schur_audit(L=L, d=d, N=N, twisted=True)
+    untwisted_audit = evaluate_toron_bulk_schur_audit(L=L, d=d, N=N, twisted=False)
+
+    return {
+        "L": L,
+        "d": d,
+        "N": N,
+        "dominant_stratum": levi.dominant_stratum_type,
+        "cartan_zero_modes": levi.commuting_quotient_dim,
+        "fixed_volume_c_per_coefficient": levi.fixed_volume_c_per_coefficient,
+        "twisted_schur_coercive_fixed_L": twisted_audit.schur_cert.is_coercive,
+        "untwisted_schur_coercive_fixed_L": untwisted_audit.schur_cert.is_coercive,
+        "untwisted_crt_rank": (
+            untwisted_audit.crt_untwisted_nullspace_rank_cert.rank
+            if untwisted_audit.crt_untwisted_nullspace_rank_cert
+            else None
+        ),
+        "untwisted_crt_nullity": (
+            untwisted_audit.crt_untwisted_nullspace_rank_cert.nullity
+            if untwisted_audit.crt_untwisted_nullspace_rank_cert
+            else None
+        ),
+        "uniform_in_L_gap_established": False,
+        "epistemic_status": "P1_FIXED_VOLUME_PROVED__E_CROSSOVER_OPEN",
+    }

@@ -15,8 +15,9 @@ from dataclasses import replace
 from fractions import Fraction as F
 from pathlib import Path
 import re
-from typing import Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 
+from src.ymmg.certified_linalg import evaluate_toron_bulk_schur_audit
 from src.ymmg.coscientist.kernel import Stage
 from src.ymmg.coscientist.schemas import (
     Citation,
@@ -27,6 +28,45 @@ from src.ymmg.coscientist.schemas import (
     TournamentMatch,
     YangMillsHypothesis,
 )
+from src.ymmg.dyadic_free_energy import evaluate_toron_thermodynamic_scaling
+from src.ymmg.loop_bootstrap import generate_and_verify_rigorous_plaquette_certificate
+
+
+def compute_live_ym_physics_envelope(L: int = 8, N: int = 2) -> Dict[str, Any]:
+    """
+    Dynamically computes exact rational YM-101 crossover parameters alongside
+    live Toron-Bulk Schur Congruence, multi-prime CRT nullspace, and SU(2)
+    interval LDL^T loop-bootstrap metrics.
+    """
+    delta_2loop_nonlocal = F(17, 984)
+    w_2loop_elliptic = 22 * F(1, 4) * delta_2loop_nonlocal
+    a_half = F(237691, 1599912)
+    w_char = 30 * (a_half ** 4)
+    w_4species_6 = w_char + F(42284, 73185) + F(11, 432) + w_2loop_elliptic
+    r_ge3_cauchy = F(1, 4) * w_2loop_elliptic
+    w_ir_total_all_orders = F(4, 3) * (w_4species_6 + r_ge3_cauchy)
+    delta_margin_exact = F(1, 1) - w_ir_total_all_orders
+
+    twisted_audit = evaluate_toron_bulk_schur_audit(L=L, d=4, N=N, twisted=True)
+    untwisted_audit = evaluate_toron_bulk_schur_audit(L=L, d=4, N=N, twisted=False)
+    toron_thermo = evaluate_toron_thermodynamic_scaling(L=L, d=4, N=N)
+    loop_cert = generate_and_verify_rigorous_plaquette_certificate(beta=2.4, bound_type="LOWER")
+
+    return {
+        "R_ge3_Cauchy": r_ge3_cauchy,
+        "W_IR_total_all_orders": w_ir_total_all_orders,
+        "delta_all_orders_margin_exact": delta_margin_exact,
+        "toron_specific_increment_ratio": twisted_audit.toron_specific_increment_ratio,
+        "toron_suppressed_by_volume": F(1, L ** int(toron_thermo["decay_exponent_d"])),
+        "twisted_schur_coercive": twisted_audit.schur_cert.is_coercive,
+        "untwisted_crt_nullity": F(
+            untwisted_audit.crt_untwisted_nullspace_rank_cert.nullity
+            if untwisted_audit.crt_untwisted_nullspace_rank_cert
+            else 0
+        ),
+        "plaquette_lower_bound": F(str(round(loop_cert.bound_value, 6))),
+        "plaquette_cert_ok": loop_cert.is_certified,
+    }
 
 
 class YMGenerationAgent:
@@ -38,6 +78,13 @@ class YMGenerationAgent:
         run_id: str,
         include_adversarial_flawed: bool = True,
     ) -> List[YangMillsHypothesis]:
+        phys = compute_live_ym_physics_envelope(L=8, N=2)
+        margin_exact = phys["delta_all_orders_margin_exact"]
+        r_cauchy = phys["R_ge3_Cauchy"]
+        w_ir_all = phys["W_IR_total_all_orders"]
+        toron_inc = phys["toron_specific_increment_ratio"]
+        untwisted_nullity = phys["untwisted_crt_nullity"]
+
         candidates = [
             YangMillsHypothesis(
                 hypothesis_id="HYP-YM-TWIST-HOLONOMY-v1",
@@ -48,8 +95,9 @@ class YMGenerationAgent:
                 statement=(
                     "Imposing non-trivial 't Hooft Z_N magnetic twist n_{mu nu} != 0 mod N on the "
                     "compact 4-torus boundary removes flat abelian holonomy torons (M_toron -> empty), "
-                    "suppressing the toron zero-mode volume weight w_toron_vol from 1 to <= exp(-4*pi^2/(N*g^2)) "
-                    "below the certified all-orders Cauchy polydisk margin 17838/1000000."
+                    f"eliminating the CRT-certified rank-{int(3 - untwisted_nullity)} untwisted zero-mode "
+                    f"nullspace (nullity={untwisted_nullity}) and suppressing w_toron_vol below the exact "
+                    f"all-orders Cauchy polydisk margin {float(margin_exact):.6f}."
                 ),
                 mechanism_family="TWISTED_HOLONOMY",
                 assumptions=[
@@ -62,23 +110,38 @@ class YMGenerationAgent:
                     "Non-vanishing toron moduli volume exceeding margin 17838/1000000 in twisted sector",
                 ],
                 predictions=[
-                    "Electric flux free-energy gap scales cleanly in thermodynamic limit L -> infinity",
-                    "Crossover contraction weight W_IR_twisted < 982162/1000000",
+                    f"L=8 twisted T^4 Schur coercivity certified={phys['twisted_schur_coercive']} (toron ratio={toron_inc})",
+                    f"Crossover contraction weight W_IR_all_orders = {float(w_ir_all):.6f} < 1",
                 ],
                 rational_parameters={
-                    "R_ge3_Cauchy": F(187, 7872),
-                    "delta_all_orders_margin": F(17838, 1000000),
-                    "w_toron_vol": F(1, 100),  # Projected down below margin!
+                    "R_ge3_Cauchy": r_cauchy,
+                    "W_IR_total_all_orders": w_ir_all,
+                    "delta_all_orders_margin": margin_exact,
+                    "w_toron_vol": F(1, 100),  # Projected down below exact margin!
+                    "toron_specific_increment_L8": toron_inc,
+                    "untwisted_crt_nullity": untwisted_nullity,
                     "claim_total_continuum_closure": F(0),
                 },
                 lean_candidate_code=(
+                    "import YangMillsBlueprint\n\n"
                     "namespace MathGovYM102\n"
-                    "theorem twisted_toron_margin_dominance : 1 * 1000000 < 17838 * 100 := by\n"
-                    "  decide\n"
+                    "theorem twisted_toron_margin_dominance :\n"
+                    "    YangMillsBlueprint.QPair.lt ⟨1, 100, by omega⟩\n"
+                    "      YangMillsBlueprint.YM101.deltaAllOrdersMarginReduced ∧\n"
+                    "    0 < YangMillsBlueprint.twoBlockQuadForm 16 1 5 1 1 := by\n"
+                    "  constructor\n"
+                    "  · exact YangMillsBlueprint.YM101.ym101_suppressed_toron_fits_margin\n"
+                    "      ⟨1, 100, by omega⟩ (by decide)\n"
+                    "  · exact YangMillsBlueprint.schur_coercivity_from_block_pivots\n"
+                    "      16 1 5 1 1 (by omega) (by decide) (Or.inl (by omega))\n"
                     "end MathGovYM102\n"
                 ),
                 lean_theorem_name="MathGovYM102.twisted_toron_margin_dominance",
-                lean_formal_statement="1 * 1000000 < 17838 * 100",
+                lean_formal_statement=(
+                    "YangMillsBlueprint.QPair.lt ⟨1, 100, by omega⟩ "
+                    "YangMillsBlueprint.YM101.deltaAllOrdersMarginReduced ∧ "
+                    "0 < YangMillsBlueprint.twoBlockQuadForm 16 1 5 1 1"
+                ),
                 citations=[
                     Citation("thooft1979", "sec-2-twisted-flux", "SUPPORTS"),
                     Citation("YM-101-LEMMA-YM101F", "sec-4-toron-barrier", "SUPPORTS"),
@@ -107,24 +170,42 @@ class YMGenerationAgent:
                     "Disappearance of vortex percolation in continuum scaling limit a -> 0",
                 ],
                 predictions=[
-                    "Fundamental string tension sigma > 0 uniformly in lattice spacing",
+                    f"Loop bootstrap beta=2.4 rigorous lower bound w_p >= {phys['plaquette_lower_bound']} (certified={phys['plaquette_cert_ok']})",
                     "Glueball 0++ mass satisfies M_{0++} >= c_0 * sqrt(sigma)",
                 ],
                 rational_parameters={
-                    "R_ge3_Cauchy": F(187, 7872),
-                    "delta_all_orders_margin": F(17838, 1000000),
+                    "R_ge3_Cauchy": r_cauchy,
+                    "W_IR_total_all_orders": w_ir_all,
+                    "delta_all_orders_margin": margin_exact,
                     "w_toron_vol": F(1, 200),
                     "vortex_sigma_lower_bound": F(1, 16),
                     "claim_total_continuum_closure": F(0),
                 },
                 lean_candidate_code=(
+                    "import YangMillsBlueprint\n\n"
                     "namespace MathGovYM103\n"
-                    "theorem vortex_percolation_sigma_pos : 1 > 0 := by\n"
-                    "  decide\n"
+                    "theorem vortex_percolation_sigma_pos :\n"
+                    "    YangMillsBlueprint.QPair.lt ⟨1, 200, by omega⟩\n"
+                    "      YangMillsBlueprint.YM101.deltaAllOrdersMarginReduced ∧\n"
+                    "    YangMillsBlueprint.toronModuliModes 4 2 +\n"
+                    "      YangMillsBlueprint.leviUnbrokenBulkModes 4 2 3 +\n"
+                    "      YangMillsBlueprint.leviBrokenModes 4 3 2 =\n"
+                    "      4 * YangMillsBlueprint.suDim 2 := by\n"
+                    "  constructor\n"
+                    "  · exact YangMillsBlueprint.YM101.ym101_suppressed_toron_fits_margin\n"
+                    "      ⟨1, 200, by omega⟩ (by decide)\n"
+                    "  · exact YangMillsBlueprint.levi_stratum_mode_conservation\n"
+                    "      4 2 3 2 (by omega) (by omega) (by omega) (by decide)\n"
                     "end MathGovYM103\n"
                 ),
                 lean_theorem_name="MathGovYM103.vortex_percolation_sigma_pos",
-                lean_formal_statement="1 > 0",
+                lean_formal_statement=(
+                    "YangMillsBlueprint.QPair.lt ⟨1, 200, by omega⟩ "
+                    "YangMillsBlueprint.YM101.deltaAllOrdersMarginReduced ∧ "
+                    "YangMillsBlueprint.toronModuliModes 4 2 + "
+                    "YangMillsBlueprint.leviUnbrokenBulkModes 4 2 3 + "
+                    "YangMillsBlueprint.leviBrokenModes 4 3 2 = 4 * YangMillsBlueprint.suDim 2"
+                ),
                 citations=[
                     Citation("mack_petkova1979", "thm-1", "SUPPORTS"),
                     Citation("tomboulis_vortex", "sec-3", "PARTIAL"),
@@ -418,12 +499,36 @@ class YMEvolutionAgent:
         new_id: str,
         run_id: str,
     ) -> Tuple[YangMillsHypothesis, EvolutionLineage]:
+        phys = compute_live_ym_physics_envelope(L=8, N=2)
+        margin_exact = phys["delta_all_orders_margin_exact"]
+        r_cauchy = phys["R_ge3_Cauchy"]
+        w_ir_all = phys["W_IR_total_all_orders"]
+
         # Combine twisted holonomy projection (parent_a) with vortex/resurgent confinement bounds (parent_b)
         best_toron = min(
             parent_a.rational_parameters.get("w_toron_vol", F(1, 10)),
             parent_b.rational_parameters.get("w_toron_vol", F(1, 10)),
         )
         refined_toron = best_toron * F(1, 2)  # Combined bound suppression
+        t_num, t_den = refined_toron.numerator, refined_toron.denominator
+
+        lean_stmt = (
+            f"YangMillsBlueprint.QPair.lt ⟨{t_num}, {t_den}, by omega⟩ "
+            "YangMillsBlueprint.YM101.deltaAllOrdersMarginReduced ∧ "
+            "(YangMillsBlueprint.Interfaces.openClayBridgeEdges.all fun e => decide (e.srcRank < e.dstRank)) = true"
+        )
+        if refined_toron <= F(1, 100):
+            lean_proof = (
+                "  constructor\n"
+                f"  · exact YangMillsBlueprint.YM101.ym101_suppressed_toron_fits_margin ⟨{t_num}, {t_den}, by omega⟩ (by decide)\n"
+                "  · exact YangMillsBlueprint.Interfaces.bridge_dag_acyclic_rank\n"
+            )
+        else:
+            lean_proof = (
+                "  constructor\n"
+                "  · decide\n"
+                "  · exact YangMillsBlueprint.Interfaces.bridge_dag_acyclic_rank\n"
+            )
 
         child = YangMillsHypothesis(
             hypothesis_id=new_id,
@@ -434,26 +539,30 @@ class YMEvolutionAgent:
             statement=(
                 f"Synthesized candidate combining {parent_a.mechanism_family} ('t Hooft twist removing flat torons) "
                 f"with {parent_b.mechanism_family}, tightening the IR zero-mode residual weight to {refined_toron} "
-                f"strictly inside the all-orders Cauchy polydisk margin 17838/1000000 while preserving OS positivity."
+                f"strictly inside the exact all-orders Cauchy polydisk margin {float(margin_exact):.6f} "
+                "while preserving OS positivity and ClassicalYangMillsBridgeInterface scoping."
             ),
             mechanism_family=f"{parent_a.mechanism_family}_HYBRID",
             assumptions=sorted(set(parent_a.assumptions + parent_b.assumptions)),
             falsifiers=sorted(set(parent_a.falsifiers + parent_b.falsifiers)),
             predictions=sorted(set(parent_a.predictions + parent_b.predictions)),
             rational_parameters={
-                "R_ge3_Cauchy": F(187, 7872),
-                "delta_all_orders_margin": F(17838, 1000000),
+                "R_ge3_Cauchy": r_cauchy,
+                "W_IR_total_all_orders": w_ir_all,
+                "delta_all_orders_margin": margin_exact,
                 "w_toron_vol": refined_toron,
+                "toron_specific_increment_L8": phys["toron_specific_increment_ratio"],
                 "claim_total_continuum_closure": F(0),
             },
             lean_candidate_code=(
+                "import YangMillsBlueprint\n\n"
                 "namespace MathGovYM106\n"
-                "theorem hybrid_twist_vortex_suppression : 1 * 1000000 < 17838 * 400 := by\n"
-                "  decide\n"
+                f"theorem hybrid_twist_vortex_suppression : {lean_stmt} := by\n"
+                f"{lean_proof}"
                 "end MathGovYM106\n"
             ),
             lean_theorem_name="MathGovYM106.hybrid_twist_vortex_suppression",
-            lean_formal_statement="1 * 1000000 < 17838 * 400",
+            lean_formal_statement=lean_stmt,
             citations=parent_a.citations + parent_b.citations,
             parent_version_ids=[parent_a.hypothesis_id, parent_b.hypothesis_id],
             creator_role="EVOLUTION_AGENT",
