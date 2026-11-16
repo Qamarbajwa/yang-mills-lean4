@@ -30,7 +30,9 @@ from src.ymmg.sun_clock_shift_rigidity import (
     exact_rational_spectral_gap_lower_bound,
     jordan_spectral_gap_lower_bound,
     periodic_cartan_zero_mode_dim,
+    secant_asymptotic_spectral_gap_lower_bound,
     twisted_clock_shift_zero_mode_dim,
+    universal_jordan_spectral_gap_lower_bound,
 )
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -49,24 +51,44 @@ class SUNClockShiftRigidityAndLeanTests(unittest.TestCase):
             self.assertEqual(twisted_clock_shift_zero_mode_dim(n), 0)
 
     def test_02_exact_rational_spectral_gap_bounds(self):
+        import math
+
         # 1. Exact table gaps for low N
         self.assertEqual(exact_rational_spectral_gap_lower_bound(2), F(4, 1))
         self.assertEqual(exact_rational_spectral_gap_lower_bound(3), F(3, 1))
         self.assertEqual(exact_rational_spectral_gap_lower_bound(4), F(2, 1))
+        self.assertEqual(exact_rational_spectral_gap_lower_bound(5), F(199, 144))
         self.assertEqual(exact_rational_spectral_gap_lower_bound(6), F(1, 1))
 
-        # 2. Universal Jordan lower bound at N = 26: 36 / 26^2 = 36 / 676 = 9 / 169
+        # 2. Strict rational Archimedean bound for SU(5)
+        # 161^2 = 25921 > 25920 = 5 * 72^2 => sqrt(5) < 161/72
+        # (5 - sqrt(5))/2 > (5 - 161/72)/2 = 199/144
+        su5_exact = 4 * (math.sin(math.pi / 5) ** 2)
+        self.assertLess(float(F(199, 144)), su5_exact)
+
+        # 3. Asymptotic secant lower bound for N >= 6 (valid on (0, pi/6])
+        self.assertEqual(secant_asymptotic_spectral_gap_lower_bound(6), F(1, 1))
+        self.assertEqual(secant_asymptotic_spectral_gap_lower_bound(26), F(9, 169))
         self.assertEqual(exact_rational_spectral_gap_lower_bound(26), F(9, 169))
-        self.assertEqual(jordan_spectral_gap_lower_bound(26), F(9, 169))
+        with self.assertRaises(ValueError):
+            secant_asymptotic_spectral_gap_lower_bound(5)
 
-        # 3. Jordan bound at N = 3 evaluates to 4 > 3
-        self.assertEqual(jordan_spectral_gap_lower_bound(3), F(4, 1))
-        self.assertGreater(jordan_spectral_gap_lower_bound(3), F(3, 1))
+        # 4. Universal Jordan lower bound 16 / N^2 for all N >= 2 on (0, pi/2]
+        self.assertEqual(universal_jordan_spectral_gap_lower_bound(2), F(4, 1))
+        self.assertEqual(universal_jordan_spectral_gap_lower_bound(3), F(16, 9))
+        self.assertEqual(universal_jordan_spectral_gap_lower_bound(4), F(1, 1))
+        self.assertEqual(universal_jordan_spectral_gap_lower_bound(5), F(16, 25))
+        self.assertEqual(universal_jordan_spectral_gap_lower_bound(6), F(4, 9))
+        self.assertEqual(universal_jordan_spectral_gap_lower_bound(26), F(4, 169))
 
-        # 4. Strict positivity for all test N
-        for n in (2, 3, 4, 6, 26):
+        # 5. Check exact_rational_gap >= universal_jordan_gap for all test N
+        for n in (2, 3, 4, 5, 6, 26):
+            self.assertGreaterEqual(
+                exact_rational_spectral_gap_lower_bound(n),
+                universal_jordan_spectral_gap_lower_bound(n),
+            )
             self.assertGreater(exact_rational_spectral_gap_lower_bound(n), F(0, 1))
-            self.assertGreater(jordan_spectral_gap_lower_bound(n), F(0, 1))
+            self.assertGreater(universal_jordan_spectral_gap_lower_bound(n), F(0, 1))
 
     def test_03_evaluate_sun_clock_shift_certificate(self):
         # SU(2) certification
@@ -75,9 +97,12 @@ class SUNClockShiftRigidityAndLeanTests(unittest.TestCase):
         self.assertEqual(cert2.periodic_cartan_zero_mode_dim, 3)
         self.assertEqual(cert2.twisted_clock_shift_zero_mode_dim, 0)
         self.assertEqual(cert2.spectral_gap_lower_bound, F(4, 1))
+        self.assertEqual(cert2.universal_jordan_gap_lower_bound, F(4, 1))
         self.assertTrue(cert2.su2_su3_twisted_gap_sufficient)
         self.assertFalse(cert2.uniform_in_all_compact_simple_G)
         self.assertEqual(cert2.barrier_id, "NEG-YM-104")
+        self.assertIn("NEG-YM-104a", cert2.barrier_details)
+        self.assertIn("NEG-YM-104b", cert2.barrier_details)
 
         # SU(3) certification
         cert3 = evaluate_sun_clock_shift_certificate(3)
@@ -85,6 +110,7 @@ class SUNClockShiftRigidityAndLeanTests(unittest.TestCase):
         self.assertEqual(cert3.periodic_cartan_zero_mode_dim, 6)
         self.assertEqual(cert3.twisted_clock_shift_zero_mode_dim, 0)
         self.assertEqual(cert3.spectral_gap_lower_bound, F(3, 1))
+        self.assertEqual(cert3.universal_jordan_gap_lower_bound, F(16, 9))
         self.assertTrue(cert3.su2_su3_twisted_gap_sufficient)
         self.assertLess(cert3.w_local_block_total, cert3.delta_all_orders_margin)
         self.assertLess(cert3.w_ir_twisted_total, F(1, 1))
@@ -92,10 +118,15 @@ class SUNClockShiftRigidityAndLeanTests(unittest.TestCase):
         self.assertFalse(cert3.uniform_in_all_compact_simple_G)
         self.assertEqual(cert3.barrier_id, "NEG-YM-104")
 
-        # SU(4) and SU(6) exceed unscaled fixed-cell margin
+        # SU(4), SU(5), SU(6) exceed unscaled fixed-cell margin
         cert4 = evaluate_sun_clock_shift_certificate(4)
         self.assertFalse(cert4.is_certified)
         self.assertIn("NEG-YM-104", str(cert4.failure_reason))
+
+        cert5 = evaluate_sun_clock_shift_certificate(5)
+        self.assertFalse(cert5.is_certified)
+        self.assertEqual(cert5.spectral_gap_lower_bound, F(199, 144))
+        self.assertIn("NEG-YM-104", str(cert5.failure_reason))
 
         cert6 = evaluate_sun_clock_shift_certificate(6)
         self.assertFalse(cert6.is_certified)
@@ -107,6 +138,7 @@ class SUNClockShiftRigidityAndLeanTests(unittest.TestCase):
         self.assertEqual(cert26.periodic_cartan_zero_mode_dim, 75)
         self.assertEqual(cert26.twisted_clock_shift_zero_mode_dim, 0)
         self.assertEqual(cert26.spectral_gap_lower_bound, F(9, 169))
+        self.assertEqual(cert26.universal_jordan_gap_lower_bound, F(4, 169))
         self.assertFalse(cert26.uniform_in_all_compact_simple_G)
         self.assertEqual(cert26.barrier_id, "NEG-YM-104")
         self.assertIn("NEG-YM-104", str(cert26.failure_reason))
@@ -199,6 +231,10 @@ class SUNClockShiftRigidityAndLeanTests(unittest.TestCase):
         self.assertIn("check_mode_pair_norm_sq_unconditional", vnt_text)
         self.assertIn("check_su3_twisted_eigenvalue_table_min_unconditional", vnt_text)
         self.assertIn("check_jordan_spectral_gap_pos_unconditional", vnt_text)
+        self.assertIn("check_secant_asymptotic_gap_pos_unconditional", vnt_text)
+        self.assertIn("check_secant_asymptotic_gap_six_eval_unconditional", vnt_text)
+        self.assertIn("check_su5_rational_gap_witness_unconditional", vnt_text)
+        self.assertIn("check_su5_gap_gt_jordan_unconditional", vnt_text)
 
         # 3. CheckAllDecls.lean wiring
         cad_file = BLUEPRINT_DIR / "CheckAllDecls.lean"
@@ -207,6 +243,8 @@ class SUNClockShiftRigidityAndLeanTests(unittest.TestCase):
         self.assertIn("import YangMillsBlueprint.MathlibPR_ClockShiftRigidity", cad_text)
         self.assertIn("import YangMillsBlueprint.SUNClockShiftRigidity", cad_text)
         self.assertIn("MathlibPR.ClockShiftAlgebra.mode_pair_norm_sq_pos", cad_text)
+        self.assertIn("MathlibPR.ClockShiftAlgebra.secant_asymptotic_gap_pos", cad_text)
+        self.assertIn("MathlibPR.ClockShiftAlgebra.su5_rational_gap_witness", cad_text)
         self.assertIn("YangMillsBlueprint.SUNClockShiftRigidity.su3_twisted_local_block_contraction", cad_text)
 
         # 4. SUNClockShiftRigidity.lean has 0 sorry and 0 axioms

@@ -99,11 +99,35 @@ theorem check_jordan_spectral_gap_pos_unconditional :
         (MathlibPR.ClockShiftAlgebra.jordanBoundPair N hN)) :=
   MathlibPR.ClockShiftAlgebra.jordan_spectral_gap_pos
 
-theorem check_jordan_spectral_gap_three_eval_unconditional :
+theorem check_secant_asymptotic_gap_pos_unconditional :
+    (∀ (N : Nat) (hN : 6 ≤ N),
+      MathlibPR.ClockShiftAlgebra.RatPair.lt
+        (MathlibPR.ClockShiftAlgebra.RatPair.ofNat 0)
+        (MathlibPR.ClockShiftAlgebra.secantBoundPair N hN)) :=
+  MathlibPR.ClockShiftAlgebra.secant_asymptotic_gap_pos
+
+theorem check_secant_asymptotic_gap_six_eval_unconditional :
     MathlibPR.ClockShiftAlgebra.RatPair.eqv
-      (MathlibPR.ClockShiftAlgebra.jordanBoundPair 3 (by omega))
-      (MathlibPR.ClockShiftAlgebra.RatPair.ofNat 4) :=
-  MathlibPR.ClockShiftAlgebra.jordan_spectral_gap_three_eval
+      (MathlibPR.ClockShiftAlgebra.secantBoundPair 6 (by omega))
+      (MathlibPR.ClockShiftAlgebra.RatPair.ofNat 1) :=
+  MathlibPR.ClockShiftAlgebra.secant_asymptotic_gap_six_eval
+
+theorem check_su5_rational_gap_witness_unconditional :
+    (5 : Nat) * (72 * 72) < 161 * 161 ∧
+      5 * 72 - 161 = 199 :=
+  MathlibPR.ClockShiftAlgebra.su5_rational_gap_witness
+
+theorem check_su5_rational_gap_pos_unconditional :
+    MathlibPR.ClockShiftAlgebra.RatPair.lt
+      (MathlibPR.ClockShiftAlgebra.RatPair.ofNat 0)
+      MathlibPR.ClockShiftAlgebra.su5LowerBoundPair :=
+  MathlibPR.ClockShiftAlgebra.su5_rational_gap_pos
+
+theorem check_su5_gap_gt_jordan_unconditional :
+    MathlibPR.ClockShiftAlgebra.RatPair.lt
+      (MathlibPR.ClockShiftAlgebra.jordanBoundPair 5 (by omega))
+      MathlibPR.ClockShiftAlgebra.su5LowerBoundPair :=
+  MathlibPR.ClockShiftAlgebra.su5_gap_gt_jordan
 
 -- 6. Anti-Trap certification theorem: compile succeeds only if all checks typecheck cleanly
 theorem standalone_pr_modules_contain_no_conditional_traps : True := by

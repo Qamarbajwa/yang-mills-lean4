@@ -14,8 +14,10 @@ This module provides self-contained, unconditional algebraic and rational theore
    any non-zero integer frequency mode pair (m1, m2) satisfies 1 <= m1^2 + m2^2.
 2. Exact cyclotomic norm evaluation for order-3 roots of unity (|1 - omega|^2 = 3),
    and the corresponding minimal eigenvalue lower bound 3 <= 3*m1^2 + 3*m2^2.
-3. Positivity of the rational spectral gap bound 36 / N^2 for all N >= 2,
-   and evaluation at N = 3 giving 36 / 3^2 = 4 > 3.
+3. Universal Jordan spectral gap lower bound 16 / N^2 for all N >= 2 on (0, pi/2].
+4. Asymptotic secant chord lower bound 36 / N^2 for N >= 6 on (0, pi/6],
+   matching the exact order-6 boundary value 36 / 6^2 = 1.
+5. Exact Archimedean rational lower bound 199 / 144 for order-5 roots of unity.
 -/
 
 namespace MathlibPR.ClockShiftAlgebra
@@ -133,32 +135,65 @@ theorem su3_cyclotomic_norm_sq_eval :
       cyclotomicOrder3NormSq := by
   decide
 
-/-- Universal rational spectral gap lower bound 36 / N^2 for N >= 2. -/
+/-- Universal Jordan rational lower bound 16 / N^2 for all N >= 2 on (0, pi/2]. -/
 def jordanBoundPair (N : Nat) (hN : 2 ≤ N) : RatPair :=
-  ⟨36, N * N, by
+  ⟨16, N * N, by
     have h1 : 0 < N := by omega
     exact Nat.mul_pos h1 h1⟩
 
 /--
-Theorem: The rational spectral lower bound 36 / N^2 is strictly positive for all N >= 2.
+Theorem: The universal Jordan spectral lower bound 16 / N^2 is strictly positive for all N >= 2.
 -/
 theorem jordan_spectral_gap_pos (N : Nat) (hN : 2 ≤ N) :
     RatPair.lt (RatPair.ofNat 0) (jordanBoundPair N hN) := by
   dsimp [RatPair.lt, RatPair.ofNat, jordanBoundPair]
   omega
 
+/-- Asymptotic secant chord lower bound 36 / N^2 valid strictly for N >= 6 on (0, pi/6]. -/
+def secantBoundPair (N : Nat) (hN : 6 ≤ N) : RatPair :=
+  ⟨36, N * N, by
+    have h1 : 0 < N := by omega
+    exact Nat.mul_pos h1 h1⟩
+
 /--
-Theorem: At N = 3, the rational bound 36 / 3^2 evaluates exactly to 4.
+Theorem: The secant asymptotic spectral lower bound 36 / N^2 is strictly positive for all N >= 6.
 -/
-theorem jordan_spectral_gap_three_eval :
-    RatPair.eqv (jordanBoundPair 3 (by omega)) (RatPair.ofNat 4) := by
+theorem secant_asymptotic_gap_pos (N : Nat) (hN : 6 ≤ N) :
+    RatPair.lt (RatPair.ofNat 0) (secantBoundPair N hN) := by
+  dsimp [RatPair.lt, RatPair.ofNat, secantBoundPair]
+  omega
+
+/--
+Theorem: At N = 6, the secant bound 36 / 6^2 evaluates exactly to 1.
+-/
+theorem secant_asymptotic_gap_six_eval :
+    RatPair.eqv (secantBoundPair 6 (by omega)) (RatPair.ofNat 1) := by
+  decide
+
+/-- Exact rational lower bound 199 / 144 for order-5 roots of unity. -/
+def su5LowerBoundPair : RatPair := ⟨199, 144, by omega⟩
+
+/--
+Theorem: Archimedean witness for order-5 gap: 5 * 72^2 < 161^2 proves sqrt(5) < 161/72,
+establishing (5 - 161/72) / 2 = 199 / 144 as a strict rational lower bound.
+-/
+theorem su5_rational_gap_witness :
+    (5 : Nat) * (72 * 72) < 161 * 161 ∧
+      5 * 72 - 161 = 199 := by
   decide
 
 /--
-Theorem: At N = 3, the evaluated bound 36 / 3^2 = 4 strictly exceeds 3.
+Theorem: The order-5 Archimedean lower bound 199 / 144 is strictly positive.
 -/
-theorem jordan_spectral_gap_three_gt_three :
-    RatPair.lt (RatPair.ofNat 3) (jordanBoundPair 3 (by omega)) := by
+theorem su5_rational_gap_pos :
+    RatPair.lt (RatPair.ofNat 0) su5LowerBoundPair := by
+  decide
+
+/--
+Theorem: The order-5 bound 199 / 144 strictly improves upon the universal Jordan bound 16 / 25.
+-/
+theorem su5_gap_gt_jordan :
+    RatPair.lt (jordanBoundPair 5 (by omega)) su5LowerBoundPair := by
   decide
 
 end MathlibPR.ClockShiftAlgebra

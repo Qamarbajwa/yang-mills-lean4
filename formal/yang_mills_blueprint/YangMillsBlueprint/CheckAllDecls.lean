@@ -150,11 +150,20 @@ import YangMillsBlueprint.SUNClockShiftRigidity
 #check MathlibPR.ClockShiftAlgebra.jordan_spectral_gap_pos
 #print axioms MathlibPR.ClockShiftAlgebra.jordan_spectral_gap_pos
 
-#check MathlibPR.ClockShiftAlgebra.jordan_spectral_gap_three_eval
-#print axioms MathlibPR.ClockShiftAlgebra.jordan_spectral_gap_three_eval
+#check MathlibPR.ClockShiftAlgebra.secant_asymptotic_gap_pos
+#print axioms MathlibPR.ClockShiftAlgebra.secant_asymptotic_gap_pos
 
-#check MathlibPR.ClockShiftAlgebra.jordan_spectral_gap_three_gt_three
-#print axioms MathlibPR.ClockShiftAlgebra.jordan_spectral_gap_three_gt_three
+#check MathlibPR.ClockShiftAlgebra.secant_asymptotic_gap_six_eval
+#print axioms MathlibPR.ClockShiftAlgebra.secant_asymptotic_gap_six_eval
+
+#check MathlibPR.ClockShiftAlgebra.su5_rational_gap_witness
+#print axioms MathlibPR.ClockShiftAlgebra.su5_rational_gap_witness
+
+#check MathlibPR.ClockShiftAlgebra.su5_rational_gap_pos
+#print axioms MathlibPR.ClockShiftAlgebra.su5_rational_gap_pos
+
+#check MathlibPR.ClockShiftAlgebra.su5_gap_gt_jordan
+#print axioms MathlibPR.ClockShiftAlgebra.su5_gap_gt_jordan
 
 #check YangMillsBlueprint.SUNClockShiftRigidity.su3_bulk_composition_eqv
 #print axioms YangMillsBlueprint.SUNClockShiftRigidity.su3_bulk_composition_eqv

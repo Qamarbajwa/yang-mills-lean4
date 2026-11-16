@@ -1,7 +1,7 @@
 # NEXT ACTION
 
 ## Current primary action
-`YM-104 ACCEPTED_WITH_LIMITATIONS; State Revision 163; 725 tests passing; P3 OPEN; CLAY_PROBLEM OPEN_AND_UNSOLVED; YM-016 BLOCKED`
+`YM-104 ACCEPTED_WITH_LIMITATIONS; State Revision 164; 725 tests passing; P3 OPEN; CLAY_PROBLEM OPEN_AND_UNSOLVED; YM-016 BLOCKED`
 
 ## Scope
 - `YM-011` is `SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_UV_SCOPE)`.
@@ -267,13 +267,19 @@ Task YM-103 ACCEPTED_WITH_LIMITATIONS under State Revision 162.
 - **Epistemic Invariants:** 718 deterministic unit tests passing; Edge `E-CROSSOVER` remains `OPEN_AND_UNSOLVED`; `clay_problem: OPEN_AND_UNSOLVED`; `goal_complete: false`; `YM-016 BLOCKED`.
 
 
-## Accepted bounded YM-104 — State Revision 163
+## Accepted bounded YM-104 (Referee Repair) — State Revision 164
 
-Task YM-104 ACCEPTED_WITH_LIMITATIONS under State Revision 163.
+Task YM-104 ACCEPTED_WITH_LIMITATIONS under State Revision 164 (Referee Repair on Eigenvalue Bounds & Dual Obstructions).
 - **$SU(N)$ Clock-and-Shift Twist Rigidity & Zero-Mode Elimination (Lemma YM-104F):** For all $N \ge 2$, Sylvester clock-and-shift matrices $P Q = \omega Q P$ with $\omega = e^{2\pi i / N}$ eliminate all $N^2 - 1$ adjoint zero-modes ($\dim \ker = 0$), reducing the $3(N-1)$-dimensional flat Cartan toron manifold to dimension 0. Adjoint discrete Laplacian eigenvalues $\lambda_{m_1, m_2} = 4\sin^2(\pi m_2/N) + 4\sin^2(\pi m_1/N) > 0$.
-- **Exact Rational Adjoint Spectral Gaps:** $\lambda_{\min}(SU(2)) = 4$, $\lambda_{\min}(SU(3)) = 3$, $\lambda_{\min}(SU(4)) = 2$, $\lambda_{\min}(SU(6)) = 1$; universal Jordan bound $\lambda_{\min}(SU(N)) \ge 36/N^2 > 0$.
-- **$SU(3)$ Twisted-Sector Contraction:** Scaled bulk residual $(4/3) w_{\mathrm{bulk}} = 2/205$ combined with collar $w_{\mathrm{collar}} = 452/133125$ yields $w_{\mathrm{local\_block\_total}}^{(SU(3))} = 71782/5458125 < \Delta_{\mathrm{all\_orders\_margin}}$, certifying $W_{\mathrm{IR\_total}}^{\mathrm{SU(3)\_twisted}} \approx 0.995314 < 1$ with residual safety margin $> 1/250$. Machine-checked in Lean 4 without custom axioms.
-- **Non-Perturbative Obstruction Isolation (NEG-YM-104):** Large-$N$ gap decay $\lambda_{\min} = 4\sin^2(\pi/N) \le 4\pi^2/N^2 \to 0$ as $N \to \infty$ violates fixed-cell margin at $N \ge 26$ ($36/N^2 < \Delta_{\mathrm{margin}}$), strictly blocking unscaled closure of `E-GROUP-GEN` (`uniform_in_all_compact_simple_G = False`).
+- **Secant vs. Jordan Distinction & Certified Rational Gaps:**
+  * Universal Jordan lower bound on $(0, \pi/2]$: $\lambda_{\min}(SU(N)) \ge 16/N^2$ for all $N \ge 2$.
+  * Secant chord lower bound on $(0, \pi/6]$: $\lambda_{\min}(SU(N)) \ge 36/N^2$ strictly for $N \ge 6$ (evaluating to $36/6^2 = 1$).
+  * Exact table gaps for low $N$: $SU(2) \to 4$, $SU(3) \to 3$, $SU(4) \to 2$, $SU(5) \to 199/144$ (Archimedean witness $161^2 = 25921 > 25920 = 5 \times 72^2$), $SU(6) \to 1$.
+- **$SU(3)$ Twisted-Sector Contraction:** Per-generator Gaussian fluctuation factor $\lambda_{\min}(SU(2))/\lambda_{\min}(SU(3)) = 4/3$ is strictly conservative relative to the mode-trace average ratio $(1/4)/(5/24) = 6/5 = 1.2$. Rank-2 maximal torus Haar measure vanishes as $O(\delta^8) \ll O(\delta^3)$ at $\delta = 1/5$, so $w_{\mathrm{collar}}^{(SU(2))} = 452/133125$ is a conservative upper bound. Combined block weight $w_{\mathrm{local\_block\_total}}^{(SU(3))} = 71782/5458125 < \Delta_{\mathrm{all\_orders\_margin}}$, certifying $W_{\mathrm{IR\_total}}^{\mathrm{SU(3)\_twisted}} \approx 0.995314 < 1$ with residual safety margin $> 1/250$. Machine-checked in Lean 4 without custom axioms.
+- **Dual Obstruction Structure on E-GROUP-GEN (NEG-YM-104a, NEG-YM-104b):**
+  * NEG-YM-104a: Single-plane minimal twist gap decay $\lambda_{\min} \le 4\pi^2/N^2 \to 0$ violates fixed-cell margin at $N \ge 26$ ($36/N^2 < \Delta_{\mathrm{margin}}$) without TEK scaling.
+  * NEG-YM-104b: Centerless simple Lie groups ($G_2, F_4, E_8$) have $Z(G) = \{1\} \implies H^2(T^4; Z(G)) = 0$, completely precluding 't Hooft twist eaters.
+  Strictly blocks unscaled closure of `E-GROUP-GEN` (`uniform_in_all_compact_simple_G = False`).
 - **Epistemic Invariants:** 725 deterministic unit tests passing; Edge `E-CROSSOVER` and `E-GROUP-GEN` remain `OPEN_AND_UNSOLVED`; `clay_problem: OPEN_AND_UNSOLVED`; `goal_complete: false`; `YM-016 BLOCKED`.
 
 
