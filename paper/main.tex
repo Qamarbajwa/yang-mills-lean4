@@ -59,7 +59,7 @@
 
 \title{\textbf{On the Constructive Ultraviolet Foundations, Infrared Zero-Mode Geometry, and the Mass Gap Frontier in Four-Dimensional Yang--Mills Theory}}
 
-\author{Qamar Munawer \\ \small Brandenburg University of Technology Cottbus-Senftenberg}
+\author{Qamar Munawer \\ \small Brandenburg University of Technology Cottbus--Senftenberg}
 
 \date{November 2026}
 
@@ -68,7 +68,7 @@
 \maketitle
 
 \begin{abstract}
-Quantum Yang--Mills theory in four dimensions describes elementary particles whose nonlinear self-interactions are widely expected to generate a strictly positive mass gap and permanent color confinement, in stark contrast to classical electrodynamics. In this work, we investigate the mathematical mechanisms underlying this spectrum by organizing the Euclidean functional integral into a hierarchy of length scales. In the ultraviolet regime, geometric gradient smoothing controls high-frequency roughness and establishes reflection positivity and relativistic invariance on finite volumes. In the infrared regime, multi-scale renormalization isolates the growth of effective coupling constants, where a polymer cluster expansion demonstrates that quantum fluctuations decouple exponentially in the absence of flat field configurations. On a compact spatial torus, collective zero-frequency modes present a fundamental challenge, behaving as frictionless classical standing waves. We prove that local block averaging combined with orthogonal twisted boundary conditions completely eliminates these flat directions for the gauge group $SU(2)$, creating a uniform spectral restoring force and contractive cluster bounds. Finally, we formulate the remaining mathematical frontier: establishing that the free-energy difference between twisted and periodic boundaries vanishes exponentially as the spatial volume tends to infinity, which is necessary to transfer the positive mass gap to the infinite-volume vacuum.
+Four-dimensional Euclidean Yang--Mills theory on $\mathbb{R}^4$ is widely expected to exhibit an isolated vacuum with a strictly positive mass gap $\Delta > 0$, yet establishing this rigorously across the confinement crossover remains a celebrated open challenge. While the underlying multiscale renormalization group and lattice gauge frameworks trace back to classical foundational works, modern computer-assisted mathematics offers an avenue to verify the intricate analytic estimates separating local fluctuations from global topological geometry. In this work, we contribute an axiom-free Lean 4 formalization and exact rational certification of finite-volume ultraviolet stability, multi-scale polymer cluster expansions, and $SU(2)$ Weyl measure collar bounds within a falsification-first computational architecture. To resolve the continuous zero-mode obstruction that destabilizes periodic tori, we formalize orthogonal 't Hooft twist-eater boundary conditions, proving that their anticommuting algebra induces an adjoint spectral gap that completely eliminates the flat zero-mode manifold. Finally, we formulate the remaining mathematical obligations: establishing thermodynamic boundary decoupling via center-vortex area-law decay and constructing the continuum infinite-volume limit, which remain genuinely open.
 \end{abstract}
 
 \noindent\textbf{Keywords:} Constructive Quantum Field Theory, Yang--Mills Gradient Flow, Ba{\l}aban Renormalization Group, Osterwalder--Schrader Reconstruction, 't Hooft Twisted Boundary Conditions, Toron Zero-Modes, Mass Gap. \\
@@ -120,6 +120,11 @@ The Osterwalder--Schrader (OS) reconstruction theorem establishes that Euclidean
     \end{equation}
     \item \textbf{Bose Permutation Symmetry (OS3):} Symmetry under all coordinate permutations $S_n(x_{\pi(1)}, \dots, x_{\pi(n)}) = S_n(x_1, \dots, x_n)$.
 \end{enumerate}
+
+\subsection{Prior Formalization Work in Interactive Theorem Proving}
+Interactive theorem proving and machine-checked mathematical libraries have expanded dramatically in recent years. In pure mathematics, the Lean Mathematical Library \texttt{Mathlib4} \cite{Mathlib4} provides comprehensive formalizations of abstract algebra, topology, measure theory, and linear algebra. However, rigorous constructive quantum field theory and non-abelian gauge theories remain virtually unformalized within the interactive theorem proving landscape.
+
+In physics formalization, the \texttt{PhysLean} project \cite{PhysLean} has pioneered machine-checked implementations of classical mechanics, special relativity, and representations of Lorentz and Poincar\'e symmetries in Lean 4. Concurrently, Google DeepMind's \texttt{formal-conjectures} repository \cite{FormalConjectures} has initiated benchmarks for formalizing the target statements of major open conjectures. Prior to the present work, however, no formalizations existed for multi-scale lattice gauge renormalization, polymer cluster expansions under Koteck\'y--Preiss conditions, discrete Poincar\'e block variances, or 't Hooft twist-eater centralizer rigidity. Our contribution establishes the first axiom-free, compile-time verified Lean 4 blueprint connecting algebraic zero-mode elimination with exact rational polymer contraction bounds.
 
 \subsection{Scale-Separated Physical Architecture}
 To address this challenge without confusing ultraviolet convergence with infrared mass generation, we organize the analysis into three distinct physical regimes across length scales, illustrated in Figure~\ref{fig:multiscale_architecture}:
@@ -404,6 +409,8 @@ The core algebraic and rational certificates have been formalized in Lean 4 with
     \item \texttt{BlockWeylCollar.lean}: Scale-uniform local block-Poincar\'e gap ($\lambda_{\min} = 4$) and Weyl cubic collar volume bounds.
     \item \texttt{MathlibPR\_\allowbreak CubicCollarBounds.lean}: Standalone cubic collar polynomials and rational geometric bounds.
     \item \texttt{MathlibPR\_\allowbreak SchurComplementForms.lean}: Standalone algebraic Schur-complement completion of the square and block coercivity.
+    \item \texttt{VerifyNoTraps.lean}: Compile-time verification that standalone MathlibPR modules take zero conditional bridge structures as arguments and depend on zero unproved physics axioms.
+    \item \texttt{CheckAllDecls.lean}: Turnkey declaration audit script verifying zero \texttt{sorry} and zero custom axioms across all repository theorems.
 \end{itemize}
 
 \subsection{Claim-to-Test-to-SHA256 Traceability Matrix}

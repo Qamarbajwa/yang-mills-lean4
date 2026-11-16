@@ -198,6 +198,54 @@ class TwistedFluxonRigidityAndLeanTests(unittest.TestCase):
         for word in FORBIDDEN_JARGON:
             self.assertNotIn(word.lower(), text.lower(), f"Forbidden jargon token '{word}' in {pf.name}")
 
+    def test_06_prior_art_audit_and_universal_audit_and_traps_and_author_block(self):
+        import json
+
+        # 1. prior_art_audit_receipt.json exists and is valid
+        receipt_file = ROOT / "prior_art_audit_receipt.json"
+        self.assertTrue(receipt_file.is_file(), "prior_art_audit_receipt.json must exist")
+        receipt_data = json.loads(receipt_file.read_text(encoding="utf-8"))
+        self.assertIn("targets", receipt_data)
+        self.assertEqual(len(receipt_data["targets"]), 6)
+        total_code = sum(t["total_code_hits"] for t in receipt_data["targets"])
+        total_pr = sum(t["total_pr_hits"] for t in receipt_data["targets"])
+        self.assertGreater(total_code, 0, "Expected non-zero code hits across scan")
+        self.assertGreater(total_pr, 0, "Expected non-zero PR hits across scan")
+
+        # 2. docs/UNIVERSAL_SOLVED_VS_UNSOLVED_AUDIT.md exists and contains all 4 buckets
+        audit_doc = ROOT / "docs" / "UNIVERSAL_SOLVED_VS_UNSOLVED_AUDIT.md"
+        self.assertTrue(audit_doc.is_file(), "docs/UNIVERSAL_SOLVED_VS_UNSOLVED_AUDIT.md must exist")
+        doc_text = audit_doc.read_text(encoding="utf-8")
+        self.assertIn("Bucket 1", doc_text)
+        self.assertIn("Bucket 2", doc_text)
+        self.assertIn("Bucket 3", doc_text)
+        self.assertIn("Bucket 4", doc_text)
+        self.assertIn("OPEN_AND_UNSOLVED", doc_text)
+
+        # 3. VerifyNoTraps.lean exists, has 0 sorry/axioms, and is imported in YangMillsBlueprint.lean
+        vnt_file = BLUEPRINT_DIR / "VerifyNoTraps.lean"
+        self.assertTrue(vnt_file.is_file(), "VerifyNoTraps.lean must exist")
+        vnt_text = vnt_file.read_text(encoding="utf-8")
+        stripped_vnt = re.sub(r"/-.*?-/", "", vnt_text, flags=re.DOTALL)
+        stripped_vnt = re.sub(r"--[^\n]*", "", stripped_vnt)
+        self.assertEqual(len(re.findall(r"\bsorry\b", stripped_vnt)), 0, "Found sorry in VerifyNoTraps.lean")
+        self.assertEqual(len(re.findall(r"(?m)^\s*axiom\s+", stripped_vnt)), 0, "Found axiom in VerifyNoTraps.lean")
+
+        root_blueprint = BLUEPRINT_DIR.parent / "YangMillsBlueprint.lean"
+        self.assertTrue(root_blueprint.is_file(), "YangMillsBlueprint.lean must exist")
+        root_text = root_blueprint.read_text(encoding="utf-8")
+        self.assertIn("import YangMillsBlueprint.VerifyNoTraps", root_text)
+        self.assertIn("import YangMillsBlueprint.CheckAllDecls", root_text)
+
+        # 4. paper/main.tex author block check
+        paper_file = ROOT / "paper" / "main.tex"
+        self.assertTrue(paper_file.is_file(), "paper/main.tex must exist")
+        paper_text = paper_file.read_text(encoding="utf-8")
+        self.assertIn("Qamar Munawer", paper_text)
+        self.assertIn("Brandenburg University of Technology Cottbus--Senftenberg", paper_text)
+        self.assertNotIn("Department", paper_text)
+        self.assertNotIn("Faculty", paper_text)
+
 
 if __name__ == "__main__":
     unittest.main()

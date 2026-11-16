@@ -4,7 +4,14 @@
   Audits every theorem in Part I and Part II and prints axiom dependencies.
   Expected result: ZERO `sorryAx`, ZERO custom axioms across all declarations.
 -/
-import YangMillsBlueprint
+import YangMillsBlueprint.BasicTypes
+import YangMillsBlueprint.YM101Closure
+import YangMillsBlueprint.MissingBridgeInterfaces
+import YangMillsBlueprint.MathlibPR_SchurComplementForms
+import YangMillsBlueprint.BlockWeylCollar
+import YangMillsBlueprint.MathlibPR_CubicCollarBounds
+import YangMillsBlueprint.MathlibPR_QuaternionTwistRigidity
+import YangMillsBlueprint.TwistedFluxonRigidity
 
 #check YangMillsBlueprint.block_mode_dimension_additivity
 #print axioms YangMillsBlueprint.block_mode_dimension_additivity

@@ -1,0 +1,827 @@
+{
+  "audit_version": "1.0.0",
+  "timestamp_utc": "2026-11-16T09:12:35.661915+00:00",
+  "repositories_scanned": [
+    "leanprover-community/mathlib4",
+    "HEPLean/PhysLean",
+    "google-deepmind/formal-conjectures"
+  ],
+  "targets": [
+    {
+      "id": "TARGET-1",
+      "name": "Yang\u2013Mills Existence & Mass Gap Specification / Wilson Lattice Action",
+      "keywords": [
+        "YangMills",
+        "WilsonAction",
+        "massGap"
+      ],
+      "results_by_repo": {
+        "leanprover-community/mathlib4": {
+          "keywords": {
+            "YangMills": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 2,
+              "prs": [
+                {
+                  "number": 40038,
+                  "title": "Smooth exp lie v",
+                  "state": "OPEN"
+                },
+                {
+                  "number": 38374,
+                  "title": "Principal Bundles, Connection 1-forms and the Frame Bundle",
+                  "state": "OPEN"
+                }
+              ]
+            },
+            "WilsonAction": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            },
+            "massGap": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            }
+          },
+          "repo_code_hits": 0,
+          "repo_pr_hits": 2
+        },
+        "HEPLean/PhysLean": {
+          "keywords": {
+            "YangMills": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            },
+            "WilsonAction": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            },
+            "massGap": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            }
+          },
+          "repo_code_hits": 0,
+          "repo_pr_hits": 0
+        },
+        "google-deepmind/formal-conjectures": {
+          "keywords": {
+            "YangMills": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 1,
+              "prs": [
+                {
+                  "number": 7636,
+                  "title": "feat(millennium): formalise 4D Yang-Mills Existence and Mass Gap conjecture",
+                  "state": "OPEN"
+                }
+              ]
+            },
+            "WilsonAction": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            },
+            "massGap": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            }
+          },
+          "repo_code_hits": 0,
+          "repo_pr_hits": 1
+        }
+      },
+      "total_code_hits": 0,
+      "total_pr_hits": 3
+    },
+    {
+      "id": "TARGET-2",
+      "name": "Osterwalder\u2013Schrader Axioms & Reflection Positivity",
+      "keywords": [
+        "OsterwalderSchrader",
+        "reflectionPositivity",
+        "Schwinger"
+      ],
+      "results_by_repo": {
+        "leanprover-community/mathlib4": {
+          "keywords": {
+            "OsterwalderSchrader": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            },
+            "reflectionPositivity": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            },
+            "Schwinger": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            }
+          },
+          "repo_code_hits": 0,
+          "repo_pr_hits": 0
+        },
+        "HEPLean/PhysLean": {
+          "keywords": {
+            "OsterwalderSchrader": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            },
+            "reflectionPositivity": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            },
+            "Schwinger": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            }
+          },
+          "repo_code_hits": 0,
+          "repo_pr_hits": 0
+        },
+        "google-deepmind/formal-conjectures": {
+          "keywords": {
+            "OsterwalderSchrader": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            },
+            "reflectionPositivity": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            },
+            "Schwinger": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 1,
+              "prs": [
+                {
+                  "number": 7636,
+                  "title": "feat(millennium): formalise 4D Yang-Mills Existence and Mass Gap conjecture",
+                  "state": "OPEN"
+                }
+              ]
+            }
+          },
+          "repo_code_hits": 0,
+          "repo_pr_hits": 1
+        }
+      },
+      "total_code_hits": 0,
+      "total_pr_hits": 1
+    },
+    {
+      "id": "TARGET-3",
+      "name": "2x2 Block Schur Complement Quadratic Forms",
+      "keywords": [
+        "schurComplement",
+        "fromBlocks",
+        "schur_complement_quadratic"
+      ],
+      "results_by_repo": {
+        "leanprover-community/mathlib4": {
+          "keywords": {
+            "schurComplement": {
+              "code_count": 5,
+              "code_paths": [
+                "Mathlib/LinearAlgebra/Matrix/Hermitian.lean",
+                "Mathlib/LinearAlgebra/Matrix/PosDef.lean",
+                "Mathlib/LinearAlgebra/SymplecticGroup.lean",
+                "Mathlib/LinearAlgebra/Matrix/Charpoly/Coeff.lean",
+                "Mathlib/CategoryTheory/Preadditive/Biproducts.lean"
+              ],
+              "pr_count": 20,
+              "prs": [
+                {
+                  "number": 34875,
+                  "title": "feat(LinearAlgebra/Matrix): add Sherman-Morrison formula",
+                  "state": "OPEN"
+                },
+                {
+                  "number": 43776,
+                  "title": "feat(LinearAlgebra/Matrix/SchurComplement): rank-one determinant formula `det(1 - \u03c6\u2022c) = 1 - \u03c6 c`",
+                  "state": "CLOSED"
+                },
+                {
+                  "number": 29411,
+                  "title": "feat(LinearAlgebra/Matrix/Rank): rank factorization",
+                  "state": "OPEN"
+                },
+                {
+                  "number": 26346,
+                  "title": "feat(LinearAlgebra/QuadraticForm/TensorProduct): Extend `baseChange_ext` to work over a free module",
+                  "state": "OPEN"
+                },
+                {
+                  "number": 28803,
+                  "title": "refactor: unbundle algebra from `ENormed*`",
+                  "state": "OPEN"
+                }
+              ]
+            },
+            "fromBlocks": {
+              "code_count": 28,
+              "code_paths": [
+                "Mathlib/Algebra/Lie/Classical.lean",
+                "Mathlib/LinearAlgebra/Matrix/IsDiag.lean",
+                "Mathlib/LinearAlgebra/SymplecticGroup.lean",
+                "Mathlib/LinearAlgebra/Matrix/Symmetric.lean",
+                "Mathlib/LinearAlgebra/Matrix/Hermitian.lean",
+                "Mathlib/Data/Matrix/ColumnRowPartitioned.lean",
+                "Mathlib/LinearAlgebra/Matrix/Charpoly/Basic.lean",
+                "Mathlib/LinearAlgebra/Matrix/Block.lean",
+                "Mathlib/Data/Matrix/Block.lean",
+                "Mathlib/LinearAlgebra/Matrix/SchurComplement.lean"
+              ],
+              "pr_count": 20,
+              "prs": [
+                {
+                  "number": 45631,
+                  "title": "feat(LinearAlgebra/Matrix/UpdateSubmatrix): add a way to update a submatrix along embeddings and relative api",
+                  "state": "OPEN"
+                },
+                {
+                  "number": 44905,
+                  "title": "feat(LinearAlgebra/Matrix/Rank): rank of sums and of block triangular matrices",
+                  "state": "CLOSED"
+                },
+                {
+                  "number": 45897,
+                  "title": "[Merged by Bors] - feat(LinearAlgebra/Matrix/PosDef): drop finiteness from many theorems",
+                  "state": "CLOSED"
+                },
+                {
+                  "number": 19607,
+                  "title": "feat: block matrices are totally unimodular",
+                  "state": "CLOSED"
+                },
+                {
+                  "number": 40352,
+                  "title": "[Merged by Bors] - feat(LinearAlgebra/SymplecticGroup): symplectic matrices have determinant 1",
+                  "state": "CLOSED"
+                }
+              ]
+            },
+            "schur_complement_quadratic": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            }
+          },
+          "repo_code_hits": 33,
+          "repo_pr_hits": 40
+        },
+        "HEPLean/PhysLean": {
+          "keywords": {
+            "schurComplement": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            },
+            "fromBlocks": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            },
+            "schur_complement_quadratic": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            }
+          },
+          "repo_code_hits": 0,
+          "repo_pr_hits": 0
+        },
+        "google-deepmind/formal-conjectures": {
+          "keywords": {
+            "schurComplement": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            },
+            "fromBlocks": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 1,
+              "prs": [
+                {
+                  "number": 5476,
+                  "title": "feat(Mathoverflow): add Conrad's question on group schemes over the dual numbers",
+                  "state": "OPEN"
+                }
+              ]
+            },
+            "schur_complement_quadratic": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            }
+          },
+          "repo_code_hits": 0,
+          "repo_pr_hits": 1
+        }
+      },
+      "total_code_hits": 33,
+      "total_pr_hits": 41
+    },
+    {
+      "id": "TARGET-4",
+      "name": "Quaternion Centralizer & 't Hooft Twisted Boundary Rigidity",
+      "keywords": [
+        "Quaternion",
+        "centralizer",
+        "tHooft",
+        "twistedBoundary"
+      ],
+      "results_by_repo": {
+        "leanprover-community/mathlib4": {
+          "keywords": {
+            "Quaternion": {
+              "code_count": 13,
+              "code_paths": [
+                "MathlibTest/Quaternion.lean",
+                "Mathlib/Analysis/Quaternion.lean",
+                "Mathlib/GroupTheory/SpecificGroups/Quaternion.lean",
+                "Mathlib/Algebra/Quaternion.lean",
+                "Mathlib/Algebra/DualQuaternion.lean",
+                "Mathlib/Algebra/QuaternionBasis.lean",
+                "Mathlib/Analysis/Normed/Algebra/QuaternionExponential.lean",
+                "Mathlib/LinearAlgebra/CliffordAlgebra/Equivs.lean",
+                "scripts/nolints_prime_decls.txt",
+                "Mathlib/LinearAlgebra/Complex/Module.lean"
+              ],
+              "pr_count": 20,
+              "prs": [
+                {
+                  "number": 41538,
+                  "title": "feat(Algebra/Quaternion): quaternion are central simple",
+                  "state": "OPEN"
+                },
+                {
+                  "number": 43307,
+                  "title": "feat: quaternion operations with respect to coordinates",
+                  "state": "OPEN"
+                },
+                {
+                  "number": 41536,
+                  "title": "chore(Algebra): make quaternion directory",
+                  "state": "OPEN"
+                },
+                {
+                  "number": 41919,
+                  "title": "feat(Algebra): the Cayley-Dickson construction, octonions and sedenions",
+                  "state": "OPEN"
+                },
+                {
+                  "number": 41921,
+                  "title": "feat(Analysis/Fourier): the Plancherel theorem for hypercomplex Fourier transforms",
+                  "state": "OPEN"
+                }
+              ]
+            },
+            "centralizer": {
+              "code_count": 30,
+              "code_paths": [
+                "Mathlib/Algebra/Ring/Centralizer.lean",
+                "Mathlib/GroupTheory/Subgroup/Centralizer.lean",
+                "Mathlib/GroupTheory/Submonoid/Centralizer.lean",
+                "Mathlib/GroupTheory/Subsemigroup/Centralizer.lean",
+                "Mathlib/Algebra/Algebra/Subalgebra/Centralizer.lean",
+                "Mathlib/GroupTheory/Perm/Centralizer.lean",
+                "Mathlib/GroupTheory/SpecificGroups/Alternating/Centralizer.lean",
+                "Mathlib/GroupTheory/Rank.lean",
+                "Mathlib/Algebra/Star/Center.lean",
+                "Mathlib/GroupTheory/Transfer.lean"
+              ],
+              "pr_count": 20,
+              "prs": [
+                {
+                  "number": 42677,
+                  "title": "feat(FreeGroup): basic center/centralizer properties",
+                  "state": "OPEN"
+                },
+                {
+                  "number": 45981,
+                  "title": "feat: the centralizer of a nontrivial element in a free group is cyclic",
+                  "state": "OPEN"
+                },
+                {
+                  "number": 44244,
+                  "title": "refactor(GroupTheory): make `AddAut` multiplicative again",
+                  "state": "OPEN"
+                },
+                {
+                  "number": 28972,
+                  "title": "feat(LinearAlgebra/Matrix): star-algebra automorphisms on matrices are unitarily inner",
+                  "state": "OPEN"
+                },
+                {
+                  "number": 44466,
+                  "title": "refactor: replace bundled commutative classes by `IsMulCommutative` (experiment)",
+                  "state": "OPEN"
+                }
+              ]
+            },
+            "tHooft": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            },
+            "twistedBoundary": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            }
+          },
+          "repo_code_hits": 43,
+          "repo_pr_hits": 40
+        },
+        "HEPLean/PhysLean": {
+          "keywords": {
+            "Quaternion": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            },
+            "centralizer": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            },
+            "tHooft": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            },
+            "twistedBoundary": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            }
+          },
+          "repo_code_hits": 0,
+          "repo_pr_hits": 0
+        },
+        "google-deepmind/formal-conjectures": {
+          "keywords": {
+            "Quaternion": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            },
+            "centralizer": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            },
+            "tHooft": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            },
+            "twistedBoundary": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            }
+          },
+          "repo_code_hits": 0,
+          "repo_pr_hits": 0
+        }
+      },
+      "total_code_hits": 43,
+      "total_pr_hits": 40
+    },
+    {
+      "id": "TARGET-5",
+      "name": "SU(2) Weyl Integration Measure & Vandermonde Collar Bounds",
+      "keywords": [
+        "weylIntegration",
+        "vandermonde",
+        "SU2",
+        "haarMeasure"
+      ],
+      "results_by_repo": {
+        "leanprover-community/mathlib4": {
+          "keywords": {
+            "weylIntegration": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            },
+            "vandermonde": {
+              "code_count": 7,
+              "code_paths": [
+                "Mathlib/LinearAlgebra/Vandermonde.lean",
+                "Mathlib/Data/Nat/Choose/Vandermonde.lean",
+                "Mathlib/RingTheory/Trace/Basic.lean",
+                "Mathlib/RingTheory/Binomial.lean",
+                "Mathlib/RingTheory/Discriminant.lean",
+                "Mathlib/Algebra/Polynomial/HasseDeriv.lean",
+                "Mathlib/LinearAlgebra/Lagrange.lean"
+              ],
+              "pr_count": 20,
+              "prs": [
+                {
+                  "number": 45008,
+                  "title": "feat(LinearAlgebra/Matrix/Block): the symmetric Pascal matrix has determinant one",
+                  "state": "CLOSED"
+                },
+                {
+                  "number": 35735,
+                  "title": "feat(NumberTheory): analytical properties and lower bounds for Gelfond-Schneider auxiliary function",
+                  "state": "OPEN"
+                },
+                {
+                  "number": 35743,
+                  "title": "feat(NumberTheory): non-vanishing derivative and norm lower bounds for Gelfond-Schneider",
+                  "state": "OPEN"
+                },
+                {
+                  "number": 35744,
+                  "title": "feat(NumberTheory): non-vanishing derivative and algebraic lower bound for Gelfond-Schneider",
+                  "state": "OPEN"
+                },
+                {
+                  "number": 42911,
+                  "title": "feat(NumberTheory): the Gelfond-Schneider theorem (Hilbert's seventh problem)",
+                  "state": "OPEN"
+                }
+              ]
+            },
+            "SU2": {
+              "code_count": 2,
+              "code_paths": [
+                "Mathlib/Algebra/Polynomial/Sturm/Sequence.lean",
+                "docs/references.bib"
+              ],
+              "pr_count": 0,
+              "prs": []
+            },
+            "haarMeasure": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 3,
+              "prs": [
+                {
+                  "number": 39339,
+                  "title": "[Merged by Bors] - feat(ci): add !downstream-check PR-validation workflow",
+                  "state": "CLOSED"
+                },
+                {
+                  "number": 19667,
+                  "title": "[Merged by Bors] - feat(NumberTheory/NumberField/FinitePlaces): the finite places of a number field",
+                  "state": "CLOSED"
+                },
+                {
+                  "number": 7034,
+                  "title": "[Merged by Bors] - feat: add some lemmas for Haar measures",
+                  "state": "CLOSED"
+                }
+              ]
+            }
+          },
+          "repo_code_hits": 9,
+          "repo_pr_hits": 23
+        },
+        "HEPLean/PhysLean": {
+          "keywords": {
+            "weylIntegration": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            },
+            "vandermonde": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            },
+            "SU2": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            },
+            "haarMeasure": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            }
+          },
+          "repo_code_hits": 0,
+          "repo_pr_hits": 0
+        },
+        "google-deepmind/formal-conjectures": {
+          "keywords": {
+            "weylIntegration": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            },
+            "vandermonde": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 4,
+              "prs": [
+                {
+                  "number": 5284,
+                  "title": "feat: add three oriented-matroid conjectures (Roudneff, Las Vergnas simplex, two-colored triangle)",
+                  "state": "OPEN"
+                },
+                {
+                  "number": 7089,
+                  "title": "feat(OEIS/98275): add C1 divisibility with Lean proof link",
+                  "state": "MERGED"
+                },
+                {
+                  "number": 7090,
+                  "title": "feat(OEIS/220119): add C1 divisibility with Lean proof link",
+                  "state": "MERGED"
+                },
+                {
+                  "number": 5930,
+                  "title": "feat(ErdosProblems): formalise Erd\u0151s Problem 1042",
+                  "state": "CLOSED"
+                }
+              ]
+            },
+            "SU2": {
+              "code_count": 3,
+              "code_paths": [
+                "FormalConjectures/ErdosProblems/636.lean",
+                "FormalConjectures/ErdosProblems/803.lean",
+                "FormalConjectures/ErdosProblems/813.lean"
+              ],
+              "pr_count": 1,
+              "prs": [
+                {
+                  "number": 7636,
+                  "title": "feat(millennium): formalise 4D Yang-Mills Existence and Mass Gap conjecture",
+                  "state": "OPEN"
+                }
+              ]
+            },
+            "haarMeasure": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            }
+          },
+          "repo_code_hits": 3,
+          "repo_pr_hits": 5
+        }
+      },
+      "total_code_hits": 12,
+      "total_pr_hits": 28
+    },
+    {
+      "id": "TARGET-6",
+      "name": "Polymer Cluster Expansion & Koteck\u00fd\u2013Preiss Convergence",
+      "keywords": [
+        "clusterExpansion",
+        "KoteckyPreiss",
+        "polymer"
+      ],
+      "results_by_repo": {
+        "leanprover-community/mathlib4": {
+          "keywords": {
+            "clusterExpansion": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 1,
+              "prs": [
+                {
+                  "number": 42888,
+                  "title": "feat(Combinatorics/SimpleGraph): abstract polymer model and the Koteck\u00fd\u2013Preiss criterion",
+                  "state": "OPEN"
+                }
+              ]
+            },
+            "KoteckyPreiss": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            },
+            "polymer": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 1,
+              "prs": [
+                {
+                  "number": 42888,
+                  "title": "feat(Combinatorics/SimpleGraph): abstract polymer model and the Koteck\u00fd\u2013Preiss criterion",
+                  "state": "OPEN"
+                }
+              ]
+            }
+          },
+          "repo_code_hits": 0,
+          "repo_pr_hits": 2
+        },
+        "HEPLean/PhysLean": {
+          "keywords": {
+            "clusterExpansion": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            },
+            "KoteckyPreiss": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            },
+            "polymer": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            }
+          },
+          "repo_code_hits": 0,
+          "repo_pr_hits": 0
+        },
+        "google-deepmind/formal-conjectures": {
+          "keywords": {
+            "clusterExpansion": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            },
+            "KoteckyPreiss": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            },
+            "polymer": {
+              "code_count": 0,
+              "code_paths": [],
+              "pr_count": 0,
+              "prs": []
+            }
+          },
+          "repo_code_hits": 0,
+          "repo_pr_hits": 0
+        }
+      },
+      "total_code_hits": 0,
+      "total_pr_hits": 2
+    }
+  ]
+}

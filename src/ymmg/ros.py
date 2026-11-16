@@ -228,6 +228,8 @@ KNOWN_ADMINISTRATIVE_ROOT_PATHS = {
     "GOVERNANCE_STATE.yaml",
     "PROJECT_INTENT.md",
     "ROADMAP.md",
+    "MATHLIB4_UPSTREAM_PR_MANIFEST.md",
+    "prior_art_audit_receipt.json",
 }
 
 GENERATED_PREFIXES = ("checkpoints/", "evidence/", "experiments/", "numerical/")

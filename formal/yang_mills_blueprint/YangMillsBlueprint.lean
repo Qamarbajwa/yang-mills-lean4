@@ -6,3 +6,5 @@ import YangMillsBlueprint.BlockWeylCollar
 import YangMillsBlueprint.MathlibPR_CubicCollarBounds
 import YangMillsBlueprint.MathlibPR_QuaternionTwistRigidity
 import YangMillsBlueprint.TwistedFluxonRigidity
+import YangMillsBlueprint.CheckAllDecls
+import YangMillsBlueprint.VerifyNoTraps

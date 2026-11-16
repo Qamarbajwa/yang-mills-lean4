@@ -2,7 +2,7 @@
   "manifest_version": "1.0.0",
   "key_id": "chrysalis-local-hmac-2026",
   "algorithm": "HMAC-SHA256",
-  "generated_at": "2026-11-15T17:34:04.136746+00:00",
+  "generated_at": "2026-11-16T09:27:04.677983+00:00",
   "total_artifacts": 74,
   "files": {
     "governance/envelopes/YM-002E.yaml": {
@@ -91,9 +91,9 @@
       "size_bytes": 6364
     },
     "paper/main.tex": {
-      "sha256": "e90ab613a8dbd2fd5867e870433908fee6da6f573b4fa1b9c1aa40466d8ca4ec",
-      "hmac_sha256": "52a26eb21262fef6c68759b8b0cf9bf052f459e75e4347893889283fa66f12e6",
-      "size_bytes": 38949
+      "sha256": "0cf89fcc7e8ae6ae1a2022ebb92a7ab98bd2160a47c18ca54a81ec786da43d24",
+      "hmac_sha256": "093574dea736bdaa3c43e8fe9e5c3887f7e4c3e081fab43cd32bc3f84665eb58",
+      "size_bytes": 40506
     },
     "tests/test_acceptance_identity_separation.py": {
       "sha256": "d108d4e11466e458ea61629b45138b821715a6909adebf18e7ff6916bd9f7952",
@@ -286,9 +286,9 @@
       "size_bytes": 1329
     },
     "tests/test_twisted_fluxon_rigidity_and_lean.py": {
-      "sha256": "421684c03900e690b3031a9353ca4c47e6c7385f17989258d4524b63ca956e70",
-      "hmac_sha256": "87b6c9be1116584c4f767638ff1c8a759b8a71fd0e88ebd90f778c819b52c7b9",
-      "size_bytes": 8492
+      "sha256": "6b66bb5558241525ed484abc28be5489ffbd0be3736dd4855c204dea06db6b56",
+      "hmac_sha256": "fed04510abedcb3d614abd1c859481dd4ae35fd580892ec7dacc77ff26018590",
+      "size_bytes": 11381
     },
     "tests/test_verification_provenance.py": {
       "sha256": "f02101940bad91b82d15b517d5e81179ac3788e1bd4627828bbb59f37fe8f44a",
