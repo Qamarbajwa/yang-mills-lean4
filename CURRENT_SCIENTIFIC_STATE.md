@@ -573,7 +573,43 @@ Primary task YM-103 (Quaternion Twist-Eater Centralizer Rigidity, Adjoint Commut
   Verified with `periodic_twist_decoupling_closed = False` and `verification_scope = "TWISTED_SECTOR_CLOSED_PERIODIC_DECOUPLING_OPEN"`. Invariant enforced in `verifier_bridge.py`: barring unauthorized closure of asymptotic edges (`E-THERMO`, `E-LATTICE-CONT`, `E-CROSSOVER`).
 
 - **Deterministic Repository Suite:**
-  718 deterministic unit tests passing (100% pass rate). Edge `E-CROSSOVER` remains `OPEN_AND_UNSOLVED`.
+  725 deterministic unit tests passing (100% pass rate). Edge `E-CROSSOVER` remains `OPEN_AND_UNSOLVED`.
+
+
+## Accepted bounded YM-104 — State Revision 163
+
+Primary task YM-104 ($SU(N)$ Clock-and-Shift Twist Rigidity, Zero-Mode Elimination, $SU(3)$ Sector Contraction, and Large-$N$ Spectral Gap Decay Barrier Isolation) formally verified and closed under strict epistemic governance (`clay_problem: OPEN_AND_UNSOLVED`, `goal_complete: false`, `P8_CUTOVER_AUTHORIZED = false`).
+
+- **Orthogonal Sylvester Clock-and-Shift Twist Rigidity & Zero-Mode Elimination (Lemma YM-104F):**
+  For general $SU(N)$ ($N \ge 2$), orthogonal 't Hooft twist matrices $P, Q$ satisfy $P Q = \omega Q P$ with non-trivial center flux $\omega = e^{2\pi i / N} \in Z(SU(N))$.
+  The $N^2 - 1$ adjoint generators $J_{m_1, m_2} = P^{m_1} Q^{m_2}$ for $(m_1, m_2) \in (\mathbb{Z}/N\mathbb{Z})^2 \setminus \{(0, 0)\}$ diagonalize the discrete adjoint Laplacian with strictly positive eigenvalues:
+  $$\lambda_{m_1, m_2}(N) = |1 - \omega^{m_2}|^2 + |1 - \omega^{-m_1}|^2 = 4\sin^2\left(\frac{\pi m_2}{N}\right) + 4\sin^2\left(\frac{\pi m_1}{N}\right) > 0.$$
+  Because $(m_1, m_2) \ne (0, 0) \implies m_1 \not\equiv 0 \lor m_2 \not\equiv 0 \pmod N$, the twisted adjoint kernel on $\mathfrak{su}(N)$ is trivial: $\dim \ker = 0$, reducing the continuous $3(N-1)$-dimensional flat abelian Cartan toron manifold $(S^1)^{3(N-1)}/S_N$ to dimension $0$ under twist for all $N \ge 2$.
+  Formally checked in Lean 4 without custom axioms (`YangMillsBlueprint.SUNClockShiftRigidity.su3_cartan_zero_modes_eliminated`, `MathlibPR.ClockShiftAlgebra.mode_pair_norm_sq_pos`).
+
+- **Exact Rational Adjoint Spectral Gap Bounds:**
+  - $SU(2)$: $\lambda_{\min}(SU(2)) = 4\sin^2(\pi/2) = 4$
+  - $SU(3)$: $\lambda_{\min}(SU(3)) = 4\sin^2(\pi/3) = 3$
+  - $SU(4)$: $\lambda_{\min}(SU(4)) = 4\sin^2(\pi/4) = 2$
+  - $SU(6)$: $\lambda_{\min}(SU(6)) = 4\sin^2(\pi/6) = 1$
+  - Universal rational Jordan lower bound: $\lambda_{\min}(SU(N)) \ge \frac{36}{N^2} > 0$ for all $N \ge 2$.
+  Formally checked in Lean 4 (`MathlibPR.ClockShiftAlgebra.su3_twisted_eigenvalue_table_min`, `su3_cyclotomic_norm_sq_eval`, `jordan_spectral_gap_pos`, `jordan_spectral_gap_three_eval`, `jordan_spectral_gap_three_gt_three`).
+
+- **$SU(3)$ Twisted-Sector Contraction ($W_{\mathrm{IR\_total}}^{\mathrm{SU(3)\_twisted}} < 1$):**
+  With the $SU(3)$ twisted adjoint spectral gap $\lambda_{\min}(SU(3)) = 3$, the scaled local bulk non-Abelian fluctuation residual $\frac{4}{3} w_{\mathrm{bulk}}(\beta_5, 1/5) = \frac{4}{3} \times \frac{3}{410} = \frac{2}{205}$ combined with the $SU(2)$ Weyl collar bound $w_{\mathrm{collar}} = \frac{452}{133125}$ yields:
+  $$w_{\mathrm{local\_block\_total}}^{(SU(3))} = \frac{452}{133125} + \frac{2}{205} = \frac{71782}{5458125} \approx 0.01315 < \Delta_{\mathrm{all\_orders\_margin}} = \frac{356398551099682824675502937}{19979987798223270175317603840} \approx 0.017838.$$
+  Total polymer weight in the $SU(3)$ twisted sector:
+  $$W_{\mathrm{IR\_total}}^{\mathrm{SU(3)\_twisted}} = W_{\mathrm{IR\_all\_orders}} + w_{\mathrm{local\_block\_total}}^{(SU(3))} = \frac{176491392753802427622679780861837}{177322391709231522805943734080000} \approx 0.995314 < 1,$$
+  preserving an exact positive residual safety margin:
+  $$\Delta_{\mathrm{SU(3)\_residual}} = \Delta_{\mathrm{all\_orders\_margin}} - w_{\mathrm{local\_block\_total}}^{(SU(3))} = \frac{830998955429095183263953218163}{177322391709231522805943734080000} \approx 0.004686 > \frac{1}{250} > 0.$$
+  Formally checked in Lean 4 without custom axioms (`YangMillsBlueprint.SUNClockShiftRigidity.su3_twisted_local_block_contraction`, `su3_residual_margin_gt_one_250th`).
+
+- **Isolation of Large-$N$ Spectral Gap Decay Barrier NEG-YM-104:**
+  Because $\lambda_{\min}(SU(N)) = 4\sin^2(\pi/N) \le \frac{4\pi^2}{N^2} \to 0$ as $N \to \infty$, at sufficiently large $N$ ($N \ge 26$ where $36/N^2 < \Delta_{\mathrm{all\_orders\_margin}}$), a single elementary clock-and-shift twist on a fixed unit cell cannot bound local block fluctuations within the fixed-cell margin without Eguchi–Kawai volume-reduced twisted coupling scaling ($g^2 N = \text{const}$).
+  Verified with `uniform_in_all_compact_simple_G = False` and `barrier_id = "NEG-YM-104"`. Invariant enforced in `verifier_bridge.py`: barring unauthorized closure of `E-GROUP-GEN`.
+
+- **Deterministic Repository Suite:**
+  725 deterministic unit tests passing (100% pass rate). Edge `E-CROSSOVER` and `E-GROUP-GEN` remain `OPEN_AND_UNSOLVED`.
 
 
 

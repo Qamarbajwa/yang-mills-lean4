@@ -34,6 +34,10 @@ from src.ymmg.twisted_fluxon_rigidity import (
     TwistedFluxonRigidityCertificate,
     evaluate_twisted_fluxon_sector_certificate,
 )
+from src.ymmg.sun_clock_shift_rigidity import (
+    SUNClockShiftCertificate,
+    evaluate_sun_clock_shift_certificate,
+)
 from src.ymmg.certified_linalg import (
     certify_rational_rank_crt,
     evaluate_toron_bulk_schur_audit,
@@ -267,6 +271,40 @@ class CoScientistVerifierBridge:
         }
         return cert.is_certified, failures, details
 
+    def verify_sun_clock_shift_rigidity(
+        self,
+        hyp: YangMillsHypothesis,
+    ) -> Tuple[bool, List[str], Dict[str, Any]]:
+        """
+        Audits SU(N) clock-and-shift twist rigidity, zero-mode elimination,
+        and SU(3) twisted-sector local block contraction (YM-104), while confirming
+        that large-N spectral gap decay blocks closure of E-GROUP-GEN (NEG-YM-104).
+        """
+        cert = evaluate_sun_clock_shift_certificate(n_colors=3)
+        failures: List[str] = []
+        if not cert.is_certified:
+            failures.append(f"SUN_CLOCK_SHIFT_RIGIDITY_FAILED: {cert.failure_reason}")
+
+        details = {
+            "n_colors": cert.n_colors,
+            "periodic_cartan_zero_mode_dim": cert.periodic_cartan_zero_mode_dim,
+            "twisted_clock_shift_zero_mode_dim": cert.twisted_clock_shift_zero_mode_dim,
+            "spectral_gap_lower_bound": str(cert.spectral_gap_lower_bound),
+            "su2_su3_twisted_gap_sufficient": cert.su2_su3_twisted_gap_sufficient,
+            "w_ir_all_orders": str(cert.w_ir_all_orders),
+            "w_collar": str(cert.w_collar),
+            "w_local_bulk": str(cert.w_local_bulk),
+            "w_local_block_total": str(cert.w_local_block_total),
+            "w_ir_twisted_total": str(cert.w_ir_twisted_total),
+            "delta_all_orders_margin": str(cert.delta_all_orders_margin),
+            "delta_residual_margin": str(cert.delta_residual_margin),
+            "uniform_in_all_compact_simple_G": cert.uniform_in_all_compact_simple_G,
+            "barrier_id": cert.barrier_id,
+            "verification_scope": cert.verification_scope,
+            "is_certified": cert.is_certified,
+        }
+        return cert.is_certified, failures, details
+
     def verify_lean_step(
         self,
         hyp: YangMillsHypothesis,
@@ -359,6 +397,10 @@ class CoScientistVerifierBridge:
         if not twisted_ok:
             failures.extend(twisted_failures)
 
+        sun_ok, sun_failures, sun_details = self.verify_sun_clock_shift_rigidity(hyp)
+        if not sun_ok:
+            failures.extend(sun_failures)
+
         lean_res: Dict[str, Any]
         if enable_lean:
             lean_res = self.verify_lean_step(hyp)
@@ -411,6 +453,29 @@ class CoScientistVerifierBridge:
                 "and proven periodic twist decoupling."
             )
 
+        # Check for unauthorized closure of E-GROUP-GEN
+        group_gen_edges = {"E-GROUP-GEN"}
+        claims_group_gen = False
+        if claimed_edge in group_gen_edges:
+            claims_group_gen = True
+        if str(hyp.goal_id).strip() in group_gen_edges:
+            claims_group_gen = True
+        for pred in hyp.predictions:
+            for edge in group_gen_edges:
+                if f"close {edge}" in pred.lower() or f"closes {edge}" in pred.lower() or f"closure of {edge}" in pred.lower():
+                    claims_group_gen = True
+        for edge in group_gen_edges:
+            if f"closes {edge}" in hyp.statement.lower() or f"closing {edge}" in hyp.statement.lower() or f"closed {edge}" in hyp.statement.lower():
+                claims_group_gen = True
+
+        uniform_in_all_G = bool(sun_details.get("uniform_in_all_compact_simple_G", False))
+        if claims_group_gen and not uniform_in_all_G:
+            failures.append(
+                "GROUP_GENERALIZATION_UNAUTHORIZED_FROM_SU2_SU3_AUDIT: "
+                "Large-N spectral gap decay barrier (NEG-YM-104) blocks closure of E-GROUP-GEN "
+                "without Eguchi-Kawai volume-reduced twisted coupling scaling"
+            )
+
         all_passed = (
             (len(failures) == 0)
             and rational_ok
@@ -419,6 +484,7 @@ class CoScientistVerifierBridge:
             and linalg_ok
             and block_ok
             and twisted_ok
+            and sun_ok
             and (lean_ok if require_lean else True)
         )
 
@@ -438,6 +504,8 @@ class CoScientistVerifierBridge:
             "block_weyl_collar_details": block_details,
             "twisted_fluxon_rigidity_ok": twisted_ok,
             "twisted_fluxon_rigidity_details": twisted_details,
+            "sun_clock_shift_rigidity_ok": sun_ok,
+            "sun_clock_shift_rigidity_details": sun_details,
             "lean_ok": lean_ok,
             "lean_status": lean_status,
             "lean_res": lean_res,

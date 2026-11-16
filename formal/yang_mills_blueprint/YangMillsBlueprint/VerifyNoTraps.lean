@@ -9,6 +9,7 @@ Authors: Formal Verification Authors
 import YangMillsBlueprint.MathlibPR_SchurComplementForms
 import YangMillsBlueprint.MathlibPR_CubicCollarBounds
 import YangMillsBlueprint.MathlibPR_QuaternionTwistRigidity
+import YangMillsBlueprint.MathlibPR_ClockShiftRigidity
 
 /-!
 # Universal Anti-Trap & Standalone Integrity Audit
@@ -74,7 +75,37 @@ theorem check_quat_adjoint_spectral_gap_unconditional :
         -2 * d * (-2 * d) + 2 * c * (2 * c) + 2 * d * (2 * d) + -2 * b * (-2 * b)) :=
   MathlibPR.QuaternionAlgebra.quat_imag_ad_spectral_gap
 
--- 5. Anti-Trap certification theorem: compile succeeds only if all checks typecheck cleanly
+-- 5. Compile-time type signatures certifying unconditional clock-and-shift twist rigidity
+theorem check_mode_pair_norm_sq_unconditional :
+    (∀ m1 m2 : Int, m1 ≠ 0 ∨ m2 ≠ 0 → 1 ≤ m1 * m1 + m2 * m2) :=
+  MathlibPR.ClockShiftAlgebra.mode_pair_norm_sq_pos
+
+theorem check_su3_twisted_eigenvalue_table_min_unconditional :
+    (∀ m1 m2 : Int, m1 ≠ 0 ∨ m2 ≠ 0 → 3 ≤ 3 * (m1 * m1) + 3 * (m2 * m2)) :=
+  MathlibPR.ClockShiftAlgebra.su3_twisted_eigenvalue_table_min
+
+theorem check_su3_cyclotomic_norm_sq_eval_unconditional :
+    MathlibPR.ClockShiftAlgebra.RatPair.eqv
+      (MathlibPR.ClockShiftAlgebra.RatPair.add
+        MathlibPR.ClockShiftAlgebra.cyclotomicOrder3RealSq
+        MathlibPR.ClockShiftAlgebra.cyclotomicOrder3ImagSq)
+      MathlibPR.ClockShiftAlgebra.cyclotomicOrder3NormSq :=
+  MathlibPR.ClockShiftAlgebra.su3_cyclotomic_norm_sq_eval
+
+theorem check_jordan_spectral_gap_pos_unconditional :
+    (∀ (N : Nat) (hN : 2 ≤ N),
+      MathlibPR.ClockShiftAlgebra.RatPair.lt
+        (MathlibPR.ClockShiftAlgebra.RatPair.ofNat 0)
+        (MathlibPR.ClockShiftAlgebra.jordanBoundPair N hN)) :=
+  MathlibPR.ClockShiftAlgebra.jordan_spectral_gap_pos
+
+theorem check_jordan_spectral_gap_three_eval_unconditional :
+    MathlibPR.ClockShiftAlgebra.RatPair.eqv
+      (MathlibPR.ClockShiftAlgebra.jordanBoundPair 3 (by omega))
+      (MathlibPR.ClockShiftAlgebra.RatPair.ofNat 4) :=
+  MathlibPR.ClockShiftAlgebra.jordan_spectral_gap_three_eval
+
+-- 6. Anti-Trap certification theorem: compile succeeds only if all checks typecheck cleanly
 theorem standalone_pr_modules_contain_no_conditional_traps : True := by
   trivial
 

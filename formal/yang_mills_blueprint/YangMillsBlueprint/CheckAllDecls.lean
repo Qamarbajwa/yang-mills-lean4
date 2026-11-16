@@ -12,6 +12,8 @@ import YangMillsBlueprint.BlockWeylCollar
 import YangMillsBlueprint.MathlibPR_CubicCollarBounds
 import YangMillsBlueprint.MathlibPR_QuaternionTwistRigidity
 import YangMillsBlueprint.TwistedFluxonRigidity
+import YangMillsBlueprint.MathlibPR_ClockShiftRigidity
+import YangMillsBlueprint.SUNClockShiftRigidity
 
 #check YangMillsBlueprint.block_mode_dimension_additivity
 #print axioms YangMillsBlueprint.block_mode_dimension_additivity
@@ -132,3 +134,42 @@ import YangMillsBlueprint.TwistedFluxonRigidity
 
 #check YangMillsBlueprint.TwistedFluxonRigidity.twisted_fluxon_adjoint_spectral_gap
 #print axioms YangMillsBlueprint.TwistedFluxonRigidity.twisted_fluxon_adjoint_spectral_gap
+
+#check MathlibPR.ClockShiftAlgebra.mode_pair_norm_sq_pos
+#print axioms MathlibPR.ClockShiftAlgebra.mode_pair_norm_sq_pos
+
+#check MathlibPR.ClockShiftAlgebra.mode_pair_ne_zero_norm_sq_pos
+#print axioms MathlibPR.ClockShiftAlgebra.mode_pair_ne_zero_norm_sq_pos
+
+#check MathlibPR.ClockShiftAlgebra.su3_twisted_eigenvalue_table_min
+#print axioms MathlibPR.ClockShiftAlgebra.su3_twisted_eigenvalue_table_min
+
+#check MathlibPR.ClockShiftAlgebra.su3_cyclotomic_norm_sq_eval
+#print axioms MathlibPR.ClockShiftAlgebra.su3_cyclotomic_norm_sq_eval
+
+#check MathlibPR.ClockShiftAlgebra.jordan_spectral_gap_pos
+#print axioms MathlibPR.ClockShiftAlgebra.jordan_spectral_gap_pos
+
+#check MathlibPR.ClockShiftAlgebra.jordan_spectral_gap_three_eval
+#print axioms MathlibPR.ClockShiftAlgebra.jordan_spectral_gap_three_eval
+
+#check MathlibPR.ClockShiftAlgebra.jordan_spectral_gap_three_gt_three
+#print axioms MathlibPR.ClockShiftAlgebra.jordan_spectral_gap_three_gt_three
+
+#check YangMillsBlueprint.SUNClockShiftRigidity.su3_bulk_composition_eqv
+#print axioms YangMillsBlueprint.SUNClockShiftRigidity.su3_bulk_composition_eqv
+
+#check YangMillsBlueprint.SUNClockShiftRigidity.su3_local_block_fits_margin
+#print axioms YangMillsBlueprint.SUNClockShiftRigidity.su3_local_block_fits_margin
+
+#check YangMillsBlueprint.SUNClockShiftRigidity.su3_twisted_local_block_contraction
+#print axioms YangMillsBlueprint.SUNClockShiftRigidity.su3_twisted_local_block_contraction
+
+#check YangMillsBlueprint.SUNClockShiftRigidity.su3_residual_margin_gt_one_250th
+#print axioms YangMillsBlueprint.SUNClockShiftRigidity.su3_residual_margin_gt_one_250th
+
+#check YangMillsBlueprint.SUNClockShiftRigidity.su3_cartan_zero_modes_eliminated
+#print axioms YangMillsBlueprint.SUNClockShiftRigidity.su3_cartan_zero_modes_eliminated
+
+#check YangMillsBlueprint.SUNClockShiftRigidity.su3_discrete_laplacian_spectral_gap
+#print axioms YangMillsBlueprint.SUNClockShiftRigidity.su3_discrete_laplacian_spectral_gap

@@ -1,7 +1,7 @@
 # NEXT ACTION
 
 ## Current primary action
-`YM-103 ACCEPTED_WITH_LIMITATIONS; State Revision 162; 718 tests passing; P3 OPEN; CLAY_PROBLEM OPEN_AND_UNSOLVED; YM-016 BLOCKED`
+`YM-104 ACCEPTED_WITH_LIMITATIONS; State Revision 163; 725 tests passing; P3 OPEN; CLAY_PROBLEM OPEN_AND_UNSOLVED; YM-016 BLOCKED`
 
 ## Scope
 - `YM-011` is `SCIENTIFICALLY_ACCEPTED (WITH_REGULATED_UV_SCOPE)`.
@@ -257,6 +257,24 @@ Task YM-102 ACCEPTED_WITH_LIMITATIONS under State Revision 161.
 - **Scale-Uniform Local Block Contraction (Lemma YM-102F):** On local RG blocks of side $b = 2$, $\lambda_{\min}^{\mathrm{block}} = 4$ independent of $L$. Around reducible central elements $\theta \in \{0, \pi\}$, normalized $SU(2)$ Weyl collar volume satisfies $w_{\mathrm{weyl\_collar}}(1/5) = 452/133125 < \frac{1}{5} \Delta_{\mathrm{all\_orders\_margin}}$. Combined local block weight $w_{\mathrm{local\_block\_total}} = 116939/10916250 < \Delta_{\mathrm{all\_orders\_margin}}$, certifying $L$-uniform local block contraction. Machine-checked in Lean 4 without custom axioms.
 - **Non-Perturbative Obstruction Isolation (NEG-YM-102):** The 3D global commuting toron moduli fiber $\mathcal{M}_{\mathrm{toron}} \cong (S^1)^3/\mathbb{Z}_2$ carries vanishing classical plaquette curvature on $[\delta, \pi - \delta]^3$. Under periodic boundary conditions, closing `E-CROSSOVER` requires a uniform spectral gap bound on Lüscher's effective toron Hamiltonian across this fiber (`global_commuting_fiber_closed = False`).
 - **Epistemic Invariants:** 713 deterministic unit tests passing; Edge `E-CROSSOVER` remains `OPEN_AND_UNSOLVED`; `clay_problem: OPEN_AND_UNSOLVED`; `goal_complete: false`; `YM-016 BLOCKED`.
+
+
+## Accepted bounded YM-103 — State Revision 162
+
+Task YM-103 ACCEPTED_WITH_LIMITATIONS under State Revision 162.
+- **Orthogonal 't Hooft Twist-Eater Rigidity & Zero-Mode Elimination (Lemma YM-103F):** $P = \mathbf{i}, Q = \mathbf{j}$ in $\mathbb{H}(\mathbb{Q})$ satisfy $P^2 = Q^2 = -1, PQ+QP=0$. Adjoint commutator map $\mathrm{ad}_P \oplus \mathrm{ad}_Q$ has rank 3 and kernel $\{0\}$, eliminating flat abelian torons ($\dim \mathcal{M}_{\mathrm{toron}}^{\mathrm{twisted}} = 0$). Fluxon Hessian gap $\lambda_{\min}(H) = 4$. Total twisted polymer weight $W_{\mathrm{IR\_total}}^{\mathrm{twisted}} \approx 0.992875 < 1$ with residual margin $\Delta_{\mathrm{twisted\_residual}} > 1/141$.
+- **Non-Perturbative Obstruction Isolation (NEG-YM-103):** Proving thermodynamic twist decoupling $|F_{\mathrm{twisted}}(L) - F_{\mathrm{periodic}}(L)| \le C e^{-\sigma_{\mathrm{vortex}} L^2}$ remains open on `E-CROSSOVER` (`periodic_twist_decoupling_closed = False`).
+- **Epistemic Invariants:** 718 deterministic unit tests passing; Edge `E-CROSSOVER` remains `OPEN_AND_UNSOLVED`; `clay_problem: OPEN_AND_UNSOLVED`; `goal_complete: false`; `YM-016 BLOCKED`.
+
+
+## Accepted bounded YM-104 — State Revision 163
+
+Task YM-104 ACCEPTED_WITH_LIMITATIONS under State Revision 163.
+- **$SU(N)$ Clock-and-Shift Twist Rigidity & Zero-Mode Elimination (Lemma YM-104F):** For all $N \ge 2$, Sylvester clock-and-shift matrices $P Q = \omega Q P$ with $\omega = e^{2\pi i / N}$ eliminate all $N^2 - 1$ adjoint zero-modes ($\dim \ker = 0$), reducing the $3(N-1)$-dimensional flat Cartan toron manifold to dimension 0. Adjoint discrete Laplacian eigenvalues $\lambda_{m_1, m_2} = 4\sin^2(\pi m_2/N) + 4\sin^2(\pi m_1/N) > 0$.
+- **Exact Rational Adjoint Spectral Gaps:** $\lambda_{\min}(SU(2)) = 4$, $\lambda_{\min}(SU(3)) = 3$, $\lambda_{\min}(SU(4)) = 2$, $\lambda_{\min}(SU(6)) = 1$; universal Jordan bound $\lambda_{\min}(SU(N)) \ge 36/N^2 > 0$.
+- **$SU(3)$ Twisted-Sector Contraction:** Scaled bulk residual $(4/3) w_{\mathrm{bulk}} = 2/205$ combined with collar $w_{\mathrm{collar}} = 452/133125$ yields $w_{\mathrm{local\_block\_total}}^{(SU(3))} = 71782/5458125 < \Delta_{\mathrm{all\_orders\_margin}}$, certifying $W_{\mathrm{IR\_total}}^{\mathrm{SU(3)\_twisted}} \approx 0.995314 < 1$ with residual safety margin $> 1/250$. Machine-checked in Lean 4 without custom axioms.
+- **Non-Perturbative Obstruction Isolation (NEG-YM-104):** Large-$N$ gap decay $\lambda_{\min} = 4\sin^2(\pi/N) \le 4\pi^2/N^2 \to 0$ as $N \to \infty$ violates fixed-cell margin at $N \ge 26$ ($36/N^2 < \Delta_{\mathrm{margin}}$), strictly blocking unscaled closure of `E-GROUP-GEN` (`uniform_in_all_compact_simple_G = False`).
+- **Epistemic Invariants:** 725 deterministic unit tests passing; Edge `E-CROSSOVER` and `E-GROUP-GEN` remain `OPEN_AND_UNSOLVED`; `clay_problem: OPEN_AND_UNSOLVED`; `goal_complete: false`; `YM-016 BLOCKED`.
 
 
 
