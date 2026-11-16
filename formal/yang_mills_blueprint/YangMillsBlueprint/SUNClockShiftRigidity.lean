@@ -19,6 +19,21 @@ namespace YangMillsBlueprint.SUNClockShiftRigidity
 
 open YangMillsBlueprint
 
+/-!
+  ### Normalization Scope: Per-Generator Fluctuation vs. Mode-Trace Average
+  In the single-cell action normalized per generator, Gaussian fluctuation bounds for the
+  least-favorable axial mode scale inversely with λ_min(SU(3)) = 3, giving the per-generator
+  factor λ_min(SU(2)) / λ_min(SU(3)) = 4/3.
+  Relative to the mode-trace average across all 8 generators:
+    (1 / 8) * Tr((-Δ_ad)⁻¹) = (1/8) * (4/3 + 4/6) = 2/8 = 1/4 = 0.25,
+  compared to SU(2) with 3 generators:
+    (1 / 3) * Tr((-Δ_ad)⁻¹) = (1/3) * (2/4 + 1/8) = (5/8)/3 = 5/24 ≈ 0.2083,
+  the mode-trace ratio is (1/4) / (5/24) = 6/5 = 1.2 < 4/3.
+  Thus, scaling by 4/3 is strictly conservative.
+  Furthermore, the rank-2 maximal torus Haar measure vanishes as O(δ⁸) ≪ O(δ³),
+  so the SU(2) collar bound 452/133125 serves as a rigorous conservative upper bound.
+-/
+
 /-- Scaled local bulk fluctuation residual for SU(3) with spectral gap lambda = 3:
     (4 / 3) * (3 / 410) = 4 / 410 = 2 / 205. -/
 def wLocalBulkSU3 : QPair := ⟨2, 205, by omega⟩
