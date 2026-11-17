@@ -230,6 +230,7 @@ KNOWN_ADMINISTRATIVE_ROOT_PATHS = {
     "ROADMAP.md",
     "MATHLIB4_UPSTREAM_PR_MANIFEST.md",
     "prior_art_audit_receipt.json",
+    ".zenodo.json",
 }
 
 GENERATED_PREFIXES = ("checkpoints/", "evidence/", "experiments/", "numerical/")

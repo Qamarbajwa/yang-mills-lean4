@@ -70,14 +70,16 @@ In accordance with academic publishing standards, the repository produces four f
 
 ```mermaid
 flowchart TD
+    BASE["Published Baseline Literature<br>(Bałaban 1984–1989; 't Hooft 1979; Lüscher 1982)"]
     P1["PAPER 1: Ultraviolet Flowed Field Construction & Local Wightman Reconstruction<br>(Finite volume continuum limit, OS0–OS3 on half-space, relativistic spectrum)"]
-    P2["PAPER 2: Multiscale Small-Field Polymer Contraction & Cubic Weyl Collar Bounds<br>(Lean 4 proof: Cauchy–Taylor polydisk bound, δ = 1/5 collar w = 452/133125)"]
-    P3["PAPER 3: Orthogonal Twist-Eater Rigidity on SU(2) and SU(3)<br>(Lean 4 proof: toron zero-mode elimination, λ_min ≥ 3, W < 1)"]
-    P4["PAPER 4: The Crossover Obstruction Atlas & Dual Lie Group Barriers<br>(Tripartite infrared barrier at k=5, NEG-YM-104a large-N & NEG-YM-104b centerless G)"]
+    P2["PAPER 2: Multiscale Small-Field Polymer Contraction & Cubic Weyl Collar Bounds<br>(Lean 4 proof: PolydiskMajorant, CubicSinBounds, δ = 1/5 collar w = 452/133125)"]
+    P3["PAPER 3: Orthogonal Twist-Eater Rigidity on SU(2) and SU(3)<br>(Lean 4 proof: QuaternionCentralizer, ClockShiftMatrices, λ_min(SU(2))=4, λ_min(SU(3))=3, λ_min ≥ 3)"]
+    P4["PAPER 4: The Crossover Obstruction Atlas & Dual Lie Group Barriers<br>(Tripartite infrared barrier at k=5, large-N gap decay & centerless Lie groups)"]
 
-    P1 --> P2
-    P2 --> P3
-    P3 --> P4
+    BASE --> P1
+    BASE --> P2
+    BASE --> P3
+    BASE --> P4
 ```
 
 ### Paper 1: Ultraviolet Flowed Field Construction & Local Wightman Reconstruction (Finite Volume)

@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+from __future__ import annotations
+
 """
 Turnkey Referee Verifier for the Yang-Mills Continuum QFT Submission Package
 ===========================================================================
@@ -247,6 +249,7 @@ def check_negative_evidence_integrity():
             cwd=str(ROOT),
             capture_output=True,
             text=True,
+            encoding="utf-8",
             check=True,
         )
         parts = res.stdout.strip().split()
@@ -276,6 +279,7 @@ def run_pytest_suite():
             cwd=str(ROOT),
             capture_output=True,
             text=True,
+            encoding="utf-8",
         )
         elapsed = time.time() - start_time
         lines = res.stdout.strip().splitlines()
@@ -357,6 +361,27 @@ def verify_chrysalis_security_gates():
         return False
 
 
+def verify_mathlib_staging_hygiene():
+    print("\n[Step 7/7] Auditing Layer 1 MathlibStaging Namespace & Style Hygiene...")
+    staging_dir = ROOT / "formal" / "yang_mills_blueprint" / "YangMillsBlueprint" / "MathlibStaging"
+    if not staging_dir.is_dir():
+        print("  [FAIL] MathlibStaging directory not found!")
+        return False
+    all_ok = True
+    for lean_file in sorted(staging_dir.glob("*.lean")):
+        text = lean_file.read_text(encoding="utf-8")
+        if "namespace MathlibStaging" in text:
+            print(f"  [FAIL] Forbidden 'namespace MathlibStaging' in {lean_file.name}")
+            all_ok = False
+        long_lines = [i + 1 for i, l in enumerate(text.splitlines()) if len(l) > 100]
+        if long_lines:
+            print(f"  [FAIL] Lines > 100 chars in {lean_file.name}: {long_lines}")
+            all_ok = False
+    if all_ok:
+        print("  [PASS] All MathlibStaging modules use clean namespaces and <= 100 chars/line.")
+    return all_ok
+
+
 def main():
     print_banner()
     results = [
@@ -366,6 +391,7 @@ def main():
         run_pytest_suite(),
         verify_epistemic_invariants(),
         verify_chrysalis_security_gates(),
+        verify_mathlib_staging_hygiene(),
     ]
 
     print("\n" + "=" * 80)
