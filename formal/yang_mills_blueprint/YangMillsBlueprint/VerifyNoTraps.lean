@@ -21,6 +21,9 @@ import YangMillsBlueprint.MathlibStaging.AsymptoticFreedomFlow
 import YangMillsBlueprint.MathlibStaging.SpectralMassGapBridge
 import YangMillsBlueprint.MathlibStaging.TEKFourPlaneLattice
 import YangMillsBlueprint.MathlibStaging.ExceptionalE8Cartan
+import YangMillsBlueprint.MathlibStaging.ClassicalAndExceptionalCartan
+import YangMillsBlueprint.MathlibStaging.LeviStratumCounting
+import YangMillsBlueprint.MathlibStaging.LoopBootstrapMomentBounds
 import YangMillsBlueprint.Certificates.YM101_CauchyPolydiskCert
 import YangMillsBlueprint.Certificates.YM102_WeylCollarCert
 import YangMillsBlueprint.Certificates.YM103_SU2TwistRigidityCert
@@ -34,6 +37,9 @@ import YangMillsBlueprint.Certificates.YM110_AsymptoticFreedomCert
 import YangMillsBlueprint.Certificates.YM111_ClayTargetSpecCert
 import YangMillsBlueprint.Certificates.YM112_TEKFourPlaneCert
 import YangMillsBlueprint.Certificates.YM113_E8CartanRigidityCert
+import YangMillsBlueprint.Certificates.YM114_ClassicalExceptionalCartanCert
+import YangMillsBlueprint.Certificates.YM115_LeviStratumCert
+import YangMillsBlueprint.Certificates.YM116_CrossoverBootstrapCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -178,6 +184,32 @@ private def auditedTheorems : List Name :=
   , ``YangMillsBlueprint.Certificates.e8_coxeter_cartan_zero_mode_eliminated
   , ``YangMillsBlueprint.Certificates.e8_cartan_form_nonneg
   , ``YangMillsBlueprint.Certificates.e8_unit_simple_root_stiffness
+  , ``ClassicalAndExceptionalCartan.aCartanForm_eq_sum_sq
+  , ``ClassicalAndExceptionalCartan.aCartanForm_nonneg
+  , ``ClassicalAndExceptionalCartan.aCartanForm_eq_zero_iff
+  , ``ClassicalAndExceptionalCartan.e6_sum_of_squares_eq
+  , ``ClassicalAndExceptionalCartan.e6CartanForm_eq_zero_iff
+  , ``ClassicalAndExceptionalCartan.e7_sum_of_squares_eq
+  , ``ClassicalAndExceptionalCartan.e7CartanForm_eq_zero_iff
+  , ``LeviStratumCounting.stratum_dimension_conservation
+  , ``LeviStratumCounting.four_mul_alphaReg_sub_alphaHarm_eq
+  , ``LeviStratumCounting.alphaHarm_central_le_alphaReg
+  , ``LoopBootstrapMomentBounds.sq_le_moment_of_schur
+  , ``LoopBootstrapMomentBounds.loop_eq_level4_quadratic_le
+  , ``LoopBootstrapMomentBounds.completed_square_identity
+  , ``LoopBootstrapMomentBounds.loop_eq_level4_completed_square_le
+  , ``LoopBootstrapMomentBounds.domino_reflection_positivity_bound
+  , ``YangMillsBlueprint.Certificates.su_an_cartan_zero_mode_eliminated
+  , ``YangMillsBlueprint.Certificates.su_an_cartan_form_nonneg
+  , ``YangMillsBlueprint.Certificates.e6_coxeter_cartan_zero_mode_eliminated
+  , ``YangMillsBlueprint.Certificates.e7_coxeter_cartan_zero_mode_eliminated
+  , ``YangMillsBlueprint.Certificates.e6_e7_unit_simple_root_stiffness
+  , ``YangMillsBlueprint.Certificates.su_n_levi_stratum_mode_balance
+  , ``YangMillsBlueprint.Certificates.central_toron_harmonic_exponent_le_regular
+  , ``YangMillsBlueprint.Certificates.su3_central_vs_regular_exponent_eval
+  , ``YangMillsBlueprint.Certificates.crossover_level4_bootstrap_window
+  , ``YangMillsBlueprint.Certificates.canonical_crossover_rhs_eval
+  , ``YangMillsBlueprint.Certificates.crossover_level4_domino_coupling_conditional
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -192,6 +224,9 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.RealMassGapSpecCert
   , ``YangMillsBlueprint.Certificates.TEKFourPlaneCert
   , ``YangMillsBlueprint.Certificates.ExceptionalE8RigidityCert
+  , ``YangMillsBlueprint.Certificates.ClassicalExceptionalCartanCert
+  , ``YangMillsBlueprint.Certificates.LeviStratumCert
+  , ``YangMillsBlueprint.Certificates.CrossoverBootstrapCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
