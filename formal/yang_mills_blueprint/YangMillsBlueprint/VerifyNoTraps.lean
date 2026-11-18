@@ -38,6 +38,7 @@ import YangMillsBlueprint.MathlibStaging.TomboulisCharacterFlow
 import YangMillsBlueprint.MathlibStaging.EquicontinuousTightnessBridge
 import YangMillsBlueprint.MathlibStaging.CenterlessWeylAlcoveGap
 import YangMillsBlueprint.MathlibStaging.ChessboardHolderBound
+import YangMillsBlueprint.MathlibStaging.VortexSpreadingBound
 import YangMillsBlueprint.Certificates.YM101_CauchyPolydiskCert
 import YangMillsBlueprint.Certificates.YM102_WeylCollarCert
 import YangMillsBlueprint.Certificates.YM103_SU2TwistRigidityCert
@@ -69,6 +70,7 @@ import YangMillsBlueprint.Certificates.YM128_TomboulisRougheningCert
 import YangMillsBlueprint.Certificates.YM129_ContinuumTightnessCert
 import YangMillsBlueprint.Certificates.YM130_CenterlessGroupGapCert
 import YangMillsBlueprint.Certificates.YM131_FILSChessboardCert
+import YangMillsBlueprint.Certificates.YM132_ThickVortexSpreadingCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -321,6 +323,11 @@ private def auditedTheorems : List Name :=
   , ``ChessboardHolderBound.chessboard_strict_threshold_lt
   , ``YangMillsBlueprint.Certificates.fils_chessboard_cluster_decay_conditional
   , ``YangMillsBlueprint.Certificates.canonical_fils_chessboard_eval
+  , ``VortexSpreadingBound.one_sub_cos_le_sq_div_two
+  , ``VortexSpreadingBound.spreadTrigCost_le
+  , ``VortexSpreadingBound.spreadTrigCost_lt_of_cutoff
+  , ``YangMillsBlueprint.Certificates.thick_vortex_spread_cost_lt_conditional
+  , ``YangMillsBlueprint.Certificates.canonical_thick_vortex_w16_lt_tenth
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -353,6 +360,7 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.ContinuumTightnessCert
   , ``YangMillsBlueprint.Certificates.CenterlessGroupGapCert
   , ``YangMillsBlueprint.Certificates.FILSChessboardCert
+  , ``YangMillsBlueprint.Certificates.ThickVortexSpreadingCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -611,5 +619,10 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #print axioms ChessboardHolderBound.chessboard_cluster_suppression
 #print axioms YangMillsBlueprint.Certificates.fils_chessboard_cluster_decay_conditional
 #print axioms YangMillsBlueprint.Certificates.canonical_fils_chessboard_eval
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.ThickVortexSpreadingCert)
+#print axioms VortexSpreadingBound.spreadTrigCost_le
+#print axioms VortexSpreadingBound.spreadTrigCost_lt_of_cutoff
+#print axioms YangMillsBlueprint.Certificates.thick_vortex_spread_cost_lt_conditional
+#print axioms YangMillsBlueprint.Certificates.canonical_thick_vortex_w16_lt_tenth
 
 end YangMillsBlueprint.VerifyNoTraps
