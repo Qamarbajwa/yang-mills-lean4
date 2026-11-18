@@ -320,3 +320,22 @@ inferInstance : Nonempty Certificates.BianchiDyadicAccumulationCert
 'YangMillsBlueprint.Certificates.dyadic_bianchi_saturation_conditional' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+inferInstance : Nonempty Certificates.BianchiCocycleCert
+'BianchiCocycleDecomposition.adjAction_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BianchiCocycleDecomposition.adjDelta_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BianchiCocycleDecomposition.frobSq_matrixComm_mul_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BianchiCocycleDecomposition.cocycleLoss_split_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BianchiCocycleDecomposition.dyadic_step_ge_of_remainder_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.so3RotZ345_orth1' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMillsBlueprint.Certificates.so3RotZ345_orth2' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMillsBlueprint.Certificates.canonical_cocycle_dV_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMillsBlueprint.Certificates.canonical_cocycle_dVV_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMillsBlueprint.Certificates.canonical_cocycle_eps_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMillsBlueprint.Certificates.canonical_cocycle_superdyadic_lt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.cocycle_dyadic_lower_bound_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -89,6 +89,7 @@ import YangMillsBlueprint.Certificates.YM138_SliceTensorGapCert
 import YangMillsBlueprint.Certificates.YM139_BianchiScreenedVarianceCert
 import YangMillsBlueprint.Certificates.YM140_CoarseSliceDobrushinCert
 import YangMillsBlueprint.Certificates.YM141_BianchiDyadicAccumulationCert
+import YangMillsBlueprint.Certificates.YM142_BianchiCocycleCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -421,6 +422,18 @@ private def auditedTheorems : List Name :=
   , ``YangMillsBlueprint.Certificates.abelian_dyadic_loss_zero
   , ``YangMillsBlueprint.Certificates.dyadic_bianchi_step_amplifies
   , ``YangMillsBlueprint.Certificates.dyadic_bianchi_saturation_conditional
+  , ``BianchiCocycleDecomposition.adjAction_mul
+  , ``BianchiCocycleDecomposition.adjDelta_mul
+  , ``BianchiCocycleDecomposition.frobSq_matrixComm_mul_eq
+  , ``BianchiCocycleDecomposition.cocycleLoss_split_eq
+  , ``BianchiCocycleDecomposition.dyadic_step_ge_of_remainder_bound
+  , ``YangMillsBlueprint.Certificates.so3RotZ345_orth1
+  , ``YangMillsBlueprint.Certificates.so3RotZ345_orth2
+  , ``YangMillsBlueprint.Certificates.canonical_cocycle_dV_eq
+  , ``YangMillsBlueprint.Certificates.canonical_cocycle_dVV_eq
+  , ``YangMillsBlueprint.Certificates.canonical_cocycle_eps_eq
+  , ``YangMillsBlueprint.Certificates.canonical_cocycle_superdyadic_lt
+  , ``YangMillsBlueprint.Certificates.cocycle_dyadic_lower_bound_conditional
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -463,6 +476,7 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.BianchiScreenedVarianceCert
   , ``YangMillsBlueprint.Certificates.CoarseSliceDobrushinCert
   , ``YangMillsBlueprint.Certificates.BianchiDyadicAccumulationCert
+  , ``YangMillsBlueprint.Certificates.BianchiCocycleCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -794,5 +808,18 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #print axioms YangMillsBlueprint.Certificates.abelian_dyadic_loss_zero
 #print axioms YangMillsBlueprint.Certificates.dyadic_bianchi_step_amplifies
 #print axioms YangMillsBlueprint.Certificates.dyadic_bianchi_saturation_conditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.BianchiCocycleCert)
+#print axioms BianchiCocycleDecomposition.adjAction_mul
+#print axioms BianchiCocycleDecomposition.adjDelta_mul
+#print axioms BianchiCocycleDecomposition.frobSq_matrixComm_mul_eq
+#print axioms BianchiCocycleDecomposition.cocycleLoss_split_eq
+#print axioms BianchiCocycleDecomposition.dyadic_step_ge_of_remainder_bound
+#print axioms YangMillsBlueprint.Certificates.so3RotZ345_orth1
+#print axioms YangMillsBlueprint.Certificates.so3RotZ345_orth2
+#print axioms YangMillsBlueprint.Certificates.canonical_cocycle_dV_eq
+#print axioms YangMillsBlueprint.Certificates.canonical_cocycle_dVV_eq
+#print axioms YangMillsBlueprint.Certificates.canonical_cocycle_eps_eq
+#print axioms YangMillsBlueprint.Certificates.canonical_cocycle_superdyadic_lt
+#print axioms YangMillsBlueprint.Certificates.cocycle_dyadic_lower_bound_conditional
 
 end YangMillsBlueprint.VerifyNoTraps
