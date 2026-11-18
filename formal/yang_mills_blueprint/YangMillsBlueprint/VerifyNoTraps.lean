@@ -40,6 +40,7 @@ import YangMillsBlueprint.MathlibStaging.CenterlessWeylAlcoveGap
 import YangMillsBlueprint.MathlibStaging.ChessboardHolderBound
 import YangMillsBlueprint.MathlibStaging.VortexSpreadingBound
 import YangMillsBlueprint.MathlibStaging.CosetSignMagnitudeCreutz
+import YangMillsBlueprint.MathlibStaging.NonAbelianBianchiDefect
 import YangMillsBlueprint.Certificates.YM101_CauchyPolydiskCert
 import YangMillsBlueprint.Certificates.YM102_WeylCollarCert
 import YangMillsBlueprint.Certificates.YM103_SU2TwistRigidityCert
@@ -73,6 +74,7 @@ import YangMillsBlueprint.Certificates.YM130_CenterlessGroupGapCert
 import YangMillsBlueprint.Certificates.YM131_FILSChessboardCert
 import YangMillsBlueprint.Certificates.YM132_ThickVortexSpreadingCert
 import YangMillsBlueprint.Certificates.YM133_GaugeInvariantCosetCert
+import YangMillsBlueprint.Certificates.YM134_BianchiCubeDefectCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -337,6 +339,13 @@ private def auditedTheorems : List Name :=
   , ``CosetSignMagnitudeCreutz.creutzRatio_pos_of_sign_dominance
   , ``YangMillsBlueprint.Certificates.gauge_invariant_coset_creutz_gap_conditional
   , ``YangMillsBlueprint.Certificates.canonical_gauge_invariant_coset_creutz_pos
+  , ``NonAbelianBianchiDefect.transportDiffNormSq_eq
+  , ``NonAbelianBianchiDefect.unit_transportDiffNormSq_eq
+  , ``NonAbelianBianchiDefect.unit_transportDiffNormSq_ge
+  , ``NonAbelianBianchiDefect.unit_transport_zero_of_cross_zero
+  , ``YangMillsBlueprint.Certificates.nonabelian_bianchi_transport_defect_pos
+  , ``YangMillsBlueprint.Certificates.canonical_bianchi_transport_defect_gt_one
+  , ``YangMillsBlueprint.Certificates.abelian_collinear_bianchi_defect_zero
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -371,6 +380,7 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.FILSChessboardCert
   , ``YangMillsBlueprint.Certificates.ThickVortexSpreadingCert
   , ``YangMillsBlueprint.Certificates.GaugeInvariantCosetCert
+  , ``YangMillsBlueprint.Certificates.BianchiCubeDefectCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -639,5 +649,11 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #print axioms CosetSignMagnitudeCreutz.creutzRatio_pos_of_sign_dominance
 #print axioms YangMillsBlueprint.Certificates.gauge_invariant_coset_creutz_gap_conditional
 #print axioms YangMillsBlueprint.Certificates.canonical_gauge_invariant_coset_creutz_pos
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.BianchiCubeDefectCert)
+#print axioms NonAbelianBianchiDefect.transportDiffNormSq_eq
+#print axioms NonAbelianBianchiDefect.unit_transportDiffNormSq_ge
+#print axioms YangMillsBlueprint.Certificates.nonabelian_bianchi_transport_defect_pos
+#print axioms YangMillsBlueprint.Certificates.canonical_bianchi_transport_defect_gt_one
+#print axioms YangMillsBlueprint.Certificates.abelian_collinear_bianchi_defect_zero
 
 end YangMillsBlueprint.VerifyNoTraps
