@@ -32,6 +32,8 @@ import YangMillsBlueprint.MathlibStaging.UrsellCumulantNonGaussian
 import YangMillsBlueprint.MathlibStaging.CurvedGroupLogSobolev
 import YangMillsBlueprint.MathlibStaging.InductivePeierlsRGBridge
 import YangMillsBlueprint.MathlibStaging.SpatialBlockRP
+import YangMillsBlueprint.MathlibStaging.SymanzikRotationalBound
+import YangMillsBlueprint.MathlibStaging.ShortDistanceOPEWitness
 import YangMillsBlueprint.Certificates.YM101_CauchyPolydiskCert
 import YangMillsBlueprint.Certificates.YM102_WeylCollarCert
 import YangMillsBlueprint.Certificates.YM103_SU2TwistRigidityCert
@@ -57,6 +59,8 @@ import YangMillsBlueprint.Certificates.YM122_ClayBoundaryMasterCert
 import YangMillsBlueprint.Certificates.YM123_DobrushinMixingBridgeCert
 import YangMillsBlueprint.Certificates.YM124_InductiveVortexRGCert
 import YangMillsBlueprint.Certificates.YM125_SpatialBlockRPCert
+import YangMillsBlueprint.Certificates.YM126_SymanzikContinuumCert
+import YangMillsBlueprint.Certificates.YM127_ContinuumOPEWitnessCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -282,6 +286,15 @@ private def auditedTheorems : List Name :=
   , ``YangMillsBlueprint.Certificates.canonical_inductive_vortex_rg_eval
   , ``YangMillsBlueprint.Certificates.spatial_block_reflection_positivity_conditional
   , ``YangMillsBlueprint.Certificates.canonical_spatial_block_rp_nonneg
+  , ``SymanzikRotationalBound.symanzikBound_nonneg
+  , ``SymanzikRotationalBound.symanzikBound_le_linear
+  , ``SymanzikRotationalBound.symanzikBound_lt_of_cutoff
+  , ``ShortDistanceOPEWitness.opeFourPointLower_pos
+  , ``ShortDistanceOPEWitness.ne_zero_of_abs_ge_ope
+  , ``YangMillsBlueprint.Certificates.symanzik_rotational_restoration_conditional
+  , ``YangMillsBlueprint.Certificates.canonical_symanzik_rotational_lt_tenth
+  , ``YangMillsBlueprint.Certificates.continuum_ope_four_point_nontrivial_conditional
+  , ``YangMillsBlueprint.Certificates.canonical_ope_lower_pos
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -308,6 +321,8 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.DobrushinMixingBridgeCert
   , ``YangMillsBlueprint.Certificates.InductiveVortexRGCert
   , ``YangMillsBlueprint.Certificates.SpatialBlockRPCert
+  , ``YangMillsBlueprint.Certificates.SymanzikContinuumCert
+  , ``YangMillsBlueprint.Certificates.ContinuumOPEWitnessCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -544,5 +559,13 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #print axioms YangMillsBlueprint.Certificates.dobrushin_global_log_sobolev_gap_conditional
 #print axioms YangMillsBlueprint.Certificates.inductive_peierls_tension_floor_conditional
 #print axioms YangMillsBlueprint.Certificates.canonical_spatial_block_rp_nonneg
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.SymanzikContinuumCert)
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.ContinuumOPEWitnessCert)
+#print axioms SymanzikRotationalBound.symanzikBound_le_linear
+#print axioms SymanzikRotationalBound.symanzikBound_lt_of_cutoff
+#print axioms ShortDistanceOPEWitness.ne_zero_of_abs_ge_ope
+#print axioms YangMillsBlueprint.Certificates.canonical_symanzik_rotational_lt_tenth
+#print axioms YangMillsBlueprint.Certificates.continuum_ope_four_point_nontrivial_conditional
+#print axioms YangMillsBlueprint.Certificates.canonical_ope_lower_pos
 
 end YangMillsBlueprint.VerifyNoTraps
