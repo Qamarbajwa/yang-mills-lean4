@@ -42,6 +42,7 @@ import YangMillsBlueprint.MathlibStaging.VortexSpreadingBound
 import YangMillsBlueprint.MathlibStaging.CosetSignMagnitudeCreutz
 import YangMillsBlueprint.MathlibStaging.NonAbelianBianchiDefect
 import YangMillsBlueprint.MathlibStaging.EffectiveMassTransferGap
+import YangMillsBlueprint.MathlibStaging.AdjointBianchiNorm
 import YangMillsBlueprint.Certificates.YM101_CauchyPolydiskCert
 import YangMillsBlueprint.Certificates.YM102_WeylCollarCert
 import YangMillsBlueprint.Certificates.YM103_SU2TwistRigidityCert
@@ -77,6 +78,7 @@ import YangMillsBlueprint.Certificates.YM132_ThickVortexSpreadingCert
 import YangMillsBlueprint.Certificates.YM133_GaugeInvariantCosetCert
 import YangMillsBlueprint.Certificates.YM134_BianchiCubeDefectCert
 import YangMillsBlueprint.Certificates.YM135_SliceTransferGapCert
+import YangMillsBlueprint.Certificates.YM136_GeneralGroupBianchiCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -356,6 +358,14 @@ private def auditedTheorems : List Name :=
   , ``YangMillsBlueprint.Certificates.slice_transfer_exponential_decay_conditional
   , ``YangMillsBlueprint.Certificates.slice_transfer_log_convex
   , ``YangMillsBlueprint.Certificates.canonical_slice_glueball_t4_decay
+  , ``AdjointBianchiNorm.frobSq_nonneg
+  , ``AdjointBianchiNorm.frobSq_adjAction
+  , ``AdjointBianchiNorm.adjAction_sub_eq
+  , ``AdjointBianchiNorm.frobSq_adjAction_sub_eq
+  , ``AdjointBianchiNorm.frobSq_adjAction_sub_zero_of_comm
+  , ``YangMillsBlueprint.Certificates.general_adjoint_bianchi_defect_pos
+  , ``YangMillsBlueprint.Certificates.canonical_so3_adjoint_bianchi_defect_gt_three
+  , ``YangMillsBlueprint.Certificates.canonical_cartan_commuting_bianchi_zero
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -392,6 +402,7 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.GaugeInvariantCosetCert
   , ``YangMillsBlueprint.Certificates.BianchiCubeDefectCert
   , ``YangMillsBlueprint.Certificates.SliceTransferGapCert
+  , ``YangMillsBlueprint.Certificates.GeneralGroupBianchiCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -672,5 +683,11 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #print axioms EffectiveMassTransferGap.effectiveMassRatio_mono
 #print axioms YangMillsBlueprint.Certificates.slice_transfer_exponential_decay_conditional
 #print axioms YangMillsBlueprint.Certificates.canonical_slice_glueball_t4_decay
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.GeneralGroupBianchiCert)
+#print axioms AdjointBianchiNorm.frobSq_adjAction_sub_eq
+#print axioms AdjointBianchiNorm.frobSq_adjAction_sub_zero_of_comm
+#print axioms YangMillsBlueprint.Certificates.general_adjoint_bianchi_defect_pos
+#print axioms YangMillsBlueprint.Certificates.canonical_so3_adjoint_bianchi_defect_gt_three
+#print axioms YangMillsBlueprint.Certificates.canonical_cartan_commuting_bianchi_zero
 
 end YangMillsBlueprint.VerifyNoTraps
