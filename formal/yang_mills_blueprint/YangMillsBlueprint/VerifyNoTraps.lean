@@ -39,6 +39,7 @@ import YangMillsBlueprint.MathlibStaging.EquicontinuousTightnessBridge
 import YangMillsBlueprint.MathlibStaging.CenterlessWeylAlcoveGap
 import YangMillsBlueprint.MathlibStaging.ChessboardHolderBound
 import YangMillsBlueprint.MathlibStaging.VortexSpreadingBound
+import YangMillsBlueprint.MathlibStaging.CosetSignMagnitudeCreutz
 import YangMillsBlueprint.Certificates.YM101_CauchyPolydiskCert
 import YangMillsBlueprint.Certificates.YM102_WeylCollarCert
 import YangMillsBlueprint.Certificates.YM103_SU2TwistRigidityCert
@@ -71,6 +72,7 @@ import YangMillsBlueprint.Certificates.YM129_ContinuumTightnessCert
 import YangMillsBlueprint.Certificates.YM130_CenterlessGroupGapCert
 import YangMillsBlueprint.Certificates.YM131_FILSChessboardCert
 import YangMillsBlueprint.Certificates.YM132_ThickVortexSpreadingCert
+import YangMillsBlueprint.Certificates.YM133_GaugeInvariantCosetCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -328,6 +330,13 @@ private def auditedTheorems : List Name :=
   , ``VortexSpreadingBound.spreadTrigCost_lt_of_cutoff
   , ``YangMillsBlueprint.Certificates.thick_vortex_spread_cost_lt_conditional
   , ``YangMillsBlueprint.Certificates.canonical_thick_vortex_w16_lt_tenth
+  , ``CosetSignMagnitudeCreutz.centerSign_mul_abs
+  , ``CosetSignMagnitudeCreutz.coset_energy_decomposition
+  , ``CosetSignMagnitudeCreutz.coset_defects_nonneg
+  , ``CosetSignMagnitudeCreutz.creutzRatio_factorization
+  , ``CosetSignMagnitudeCreutz.creutzRatio_pos_of_sign_dominance
+  , ``YangMillsBlueprint.Certificates.gauge_invariant_coset_creutz_gap_conditional
+  , ``YangMillsBlueprint.Certificates.canonical_gauge_invariant_coset_creutz_pos
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -361,6 +370,7 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.CenterlessGroupGapCert
   , ``YangMillsBlueprint.Certificates.FILSChessboardCert
   , ``YangMillsBlueprint.Certificates.ThickVortexSpreadingCert
+  , ``YangMillsBlueprint.Certificates.GaugeInvariantCosetCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -624,5 +634,10 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #print axioms VortexSpreadingBound.spreadTrigCost_lt_of_cutoff
 #print axioms YangMillsBlueprint.Certificates.thick_vortex_spread_cost_lt_conditional
 #print axioms YangMillsBlueprint.Certificates.canonical_thick_vortex_w16_lt_tenth
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.GaugeInvariantCosetCert)
+#print axioms CosetSignMagnitudeCreutz.creutzRatio_factorization
+#print axioms CosetSignMagnitudeCreutz.creutzRatio_pos_of_sign_dominance
+#print axioms YangMillsBlueprint.Certificates.gauge_invariant_coset_creutz_gap_conditional
+#print axioms YangMillsBlueprint.Certificates.canonical_gauge_invariant_coset_creutz_pos
 
 end YangMillsBlueprint.VerifyNoTraps
