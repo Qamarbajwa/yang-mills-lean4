@@ -18,6 +18,9 @@ import YangMillsBlueprint.MathlibStaging.QuarticQuantumStiffness
 import YangMillsBlueprint.MathlibStaging.CartanCoxeterRigidity
 import YangMillsBlueprint.MathlibStaging.ExponentialAreaScreening
 import YangMillsBlueprint.MathlibStaging.AsymptoticFreedomFlow
+import YangMillsBlueprint.MathlibStaging.SpectralMassGapBridge
+import YangMillsBlueprint.MathlibStaging.TEKFourPlaneLattice
+import YangMillsBlueprint.MathlibStaging.ExceptionalE8Cartan
 import YangMillsBlueprint.Certificates.YM101_CauchyPolydiskCert
 import YangMillsBlueprint.Certificates.YM102_WeylCollarCert
 import YangMillsBlueprint.Certificates.YM103_SU2TwistRigidityCert
@@ -28,6 +31,9 @@ import YangMillsBlueprint.Certificates.YM107_LuscherQuantumGapCert
 import YangMillsBlueprint.Certificates.YM108_CenterlessGroupCert
 import YangMillsBlueprint.Certificates.YM109_VortexAreaScreeningCert
 import YangMillsBlueprint.Certificates.YM110_AsymptoticFreedomCert
+import YangMillsBlueprint.Certificates.YM111_ClayTargetSpecCert
+import YangMillsBlueprint.Certificates.YM112_TEKFourPlaneCert
+import YangMillsBlueprint.Certificates.YM113_E8CartanRigidityCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -152,6 +158,26 @@ private def auditedTheorems : List Name :=
   , ``MathlibPR.ClockShiftAlgebra.secant_asymptotic_gap_six_eval
   , ``MathlibPR.ClockShiftAlgebra.su5_rational_gap_witness
   , ``MathlibPR.ClockShiftAlgebra.su5_gap_gt_jordan
+  , ``SpectralMassGapBridge.exp_neg_mul_anti
+  , ``SpectralMassGapBridge.exp_decay_product_le
+  , ``SpectralMassGapBridge.coercivity_orthogonal_decomp
+  , ``SpectralMassGapBridge.coercivity_pos_of_perp_ne_zero
+  , ``TEKFourPlaneLattice.shearMap_bijective
+  , ``TEKFourPlaneLattice.shearMap_eq_zero_iff
+  , ``TEKFourPlaneLattice.quadratic_rank_gap_le_four_mul_sin_sq
+  , ``TEKFourPlaneLattice.four_plane_additive_gap_le
+  , ``ExceptionalE8Cartan.e8_sum_of_squares_eq
+  , ``ExceptionalE8Cartan.e8CartanForm_nonneg
+  , ``ExceptionalE8Cartan.e8CartanForm_eq_zero_iff
+  , ``YangMillsBlueprint.Certificates.real_mass_gap_spec_excited_pos
+  , ``YangMillsBlueprint.Certificates.canonical_clustering_decay_le
+  , ``YangMillsBlueprint.Certificates.tek_shear_bijective
+  , ``YangMillsBlueprint.Certificates.tek_quadratic_rank_gap_le
+  , ``YangMillsBlueprint.Certificates.tek_four_plane_additive_gap_le
+  , ``YangMillsBlueprint.Certificates.canonical_tek_four_plane_gap_gt_one
+  , ``YangMillsBlueprint.Certificates.e8_coxeter_cartan_zero_mode_eliminated
+  , ``YangMillsBlueprint.Certificates.e8_cartan_form_nonneg
+  , ``YangMillsBlueprint.Certificates.e8_unit_simple_root_stiffness
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -163,6 +189,9 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.CenterlessGroupRigidityCert
   , ``YangMillsBlueprint.Certificates.VortexAreaScreeningCert
   , ``YangMillsBlueprint.Certificates.AsymptoticFreedomCert
+  , ``YangMillsBlueprint.Certificates.RealMassGapSpecCert
+  , ``YangMillsBlueprint.Certificates.TEKFourPlaneCert
+  , ``YangMillsBlueprint.Certificates.ExceptionalE8RigidityCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
