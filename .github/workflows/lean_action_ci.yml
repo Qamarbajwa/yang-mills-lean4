@@ -1,0 +1,32 @@
+name: Lean CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    name: Build & Audit YangMillsBlueprint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install elan and Lean toolchain
+        shell: bash
+        run: |
+          set -euo pipefail
+          TOOLCHAIN="$(tr -d '\r\n' < lean-toolchain)"
+          curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- -y --default-toolchain "${TOOLCHAIN}"
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Fetch Mathlib cache
+        shell: bash
+        run: |
+          set -euo pipefail
+          lake exe cache get
+      - name: Build YangMillsBlueprint & Run VerifyNoTraps
+        shell: bash
+        run: |
+          set -euo pipefail
+          lake build
+          lake env lean YangMillsBlueprint/VerifyNoTraps.lean
