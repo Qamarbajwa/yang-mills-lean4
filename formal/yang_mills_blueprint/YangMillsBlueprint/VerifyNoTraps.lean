@@ -34,6 +34,9 @@ import YangMillsBlueprint.MathlibStaging.InductivePeierlsRGBridge
 import YangMillsBlueprint.MathlibStaging.SpatialBlockRP
 import YangMillsBlueprint.MathlibStaging.SymanzikRotationalBound
 import YangMillsBlueprint.MathlibStaging.ShortDistanceOPEWitness
+import YangMillsBlueprint.MathlibStaging.TomboulisCharacterFlow
+import YangMillsBlueprint.MathlibStaging.EquicontinuousTightnessBridge
+import YangMillsBlueprint.MathlibStaging.CenterlessWeylAlcoveGap
 import YangMillsBlueprint.Certificates.YM101_CauchyPolydiskCert
 import YangMillsBlueprint.Certificates.YM102_WeylCollarCert
 import YangMillsBlueprint.Certificates.YM103_SU2TwistRigidityCert
@@ -61,6 +64,9 @@ import YangMillsBlueprint.Certificates.YM124_InductiveVortexRGCert
 import YangMillsBlueprint.Certificates.YM125_SpatialBlockRPCert
 import YangMillsBlueprint.Certificates.YM126_SymanzikContinuumCert
 import YangMillsBlueprint.Certificates.YM127_ContinuumOPEWitnessCert
+import YangMillsBlueprint.Certificates.YM128_TomboulisRougheningCert
+import YangMillsBlueprint.Certificates.YM129_ContinuumTightnessCert
+import YangMillsBlueprint.Certificates.YM130_CenterlessGroupGapCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -295,6 +301,19 @@ private def auditedTheorems : List Name :=
   , ``YangMillsBlueprint.Certificates.canonical_symanzik_rotational_lt_tenth
   , ``YangMillsBlueprint.Certificates.continuum_ope_four_point_nontrivial_conditional
   , ``YangMillsBlueprint.Certificates.canonical_ope_lower_pos
+  , ``TomboulisCharacterFlow.characterWeightStep_le_mul
+  , ``TomboulisCharacterFlow.characterTrajectory_le_geom
+  , ``EquicontinuousTightnessBridge.limit_le_of_forall_pos_add
+  , ``EquicontinuousTightnessBridge.clustering_limit_of_vanishing_cutoffs
+  , ``EquicontinuousTightnessBridge.joint_cutoff_sum_lt
+  , ``CenterlessWeylAlcoveGap.adjointGapFloor_pos
+  , ``CenterlessWeylAlcoveGap.weylAlcoveCoerciveGap_pos
+  , ``YangMillsBlueprint.Certificates.tomboulis_character_flow_decays_conditional
+  , ``YangMillsBlueprint.Certificates.canonical_tomboulis_blocked_step_eval
+  , ``YangMillsBlueprint.Certificates.continuum_clustering_limit_conditional
+  , ``YangMillsBlueprint.Certificates.canonical_joint_cutoff_lt_tenth
+  , ``YangMillsBlueprint.Certificates.centerless_adjoint_gap_pos_conditional
+  , ``YangMillsBlueprint.Certificates.canonical_centerless_g2_combined_gap_pos
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -323,6 +342,9 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.SpatialBlockRPCert
   , ``YangMillsBlueprint.Certificates.SymanzikContinuumCert
   , ``YangMillsBlueprint.Certificates.ContinuumOPEWitnessCert
+  , ``YangMillsBlueprint.Certificates.TomboulisRougheningCert
+  , ``YangMillsBlueprint.Certificates.ContinuumTightnessCert
+  , ``YangMillsBlueprint.Certificates.CenterlessGroupGapCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -567,5 +589,14 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #print axioms YangMillsBlueprint.Certificates.canonical_symanzik_rotational_lt_tenth
 #print axioms YangMillsBlueprint.Certificates.continuum_ope_four_point_nontrivial_conditional
 #print axioms YangMillsBlueprint.Certificates.canonical_ope_lower_pos
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.TomboulisRougheningCert)
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.ContinuumTightnessCert)
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.CenterlessGroupGapCert)
+#print axioms TomboulisCharacterFlow.characterTrajectory_le_geom
+#print axioms EquicontinuousTightnessBridge.clustering_limit_of_vanishing_cutoffs
+#print axioms CenterlessWeylAlcoveGap.weylAlcoveCoerciveGap_pos
+#print axioms YangMillsBlueprint.Certificates.tomboulis_character_flow_decays_conditional
+#print axioms YangMillsBlueprint.Certificates.continuum_clustering_limit_conditional
+#print axioms YangMillsBlueprint.Certificates.canonical_centerless_g2_combined_gap_pos
 
 end YangMillsBlueprint.VerifyNoTraps
