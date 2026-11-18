@@ -29,6 +29,9 @@ import YangMillsBlueprint.MathlibStaging.CurvedBrascampLiebDefect
 import YangMillsBlueprint.MathlibStaging.PeierlsRGContourFlow
 import YangMillsBlueprint.MathlibStaging.OsterwalderSchraderBridge
 import YangMillsBlueprint.MathlibStaging.UrsellCumulantNonGaussian
+import YangMillsBlueprint.MathlibStaging.CurvedGroupLogSobolev
+import YangMillsBlueprint.MathlibStaging.InductivePeierlsRGBridge
+import YangMillsBlueprint.MathlibStaging.SpatialBlockRP
 import YangMillsBlueprint.Certificates.YM101_CauchyPolydiskCert
 import YangMillsBlueprint.Certificates.YM102_WeylCollarCert
 import YangMillsBlueprint.Certificates.YM103_SU2TwistRigidityCert
@@ -51,6 +54,9 @@ import YangMillsBlueprint.Certificates.YM119_VortexRGPersistenceCert
 import YangMillsBlueprint.Certificates.YM120_OSReconstructionCert
 import YangMillsBlueprint.Certificates.YM121_NonTrivialityWitnessCert
 import YangMillsBlueprint.Certificates.YM122_ClayBoundaryMasterCert
+import YangMillsBlueprint.Certificates.YM123_DobrushinMixingBridgeCert
+import YangMillsBlueprint.Certificates.YM124_InductiveVortexRGCert
+import YangMillsBlueprint.Certificates.YM125_SpatialBlockRPCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -259,6 +265,23 @@ private def auditedTheorems : List Name :=
   , ``YangMillsBlueprint.Certificates.subgaussian_ursell_nontrivial_conditional
   , ``YangMillsBlueprint.Certificates.canonical_ursell_four_eval
   , ``YangMillsBlueprint.Certificates.clay_millennium_boundary_master_conditional
+  , ``CurvedGroupLogSobolev.dobrushinGlobalGap_pos
+  , ``CurvedGroupLogSobolev.dobrushinGlobalGap_ge_of_bounds
+  , ``CurvedGroupLogSobolev.holleyStroockFactor_pos
+  , ``CurvedGroupLogSobolev.holleyStroockFactor_anti
+  , ``CurvedGroupLogSobolev.dobrushin_holley_stroock_pos
+  , ``InductivePeierlsRGBridge.floor_le_rgStep_of_le
+  , ``InductivePeierlsRGBridge.rgTrajectory_ge_floor
+  , ``InductivePeierlsRGBridge.rgTrajectory_strict_above_critical
+  , ``SpatialBlockRP.rpKernelForm_nonneg
+  , ``SpatialBlockRP.rpKernelForm_add_nonneg
+  , ``SpatialBlockRP.rpKernelForm_convex_comb_nonneg
+  , ``YangMillsBlueprint.Certificates.dobrushin_global_log_sobolev_gap_conditional
+  , ``YangMillsBlueprint.Certificates.canonical_dobrushin_mixing_eval
+  , ``YangMillsBlueprint.Certificates.inductive_peierls_tension_floor_conditional
+  , ``YangMillsBlueprint.Certificates.canonical_inductive_vortex_rg_eval
+  , ``YangMillsBlueprint.Certificates.spatial_block_reflection_positivity_conditional
+  , ``YangMillsBlueprint.Certificates.canonical_spatial_block_rp_nonneg
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -282,6 +305,9 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.OSReconstructionCert
   , ``YangMillsBlueprint.Certificates.NonTrivialityWitnessCert
   , ``YangMillsBlueprint.Certificates.ClayBoundaryMasterBundle
+  , ``YangMillsBlueprint.Certificates.DobrushinMixingBridgeCert
+  , ``YangMillsBlueprint.Certificates.InductiveVortexRGCert
+  , ``YangMillsBlueprint.Certificates.SpatialBlockRPCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -509,5 +535,14 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #print axioms YangMillsBlueprint.Certificates.canonical_os_correlator_envelope_le
 #print axioms YangMillsBlueprint.Certificates.canonical_ursell_four_eval
 #print axioms YangMillsBlueprint.Certificates.clay_millennium_boundary_master_conditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.DobrushinMixingBridgeCert)
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.InductiveVortexRGCert)
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.SpatialBlockRPCert)
+#print axioms CurvedGroupLogSobolev.dobrushin_holley_stroock_pos
+#print axioms InductivePeierlsRGBridge.rgTrajectory_ge_floor
+#print axioms SpatialBlockRP.rpKernelForm_convex_comb_nonneg
+#print axioms YangMillsBlueprint.Certificates.dobrushin_global_log_sobolev_gap_conditional
+#print axioms YangMillsBlueprint.Certificates.inductive_peierls_tension_floor_conditional
+#print axioms YangMillsBlueprint.Certificates.canonical_spatial_block_rp_nonneg
 
 end YangMillsBlueprint.VerifyNoTraps

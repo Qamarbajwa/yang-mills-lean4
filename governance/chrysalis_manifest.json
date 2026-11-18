@@ -2,7 +2,7 @@
   "manifest_version": "1.0.0",
   "key_id": "chrysalis-local-hmac-2026",
   "algorithm": "HMAC-SHA256",
-  "generated_at": "2026-11-18T11:15:31.970974+00:00",
+  "generated_at": "2026-11-18T11:55:13.060460+00:00",
   "total_artifacts": 75,
   "files": {
     "governance/envelopes/YM-002E.yaml": {
