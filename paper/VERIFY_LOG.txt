@@ -353,3 +353,15 @@ inferInstance : Nonempty Certificates.CentralizerCodimensionCert
 'YangMillsBlueprint.Certificates.centralizer_bathtub_floor_conditional' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+inferInstance : Nonempty Certificates.DensityCapVarianceCert
+'GibbsDensityCapVariance.gibbsRatio_le_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GibbsDensityCapVariance.exp_neg_ratio_eq_exp_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GibbsDensityCapVariance.four_div_exp_eq_four_mul_exp_neg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GibbsDensityCapVariance.variance_floor_of_bounded_osc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMillsBlueprint.Certificates.canonical_density_cap_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMillsBlueprint.Certificates.canonical_variance_floor_half' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.crossover_variance_floor_of_bounded_osc_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

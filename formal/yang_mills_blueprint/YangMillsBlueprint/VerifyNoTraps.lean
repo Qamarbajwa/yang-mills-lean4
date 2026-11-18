@@ -91,6 +91,7 @@ import YangMillsBlueprint.Certificates.YM140_CoarseSliceDobrushinCert
 import YangMillsBlueprint.Certificates.YM141_BianchiDyadicAccumulationCert
 import YangMillsBlueprint.Certificates.YM142_BianchiCocycleCert
 import YangMillsBlueprint.Certificates.YM143_CentralizerCodimensionCert
+import YangMillsBlueprint.Certificates.YM144_DensityCapVarianceCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -444,6 +445,13 @@ private def auditedTheorems : List Name :=
   , ``YangMillsBlueprint.Certificates.cartan_quat_comm_zero
   , ``YangMillsBlueprint.Certificates.canonical_bathtub_m4_eval
   , ``YangMillsBlueprint.Certificates.centralizer_bathtub_floor_conditional
+  , ``GibbsDensityCapVariance.gibbsRatio_le_bound
+  , ``GibbsDensityCapVariance.exp_neg_ratio_eq_exp_sub
+  , ``GibbsDensityCapVariance.four_div_exp_eq_four_mul_exp_neg
+  , ``GibbsDensityCapVariance.variance_floor_of_bounded_osc
+  , ``YangMillsBlueprint.Certificates.canonical_density_cap_le
+  , ``YangMillsBlueprint.Certificates.canonical_variance_floor_half
+  , ``YangMillsBlueprint.Certificates.crossover_variance_floor_of_bounded_osc_conditional
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -488,6 +496,7 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.BianchiDyadicAccumulationCert
   , ``YangMillsBlueprint.Certificates.BianchiCocycleCert
   , ``YangMillsBlueprint.Certificates.CentralizerCodimensionCert
+  , ``YangMillsBlueprint.Certificates.DensityCapVarianceCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -842,5 +851,13 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #print axioms YangMillsBlueprint.Certificates.cartan_quat_comm_zero
 #print axioms YangMillsBlueprint.Certificates.canonical_bathtub_m4_eval
 #print axioms YangMillsBlueprint.Certificates.centralizer_bathtub_floor_conditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.DensityCapVarianceCert)
+#print axioms GibbsDensityCapVariance.gibbsRatio_le_bound
+#print axioms GibbsDensityCapVariance.exp_neg_ratio_eq_exp_sub
+#print axioms GibbsDensityCapVariance.four_div_exp_eq_four_mul_exp_neg
+#print axioms GibbsDensityCapVariance.variance_floor_of_bounded_osc
+#print axioms YangMillsBlueprint.Certificates.canonical_density_cap_le
+#print axioms YangMillsBlueprint.Certificates.canonical_variance_floor_half
+#print axioms YangMillsBlueprint.Certificates.crossover_variance_floor_of_bounded_osc_conditional
 
 end YangMillsBlueprint.VerifyNoTraps
