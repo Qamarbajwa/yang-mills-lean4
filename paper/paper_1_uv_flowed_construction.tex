@@ -5,6 +5,8 @@
 \usepackage{geometry}
 \geometry{margin=1in}
 \usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,patterns}
 \usepackage{cite}
 \usepackage{microtype}
 \usepackage{hyperref}
@@ -115,6 +117,58 @@ Instantiating this parametric machinery at the rational scale benchmark $g_0^2 =
 \mathrm{runningCoupling}\left(\frac{24}{41}, \frac{11}{24}, 5\right) = \frac{24/41}{1 + 5 \cdot \frac{11}{24} \cdot \frac{24}{41}} = \frac{24}{96} = \frac{1}{4} < 1,
 \end{equation}
 certifying unconditionally in Lean~4 (\texttt{canonical\_\-uv\_\-coupling\_\-lt\_\-one}) that ultraviolet coupling contraction holds at step $k = 5$.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[>=Stealth, font=\scriptsize]
+% Panel (a): Half-space and parabolic flow ball
+\begin{scope}[shift={(0,0)}]
+  \fill[black!8] (0,0) rectangle (5.6,3.4);
+  \draw[very thick] (0,0) -- (5.6,0);
+  \draw[->] (0.3,0) -- (0.3,3.55) node[above] {$x_0$};
+  \node[below] at (2.9,-0.08) {Boundary hyperplane $x_0 = 0$};
+  \node[anchor=west] at (0.55,3.05) {Half-space $x_0 \ge 0$};
+  % Bulk point and flow ball r_t = sqrt(8t) < x_0
+  \fill[black!20] (3.1,2.05) circle (1.05);
+  \draw[dashed, thick] (3.1,2.05) circle (1.05);
+  \fill (3.1,2.05) circle (1.6pt) node[above left] {$x$};
+  \draw[<->] (3.1,2.05) -- (4.15,2.05) node[midway, below] {$r_t$};
+  \draw[dotted, thick] (3.1,0) -- (3.1,2.05);
+  \node[right] at (3.15,0.52) {$x_0 > r_t = \sqrt{8t}$};
+  \node[font=\footnotesize\bfseries] at (2.8,-0.75) {(a) Unbuffered half-space smoothing};
+\end{scope}
+% Panel (b): Inverse running coupling and 1/(k b) bound
+\begin{scope}[shift={(7.4,0)}]
+  \draw[->] (0,0) -- (5.6,0) node[right] {$k$};
+  \draw[->] (0,0) -- (0,3.5) node[above] {Scale value};
+  \foreach \k in {1,2,3,4,5,6} {
+    \draw (\k*0.8, 0.06) -- (\k*0.8, -0.06) node[below] {$\k$};
+  }
+  \foreach \y/\lbl in {0.7/1, 1.4/2, 2.1/3, 2.8/4} {
+    \draw (0.06,\y) -- (-0.06,\y) node[left] {$\lbl$};
+  }
+  % 1/g_k^2 = (41 + 11 k)/24 plotted at y-scale 0.7 per unit
+  \draw[thick] plot coordinates {
+    (0.8, 1.517) (1.6, 1.838) (2.4, 2.158) (3.2, 2.479) (4.0, 2.800) (4.8, 3.121)
+  };
+  \foreach \k/\v in {1/1.517, 2/1.838, 3/2.158, 4/2.479, 5/2.800, 6/3.121} {
+    \fill (\k*0.8, \v) circle (1.6pt);
+  }
+  \node[above left] at (4.9,3.12) {$1/g_k^2 = 1/g_0^2 + k b$};
+  % Step bound 1/(k b) = 24/(11 k) plotted at y-scale 0.7 per unit
+  \draw[dashed, thick] plot coordinates {
+    (0.8, 1.527) (1.6, 0.764) (2.4, 0.509) (3.2, 0.382) (4.0, 0.305) (4.8, 0.255)
+  };
+  \foreach \k/\v in {1/1.527, 2/0.764, 3/0.509, 4/0.382, 5/0.305, 6/0.255} {
+    \draw[fill=white] (\k*0.8, \v) circle (1.5pt);
+  }
+  \node[above right] at (2.4,0.58) {$1/(k b)$ upper bound};
+  \node[font=\footnotesize\bfseries] at (2.8,-0.75) {(b) Linear inverse flow ($b = 11/24$)};
+\end{scope}
+\end{tikzpicture}
+\caption{Geometric smoothing in the Euclidean half-space $x_0 \ge 0$ disjoint from boundary contact terms at radius $r_t = \sqrt{8t} < x_0$ (a), and exact linear growth of $1/g_k^2$ alongside the decaying step bound $1/(kb)$ proved in \texttt{AsymptoticFreedomFlow.inv\_runningCoupling\_eq} (b).}
+\label{fig:uv-flow-geometry}
+\end{figure}
 
 \section{Epistemic Scope and Verification Concordance}
 The finite-volume ultraviolet construction establishes local quantum field existence and relativistic light-cone kinematics, yet remains mathematically decoupled from the macroscopic infrared spectrum. Passing to the infinite-volume limit $L \to \infty$ across the intermediate coupling crossover ($g_k^2 \sim 1$) without losing spectral control remains an open problem; consequently, the Clay Millennium mass gap problem remains open.

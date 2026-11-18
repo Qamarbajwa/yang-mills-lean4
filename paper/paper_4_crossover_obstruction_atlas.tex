@@ -5,6 +5,8 @@
 \usepackage{geometry}
 \geometry{margin=1in}
 \usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,patterns}
 \usepackage{cite}
 \usepackage{microtype}
 \usepackage{hyperref}
@@ -155,6 +157,61 @@ In particular, evaluating this estimate at unit normalized tension $\sigma = 1$ 
 \end{theorem}
 
 The significance of $27 / (\sigma^3 L^2)$ is that every variable remains explicit and rational-computable once $\sigma$ and $L$ are specified: whenever $L > \sqrt{27 / \sigma^3}$, center-vortex defects drop strictly below unity with explicit rate $\mathcal{O}(L^{-2})$.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[>=Stealth, font=\scriptsize]
+% Panel (a): Luscher variational energy E(x) = 2b/x + b*x^2 at x0=1, b=1 (normalized units E/b)
+\begin{scope}[shift={(0,0)}, x=2.3cm, y=0.52cm]
+  \draw[->] (0,0) -- (2.45,0) node[right] {$x$};
+  \draw[->] (0,0) -- (0,7.4) node[above] {$E(x)/b$};
+  \foreach \x in {0.5, 1.0, 1.5, 2.0} {
+    \draw (\x,0.12) -- (\x,-0.12) node[below] {$\x$};
+  }
+  \foreach \y in {2, 4, 6} {
+    \draw (0.04,\y) -- (-0.04,\y) node[left] {$\y$};
+  }
+  % Horizontal minimum floor E_min / b = 3
+  \draw[thin, dash dot] (0,3) -- (2.25,3) node[right] {$3 x_0^2$};
+  % Kinetic curve 2/x for x in [0.3, 2.2]
+  \draw[dashed, thick, domain=0.30:2.2, samples=60]
+    plot (\x, {2/\x}) node[right] {$2/x$};
+  % Quartic curve x^2 for x in [0.25, 2.2]
+  \draw[dotted, thick, domain=0.25:2.2, samples=60]
+    plot (\x, {\x*\x}) node[above left] {$x^2$};
+  % Total variational energy 2/x + x^2 clipped cleanly inside [0.31, 2.2]
+  \draw[very thick, domain=0.32:2.2, samples=70]
+    plot (\x, {2/\x + \x*\x});
+  \fill (1,3) circle (2.2pt) node[above right] {$x_0=1$};
+  \node[above right] at (1.55,4.15) {$E(x)/b$};
+  \node[font=\footnotesize\bfseries] at (1.2,-1.45) {(a) L\"uscher variational gap};
+\end{scope}
+% Panel (b): Vortex screening L^4 exp(-sigma L^2) vs 27/(sigma^3 L^2) at sigma=2
+\begin{scope}[shift={(7.4,0)}, x=1.55cm, y=2.6cm]
+  \draw[->] (0,0) -- (3.85,0) node[right] {$L$};
+  \draw[->] (0,0) -- (0,1.5) node[above] {Defect};
+  \foreach \x in {1, 2, 3} {
+    \draw (\x,0.03) -- (\x,-0.03) node[below] {$\x$};
+  }
+  \foreach \y in {0.5, 1.0} {
+    \draw (0.05,\y) -- (-0.05,\y) node[left] {$\y$};
+  }
+  % L^4 * exp(-2*L^2) at sigma=2 (scaled x4 for crisp visual clarity? Or plot direct & y in [0, 0.8]!)
+  \draw[very thick, domain=0:3.5, samples=80]
+    plot (\x, {pow(\x,4)*exp(-2*\x*\x)});
+  \draw[dotted, thick] (1.0,0) -- (1.0,0.1353);
+  \fill (1.0,0.1353) circle (2.0pt) node[right] {Peak $L=\sqrt{2/\sigma}$};
+  % Upper bound 27/(sigma^3 * L^2) = 27/(8 * L^2) for L in [1.62, 3.5]
+  \draw[dashed, thick, domain=1.62:3.5, samples=60]
+    plot (\x, {27/(8*\x*\x)});
+  \node[above right] at (1.95,0.88) {$\frac{27}{\sigma^3 L^2}$};
+  \node[below right] at (1.45,0.10) {$L^4 e^{-\sigma L^2}$};
+  \node[font=\footnotesize\bfseries] at (1.9,-0.28) {(b) Vortex screening ($\sigma=2$)};
+\end{scope}
+\end{tikzpicture}
+\caption{Quantitative infrared stabilization: (a) L\"uscher variational energy $E(x)$ minimizing at $x = x_0 = 1$ with exact floor $3 b x_0^2$ (\texttt{QuarticQuantumStiffness.variationalEnergy}); (b) quartic-weighted vortex defect $L^4 e^{-\sigma L^2}$ peaking at $L = \sqrt{2/\sigma}$ and decaying strictly below $\frac{27}{\sigma^3 L^2}$ (\texttt{ExponentialAreaScreening.quartic\_mul\_exp\_neg\_sq\_le}).}
+\label{fig:luscher-and-vortex}
+\end{figure}
 
 \section{Dual Lie Group Barriers and the Infinite-Volume Open Gap}
 One might naturally ask whether the twisted finite-volume mass gap mechanisms established for $\SU(2)$ and $\SU(3)$ lift uniformly to all compact simple Lie groups $G$ and arbitrary rank $N$. Careful algebraic and spectral inspection isolates two sharp structural obstructions blocking uniform generalization:

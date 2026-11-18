@@ -5,6 +5,8 @@
 \usepackage{geometry}
 \geometry{margin=1in}
 \usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,patterns}
 \usepackage{cite}
 \usepackage{microtype}
 \usepackage{hyperref}
@@ -105,6 +107,38 @@ Combining these steps proves the unconditional real integral theorem (\texttt{su
 \frac{4}{\pi} \int_0^{1/5} \sin^2(\theta) \, d\theta < \frac{1}{57}.
 \end{equation}
 Thus, the combined small-field polymer expansion and reducible central collar remain strictly contractive at collar radius $\delta = 1/5$.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[>=Stealth, x=6.8cm, y=2.6cm, font=\scriptsize]
+  % Axes for theta in [0, 1.2], y in [0, 1.9]
+  \draw[->] (0,0) -- (1.28,0) node[right] {$\theta$};
+  \draw[->] (0,0) -- (0,1.98) node[above] {Integrand};
+  \foreach \x in {0.2, 0.4, 0.6, 0.8, 1.0, 1.2} {
+    \draw (\x, 0.03) -- (\x, -0.03) node[below] {$\x$};
+  }
+  \foreach \y in {0.5, 1.0, 1.5} {
+    \draw (0.015,\y) -- (-0.015,\y) node[left] {$\y$};
+  }
+  % Shaded collar region theta in [0, 0.2] under (4/pi)*sin^2(theta)
+  \fill[black!20, domain=0:0.2, samples=30]
+    (0,0) -- plot (\x, {1.27324*pow(sin(\x r),2)}) -- (0.2,0) -- cycle;
+  \draw[dotted, thick] (0.2,0) -- (0.2,1.65);
+  \node[above] at (0.2,1.65) {$\delta = 1/5$};
+  % Solid curve: (4/pi)*sin^2(theta)
+  \draw[thick, domain=0:1.2, samples=80]
+    plot (\x, {1.27324*pow(sin(\x r),2)}) node[right] {$\frac{4}{\pi}\sin^2\theta$};
+  % Dashed curve: (4/pi)*theta^2
+  \draw[dashed, thick, domain=0:1.2, samples=80]
+    plot (\x, {1.27324*\x*\x}) node[right] {$\frac{4}{\pi}\theta^2$};
+  % Callout for shaded area vs margin 1/57
+  \draw[<-] (0.12,0.012) -- (0.36,0.42)
+    node[above right, align=left, draw, fill=white, inner sep=3pt]
+    {Shaded collar integral (\texttt{YM102}):\\$\int_0^{1/5}\!\frac{4}{\pi}\sin^2\theta\,d\theta \le \frac{452}{133125} \approx 0.0034 < \frac{1}{57} \approx 0.0175$};
+\end{tikzpicture}
+\caption{Comparison on $\theta \in [0, 1.2]$ of the $\SU(2)$ Weyl integrand $\frac{4}{\pi}\sin^2\theta$ (solid curve) and its quadratic majorant $\frac{4}{\pi}\theta^2$ (dashed curve). Shading marks the central collar $\theta \in [0, 1/5]$, whose certified integral sits well below the $1/57$ margin ceiling.}
+\label{fig:weyl-collar-plot}
+\end{figure}
 
 \section{Collar Sensitivity, Koteck\'y--Preiss Margin Budget, and Epistemic Scope}
 To build intuition for why $\delta = 1/5$ sits comfortably inside the analytic convergence envelope, Table~\ref{tab:collar-sensitivity} compares the cubic Haar upper bound $\frac{4}{3p}\delta^3$ (evaluated at the rational lower bound $p = 333/106 < \pi$) against the residual convergence budget across candidate collar radii.
