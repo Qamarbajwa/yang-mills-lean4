@@ -90,6 +90,7 @@ import YangMillsBlueprint.Certificates.YM139_BianchiScreenedVarianceCert
 import YangMillsBlueprint.Certificates.YM140_CoarseSliceDobrushinCert
 import YangMillsBlueprint.Certificates.YM141_BianchiDyadicAccumulationCert
 import YangMillsBlueprint.Certificates.YM142_BianchiCocycleCert
+import YangMillsBlueprint.Certificates.YM143_CentralizerCodimensionCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -434,6 +435,15 @@ private def auditedTheorems : List Name :=
   , ``YangMillsBlueprint.Certificates.canonical_cocycle_eps_eq
   , ``YangMillsBlueprint.Certificates.canonical_cocycle_superdyadic_lt
   , ``YangMillsBlueprint.Certificates.cocycle_dyadic_lower_bound_conditional
+  , ``CentralizerCodimensionBound.so3OfQuat_orth_right
+  , ``CentralizerCodimensionBound.frobSq_so3OfQuat_comm_axisZ
+  , ``CentralizerCodimensionBound.transverse_sq_le_of_comm_le
+  , ``CentralizerCodimensionBound.bathtub_expectation_floor
+  , ``CentralizerCodimensionBound.bathtub_integral_eval
+  , ``YangMillsBlueprint.Certificates.canonical_transverse_quat_comm_eq
+  , ``YangMillsBlueprint.Certificates.cartan_quat_comm_zero
+  , ``YangMillsBlueprint.Certificates.canonical_bathtub_m4_eval
+  , ``YangMillsBlueprint.Certificates.centralizer_bathtub_floor_conditional
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -477,6 +487,7 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.CoarseSliceDobrushinCert
   , ``YangMillsBlueprint.Certificates.BianchiDyadicAccumulationCert
   , ``YangMillsBlueprint.Certificates.BianchiCocycleCert
+  , ``YangMillsBlueprint.Certificates.CentralizerCodimensionCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -821,5 +832,15 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #print axioms YangMillsBlueprint.Certificates.canonical_cocycle_eps_eq
 #print axioms YangMillsBlueprint.Certificates.canonical_cocycle_superdyadic_lt
 #print axioms YangMillsBlueprint.Certificates.cocycle_dyadic_lower_bound_conditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.CentralizerCodimensionCert)
+#print axioms CentralizerCodimensionBound.so3OfQuat_orth_right
+#print axioms CentralizerCodimensionBound.frobSq_so3OfQuat_comm_axisZ
+#print axioms CentralizerCodimensionBound.transverse_sq_le_of_comm_le
+#print axioms CentralizerCodimensionBound.bathtub_expectation_floor
+#print axioms CentralizerCodimensionBound.bathtub_integral_eval
+#print axioms YangMillsBlueprint.Certificates.canonical_transverse_quat_comm_eq
+#print axioms YangMillsBlueprint.Certificates.cartan_quat_comm_zero
+#print axioms YangMillsBlueprint.Certificates.canonical_bathtub_m4_eval
+#print axioms YangMillsBlueprint.Certificates.centralizer_bathtub_floor_conditional
 
 end YangMillsBlueprint.VerifyNoTraps

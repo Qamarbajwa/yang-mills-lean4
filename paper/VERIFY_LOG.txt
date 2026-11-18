@@ -339,3 +339,17 @@ inferInstance : Nonempty Certificates.BianchiCocycleCert
 'YangMillsBlueprint.Certificates.cocycle_dyadic_lower_bound_conditional' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+inferInstance : Nonempty Certificates.CentralizerCodimensionCert
+'CentralizerCodimensionBound.so3OfQuat_orth_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CentralizerCodimensionBound.frobSq_so3OfQuat_comm_axisZ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CentralizerCodimensionBound.transverse_sq_le_of_comm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CentralizerCodimensionBound.bathtub_expectation_floor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CentralizerCodimensionBound.bathtub_integral_eval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMillsBlueprint.Certificates.canonical_transverse_quat_comm_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.cartan_quat_comm_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMillsBlueprint.Certificates.canonical_bathtub_m4_eval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMillsBlueprint.Certificates.centralizer_bathtub_floor_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
