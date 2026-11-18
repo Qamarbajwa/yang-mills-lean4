@@ -365,3 +365,20 @@ inferInstance : Nonempty Certificates.DensityCapVarianceCert
 'YangMillsBlueprint.Certificates.crossover_variance_floor_of_bounded_osc_conditional' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+inferInstance : Nonempty Certificates.IsotropicSuperblockCert
+'IsotropicSuperblockDobrushin.total_div_in_eq_superblockM0' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IsotropicSuperblockDobrushin.superblockM0_le_of_leakage_ratio' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'IsotropicSuperblockDobrushin.superblockM0_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IsotropicSuperblockDobrushin.superblock_coupling_le_margin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMillsBlueprint.Certificates.canonical_superblock_m0_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMillsBlueprint.Certificates.canonical_superblock_coupling_eval' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.canonical_superblock_coupling_lt_third' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.superblock_uniform_gap_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

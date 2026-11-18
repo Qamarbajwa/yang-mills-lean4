@@ -92,6 +92,7 @@ import YangMillsBlueprint.Certificates.YM141_BianchiDyadicAccumulationCert
 import YangMillsBlueprint.Certificates.YM142_BianchiCocycleCert
 import YangMillsBlueprint.Certificates.YM143_CentralizerCodimensionCert
 import YangMillsBlueprint.Certificates.YM144_DensityCapVarianceCert
+import YangMillsBlueprint.Certificates.YM145_IsotropicSuperblockCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -452,6 +453,14 @@ private def auditedTheorems : List Name :=
   , ``YangMillsBlueprint.Certificates.canonical_density_cap_le
   , ``YangMillsBlueprint.Certificates.canonical_variance_floor_half
   , ``YangMillsBlueprint.Certificates.crossover_variance_floor_of_bounded_osc_conditional
+  , ``IsotropicSuperblockDobrushin.total_div_in_eq_superblockM0
+  , ``IsotropicSuperblockDobrushin.superblockM0_le_of_leakage_ratio
+  , ``IsotropicSuperblockDobrushin.superblockM0_nonneg
+  , ``IsotropicSuperblockDobrushin.superblock_coupling_le_margin
+  , ``YangMillsBlueprint.Certificates.canonical_superblock_m0_eq
+  , ``YangMillsBlueprint.Certificates.canonical_superblock_coupling_eval
+  , ``YangMillsBlueprint.Certificates.canonical_superblock_coupling_lt_third
+  , ``YangMillsBlueprint.Certificates.superblock_uniform_gap_conditional
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -497,6 +506,7 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.BianchiCocycleCert
   , ``YangMillsBlueprint.Certificates.CentralizerCodimensionCert
   , ``YangMillsBlueprint.Certificates.DensityCapVarianceCert
+  , ``YangMillsBlueprint.Certificates.IsotropicSuperblockCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -859,5 +869,14 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #print axioms YangMillsBlueprint.Certificates.canonical_density_cap_le
 #print axioms YangMillsBlueprint.Certificates.canonical_variance_floor_half
 #print axioms YangMillsBlueprint.Certificates.crossover_variance_floor_of_bounded_osc_conditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.IsotropicSuperblockCert)
+#print axioms IsotropicSuperblockDobrushin.total_div_in_eq_superblockM0
+#print axioms IsotropicSuperblockDobrushin.superblockM0_le_of_leakage_ratio
+#print axioms IsotropicSuperblockDobrushin.superblockM0_nonneg
+#print axioms IsotropicSuperblockDobrushin.superblock_coupling_le_margin
+#print axioms YangMillsBlueprint.Certificates.canonical_superblock_m0_eq
+#print axioms YangMillsBlueprint.Certificates.canonical_superblock_coupling_eval
+#print axioms YangMillsBlueprint.Certificates.canonical_superblock_coupling_lt_third
+#print axioms YangMillsBlueprint.Certificates.superblock_uniform_gap_conditional
 
 end YangMillsBlueprint.VerifyNoTraps
