@@ -683,3 +683,17 @@ inferInstance : Nonempty Certificates.CenterlessCasimirCert
 'YangMillsBlueprint.Certificates.universal_simple_group_mass_shell_conditional' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+inferInstance : Nonempty Certificates.QuaternionicOSCert
+'YangMillsBlueprint.Certificates.quaternionic_spin4_os_swap_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.os_chiral_hodge_lorentz_unification_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+inferInstance : Nonempty Certificates.SpinorWickCert
+'YangMillsBlueprint.Certificates.spinor_hermitian_wick_double_cover_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.spinor_mass_shell_os_gap_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

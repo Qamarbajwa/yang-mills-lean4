@@ -117,6 +117,8 @@ import YangMillsBlueprint.Certificates.YM166_NonCriticalSlabContractionCert
 import YangMillsBlueprint.Certificates.YM167_ContinuumSchwingerLimitCert
 import YangMillsBlueprint.Certificates.YM168_LocalizedUrsellNonTrivialityCert
 import YangMillsBlueprint.Certificates.YM169_CenterlessWeylCasimirCert
+import YangMillsBlueprint.Certificates.YM170_QuaternionicOSReflectionCert
+import YangMillsBlueprint.Certificates.YM171_SpinorHermitianWickCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -648,6 +650,10 @@ private def auditedTheorems : List Name :=
   , ``YangMillsBlueprint.Certificates.continuum_localized_nontriviality_conditional
   , ``YangMillsBlueprint.Certificates.all_simple_lie_invariants_unconditional
   , ``YangMillsBlueprint.Certificates.universal_simple_group_mass_shell_conditional
+  , ``YangMillsBlueprint.Certificates.quaternionic_spin4_os_swap_unconditional
+  , ``YangMillsBlueprint.Certificates.os_chiral_hodge_lorentz_unification_unconditional
+  , ``YangMillsBlueprint.Certificates.spinor_hermitian_wick_double_cover_unconditional
+  , ``YangMillsBlueprint.Certificates.spinor_mass_shell_os_gap_conditional
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -718,6 +724,8 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.ContinuumOSLimitCert
   , ``YangMillsBlueprint.Certificates.LocalizedUrsellCert
   , ``YangMillsBlueprint.Certificates.CenterlessCasimirCert
+  , ``YangMillsBlueprint.Certificates.QuaternionicOSCert
+  , ``YangMillsBlueprint.Certificates.SpinorWickCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -1276,5 +1284,11 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #check (inferInstance : Nonempty YangMillsBlueprint.Certificates.CenterlessCasimirCert)
 #print axioms YangMillsBlueprint.Certificates.all_simple_lie_invariants_unconditional
 #print axioms YangMillsBlueprint.Certificates.universal_simple_group_mass_shell_conditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.QuaternionicOSCert)
+#print axioms YangMillsBlueprint.Certificates.quaternionic_spin4_os_swap_unconditional
+#print axioms YangMillsBlueprint.Certificates.os_chiral_hodge_lorentz_unification_unconditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.SpinorWickCert)
+#print axioms YangMillsBlueprint.Certificates.spinor_hermitian_wick_double_cover_unconditional
+#print axioms YangMillsBlueprint.Certificates.spinor_mass_shell_os_gap_conditional
 
 end YangMillsBlueprint.VerifyNoTraps
