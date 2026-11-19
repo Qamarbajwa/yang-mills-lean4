@@ -711,3 +711,17 @@ inferInstance : Nonempty Certificates.MultiscaleBalabanCert
 'YangMillsBlueprint.Certificates.balaban_multiscale_stage1_bridge_conditional' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+inferInstance : Nonempty Certificates.MeasureBathtubCert
+inferInstance : Nonempty Certificates.Stage2ABasinCert
+'YangMillsBlueprint.Certificates.measure_bathtub_sharp_and_codim_d_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.stage2a_fiber_measure_bathtub_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.stage2a_cocycle_and_schur_thresholds_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.stage2a_full_crossover_basin_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

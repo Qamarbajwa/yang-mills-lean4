@@ -121,6 +121,8 @@ import YangMillsBlueprint.Certificates.YM170_QuaternionicOSReflectionCert
 import YangMillsBlueprint.Certificates.YM171_SpinorHermitianWickCert
 import YangMillsBlueprint.Certificates.YM172_AbstractPolymerClusterCert
 import YangMillsBlueprint.Certificates.YM173_MultiscaleBalabanFlowCert
+import YangMillsBlueprint.Certificates.YM174_MeasureBathtubFiberCert
+import YangMillsBlueprint.Certificates.YM175_PerturbedCocycleSchurCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -660,6 +662,10 @@ private def auditedTheorems : List Name :=
   , ``YangMillsBlueprint.Certificates.stage1_polymer_gas_gibbs_decoupling_conditional
   , ``YangMillsBlueprint.Certificates.multiscale_balaban_summability_vs_harmonic_unconditional
   , ``YangMillsBlueprint.Certificates.balaban_multiscale_stage1_bridge_conditional
+  , ``YangMillsBlueprint.Certificates.measure_bathtub_sharp_and_codim_d_unconditional
+  , ``YangMillsBlueprint.Certificates.stage2a_fiber_measure_bathtub_conditional
+  , ``YangMillsBlueprint.Certificates.stage2a_cocycle_and_schur_thresholds_unconditional
+  , ``YangMillsBlueprint.Certificates.stage2a_full_crossover_basin_conditional
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -734,6 +740,8 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.SpinorWickCert
   , ``YangMillsBlueprint.Certificates.AbstractPolymerCert
   , ``YangMillsBlueprint.Certificates.MultiscaleBalabanCert
+  , ``YangMillsBlueprint.Certificates.MeasureBathtubCert
+  , ``YangMillsBlueprint.Certificates.Stage2ABasinCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -1304,5 +1312,11 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #print axioms YangMillsBlueprint.Certificates.stage1_polymer_gas_gibbs_decoupling_conditional
 #print axioms YangMillsBlueprint.Certificates.multiscale_balaban_summability_vs_harmonic_unconditional
 #print axioms YangMillsBlueprint.Certificates.balaban_multiscale_stage1_bridge_conditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.MeasureBathtubCert)
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.Stage2ABasinCert)
+#print axioms YangMillsBlueprint.Certificates.measure_bathtub_sharp_and_codim_d_unconditional
+#print axioms YangMillsBlueprint.Certificates.stage2a_fiber_measure_bathtub_conditional
+#print axioms YangMillsBlueprint.Certificates.stage2a_cocycle_and_schur_thresholds_unconditional
+#print axioms YangMillsBlueprint.Certificates.stage2a_full_crossover_basin_conditional
 
 end YangMillsBlueprint.VerifyNoTraps
