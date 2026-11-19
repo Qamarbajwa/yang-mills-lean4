@@ -2,8 +2,8 @@
   "manifest_version": "1.0.0",
   "key_id": "chrysalis-local-hmac-2026",
   "algorithm": "HMAC-SHA256",
-  "generated_at": "2026-11-19T19:51:34.162734+00:00",
-  "total_artifacts": 90,
+  "generated_at": "2026-11-19T21:03:19.808542+00:00",
+  "total_artifacts": 93,
   "files": {
     ".zenodo.json": {
       "sha256": "c06fa45e83052e21064306edcd6f4381532dc9daf49f8678493556cdee9b75bb",
@@ -14,6 +14,11 @@
       "sha256": "9a12e8c86ae2e0badeeb65ca55a023af057d775053477350836aec973c6210ec",
       "hmac_sha256": "62ec0147037489d3bea6fa6db5cbec1bf731248580c4c0b1c51b5a539fcd02b5",
       "size_bytes": 7174
+    },
+    "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM177_TwoStepInductiveRGRemainderCert.lean": {
+      "sha256": "a33df0a9a6e9d90071e9d85f37faf6f7c90646b5b294b85fe043d678ef58d551",
+      "hmac_sha256": "3fadf601fff0c8b1658fcf7d33164cf60dccaec30b5c1b343ddb11059cfea5e1",
+      "size_bytes": 8591
     },
     "governance/envelopes/YM-002E.yaml": {
       "sha256": "ae09781544dfa741edc0fc3c42a515389621b54a9f75f7becdc74a4c2af95519",
@@ -116,9 +121,9 @@
       "size_bytes": 54210
     },
     "paper/VERIFY_LOG.txt": {
-      "sha256": "63ac2728bb0f2d88ad05d31df8ab3fc1563cd8bff121c3e97c6e37d1170414ee",
-      "hmac_sha256": "73751da2c564f13daff2ef12865780022aabd563cf5bf5876cc298339aaf9103",
-      "size_bytes": 49550
+      "sha256": "4550b715a8dabf4a0aafac7d06c09717476fb8e18e1d25099b491477e95a8462",
+      "hmac_sha256": "4af6732996cfabfd4783dc9adb6b80a7c3280d69201fb5b0a0ddff4837474916",
+      "size_bytes": 50027
     },
     "probes/probe_abelian_subtracted_2to4_fiber_schur.py": {
       "sha256": "e4251491dae9bd4dcfd7045a3ad79236363f67dcafa0a69539b1546aa3c94933",
@@ -145,6 +150,11 @@
       "hmac_sha256": "858f647d5185b7a6a42d5a8f70955252c04bb51fc2c9fed764ea7caa2ef9a321",
       "size_bytes": 15080
     },
+    "probes/probe_two_step_inductive_rg_remainder.py": {
+      "sha256": "d1db35eea97260ba25eb5802180a2f67d8d6dd8d8ee73198b7cce26ec2248050",
+      "hmac_sha256": "40465ed8ba2ec13def9e59f946f814e95d1c89638aecdc3ee240583d0605d438",
+      "size_bytes": 20351
+    },
     "probes/receipts/probe_abelian_subtracted_2to4_fiber_schur.receipt.json": {
       "sha256": "778dae39503ed9b7737e0fa0008619991f68545261f2a9a854fef70fefc772f0",
       "hmac_sha256": "f50e84bd75c83e4d2b95b23ab178db68d03d13347c46d88b2e2643bff111ca71",
@@ -169,6 +179,11 @@
       "sha256": "ba94f255917ef0d5eab7b3be15c35a7b49d9069e7ffac7e644ccf1d56d75a07b",
       "hmac_sha256": "6508b1d3108a43fe2b6e6724181e787ef4099174de05525b66c48e9eb94bac0f",
       "size_bytes": 3462
+    },
+    "probes/receipts/probe_two_step_inductive_rg_remainder.receipt.json": {
+      "sha256": "186499a22c8d96f877eaff6b804415ad0e9cf9244254752012a9553066d00d6a",
+      "hmac_sha256": "c45174048f13e1833fbde6ef279ae436abfa57d7f2e4f7ead1ff435cadffb6f1",
+      "size_bytes": 784
     },
     "tests/test_acceptance_identity_separation.py": {
       "sha256": "d108d4e11466e458ea61629b45138b821715a6909adebf18e7ff6916bd9f7952",

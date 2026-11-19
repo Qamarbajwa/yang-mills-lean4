@@ -1,0 +1,27 @@
+{
+  "probe": "probe_two_step_inductive_rg_remainder.py",
+  "script_sha256": "d1db35eea97260ba25eb5802180a2f67d8d6dd8d8ee73198b7cce26ec2248050",
+  "log_sha256": "4d170982d1389bd19e94716caa9615a8772d0a4ab841ac279c037384a26001af",
+  "status": "PASSED",
+  "clay_problem_status": "OPEN_AND_UNSOLVED",
+  "key_findings": {
+    "SU2_4.00_UV_contraction": {
+      "theta_Schur_12": 0.3699,
+      "theta_rel_12": 0.4515,
+      "dbeta_12": -0.953,
+      "delta_2x2": [
+        0.8208,
+        0.8634,
+        0.8706
+      ]
+    },
+    "SU2_crossover_growth_below_basin": {
+      "SU2_3.00_theta_12": 10.7137,
+      "SU2_2.50_theta_12": 2.4217
+    },
+    "SO3_non_neutral_alpha_0.188": {
+      "SO3_2.80_theta_12": 5.1749,
+      "SO3_4.00_theta_12": 1.2505
+    }
+  }
+}

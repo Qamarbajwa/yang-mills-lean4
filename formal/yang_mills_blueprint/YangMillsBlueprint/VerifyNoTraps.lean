@@ -124,6 +124,7 @@ import YangMillsBlueprint.Certificates.YM173_MultiscaleBalabanFlowCert
 import YangMillsBlueprint.Certificates.YM174_MeasureBathtubFiberCert
 import YangMillsBlueprint.Certificates.YM175_PerturbedCocycleSchurCert
 import YangMillsBlueprint.Certificates.YM176_AbelianSubtractedParamagneticSchurCert
+import YangMillsBlueprint.Certificates.YM177_TwoStepInductiveRGRemainderCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -671,6 +672,9 @@ private def auditedTheorems : List Name :=
   , ``YangMillsBlueprint.Certificates.paramagnetic_trace_sandwich_and_gribov_clearance_unconditional
   , ``YangMillsBlueprint.Certificates.paramagnetic_dominance_negative_defect_unconditional
   , ``YangMillsBlueprint.Certificates.cocycle_and_commutator_floor_unconditional
+  , ``YangMillsBlueprint.Certificates.remainder_trap_invariant_unconditional
+  , ``YangMillsBlueprint.Certificates.strict_coupling_descent_step_unconditional
+  , ``YangMillsBlueprint.Certificates.inductive_rg_basin_entry_unconditional
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -748,6 +752,7 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.MeasureBathtubCert
   , ``YangMillsBlueprint.Certificates.Stage2ABasinCert
   , ``YangMillsBlueprint.Certificates.AbelianSubtractedSchurCert
+  , ``YangMillsBlueprint.Certificates.TwoStepInductiveRGCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -1329,5 +1334,9 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #print axioms YangMillsBlueprint.Certificates.paramagnetic_trace_sandwich_and_gribov_clearance_unconditional
 #print axioms YangMillsBlueprint.Certificates.paramagnetic_dominance_negative_defect_unconditional
 #print axioms YangMillsBlueprint.Certificates.cocycle_and_commutator_floor_unconditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.TwoStepInductiveRGCert)
+#print axioms YangMillsBlueprint.Certificates.remainder_trap_invariant_unconditional
+#print axioms YangMillsBlueprint.Certificates.strict_coupling_descent_step_unconditional
+#print axioms YangMillsBlueprint.Certificates.inductive_rg_basin_entry_unconditional
 
 end YangMillsBlueprint.VerifyNoTraps

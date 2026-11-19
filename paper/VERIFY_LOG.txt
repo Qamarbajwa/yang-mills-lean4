@@ -738,3 +738,13 @@ inferInstance : Nonempty Certificates.AbelianSubtractedSchurCert
 'YangMillsBlueprint.Certificates.cocycle_and_commutator_floor_unconditional' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+inferInstance : Nonempty Certificates.TwoStepInductiveRGCert
+'YangMillsBlueprint.Certificates.remainder_trap_invariant_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.strict_coupling_descent_step_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.inductive_rg_basin_entry_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
