@@ -102,6 +102,9 @@ import YangMillsBlueprint.Certificates.YM151_BlueprintClayInterfaceCert
 import YangMillsBlueprint.Certificates.YM152_WilsonLatticeActionCert
 import YangMillsBlueprint.Certificates.YM153_RigidChordActionCert
 import YangMillsBlueprint.Certificates.YM154_TreeFrameGaugeCert
+import YangMillsBlueprint.Certificates.YM155_BlockPolymerOscillationCert
+import YangMillsBlueprint.Certificates.YM156_SelfDualWaveProjectionCert
+import YangMillsBlueprint.Certificates.YM157_RigidTransferSynthesisCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -575,6 +578,42 @@ private def auditedTheorems : List Name :=
   , ``YangMillsBlueprint.Certificates.canonical_tree_frame_floor_eq
   , ``YangMillsBlueprint.Certificates.tree_frame_gauge_expectation_unconditional
   , ``YangMillsBlueprint.Certificates.tree_frame_oscillation_floor_conditional
+  , ``BlockPolymerOscillation.polymerTailBound_nonneg
+  , ``BlockPolymerOscillation.effectiveBlockOsc_nonneg
+  , ``BlockPolymerOscillation.finset_geom_tail_le_polymerTailBound
+  , ``BlockPolymerOscillation.block_action_mem_Icc_of_polymer_tail
+  , ``BlockPolymerOscillation.productHaar_polymer_density_cap
+  , ``BlockPolymerOscillation.productHaar_polymer_expectation_floor
+  , ``YangMillsBlueprint.Certificates.canonical_polymer_osc_eq
+  , ``YangMillsBlueprint.Certificates.block_polymer_oscillation_gibbs_conditional
+  , ``SelfDualWaveProjection.projPlus_add_projMinus
+  , ``SelfDualWaveProjection.projPlus_eigen
+  , ``SelfDualWaveProjection.projMinus_eigen
+  , ``SelfDualWaveProjection.projPlus_idem
+  , ``SelfDualWaveProjection.projMinus_idem
+  , ``SelfDualWaveProjection.projPlus_projMinus_zero
+  , ``SelfDualWaveProjection.inner_projPlus_projMinus
+  , ``SelfDualWaveProjection.norm_sq_eq_projPlus_add_projMinus
+  , ``SelfDualWaveProjection.inner_self_invol_eq_sub
+  , ``SelfDualWaveProjection.abs_inner_invol_le_norm_sq
+  , ``SelfDualWaveProjection.fourD_curvature_choose_split
+  , ``SelfDualWaveProjection.eightD_spinor_fourform_choose_split
+  , ``SelfDualWaveProjection.inner_projOrth_zero
+  , ``SelfDualWaveProjection.norm_unitProject
+  , ``SelfDualWaveProjection.inner_self_sphereGrad_zero
+  , ``SelfDualWaveProjection.norm_sq_unnormalized_step
+  , ``SelfDualWaveProjection.unnormalized_step_ne_zero
+  , ``SelfDualWaveProjection.norm_adaptedWaveStep
+  , ``SelfDualWaveProjection.adaptedWaveStep_preserves_orth
+  , ``SelfDualWaveProjection.rayleighEnergy_unitProject
+  , ``SelfDualWaveProjection.rayleigh_adaptedWaveStep_descent
+  , ``SelfDualWaveProjection.rayleigh_adaptedWaveStep_le
+  , ``SelfDualWaveProjection.adaptedWaveStep_transfer_descent_and_floor
+  , ``YangMillsBlueprint.Certificates.canonical_hodge_dimension_splits
+  , ``YangMillsBlueprint.Certificates.self_dual_bogomolnyi_unconditional
+  , ``YangMillsBlueprint.Certificates.projected_wave_adaptation_transfer_conditional
+  , ``YangMillsBlueprint.Certificates.canonical_synthesis_witness_eval
+  , ``YangMillsBlueprint.Certificates.rigid_transfer_synthesis_conditional
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -630,6 +669,9 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.WilsonSingleLinkCert
   , ``YangMillsBlueprint.Certificates.RigidChordCert
   , ``YangMillsBlueprint.Certificates.TreeFrameGaugeCert
+  , ``YangMillsBlueprint.Certificates.BlockPolymerOscCert
+  , ``YangMillsBlueprint.Certificates.SelfDualWaveCert
+  , ``YangMillsBlueprint.Certificates.RigidTransferSynthesisCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -1115,5 +1157,44 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #print axioms YangMillsBlueprint.Certificates.canonical_tree_frame_floor_eq
 #print axioms YangMillsBlueprint.Certificates.tree_frame_gauge_expectation_unconditional
 #print axioms YangMillsBlueprint.Certificates.tree_frame_oscillation_floor_conditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.BlockPolymerOscCert)
+#print axioms BlockPolymerOscillation.polymerTailBound_nonneg
+#print axioms BlockPolymerOscillation.effectiveBlockOsc_nonneg
+#print axioms BlockPolymerOscillation.finset_geom_tail_le_polymerTailBound
+#print axioms BlockPolymerOscillation.block_action_mem_Icc_of_polymer_tail
+#print axioms BlockPolymerOscillation.productHaar_polymer_density_cap
+#print axioms BlockPolymerOscillation.productHaar_polymer_expectation_floor
+#print axioms YangMillsBlueprint.Certificates.canonical_polymer_osc_eq
+#print axioms YangMillsBlueprint.Certificates.block_polymer_oscillation_gibbs_conditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.SelfDualWaveCert)
+#print axioms SelfDualWaveProjection.projPlus_add_projMinus
+#print axioms SelfDualWaveProjection.projPlus_eigen
+#print axioms SelfDualWaveProjection.projMinus_eigen
+#print axioms SelfDualWaveProjection.projPlus_idem
+#print axioms SelfDualWaveProjection.projMinus_idem
+#print axioms SelfDualWaveProjection.projPlus_projMinus_zero
+#print axioms SelfDualWaveProjection.inner_projPlus_projMinus
+#print axioms SelfDualWaveProjection.norm_sq_eq_projPlus_add_projMinus
+#print axioms SelfDualWaveProjection.inner_self_invol_eq_sub
+#print axioms SelfDualWaveProjection.abs_inner_invol_le_norm_sq
+#print axioms SelfDualWaveProjection.fourD_curvature_choose_split
+#print axioms SelfDualWaveProjection.eightD_spinor_fourform_choose_split
+#print axioms SelfDualWaveProjection.inner_projOrth_zero
+#print axioms SelfDualWaveProjection.norm_unitProject
+#print axioms SelfDualWaveProjection.inner_self_sphereGrad_zero
+#print axioms SelfDualWaveProjection.norm_sq_unnormalized_step
+#print axioms SelfDualWaveProjection.unnormalized_step_ne_zero
+#print axioms SelfDualWaveProjection.norm_adaptedWaveStep
+#print axioms SelfDualWaveProjection.adaptedWaveStep_preserves_orth
+#print axioms SelfDualWaveProjection.rayleighEnergy_unitProject
+#print axioms SelfDualWaveProjection.rayleigh_adaptedWaveStep_descent
+#print axioms SelfDualWaveProjection.rayleigh_adaptedWaveStep_le
+#print axioms SelfDualWaveProjection.adaptedWaveStep_transfer_descent_and_floor
+#print axioms YangMillsBlueprint.Certificates.canonical_hodge_dimension_splits
+#print axioms YangMillsBlueprint.Certificates.self_dual_bogomolnyi_unconditional
+#print axioms YangMillsBlueprint.Certificates.projected_wave_adaptation_transfer_conditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.RigidTransferSynthesisCert)
+#print axioms YangMillsBlueprint.Certificates.canonical_synthesis_witness_eval
+#print axioms YangMillsBlueprint.Certificates.rigid_transfer_synthesis_conditional
 
 end YangMillsBlueprint.VerifyNoTraps

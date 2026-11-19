@@ -550,3 +550,60 @@ inferInstance : Nonempty Certificates.TreeFrameGaugeCert
 'YangMillsBlueprint.Certificates.tree_frame_oscillation_floor_conditional' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+inferInstance : Nonempty Certificates.BlockPolymerOscCert
+'BlockPolymerOscillation.polymerTailBound_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BlockPolymerOscillation.effectiveBlockOsc_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BlockPolymerOscillation.finset_geom_tail_le_polymerTailBound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BlockPolymerOscillation.block_action_mem_Icc_of_polymer_tail' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'BlockPolymerOscillation.productHaar_polymer_density_cap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BlockPolymerOscillation.productHaar_polymer_expectation_floor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.canonical_polymer_osc_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMillsBlueprint.Certificates.block_polymer_oscillation_gibbs_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+inferInstance : Nonempty Certificates.SelfDualWaveCert
+'SelfDualWaveProjection.projPlus_add_projMinus' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SelfDualWaveProjection.projPlus_eigen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SelfDualWaveProjection.projMinus_eigen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SelfDualWaveProjection.projPlus_idem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SelfDualWaveProjection.projMinus_idem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SelfDualWaveProjection.projPlus_projMinus_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SelfDualWaveProjection.inner_projPlus_projMinus' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SelfDualWaveProjection.norm_sq_eq_projPlus_add_projMinus' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SelfDualWaveProjection.inner_self_invol_eq_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SelfDualWaveProjection.abs_inner_invol_le_norm_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SelfDualWaveProjection.fourD_curvature_choose_split' does not depend on any axioms
+'SelfDualWaveProjection.eightD_spinor_fourform_choose_split' does not depend on any axioms
+'SelfDualWaveProjection.inner_projOrth_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SelfDualWaveProjection.norm_unitProject' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SelfDualWaveProjection.inner_self_sphereGrad_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SelfDualWaveProjection.norm_sq_unnormalized_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SelfDualWaveProjection.unnormalized_step_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SelfDualWaveProjection.norm_adaptedWaveStep' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SelfDualWaveProjection.adaptedWaveStep_preserves_orth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SelfDualWaveProjection.rayleighEnergy_unitProject' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SelfDualWaveProjection.rayleigh_adaptedWaveStep_descent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SelfDualWaveProjection.rayleigh_adaptedWaveStep_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SelfDualWaveProjection.adaptedWaveStep_transfer_descent_and_floor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.canonical_hodge_dimension_splits' does not depend on any axioms
+'YangMillsBlueprint.Certificates.self_dual_bogomolnyi_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.projected_wave_adaptation_transfer_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+inferInstance : Nonempty Certificates.RigidTransferSynthesisCert
+'YangMillsBlueprint.Certificates.canonical_synthesis_witness_eval' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.rigid_transfer_synthesis_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
