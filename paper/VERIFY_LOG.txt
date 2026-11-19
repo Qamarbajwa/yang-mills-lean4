@@ -775,3 +775,10 @@ inferInstance : Nonempty Certificates.ContinuumRGBridgeCert
 'YangMillsBlueprint.Certificates.continuum_mass_gap_from_uniform_bridges_conditional' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+inferInstance : Nonempty Certificates.UnifiedMasterBridgeCert
+'YangMillsBlueprint.Certificates.peierls_exponential_threshold_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.master_uv_to_continuum_gap_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

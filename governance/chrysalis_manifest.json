@@ -2,8 +2,8 @@
   "manifest_version": "1.0.0",
   "key_id": "chrysalis-local-hmac-2026",
   "algorithm": "HMAC-SHA256",
-  "generated_at": "2026-11-19T21:36:50.301947+00:00",
-  "total_artifacts": 98,
+  "generated_at": "2026-11-19T21:39:18.351814+00:00",
+  "total_artifacts": 99,
   "files": {
     ".zenodo.json": {
       "sha256": "844768f54d56c9bf53fc183f910068b586d80d3b79c65bdf6841887f41e5da5d",
@@ -34,6 +34,11 @@
       "sha256": "bb874975e9e719aefbabe4b4961f2b64d220782f7ed010ba9ea04ed7b4f7c3a6",
       "hmac_sha256": "80f9d9621301467a8265393726b2aa49f55fff050b3bd1e463c6f296ff82aa92",
       "size_bytes": 5710
+    },
+    "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM180_UnifiedCrossoverMasterBridgeCert.lean": {
+      "sha256": "80f983a79aa3944fe92a3936cd7fd27c2afcff5680fbf6ceabfc00fea682ab04",
+      "hmac_sha256": "a88297d9236bcdbcc66b4332e309f503687fec2576c02eefe3b30d0c58476f01",
+      "size_bytes": 6357
     },
     "governance/envelopes/YM-002E.yaml": {
       "sha256": "ae09781544dfa741edc0fc3c42a515389621b54a9f75f7becdc74a4c2af95519",
@@ -136,9 +141,9 @@
       "size_bytes": 55376
     },
     "paper/VERIFY_LOG.txt": {
-      "sha256": "bd6368fbbe64b429f93be2b84bd8dbaba3ace1bbafe3ff528bc7d93c8fcc9d34",
-      "hmac_sha256": "15c628862a9b6d1dbb2abf10b0e7b81e42630944cfffd062f2712f76f476ad8d",
-      "size_bytes": 51377
+      "sha256": "71b7141c284de8844ff464f203e3bc122c3217aeb76673a332430f3aec98f3b3",
+      "hmac_sha256": "f0c89c928ee796737a2125df356f5a22ef1e4cc464655221bb32b0b63ee2ea2f",
+      "size_bytes": 51719
     },
     "probes/probe_abelian_subtracted_2to4_fiber_schur.py": {
       "sha256": "e4251491dae9bd4dcfd7045a3ad79236363f67dcafa0a69539b1546aa3c94933",
