@@ -725,3 +725,16 @@ inferInstance : Nonempty Certificates.Stage2ABasinCert
 'YangMillsBlueprint.Certificates.stage2a_full_crossover_basin_conditional' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+inferInstance : Nonempty Certificates.AbelianSubtractedSchurCert
+'YangMillsBlueprint.Certificates.offdiag_polarization_trace_zero_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.paramagnetic_trace_sandwich_and_gribov_clearance_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.paramagnetic_dominance_negative_defect_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.cocycle_and_commutator_floor_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -123,6 +123,7 @@ import YangMillsBlueprint.Certificates.YM172_AbstractPolymerClusterCert
 import YangMillsBlueprint.Certificates.YM173_MultiscaleBalabanFlowCert
 import YangMillsBlueprint.Certificates.YM174_MeasureBathtubFiberCert
 import YangMillsBlueprint.Certificates.YM175_PerturbedCocycleSchurCert
+import YangMillsBlueprint.Certificates.YM176_AbelianSubtractedParamagneticSchurCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -666,6 +667,10 @@ private def auditedTheorems : List Name :=
   , ``YangMillsBlueprint.Certificates.stage2a_fiber_measure_bathtub_conditional
   , ``YangMillsBlueprint.Certificates.stage2a_cocycle_and_schur_thresholds_unconditional
   , ``YangMillsBlueprint.Certificates.stage2a_full_crossover_basin_conditional
+  , ``YangMillsBlueprint.Certificates.offdiag_polarization_trace_zero_unconditional
+  , ``YangMillsBlueprint.Certificates.paramagnetic_trace_sandwich_and_gribov_clearance_unconditional
+  , ``YangMillsBlueprint.Certificates.paramagnetic_dominance_negative_defect_unconditional
+  , ``YangMillsBlueprint.Certificates.cocycle_and_commutator_floor_unconditional
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -742,6 +747,7 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.MultiscaleBalabanCert
   , ``YangMillsBlueprint.Certificates.MeasureBathtubCert
   , ``YangMillsBlueprint.Certificates.Stage2ABasinCert
+  , ``YangMillsBlueprint.Certificates.AbelianSubtractedSchurCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -1318,5 +1324,10 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #print axioms YangMillsBlueprint.Certificates.stage2a_fiber_measure_bathtub_conditional
 #print axioms YangMillsBlueprint.Certificates.stage2a_cocycle_and_schur_thresholds_unconditional
 #print axioms YangMillsBlueprint.Certificates.stage2a_full_crossover_basin_conditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.AbelianSubtractedSchurCert)
+#print axioms YangMillsBlueprint.Certificates.offdiag_polarization_trace_zero_unconditional
+#print axioms YangMillsBlueprint.Certificates.paramagnetic_trace_sandwich_and_gribov_clearance_unconditional
+#print axioms YangMillsBlueprint.Certificates.paramagnetic_dominance_negative_defect_unconditional
+#print axioms YangMillsBlueprint.Certificates.cocycle_and_commutator_floor_unconditional
 
 end YangMillsBlueprint.VerifyNoTraps

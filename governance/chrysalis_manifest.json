@@ -2,9 +2,19 @@
   "manifest_version": "1.0.0",
   "key_id": "chrysalis-local-hmac-2026",
   "algorithm": "HMAC-SHA256",
-  "generated_at": "2026-11-19T10:25:34.343645+00:00",
-  "total_artifacts": 75,
+  "generated_at": "2026-11-19T19:51:34.162734+00:00",
+  "total_artifacts": 90,
   "files": {
+    ".zenodo.json": {
+      "sha256": "c06fa45e83052e21064306edcd6f4381532dc9daf49f8678493556cdee9b75bb",
+      "hmac_sha256": "e7c28b54b6d0a6feab25317b6d74c0ed23e243ddf15705f3cacd9a2c62b876a8",
+      "size_bytes": 17688
+    },
+    "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM176_AbelianSubtractedParamagneticSchurCert.lean": {
+      "sha256": "9a12e8c86ae2e0badeeb65ca55a023af057d775053477350836aec973c6210ec",
+      "hmac_sha256": "62ec0147037489d3bea6fa6db5cbec1bf731248580c4c0b1c51b5a539fcd02b5",
+      "size_bytes": 7174
+    },
     "governance/envelopes/YM-002E.yaml": {
       "sha256": "ae09781544dfa741edc0fc3c42a515389621b54a9f75f7becdc74a4c2af95519",
       "hmac_sha256": "5b33d0e9efe85709ca47990c8217d22544ad20204c1b98b6bfa94baf419d4a75",
@@ -94,6 +104,71 @@
       "sha256": "b97168755beb44355640a75533fe2a623509fc7541188197d40d29a4e04ade39",
       "hmac_sha256": "a1dc816521941c17155a03d6f29395705d45d05881d4c9f7d29b450d750843d3",
       "size_bytes": 40705
+    },
+    "paper/paper_4_crossover_obstruction_atlas.pdf": {
+      "sha256": "5d75d4068b7105a8588996f7ced40759092f494d3fdc607e891beaa159597a7f",
+      "hmac_sha256": "4d2534b75e7a188601634f67681263746a4becbf7a808aa42924ece83d5c6fd9",
+      "size_bytes": 519459
+    },
+    "paper/paper_4_crossover_obstruction_atlas.tex": {
+      "sha256": "43c63f2820db9413eb963ac51da5d6ce76b36fa8fe7d51dd69df4e95a5f4b827",
+      "hmac_sha256": "2212d1f2e921a58aa696266356a174a42a30db26777c5cae19bbe4f8a68faf40",
+      "size_bytes": 54210
+    },
+    "paper/VERIFY_LOG.txt": {
+      "sha256": "63ac2728bb0f2d88ad05d31df8ab3fc1563cd8bff121c3e97c6e37d1170414ee",
+      "hmac_sha256": "73751da2c564f13daff2ef12865780022aabd563cf5bf5876cc298339aaf9103",
+      "size_bytes": 49550
+    },
+    "probes/probe_abelian_subtracted_2to4_fiber_schur.py": {
+      "sha256": "e4251491dae9bd4dcfd7045a3ad79236363f67dcafa0a69539b1546aa3c94933",
+      "hmac_sha256": "579b67fe7f4763ca91523bdf3e3d96f9ad02582d669348f0e95ea9271d8cac4b",
+      "size_bytes": 24978
+    },
+    "probes/probe_block_rg_transfer_b124.py": {
+      "sha256": "aff78ce0acdde51c30d861d1f79997ab904e554e8cb15a5bd49133d37159b36d",
+      "hmac_sha256": "05930f4590b15195dcd9112f73c93df48a66d6b2928cdd7c1baf3e5c68f3bd6b",
+      "size_bytes": 30582
+    },
+    "probes/probe_deep_cocycle_and_star_influence.py": {
+      "sha256": "3e057ef2af4d996c2d83a85105dc9c2d884026d56c374c2cc34cc09fbfebe5c6",
+      "hmac_sha256": "7914527af3ecdf3ed454484fe5ce11bb1fd6ba708fb6284d912d9bcb76c3d931",
+      "size_bytes": 25668
+    },
+    "probes/probe_mcrg_matched_vol_sd.py": {
+      "sha256": "376f7e3f04ae8e1c03839079e813480929f480f752d917b9d3a4310e0b22085f",
+      "hmac_sha256": "d8dda7acb1bfc87fd741bd224684282e2a187b923657315d101b09e51c5218d6",
+      "size_bytes": 35915
+    },
+    "probes/probe_paramagnetic_trace_sandwich_and_cocycle_floor.py": {
+      "sha256": "e0bfb7bceff43e3cadd1a784562e1ff6afae6ff2402b2c125e6e016ae89aea54",
+      "hmac_sha256": "858f647d5185b7a6a42d5a8f70955252c04bb51fc2c9fed764ea7caa2ef9a321",
+      "size_bytes": 15080
+    },
+    "probes/receipts/probe_abelian_subtracted_2to4_fiber_schur.receipt.json": {
+      "sha256": "778dae39503ed9b7737e0fa0008619991f68545261f2a9a854fef70fefc772f0",
+      "hmac_sha256": "f50e84bd75c83e4d2b95b23ab178db68d03d13347c46d88b2e2643bff111ca71",
+      "size_bytes": 3278
+    },
+    "probes/receipts/probe_block_rg_transfer_b124.receipt.json": {
+      "sha256": "5e9414c012a20ad2fe6d1e3920ec3a27093762c12191408d86932423c650cac9",
+      "hmac_sha256": "98af86d1f852ae1e6b4730b11740bb4ad8f398b1a728a960c0276074fb8e0b0e",
+      "size_bytes": 2984
+    },
+    "probes/receipts/probe_deep_cocycle_and_star_influence.receipt.json": {
+      "sha256": "2e063945acd602529e619e20e9d8de40f0f28aaeb2261d2cd30f8c42ea378808",
+      "hmac_sha256": "1b134700f591eeb91068e5ed2bf325749e1443af6a7dc0f81fdabce25d76bcfa",
+      "size_bytes": 2354
+    },
+    "probes/receipts/probe_mcrg_matched_vol_sd.receipt.json": {
+      "sha256": "02d20983a5253f0e25c5452c6ebfcd5289c58a9ec96f5e1676c3a6608282d77c",
+      "hmac_sha256": "20be4c7cdec800fa6afa23ae92eca360a02879c5b7a825130841a5d4a0efed36",
+      "size_bytes": 2619
+    },
+    "probes/receipts/probe_paramagnetic_trace_sandwich_and_cocycle_floor.receipt.json": {
+      "sha256": "ba94f255917ef0d5eab7b3be15c35a7b49d9069e7ffac7e644ccf1d56d75a07b",
+      "hmac_sha256": "6508b1d3108a43fe2b6e6724181e787ef4099174de05525b66c48e9eb94bac0f",
+      "size_bytes": 3462
     },
     "tests/test_acceptance_identity_separation.py": {
       "sha256": "d108d4e11466e458ea61629b45138b821715a6909adebf18e7ff6916bd9f7952",

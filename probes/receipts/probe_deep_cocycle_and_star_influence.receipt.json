@@ -1,0 +1,40 @@
+{
+  "probe_script": "probes/probe_deep_cocycle_and_star_influence.py",
+  "script_sha256": "3e057ef2af4d996c2d83a85105dc9c2d884026d56c374c2cc34cc09fbfebe5c6",
+  "verification_marker": "DEEP_PROBE_DONE",
+  "status": "PASSED",
+  "clay_problem_status": "OPEN_AND_UNSOLVED",
+  "summary_metrics": {
+    "test_a_ym142_max_err": 3.77e-14,
+    "test_b_u1_110_hess_lam_min": 0.823,
+    "test_b_u1_600_hess_lam_min": 5.01
+  },
+  "log_sha256": "c26e47127f1d9a2c22b89c66d658e8c85a59a560dfe75cd4b3128edd9bd68139",
+  "log_tail": [
+    "    bA  = 6.0  strip(1->2->4)=(0.1269 -> 0.2114 -> 0.3498)  area(1->2->4)=(0.1269 -> 0.3167 -> 0.6014)  eps(12,24,v)=(-0.0298, -0.0329, -0.0303)  c_eff=(0.763,0.830)  d22/d21=1.498",
+    "  YM142 pointwise gauge-invariant identity max error: 3.77e-14",
+    "",
+    "=== TEST B: EXACT 1-VERTEX K_{2,2,2,2} STAR BOUNDARY SENSITIVITY & HESSIAN (Ricci vs Frustration) ===",
+    "",
+    "  U(1) Star (Ric(S^1) = 0):",
+    "    Flat W=I         beta=1.01  rho_+-t=+0.1475  chi_d->d=0.0149  Hess_lam_min=+0.846",
+    "    Pi-Flux W        beta=1.01  rho_+-t=+0.4226  chi_d->d=0.0761  Hess_lam_min=+0.381",
+    "    Thermal b=0.80   beta=0.80  rho_+-t=-0.0713  chi_d->d=0.0200  Hess_lam_min=+0.352",
+    "    Thermal b=1.10   beta=1.10  rho_+-t=-0.0372  chi_d->d=0.0066  Hess_lam_min=+0.823",
+    "    Thermal b=6.00   beta=6.00  rho_+-t=+0.0993  chi_d->d=0.0016  Hess_lam_min=+5.010",
+    "",
+    "  SU(2) Star (Ric(S^3) = 1/2 > 0, d=2):",
+    "    Flat W=I         beta=2.30  rho_+-t=+0.1338  chi_d->d=0.0176  Hess_lam_min=+1.927",
+    "    Frustrated W     beta=2.30  rho_+-t=+0.5132  chi_d->d=0.1145  Hess_lam_min=+1.381",
+    "    Thermal b=2.30   beta=2.30  rho_+-t=+0.0414  chi_d->d=0.0080  Hess_lam_min=+1.373",
+    "    Thermal b=6.00   beta=6.00  rho_+-t=-0.0671  chi_d->d=0.0041  Hess_lam_min=+4.629",
+    "",
+    "  Adjoint SO(3) Star (Ric > 0, d=2, centerless):",
+    "    Flat W=I         bA  =2.80  rho_+-t=+0.1030  chi_d->d=0.0099  Hess_lam_min=+6.255",
+    "    Frustrated W     bA  =2.80  rho_+-t=+0.6339  chi_d->d=0.1830  Hess_lam_min=+4.201",
+    "    Thermal bA=2.80  bA  =2.80  rho_+-t=-0.0408  chi_d->d=0.0069  Hess_lam_min=+5.179",
+    "    Thermal bA=6.00  bA  =6.00  rho_+-t=+0.0624  chi_d->d=0.0039  Hess_lam_min=+12.177",
+    "",
+    "DEEP_PROBE_DONE elapsed=130.1s"
+  ]
+}

@@ -97,6 +97,13 @@ gate_3_cryptographic_provenance:
     - "tests/test_*.py"
     - "governance/envelopes/*.yaml"
     - "paper/main.tex"
+    - "paper/paper_4_crossover_obstruction_atlas.tex"
+    - "paper/paper_4_crossover_obstruction_atlas.pdf"
+    - "paper/VERIFY_LOG.txt"
+    - ".zenodo.json"
+    - "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM176_AbelianSubtractedParamagneticSchurCert.lean"
+    - "probes/*.py"
+    - "probes/receipts/*.json"
 
 gate_4_dual_custody:
   audit_chain_file: "governance/chrysalis_audit_chain.jsonl"

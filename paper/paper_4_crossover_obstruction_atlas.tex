@@ -232,9 +232,9 @@ Together, these results establish the unconditional finite-volume algebraic and 
 At physical blocking scale $R = \xi(\beta)$, the non-Abelian adjoint transport loss satisfies $\delta_{\mathrm{Bianchi}}(R) \ge \delta_* > 0$ and the coarse temporal slice coupling satisfies $\rho_E(b_t) \le 1 - \eta < 1$ uniformly in spatial volume $L^3$ as $\beta \to \infty$.
 \end{hypothesis}
 
-The machine-checked Lean~4 corpus (\texttt{YM101}--\texttt{YM175}) reduces the infinite-volume mass gap and non-Gaussian cumulant persistence to Hypothesis~\ref{hyp:p4-crossover} without any unformalized intermediate steps.
+The machine-checked Lean~4 corpus (\texttt{YM101}--\texttt{YM176}) reduces the infinite-volume mass gap and non-Gaussian cumulant persistence to Hypothesis~\ref{hyp:p4-crossover} without any unformalized intermediate steps.
 
-\begin{remark}[Structural Extensions and Empirical Diagnostics (\texttt{YM142}--\texttt{YM175})]
+\begin{remark}[Structural Extensions and Empirical Diagnostics (\texttt{YM142}--\texttt{YM176})]
 Additional formally checked layers sharpen both clauses of Hypothesis~\ref{hyp:p4-crossover} and bridge the algebraic blueprint to genuine measure-theoretic and Hilbert-space QFT objects:
 \begin{enumerate}
 \item \emph{Cocycle Split and Non-Linear Bathtub Floor (\texttt{YM142}--\texttt{YM144}):} Exact matrix cocycle composition isolates the fourth-order cross-correlation defect $\varepsilon_{\mathrm{corr}}$, while on $\mathrm{SO}(3)$ the exact Hopf commutator norm $\|[R(q),L_3]\|_F^2 = 8(q_1^2 + q_2^2)$ combined with bounded action oscillation $\mathrm{osc}$ yields a positive conditional variance floor $\ge 4 e^{-\mathrm{osc}}$.
@@ -244,6 +244,68 @@ Additional formally checked layers sharpen both clauses of Hypothesis~\ref{hyp:p
 \item \emph{Numerical Consistency Checks:} Four-dimensional Monte Carlo diagnostics verify the cocycle identity to $< 10^{-10}$, confirm positive $L$-stable $\varepsilon_{\mathrm{corr}}$ ($c_{\mathrm{corr}} > 1$) in both $\SU(2)$ and centerless $\mathrm{SO}(3)$, and expose an unblocked ($b_s = 1$) slice susceptibility blowup on $L \in \{10,12\}$ resolved under isotropic super-blocking ($b_s \in \{3,4\}$, $\ell^1(\Delta t \ge 2) < 1$). Unconditional analytic proofs on the $a \to 0, L \to \infty$ Wilson Gibbs measure remain open inside Hypothesis~\ref{hyp:p4-crossover}.
 \end{enumerate}
 \end{remark}
+
+\section{Conceptual Evolution: From Positive Mirages to Abelian-Subtracted Schur Dominance}
+\label{sec:conceptual-evolution}
+
+\subsection{Isolating Walls 1--3 and the $U(1)$ Acid Test}
+While Osterwalder--Seiler strong-coupling expansions ($\beta \ll 1$) and Ba{\l}aban's small-field ultraviolet renormalization group ($\beta \gg 1$ on finite cells) are rigorously controlled, bridging the intermediate-coupling crossover $g_{\mathrm{eff}}^2 \sim 1$ in the joint infinite-volume continuum limit ($L \to \infty,\ a \to 0$) remains open along three coupled obligations:
+\begin{enumerate}
+\item \emph{Wall~1 (Stage~1 Ultraviolet-to-Infrared RG Flow):} proving that gauge-covariant blocking drives $\beta_{\mathrm{eff}}(b)$ downward ($\Delta\beta_{2\times} < 0$) across all scales without requiring uncompensated bare counterterms.
+\item \emph{Wall~2 (Stage~2A Conditional Fiber Cocycle Floor):} proving that on a $2^4$ block conditioned on coarse links $V^{(2)}$, the interior non-Abelian adjoint cocycle dispersion $\delta_{2\times 2}(X) = 1 - \hat{n}\cdot R(U_{2\times 2})\hat{n}$ remains strictly bounded away from zero.
+\item \emph{Wall~3 (Stage~2B Non-Markovian Schur Contraction):} proving that coarse $1^{+-}$ transfer weights satisfy $\Gamma_{\ge 1}^{\mathrm{BLK}} < 1$ uniformly in volume.
+\end{enumerate}
+Any candidate mechanism for Walls~1--3 must pass the \emph{four-dimensional $U(1)$ acid test}: pure 4D compact $U(1)$ undergoes a deconfining phase transition at $\beta_c \approx 1.01$ into a massless Coulomb phase ($\operatorname{Ric}(S^1) = 0$, transverse root codimension $d = 0$), whereas compact non-Abelian gauge groups ($\operatorname{Ric}(G) > 0$, $d \ge 2$, including centerless $\mathrm{SO}(3)$) remain gapped. Any diagnostic that falsely signals a mass gap or downward running on 4D Coulomb $U(1)$ at $\beta \in \{1.10, 1.30, 2.00\}$ is therefore a finite-volume or cutoff artifact rather than non-Abelian confinement physics.
+
+\subsection{Falsifying the Three ``Seeing Positively'' Mirages}
+Applying the $U(1)$ acid test across five numerical probes falsified three natural ``seeing positively'' heuristics before they could enter the formal blueprint:
+\begin{enumerate}
+\item \emph{Mirage~1 (Single-Star Poincar\'e--Dirichlet Cavity Gap, Probe~1 Test~B):} Clamping the boundary of a radius-$1$ star in 4D injects an artificial Dirichlet Laplacian spectral gap $\lambda_1(-\Delta_{\mathrm{Dir}}) \sim \mathcal{O}(1/r^2)$ into the quadratic action. Consequently, even free massless Gaussian fields and 4D Coulomb $U(1)$ at $\beta = 1.10, 6.00$ appear strictly convex ($\lambda_{\min}(\mathrm{Hess}) = +0.823, +5.010$) and strongly mixing ($\chi_{\partial\to\partial} \approx 0.0016$), and an embedded $2^4$ Dirichlet cavity carries baseline free energy $F_{\mathrm{Ab}0}/d = 65.4505$ ($\lambda_{\min} = 4.0000$) because the $k \to 0$ photon mode cannot fit inside a finite cavity. Meanwhile, Test~A isolated the genuine geometric discriminator: the adjoint cocycle dispersion $\delta_{r\times s}(X)$ vanishes identically in $U(1)$ ($\delta \equiv 0$) while growing past $1/2$ in $\SU(2)$ and centerless $\mathrm{SO}(3)$.
+\item \emph{Mirage~2 (Unblocked Thin-Line UV Perimeter Self-Energy, Probe~2):} On an $L = 12$ lattice, unblocked 1-link temporal correlators $L_0^{(b)}$ decay as $\exp(-c_{\mathrm{UV}} b/\beta)$ even inside a perturbative UV femto-box at $\beta = 4.00$, mimicking an IR gap. Replacing thin lines with fattened gauge-covariant \texttt{BLK\_RG} blocking exposes genuine IR contraction at crossover ($\SU(2)$ $\beta = 2.30, 2.50$: $\Gamma_{\ge 1}^{\mathrm{BLK}} \to 0.003, 0.106 \ll 1$) while preserving perturbative UV coherence at $\beta = 4.00$.
+\item \emph{Mirage~3 (Over-Smoothed Stencil and Torus Wrap-Around Transients, Probe~3):} Moving from $b=2$ ($6^4$ coarse torus) to $b=4$ ($3^4$ coarse torus) on a fixed $L=12$ lattice with staple weight $\alpha = 0.500$ mixes UV over-smoothing with periodic wrap-around folding ($G_{L_b=3}(1) \approx G_\infty(1) + G_\infty(2)$). Calibrating the neutral blocking weight on 4D Coulomb $U(1)$ ($\beta = 2.00$) over matched coarse volumes ($3^4 \leftrightarrow 3^4$ for $L=12,\,b=4$ vs.\ $L=6,\,b=2$, and $4^4 \leftrightarrow 4^4$) isolates $\alpha^* = 0.188$, where $\Delta\beta_{2\times}^{U(1)} = +0.001 \pm 0.025$ (zero running). Because $\SU(2)$ staples close under Pauli Clifford algebra ($M^\dagger M \propto I_2$ for $M \in \mathbb{H}$) while $\mathrm{SO}(3)$ polar projection introduces symmetric quadrupolar tensors, $\SU(2)$ shares the exact neutral point $\alpha^* = 0.188$, yielding $\Delta\beta_{2\times}^{\SU(2)}(4.00) = -0.269 \pm 0.025$ (matching 1-loop $-0.2575$) alongside strict matched-volume $\Gamma_{\ge 1}^{\mathrm{BLK}}$ contraction ($0.422 \to 0.302$).
+\end{enumerate}
+
+\subsection{``Seeing Negatively''---The Abelian-Subtracted $2^4$ Fiber and Paramagnetic Schur Dominance}
+To eliminate all three mirages simultaneously, Probes~4 and~5 subtract the calibrated Abelian Gaussian baseline at $\alpha^* = 0.188$ on a conditional $2^4$ hypercube fiber ($F := -\ln Z$):
+\begin{equation}
+\Delta F_{\mathrm{non\text{-}Ab}} := F_G - F_{\mathrm{Ab}0}
+= \underbrace{\Delta F_{\mathrm{diam}}}_{> 0\text{ (orbital screening)}} + \underbrace{F_{\mathrm{para}}}_{< 0\text{ (spin-1 Schur)}} ,
+\qquad
+F_{\mathrm{para}} = \frac{1}{2}\tr\ln(I + K_{\mathrm{para}}) = F_{\mathrm{Schur}},
+\end{equation}
+where $K_{\mathrm{para}} = H_{\mathrm{diam}}^{-1/2} W_{\mathrm{para}} H_{\mathrm{diam}}^{-1/2}$ is the normalized off-diagonal spin-1 commutator operator ($W_{\mathrm{para}} = -2\operatorname{ad}(F_{\mu\nu})$) and $F_{\mathrm{Schur}}$ is the exact polarization-block Schur complement ($|F_{\mathrm{Schur}} - F_{\mathrm{para}}|/d \le 1.5 \times 10^{-14}$). Subtracting $F_{\mathrm{Ab}0}/d = 65.4505$ cancels the Dirichlet cavity mirage on $F=0$ pure gauge to $\le 6.7 \times 10^{-15}$ and cancels the 1-step UV stencil factor ($\kappa_{U(1)}(\alpha^*) = 1.1250$).
+
+Because $H_{\mathrm{diam}} = I_4 \otimes (-D_{\mathrm{Dir}}^2)$ is diagonal in polarization $\mu \in \{0,1,2,3\}$ while $W_{\mathrm{para}}$ vanishes on $\mu = \nu$, $\tr(K_{\mathrm{para}}) \equiv 0$ (`<= 1.8e-15`). Across all $720$ non-Abelian $2^4$ blocks ($180$ configurations spanning $\SU(2)$ $\beta \in \{2.30, 2.50, 3.00, 4.00\}$ and $\mathrm{SO}(3)$ $\beta_A \in \{2.80, 4.00\}$), $\|K_{\mathrm{para}}\|_{\mathrm{op}} \le 0.4346 < 1$ (Gribov clearance $1 + \lambda \ge 0.5654 > 0$), the 4th-order rational trace sandwich $\mathrm{lb}_4 \le F_{\mathrm{para}}^{(2+4)}/d \le \mathrm{ub}$ matches $F_{\mathrm{para}}/d$ to $0.046\%$--$0.166\%$, and $F_{\mathrm{para}}/d$ dominates the positive diamagnetic shift $\Delta F_{\mathrm{diam}}/d$ by $13.47\times$--$27.83\times$ (Table~\ref{tab:probe5-sandwich}), bounded below by the interior $2\times 2$ area cocycle defect (`YM142`):
+\begin{equation}
+C_{\mathrm{dom}} = \min \frac{|F_{\mathrm{para}}|}{\Delta F_{\mathrm{diam}}} = 13.47 > 1,
+\qquad
+\frac{\tr(K_{\mathrm{para}}^2)}{d} \ge 1.3407\,\delta_{2\times 2}(X),
+\qquad
+\frac{\tr(K_{\mathrm{para}}^2)}{d} \ge 0.3470\,\|[P, P']\|_F^2.
+\end{equation}
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\begin{tabular}{@{}lrrrrrrrrr@{}}
+\toprule
+Ensemble & $\Delta F_{\mathrm{diam}}/d$ & $F_{\mathrm{para}}/d$ & $F_{\mathrm{para}}^{(2+4)}/d$ & $\max\|K\|_{\mathrm{op}}$ & $\mathrm{Tr}(K^2)/d$ & $\delta_{2\times 2}$ & $\min\frac{|F_p|}{\Delta F_d}$ & $\min\frac{\mathrm{Tr}K^2}{\delta_{2\times 2}}$ & $\Gamma_{\ge 1}^{\mathrm{BLK}}$ \\
+\midrule
+$U(1)(1.30)$ & $+0.0000$ & $+0.0000$ & $+0.0000$ & $0.0000$ & $0.0000$ & $0.0000$ & --- & --- & $0.4239$ \\
+$U(1)(2.00)$ & $+0.0000$ & $+0.0000$ & $+0.0000$ & $0.0000$ & $0.0000$ & $0.0000$ & --- & --- & $0.5872$ \\
+$\SU(2)(2.30)$ & $+0.0232$ & $-0.3743$ & $-0.3737$ & $0.4346$ & $1.4525$ & $0.9860$ & $13.47$ & $1.3407$ & $0.0404$ \\
+$\SU(2)(2.50)$ & $+0.0221$ & $-0.3774$ & $-0.3768$ & $0.4144$ & $1.4633$ & $0.9729$ & $14.30$ & $1.3910$ & $0.0730$ \\
+$\SU(2)(3.00)$ & $+0.0188$ & $-0.3675$ & $-0.3670$ & $0.4007$ & $1.4271$ & $0.9214$ & $16.55$ & $1.4312$ & $0.2286$ \\
+$\SU(2)(4.00)$ & $+0.0148$ & $-0.3365$ & $-0.3361$ & $0.4062$ & $1.3104$ & $0.8237$ & $18.45$ & $1.4294$ & $0.3903$ \\
+$\mathrm{SO}(3)(2.80)$ & $+0.0109$ & $-0.2816$ & $-0.2814$ & $0.3780$ & $1.1008$ & $0.6764$ & $21.57$ & $1.5497$ & $0.3488$ \\
+$\mathrm{SO}(3)(4.00)$ & $+0.0073$ & $-0.2011$ & $-0.2010$ & $0.3125$ & $0.7917$ & $0.4777$ & $21.72$ & $1.5087$ & $0.5252$ \\
+\bottomrule
+\end{tabular}
+\caption{Abelian-subtracted conditional $2^4$-fiber paramagnetic Schur dominance, 4th-order spectral sandwich, and direct cocycle floor across $960$ $2^4$ blocks ($L=6$, $\alpha^* = 0.188$, Probe~5). Matched-volume $3^4$ ($L=12,\,b=4$ vs.\ $L=6,\,b=2$) and infinite-volume continuum extrapolation ($L \to \infty,\ a \to 0$) across $g_{\mathrm{eff}}^2 \sim 1$ remain open inside Hypothesis~\ref{hyp:p4-crossover}.}
+\label{tab:probe5-sandwich}
+\end{table}
+
+The algebraic and rational deductions connecting $\tr(K_{\mathrm{para}}) = 0$, the 4th-order rational trace sandwich with Gribov-horizon clearance, paramagnetic dominance ($C_{\mathrm{dom}} \ge 1347/100$), and the cocycle/commutator floors are formally verified in \texttt{YM176\_AbelianSubtractedParamagneticSchurCert.lean}.
 
 \section{Formal Verification Concordance}
 Every algebraic commutator identity, variational factorization, Levi-stratum accounting balance, Level-4 loop bootstrap envelope, centerless Cartan rigidity theorem, and exponential screening inequality in this paper is formally verified in Lean~4 against standard Mathlib~4 foundations. Tables~\ref{tab:paper4-concordance}--\ref{tab:paper4-concordance-phase456} record the exact correspondence and axiom footprint verified by the metaprogramming auditor in \texttt{VerifyNoTraps.lean}.
@@ -420,9 +482,12 @@ Uncond. + Cond. Stage~2A (Std Mathlib) \\
 \texttt{YM175} / \texttt{PerturbedCocycle\allowbreak SchurBasin} &
 Cocycle $\eta<c/4$ \& Schur $5\tau_e+4\tau_o<1$ thresholds (\texttt{stage2a\_\allowbreak cocycle\_\allowbreak and\_\allowbreak schur\_\allowbreak thresholds\_\allowbreak unconditional}, \texttt{stage2a\_\allowbreak full\_\allowbreak crossover\_\allowbreak basin\_\allowbreak conditional}) &
 Uncond. + Cond. Stage~2A (Std Mathlib) \\
+\texttt{YM176} / \texttt{AbelianSubtracted\allowbreak ParamagneticSchur} &
+$\operatorname{Tr}(K_{\mathrm{para}}){=}0$, 4th-order sandwich, $C_{\mathrm{dom}} \ge 1347/100$, cocycle floor (\texttt{offdiag\_\allowbreak polarization\_\allowbreak trace\_\allowbreak zero\_\allowbreak unconditional}, \texttt{paramagnetic\_\allowbreak trace\_\allowbreak sandwich\_\allowbreak and\_\allowbreak gribov\_\allowbreak clearance\_\allowbreak unconditional}, \texttt{paramagnetic\_\allowbreak dominance\_\allowbreak negative\_\allowbreak defect\_\allowbreak unconditional}, \texttt{cocycle\_\allowbreak and\_\allowbreak commutator\_\allowbreak floor\_\allowbreak unconditional}) &
+Unconditional (Std Mathlib) \\
 \hline
 \end{tabular}
-\caption{Formal verification concordance (Part~V) covering Phases~VI--IX constructive-QFT referee-gap, chiral/spinor OS--Wick, and Stage~1/2A polymer, bathtub, and crossover basin interfaces (\texttt{YM164}--\texttt{YM175}). Conditional entries explicitly parameterize unproved Hypothesis~\ref{hyp:p4-crossover} obligations.}
+\caption{Formal verification concordance (Part~V) covering Phases~VI--IX constructive-QFT referee-gap, chiral/spinor OS--Wick, and Stage~1/2A polymer, bathtub, and crossover basin interfaces (\texttt{YM164}--\texttt{YM176}). Conditional entries explicitly parameterize unproved Hypothesis~\ref{hyp:p4-crossover} obligations.}
 \label{tab:paper4-concordance-phase456}
 \end{table}
 

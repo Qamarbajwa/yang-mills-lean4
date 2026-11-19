@@ -1,7 +1,7 @@
 {
   "title": "Four-Dimensional Lattice Yang-Mills Modular Research Bundle and Lean 4 Formal Verification Certificates",
-  "description": "Synchronized modular release bundle (v1.9.0) containing four micro-papers (PDF and LaTeX source), seventy-two Mathlib-ready Lean 4 foundational modules (MathlibStaging), and seventy-five domain certificate modules (YM101-YM175) spanning UV polymer contraction, 100% Killing-Cartan closure, curved Brascamp-Lieb and Dobrushin mixing bridges, all-scales inductive Peierls RG, spatial reflection positivity, Symanzik continuum envelopes, short-distance OPE non-triviality, Tomboulis character flow, FILS chessboard decay, thick-vortex spreading, gauge-invariant coset sign-magnitude Creutz dominance, general-rank non-Abelian Bianchi chording, RP slice transfer-matrix log-convexity, Stokes adjoint dispersion, Schur-test slice Markov tensorization, Bianchi-screened dipole variance floors, coarse temporal-slice Dobrushin contraction, multi-scale dyadic Bianchi accumulation, Bianchi cocycle decomposition, non-linear SO(3) centralizer codimension bounds, bounded-oscillation Gibbs density cap variance floors, isotropic super-block Dobrushin normalization, Schur partial-trace and multi-level block divide-and-conquer contraction, centerless simple-group uniform closure, compact-group Haar product Gibbs measures, completed OS Hilbert transfer gap bounds, end-to-end measure-Hilbert Clay interface synthesis, and unconditional 4D Wilson single-link conditional density and variance floors, rigid chord and tree-frame gauge invariance, concrete 4D/8D Hodge and finite-box reflection positivity, Lorentzian/Wick mass-shell continuation, and constructive-QFT referee-gap bridge interfaces (Balaban polymer collars, conditional fiber density, non-critical slab contraction, continuum OS limits, localized Ursell non-triviality, and centerless Weyl-Casimir bounds), 4D quaternionic Spin(4) / chiral Hodge OS reflection and complexified 2x2 spinor-Hermitian SL(2,C) Wick continuation, abstract finite polymer cluster convergence with L-uniform Kotecky-Preiss collar decoupling (YM172), K-uniform multiscale Balaban O(1/beta_k^2) vs. logarithmic O(1/beta_k) counterterm necessity (YM173), measure-theoretic Lieb-Loss bathtub fiber variance floors with transverse codimension-d M^(-2/d) scaling (YM174), and sharp Stage-2A perturbed cocycle eta < c/4 and non-Markovian Schur 5*tau_e + 4*tau_o < 1 contraction basin thresholds (YM175), together with the Lean 4 verification ledger. The infinite-volume continuum mass-gap reduction is isolated explicitly inside conditional Hypothesis 4.1 on coarse-scale Bianchi dispersion and slice decoherence.",
-  "version": "1.9.0",
+  "description": "Synchronized modular release bundle (v1.10.0) containing four micro-papers (PDF and LaTeX source), seventy-two Mathlib-ready Lean 4 foundational modules (MathlibStaging), seventy-six domain certificate modules (YM101-YM176), and five deterministic SU(2)/SO(3)/U(1) numerical verification probes with SHA-256 receipts. Includes YM175 (perturbed cocycle eta < c/4 and non-Markovian Schur contraction basin thresholds) and YM176 (Abelian-subtracted 2^4-fiber paramagnetic Schur dominance, quadratic trace sandwich, Gribov Hessian clearance, and cocycle/commutator floor), together with the Lean 4 verification ledger. The infinite-volume continuum mass-gap reduction is isolated explicitly inside conditional Hypothesis 4.1 on coarse-scale Bianchi dispersion and slice decoherence, and the full Clay 4D Yang-Mills problem remains explicitly OPEN.",
+  "version": "1.10.0",
   "upload_type": "software",
   "license": "Apache-2.0",
   "creators": [
@@ -178,6 +178,17 @@
     "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM172_AbstractPolymerClusterCert.lean",
     "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM173_MultiscaleBalabanFlowCert.lean",
     "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM174_MeasureBathtubFiberCert.lean",
-    "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM175_PerturbedCocycleSchurCert.lean"
+    "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM175_PerturbedCocycleSchurCert.lean",
+    "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM176_AbelianSubtractedParamagneticSchurCert.lean",
+    "probes/probe_deep_cocycle_and_star_influence.py",
+    "probes/probe_block_rg_transfer_b124.py",
+    "probes/probe_mcrg_matched_vol_sd.py",
+    "probes/probe_abelian_subtracted_2to4_fiber_schur.py",
+    "probes/probe_paramagnetic_trace_sandwich_and_cocycle_floor.py",
+    "probes/receipts/probe_deep_cocycle_and_star_influence.receipt.json",
+    "probes/receipts/probe_block_rg_transfer_b124.receipt.json",
+    "probes/receipts/probe_mcrg_matched_vol_sd.receipt.json",
+    "probes/receipts/probe_abelian_subtracted_2to4_fiber_schur.receipt.json",
+    "probes/receipts/probe_paramagnetic_trace_sandwich_and_cocycle_floor.receipt.json"
   ]
 }
