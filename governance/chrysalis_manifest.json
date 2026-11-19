@@ -2,13 +2,13 @@
   "manifest_version": "1.0.0",
   "key_id": "chrysalis-local-hmac-2026",
   "algorithm": "HMAC-SHA256",
-  "generated_at": "2026-11-19T22:35:33.471723+00:00",
+  "generated_at": "2026-11-19T22:36:41.563441+00:00",
   "total_artifacts": 101,
   "files": {
     ".zenodo.json": {
-      "sha256": "8a26d2e33a9856d93a05818c75eacf4313f53f28aef0cb3a8bb44545ac792ae2",
-      "hmac_sha256": "eeefe12a9e9b7f64ea025ff09a8bb599f4126c66594657e0cc0243e51096df1a",
-      "size_bytes": 18946
+      "sha256": "e58c04621389d6ac1a744460724f35bdc921fd804081a05178066d62f579fdcc",
+      "hmac_sha256": "e33e362ffd845ebf23a1a81f7b90830ed3a3a0cd223053e2ab99831aaecb8e6d",
+      "size_bytes": 18817
     },
     "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM176_AbelianSubtractedParamagneticSchurCert.lean": {
       "sha256": "9a12e8c86ae2e0badeeb65ca55a023af057d775053477350836aec973c6210ec",
