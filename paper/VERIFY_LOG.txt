@@ -765,3 +765,13 @@ inferInstance : Nonempty Certificates.SpectralGribovCert
 'YangMillsBlueprint.Certificates.trace_log_schur_sandwich_unconditional' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+inferInstance : Nonempty Certificates.ContinuumRGBridgeCert
+'YangMillsBlueprint.Certificates.large_field_small_field_gibbs_split_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.renormalized_cocycle_one_loop_descent_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.continuum_mass_gap_from_uniform_bridges_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

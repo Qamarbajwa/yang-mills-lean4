@@ -127,6 +127,7 @@ import YangMillsBlueprint.Certificates.YM176_AbelianSubtractedParamagneticSchurC
 import YangMillsBlueprint.Certificates.YM177_TwoStepInductiveRGRemainderCert
 import YangMillsBlueprint.Certificates.YM177_InductiveRgRemainderContractionCert
 import YangMillsBlueprint.Certificates.YM178_SpectralTaylorAndGribovClearanceCert
+import YangMillsBlueprint.Certificates.YM179_ContinuumRGBridgeSynthesisCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -682,6 +683,9 @@ private def auditedTheorems : List Name :=
   , ``YangMillsBlueprint.Certificates.small_field_gribov_clearance_unconditional
   , ``YangMillsBlueprint.Certificates.real_log_fourth_order_sandwich_unconditional
   , ``YangMillsBlueprint.Certificates.trace_log_schur_sandwich_unconditional
+  , ``YangMillsBlueprint.Certificates.large_field_small_field_gibbs_split_unconditional
+  , ``YangMillsBlueprint.Certificates.renormalized_cocycle_one_loop_descent_unconditional
+  , ``YangMillsBlueprint.Certificates.continuum_mass_gap_from_uniform_bridges_conditional
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -762,6 +766,7 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.TwoStepInductiveRGCert
   , ``YangMillsBlueprint.Certificates.InductiveRgRemainderCert
   , ``YangMillsBlueprint.Certificates.SpectralGribovCert
+  , ``YangMillsBlueprint.Certificates.ContinuumRGBridgeCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -1354,5 +1359,9 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #print axioms YangMillsBlueprint.Certificates.small_field_gribov_clearance_unconditional
 #print axioms YangMillsBlueprint.Certificates.real_log_fourth_order_sandwich_unconditional
 #print axioms YangMillsBlueprint.Certificates.trace_log_schur_sandwich_unconditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.ContinuumRGBridgeCert)
+#print axioms YangMillsBlueprint.Certificates.large_field_small_field_gibbs_split_unconditional
+#print axioms YangMillsBlueprint.Certificates.renormalized_cocycle_one_loop_descent_unconditional
+#print axioms YangMillsBlueprint.Certificates.continuum_mass_gap_from_uniform_bridges_conditional
 
 end YangMillsBlueprint.VerifyNoTraps
