@@ -94,6 +94,7 @@ import YangMillsBlueprint.Certificates.YM143_CentralizerCodimensionCert
 import YangMillsBlueprint.Certificates.YM144_DensityCapVarianceCert
 import YangMillsBlueprint.Certificates.YM145_IsotropicSuperblockCert
 import YangMillsBlueprint.Certificates.YM146_SchurPartialTraceCert
+import YangMillsBlueprint.Certificates.YM147_BlockSchurHierarchyCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -473,6 +474,18 @@ private def auditedTheorems : List Name :=
   , ``YangMillsBlueprint.Certificates.canonical_schur_two_step_eq
   , ``YangMillsBlueprint.Certificates.canonical_schur_monotone_lt
   , ``YangMillsBlueprint.Certificates.schur_partial_trace_contraction_conditional
+  , ``BlockSchurHierarchy.even_block_chain_complete_sq
+  , ``BlockSchurHierarchy.schur_chain_margin_eq
+  , ``BlockSchurHierarchy.blockRatio_renorm_eq
+  , ``BlockSchurHierarchy.blockRatioNext_lt_sq
+  , ``BlockSchurHierarchy.blockRatioNext_lt_self
+  , ``BlockSchurHierarchy.iteratedBlockRatio_mem_Ico
+  , ``BlockSchurHierarchy.blockChain_margin_monotone
+  , ``YangMillsBlueprint.Certificates.canonical_block_ratio_k1_eq
+  , ``YangMillsBlueprint.Certificates.canonical_block_ratio_k2_eq
+  , ``YangMillsBlueprint.Certificates.canonical_block_ratio_k2_lt_eighth
+  , ``YangMillsBlueprint.Certificates.canonical_margin_amplified
+  , ``YangMillsBlueprint.Certificates.block_hierarchy_gap_conditional
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -520,6 +533,7 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.DensityCapVarianceCert
   , ``YangMillsBlueprint.Certificates.IsotropicSuperblockCert
   , ``YangMillsBlueprint.Certificates.SchurPartialTraceCert
+  , ``YangMillsBlueprint.Certificates.BlockSchurHierarchyCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -903,5 +917,18 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #print axioms YangMillsBlueprint.Certificates.canonical_schur_two_step_eq
 #print axioms YangMillsBlueprint.Certificates.canonical_schur_monotone_lt
 #print axioms YangMillsBlueprint.Certificates.schur_partial_trace_contraction_conditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.BlockSchurHierarchyCert)
+#print axioms BlockSchurHierarchy.even_block_chain_complete_sq
+#print axioms BlockSchurHierarchy.schur_chain_margin_eq
+#print axioms BlockSchurHierarchy.blockRatio_renorm_eq
+#print axioms BlockSchurHierarchy.blockRatioNext_lt_sq
+#print axioms BlockSchurHierarchy.blockRatioNext_lt_self
+#print axioms BlockSchurHierarchy.iteratedBlockRatio_mem_Ico
+#print axioms BlockSchurHierarchy.blockChain_margin_monotone
+#print axioms YangMillsBlueprint.Certificates.canonical_block_ratio_k1_eq
+#print axioms YangMillsBlueprint.Certificates.canonical_block_ratio_k2_eq
+#print axioms YangMillsBlueprint.Certificates.canonical_block_ratio_k2_lt_eighth
+#print axioms YangMillsBlueprint.Certificates.canonical_margin_amplified
+#print axioms YangMillsBlueprint.Certificates.block_hierarchy_gap_conditional
 
 end YangMillsBlueprint.VerifyNoTraps

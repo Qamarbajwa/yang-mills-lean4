@@ -400,3 +400,20 @@ inferInstance : Nonempty Certificates.SchurPartialTraceCert
 'YangMillsBlueprint.Certificates.schur_partial_trace_contraction_conditional' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+inferInstance : Nonempty Certificates.BlockSchurHierarchyCert
+'BlockSchurHierarchy.even_block_chain_complete_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BlockSchurHierarchy.schur_chain_margin_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BlockSchurHierarchy.blockRatio_renorm_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BlockSchurHierarchy.blockRatioNext_lt_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BlockSchurHierarchy.blockRatioNext_lt_self' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BlockSchurHierarchy.iteratedBlockRatio_mem_Ico' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BlockSchurHierarchy.blockChain_margin_monotone' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMillsBlueprint.Certificates.canonical_block_ratio_k1_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMillsBlueprint.Certificates.canonical_block_ratio_k2_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMillsBlueprint.Certificates.canonical_block_ratio_k2_lt_eighth' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.canonical_margin_amplified' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMillsBlueprint.Certificates.block_hierarchy_gap_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
