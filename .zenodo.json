@@ -1,7 +1,7 @@
 {
   "title": "Four-Dimensional Lattice Yang-Mills Modular Research Bundle and Lean 4 Formal Verification Certificates",
-  "description": "Synchronized modular release bundle (v1.11.0) containing four micro-papers (PDF and LaTeX source), seventy-two Mathlib-ready Lean 4 foundational modules (MathlibStaging), seventy-nine domain certificate modules (YM101-YM178), and six deterministic SU(2)/SO(3)/U(1) numerical verification probes with SHA-256 receipts. Includes YM176 (Abelian-subtracted 2^4-fiber paramagnetic Schur dominance), YM177 (two-step inductive RG remainder contraction and finite-time crossover basin entry), and YM178 (exact Real.log fourth-order spectral Taylor sandwich and deterministic 2^4 small-field Gribov-horizon clearance), together with the Lean 4 verification ledger. The infinite-volume continuum mass-gap reduction is isolated explicitly inside conditional Hypothesis 4.1 on coarse-scale Bianchi dispersion and slice decoherence, and the full Clay 4D Yang-Mills problem remains explicitly OPEN.",
-  "version": "1.11.0",
+  "description": "Synchronized modular release bundle (v1.12.0) containing four micro-papers (PDF and LaTeX source), seventy-two Mathlib-ready Lean 4 foundational modules (MathlibStaging), eighty-two domain certificate modules (YM101-YM181), and six deterministic SU(2)/SO(3)/U(1) numerical verification probes with SHA-256 receipts. Includes YM176 (Abelian-subtracted 2^4-fiber paramagnetic Schur dominance), YM177 (two-step inductive RG remainder contraction and finite-time crossover basin entry), YM178 (exact Real.log fourth-order spectral Taylor sandwich and deterministic 2^4 small-field Gribov-horizon clearance), YM179-YM180 (Bridges 1-4 Peierls split, O(1/beta_k) cocycle descent, and unified UV-to-continuum master bridge), and YM181 (full YM180 + YM151 OSHilbert Clay interface synthesis), together with the Lean 4 verification ledger. The infinite-volume continuum mass-gap reduction is isolated explicitly inside conditional Hypothesis 4.1 on coarse-scale Bianchi dispersion and slice decoherence, and the full Clay 4D Yang-Mills problem remains explicitly OPEN.",
+  "version": "1.12.0",
   "upload_type": "software",
   "license": "Apache-2.0",
   "creators": [
@@ -196,6 +196,9 @@
     "probes/probe_two_step_inductive_rg_remainder.py",
     "probes/receipts/probe_two_step_inductive_rg_remainder.receipt.json",
     "scripts/probe_two_step_inductive_rg_remainder.py",
-    "probes/probe_two_step_inductive_rg_remainder.json"
+    "probes/probe_two_step_inductive_rg_remainder.json",
+    "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM179_ContinuumRGBridgeSynthesisCert.lean",
+    "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM180_UnifiedCrossoverMasterBridgeCert.lean",
+    "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM181_ClayBoundaryContinuumSynthesisCert.lean"
   ]
 }

@@ -231,11 +231,13 @@ KNOWN_ADMINISTRATIVE_ROOT_PATHS = {
     "MATHLIB4_UPSTREAM_PR_MANIFEST.md",
     "prior_art_audit_receipt.json",
     ".zenodo.json",
+    "SEEING_NEGATIVELY_ARTICLE_AND_SYSTEM_MAP.md",
+    "SEEING_NEGATIVELY_ARTICLE_AND_SYSTEM_MAP.pdf",
 }
 
 GENERATED_PREFIXES = ("checkpoints/", "evidence/", "experiments/", "numerical/")
 PROVENANCE_PREFIXES = ("verification/",)
-ADMINISTRATIVE_PREFIXES = ("governance/", "scripts/", "src/", "tests/", "docs/", "formal/", "paper/", "_staging_gov_v403/", "_staging_gov_v406r3/", "_staging_gov_v410r3/")
+ADMINISTRATIVE_PREFIXES = ("governance/", "scripts/", "src/", "tests/", "docs/", "formal/", "paper/", "probes/", "_staging_gov_v403/", "_staging_gov_v406r3/", "_staging_gov_v410r3/")
 
 IGNORED_EXACT_PATHS = {
     "checkpoints/.gitkeep",
