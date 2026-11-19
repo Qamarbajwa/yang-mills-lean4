@@ -454,3 +454,26 @@ inferInstance : Nonempty Certificates.LatticeHaarGibbsCert
 'YangMillsBlueprint.Certificates.lattice_haar_gibbs_variance_floor_conditional' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+inferInstance : Nonempty Certificates.SliceReflectionHilbertCert
+'SliceReflectionHilbert.osEmbed_inner' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SliceReflectionHilbert.osEmbed_norm_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SliceReflectionHilbert.osEmbed_eq_zero_of_null' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SliceReflectionHilbert.transfer_preserves_orth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SliceReflectionHilbert.transfer_pow_preserves_orth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SliceReflectionHilbert.transfer_pow_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SliceReflectionHilbert.transfer_correlator_exp_decay' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SliceReflectionHilbert.transfer_to_coercivity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMillsBlueprint.Certificates.canonical_transfer_gap_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMillsBlueprint.Certificates.canonical_transfer_log_gap_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.slice_reflection_hilbert_gap_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+inferInstance : Nonempty Certificates.BlueprintClayInterfaceCert
+'YangMillsBlueprint.Certificates.canonical_clay_interface_witness_eval' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.blueprint_clay_hilbert_interface_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

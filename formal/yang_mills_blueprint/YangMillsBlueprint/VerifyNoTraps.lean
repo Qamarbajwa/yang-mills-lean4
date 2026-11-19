@@ -97,6 +97,8 @@ import YangMillsBlueprint.Certificates.YM146_SchurPartialTraceCert
 import YangMillsBlueprint.Certificates.YM147_BlockSchurHierarchyCert
 import YangMillsBlueprint.Certificates.YM148_SimpleGroupUniformCert
 import YangMillsBlueprint.Certificates.YM149_LatticeHaarGibbsCert
+import YangMillsBlueprint.Certificates.YM150_SliceReflectionHilbertCert
+import YangMillsBlueprint.Certificates.YM151_BlueprintClayInterfaceCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -511,6 +513,19 @@ private def auditedTheorems : List Name :=
   , ``YangMillsBlueprint.Certificates.canonical_haar_osc_density_cap_eq
   , ``YangMillsBlueprint.Certificates.canonical_haar_exp_floor_eq
   , ``YangMillsBlueprint.Certificates.lattice_haar_gibbs_variance_floor_conditional
+  , ``SliceReflectionHilbert.osEmbed_inner
+  , ``SliceReflectionHilbert.osEmbed_norm_sq
+  , ``SliceReflectionHilbert.osEmbed_eq_zero_of_null
+  , ``SliceReflectionHilbert.transfer_preserves_orth
+  , ``SliceReflectionHilbert.transfer_pow_preserves_orth
+  , ``SliceReflectionHilbert.transfer_pow_norm_le
+  , ``SliceReflectionHilbert.transfer_correlator_exp_decay
+  , ``SliceReflectionHilbert.transfer_to_coercivity
+  , ``YangMillsBlueprint.Certificates.canonical_transfer_gap_eq
+  , ``YangMillsBlueprint.Certificates.canonical_transfer_log_gap_eq
+  , ``YangMillsBlueprint.Certificates.slice_reflection_hilbert_gap_conditional
+  , ``YangMillsBlueprint.Certificates.canonical_clay_interface_witness_eval
+  , ``YangMillsBlueprint.Certificates.blueprint_clay_hilbert_interface_conditional
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -561,6 +576,8 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.BlockSchurHierarchyCert
   , ``YangMillsBlueprint.Certificates.SimpleGroupUniformCert
   , ``YangMillsBlueprint.Certificates.LatticeHaarGibbsCert
+  , ``YangMillsBlueprint.Certificates.SliceReflectionHilbertCert
+  , ``YangMillsBlueprint.Certificates.BlueprintClayInterfaceCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -982,5 +999,20 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #print axioms YangMillsBlueprint.Certificates.canonical_haar_osc_density_cap_eq
 #print axioms YangMillsBlueprint.Certificates.canonical_haar_exp_floor_eq
 #print axioms YangMillsBlueprint.Certificates.lattice_haar_gibbs_variance_floor_conditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.SliceReflectionHilbertCert)
+#print axioms SliceReflectionHilbert.osEmbed_inner
+#print axioms SliceReflectionHilbert.osEmbed_norm_sq
+#print axioms SliceReflectionHilbert.osEmbed_eq_zero_of_null
+#print axioms SliceReflectionHilbert.transfer_preserves_orth
+#print axioms SliceReflectionHilbert.transfer_pow_preserves_orth
+#print axioms SliceReflectionHilbert.transfer_pow_norm_le
+#print axioms SliceReflectionHilbert.transfer_correlator_exp_decay
+#print axioms SliceReflectionHilbert.transfer_to_coercivity
+#print axioms YangMillsBlueprint.Certificates.canonical_transfer_gap_eq
+#print axioms YangMillsBlueprint.Certificates.canonical_transfer_log_gap_eq
+#print axioms YangMillsBlueprint.Certificates.slice_reflection_hilbert_gap_conditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.BlueprintClayInterfaceCert)
+#print axioms YangMillsBlueprint.Certificates.canonical_clay_interface_witness_eval
+#print axioms YangMillsBlueprint.Certificates.blueprint_clay_hilbert_interface_conditional
 
 end YangMillsBlueprint.VerifyNoTraps
