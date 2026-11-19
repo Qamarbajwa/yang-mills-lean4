@@ -786,3 +786,7 @@ inferInstance : Nonempty Certificates.ClayBoundaryContinuumCert
 'YangMillsBlueprint.Certificates.clay_hilbert_and_rg_crossover_synthesis_conditional' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+inferInstance : Nonempty Certificates.UniversalClayInterfaceCert
+'YangMillsBlueprint.Certificates.clay_millennium_full_interface_synthesis_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
