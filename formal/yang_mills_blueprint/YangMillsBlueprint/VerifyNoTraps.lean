@@ -119,6 +119,8 @@ import YangMillsBlueprint.Certificates.YM168_LocalizedUrsellNonTrivialityCert
 import YangMillsBlueprint.Certificates.YM169_CenterlessWeylCasimirCert
 import YangMillsBlueprint.Certificates.YM170_QuaternionicOSReflectionCert
 import YangMillsBlueprint.Certificates.YM171_SpinorHermitianWickCert
+import YangMillsBlueprint.Certificates.YM172_AbstractPolymerClusterCert
+import YangMillsBlueprint.Certificates.YM173_MultiscaleBalabanFlowCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -654,6 +656,10 @@ private def auditedTheorems : List Name :=
   , ``YangMillsBlueprint.Certificates.os_chiral_hodge_lorentz_unification_unconditional
   , ``YangMillsBlueprint.Certificates.spinor_hermitian_wick_double_cover_unconditional
   , ``YangMillsBlueprint.Certificates.spinor_mass_shell_os_gap_conditional
+  , ``YangMillsBlueprint.Certificates.abstract_polymer_kp_collar_decoupling_unconditional
+  , ``YangMillsBlueprint.Certificates.stage1_polymer_gas_gibbs_decoupling_conditional
+  , ``YangMillsBlueprint.Certificates.multiscale_balaban_summability_vs_harmonic_unconditional
+  , ``YangMillsBlueprint.Certificates.balaban_multiscale_stage1_bridge_conditional
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -726,6 +732,8 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.CenterlessCasimirCert
   , ``YangMillsBlueprint.Certificates.QuaternionicOSCert
   , ``YangMillsBlueprint.Certificates.SpinorWickCert
+  , ``YangMillsBlueprint.Certificates.AbstractPolymerCert
+  , ``YangMillsBlueprint.Certificates.MultiscaleBalabanCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -1290,5 +1298,11 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #check (inferInstance : Nonempty YangMillsBlueprint.Certificates.SpinorWickCert)
 #print axioms YangMillsBlueprint.Certificates.spinor_hermitian_wick_double_cover_unconditional
 #print axioms YangMillsBlueprint.Certificates.spinor_mass_shell_os_gap_conditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.AbstractPolymerCert)
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.MultiscaleBalabanCert)
+#print axioms YangMillsBlueprint.Certificates.abstract_polymer_kp_collar_decoupling_unconditional
+#print axioms YangMillsBlueprint.Certificates.stage1_polymer_gas_gibbs_decoupling_conditional
+#print axioms YangMillsBlueprint.Certificates.multiscale_balaban_summability_vs_harmonic_unconditional
+#print axioms YangMillsBlueprint.Certificates.balaban_multiscale_stage1_bridge_conditional
 
 end YangMillsBlueprint.VerifyNoTraps
