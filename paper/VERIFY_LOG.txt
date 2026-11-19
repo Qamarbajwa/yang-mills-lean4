@@ -435,3 +435,22 @@ inferInstance : Nonempty Certificates.SimpleGroupUniformCert
 'YangMillsBlueprint.Certificates.simple_group_uniform_gap_conditional' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+inferInstance : Nonempty Certificates.LatticeHaarGibbsCert
+'LatticeHaarGibbs.partitionIntegral_ge_exp_neg_max' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LatticeHaarGibbs.partitionIntegral_le_exp_neg_min' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LatticeHaarGibbs.partitionIntegral_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LatticeHaarGibbs.weightedExpectation_const' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LatticeHaarGibbs.boltzmannDensity_le_exp_osc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LatticeHaarGibbs.weightedExpectation_ge_exp_neg_osc_mul_integral' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LatticeHaarGibbs.productHaar_partitionIntegral_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LatticeHaarGibbs.productHaar_density_le_exp_osc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LatticeHaarGibbs.productHaar_expectation_ge_exp_neg_osc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMillsBlueprint.Certificates.canonical_haar_osc_density_cap_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.canonical_haar_exp_floor_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMillsBlueprint.Certificates.lattice_haar_gibbs_variance_floor_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

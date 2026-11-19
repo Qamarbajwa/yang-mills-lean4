@@ -96,6 +96,7 @@ import YangMillsBlueprint.Certificates.YM145_IsotropicSuperblockCert
 import YangMillsBlueprint.Certificates.YM146_SchurPartialTraceCert
 import YangMillsBlueprint.Certificates.YM147_BlockSchurHierarchyCert
 import YangMillsBlueprint.Certificates.YM148_SimpleGroupUniformCert
+import YangMillsBlueprint.Certificates.YM149_LatticeHaarGibbsCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -498,6 +499,18 @@ private def auditedTheorems : List Name :=
   , ``YangMillsBlueprint.Certificates.canonical_e8_codim_floor_eq
   , ``YangMillsBlueprint.Certificates.canonical_exceptional_floor_monotone
   , ``YangMillsBlueprint.Certificates.simple_group_uniform_gap_conditional
+  , ``LatticeHaarGibbs.partitionIntegral_ge_exp_neg_max
+  , ``LatticeHaarGibbs.partitionIntegral_le_exp_neg_min
+  , ``LatticeHaarGibbs.partitionIntegral_pos
+  , ``LatticeHaarGibbs.weightedExpectation_const
+  , ``LatticeHaarGibbs.boltzmannDensity_le_exp_osc
+  , ``LatticeHaarGibbs.weightedExpectation_ge_exp_neg_osc_mul_integral
+  , ``LatticeHaarGibbs.productHaar_partitionIntegral_pos
+  , ``LatticeHaarGibbs.productHaar_density_le_exp_osc
+  , ``LatticeHaarGibbs.productHaar_expectation_ge_exp_neg_osc
+  , ``YangMillsBlueprint.Certificates.canonical_haar_osc_density_cap_eq
+  , ``YangMillsBlueprint.Certificates.canonical_haar_exp_floor_eq
+  , ``YangMillsBlueprint.Certificates.lattice_haar_gibbs_variance_floor_conditional
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -547,6 +560,7 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.SchurPartialTraceCert
   , ``YangMillsBlueprint.Certificates.BlockSchurHierarchyCert
   , ``YangMillsBlueprint.Certificates.SimpleGroupUniformCert
+  , ``YangMillsBlueprint.Certificates.LatticeHaarGibbsCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -955,5 +969,18 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #print axioms YangMillsBlueprint.Certificates.canonical_e8_codim_floor_eq
 #print axioms YangMillsBlueprint.Certificates.canonical_exceptional_floor_monotone
 #print axioms YangMillsBlueprint.Certificates.simple_group_uniform_gap_conditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.LatticeHaarGibbsCert)
+#print axioms LatticeHaarGibbs.partitionIntegral_ge_exp_neg_max
+#print axioms LatticeHaarGibbs.partitionIntegral_le_exp_neg_min
+#print axioms LatticeHaarGibbs.partitionIntegral_pos
+#print axioms LatticeHaarGibbs.weightedExpectation_const
+#print axioms LatticeHaarGibbs.boltzmannDensity_le_exp_osc
+#print axioms LatticeHaarGibbs.weightedExpectation_ge_exp_neg_osc_mul_integral
+#print axioms LatticeHaarGibbs.productHaar_partitionIntegral_pos
+#print axioms LatticeHaarGibbs.productHaar_density_le_exp_osc
+#print axioms LatticeHaarGibbs.productHaar_expectation_ge_exp_neg_osc
+#print axioms YangMillsBlueprint.Certificates.canonical_haar_osc_density_cap_eq
+#print axioms YangMillsBlueprint.Certificates.canonical_haar_exp_floor_eq
+#print axioms YangMillsBlueprint.Certificates.lattice_haar_gibbs_variance_floor_conditional
 
 end YangMillsBlueprint.VerifyNoTraps
