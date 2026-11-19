@@ -643,3 +643,43 @@ inferInstance : Nonempty Certificates.WickMassShellCert
 'YangMillsBlueprint.Certificates.wick_mass_shell_gap_conditional' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+inferInstance : Nonempty Certificates.BalabanCollarCert
+'YangMillsBlueprint.Certificates.balaban_fp_jacobian_and_kp_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.balaban_stage1_collar_gibbs_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+inferInstance : Nonempty Certificates.ConditionalFiberCert
+'YangMillsBlueprint.Certificates.canonical_fiber_tail_eval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMillsBlueprint.Certificates.stage2a_conditional_fiber_density_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+inferInstance : Nonempty Certificates.NonCriticalSlabCert
+'YangMillsBlueprint.Certificates.powerLaw_fails_uniform_contraction_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.stage2b_noncritical_slab_dobrushin_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+inferInstance : Nonempty Certificates.ContinuumOSLimitCert
+'YangMillsBlueprint.Certificates.continuum_os0_os1_os3_os4_limit_preservation_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.continuum_schwinger_limit_bridge_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+inferInstance : Nonempty Certificates.LocalizedUrsellCert
+'YangMillsBlueprint.Certificates.localized_ursell_rules_out_gaussian_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.continuum_localized_nontriviality_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+inferInstance : Nonempty Certificates.CenterlessCasimirCert
+'YangMillsBlueprint.Certificates.all_simple_lie_invariants_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.universal_simple_group_mass_shell_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

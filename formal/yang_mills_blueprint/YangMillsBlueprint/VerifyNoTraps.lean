@@ -111,6 +111,12 @@ import YangMillsBlueprint.Certificates.YM160_LatticeReflectionPositivityCert
 import YangMillsBlueprint.Certificates.YM161_LorentzianMetricGroupCert
 import YangMillsBlueprint.Certificates.YM162_LorentzianHodgeCert
 import YangMillsBlueprint.Certificates.YM163_WickSemigroupMassShellCert
+import YangMillsBlueprint.Certificates.YM164_BalabanPolymerCollarCert
+import YangMillsBlueprint.Certificates.YM165_ConditionalFiberDensityCert
+import YangMillsBlueprint.Certificates.YM166_NonCriticalSlabContractionCert
+import YangMillsBlueprint.Certificates.YM167_ContinuumSchwingerLimitCert
+import YangMillsBlueprint.Certificates.YM168_LocalizedUrsellNonTrivialityCert
+import YangMillsBlueprint.Certificates.YM169_CenterlessWeylCasimirCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -630,6 +636,18 @@ private def auditedTheorems : List Name :=
   , ``YangMillsBlueprint.Certificates.lorentzian_energy_poynting_causality_unconditional
   , ``YangMillsBlueprint.Certificates.wick_semigroup_mass_shell_unconditional
   , ``YangMillsBlueprint.Certificates.wick_mass_shell_gap_conditional
+  , ``YangMillsBlueprint.Certificates.balaban_fp_jacobian_and_kp_unconditional
+  , ``YangMillsBlueprint.Certificates.balaban_stage1_collar_gibbs_conditional
+  , ``YangMillsBlueprint.Certificates.canonical_fiber_tail_eval
+  , ``YangMillsBlueprint.Certificates.stage2a_conditional_fiber_density_conditional
+  , ``YangMillsBlueprint.Certificates.powerLaw_fails_uniform_contraction_unconditional
+  , ``YangMillsBlueprint.Certificates.stage2b_noncritical_slab_dobrushin_conditional
+  , ``YangMillsBlueprint.Certificates.continuum_os0_os1_os3_os4_limit_preservation_unconditional
+  , ``YangMillsBlueprint.Certificates.continuum_schwinger_limit_bridge_conditional
+  , ``YangMillsBlueprint.Certificates.localized_ursell_rules_out_gaussian_unconditional
+  , ``YangMillsBlueprint.Certificates.continuum_localized_nontriviality_conditional
+  , ``YangMillsBlueprint.Certificates.all_simple_lie_invariants_unconditional
+  , ``YangMillsBlueprint.Certificates.universal_simple_group_mass_shell_conditional
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -694,6 +712,12 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.LorentzianMetricCert
   , ``YangMillsBlueprint.Certificates.LorentzianHodgeCert
   , ``YangMillsBlueprint.Certificates.WickMassShellCert
+  , ``YangMillsBlueprint.Certificates.BalabanCollarCert
+  , ``YangMillsBlueprint.Certificates.ConditionalFiberCert
+  , ``YangMillsBlueprint.Certificates.NonCriticalSlabCert
+  , ``YangMillsBlueprint.Certificates.ContinuumOSLimitCert
+  , ``YangMillsBlueprint.Certificates.LocalizedUrsellCert
+  , ``YangMillsBlueprint.Certificates.CenterlessCasimirCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -1234,5 +1258,23 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #check (inferInstance : Nonempty YangMillsBlueprint.Certificates.WickMassShellCert)
 #print axioms YangMillsBlueprint.Certificates.wick_semigroup_mass_shell_unconditional
 #print axioms YangMillsBlueprint.Certificates.wick_mass_shell_gap_conditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.BalabanCollarCert)
+#print axioms YangMillsBlueprint.Certificates.balaban_fp_jacobian_and_kp_unconditional
+#print axioms YangMillsBlueprint.Certificates.balaban_stage1_collar_gibbs_conditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.ConditionalFiberCert)
+#print axioms YangMillsBlueprint.Certificates.canonical_fiber_tail_eval
+#print axioms YangMillsBlueprint.Certificates.stage2a_conditional_fiber_density_conditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.NonCriticalSlabCert)
+#print axioms YangMillsBlueprint.Certificates.powerLaw_fails_uniform_contraction_unconditional
+#print axioms YangMillsBlueprint.Certificates.stage2b_noncritical_slab_dobrushin_conditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.ContinuumOSLimitCert)
+#print axioms YangMillsBlueprint.Certificates.continuum_os0_os1_os3_os4_limit_preservation_unconditional
+#print axioms YangMillsBlueprint.Certificates.continuum_schwinger_limit_bridge_conditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.LocalizedUrsellCert)
+#print axioms YangMillsBlueprint.Certificates.localized_ursell_rules_out_gaussian_unconditional
+#print axioms YangMillsBlueprint.Certificates.continuum_localized_nontriviality_conditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.CenterlessCasimirCert)
+#print axioms YangMillsBlueprint.Certificates.all_simple_lie_invariants_unconditional
+#print axioms YangMillsBlueprint.Certificates.universal_simple_group_mass_shell_conditional
 
 end YangMillsBlueprint.VerifyNoTraps

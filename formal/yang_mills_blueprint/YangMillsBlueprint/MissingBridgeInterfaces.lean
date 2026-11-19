@@ -124,7 +124,10 @@ def openClayBridgeEdges : List OpenBridgeEdge :=
   , ⟨"E-SCHWINGER-OS0",    4, 5, .openUnproved⟩
   , ⟨"E-SCHWINGER-OS1",    4, 5, .openUnproved⟩
   , ⟨"E-SCHWINGER-OS2",    4, 5, .conditional⟩
-  , ⟨"E-SCHWINGER-OS3",    4, 5, .openUnproved⟩
+  -- Finite-box Wilson RP is proved unconditionally in `YM160`; continuum OS3 remains
+  -- conditional on continuum Schwinger limit existence (`E-CONT-SCHWINGER`), aligning
+  -- with `MissingBridgeDAG.lean`.
+  , ⟨"E-SCHWINGER-OS3",    4, 5, .conditional⟩
   , ⟨"E-SCHWINGER-OS4",    4, 5, .openUnproved⟩
   , ⟨"E-NONTRIV-WITNESS",  5, 6, .openUnproved⟩
   , ⟨"E-GROUP-GEN",        5, 6, .openUnproved⟩
