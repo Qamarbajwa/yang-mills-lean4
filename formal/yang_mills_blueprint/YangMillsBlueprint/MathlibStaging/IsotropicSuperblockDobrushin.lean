@@ -33,7 +33,9 @@ namespace IsotropicSuperblockDobrushin
 
 open CoarseSliceDecoherence
 
-variable {F : Type*} [Field F] [LinearOrder F] [IsStrictOrderedRing F]
+section FieldAlg
+
+variable {F : Type*} [Field F]
 
 /-- Dimensionless isotropic super-block susceptibility `1 + chiOut / chiIn`. -/
 def superblockM0 (chiIn chiOut : F) : F :=
@@ -45,6 +47,12 @@ theorem total_div_in_eq_superblockM0 {chiIn chiOut : F} (hin : chiIn ≠ 0) :
     (chiIn + chiOut) / chiIn = superblockM0 chiIn chiOut := by
   unfold superblockM0
   field_simp
+
+end FieldAlg
+
+section OrderedMargin
+
+variable {F : Type*} [Field F] [LinearOrder F] [IsStrictOrderedRing F]
 
 /-- Cutoff-uniform `O(1)` cap on `superblockM0` whenever exterior block leakage satisfies
 `chiOut ≤ α * chiIn` with `0 < chiIn`. -/
@@ -75,5 +83,7 @@ theorem superblock_coupling_le_margin {chiIn chiOut α r η : F} {k : ℕ}
     mul_le_mul_of_nonneg_right hm0 hrk
   unfold coarseSliceCoupling
   exact le_trans hmul hcap
+
+end OrderedMargin
 
 end IsotropicSuperblockDobrushin

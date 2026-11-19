@@ -95,6 +95,7 @@ import YangMillsBlueprint.Certificates.YM144_DensityCapVarianceCert
 import YangMillsBlueprint.Certificates.YM145_IsotropicSuperblockCert
 import YangMillsBlueprint.Certificates.YM146_SchurPartialTraceCert
 import YangMillsBlueprint.Certificates.YM147_BlockSchurHierarchyCert
+import YangMillsBlueprint.Certificates.YM148_SimpleGroupUniformCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -486,6 +487,17 @@ private def auditedTheorems : List Name :=
   , ``YangMillsBlueprint.Certificates.canonical_block_ratio_k2_lt_eighth
   , ``YangMillsBlueprint.Certificates.canonical_margin_amplified
   , ``YangMillsBlueprint.Certificates.block_hierarchy_gap_conditional
+  , ``SimpleGroupUniformClosure.transverseCodim_ge_two
+  , ``SimpleGroupUniformClosure.codimNormalizedFloor_ge_base
+  , ``SimpleGroupUniformClosure.codimNormalizedFloor_pos
+  , ``SimpleGroupUniformClosure.uniform_superblock_ratio_lt_one
+  , ``SimpleGroupUniformClosure.uniform_block_schur_gap_pos
+  , ``YangMillsBlueprint.Certificates.canonical_so3_codim_floor_eq
+  , ``YangMillsBlueprint.Certificates.canonical_g2_codim_floor_eq
+  , ``YangMillsBlueprint.Certificates.canonical_f4_codim_floor_eq
+  , ``YangMillsBlueprint.Certificates.canonical_e8_codim_floor_eq
+  , ``YangMillsBlueprint.Certificates.canonical_exceptional_floor_monotone
+  , ``YangMillsBlueprint.Certificates.simple_group_uniform_gap_conditional
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -534,6 +546,7 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.IsotropicSuperblockCert
   , ``YangMillsBlueprint.Certificates.SchurPartialTraceCert
   , ``YangMillsBlueprint.Certificates.BlockSchurHierarchyCert
+  , ``YangMillsBlueprint.Certificates.SimpleGroupUniformCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -930,5 +943,17 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #print axioms YangMillsBlueprint.Certificates.canonical_block_ratio_k2_lt_eighth
 #print axioms YangMillsBlueprint.Certificates.canonical_margin_amplified
 #print axioms YangMillsBlueprint.Certificates.block_hierarchy_gap_conditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.SimpleGroupUniformCert)
+#print axioms SimpleGroupUniformClosure.transverseCodim_ge_two
+#print axioms SimpleGroupUniformClosure.codimNormalizedFloor_ge_base
+#print axioms SimpleGroupUniformClosure.codimNormalizedFloor_pos
+#print axioms SimpleGroupUniformClosure.uniform_superblock_ratio_lt_one
+#print axioms SimpleGroupUniformClosure.uniform_block_schur_gap_pos
+#print axioms YangMillsBlueprint.Certificates.canonical_so3_codim_floor_eq
+#print axioms YangMillsBlueprint.Certificates.canonical_g2_codim_floor_eq
+#print axioms YangMillsBlueprint.Certificates.canonical_f4_codim_floor_eq
+#print axioms YangMillsBlueprint.Certificates.canonical_e8_codim_floor_eq
+#print axioms YangMillsBlueprint.Certificates.canonical_exceptional_floor_monotone
+#print axioms YangMillsBlueprint.Certificates.simple_group_uniform_gap_conditional
 
 end YangMillsBlueprint.VerifyNoTraps

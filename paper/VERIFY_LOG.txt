@@ -417,3 +417,21 @@ inferInstance : Nonempty Certificates.BlockSchurHierarchyCert
 'YangMillsBlueprint.Certificates.block_hierarchy_gap_conditional' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+inferInstance : Nonempty Certificates.SimpleGroupUniformCert
+'SimpleGroupUniformClosure.transverseCodim_ge_two' depends on axioms: [propext, Quot.sound]
+'SimpleGroupUniformClosure.codimNormalizedFloor_ge_base' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGroupUniformClosure.codimNormalizedFloor_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGroupUniformClosure.uniform_superblock_ratio_lt_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SimpleGroupUniformClosure.uniform_block_schur_gap_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMillsBlueprint.Certificates.canonical_so3_codim_floor_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.canonical_g2_codim_floor_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMillsBlueprint.Certificates.canonical_f4_codim_floor_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMillsBlueprint.Certificates.canonical_e8_codim_floor_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMillsBlueprint.Certificates.canonical_exceptional_floor_monotone' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.simple_group_uniform_gap_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
