@@ -103,6 +103,9 @@ gate_3_cryptographic_provenance:
     - ".zenodo.json"
     - "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM176_AbelianSubtractedParamagneticSchurCert.lean"
     - "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM177_TwoStepInductiveRGRemainderCert.lean"
+    - "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM177_InductiveRgRemainderContractionCert.lean"
+    - "scripts/probe_two_step_inductive_rg_remainder.py"
+    - "probes/probe_two_step_inductive_rg_remainder.json"
     - "probes/*.py"
     - "probes/receipts/*.json"
 

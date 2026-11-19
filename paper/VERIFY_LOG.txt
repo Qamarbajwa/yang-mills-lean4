@@ -748,3 +748,10 @@ inferInstance : Nonempty Certificates.TwoStepInductiveRGCert
 'YangMillsBlueprint.Certificates.inductive_rg_basin_entry_unconditional' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+inferInstance : Nonempty Certificates.InductiveRgRemainderCert
+'YangMillsBlueprint.Certificates.inductive_rg_remainder_uniform_bound_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.inductive_rg_strict_coupling_descent_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

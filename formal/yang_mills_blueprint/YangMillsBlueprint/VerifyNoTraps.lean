@@ -125,6 +125,7 @@ import YangMillsBlueprint.Certificates.YM174_MeasureBathtubFiberCert
 import YangMillsBlueprint.Certificates.YM175_PerturbedCocycleSchurCert
 import YangMillsBlueprint.Certificates.YM176_AbelianSubtractedParamagneticSchurCert
 import YangMillsBlueprint.Certificates.YM177_TwoStepInductiveRGRemainderCert
+import YangMillsBlueprint.Certificates.YM177_InductiveRgRemainderContractionCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -675,6 +676,8 @@ private def auditedTheorems : List Name :=
   , ``YangMillsBlueprint.Certificates.remainder_trap_invariant_unconditional
   , ``YangMillsBlueprint.Certificates.strict_coupling_descent_step_unconditional
   , ``YangMillsBlueprint.Certificates.inductive_rg_basin_entry_unconditional
+  , ``YangMillsBlueprint.Certificates.inductive_rg_remainder_uniform_bound_unconditional
+  , ``YangMillsBlueprint.Certificates.inductive_rg_strict_coupling_descent_unconditional
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -753,6 +756,7 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.Stage2ABasinCert
   , ``YangMillsBlueprint.Certificates.AbelianSubtractedSchurCert
   , ``YangMillsBlueprint.Certificates.TwoStepInductiveRGCert
+  , ``YangMillsBlueprint.Certificates.InductiveRgRemainderCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -1338,5 +1342,8 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #print axioms YangMillsBlueprint.Certificates.remainder_trap_invariant_unconditional
 #print axioms YangMillsBlueprint.Certificates.strict_coupling_descent_step_unconditional
 #print axioms YangMillsBlueprint.Certificates.inductive_rg_basin_entry_unconditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.InductiveRgRemainderCert)
+#print axioms YangMillsBlueprint.Certificates.inductive_rg_remainder_uniform_bound_unconditional
+#print axioms YangMillsBlueprint.Certificates.inductive_rg_strict_coupling_descent_unconditional
 
 end YangMillsBlueprint.VerifyNoTraps
