@@ -93,6 +93,7 @@ import YangMillsBlueprint.Certificates.YM142_BianchiCocycleCert
 import YangMillsBlueprint.Certificates.YM143_CentralizerCodimensionCert
 import YangMillsBlueprint.Certificates.YM144_DensityCapVarianceCert
 import YangMillsBlueprint.Certificates.YM145_IsotropicSuperblockCert
+import YangMillsBlueprint.Certificates.YM146_SchurPartialTraceCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -461,6 +462,17 @@ private def auditedTheorems : List Name :=
   , ``YangMillsBlueprint.Certificates.canonical_superblock_coupling_eval
   , ``YangMillsBlueprint.Certificates.canonical_superblock_coupling_lt_third
   , ``YangMillsBlueprint.Certificates.superblock_uniform_gap_conditional
+  , ``SchurPartialTraceContraction.schur_complete_sq
+  , ``SchurPartialTraceContraction.schur_three_slice_complete_sq
+  , ``SchurPartialTraceContraction.one_sub_schurPrecisionCoupling_eq
+  , ``SchurPartialTraceContraction.schurEff_pos
+  , ``SchurPartialTraceContraction.schurPrecisionCoupling_lt
+  , ``SchurPartialTraceContraction.schurPrecisionCoupling_pos
+  , ``SchurPartialTraceContraction.one_sub_schurPrecisionCoupling_pos
+  , ``YangMillsBlueprint.Certificates.canonical_schur_one_step_eq
+  , ``YangMillsBlueprint.Certificates.canonical_schur_two_step_eq
+  , ``YangMillsBlueprint.Certificates.canonical_schur_monotone_lt
+  , ``YangMillsBlueprint.Certificates.schur_partial_trace_contraction_conditional
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -507,6 +519,7 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.CentralizerCodimensionCert
   , ``YangMillsBlueprint.Certificates.DensityCapVarianceCert
   , ``YangMillsBlueprint.Certificates.IsotropicSuperblockCert
+  , ``YangMillsBlueprint.Certificates.SchurPartialTraceCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -878,5 +891,17 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #print axioms YangMillsBlueprint.Certificates.canonical_superblock_coupling_eval
 #print axioms YangMillsBlueprint.Certificates.canonical_superblock_coupling_lt_third
 #print axioms YangMillsBlueprint.Certificates.superblock_uniform_gap_conditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.SchurPartialTraceCert)
+#print axioms SchurPartialTraceContraction.schur_complete_sq
+#print axioms SchurPartialTraceContraction.schur_three_slice_complete_sq
+#print axioms SchurPartialTraceContraction.one_sub_schurPrecisionCoupling_eq
+#print axioms SchurPartialTraceContraction.schurEff_pos
+#print axioms SchurPartialTraceContraction.schurPrecisionCoupling_lt
+#print axioms SchurPartialTraceContraction.schurPrecisionCoupling_pos
+#print axioms SchurPartialTraceContraction.one_sub_schurPrecisionCoupling_pos
+#print axioms YangMillsBlueprint.Certificates.canonical_schur_one_step_eq
+#print axioms YangMillsBlueprint.Certificates.canonical_schur_two_step_eq
+#print axioms YangMillsBlueprint.Certificates.canonical_schur_monotone_lt
+#print axioms YangMillsBlueprint.Certificates.schur_partial_trace_contraction_conditional
 
 end YangMillsBlueprint.VerifyNoTraps

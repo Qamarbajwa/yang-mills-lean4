@@ -382,3 +382,21 @@ inferInstance : Nonempty Certificates.IsotropicSuperblockCert
 'YangMillsBlueprint.Certificates.superblock_uniform_gap_conditional' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+inferInstance : Nonempty Certificates.SchurPartialTraceCert
+'SchurPartialTraceContraction.schur_complete_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SchurPartialTraceContraction.schur_three_slice_complete_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SchurPartialTraceContraction.one_sub_schurPrecisionCoupling_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'SchurPartialTraceContraction.schurEff_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SchurPartialTraceContraction.schurPrecisionCoupling_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SchurPartialTraceContraction.schurPrecisionCoupling_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SchurPartialTraceContraction.one_sub_schurPrecisionCoupling_pos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.canonical_schur_one_step_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMillsBlueprint.Certificates.canonical_schur_two_step_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMillsBlueprint.Certificates.canonical_schur_monotone_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMillsBlueprint.Certificates.schur_partial_trace_contraction_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
