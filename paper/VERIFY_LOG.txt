@@ -790,3 +790,25 @@ inferInstance : Nonempty Certificates.UniversalClayInterfaceCert
 'YangMillsBlueprint.Certificates.clay_millennium_full_interface_synthesis_conditional' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+inferInstance : Nonempty Certificates.RiemannWavefunctionContinuumYMCert
+'YangMillsBlueprint.Certificates.riemann_harmonic_slab_telescoping_identity_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.continuum_dyadic_remainder_telescoping_bound_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.lorentzian_plaque_paramagnetic_overcancellation_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.cholesky_schur_matched_continuum_basin_landing_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.wavefunction_4way_action_budget_and_margin_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.svd_transfer_mellin_plancherel_mass_floor_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.master_riemann_wavefunction_to_ym_continuum_gap_synthesis' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

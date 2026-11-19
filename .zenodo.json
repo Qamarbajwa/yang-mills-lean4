@@ -202,6 +202,9 @@
     "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM181_ClayBoundaryContinuumSynthesisCert.lean",
     "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM182_UniversalSimpleGroupAndOPESynthesisCert.lean",
     "YANG_MILLS_EXPLAINED_FOR_EVERYONE.md",
-    "YANG_MILLS_EXPLAINED_FOR_EVERYONE.pdf"
+    "YANG_MILLS_EXPLAINED_FOR_EVERYONE.pdf",
+    "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM183_RiemannWavefunctionContinuumSynthesisCert.lean",
+    "scripts/probe_riemann_wavefunction_ym_synthesis.py",
+    "probes/probe_riemann_wavefunction_ym_synthesis.json"
   ]
 }

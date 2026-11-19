@@ -1,0 +1,66 @@
+{
+  "probe": "scripts/probe_riemann_wavefunction_ym_synthesis.py",
+  "script_sha256": "14c0c8deb23d20877263476c6a7317d30bba83537583e4c9b9f15deed50b8e8a",
+  "telescoping_max_err": 1.1102230246251565e-16,
+  "telescoping_samples": [
+    {
+      "K": 1,
+      "S_K": 0.5,
+      "exact": 0.5,
+      "abs_err": 0.0
+    },
+    {
+      "K": 2,
+      "S_K": 0.6666666666666666,
+      "exact": 0.6666666666666667,
+      "abs_err": 1.1102230246251565e-16
+    },
+    {
+      "K": 4,
+      "S_K": 0.8,
+      "exact": 0.8,
+      "abs_err": 0.0
+    },
+    {
+      "K": 16,
+      "S_K": 0.9411764705882353,
+      "exact": 0.9411764705882353,
+      "abs_err": 0.0
+    },
+    {
+      "K": 64,
+      "S_K": 0.9846153846153846,
+      "exact": 0.9846153846153847,
+      "abs_err": 1.1102230246251565e-16
+    },
+    {
+      "K": 256,
+      "S_K": 0.9961089494163424,
+      "exact": 0.9961089494163424,
+      "abs_err": 0.0
+    },
+    {
+      "K": 1024,
+      "S_K": 0.9990243902439024,
+      "exact": 0.9990243902439024,
+      "abs_err": 0.0
+    }
+  ],
+  "lorentzian_overcancellation": {
+    "df_diam": 0.0232,
+    "abs_f_para": 0.3774,
+    "c_dom": 13.47,
+    "df_nonab": -0.3542,
+    "upper_bound": -0.3493821826280624
+  },
+  "svd_dobrushin_mass_gap": {
+    "gamma_0": 0.302,
+    "gamma_spatial": 0.0328,
+    "gamma_unif": 0.3348,
+    "m_phys_times_ell_IR": 1.0942219403668167,
+    "dobrushin_margin_17x": 0.5576000000000001,
+    "gribov_schur_floor": 0.5654
+  },
+  "status": "PASSED",
+  "clay_problem_status": "OPEN_AND_UNSOLVED"
+}

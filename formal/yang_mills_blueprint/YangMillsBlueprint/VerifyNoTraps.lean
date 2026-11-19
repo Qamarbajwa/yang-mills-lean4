@@ -131,6 +131,7 @@ import YangMillsBlueprint.Certificates.YM179_ContinuumRGBridgeSynthesisCert
 import YangMillsBlueprint.Certificates.YM180_UnifiedCrossoverMasterBridgeCert
 import YangMillsBlueprint.Certificates.YM181_ClayBoundaryContinuumSynthesisCert
 import YangMillsBlueprint.Certificates.YM182_UniversalSimpleGroupAndOPESynthesisCert
+import YangMillsBlueprint.Certificates.YM183_RiemannWavefunctionContinuumSynthesisCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -693,6 +694,13 @@ private def auditedTheorems : List Name :=
   , ``YangMillsBlueprint.Certificates.master_uv_to_continuum_gap_conditional
   , ``YangMillsBlueprint.Certificates.clay_hilbert_and_rg_crossover_synthesis_conditional
   , ``YangMillsBlueprint.Certificates.clay_millennium_full_interface_synthesis_conditional
+  , ``YangMillsBlueprint.Certificates.riemann_harmonic_slab_telescoping_identity_unconditional
+  , ``YangMillsBlueprint.Certificates.continuum_dyadic_remainder_telescoping_bound_unconditional
+  , ``YangMillsBlueprint.Certificates.lorentzian_plaque_paramagnetic_overcancellation_unconditional
+  , ``YangMillsBlueprint.Certificates.cholesky_schur_matched_continuum_basin_landing_unconditional
+  , ``YangMillsBlueprint.Certificates.wavefunction_4way_action_budget_and_margin_unconditional
+  , ``YangMillsBlueprint.Certificates.svd_transfer_mellin_plancherel_mass_floor_unconditional
+  , ``YangMillsBlueprint.Certificates.master_riemann_wavefunction_to_ym_continuum_gap_synthesis
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -777,6 +785,7 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.UnifiedMasterBridgeCert
   , ``YangMillsBlueprint.Certificates.ClayBoundaryContinuumCert
   , ``YangMillsBlueprint.Certificates.UniversalClayInterfaceCert
+  , ``YangMillsBlueprint.Certificates.RiemannWavefunctionContinuumYMCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -1380,5 +1389,13 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #print axioms YangMillsBlueprint.Certificates.clay_hilbert_and_rg_crossover_synthesis_conditional
 #check (inferInstance : Nonempty YangMillsBlueprint.Certificates.UniversalClayInterfaceCert)
 #print axioms YangMillsBlueprint.Certificates.clay_millennium_full_interface_synthesis_conditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.RiemannWavefunctionContinuumYMCert)
+#print axioms YangMillsBlueprint.Certificates.riemann_harmonic_slab_telescoping_identity_unconditional
+#print axioms YangMillsBlueprint.Certificates.continuum_dyadic_remainder_telescoping_bound_unconditional
+#print axioms YangMillsBlueprint.Certificates.lorentzian_plaque_paramagnetic_overcancellation_unconditional
+#print axioms YangMillsBlueprint.Certificates.cholesky_schur_matched_continuum_basin_landing_unconditional
+#print axioms YangMillsBlueprint.Certificates.wavefunction_4way_action_budget_and_margin_unconditional
+#print axioms YangMillsBlueprint.Certificates.svd_transfer_mellin_plancherel_mass_floor_unconditional
+#print axioms YangMillsBlueprint.Certificates.master_riemann_wavefunction_to_ym_continuum_gap_synthesis
 
 end YangMillsBlueprint.VerifyNoTraps
