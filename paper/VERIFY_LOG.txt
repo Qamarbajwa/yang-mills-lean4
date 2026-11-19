@@ -607,3 +607,21 @@ inferInstance : Nonempty Certificates.RigidTransferSynthesisCert
 'YangMillsBlueprint.Certificates.rigid_transfer_synthesis_conditional' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+inferInstance : Nonempty Certificates.PerturbedBlockSchurCert
+'YangMillsBlueprint.Certificates.canonical_perturbed_schur_eval' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.perturbed_schur_tail_contraction_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+inferInstance : Nonempty Certificates.ConcreteHodgeCert
+'YangMillsBlueprint.Certificates.hodge4D_and_8D_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.hodge4D_8D_energy_bogomolnyi_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+inferInstance : Nonempty Certificates.LatticeRPCert
+'YangMillsBlueprint.Certificates.wilson_finite_box_reflection_positivity_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

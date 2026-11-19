@@ -105,6 +105,9 @@ import YangMillsBlueprint.Certificates.YM154_TreeFrameGaugeCert
 import YangMillsBlueprint.Certificates.YM155_BlockPolymerOscillationCert
 import YangMillsBlueprint.Certificates.YM156_SelfDualWaveProjectionCert
 import YangMillsBlueprint.Certificates.YM157_RigidTransferSynthesisCert
+import YangMillsBlueprint.Certificates.YM158_PerturbedBlockSchurCert
+import YangMillsBlueprint.Certificates.YM159_ConcreteHodgeInvolutionCert
+import YangMillsBlueprint.Certificates.YM160_LatticeReflectionPositivityCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -614,6 +617,11 @@ private def auditedTheorems : List Name :=
   , ``YangMillsBlueprint.Certificates.projected_wave_adaptation_transfer_conditional
   , ``YangMillsBlueprint.Certificates.canonical_synthesis_witness_eval
   , ``YangMillsBlueprint.Certificates.rigid_transfer_synthesis_conditional
+  , ``YangMillsBlueprint.Certificates.canonical_perturbed_schur_eval
+  , ``YangMillsBlueprint.Certificates.perturbed_schur_tail_contraction_conditional
+  , ``YangMillsBlueprint.Certificates.hodge4D_and_8D_unconditional
+  , ``YangMillsBlueprint.Certificates.hodge4D_8D_energy_bogomolnyi_unconditional
+  , ``YangMillsBlueprint.Certificates.wilson_finite_box_reflection_positivity_unconditional
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -672,6 +680,9 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.BlockPolymerOscCert
   , ``YangMillsBlueprint.Certificates.SelfDualWaveCert
   , ``YangMillsBlueprint.Certificates.RigidTransferSynthesisCert
+  , ``YangMillsBlueprint.Certificates.PerturbedBlockSchurCert
+  , ``YangMillsBlueprint.Certificates.ConcreteHodgeCert
+  , ``YangMillsBlueprint.Certificates.LatticeRPCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -1196,5 +1207,13 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #check (inferInstance : Nonempty YangMillsBlueprint.Certificates.RigidTransferSynthesisCert)
 #print axioms YangMillsBlueprint.Certificates.canonical_synthesis_witness_eval
 #print axioms YangMillsBlueprint.Certificates.rigid_transfer_synthesis_conditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.PerturbedBlockSchurCert)
+#print axioms YangMillsBlueprint.Certificates.canonical_perturbed_schur_eval
+#print axioms YangMillsBlueprint.Certificates.perturbed_schur_tail_contraction_conditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.ConcreteHodgeCert)
+#print axioms YangMillsBlueprint.Certificates.hodge4D_and_8D_unconditional
+#print axioms YangMillsBlueprint.Certificates.hodge4D_8D_energy_bogomolnyi_unconditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.LatticeRPCert)
+#print axioms YangMillsBlueprint.Certificates.wilson_finite_box_reflection_positivity_unconditional
 
 end YangMillsBlueprint.VerifyNoTraps
