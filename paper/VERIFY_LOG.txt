@@ -625,3 +625,21 @@ inferInstance : Nonempty Certificates.LatticeRPCert
 'YangMillsBlueprint.Certificates.wilson_finite_box_reflection_positivity_unconditional' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+inferInstance : Nonempty Certificates.LorentzianMetricCert
+'YangMillsBlueprint.Certificates.lorentzian_metric_and_boost_group_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+inferInstance : Nonempty Certificates.LorentzianHodgeCert
+'YangMillsBlueprint.Certificates.lorentzian_hodge_complex_structure_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.lorentzian_energy_poynting_causality_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+inferInstance : Nonempty Certificates.WickMassShellCert
+'YangMillsBlueprint.Certificates.wick_semigroup_mass_shell_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.wick_mass_shell_gap_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

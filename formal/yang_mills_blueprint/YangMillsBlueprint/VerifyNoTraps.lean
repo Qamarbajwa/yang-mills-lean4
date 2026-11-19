@@ -108,6 +108,9 @@ import YangMillsBlueprint.Certificates.YM157_RigidTransferSynthesisCert
 import YangMillsBlueprint.Certificates.YM158_PerturbedBlockSchurCert
 import YangMillsBlueprint.Certificates.YM159_ConcreteHodgeInvolutionCert
 import YangMillsBlueprint.Certificates.YM160_LatticeReflectionPositivityCert
+import YangMillsBlueprint.Certificates.YM161_LorentzianMetricGroupCert
+import YangMillsBlueprint.Certificates.YM162_LorentzianHodgeCert
+import YangMillsBlueprint.Certificates.YM163_WickSemigroupMassShellCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -622,6 +625,11 @@ private def auditedTheorems : List Name :=
   , ``YangMillsBlueprint.Certificates.hodge4D_and_8D_unconditional
   , ``YangMillsBlueprint.Certificates.hodge4D_8D_energy_bogomolnyi_unconditional
   , ``YangMillsBlueprint.Certificates.wilson_finite_box_reflection_positivity_unconditional
+  , ``YangMillsBlueprint.Certificates.lorentzian_metric_and_boost_group_unconditional
+  , ``YangMillsBlueprint.Certificates.lorentzian_hodge_complex_structure_unconditional
+  , ``YangMillsBlueprint.Certificates.lorentzian_energy_poynting_causality_unconditional
+  , ``YangMillsBlueprint.Certificates.wick_semigroup_mass_shell_unconditional
+  , ``YangMillsBlueprint.Certificates.wick_mass_shell_gap_conditional
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -683,6 +691,9 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.PerturbedBlockSchurCert
   , ``YangMillsBlueprint.Certificates.ConcreteHodgeCert
   , ``YangMillsBlueprint.Certificates.LatticeRPCert
+  , ``YangMillsBlueprint.Certificates.LorentzianMetricCert
+  , ``YangMillsBlueprint.Certificates.LorentzianHodgeCert
+  , ``YangMillsBlueprint.Certificates.WickMassShellCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -1215,5 +1226,13 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #print axioms YangMillsBlueprint.Certificates.hodge4D_8D_energy_bogomolnyi_unconditional
 #check (inferInstance : Nonempty YangMillsBlueprint.Certificates.LatticeRPCert)
 #print axioms YangMillsBlueprint.Certificates.wilson_finite_box_reflection_positivity_unconditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.LorentzianMetricCert)
+#print axioms YangMillsBlueprint.Certificates.lorentzian_metric_and_boost_group_unconditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.LorentzianHodgeCert)
+#print axioms YangMillsBlueprint.Certificates.lorentzian_hodge_complex_structure_unconditional
+#print axioms YangMillsBlueprint.Certificates.lorentzian_energy_poynting_causality_unconditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.WickMassShellCert)
+#print axioms YangMillsBlueprint.Certificates.wick_semigroup_mass_shell_unconditional
+#print axioms YangMillsBlueprint.Certificates.wick_mass_shell_gap_conditional
 
 end YangMillsBlueprint.VerifyNoTraps
