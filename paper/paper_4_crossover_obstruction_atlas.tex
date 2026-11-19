@@ -232,19 +232,20 @@ Together, these results establish the unconditional finite-volume algebraic and 
 At physical blocking scale $R = \xi(\beta)$, the non-Abelian adjoint transport loss satisfies $\delta_{\mathrm{Bianchi}}(R) \ge \delta_* > 0$ and the coarse temporal slice coupling satisfies $\rho_E(b_t) \le 1 - \eta < 1$ uniformly in spatial volume $L^3$ as $\beta \to \infty$.
 \end{hypothesis}
 
-The machine-checked Lean~4 corpus (\texttt{YM101}--\texttt{YM148}) reduces the infinite-volume mass gap and non-Gaussian cumulant persistence to Hypothesis~\ref{hyp:p4-crossover} without any unformalized intermediate steps.
+The machine-checked Lean~4 corpus (\texttt{YM101}--\texttt{YM152}) reduces the infinite-volume mass gap and non-Gaussian cumulant persistence to Hypothesis~\ref{hyp:p4-crossover} without any unformalized intermediate steps.
 
-\begin{remark}[Structural Extensions and Empirical Diagnostics (\texttt{YM142}--\texttt{YM148})]
-Additional formally checked layers sharpen both clauses of Hypothesis~\ref{hyp:p4-crossover}:
+\begin{remark}[Structural Extensions and Empirical Diagnostics (\texttt{YM142}--\texttt{YM152})]
+Additional formally checked layers sharpen both clauses of Hypothesis~\ref{hyp:p4-crossover} and bridge the algebraic blueprint to genuine measure-theoretic and Hilbert-space QFT objects:
 \begin{enumerate}
 \item \emph{Cocycle Split and Non-Linear Bathtub Floor (\texttt{YM142}--\texttt{YM144}):} Exact matrix cocycle composition isolates the fourth-order cross-correlation defect $\varepsilon_{\mathrm{corr}}$, while on $\mathrm{SO}(3)$ the exact Hopf commutator norm $\|[R(q),L_3]\|_F^2 = 8(q_1^2 + q_2^2)$ combined with bounded action oscillation $\mathrm{osc}$ yields a positive conditional variance floor $\ge 4 e^{-\mathrm{osc}}$.
 \item \emph{Isotropic Super-Blocks, Recursive Block Schur Division, and Centerless Closure (\texttt{YM145}--\texttt{YM148}):} Normalizing spatial-temporal cells into $b_s^3 \times b_t$ super-blocks controls susceptibility via $1 + \chi_{\mathrm{out}}/\chi_{\mathrm{in}}$, half-observation Schur elimination contracts couplings via $r^2/(1 - r^2) < r$ (\texttt{YM146}), alternating even/odd block Schur reduction amplifies Gershgorin margins with $\rho \mapsto \rho^2/(2 - \rho^2) < \rho^2$ across all $0 < \rho < 1$ (\texttt{YM147}), and transverse root codimension $\dim G - \operatorname{rank} G \ge 2$ uniformly parameterizes $\mathrm{SO}(3), G_2, F_4, E_8$ without center cohomology (\texttt{YM148}).
+\item \emph{Haar Product Gibbs Measures, OS Hilbert Space, and 4D Wilson Link Bounds (\texttt{YM149}--\texttt{YM152}):} Finite-box compact-group Haar product measures (\texttt{productHaarProb}), completed reflection-positive OS Hilbert spaces (\texttt{OSHilbert}) with transfer gap $1 - r$ and exponential decay rate $\log(1/r)$, and the exact 4-link gauge-invariant 4D Wilson staple action yield an unconditional $L$-uniform single-link density cap $\le e^{12\beta}$ and Haar expectation floor $\ge e^{-12\beta} \int f\,\mathrm{d}\mu_{\mathrm{Haar}}$ (\texttt{YM152}). Because $e^{-12\beta} \to 0$ as bare $\beta \to \infty$, extending this bound from $\beta$ to $\beta_{\mathrm{eff}} = \mathcal{O}(1)$ requires the open Stage~1/2 RG estimates isolated in Hypothesis~\ref{hyp:p4-crossover}.
 \item \emph{Numerical Consistency Checks:} Four-dimensional Monte Carlo diagnostics verify the cocycle identity to $< 10^{-10}$, confirm positive $L$-stable $\varepsilon_{\mathrm{corr}}$ ($c_{\mathrm{corr}} > 1$) in both $\SU(2)$ and centerless $\mathrm{SO}(3)$, and expose an unblocked ($b_s = 1$) slice susceptibility blowup on $L \in \{10,12\}$ resolved under isotropic super-blocking ($b_s \in \{3,4\}$, $\ell^1(\Delta t \ge 2) < 1$). Unconditional analytic proofs on the $a \to 0, L \to \infty$ Wilson Gibbs measure remain open inside Hypothesis~\ref{hyp:p4-crossover}.
 \end{enumerate}
 \end{remark}
 
 \section{Formal Verification Concordance}
-Every algebraic commutator identity, variational factorization, Levi-stratum accounting balance, Level-4 loop bootstrap envelope, centerless Cartan rigidity theorem, and exponential screening inequality in this paper is formally verified in Lean~4 against standard Mathlib~4 foundations. Tables~\ref{tab:paper4-concordance} and~\ref{tab:paper4-concordance-ext} record the exact correspondence and axiom footprint verified by the metaprogramming auditor in \texttt{VerifyNoTraps.lean}.
+Every algebraic commutator identity, variational factorization, Levi-stratum accounting balance, Level-4 loop bootstrap envelope, centerless Cartan rigidity theorem, and exponential screening inequality in this paper is formally verified in Lean~4 against standard Mathlib~4 foundations. Tables~\ref{tab:paper4-concordance}, \ref{tab:paper4-concordance-ext}, and~\ref{tab:paper4-concordance-meas} record the exact correspondence and axiom footprint verified by the metaprogramming auditor in \texttt{VerifyNoTraps.lean}.
 
 \begin{table}[ht]
 \centering
@@ -308,6 +309,23 @@ Centerless uniform closure & \texttt{SimpleGroupUniformClosure.}\newline\texttt{
 \end{tabular}
 \caption{Formal verification concordance (Part~II) covering Peierls RG, spatial RP, Bianchi dispersion, super-block normalization, block Schur hierarchy, and centerless uniform closure (\texttt{YM124}--\texttt{YM148}).}
 \label{tab:paper4-concordance-ext}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\begin{tabular}{@{}p{4.3cm}p{6.6cm}p{3.4cm}@{}}
+\toprule
+Paper Theorem & Lean 4 Module \& Declaration & Axiom Footprint \\
+\midrule
+Haar product Gibbs floor & \texttt{LatticeHaarGibbs.}\newline\texttt{weightedExpectation\_ge\_exp\_neg\_osc\_mul\_integral} & \texttt{[propext, Classical.choice,} \texttt{Quot.sound]} \\
+OS Hilbert correlator decay & \texttt{SliceReflectionHilbert.}\newline\texttt{transfer\_correlator\_exp\_decay} & \texttt{[propext, Classical.choice,} \texttt{Quot.sound]} \\
+Measure--Hilbert Clay interface & \texttt{Certificates.}\newline\texttt{blueprint\_clay\_hilbert\_interface\_conditional} & \texttt{[propext, Classical.choice,} \texttt{Quot.sound]} \\
+4D Wilson single-link floor & \texttt{WilsonPlaquetteAction.}\newline\texttt{singleLink\_conditional\_variance\_floor} & \texttt{[propext, Classical.choice,} \texttt{Quot.sound]} \\
+\bottomrule
+\end{tabular}
+\caption{Formal verification concordance (Part~III) covering compact-group Haar product measures, OS Hilbert completion, end-to-end interface synthesis, and 4D Wilson single-link Gibbs bounds (\texttt{YM149}--\texttt{YM152}).}
+\label{tab:paper4-concordance-meas}
 \end{table}
 
 \bibliographystyle{plain}

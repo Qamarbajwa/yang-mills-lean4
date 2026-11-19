@@ -477,3 +477,20 @@ inferInstance : Nonempty Certificates.BlueprintClayInterfaceCert
 'YangMillsBlueprint.Certificates.blueprint_clay_hilbert_interface_conditional' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+inferInstance : Nonempty Certificates.WilsonSingleLinkCert
+'WilsonPlaquetteAction.orth_mul_orth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WilsonPlaquetteAction.plaquette_trace_gauge_invariant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WilsonPlaquetteAction.frobSq_sub_one_eq_of_orth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WilsonPlaquetteAction.frobSq_add_one_eq_of_orth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WilsonPlaquetteAction.orth_trace_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WilsonPlaquetteAction.plaquetteCost_mem_Icc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WilsonPlaquetteAction.stapleAction_mem_Icc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WilsonPlaquetteAction.singleLink_conditional_density_cap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WilsonPlaquetteAction.singleLink_conditional_variance_floor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMillsBlueprint.Certificates.canonical_4d_staple_osc_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMillsBlueprint.Certificates.wilson_4d_single_link_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.wilson_crossover_continuum_gap_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

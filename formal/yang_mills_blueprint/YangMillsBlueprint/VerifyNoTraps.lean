@@ -99,6 +99,7 @@ import YangMillsBlueprint.Certificates.YM148_SimpleGroupUniformCert
 import YangMillsBlueprint.Certificates.YM149_LatticeHaarGibbsCert
 import YangMillsBlueprint.Certificates.YM150_SliceReflectionHilbertCert
 import YangMillsBlueprint.Certificates.YM151_BlueprintClayInterfaceCert
+import YangMillsBlueprint.Certificates.YM152_WilsonLatticeActionCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -526,6 +527,18 @@ private def auditedTheorems : List Name :=
   , ``YangMillsBlueprint.Certificates.slice_reflection_hilbert_gap_conditional
   , ``YangMillsBlueprint.Certificates.canonical_clay_interface_witness_eval
   , ``YangMillsBlueprint.Certificates.blueprint_clay_hilbert_interface_conditional
+  , ``WilsonPlaquetteAction.orth_mul_orth
+  , ``WilsonPlaquetteAction.plaquette_trace_gauge_invariant
+  , ``WilsonPlaquetteAction.frobSq_sub_one_eq_of_orth
+  , ``WilsonPlaquetteAction.frobSq_add_one_eq_of_orth
+  , ``WilsonPlaquetteAction.orth_trace_bounds
+  , ``WilsonPlaquetteAction.plaquetteCost_mem_Icc
+  , ``WilsonPlaquetteAction.stapleAction_mem_Icc
+  , ``WilsonPlaquetteAction.singleLink_conditional_density_cap
+  , ``WilsonPlaquetteAction.singleLink_conditional_variance_floor
+  , ``YangMillsBlueprint.Certificates.canonical_4d_staple_osc_eq
+  , ``YangMillsBlueprint.Certificates.wilson_4d_single_link_unconditional
+  , ``YangMillsBlueprint.Certificates.wilson_crossover_continuum_gap_conditional
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -578,6 +591,7 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.LatticeHaarGibbsCert
   , ``YangMillsBlueprint.Certificates.SliceReflectionHilbertCert
   , ``YangMillsBlueprint.Certificates.BlueprintClayInterfaceCert
+  , ``YangMillsBlueprint.Certificates.WilsonSingleLinkCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -1014,5 +1028,18 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #check (inferInstance : Nonempty YangMillsBlueprint.Certificates.BlueprintClayInterfaceCert)
 #print axioms YangMillsBlueprint.Certificates.canonical_clay_interface_witness_eval
 #print axioms YangMillsBlueprint.Certificates.blueprint_clay_hilbert_interface_conditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.WilsonSingleLinkCert)
+#print axioms WilsonPlaquetteAction.orth_mul_orth
+#print axioms WilsonPlaquetteAction.plaquette_trace_gauge_invariant
+#print axioms WilsonPlaquetteAction.frobSq_sub_one_eq_of_orth
+#print axioms WilsonPlaquetteAction.frobSq_add_one_eq_of_orth
+#print axioms WilsonPlaquetteAction.orth_trace_bounds
+#print axioms WilsonPlaquetteAction.plaquetteCost_mem_Icc
+#print axioms WilsonPlaquetteAction.stapleAction_mem_Icc
+#print axioms WilsonPlaquetteAction.singleLink_conditional_density_cap
+#print axioms WilsonPlaquetteAction.singleLink_conditional_variance_floor
+#print axioms YangMillsBlueprint.Certificates.canonical_4d_staple_osc_eq
+#print axioms YangMillsBlueprint.Certificates.wilson_4d_single_link_unconditional
+#print axioms YangMillsBlueprint.Certificates.wilson_crossover_continuum_gap_conditional
 
 end YangMillsBlueprint.VerifyNoTraps

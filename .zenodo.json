@@ -1,7 +1,7 @@
 {
   "title": "Four-Dimensional Lattice Yang-Mills Modular Research Bundle and Lean 4 Formal Verification Certificates",
-  "description": "Synchronized modular release bundle (v1.4.0) containing four micro-papers (PDF and LaTeX source), forty-seven Mathlib-ready Lean 4 foundational modules (MathlibStaging), and forty-eight domain certificate modules (YM101-YM148) spanning UV polymer contraction, 100% Killing-Cartan closure, curved Brascamp-Lieb and Dobrushin mixing bridges, all-scales inductive Peierls RG, spatial reflection positivity, Symanzik continuum envelopes, short-distance OPE non-triviality, Tomboulis character flow, FILS chessboard decay, thick-vortex spreading, gauge-invariant coset sign-magnitude Creutz dominance, general-rank non-Abelian Bianchi chording, RP slice transfer-matrix log-convexity, Stokes adjoint dispersion, Schur-test slice Markov tensorization, Bianchi-screened dipole variance floors, coarse temporal-slice Dobrushin contraction, multi-scale dyadic Bianchi accumulation, Bianchi cocycle decomposition, non-linear SO(3) centralizer codimension bounds, bounded-oscillation Gibbs density cap variance floors, isotropic super-block Dobrushin normalization, Schur partial-trace and multi-level block divide-and-conquer contraction, and centerless simple-group uniform closure, together with the Lean 4 verification ledger. The infinite-volume continuum mass-gap reduction is isolated explicitly inside conditional Hypothesis 4.1 on coarse-scale Bianchi dispersion and slice decoherence.",
-  "version": "1.4.0",
+  "description": "Synchronized modular release bundle (v1.5.0) containing four micro-papers (PDF and LaTeX source), fifty Mathlib-ready Lean 4 foundational modules (MathlibStaging), and fifty-two domain certificate modules (YM101-YM152) spanning UV polymer contraction, 100% Killing-Cartan closure, curved Brascamp-Lieb and Dobrushin mixing bridges, all-scales inductive Peierls RG, spatial reflection positivity, Symanzik continuum envelopes, short-distance OPE non-triviality, Tomboulis character flow, FILS chessboard decay, thick-vortex spreading, gauge-invariant coset sign-magnitude Creutz dominance, general-rank non-Abelian Bianchi chording, RP slice transfer-matrix log-convexity, Stokes adjoint dispersion, Schur-test slice Markov tensorization, Bianchi-screened dipole variance floors, coarse temporal-slice Dobrushin contraction, multi-scale dyadic Bianchi accumulation, Bianchi cocycle decomposition, non-linear SO(3) centralizer codimension bounds, bounded-oscillation Gibbs density cap variance floors, isotropic super-block Dobrushin normalization, Schur partial-trace and multi-level block divide-and-conquer contraction, centerless simple-group uniform closure, compact-group Haar product Gibbs measures, completed OS Hilbert transfer gap bounds, end-to-end measure-Hilbert Clay interface synthesis, and unconditional 4D Wilson single-link conditional density and variance floors, together with the Lean 4 verification ledger. The infinite-volume continuum mass-gap reduction is isolated explicitly inside conditional Hypothesis 4.1 on coarse-scale Bianchi dispersion and slice decoherence.",
+  "version": "1.5.0",
   "upload_type": "software",
   "license": "Apache-2.0",
   "creators": [
@@ -79,6 +79,9 @@
     "formal/yang_mills_blueprint/YangMillsBlueprint/MathlibStaging/SchurPartialTraceContraction.lean",
     "formal/yang_mills_blueprint/YangMillsBlueprint/MathlibStaging/BlockSchurHierarchy.lean",
     "formal/yang_mills_blueprint/YangMillsBlueprint/MathlibStaging/SimpleGroupUniformClosure.lean",
+    "formal/yang_mills_blueprint/YangMillsBlueprint/MathlibStaging/LatticeHaarGibbs.lean",
+    "formal/yang_mills_blueprint/YangMillsBlueprint/MathlibStaging/SliceReflectionHilbert.lean",
+    "formal/yang_mills_blueprint/YangMillsBlueprint/MathlibStaging/WilsonPlaquetteAction.lean",
     "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM101_CauchyPolydiskCert.lean",
     "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM102_WeylCollarCert.lean",
     "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM103_SU2TwistRigidityCert.lean",
@@ -126,6 +129,10 @@
     "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM145_IsotropicSuperblockCert.lean",
     "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM146_SchurPartialTraceCert.lean",
     "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM147_BlockSchurHierarchyCert.lean",
-    "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM148_SimpleGroupUniformCert.lean"
+    "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM148_SimpleGroupUniformCert.lean",
+    "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM149_LatticeHaarGibbsCert.lean",
+    "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM150_SliceReflectionHilbertCert.lean",
+    "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM151_BlueprintClayInterfaceCert.lean",
+    "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM152_WilsonLatticeActionCert.lean"
   ]
 }
