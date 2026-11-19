@@ -126,6 +126,7 @@ import YangMillsBlueprint.Certificates.YM175_PerturbedCocycleSchurCert
 import YangMillsBlueprint.Certificates.YM176_AbelianSubtractedParamagneticSchurCert
 import YangMillsBlueprint.Certificates.YM177_TwoStepInductiveRGRemainderCert
 import YangMillsBlueprint.Certificates.YM177_InductiveRgRemainderContractionCert
+import YangMillsBlueprint.Certificates.YM178_SpectralTaylorAndGribovClearanceCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -678,6 +679,9 @@ private def auditedTheorems : List Name :=
   , ``YangMillsBlueprint.Certificates.inductive_rg_basin_entry_unconditional
   , ``YangMillsBlueprint.Certificates.inductive_rg_remainder_uniform_bound_unconditional
   , ``YangMillsBlueprint.Certificates.inductive_rg_strict_coupling_descent_unconditional
+  , ``YangMillsBlueprint.Certificates.small_field_gribov_clearance_unconditional
+  , ``YangMillsBlueprint.Certificates.real_log_fourth_order_sandwich_unconditional
+  , ``YangMillsBlueprint.Certificates.trace_log_schur_sandwich_unconditional
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -757,6 +761,7 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.AbelianSubtractedSchurCert
   , ``YangMillsBlueprint.Certificates.TwoStepInductiveRGCert
   , ``YangMillsBlueprint.Certificates.InductiveRgRemainderCert
+  , ``YangMillsBlueprint.Certificates.SpectralGribovCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -1345,5 +1350,9 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #check (inferInstance : Nonempty YangMillsBlueprint.Certificates.InductiveRgRemainderCert)
 #print axioms YangMillsBlueprint.Certificates.inductive_rg_remainder_uniform_bound_unconditional
 #print axioms YangMillsBlueprint.Certificates.inductive_rg_strict_coupling_descent_unconditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.SpectralGribovCert)
+#print axioms YangMillsBlueprint.Certificates.small_field_gribov_clearance_unconditional
+#print axioms YangMillsBlueprint.Certificates.real_log_fourth_order_sandwich_unconditional
+#print axioms YangMillsBlueprint.Certificates.trace_log_schur_sandwich_unconditional
 
 end YangMillsBlueprint.VerifyNoTraps

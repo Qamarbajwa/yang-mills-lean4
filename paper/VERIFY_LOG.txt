@@ -755,3 +755,13 @@ inferInstance : Nonempty Certificates.InductiveRgRemainderCert
 'YangMillsBlueprint.Certificates.inductive_rg_strict_coupling_descent_unconditional' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+inferInstance : Nonempty Certificates.SpectralGribovCert
+'YangMillsBlueprint.Certificates.small_field_gribov_clearance_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.real_log_fourth_order_sandwich_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.trace_log_schur_sandwich_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
