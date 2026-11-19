@@ -494,3 +494,59 @@ inferInstance : Nonempty Certificates.WilsonSingleLinkCert
 'YangMillsBlueprint.Certificates.wilson_crossover_continuum_gap_conditional' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+inferInstance : Nonempty Certificates.RigidChordCert
+'RigidChordAction.orth_left_mul_orth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidChordAction.neg_one_orth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidChordAction.frobSq_add_frobSq_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidChordAction.frobSq_conj_sub_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidChordAction.mul_sub_one_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidChordAction.frobSq_add_le_two_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidChordAction.frobSq_mul_sub_one_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidChordAction.frobSq_plaquette_le_four_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidChordAction.plaquetteCost_eq_frobSq_div' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidChordAction.plaquetteCost_one_eq_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidChordAction.plaquetteCost_neg_one_eq_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RigidChordAction.plaquetteCost_conj_invariant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'YangMillsBlueprint.Certificates.canonical_identity_and_antipodal_cost' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.rigid_plaquette_cost_le_two_div_n_mul_link_chords' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.rigid_small_field_plaquette_cap_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+inferInstance : Nonempty Certificates.TreeFrameGaugeCert
+'TreeFrameGaugeInvariance.gaugeTransform_one' depends on axioms: [propext, Quot.sound]
+'TreeFrameGaugeInvariance.gaugeTransform_comp' depends on axioms: [propext, Quot.sound]
+'TreeFrameGaugeInvariance.gaugeTransform_inv_left' depends on axioms: [propext, Quot.sound]
+'TreeFrameGaugeInvariance.gaugeTransform_inv_right' depends on axioms: [propext, Quot.sound]
+'TreeFrameGaugeInvariance.gaugeTransform_eq_one_of_tree_frame' depends on axioms: [propext]
+'TreeFrameGaugeInvariance.closed_plaquette_gauge_conj' depends on axioms: [propext]
+'TreeFrameGaugeInvariance.map_mul_right_compactHaarProb' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TreeFrameGaugeInvariance.measurePreserving_mul_left_compactHaarProb' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'TreeFrameGaugeInvariance.measurePreserving_mul_right_compactHaarProb' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'TreeFrameGaugeInvariance.measurePreserving_twoSided_compactHaarProb' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'TreeFrameGaugeInvariance.measurePreserving_gaugeTransform' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TreeFrameGaugeInvariance.integrable_gaugeTransform_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TreeFrameGaugeInvariance.integral_gaugeTransform' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TreeFrameGaugeInvariance.partitionIntegral_gaugeTransform' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TreeFrameGaugeInvariance.weightedExpectation_gaugeTransform' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TreeFrameGaugeInvariance.weightedExpectation_gauge_invariant' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.canonical_tree_frame_floor_eq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.tree_frame_gauge_expectation_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.tree_frame_oscillation_floor_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

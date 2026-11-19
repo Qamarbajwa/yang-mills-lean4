@@ -100,6 +100,8 @@ import YangMillsBlueprint.Certificates.YM149_LatticeHaarGibbsCert
 import YangMillsBlueprint.Certificates.YM150_SliceReflectionHilbertCert
 import YangMillsBlueprint.Certificates.YM151_BlueprintClayInterfaceCert
 import YangMillsBlueprint.Certificates.YM152_WilsonLatticeActionCert
+import YangMillsBlueprint.Certificates.YM153_RigidChordActionCert
+import YangMillsBlueprint.Certificates.YM154_TreeFrameGaugeCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -539,6 +541,40 @@ private def auditedTheorems : List Name :=
   , ``YangMillsBlueprint.Certificates.canonical_4d_staple_osc_eq
   , ``YangMillsBlueprint.Certificates.wilson_4d_single_link_unconditional
   , ``YangMillsBlueprint.Certificates.wilson_crossover_continuum_gap_conditional
+  , ``RigidChordAction.orth_left_mul_orth
+  , ``RigidChordAction.neg_one_orth
+  , ``RigidChordAction.frobSq_add_frobSq_sub
+  , ``RigidChordAction.frobSq_conj_sub_one
+  , ``RigidChordAction.mul_sub_one_eq
+  , ``RigidChordAction.frobSq_add_le_two_mul
+  , ``RigidChordAction.frobSq_mul_sub_one_le
+  , ``RigidChordAction.frobSq_plaquette_le_four_sum
+  , ``RigidChordAction.plaquetteCost_eq_frobSq_div
+  , ``RigidChordAction.plaquetteCost_one_eq_zero
+  , ``RigidChordAction.plaquetteCost_neg_one_eq_two
+  , ``RigidChordAction.plaquetteCost_conj_invariant
+  , ``YangMillsBlueprint.Certificates.canonical_identity_and_antipodal_cost
+  , ``YangMillsBlueprint.Certificates.rigid_plaquette_cost_le_two_div_n_mul_link_chords
+  , ``YangMillsBlueprint.Certificates.rigid_small_field_plaquette_cap_conditional
+  , ``TreeFrameGaugeInvariance.gaugeTransform_one
+  , ``TreeFrameGaugeInvariance.gaugeTransform_comp
+  , ``TreeFrameGaugeInvariance.gaugeTransform_inv_left
+  , ``TreeFrameGaugeInvariance.gaugeTransform_inv_right
+  , ``TreeFrameGaugeInvariance.gaugeTransform_eq_one_of_tree_frame
+  , ``TreeFrameGaugeInvariance.closed_plaquette_gauge_conj
+  , ``TreeFrameGaugeInvariance.map_mul_right_compactHaarProb
+  , ``TreeFrameGaugeInvariance.measurePreserving_mul_left_compactHaarProb
+  , ``TreeFrameGaugeInvariance.measurePreserving_mul_right_compactHaarProb
+  , ``TreeFrameGaugeInvariance.measurePreserving_twoSided_compactHaarProb
+  , ``TreeFrameGaugeInvariance.measurePreserving_gaugeTransform
+  , ``TreeFrameGaugeInvariance.integrable_gaugeTransform_iff
+  , ``TreeFrameGaugeInvariance.integral_gaugeTransform
+  , ``TreeFrameGaugeInvariance.partitionIntegral_gaugeTransform
+  , ``TreeFrameGaugeInvariance.weightedExpectation_gaugeTransform
+  , ``TreeFrameGaugeInvariance.weightedExpectation_gauge_invariant
+  , ``YangMillsBlueprint.Certificates.canonical_tree_frame_floor_eq
+  , ``YangMillsBlueprint.Certificates.tree_frame_gauge_expectation_unconditional
+  , ``YangMillsBlueprint.Certificates.tree_frame_oscillation_floor_conditional
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -592,6 +628,8 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.SliceReflectionHilbertCert
   , ``YangMillsBlueprint.Certificates.BlueprintClayInterfaceCert
   , ``YangMillsBlueprint.Certificates.WilsonSingleLinkCert
+  , ``YangMillsBlueprint.Certificates.RigidChordCert
+  , ``YangMillsBlueprint.Certificates.TreeFrameGaugeCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -1041,5 +1079,41 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #print axioms YangMillsBlueprint.Certificates.canonical_4d_staple_osc_eq
 #print axioms YangMillsBlueprint.Certificates.wilson_4d_single_link_unconditional
 #print axioms YangMillsBlueprint.Certificates.wilson_crossover_continuum_gap_conditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.RigidChordCert)
+#print axioms RigidChordAction.orth_left_mul_orth
+#print axioms RigidChordAction.neg_one_orth
+#print axioms RigidChordAction.frobSq_add_frobSq_sub
+#print axioms RigidChordAction.frobSq_conj_sub_one
+#print axioms RigidChordAction.mul_sub_one_eq
+#print axioms RigidChordAction.frobSq_add_le_two_mul
+#print axioms RigidChordAction.frobSq_mul_sub_one_le
+#print axioms RigidChordAction.frobSq_plaquette_le_four_sum
+#print axioms RigidChordAction.plaquetteCost_eq_frobSq_div
+#print axioms RigidChordAction.plaquetteCost_one_eq_zero
+#print axioms RigidChordAction.plaquetteCost_neg_one_eq_two
+#print axioms RigidChordAction.plaquetteCost_conj_invariant
+#print axioms YangMillsBlueprint.Certificates.canonical_identity_and_antipodal_cost
+#print axioms YangMillsBlueprint.Certificates.rigid_plaquette_cost_le_two_div_n_mul_link_chords
+#print axioms YangMillsBlueprint.Certificates.rigid_small_field_plaquette_cap_conditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.TreeFrameGaugeCert)
+#print axioms TreeFrameGaugeInvariance.gaugeTransform_one
+#print axioms TreeFrameGaugeInvariance.gaugeTransform_comp
+#print axioms TreeFrameGaugeInvariance.gaugeTransform_inv_left
+#print axioms TreeFrameGaugeInvariance.gaugeTransform_inv_right
+#print axioms TreeFrameGaugeInvariance.gaugeTransform_eq_one_of_tree_frame
+#print axioms TreeFrameGaugeInvariance.closed_plaquette_gauge_conj
+#print axioms TreeFrameGaugeInvariance.map_mul_right_compactHaarProb
+#print axioms TreeFrameGaugeInvariance.measurePreserving_mul_left_compactHaarProb
+#print axioms TreeFrameGaugeInvariance.measurePreserving_mul_right_compactHaarProb
+#print axioms TreeFrameGaugeInvariance.measurePreserving_twoSided_compactHaarProb
+#print axioms TreeFrameGaugeInvariance.measurePreserving_gaugeTransform
+#print axioms TreeFrameGaugeInvariance.integrable_gaugeTransform_iff
+#print axioms TreeFrameGaugeInvariance.integral_gaugeTransform
+#print axioms TreeFrameGaugeInvariance.partitionIntegral_gaugeTransform
+#print axioms TreeFrameGaugeInvariance.weightedExpectation_gaugeTransform
+#print axioms TreeFrameGaugeInvariance.weightedExpectation_gauge_invariant
+#print axioms YangMillsBlueprint.Certificates.canonical_tree_frame_floor_eq
+#print axioms YangMillsBlueprint.Certificates.tree_frame_gauge_expectation_unconditional
+#print axioms YangMillsBlueprint.Certificates.tree_frame_oscillation_floor_conditional
 
 end YangMillsBlueprint.VerifyNoTraps
