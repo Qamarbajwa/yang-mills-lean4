@@ -107,6 +107,7 @@ gate_3_cryptographic_provenance:
     - "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM178_SpectralTaylorAndGribovClearanceCert.lean"
     - "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM179_ContinuumRGBridgeSynthesisCert.lean"
     - "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM180_UnifiedCrossoverMasterBridgeCert.lean"
+    - "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM181_ClayBoundaryContinuumSynthesisCert.lean"
     - "scripts/probe_two_step_inductive_rg_remainder.py"
     - "probes/probe_two_step_inductive_rg_remainder.json"
     - "probes/*.py"

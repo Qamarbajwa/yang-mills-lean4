@@ -782,3 +782,7 @@ inferInstance : Nonempty Certificates.UnifiedMasterBridgeCert
 'YangMillsBlueprint.Certificates.master_uv_to_continuum_gap_conditional' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+inferInstance : Nonempty Certificates.ClayBoundaryContinuumCert
+'YangMillsBlueprint.Certificates.clay_hilbert_and_rg_crossover_synthesis_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

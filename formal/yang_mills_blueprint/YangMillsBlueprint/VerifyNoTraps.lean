@@ -129,6 +129,7 @@ import YangMillsBlueprint.Certificates.YM177_InductiveRgRemainderContractionCert
 import YangMillsBlueprint.Certificates.YM178_SpectralTaylorAndGribovClearanceCert
 import YangMillsBlueprint.Certificates.YM179_ContinuumRGBridgeSynthesisCert
 import YangMillsBlueprint.Certificates.YM180_UnifiedCrossoverMasterBridgeCert
+import YangMillsBlueprint.Certificates.YM181_ClayBoundaryContinuumSynthesisCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -689,6 +690,7 @@ private def auditedTheorems : List Name :=
   , ``YangMillsBlueprint.Certificates.continuum_mass_gap_from_uniform_bridges_conditional
   , ``YangMillsBlueprint.Certificates.peierls_exponential_threshold_unconditional
   , ``YangMillsBlueprint.Certificates.master_uv_to_continuum_gap_conditional
+  , ``YangMillsBlueprint.Certificates.clay_hilbert_and_rg_crossover_synthesis_conditional
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -771,6 +773,7 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.SpectralGribovCert
   , ``YangMillsBlueprint.Certificates.ContinuumRGBridgeCert
   , ``YangMillsBlueprint.Certificates.UnifiedMasterBridgeCert
+  , ``YangMillsBlueprint.Certificates.ClayBoundaryContinuumCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -1370,5 +1373,7 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #check (inferInstance : Nonempty YangMillsBlueprint.Certificates.UnifiedMasterBridgeCert)
 #print axioms YangMillsBlueprint.Certificates.peierls_exponential_threshold_unconditional
 #print axioms YangMillsBlueprint.Certificates.master_uv_to_continuum_gap_conditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.ClayBoundaryContinuumCert)
+#print axioms YangMillsBlueprint.Certificates.clay_hilbert_and_rg_crossover_synthesis_conditional
 
 end YangMillsBlueprint.VerifyNoTraps
