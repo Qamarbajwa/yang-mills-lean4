@@ -812,3 +812,7 @@ inferInstance : Nonempty Certificates.RiemannWavefunctionContinuumYMCert
 'YangMillsBlueprint.Certificates.master_riemann_wavefunction_to_ym_continuum_gap_synthesis' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+inferInstance : Nonempty Certificates.UnifiedClayRootCert
+'YangMillsBlueprint.Certificates.unified_clay_root_synthesis_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

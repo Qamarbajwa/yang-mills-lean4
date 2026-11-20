@@ -1,7 +1,7 @@
 {
   "title": "Four-Dimensional Lattice Yang-Mills Modular Research Bundle and Lean 4 Formal Verification Certificates",
-  "description": "Synchronized modular release bundle (v1.13.0) containing four micro-papers (PDF and LaTeX source), general-reader guide (YANG_MILLS_EXPLAINED_FOR_EVERYONE.pdf), seventy-two Mathlib-ready Lean 4 foundational modules (MathlibStaging), eighty-three domain certificate modules (YM101-YM182), and six deterministic SU(2)/SO(3)/U(1) numerical verification probes with SHA-256 receipts. Includes YM176-YM182 (Abelian-subtracted 2^4-fiber paramagnetic Schur dominance, two-step inductive RG remainder contraction, exact Real.log Taylor sandwich, small-field Gribov clearance, Bridges 1-4 continuum synthesis, OSHilbert Clay wiring, and universal simple-group + OPE closure). The infinite-volume continuum mass-gap reduction is isolated explicitly inside conditional Hypothesis 4.1, and the full Clay 4D Yang-Mills problem remains explicitly OPEN.",
-  "version": "1.13.0",
+  "description": "Synchronized modular release bundle (v1.14.0) containing four micro-papers (PDF and LaTeX source), general-reader guide (YANG_MILLS_EXPLAINED_FOR_EVERYONE.pdf), seventy-two Mathlib-ready Lean 4 foundational modules (MathlibStaging), eighty-five domain certificate modules (YM101-YM184), and seven deterministic SU(2)/SO(3)/U(1) numerical verification probes (Probes 1-7) with SHA-256 receipts. Includes YM176-YM184 (Abelian-subtracted 2^4-fiber paramagnetic Schur dominance, inductive RG contraction, exact Real.log Taylor sandwich, small-field Gribov clearance, Bridges 1-4 continuum synthesis, OSHilbert Clay wiring, universal simple-group + OPE closure, Riemann harmonic-slab telescoping + SVD-Dobrushin mass gap, and unified Clay root synthesis). The infinite-volume continuum mass-gap reduction is isolated explicitly inside conditional Hypothesis 4.1, and the full Clay 4D Yang-Mills problem remains explicitly OPEN.",
+  "version": "1.14.0",
   "upload_type": "software",
   "license": "Apache-2.0",
   "creators": [
@@ -205,6 +205,7 @@
     "YANG_MILLS_EXPLAINED_FOR_EVERYONE.pdf",
     "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM183_RiemannWavefunctionContinuumSynthesisCert.lean",
     "scripts/probe_riemann_wavefunction_ym_synthesis.py",
-    "probes/probe_riemann_wavefunction_ym_synthesis.json"
+    "probes/probe_riemann_wavefunction_ym_synthesis.json",
+    "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM184_UnifiedClayRootSynthesisCert.lean"
   ]
 }
