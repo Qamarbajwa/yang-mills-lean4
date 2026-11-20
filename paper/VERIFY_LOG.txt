@@ -872,3 +872,5 @@ inferInstance : Nonempty Certificates.ContinuumOSBridgeCert
  Classical.choice,
  Quot.sound]
 -- lake build YangMillsBlueprint: 3021 jobs, 0 errors (YM101-YM191)
+
+[2026-11-20] YM101-YM191 + ym_phase4_uniform_dobrushin_mass_gap_floor synchronized; chrysalis_manifest.json verified (118/118 artifacts); paper/main.pdf recompiled cleanly (ai is being used as a tool by Arqam, BTU Cottbus-Senftenberg).
