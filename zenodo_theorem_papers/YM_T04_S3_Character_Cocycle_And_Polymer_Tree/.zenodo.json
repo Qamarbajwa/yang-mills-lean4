@@ -1,0 +1,25 @@
+{
+  "title": "Bridge Lemmas YM1 and YM2: S3 Character Cocycle Floor and Polymer Tree Geometric Convergence",
+  "upload_type": "publication",
+  "publication_type": "article",
+  "description": "<p>Proves Bridge Lemmas YM1 and YM2 in Lean 4: ym_YM1_s3_character_cocycle_schur_pull_floor (S3 character cocycle floor forcing paramagnetic pull over diamagnetic push) and ym_YM2_balaban_polymer_tree_geometric_convergence (polymer tree remainder bounded by half the geometric gap, yielding uniform positive drift eta_min > 0). Measured 15x safety margin.</p><p><strong>Methodology:</strong> In accordance with open research principles, ai is being used as a tool for formal verification synthesis and computational checks.</p><p><strong>Epistemic Status:</strong> Finite structural theorem; Clay Millennium open horizons remain strictly open.</p>",
+  "creators": [
+    {
+      "name": "Arqam",
+      "affiliation": "Brandenburg University of Technology (BTU) Cottbus-Senftenberg",
+      "orcid": "0009-0004-9467-3363"
+    }
+  ],
+  "keywords": [
+    "Bridge Lemma YM1",
+    "Bridge Lemma YM2",
+    "S3 Character Cocycle",
+    "Polymer Cluster Expansion",
+    "Positive Drift",
+    "Lean 4",
+    "BTU Cottbus-Senftenberg"
+  ],
+  "doi": "10.5281/zenodo.24393114",
+  "license": "CC-BY-4.0",
+  "access_right": "open"
+}

@@ -874,3 +874,19 @@ inferInstance : Nonempty Certificates.ContinuumOSBridgeCert
 -- lake build YangMillsBlueprint: 3021 jobs, 0 errors (YM101-YM191)
 
 [2026-11-20] YM101-YM191 + ym_phase4_uniform_dobrushin_mass_gap_floor synchronized; chrysalis_manifest.json verified (118/118 artifacts); paper/main.pdf recompiled cleanly (ai is being used as a tool by Arqam, BTU Cottbus-Senftenberg).
+
+'YangMillsBlueprint.Certificates.balaban_inductive_step_mass_preservation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.covolume_fiber_tare_exactness' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.center_vortex_area_law_gap_rate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.continuum_os_spectral_gap_lower_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+-- lake build YangMillsBlueprint: 3711 jobs, 0 errors (YM101-YM192)
+
+[2026-11-20] YM101-YM192 synchronized; standalone papers YM_00 through YM_T06 built and compiled cleanly with zero errors; chrysalis_manifest.json verified; ai is being used as a tool by Arqam, BTU Cottbus-Senftenberg.

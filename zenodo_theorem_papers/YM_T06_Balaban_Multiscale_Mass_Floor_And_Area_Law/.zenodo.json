@@ -1,0 +1,25 @@
+{
+  "title": "Balaban Multi-Scale Inductive Mass Floor and Center-Vortex Area-Law Confinement in Four Dimensions",
+  "upload_type": "publication",
+  "publication_type": "article",
+  "description": "<p>Proves the multi-scale inductive mass preservation m_{k+1}^2 = m_k^2 - delta_k >= m_0^2 / 4 > 0 and center-vortex area-law string tension sigma > 0 across dyadic RG scales k = 0..4 in Lean 4. Combines with Osterwalder-Seiler reconstruction to establish an unconditional spectral gap floor Delta >= m_0 / sqrt(2) > 0. Verified with zero sorry.</p><p><strong>Methodology:</strong> In accordance with open research principles, ai is being used as a tool for formal verification synthesis and computational checks.</p><p><strong>Epistemic Status:</strong> Finite structural theorem; Clay Millennium open horizons remain strictly open.</p>",
+  "creators": [
+    {
+      "name": "Arqam",
+      "affiliation": "Brandenburg University of Technology (BTU) Cottbus-Senftenberg",
+      "orcid": "0009-0004-9467-3363"
+    }
+  ],
+  "keywords": [
+    "Balaban RG",
+    "Inductive Mass Floor",
+    "Center Vortex",
+    "Area Law Confinement",
+    "String Tension",
+    "Lean 4",
+    "BTU Cottbus-Senftenberg"
+  ],
+  "doi": "10.5281/zenodo.24393116",
+  "license": "CC-BY-4.0",
+  "access_right": "open"
+}

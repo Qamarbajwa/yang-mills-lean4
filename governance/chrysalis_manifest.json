@@ -2,13 +2,13 @@
   "manifest_version": "1.0.0",
   "key_id": "chrysalis-local-hmac-2026",
   "algorithm": "HMAC-SHA256",
-  "generated_at": "2026-11-20T18:44:55.577470+00:00",
-  "total_artifacts": 118,
+  "generated_at": "2026-11-20T20:23:19.447274+00:00",
+  "total_artifacts": 121,
   "files": {
     ".zenodo.json": {
-      "sha256": "051ebceb21590c5501dfb43f816cb61fb91f3acd2bcd7da9c2ce4400cfcf75a5",
-      "hmac_sha256": "dd6f0d96e55b11226eab3d7e7d47c80dd10e380268a76c73131c4f9e862645d3",
-      "size_bytes": 19389
+      "sha256": "0cc8ab821dabd8475d6275d76dea3c8db312175001b9efc21c94215fb567e1bf",
+      "hmac_sha256": "faed2776d7dff6beb97c61693025833782ff76ef594070b20ec3b63f43842299",
+      "size_bytes": 20219
     },
     "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM176_AbelianSubtractedParamagneticSchurCert.lean": {
       "sha256": "9a12e8c86ae2e0badeeb65ca55a023af057d775053477350836aec973c6210ec",
@@ -94,6 +94,11 @@
       "sha256": "48641a7b6a38f19a9c3a13ef0a81415b1fb78c9810a52fccfa20eeaaa6cb897f",
       "hmac_sha256": "3a7f2a8bef6645f5edcf2567e6bd0dcf8039b61ef963c7e6c9d9c31ed160c9be",
       "size_bytes": 3919
+    },
+    "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM192_BalabanMultiscaleMassFloorAndAreaLawCert.lean": {
+      "sha256": "92febcaad8f3ec5aab884ea823596a220eb50cc13675f4a5631c9021ed8de2b0",
+      "hmac_sha256": "81e5653935fcae0905919e3e81acbd50dac937e6a20419fe9c8316871b97b032",
+      "size_bytes": 4596
     },
     "governance/envelopes/YM-002E.yaml": {
       "sha256": "ae09781544dfa741edc0fc3c42a515389621b54a9f75f7becdc74a4c2af95519",
@@ -181,9 +186,9 @@
       "size_bytes": 6364
     },
     "paper/main.tex": {
-      "sha256": "640c1937321b8f1f1ef5b486a43491d54b54e9b6ed3132030f8d882c5291b998",
-      "hmac_sha256": "1b266d3bcd107716f61df8e1a334b79dea093ba6a81de3016bf0e93c64ddb6fe",
-      "size_bytes": 41723
+      "sha256": "6c57e52fdf2c3bd5b2728ed12ef2940208a468b2e6a462c94a7c42b059daf6bf",
+      "hmac_sha256": "2b3caaf4ae7806ae9f649509dbc47848122da1c00d283979a675282736345ca8",
+      "size_bytes": 42113
     },
     "paper/paper_4_crossover_obstruction_atlas.pdf": {
       "sha256": "d1d04c3071d15a7efae53cce095dfa0bcc2d166ef79c51da5483a919b46eb2d2",
@@ -196,9 +201,9 @@
       "size_bytes": 65119
     },
     "paper/VERIFY_LOG.txt": {
-      "sha256": "95aa54e99c99831be8bf043ebf28871b873c3a01b5e9bb3c59b4b8b6ae0c655a",
-      "hmac_sha256": "c4f93f8ea575b0713d9c1351ee98f27a771607880da493a2b65fac43ac526e17",
-      "size_bytes": 56460
+      "sha256": "fa268e36a1005ef53227b089efb2745cca359a8a3940804ab279c018f0a1632c",
+      "hmac_sha256": "31f5df9ec66538c60fb981bae4c492b5389626b02fd33453ea9fdefe109e0864",
+      "size_bytes": 57523
     },
     "probes/probe_abelian_subtracted_2to4_fiber_schur.py": {
       "sha256": "e4251491dae9bd4dcfd7045a3ad79236363f67dcafa0a69539b1546aa3c94933",
@@ -209,6 +214,11 @@
       "sha256": "aff78ce0acdde51c30d861d1f79997ab904e554e8cb15a5bd49133d37159b36d",
       "hmac_sha256": "05930f4590b15195dcd9112f73c93df48a66d6b2928cdd7c1baf3e5c68f3bd6b",
       "size_bytes": 30582
+    },
+    "probes/probe_continuum_ym_balaban_and_vortex_area_law.py": {
+      "sha256": "b60df5698cc61eeb35d2a178b5635004bf82cc8d4d2304c3bd6e6a4e723f9bb2",
+      "hmac_sha256": "d490211fed9064aa74abc7a42d36b4e4873da6cd61e241e63158631fe3a2b540",
+      "size_bytes": 4613
     },
     "probes/probe_deep_cocycle_and_star_influence.py": {
       "sha256": "3e057ef2af4d996c2d83a85105dc9c2d884026d56c374c2cc34cc09fbfebe5c6",
@@ -284,6 +294,11 @@
       "sha256": "186499a22c8d96f877eaff6b804415ad0e9cf9244254752012a9553066d00d6a",
       "hmac_sha256": "c45174048f13e1833fbde6ef279ae436abfa57d7f2e4f7ead1ff435cadffb6f1",
       "size_bytes": 784
+    },
+    "scripts/build_all_ym_theorem_and_common_person_papers.py": {
+      "sha256": "d3231dcd8d8cd1783debdb157f11a652991d3e9148c5a40266b969508cbdebe5",
+      "hmac_sha256": "558dcf7cf9b62f1fc02fc368a85ec545a25354e9fc4a14cb480198372f275d63",
+      "size_bytes": 76837
     },
     "scripts/probe_gribov_clearance_and_polymer_tree.py": {
       "sha256": "3ae6abf87cd0c387bf1fd9fea0fb29a8e7f46fa02cc62aa07ad41502fbe94f84",

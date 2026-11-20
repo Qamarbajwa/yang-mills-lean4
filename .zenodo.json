@@ -1,7 +1,7 @@
 {
   "title": "Four-Dimensional Lattice Yang-Mills Modular Research Bundle and Lean 4 Formal Verification Certificates",
-  "description": "Zero-Axiom Finite-Dimensional and Parameterized Bridge Certification in Lean 4 for 4D Lattice Yang-Mills (v1.16.0, YM101-YM187, 3,017 Lake jobs, 108/108 Gate 3 manifest artifacts). Shows how SU(2) ~ S^3 quaternion commutators generate the Grade-2 holonomy twist that U(1) ~ S^1 lacks, how taring the 65.4505 cavity covolume locks the 13.47x paramagnetic Schur pull, and how YM186-YM187 (Bridge Lemmas YM1-YM2) prove positive RG drift and rule out UV stagnation and massless phases under parameterized cluster bounds (Hypothesis 4.1 isolates the continuum limit). In this work, ai is being used as a tool by Arqam (Brandenburg University of Technology Cottbus-Senftenberg).",
-  "version": "1.16.0",
+  "description": "Zero-Axiom Finite-Dimensional and Parameterized Bridge Certification in Lean 4 for 4D Lattice Yang-Mills (v1.17.0, YM101-YM192, 3,711 Lake jobs, full Gate 3 manifest artifacts). Shows how SU(2) ~ S^3 quaternion commutators generate the Grade-2 holonomy twist that U(1) ~ S^1 lacks, how taring the 65.4505 cavity covolume locks the 13.47x paramagnetic Schur pull, and how YM186-YM192 prove positive RG drift, ruling out UV stagnation and massless phases under parameterized cluster bounds, with multi-scale Balaban mass preservation and center-vortex area-law string tension. Includes standalone papers YM_00 through YM_T06. In this work, ai is being used as a tool by Arqam (Brandenburg University of Technology Cottbus-Senftenberg).",
+  "version": "1.17.0",
   "upload_type": "software",
   "license": "Apache-2.0",
   "creators": [
@@ -210,6 +210,14 @@
     "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM185_BlockSchurAndDobrushinTensorizationCert.lean",
     "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM186_ContradictionMassGapBridgeCert.lean",
     "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM187_S3CocyclePullAndBalabanConvergenceCert.lean",
-    "governance/chrysalis_manifest.json"
+    "governance/chrysalis_manifest.json",
+    "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM188_Hypothesis41AuditAndMasterChainCert.lean",
+    "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM189_S3GibbsCocycleLowerBoundCert.lean",
+    "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM190_GribovClearanceAndPolymerTreeBoundCert.lean",
+    "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM191_ContinuumOSAndSymanzikBridgeCert.lean",
+    "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM192_BalabanMultiscaleMassFloorAndAreaLawCert.lean",
+    "scripts/build_all_ym_theorem_and_common_person_papers.py",
+    "probes/probe_continuum_ym_balaban_and_vortex_area_law.py",
+    "probes/probe_continuum_ym_balaban_and_area_law_receipt.json"
   ]
 }

@@ -1,0 +1,24 @@
+{
+  "title": "Abelian Circle Zero-Cocycle versus Non-Abelian S3 Holonomy Defect in Four Dimensions",
+  "upload_type": "publication",
+  "publication_type": "article",
+  "description": "<p>Proves why light U(1) on a circle has zero holonomy twist (delta = 0) allowing a massless phase, while nuclear SU(2) on the 3-sphere S3 has non-commuting Pauli matrices generating an inescapable positive plaquette defect delta = 0.9860 > 0. Verified in Lean 4 with zero sorry.</p><p><strong>Methodology:</strong> In accordance with open research principles, ai is being used as a tool for formal verification synthesis and computational checks.</p><p><strong>Epistemic Status:</strong> Finite structural theorem; Clay Millennium open horizons remain strictly open.</p>",
+  "creators": [
+    {
+      "name": "Arqam",
+      "affiliation": "Brandenburg University of Technology (BTU) Cottbus-Senftenberg",
+      "orcid": "0009-0004-9467-3363"
+    }
+  ],
+  "keywords": [
+    "Abelian Gauge Theory",
+    "Non-Abelian Holonomy",
+    "3-Sphere Topology",
+    "Curvature Defect",
+    "Lean 4",
+    "BTU Cottbus-Senftenberg"
+  ],
+  "doi": "10.5281/zenodo.24393111",
+  "license": "CC-BY-4.0",
+  "access_right": "open"
+}

@@ -124,6 +124,8 @@ gate_3_cryptographic_provenance:
     - "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM191_ContinuumOSAndSymanzikBridgeCert.lean"
     - "scripts/probe_symanzik_and_os_continuum_bridge.py"
     - "probes/probe_symanzik_and_os_continuum_bridge.json"
+    - "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM192_BalabanMultiscaleMassFloorAndAreaLawCert.lean"
+    - "scripts/build_all_ym_theorem_and_common_person_papers.py"
     - "scripts/probe_riemann_wavefunction_ym_synthesis.py"
     - "probes/probe_riemann_wavefunction_ym_synthesis.json"
     - "scripts/probe_two_step_inductive_rg_remainder.py"
