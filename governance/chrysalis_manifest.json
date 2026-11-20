@@ -2,13 +2,13 @@
   "manifest_version": "1.0.0",
   "key_id": "chrysalis-local-hmac-2026",
   "algorithm": "HMAC-SHA256",
-  "generated_at": "2026-11-20T16:48:31.332289+00:00",
-  "total_artifacts": 108,
+  "generated_at": "2026-11-20T18:37:41.727928+00:00",
+  "total_artifacts": 112,
   "files": {
     ".zenodo.json": {
-      "sha256": "5d0344973370734d82873bea7fa6f4b9d7ee98ffc63bcd2017ec26b67976735b",
-      "hmac_sha256": "c099cb92ecf506da97a762f5e77360a57a57635fdbcf30843fe0e6fe33ee7668",
-      "size_bytes": 19789
+      "sha256": "051ebceb21590c5501dfb43f816cb61fb91f3acd2bcd7da9c2ce4400cfcf75a5",
+      "hmac_sha256": "dd6f0d96e55b11226eab3d7e7d47c80dd10e380268a76c73131c4f9e862645d3",
+      "size_bytes": 19389
     },
     "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM176_AbelianSubtractedParamagneticSchurCert.lean": {
       "sha256": "9a12e8c86ae2e0badeeb65ca55a023af057d775053477350836aec973c6210ec",
@@ -74,6 +74,16 @@
       "sha256": "ab7c4021cd3cc53c4f0692e94cd775f11240e4d03436b8adc7068d4c4ce443f6",
       "hmac_sha256": "c8d98181cea9dc9b67f315b4a1f1254a01c19971edf8fed90d6eedee46623e1a",
       "size_bytes": 5287
+    },
+    "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM188_Hypothesis41AuditAndMasterChainCert.lean": {
+      "sha256": "5eca9beb5a03ae4490eac5bf13601d97dfb7decdc251507e8e7352c56a04a473",
+      "hmac_sha256": "6a85ef4b50dfbb17eed9100b406c99749b9cbcfd577511d6beb0b673b35efd63",
+      "size_bytes": 6080
+    },
+    "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM189_S3GibbsCocycleLowerBoundCert.lean": {
+      "sha256": "e583d403c23bb85b4efe8a5ae25ecb341d68a5b37fffaf91ebbb4a87c95c7613",
+      "hmac_sha256": "4d6c46d0fa2d6b4381d7b00fb69a524939dba73e04ebb8f34b657cca4389077a",
+      "size_bytes": 3330
     },
     "governance/envelopes/YM-002E.yaml": {
       "sha256": "ae09781544dfa741edc0fc3c42a515389621b54a9f75f7becdc74a4c2af95519",
@@ -161,9 +171,9 @@
       "size_bytes": 6364
     },
     "paper/main.tex": {
-      "sha256": "b97168755beb44355640a75533fe2a623509fc7541188197d40d29a4e04ade39",
-      "hmac_sha256": "a1dc816521941c17155a03d6f29395705d45d05881d4c9f7d29b450d750843d3",
-      "size_bytes": 40705
+      "sha256": "640c1937321b8f1f1ef5b486a43491d54b54e9b6ed3132030f8d882c5291b998",
+      "hmac_sha256": "1b266d3bcd107716f61df8e1a334b79dea093ba6a81de3016bf0e93c64ddb6fe",
+      "size_bytes": 41723
     },
     "paper/paper_4_crossover_obstruction_atlas.pdf": {
       "sha256": "d1d04c3071d15a7efae53cce095dfa0bcc2d166ef79c51da5483a919b46eb2d2",
@@ -176,9 +186,9 @@
       "size_bytes": 65119
     },
     "paper/VERIFY_LOG.txt": {
-      "sha256": "fc9a0f534227f05ae5402229ad6c7e4c3b6d7db76d441af30c9723aa41fe1564",
-      "hmac_sha256": "f83bb81afec424de9a80406f2b8008a6dc61478a6019e662b553bb3faa2a9d4a",
-      "size_bytes": 54958
+      "sha256": "e6127266e42a9674c105ebc914f3461cfe9174e1feb65462e9f717d257b73a94",
+      "hmac_sha256": "1327de09462d021854c0c767379c10843c2d791b1dbf977dd8f20a6c3264b068",
+      "size_bytes": 55587
     },
     "probes/probe_abelian_subtracted_2to4_fiber_schur.py": {
       "sha256": "e4251491dae9bd4dcfd7045a3ad79236363f67dcafa0a69539b1546aa3c94933",
@@ -209,6 +219,11 @@
       "sha256": "152a2b63ec26a757207ef90fbbd0a04ac78a63903fbea308dc6c3818479e3336",
       "hmac_sha256": "a3c7a51a3eb867c60bf40436dc74da7bcef77ec89c0c8e191f2f4f8b611745c9",
       "size_bytes": 1579
+    },
+    "probes/probe_s3_cocycle_scaling_and_gribov_tail.json": {
+      "sha256": "290210dfd55fadb3ab3f3e15314d910e1b701c85d6bdc943adfaf8549be15cc6",
+      "hmac_sha256": "c6f6d1dbe3f39b7218f7d49565409fa606eb42c8e0e8a671b9baf5eadee23cf3",
+      "size_bytes": 1024
     },
     "probes/probe_two_step_inductive_rg_remainder.json": {
       "sha256": "e50976373d69d991f736aef8bff05ea9ef1509deb44f1699a8d31257fd8d0f22",
@@ -254,6 +269,11 @@
       "sha256": "14c0c8deb23d20877263476c6a7317d30bba83537583e4c9b9f15deed50b8e8a",
       "hmac_sha256": "b2ad61b74cda4575c04deb7b11dacd567d390f90e2f3bb5c7e6043d4d17e16d4",
       "size_bytes": 3382
+    },
+    "scripts/probe_s3_cocycle_scaling_and_gribov_tail.py": {
+      "sha256": "41b03b5e455742ceab7a66cd7b8f1ca922fa0f8dc807e31eb395be7745e5fad3",
+      "hmac_sha256": "5da3cb5901dcd9812e5b195f452dc7b09e4e15c740b40a6c2b5a1ecd61f8e244",
+      "size_bytes": 4167
     },
     "scripts/probe_two_step_inductive_rg_remainder.py": {
       "sha256": "bb70fd6b570799f2a4f00b16fad3e5a6378c7defe3cb0a5226d233140f74ca6f",

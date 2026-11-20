@@ -1,0 +1,39 @@
+{
+  "probe": "probe_s3_cocycle_scaling_and_gribov_tail",
+  "epistemic_lock": "status: verified-finite | Hypothesis 4.1 continuum limit OPEN",
+  "su2_scaling": [
+    {
+      "beta": 2.2,
+      "E_delta_2x2": 0.15409509686640038,
+      "beta_times_E_delta": 0.33900921310608084
+    },
+    {
+      "beta": 2.5,
+      "E_delta_2x2": 0.1289203500613887,
+      "beta_times_E_delta": 0.3223008751534717
+    },
+    {
+      "beta": 3.0,
+      "E_delta_2x2": 0.09183980250411265,
+      "beta_times_E_delta": 0.27551940751233794
+    },
+    {
+      "beta": 4.0,
+      "E_delta_2x2": 0.05798106334297571,
+      "beta_times_E_delta": 0.23192425337190284
+    },
+    {
+      "beta": 6.0,
+      "E_delta_2x2": 0.03085403504408956,
+      "beta_times_E_delta": 0.18512421026453735
+    },
+    {
+      "beta": 8.0,
+      "E_delta_2x2": 0.01749415682510761,
+      "beta_times_E_delta": 0.1399532546008609
+    }
+  ],
+  "min_c0_beta_E_delta": 0.1399532546008609,
+  "u1_max_delta_2x2": 0.0,
+  "status": "PASS"
+}

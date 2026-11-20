@@ -136,6 +136,8 @@ import YangMillsBlueprint.Certificates.YM184_UnifiedClayRootSynthesisCert
 import YangMillsBlueprint.Certificates.YM185_BlockSchurAndDobrushinTensorizationCert
 import YangMillsBlueprint.Certificates.YM186_ContradictionMassGapBridgeCert
 import YangMillsBlueprint.Certificates.YM187_S3CocyclePullAndBalabanConvergenceCert
+import YangMillsBlueprint.Certificates.YM188_Hypothesis41AuditAndMasterChainCert
+import YangMillsBlueprint.Certificates.YM189_S3GibbsCocycleLowerBoundCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -1424,5 +1426,10 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #check (inferInstance : Nonempty YangMillsBlueprint.Certificates.S3CocycleBalabanCert)
 #print axioms YangMillsBlueprint.Certificates.ym_YM1_s3_character_cocycle_schur_pull_floor
 #print axioms YangMillsBlueprint.Certificates.ym_YM2_balaban_polymer_tree_geometric_convergence
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.Hypothesis41MinimalCert)
+#print axioms YangMillsBlueprint.Certificates.hypothesis_4_1_minimal_reduction_conditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.S3CocycleFloorCert)
+#print axioms YangMillsBlueprint.Certificates.su2_lie_bracket_cross_product_sq_unconditional
+#print axioms YangMillsBlueprint.Certificates.gibbs_cocycle_expectation_floor_from_active_haar_cap
 
 end YangMillsBlueprint.VerifyNoTraps

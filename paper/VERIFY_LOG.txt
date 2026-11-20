@@ -844,3 +844,15 @@ inferInstance : Nonempty Certificates.S3CocycleBalabanCert
  Classical.choice,
  Quot.sound]
 -- lake build YangMillsBlueprint: 3017 jobs, 0 errors (YM101-YM187)
+inferInstance : Nonempty Certificates.Hypothesis41MinimalCert
+'YangMillsBlueprint.Certificates.hypothesis_4_1_minimal_reduction_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+inferInstance : Nonempty Certificates.S3CocycleFloorCert
+'YangMillsBlueprint.Certificates.su2_lie_bracket_cross_product_sq_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.gibbs_cocycle_expectation_floor_from_active_haar_cap' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+-- lake build YangMillsBlueprint: 3019 jobs, 0 errors (YM101-YM189)
