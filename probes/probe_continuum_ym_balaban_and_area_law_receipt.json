@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "covolume_tare": {
+    "initial": 65.4505,
+    "tared": 0.0,
+    "passed": true
+  },
+  "paramagnetic_attraction_floor": 0.3743,
+  "string_tension_sigma": 0.38281,
+  "balaban_multiscale_levels": [
+    {
+      "rg_scale_k": 0,
+      "lattice_spacing_a": 1.0,
+      "polymer_delta_k": 0.25,
+      "effective_mass_sq": 1.0,
+      "mass_floor": 0.5,
+      "is_above_floor": true,
+      "physical_spectral_gap": 1.0
+    },
+    {
+      "rg_scale_k": 1,
+      "lattice_spacing_a": 0.5,
+      "polymer_delta_k": 0.125,
+      "effective_mass_sq": 0.875,
+      "mass_floor": 0.5,
+      "is_above_floor": true,
+      "physical_spectral_gap": 1.87083
+    },
+    {
+      "rg_scale_k": 2,
+      "lattice_spacing_a": 0.25,
+      "polymer_delta_k": 0.0625,
+      "effective_mass_sq": 0.8125,
+      "mass_floor": 0.5,
+      "is_above_floor": true,
+      "physical_spectral_gap": 3.60555
+    },
+    {
+      "rg_scale_k": 3,
+      "lattice_spacing_a": 0.125,
+      "polymer_delta_k": 0.03125,
+      "effective_mass_sq": 0.78125,
+      "mass_floor": 0.5,
+      "is_above_floor": true,
+      "physical_spectral_gap": 7.07107
+    },
+    {
+      "rg_scale_k": 4,
+      "lattice_spacing_a": 0.0625,
+      "polymer_delta_k": 0.01562,
+      "effective_mass_sq": 0.76562,
+      "mass_floor": 0.5,
+      "is_above_floor": true,
+      "physical_spectral_gap": 14.0
+    }
+  ],
+  "wilson_loop_samples": [
+    {
+      "R": 1.0,
+      "T": 1.0,
+      "area": 1.0,
+      "W_RT": 0.681941,
+      "transfer_rate": 0.3828
+    },
+    {
+      "R": 1.0,
+      "T": 2.0,
+      "area": 2.0,
+      "W_RT": 0.465043,
+      "transfer_rate": 0.3828
+    },
+    {
+      "R": 1.0,
+      "T": 3.0,
+      "area": 3.0,
+      "W_RT": 0.317132,
+      "transfer_rate": 0.3828
+    },
+    {
+      "R": 1.0,
+      "T": 4.0,
+      "area": 4.0,
+      "W_RT": 0.216265,
+      "transfer_rate": 0.3828
+    }
+  ]
+}
