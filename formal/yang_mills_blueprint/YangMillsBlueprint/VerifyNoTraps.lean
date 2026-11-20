@@ -134,6 +134,7 @@ import YangMillsBlueprint.Certificates.YM182_UniversalSimpleGroupAndOPESynthesis
 import YangMillsBlueprint.Certificates.YM183_RiemannWavefunctionContinuumSynthesisCert
 import YangMillsBlueprint.Certificates.YM184_UnifiedClayRootSynthesisCert
 import YangMillsBlueprint.Certificates.YM185_BlockSchurAndDobrushinTensorizationCert
+import YangMillsBlueprint.Certificates.YM186_ContradictionMassGapBridgeCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -707,6 +708,9 @@ private def auditedTheorems : List Name :=
   , ``YangMillsBlueprint.Certificates.dobrushin_slice_tensorization_contraction_unconditional
   , ``YangMillsBlueprint.Certificates.schur_complement_positivity_and_cholesky_step_unconditional
   , ``YangMillsBlueprint.Certificates.volume_uniform_exponential_clustering_unconditional
+  , ``YangMillsBlueprint.Certificates.no_eternal_uv_stagnation_by_contradiction
+  , ``YangMillsBlueprint.Certificates.no_massless_phase_under_dobrushin_by_contradiction
+  , ``YangMillsBlueprint.Certificates.abelian_zero_cocycle_consistent_with_massless_phase
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -794,6 +798,7 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.RiemannWavefunctionContinuumYMCert
   , ``YangMillsBlueprint.Certificates.UnifiedClayRootCert
   , ``YangMillsBlueprint.Certificates.DobrushinTensorCert
+  , ``YangMillsBlueprint.Certificates.ContradictionGapCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -1411,5 +1416,9 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #print axioms YangMillsBlueprint.Certificates.dobrushin_slice_tensorization_contraction_unconditional
 #print axioms YangMillsBlueprint.Certificates.schur_complement_positivity_and_cholesky_step_unconditional
 #print axioms YangMillsBlueprint.Certificates.volume_uniform_exponential_clustering_unconditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.ContradictionGapCert)
+#print axioms YangMillsBlueprint.Certificates.no_eternal_uv_stagnation_by_contradiction
+#print axioms YangMillsBlueprint.Certificates.no_massless_phase_under_dobrushin_by_contradiction
+#print axioms YangMillsBlueprint.Certificates.abelian_zero_cocycle_consistent_with_massless_phase
 
 end YangMillsBlueprint.VerifyNoTraps

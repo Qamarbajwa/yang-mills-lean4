@@ -826,3 +826,13 @@ inferInstance : Nonempty Certificates.DobrushinTensorCert
 'YangMillsBlueprint.Certificates.volume_uniform_exponential_clustering_unconditional' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+inferInstance : Nonempty Certificates.ContradictionGapCert
+'YangMillsBlueprint.Certificates.no_eternal_uv_stagnation_by_contradiction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.no_massless_phase_under_dobrushin_by_contradiction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.abelian_zero_cocycle_consistent_with_massless_phase' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
