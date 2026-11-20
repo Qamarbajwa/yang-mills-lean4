@@ -1,0 +1,26 @@
+{
+  "title": "Opposite-Side UV Drift Contradiction and Dobrushin Multi-Scale Mass Gap Bounds",
+  "upload_type": "publication",
+  "publication_type": "article",
+  "description": "<p>We establish the absence of an eternal massless ultraviolet drift in 4D Yang-Mills theory by proof by contradiction. If the gauge field remained in an eternal massless phase, the correlation length would diverge (\\xi \\to \\infty) and the effective coupling would drift to infinity (\\beta \\to \\infty). However, Dobrushin's contraction condition for polymer cluster expansions enforces an exponential tree decay factor \\rho < 1, bounding the total interaction energy. We prove in Lean 4 that assuming a massless phase with zero mass gap (m = 0) directly contradicts the strictly positive polymer decay rate, forcing a strictly positive spectral mass gap \\Delta > 0 on any finite lattice volume.</p><p><strong>Formal Certificate:</strong> Verified in Lean 4 with zero custom axioms [propext, Classical.choice, Quot.sound].</p><p><strong>Methodology:</strong> In accordance with open research principles, ai is being used as a tool for interactive theorem verification and computational modeling.</p><p><strong>Epistemic Status:</strong> Finite structural theorem; Clay Millennium open horizons remain strictly open.</p>",
+  "creators": [
+    {
+      "name": "Arqam",
+      "affiliation": "Brandenburg University of Technology (BTU) Cottbus-Senftenberg",
+      "orcid": "0009-0004-9467-3363"
+    }
+  ],
+  "keywords": [
+    "Yang-Mills Theory",
+    "Mass Gap",
+    "Dobrushin Uniqueness",
+    "Polymer Expansion",
+    "Proof by Contradiction",
+    "Lean 4",
+    "Formal Verification",
+    "Clay Millennium Problems",
+    "BTU Cottbus-Senftenberg"
+  ],
+  "license": "CC-BY-4.0",
+  "access_right": "open"
+}

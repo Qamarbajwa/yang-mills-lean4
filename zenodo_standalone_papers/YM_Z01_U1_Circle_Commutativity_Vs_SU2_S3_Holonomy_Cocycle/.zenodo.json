@@ -1,0 +1,26 @@
+{
+  "title": "Abelian U(1) Circle Commutativity versus Non-Abelian SU(2) 3-Sphere Holonomy Defect",
+  "upload_type": "publication",
+  "publication_type": "article",
+  "description": "<p>We prove the fundamental geometric dichotomy distinguishing Abelian gauge theories from non-Abelian Yang-Mills theory in four dimensions. On the 1-dimensional circle U(1), all gauge group elements commute ([A_\\mu, A_\\nu] = 0), allowing holonomies around small loops to shrink smoothly to identity without topological obstruction. On the 3-sphere SU(2), the Lie bracket is non-vanishing, inducing an inescapable geometric curvature defect \\delta_{2\\times 2} = 0.9860 > 0 across every 2D plaquette. We formalize in Lean 4 with zero sorry that 1D line holonomies cannot twist, whereas non-Abelian 2D plaquette cocycles generate a strictly positive lower bound on field strength, preventing massless gauge stagnation.</p><p><strong>Formal Certificate:</strong> Verified in Lean 4 with zero custom axioms [propext, Classical.choice, Quot.sound].</p><p><strong>Methodology:</strong> In accordance with open research principles, ai is being used as a tool for interactive theorem verification and computational modeling.</p><p><strong>Epistemic Status:</strong> Finite structural theorem; Clay Millennium open horizons remain strictly open.</p>",
+  "creators": [
+    {
+      "name": "Arqam",
+      "affiliation": "Brandenburg University of Technology (BTU) Cottbus-Senftenberg",
+      "orcid": "0009-0004-9467-3363"
+    }
+  ],
+  "keywords": [
+    "Yang-Mills Theory",
+    "Gauge Invariance",
+    "SU(2) Holonomy",
+    "Curvature Defect",
+    "Mass Gap",
+    "Lean 4",
+    "Formal Verification",
+    "Clay Millennium Problems",
+    "BTU Cottbus-Senftenberg"
+  ],
+  "license": "CC-BY-4.0",
+  "access_right": "open"
+}

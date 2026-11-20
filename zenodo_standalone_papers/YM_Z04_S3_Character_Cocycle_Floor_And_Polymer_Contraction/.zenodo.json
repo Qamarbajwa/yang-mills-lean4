@@ -1,0 +1,26 @@
+{
+  "title": "$S^3$ Character Cocycle Uniform Floor and Multi-Scale Polymer Convergence",
+  "upload_type": "publication",
+  "publication_type": "article",
+  "description": "<p>We prove that the Gibbs character cocycle on the 3-sphere S^3 possesses an absolute uniform lower floor c_{\\min} > 0 across all gauge fiber orientations. In multi-scale polymer expansions, the principal barrier to convergence is the potential for small-field configurations to degenerate into near-zero action states. By computing the character expectation value under the Haar measure on SU(2), we demonstrate that the non-trivial 3-sphere volume element creates an entropic barrier that bounds the polymer activity uniformly: |\\zeta(\\gamma)| \\le \\exp(- c_{\\min} |\\gamma|). This uniform floor guarantees multi-scale polymer contraction in Lean 4 without custom axioms.</p><p><strong>Formal Certificate:</strong> Verified in Lean 4 with zero custom axioms [propext, Classical.choice, Quot.sound].</p><p><strong>Methodology:</strong> In accordance with open research principles, ai is being used as a tool for interactive theorem verification and computational modeling.</p><p><strong>Epistemic Status:</strong> Finite structural theorem; Clay Millennium open horizons remain strictly open.</p>",
+  "creators": [
+    {
+      "name": "Arqam",
+      "affiliation": "Brandenburg University of Technology (BTU) Cottbus-Senftenberg",
+      "orcid": "0009-0004-9467-3363"
+    }
+  ],
+  "keywords": [
+    "Yang-Mills Theory",
+    "Character Cocycle",
+    "SU(2) Haar Measure",
+    "Polymer Convergence",
+    "Entropic Floor",
+    "Lean 4",
+    "Formal Verification",
+    "Clay Millennium Problems",
+    "BTU Cottbus-Senftenberg"
+  ],
+  "license": "CC-BY-4.0",
+  "access_right": "open"
+}
