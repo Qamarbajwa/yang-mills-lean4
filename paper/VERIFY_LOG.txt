@@ -856,3 +856,11 @@ inferInstance : Nonempty Certificates.S3CocycleFloorCert
  Classical.choice,
  Quot.sound]
 -- lake build YangMillsBlueprint: 3019 jobs, 0 errors (YM101-YM189)
+inferInstance : Nonempty Certificates.GribovPolymerTreeCert
+'YangMillsBlueprint.Certificates.gribov_clearance_from_plaquette_envelope_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.balaban_polymer_tree_majorant_contraction_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+-- lake build YangMillsBlueprint: 3020 jobs, 0 errors (YM101-YM190)

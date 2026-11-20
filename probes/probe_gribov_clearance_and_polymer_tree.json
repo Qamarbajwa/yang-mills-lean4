@@ -1,0 +1,58 @@
+{
+  "probe": "probe_gribov_clearance_and_polymer_tree",
+  "epistemic_lock": "status: verified-finite | Hypothesis 4.1 continuum limit OPEN",
+  "gribov_theta_max": 0.4346,
+  "gribov_limit_3_4": 0.75,
+  "gribov_clearance_margin": 0.3154,
+  "polymer_rows": [
+    {
+      "beta": 2.2,
+      "w_step": 0.166667,
+      "r_poly_majorant": 0.011667,
+      "half_net_pull": 0.201875,
+      "safety_ratio_half_over_rpoly": 17.3,
+      "eta_net": 0.392083
+    },
+    {
+      "beta": 2.5,
+      "w_step": 0.15,
+      "r_poly_majorant": 0.009265,
+      "half_net_pull": 0.17765,
+      "safety_ratio_half_over_rpoly": 19.17,
+      "eta_net": 0.346035
+    },
+    {
+      "beta": 3.0,
+      "w_step": 0.128571,
+      "r_poly_majorant": 0.006639,
+      "half_net_pull": 0.148042,
+      "safety_ratio_half_over_rpoly": 22.3,
+      "eta_net": 0.289444
+    },
+    {
+      "beta": 4.0,
+      "w_step": 0.1,
+      "r_poly_majorant": 0.003889,
+      "half_net_pull": 0.111031,
+      "safety_ratio_half_over_rpoly": 28.55,
+      "eta_net": 0.218174
+    },
+    {
+      "beta": 6.0,
+      "w_step": 0.069231,
+      "r_poly_majorant": 0.001802,
+      "half_net_pull": 0.074021,
+      "safety_ratio_half_over_rpoly": 41.07,
+      "eta_net": 0.146239
+    },
+    {
+      "beta": 8.0,
+      "w_step": 0.052941,
+      "r_poly_majorant": 0.001036,
+      "half_net_pull": 0.055516,
+      "safety_ratio_half_over_rpoly": 53.6,
+      "eta_net": 0.109995
+    }
+  ],
+  "status": "PASS"
+}
