@@ -2,13 +2,13 @@
   "manifest_version": "1.0.0",
   "key_id": "chrysalis-local-hmac-2026",
   "algorithm": "HMAC-SHA256",
-  "generated_at": "2026-11-20T16:41:15.369762+00:00",
+  "generated_at": "2026-11-20T16:48:31.332289+00:00",
   "total_artifacts": 108,
   "files": {
     ".zenodo.json": {
-      "sha256": "72182243eae16825043b1f678c9807c2a64a17b141259397bf319f7957aa330b",
-      "hmac_sha256": "70441b8de2a041331bc5c84441e6587eeb22401d2323aaf45fd4401570e0fe00",
-      "size_bytes": 19755
+      "sha256": "5d0344973370734d82873bea7fa6f4b9d7ee98ffc63bcd2017ec26b67976735b",
+      "hmac_sha256": "c099cb92ecf506da97a762f5e77360a57a57635fdbcf30843fe0e6fe33ee7668",
+      "size_bytes": 19789
     },
     "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM176_AbelianSubtractedParamagneticSchurCert.lean": {
       "sha256": "9a12e8c86ae2e0badeeb65ca55a023af057d775053477350836aec973c6210ec",
@@ -166,14 +166,14 @@
       "size_bytes": 40705
     },
     "paper/paper_4_crossover_obstruction_atlas.pdf": {
-      "sha256": "6f2ab4d6323ffcc750bd3dcdba4d4b077281f1c9ca09cdec9b98ee16dc7bd66e",
-      "hmac_sha256": "bbad26ef0c237faed5647cc9edb9750957b225b878ca4a97cc241fbb739aea5a",
-      "size_bytes": 524791
+      "sha256": "d1d04c3071d15a7efae53cce095dfa0bcc2d166ef79c51da5483a919b46eb2d2",
+      "hmac_sha256": "cc7f1791c23b18adb7c4e94887709532e38153e208536362ec4a42c6d17c6641",
+      "size_bytes": 552446
     },
     "paper/paper_4_crossover_obstruction_atlas.tex": {
-      "sha256": "cd0427d7fa3503f004ecd3d4e4246176144aad55e250732bbb2034eb29f08f11",
-      "hmac_sha256": "6d888d6b88e298b107f01486437398743f65abf7e2305b26cea788d7559857f7",
-      "size_bytes": 57876
+      "sha256": "e5bfebd43cce041cc81eba414873087912ac5c9fbfc75ad6e605b708d7c80fb2",
+      "hmac_sha256": "7acec72cb745f7333dc1564d09bcf473705a7cc657cbfb9680b3ca90d8197f56",
+      "size_bytes": 65119
     },
     "paper/VERIFY_LOG.txt": {
       "sha256": "fc9a0f534227f05ae5402229ad6c7e4c3b6d7db76d441af30c9723aa41fe1564",

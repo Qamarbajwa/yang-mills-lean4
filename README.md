@@ -1,5 +1,9 @@
 # Yang–Mills and the Mass Gap — Local Research Repository
 
+> **Lean 4 Formalization Suite (`YM101`–`YM187`):** `3,017` Lake build jobs, `108/108` Gate 3 HMAC-SHA256 manifest artifacts, zero `sorry`, zero custom axioms (`[propext, Classical.choice, Quot.sound]`).  
+> **Zenodo Bundle:** `10.5281/zenodo.24398407` (Concept DOI `10.5281/zenodo.24327876`) | **Dedicated Papers:** `10.5281/zenodo.24403296` (Paper 1), `10.5281/zenodo.24403299` (Paper 2), `10.5281/zenodo.24403303` (Paper 3), `10.5281/zenodo.24403305` (Paper 4).  
+> **Epistemic Lock:** Hypothesis 4.1 (proving uniform $(a \to 0, L \to \infty)$ bounds on the 4D Wilson Gibbs measure) and the Clay 4D Yang–Mills Mass Gap problem remain strictly **OPEN**.
+
 This repository is a local, evidence-first workspace for studying the Yang–Mills existence and mass-gap problem.
 
 ## Scientific rule

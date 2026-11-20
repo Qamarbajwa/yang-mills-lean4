@@ -1,7 +1,7 @@
 {
   "title": "Four-Dimensional Lattice Yang-Mills Modular Research Bundle and Lean 4 Formal Verification Certificates",
-  "description": "Synchronized modular release bundle (v1.15.0 / v1.4.0-rosetta) containing four micro-papers (PDF and LaTeX source), general-reader guide (YANG_MILLS_EXPLAINED_FOR_EVERYONE.pdf), seventy-two Mathlib-ready Lean 4 foundational modules (MathlibStaging), eighty-six domain certificate modules (YM101-YM186), and seven deterministic SU(2)/SO(3)/U(1) numerical verification probes (Probes 1-7) with SHA-256 receipts. Includes YM176-YM186 (Abelian-subtracted 2^4-fiber paramagnetic Schur dominance, inductive RG contraction, exact Real.log Taylor sandwich, small-field Gribov clearance, Bridges 1-4 continuum synthesis, OSHilbert Clay wiring, universal simple-group + OPE closure, Riemann harmonic-slab telescoping + SVD-Dobrushin mass gap, unified Clay root synthesis, N-block Dobrushin slice tensorization + block-Schur positivity, and proof-by-contradiction UV stagnation / massless impossibility / U(1) contrast). The infinite-volume continuum mass-gap reduction is isolated explicitly inside conditional Hypothesis 4.1, and the full Clay 4D Yang-Mills problem remains explicitly OPEN.",
-  "version": "1.15.0",
+  "description": "Synchronized modular release bundle (v1.16.0) containing four micro-papers (PDF and LaTeX source), general-reader guide (YANG_MILLS_EXPLAINED_FOR_EVERYONE.pdf), seventy-two Mathlib-ready Lean 4 foundational modules (MathlibStaging), eighty-seven domain certificate modules (YM101-YM187, 3,017 Lake jobs, 108/108 Gate 3 manifest artifacts), and seven deterministic SU(2)/SO(3)/U(1) numerical verification probes (Probes 1-7) with SHA-256 receipts. Includes YM176-YM187 (Abelian-subtracted 2^4-fiber paramagnetic Schur dominance, inductive RG contraction, exact Real.log Taylor sandwich, small-field Gribov clearance, Bridges 1-4 continuum synthesis, OSHilbert Clay wiring, universal simple-group + OPE closure, Riemann harmonic-slab telescoping + SVD-Dobrushin mass gap, unified Clay root synthesis, N-block Dobrushin slice tensorization, proof-by-contradiction exclusions, and Bridge Lemmas YM1-YM2). The infinite-volume continuum mass-gap reduction is isolated explicitly inside conditional Hypothesis 4.1, and the full Clay 4D Yang-Mills problem remains explicitly OPEN.",
+  "version": "1.16.0",
   "upload_type": "software",
   "license": "Apache-2.0",
   "creators": [
@@ -209,6 +209,7 @@
     "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM184_UnifiedClayRootSynthesisCert.lean",
     "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM185_BlockSchurAndDobrushinTensorizationCert.lean",
     "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM186_ContradictionMassGapBridgeCert.lean",
-    "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM187_S3CocyclePullAndBalabanConvergenceCert.lean"
+    "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM187_S3CocyclePullAndBalabanConvergenceCert.lean",
+    "governance/chrysalis_manifest.json"
   ]
 }
