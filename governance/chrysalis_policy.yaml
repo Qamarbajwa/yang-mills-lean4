@@ -113,6 +113,7 @@ gate_3_cryptographic_provenance:
     - "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM184_UnifiedClayRootSynthesisCert.lean"
     - "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM185_BlockSchurAndDobrushinTensorizationCert.lean"
     - "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM186_ContradictionMassGapBridgeCert.lean"
+    - "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM187_S3CocyclePullAndBalabanConvergenceCert.lean"
     - "scripts/probe_riemann_wavefunction_ym_synthesis.py"
     - "probes/probe_riemann_wavefunction_ym_synthesis.json"
     - "scripts/probe_two_step_inductive_rg_remainder.py"

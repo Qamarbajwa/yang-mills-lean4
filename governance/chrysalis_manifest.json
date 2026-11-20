@@ -2,13 +2,13 @@
   "manifest_version": "1.0.0",
   "key_id": "chrysalis-local-hmac-2026",
   "algorithm": "HMAC-SHA256",
-  "generated_at": "2026-11-20T12:27:41.796588+00:00",
-  "total_artifacts": 107,
+  "generated_at": "2026-11-20T16:41:15.369762+00:00",
+  "total_artifacts": 108,
   "files": {
     ".zenodo.json": {
-      "sha256": "ea3fd6db94898cfc29d1d484481dc0789ce49240d229c6e5707843744c678514",
-      "hmac_sha256": "20058e24396f746e0bb60cb4884ce516234fe1c2dbbacf1a517a4fdff975983a",
-      "size_bytes": 19478
+      "sha256": "72182243eae16825043b1f678c9807c2a64a17b141259397bf319f7957aa330b",
+      "hmac_sha256": "70441b8de2a041331bc5c84441e6587eeb22401d2323aaf45fd4401570e0fe00",
+      "size_bytes": 19755
     },
     "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM176_AbelianSubtractedParamagneticSchurCert.lean": {
       "sha256": "9a12e8c86ae2e0badeeb65ca55a023af057d775053477350836aec973c6210ec",
@@ -69,6 +69,11 @@
       "sha256": "54b61028822be620db6cbbb309829995c5bde93fa52792bb3721401d82639ffc",
       "hmac_sha256": "30a1211bf1aa9254519826406800ee0e507aa04f0e8cee0e0f0c4f6a19cf13c2",
       "size_bytes": 4193
+    },
+    "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM187_S3CocyclePullAndBalabanConvergenceCert.lean": {
+      "sha256": "ab7c4021cd3cc53c4f0692e94cd775f11240e4d03436b8adc7068d4c4ce443f6",
+      "hmac_sha256": "c8d98181cea9dc9b67f315b4a1f1254a01c19971edf8fed90d6eedee46623e1a",
+      "size_bytes": 5287
     },
     "governance/envelopes/YM-002E.yaml": {
       "sha256": "ae09781544dfa741edc0fc3c42a515389621b54a9f75f7becdc74a4c2af95519",
@@ -171,9 +176,9 @@
       "size_bytes": 57876
     },
     "paper/VERIFY_LOG.txt": {
-      "sha256": "9884fcde4a5f7ea6ca1afbd320752c6290de798b0e159ffb3781e7c26fdba68f",
-      "hmac_sha256": "215f835a42ea8657de1ebbef04c97df9bcff38d73b3ef50804d5a961955ea49f",
-      "size_bytes": 54538
+      "sha256": "fc9a0f534227f05ae5402229ad6c7e4c3b6d7db76d441af30c9723aa41fe1564",
+      "hmac_sha256": "f83bb81afec424de9a80406f2b8008a6dc61478a6019e662b553bb3faa2a9d4a",
+      "size_bytes": 54958
     },
     "probes/probe_abelian_subtracted_2to4_fiber_schur.py": {
       "sha256": "e4251491dae9bd4dcfd7045a3ad79236363f67dcafa0a69539b1546aa3c94933",

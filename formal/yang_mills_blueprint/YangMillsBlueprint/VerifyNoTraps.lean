@@ -135,6 +135,7 @@ import YangMillsBlueprint.Certificates.YM183_RiemannWavefunctionContinuumSynthes
 import YangMillsBlueprint.Certificates.YM184_UnifiedClayRootSynthesisCert
 import YangMillsBlueprint.Certificates.YM185_BlockSchurAndDobrushinTensorizationCert
 import YangMillsBlueprint.Certificates.YM186_ContradictionMassGapBridgeCert
+import YangMillsBlueprint.Certificates.YM187_S3CocyclePullAndBalabanConvergenceCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -1420,5 +1421,8 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #print axioms YangMillsBlueprint.Certificates.no_eternal_uv_stagnation_by_contradiction
 #print axioms YangMillsBlueprint.Certificates.no_massless_phase_under_dobrushin_by_contradiction
 #print axioms YangMillsBlueprint.Certificates.abelian_zero_cocycle_consistent_with_massless_phase
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.S3CocycleBalabanCert)
+#print axioms YangMillsBlueprint.Certificates.ym_YM1_s3_character_cocycle_schur_pull_floor
+#print axioms YangMillsBlueprint.Certificates.ym_YM2_balaban_polymer_tree_geometric_convergence
 
 end YangMillsBlueprint.VerifyNoTraps

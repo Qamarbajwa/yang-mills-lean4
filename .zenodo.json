@@ -208,6 +208,7 @@
     "probes/probe_riemann_wavefunction_ym_synthesis.json",
     "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM184_UnifiedClayRootSynthesisCert.lean",
     "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM185_BlockSchurAndDobrushinTensorizationCert.lean",
-    "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM186_ContradictionMassGapBridgeCert.lean"
+    "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM186_ContradictionMassGapBridgeCert.lean",
+    "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM187_S3CocyclePullAndBalabanConvergenceCert.lean"
   ]
 }

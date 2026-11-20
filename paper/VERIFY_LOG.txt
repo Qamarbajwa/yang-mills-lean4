@@ -836,3 +836,11 @@ inferInstance : Nonempty Certificates.ContradictionGapCert
 'YangMillsBlueprint.Certificates.abelian_zero_cocycle_consistent_with_massless_phase' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+inferInstance : Nonempty Certificates.S3CocycleBalabanCert
+'YangMillsBlueprint.Certificates.ym_YM1_s3_character_cocycle_schur_pull_floor' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.ym_YM2_balaban_polymer_tree_geometric_convergence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+-- lake build YangMillsBlueprint: 3017 jobs, 0 errors (YM101-YM187)
