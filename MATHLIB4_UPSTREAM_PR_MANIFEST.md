@@ -1,7 +1,6 @@
 # MATHLIB4 UPSTREAM PR MANIFEST
 
-**Status:** CANDIDATE MODULES FOR UPSTREAM CONTRIBUTION TO `leanprover-community/mathlib4`  
-**Standard:** 100% Standalone, Zero Custom Axioms, Zero Project Jargon, Line Length $\le 100$
+**Status:** `LOCAL_ONLY_ARCHIVED` — No upstream `leanprover-community/mathlib4` PRs or community Zulip announcements; all standalone modules are kept strictly in `Qamarbajwa/yang-mills-lean4` under `formal/yang_mills_blueprint/YangMillsBlueprint/`.
 
 This manifest isolates the self-contained, general-purpose algebraic and rational arithmetic formalizations developed in this project that are suitable for direct contribution to Mathlib 4.
 
