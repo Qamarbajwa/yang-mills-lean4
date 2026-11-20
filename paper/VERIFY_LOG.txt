@@ -864,3 +864,11 @@ inferInstance : Nonempty Certificates.GribovPolymerTreeCert
  Classical.choice,
  Quot.sound]
 -- lake build YangMillsBlueprint: 3020 jobs, 0 errors (YM101-YM190)
+inferInstance : Nonempty Certificates.ContinuumOSBridgeCert
+'YangMillsBlueprint.Certificates.symanzik_rotational_defect_vanishes_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.os_continuum_mass_gap_and_clustering_from_uniform_dobrushin' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+-- lake build YangMillsBlueprint: 3021 jobs, 0 errors (YM101-YM191)

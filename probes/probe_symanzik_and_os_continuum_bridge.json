@@ -1,0 +1,80 @@
+{
+  "probe": "probe_symanzik_and_os_continuum_bridge",
+  "epistemic_lock": "status: verified-finite | Hypothesis 4.1 continuum limit OPEN",
+  "symanzik_O_a2": [
+    {
+      "a": 0.2,
+      "E_rot_upper": 0.04000000000000001
+    },
+    {
+      "a": 0.1,
+      "E_rot_upper": 0.010000000000000002
+    },
+    {
+      "a": 0.05,
+      "E_rot_upper": 0.0025000000000000005
+    },
+    {
+      "a": 0.025,
+      "E_rot_upper": 0.0006250000000000001
+    },
+    {
+      "a": 0.0125,
+      "E_rot_upper": 0.00015625000000000003
+    }
+  ],
+  "Gamma_unif": 0.3348,
+  "m_phys_ell_IR": 1.0942219403668167,
+  "max_clustering_error": 5.551115123125783e-17,
+  "clustering_rows": [
+    {
+      "N_slices": 1,
+      "Gamma_pow_N": 0.3348,
+      "exp_decay": 0.33480000000000004,
+      "abs_error": 5.551115123125783e-17
+    },
+    {
+      "N_slices": 2,
+      "Gamma_pow_N": 0.11209103999999999,
+      "exp_decay": 0.11209104000000002,
+      "abs_error": 2.7755575615628914e-17
+    },
+    {
+      "N_slices": 3,
+      "Gamma_pow_N": 0.037528080192,
+      "exp_decay": 0.037528080192,
+      "abs_error": 0.0
+    },
+    {
+      "N_slices": 4,
+      "Gamma_pow_N": 0.012564401248281598,
+      "exp_decay": 0.012564401248281603,
+      "abs_error": 5.204170427930421e-18
+    },
+    {
+      "N_slices": 5,
+      "Gamma_pow_N": 0.004206561537924679,
+      "exp_decay": 0.0042065615379246815,
+      "abs_error": 2.6020852139652106e-18
+    },
+    {
+      "N_slices": 6,
+      "Gamma_pow_N": 0.0014083568028971825,
+      "exp_decay": 0.0014083568028971825,
+      "abs_error": 0.0
+    },
+    {
+      "N_slices": 7,
+      "Gamma_pow_N": 0.00047151785760997665,
+      "exp_decay": 0.00047151785760997687,
+      "abs_error": 2.168404344971009e-19
+    },
+    {
+      "N_slices": 8,
+      "Gamma_pow_N": 0.0001578641787278202,
+      "exp_decay": 0.0001578641787278203,
+      "abs_error": 1.0842021724855044e-19
+    }
+  ],
+  "status": "PASS"
+}

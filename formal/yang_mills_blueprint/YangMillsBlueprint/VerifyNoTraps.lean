@@ -139,6 +139,7 @@ import YangMillsBlueprint.Certificates.YM187_S3CocyclePullAndBalabanConvergenceC
 import YangMillsBlueprint.Certificates.YM188_Hypothesis41AuditAndMasterChainCert
 import YangMillsBlueprint.Certificates.YM189_S3GibbsCocycleLowerBoundCert
 import YangMillsBlueprint.Certificates.YM190_GribovClearanceAndPolymerTreeBoundCert
+import YangMillsBlueprint.Certificates.YM191_ContinuumOSAndSymanzikBridgeCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -1435,5 +1436,8 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #check (inferInstance : Nonempty YangMillsBlueprint.Certificates.GribovPolymerTreeCert)
 #print axioms YangMillsBlueprint.Certificates.gribov_clearance_from_plaquette_envelope_unconditional
 #print axioms YangMillsBlueprint.Certificates.balaban_polymer_tree_majorant_contraction_unconditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.ContinuumOSBridgeCert)
+#print axioms YangMillsBlueprint.Certificates.symanzik_rotational_defect_vanishes_unconditional
+#print axioms YangMillsBlueprint.Certificates.os_continuum_mass_gap_and_clustering_from_uniform_dobrushin
 
 end YangMillsBlueprint.VerifyNoTraps

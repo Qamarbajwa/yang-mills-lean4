@@ -2,8 +2,8 @@
   "manifest_version": "1.0.0",
   "key_id": "chrysalis-local-hmac-2026",
   "algorithm": "HMAC-SHA256",
-  "generated_at": "2026-11-20T18:40:48.526338+00:00",
-  "total_artifacts": 115,
+  "generated_at": "2026-11-20T18:44:55.577470+00:00",
+  "total_artifacts": 118,
   "files": {
     ".zenodo.json": {
       "sha256": "051ebceb21590c5501dfb43f816cb61fb91f3acd2bcd7da9c2ce4400cfcf75a5",
@@ -89,6 +89,11 @@
       "sha256": "5f824e95b2786ad43cf9d21df107e7e61e85569f34214e15a0af528bedf6f826",
       "hmac_sha256": "ed6568a8f25bee664a4f5c67f354747984e77c9556d5e32fdd0905652348c822",
       "size_bytes": 4518
+    },
+    "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM191_ContinuumOSAndSymanzikBridgeCert.lean": {
+      "sha256": "48641a7b6a38f19a9c3a13ef0a81415b1fb78c9810a52fccfa20eeaaa6cb897f",
+      "hmac_sha256": "3a7f2a8bef6645f5edcf2567e6bd0dcf8039b61ef963c7e6c9d9c31ed160c9be",
+      "size_bytes": 3919
     },
     "governance/envelopes/YM-002E.yaml": {
       "sha256": "ae09781544dfa741edc0fc3c42a515389621b54a9f75f7becdc74a4c2af95519",
@@ -191,9 +196,9 @@
       "size_bytes": 65119
     },
     "paper/VERIFY_LOG.txt": {
-      "sha256": "ee05480bddd44d98bab415e769bf351a44f5b5eea6be3bb5b395d5b9fb9940f4",
-      "hmac_sha256": "dcf8fb46d1e90f6a058bf9073baed92dd0adfe5036f15e4b29905a34aa5820e1",
-      "size_bytes": 56024
+      "sha256": "95aa54e99c99831be8bf043ebf28871b873c3a01b5e9bb3c59b4b8b6ae0c655a",
+      "hmac_sha256": "c4f93f8ea575b0713d9c1351ee98f27a771607880da493a2b65fac43ac526e17",
+      "size_bytes": 56460
     },
     "probes/probe_abelian_subtracted_2to4_fiber_schur.py": {
       "sha256": "e4251491dae9bd4dcfd7045a3ad79236363f67dcafa0a69539b1546aa3c94933",
@@ -234,6 +239,11 @@
       "sha256": "290210dfd55fadb3ab3f3e15314d910e1b701c85d6bdc943adfaf8549be15cc6",
       "hmac_sha256": "c6f6d1dbe3f39b7218f7d49565409fa606eb42c8e0e8a671b9baf5eadee23cf3",
       "size_bytes": 1024
+    },
+    "probes/probe_symanzik_and_os_continuum_bridge.json": {
+      "sha256": "f3de5784f9adf630b532e8455f54f0d78d861723f5b767faa8d04b7a1ab05f2e",
+      "hmac_sha256": "f7ab9aa56ff5cf24cca6831e27212acf2df9bb46a7b075177933cec7a835243d",
+      "size_bytes": 1986
     },
     "probes/probe_two_step_inductive_rg_remainder.json": {
       "sha256": "e50976373d69d991f736aef8bff05ea9ef1509deb44f1699a8d31257fd8d0f22",
@@ -289,6 +299,11 @@
       "sha256": "41b03b5e455742ceab7a66cd7b8f1ca922fa0f8dc807e31eb395be7745e5fad3",
       "hmac_sha256": "5da3cb5901dcd9812e5b195f452dc7b09e4e15c740b40a6c2b5a1ecd61f8e244",
       "size_bytes": 4167
+    },
+    "scripts/probe_symanzik_and_os_continuum_bridge.py": {
+      "sha256": "64706ff57ecf7630ec1c98c3ea7eb720ec95f723cbfe01b990cf978ca891f70e",
+      "hmac_sha256": "3e6c6cf5a07353d32a9ebeda629ef1bc5420714eae75d2efcec9e1428ac31d63",
+      "size_bytes": 2189
     },
     "scripts/probe_two_step_inductive_rg_remainder.py": {
       "sha256": "bb70fd6b570799f2a4f00b16fad3e5a6378c7defe3cb0a5226d233140f74ca6f",
