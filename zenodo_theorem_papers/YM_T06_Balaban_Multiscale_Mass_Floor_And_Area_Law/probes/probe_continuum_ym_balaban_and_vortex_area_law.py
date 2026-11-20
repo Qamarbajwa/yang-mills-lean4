@@ -10,7 +10,7 @@ Numerical continuum simulation and verification of:
 5. Center-vortex area-law string tension sigma > 0 and Osterwalder-Seiler gap Delta > 0.
 
 Methodology note: ai is being used as a tool.
-Author: Arqam, Brandenburg University of Technology Cottbus-Senftenberg.
+Author: Qamar Munawer, Brandenburg University of Technology Cottbus-Senftenberg.
 """
 
 from __future__ import annotations
@@ -103,7 +103,7 @@ def main() -> int:
     print("=" * 80)
     print("PROBE: CONTINUUM 4D YANG-MILLS BALABAN MULTISCALE RG & AREA-LAW GAP")
     print("Methodology note: ai is being used as a tool.")
-    print("Author: Arqam, Brandenburg University of Technology Cottbus-Senftenberg.")
+    print("Author: Qamar Munawer, Brandenburg University of Technology Cottbus-Senftenberg.")
     print("=" * 80)
 
     res = run_balaban_and_vortex_probe()

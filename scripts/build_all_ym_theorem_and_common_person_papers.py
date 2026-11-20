@@ -8,7 +8,7 @@ relational explanation paper ("What is happening and what relates to what").
 Creates individual .zenodo.json release folders, packages ZIP bundles,
 and copies compiled PDFs to the Rosetta Friend Audit Pack.
 
-Author: Qamar Munawer, Brandenburg University of Technology (BTU) Cottbus-Senftenberg.
+Author: Qamar Munawer, Brandenburg University of Technology Cottbus-Senftenberg.
 Methodology phrase: "ai is being used as a tool"
 """
 
@@ -1386,7 +1386,7 @@ def copy_to_friend_audit_pack():
 def main():
     print("=" * 80)
     print("BUILDING ALL YANG-MILLS THEOREM AND COMMON-PERSON PAPERS")
-    print("Author: Qamar Munawer, Brandenburg University of Technology (BTU) Cottbus-Senftenberg")
+    print("Author: Qamar Munawer, Brandenburg University of Technology Cottbus-Senftenberg")
     print("Exact methodology note: 'ai is being used as a tool'")
     print("=" * 80)
 
