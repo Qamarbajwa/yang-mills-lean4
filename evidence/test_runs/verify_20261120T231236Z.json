@@ -1,0 +1,37 @@
+{
+  "task_id": "YM-000",
+  "timestamp_utc": "2026-11-20T23:12:36.658528+00:00",
+  "status": "PASS",
+  "evidence_level": "E3_REPRODUCIBLE_MACHINE_EVIDENCE",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "git_sha": "dda79c77240a527cc2b1735c0a8dbed32c11ee0e",
+  "git_branch": "release/v1.10.0-ym176",
+  "git_status": "M formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM189_S3GibbsCocycleLowerBoundCert.lean\n M governance/chrysalis_audit_chain.jsonl\n M governance/chrysalis_distilled_ledger.jsonl\n M governance/chrysalis_manifest.json\n M src/ymmg/ros.py\n?? evidence/test_runs/verify_20261120T231001Z.json\n?? evidence/test_runs/verify_20261120T231001Z.log\n?? evidence/test_runs/verify_20261120T231236Z.log",
+  "commands": [
+    {
+      "command": [
+        "C:\\Users\\arqam\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "--basetemp",
+        "D:\\Comfy UI\\yang mills and the mass gap\\evidence\\test_runs\\.pytest_temp_20261120T231236Z"
+      ],
+      "exit_code": 0,
+      "stdout": "........................................................................ [  9%]\n........................................................................ [ 19%]\n........................................................................ [ 29%]\n........................................................................ [ 39%]\n........................................................................ [ 49%]\n........................................................................ [ 59%]\n........................................................................ [ 69%]\n........................................................................ [ 79%]\n........................................................................ [ 89%]\n........................................................................ [ 99%]\n.....                                                                    [100%]\n725 passed in 90.75s (0:01:30)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\arqam\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "scripts/check_repo.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: repository invariants and governance YAML are readable.\n",
+      "stderr": ""
+    }
+  ],
+  "log_file": "evidence\\test_runs\\verify_20261120T231236Z.log",
+  "log_sha256": "4ee22ce7a8b2e616144ad64e8c309d30fd802f05dba7ae9c6ea765230f9b0f21"
+}

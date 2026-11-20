@@ -235,11 +235,12 @@ KNOWN_ADMINISTRATIVE_ROOT_PATHS = {
     "SEEING_NEGATIVELY_ARTICLE_AND_SYSTEM_MAP.pdf",
     "YANG_MILLS_EXPLAINED_FOR_EVERYONE.md",
     "YANG_MILLS_EXPLAINED_FOR_EVERYONE.pdf",
+    "AGENTS.md",
 }
 
 GENERATED_PREFIXES = ("checkpoints/", "evidence/", "experiments/", "numerical/")
 PROVENANCE_PREFIXES = ("verification/",)
-ADMINISTRATIVE_PREFIXES = ("governance/", "scripts/", "src/", "tests/", "docs/", "formal/", "paper/", "probes/", "_staging_gov_v403/", "_staging_gov_v406r3/", "_staging_gov_v410r3/")
+ADMINISTRATIVE_PREFIXES = ("governance/", "scripts/", "src/", "tests/", "docs/", "formal/", "paper/", "probes/", "zenodo_theorem_papers/", "zenodo_standalone_papers/", "_staging_gov_v403/", "_staging_gov_v406r3/", "_staging_gov_v410r3/")
 
 IGNORED_EXACT_PATHS = {
     "checkpoints/.gitkeep",

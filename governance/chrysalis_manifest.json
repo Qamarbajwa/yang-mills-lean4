@@ -2,13 +2,13 @@
   "manifest_version": "1.0.0",
   "key_id": "chrysalis-local-hmac-2026",
   "algorithm": "HMAC-SHA256",
-  "generated_at": "2026-11-20T20:23:19.447274+00:00",
+  "generated_at": "2026-11-20T23:29:04.389750+00:00",
   "total_artifacts": 121,
   "files": {
     ".zenodo.json": {
-      "sha256": "0cc8ab821dabd8475d6275d76dea3c8db312175001b9efc21c94215fb567e1bf",
-      "hmac_sha256": "faed2776d7dff6beb97c61693025833782ff76ef594070b20ec3b63f43842299",
-      "size_bytes": 20219
+      "sha256": "82360871e5609d42ce85de841f272cb8f9a7a73baebb4003959a0ed29831182c",
+      "hmac_sha256": "e4a48fd43012f40674da3a5646a48586557b96f9522d7ed773f7c10ca1865c68",
+      "size_bytes": 20208
     },
     "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM176_AbelianSubtractedParamagneticSchurCert.lean": {
       "sha256": "9a12e8c86ae2e0badeeb65ca55a023af057d775053477350836aec973c6210ec",
@@ -81,9 +81,9 @@
       "size_bytes": 6080
     },
     "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM189_S3GibbsCocycleLowerBoundCert.lean": {
-      "sha256": "e583d403c23bb85b4efe8a5ae25ecb341d68a5b37fffaf91ebbb4a87c95c7613",
-      "hmac_sha256": "4d6c46d0fa2d6b4381d7b00fb69a524939dba73e04ebb8f34b657cca4389077a",
-      "size_bytes": 3330
+      "sha256": "a2c4e0fb4d1c73be8e7b6b5fb5ff4289dc169ac06045dddbe56faa31f025dcba",
+      "hmac_sha256": "c4aaec4bea070e5613a0402da26943da61cf9798104411cb4e1254131642a86d",
+      "size_bytes": 6249
     },
     "formal/yang_mills_blueprint/YangMillsBlueprint/Certificates/YM190_GribovClearanceAndPolymerTreeBoundCert.lean": {
       "sha256": "5f824e95b2786ad43cf9d21df107e7e61e85569f34214e15a0af528bedf6f826",
@@ -186,9 +186,9 @@
       "size_bytes": 6364
     },
     "paper/main.tex": {
-      "sha256": "6c57e52fdf2c3bd5b2728ed12ef2940208a468b2e6a462c94a7c42b059daf6bf",
-      "hmac_sha256": "2b3caaf4ae7806ae9f649509dbc47848122da1c00d283979a675282736345ca8",
-      "size_bytes": 42113
+      "sha256": "2423c66597df1c35bcc38527dff1921d6c7d533d61c189ab95717cc8ce43703c",
+      "hmac_sha256": "a4a1e302fdc6bbd41285f891316549c2046c4f3e5b49481d126ef5c1e2238de4",
+      "size_bytes": 42568
     },
     "paper/paper_4_crossover_obstruction_atlas.pdf": {
       "sha256": "d1d04c3071d15a7efae53cce095dfa0bcc2d166ef79c51da5483a919b46eb2d2",
@@ -216,9 +216,9 @@
       "size_bytes": 30582
     },
     "probes/probe_continuum_ym_balaban_and_vortex_area_law.py": {
-      "sha256": "b60df5698cc61eeb35d2a178b5635004bf82cc8d4d2304c3bd6e6a4e723f9bb2",
-      "hmac_sha256": "d490211fed9064aa74abc7a42d36b4e4873da6cd61e241e63158631fe3a2b540",
-      "size_bytes": 4613
+      "sha256": "ab6365814537023924dbf9fc4248ab5a9a47c7f0e2d45c342c51dea6a072bcab",
+      "hmac_sha256": "be05dbad94c134eba380d90e9123db2fd90d15be5ee1f8eab8a8d24f9b983a10",
+      "size_bytes": 4754
     },
     "probes/probe_deep_cocycle_and_star_influence.py": {
       "sha256": "3e057ef2af4d996c2d83a85105dc9c2d884026d56c374c2cc34cc09fbfebe5c6",
@@ -296,9 +296,9 @@
       "size_bytes": 784
     },
     "scripts/build_all_ym_theorem_and_common_person_papers.py": {
-      "sha256": "d3231dcd8d8cd1783debdb157f11a652991d3e9148c5a40266b969508cbdebe5",
-      "hmac_sha256": "558dcf7cf9b62f1fc02fc368a85ec545a25354e9fc4a14cb480198372f275d63",
-      "size_bytes": 76837
+      "sha256": "132d46254518cd3205c2206a1ac9c28687a9c4e9a658d1f7b179f128c9825fa2",
+      "hmac_sha256": "7389877d7e5c2951ae7a90503f2004b69f9ff8a6f70a398990f7ccf2d14d5f24",
+      "size_bytes": 91258
     },
     "scripts/probe_gribov_clearance_and_polymer_tree.py": {
       "sha256": "3ae6abf87cd0c387bf1fd9fea0fb29a8e7f46fa02cc62aa07ad41502fbe94f84",
