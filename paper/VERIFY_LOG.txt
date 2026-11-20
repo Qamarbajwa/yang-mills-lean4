@@ -816,3 +816,13 @@ inferInstance : Nonempty Certificates.UnifiedClayRootCert
 'YangMillsBlueprint.Certificates.unified_clay_root_synthesis_conditional' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+inferInstance : Nonempty Certificates.DobrushinTensorCert
+'YangMillsBlueprint.Certificates.dobrushin_slice_tensorization_contraction_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.schur_complement_positivity_and_cholesky_step_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'YangMillsBlueprint.Certificates.volume_uniform_exponential_clustering_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

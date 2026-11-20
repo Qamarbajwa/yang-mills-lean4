@@ -133,6 +133,7 @@ import YangMillsBlueprint.Certificates.YM181_ClayBoundaryContinuumSynthesisCert
 import YangMillsBlueprint.Certificates.YM182_UniversalSimpleGroupAndOPESynthesisCert
 import YangMillsBlueprint.Certificates.YM183_RiemannWavefunctionContinuumSynthesisCert
 import YangMillsBlueprint.Certificates.YM184_UnifiedClayRootSynthesisCert
+import YangMillsBlueprint.Certificates.YM185_BlockSchurAndDobrushinTensorizationCert
 
 /-!
 # Hardened Metaprogramming AST & Axiom Auditor (`VerifyNoTraps`)
@@ -703,6 +704,9 @@ private def auditedTheorems : List Name :=
   , ``YangMillsBlueprint.Certificates.svd_transfer_mellin_plancherel_mass_floor_unconditional
   , ``YangMillsBlueprint.Certificates.master_riemann_wavefunction_to_ym_continuum_gap_synthesis
   , ``YangMillsBlueprint.Certificates.unified_clay_root_synthesis_conditional
+  , ``YangMillsBlueprint.Certificates.dobrushin_slice_tensorization_contraction_unconditional
+  , ``YangMillsBlueprint.Certificates.schur_complement_positivity_and_cholesky_step_unconditional
+  , ``YangMillsBlueprint.Certificates.volume_uniform_exponential_clustering_unconditional
   ]
 
 private def requiredNonemptyStructs : List Name :=
@@ -789,6 +793,7 @@ private def requiredNonemptyStructs : List Name :=
   , ``YangMillsBlueprint.Certificates.UniversalClayInterfaceCert
   , ``YangMillsBlueprint.Certificates.RiemannWavefunctionContinuumYMCert
   , ``YangMillsBlueprint.Certificates.UnifiedClayRootCert
+  , ``YangMillsBlueprint.Certificates.DobrushinTensorCert
   ]
 
 private def auditSingleTheorem (declName : Name) : MetaM Unit := do
@@ -1402,5 +1407,9 @@ theorem check_su5_gap_gt_jordan_unconditional :
 #print axioms YangMillsBlueprint.Certificates.master_riemann_wavefunction_to_ym_continuum_gap_synthesis
 #check (inferInstance : Nonempty YangMillsBlueprint.Certificates.UnifiedClayRootCert)
 #print axioms YangMillsBlueprint.Certificates.unified_clay_root_synthesis_conditional
+#check (inferInstance : Nonempty YangMillsBlueprint.Certificates.DobrushinTensorCert)
+#print axioms YangMillsBlueprint.Certificates.dobrushin_slice_tensorization_contraction_unconditional
+#print axioms YangMillsBlueprint.Certificates.schur_complement_positivity_and_cholesky_step_unconditional
+#print axioms YangMillsBlueprint.Certificates.volume_uniform_exponential_clustering_unconditional
 
 end YangMillsBlueprint.VerifyNoTraps
