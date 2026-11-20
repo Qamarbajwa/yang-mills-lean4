@@ -5,8 +5,8 @@
   "description": "<p>Proves in Lean 4 the continuum reconstruction theorems for 4D lattice gauge theory: symanzik_rotational_defect_vanishes_unconditional (rotational defect vanishes quadratically as O(a^2)) and os_continuum_mass_gap_and_clustering_from_uniform_dobrushin (Osterwalder-Schrader spectral mass gap Delta >= m_0 > 0 from uniform spatial clustering). Verified with zero sorry.</p><p><strong>Methodology:</strong> In accordance with open research principles, ai is being used as a tool for formal verification synthesis and computational checks.</p><p><strong>Epistemic Status:</strong> Finite structural theorem; Clay Millennium open horizons remain strictly open.</p>",
   "creators": [
     {
-      "name": "Arqam",
-      "affiliation": "Brandenburg University of Technology (BTU) Cottbus-Senftenberg",
+      "name": "Qamar Munawer",
+      "affiliation": "Brandenburg University of Technology Cottbus-Senftenberg",
       "orcid": "0009-0004-9467-3363"
     }
   ],

@@ -1,13 +1,13 @@
 {
   "title": "Four-Dimensional Lattice Yang-Mills Modular Research Bundle and Lean 4 Formal Verification Certificates",
-  "description": "Zero-Axiom Finite-Dimensional and Parameterized Bridge Certification in Lean 4 for 4D Lattice Yang-Mills (v1.17.0, YM101-YM192, 3,711 Lake jobs, full Gate 3 manifest artifacts). Shows how SU(2) ~ S^3 quaternion commutators generate the Grade-2 holonomy twist that U(1) ~ S^1 lacks, how taring the 65.4505 cavity covolume locks the 13.47x paramagnetic Schur pull, and how YM186-YM192 prove positive RG drift, ruling out UV stagnation and massless phases under parameterized cluster bounds, with multi-scale Balaban mass preservation and center-vortex area-law string tension. Includes standalone papers YM_00 through YM_T06. In this work, ai is being used as a tool by Arqam (Brandenburg University of Technology Cottbus-Senftenberg).",
+  "description": "Zero-Axiom Finite-Dimensional and Parameterized Bridge Certification in Lean 4 for 4D Lattice Yang-Mills (v1.17.0, YM101-YM192, 3,711 Lake jobs, full Gate 3 manifest artifacts). Shows how SU(2) ~ S^3 quaternion commutators generate the Grade-2 holonomy twist that U(1) ~ S^1 lacks, how taring the 65.4505 cavity covolume locks the 13.47x paramagnetic Schur pull, and how YM186-YM192 prove positive RG drift, ruling out UV stagnation and massless phases under parameterized cluster bounds, with multi-scale Balaban mass preservation and center-vortex area-law string tension. Includes standalone papers YM_00 through YM_T06. In this work, ai is being used as a tool by Qamar Munawer (Brandenburg University of Technology Cottbus-Senftenberg).",
   "version": "1.17.0",
   "upload_type": "software",
   "license": "Apache-2.0",
   "creators": [
     {
-      "name": "Munawer, Qamar",
-      "affiliation": "Brandenburg University of Technology Cottbus-Senftenberg, Cottbus, Germany"
+      "name": "Qamar Munawer",
+      "affiliation": "Brandenburg University of Technology Cottbus-Senftenberg"
     }
   ],
   "keywords": [

@@ -1,6 +1,6 @@
 # Seeing Negatively: Why the Deepest Laws of Reality Hide in What Is Missing
 
-**Author:** Qamar Munawer (Brandenburg University of Technology (BTU) Cottbus–Senftenberg)  
+**Author:** Qamar Munawer (Brandenburg University of Technology Cottbus–Senftenberg)  
 **GitHub Release:** [`v1.1.0-rosetta` (`Qamarbajwa/yang-mills-lean4`)](https://github.com/Qamarbajwa/yang-mills-lean4/releases/tag/v1.1.0-rosetta)  
 **Zenodo DOI:** [`10.5281/zenodo.24378644`](https://doi.org/10.5281/zenodo.24378644) (Concept DOI: [`10.5281/zenodo.24327876`](https://doi.org/10.5281/zenodo.24327876))  
 **Companion Zenodo DOIs:** [`10.5281/zenodo.24378371`](https://doi.org/10.5281/zenodo.24378371) · [`10.5281/zenodo.24378372`](https://doi.org/10.5281/zenodo.24378372) · [`10.5281/zenodo.24378373`](https://doi.org/10.5281/zenodo.24378373) · [`10.5281/zenodo.24378625`](https://doi.org/10.5281/zenodo.24378625)
@@ -68,7 +68,7 @@
 # Seeing Negatively: Why the Deepest Laws of Reality Hide in What Is Missing
 
 **By Qamar Munawer**  
-*Brandenburg University of Technology (BTU) Cottbus–Senftenberg*
+*Brandenburg University of Technology Cottbus–Senftenberg*
 
 ---
 

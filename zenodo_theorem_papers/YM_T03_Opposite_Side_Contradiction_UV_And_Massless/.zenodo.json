@@ -5,8 +5,8 @@
   "description": "<p>Formalizes two Euclid-style opposite-side contradiction theorems in Lean 4: no_eternal_uv_stagnation_by_contradiction (ruling out eternal weak-coupling trapping under positive RG drift) and no_massless_phase_under_dobrushin_by_contradiction (ruling out massless phases under verified Dobrushin contraction). Verified with zero sorry.</p><p><strong>Methodology:</strong> In accordance with open research principles, ai is being used as a tool for formal verification synthesis and computational checks.</p><p><strong>Epistemic Status:</strong> Finite structural theorem; Clay Millennium open horizons remain strictly open.</p>",
   "creators": [
     {
-      "name": "Arqam",
-      "affiliation": "Brandenburg University of Technology (BTU) Cottbus-Senftenberg",
+      "name": "Qamar Munawer",
+      "affiliation": "Brandenburg University of Technology Cottbus-Senftenberg",
       "orcid": "0009-0004-9467-3363"
     }
   ],

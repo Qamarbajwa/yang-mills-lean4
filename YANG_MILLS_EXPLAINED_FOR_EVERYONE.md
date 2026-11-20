@@ -1,6 +1,6 @@
 # Why Nuclear Glue Has Weight While Light Flies Free: A Plain-English Guide to Our 4D Yang–Mills Measurements
 
-**Author:** Qamar Munawer (Brandenburg University of Technology (BTU) Cottbus–Senftenberg)  
+**Author:** Qamar Munawer (Brandenburg University of Technology Cottbus–Senftenberg)  
 **Repository:** `Qamarbajwa/yang-mills-lean4` (`YM101`–`YM182`, Probes 1–6)  
 **Status:** All `YM101`–`YM182` Lean 4 certificates compile with zero unexpected axioms; the full infinite-volume continuum Clay Millennium Problem ($L \to \infty, a \to 0$) remains **OPEN**.
 

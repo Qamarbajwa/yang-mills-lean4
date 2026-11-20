@@ -8,7 +8,7 @@ relational explanation paper ("What is happening and what relates to what").
 Creates individual .zenodo.json release folders, packages ZIP bundles,
 and copies compiled PDFs to the Rosetta Friend Audit Pack.
 
-Author: Arqam, Brandenburg University of Technology (BTU) Cottbus-Senftenberg.
+Author: Qamar Munawer, Brandenburg University of Technology (BTU) Cottbus-Senftenberg.
 Methodology phrase: "ai is being used as a tool"
 """
 
@@ -83,13 +83,7 @@ LATEX_HEADER = r"""\documentclass[11pt,a4paper]{article}
 \newtheorem{remark}[theorem]{Remark}
 """
 
-AUTHOR_BLOCK = r"""\author{
-  \textbf{Arqam} \\
-  Brandenburg University of Technology (BTU) Cottbus-Senftenberg \\
-  Department of Mathematics and Computer Science \\
-  Cottbus, Germany \\
-  \texttt{arqam@b-tu.de}
-}
+AUTHOR_BLOCK = r"""\author{Qamar Munawer \\ Brandenburg University of Technology Cottbus-Senftenberg}
 
 \date{\today}
 """
@@ -254,7 +248,7 @@ Our Yang-Mills framework shares a deep mathematical unity with three other Clay 
 We maintain strict academic honesty. All results formalized in Lean 4 and verified in our scripts are rigorous finite-dimensional matrix identities, algebraic bounds, and finite-lattice theorems. The full infinite-dimensional continuum limit of constructive quantum field theory in $\mathbb{R}^4$ remains an open Clay Millennium problem. Our work establishes the exact structural bridge and eliminates potential obstructions along the path.
 
 \vspace{1em}
-\noindent\textbf{Acknowledgments:} The author thanks the faculty and colleagues at Brandenburg University of Technology Cottbus-Senftenberg. In this research, ai is being used as a tool for formal verification code synthesis, structural indexing, and numerical verification.
+\noindent\textbf{Acknowledgments:} The author thanks colleagues at Brandenburg University of Technology Cottbus-Senftenberg. In this research, ai is being used as a tool for formal verification code synthesis, structural indexing, and numerical verification.
 
 \begin{thebibliography}{99}
 \bibitem{JaffeWitten} A. Jaffe and E. Witten, \emph{Quantum Yang-Mills theory}, Clay Mathematics Institute Millennium Prize Problems, 2000.
@@ -278,8 +272,8 @@ We maintain strict academic honesty. All results formalized in Lean 4 and verifi
         "description": "<p>A comprehensive, friendly, and step-by-step common-person relational explanation of the four-dimensional Yang-Mills mass gap problem, connecting light U(1) commutativity, non-Abelian SU(2) plaquette twists, the 65.4505 covolume tare button, the 13.47x paramagnetic pull, the complete YM101-YM192 Lean 4 formal chain, and the 5 Rosetta mathematical patterns connecting Yang-Mills, Riemann, Hodge, and Navier-Stokes.</p><p><strong>Methodology:</strong> In accordance with transparent scientific principles, ai is being used as a tool for theorem verification synthesis and computational checks.</p><p><strong>Epistemic Status:</strong> Verified finite mathematics; Clay Millennium open horizons remain strictly open.</p>",
         "creators": [
             {
-                "name": "Arqam",
-                "affiliation": "Brandenburg University of Technology (BTU) Cottbus-Senftenberg",
+                "name": "Qamar Munawer",
+                "affiliation": "Brandenburg University of Technology Cottbus-Senftenberg",
                 "orcid": "0009-0004-9467-3363"
             }
         ],
@@ -449,8 +443,8 @@ The proofs presented here establish a finite-dimensional algebraic and topologic
         "description": "<p>Proves why light U(1) on a circle has zero holonomy twist (delta = 0) allowing a massless phase, while nuclear SU(2) on the 3-sphere S3 has non-commuting Pauli matrices generating an inescapable positive plaquette defect delta = 0.9860 > 0. Verified in Lean 4 with zero sorry.</p><p><strong>Methodology:</strong> In accordance with open research principles, ai is being used as a tool for formal verification synthesis and computational checks.</p><p><strong>Epistemic Status:</strong> Finite structural theorem; Clay Millennium open horizons remain strictly open.</p>",
         "creators": [
             {
-                "name": "Arqam",
-                "affiliation": "Brandenburg University of Technology (BTU) Cottbus-Senftenberg",
+                "name": "Qamar Munawer",
+                "affiliation": "Brandenburg University of Technology Cottbus-Senftenberg",
                 "orcid": "0009-0004-9467-3363"
             }
         ],
@@ -623,8 +617,8 @@ These computations are exact for finite lattice blocks ($L=2, 4$). The construct
         "description": "<p>Solves the Dirichlet cavity baseline problem by taring the 65.4505 covolume to exactly 0.0 via Schur complement subtraction. Shows that the -0.3783 paramagnetic pull beats the +0.0230 diamagnetic push by 13.47x to 28.9x across all 720 fibers with operator norm ||K_para|| <= 0.4346 < 1. Verified in Lean 4 with zero sorry.</p><p><strong>Methodology:</strong> In accordance with open research principles, ai is being used as a tool for formal verification synthesis and computational checks.</p><p><strong>Epistemic Status:</strong> Finite structural theorem; Clay Millennium open horizons remain strictly open.</p>",
         "creators": [
             {
-                "name": "Arqam",
-                "affiliation": "Brandenburg University of Technology (BTU) Cottbus-Senftenberg",
+                "name": "Qamar Munawer",
+                "affiliation": "Brandenburg University of Technology Cottbus-Senftenberg",
                 "orcid": "0009-0004-9467-3363"
             }
         ],
@@ -798,8 +792,8 @@ These contradiction theorems operate conditionally on the finite-lattice drift p
         "description": "<p>Formalizes two Euclid-style opposite-side contradiction theorems in Lean 4: no_eternal_uv_stagnation_by_contradiction (ruling out eternal weak-coupling trapping under positive RG drift) and no_massless_phase_under_dobrushin_by_contradiction (ruling out massless phases under verified Dobrushin contraction). Verified with zero sorry.</p><p><strong>Methodology:</strong> In accordance with open research principles, ai is being used as a tool for formal verification synthesis and computational checks.</p><p><strong>Epistemic Status:</strong> Finite structural theorem; Clay Millennium open horizons remain strictly open.</p>",
         "creators": [
             {
-                "name": "Arqam",
-                "affiliation": "Brandenburg University of Technology (BTU) Cottbus-Senftenberg",
+                "name": "Qamar Munawer",
+                "affiliation": "Brandenburg University of Technology Cottbus-Senftenberg",
                 "orcid": "0009-0004-9467-3363"
             }
         ],
@@ -975,8 +969,8 @@ Bridge Lemmas YM1 and YM2 establish conditional algebraic convergence bounds wit
         "description": "<p>Proves Bridge Lemmas YM1 and YM2 in Lean 4: ym_YM1_s3_character_cocycle_schur_pull_floor (S3 character cocycle floor forcing paramagnetic pull over diamagnetic push) and ym_YM2_balaban_polymer_tree_geometric_convergence (polymer tree remainder bounded by half the geometric gap, yielding uniform positive drift eta_min > 0). Measured 15x safety margin.</p><p><strong>Methodology:</strong> In accordance with open research principles, ai is being used as a tool for formal verification synthesis and computational checks.</p><p><strong>Epistemic Status:</strong> Finite structural theorem; Clay Millennium open horizons remain strictly open.</p>",
         "creators": [
             {
-                "name": "Arqam",
-                "affiliation": "Brandenburg University of Technology (BTU) Cottbus-Senftenberg",
+                "name": "Qamar Munawer",
+                "affiliation": "Brandenburg University of Technology Cottbus-Senftenberg",
                 "orcid": "0009-0004-9467-3363"
             }
         ],
@@ -1153,8 +1147,8 @@ The proofs verified here demonstrate that if uniform clustering holds across all
         "description": "<p>Proves in Lean 4 the continuum reconstruction theorems for 4D lattice gauge theory: symanzik_rotational_defect_vanishes_unconditional (rotational defect vanishes quadratically as O(a^2)) and os_continuum_mass_gap_and_clustering_from_uniform_dobrushin (Osterwalder-Schrader spectral mass gap Delta >= m_0 > 0 from uniform spatial clustering). Verified with zero sorry.</p><p><strong>Methodology:</strong> In accordance with open research principles, ai is being used as a tool for formal verification synthesis and computational checks.</p><p><strong>Epistemic Status:</strong> Finite structural theorem; Clay Millennium open horizons remain strictly open.</p>",
         "creators": [
             {
-                "name": "Arqam",
-                "affiliation": "Brandenburg University of Technology (BTU) Cottbus-Senftenberg",
+                "name": "Qamar Munawer",
+                "affiliation": "Brandenburg University of Technology Cottbus-Senftenberg",
                 "orcid": "0009-0004-9467-3363"
             }
         ],
@@ -1347,8 +1341,8 @@ These proofs rigorously establish the inductive preservation of the mass gap acr
         "description": "<p>Proves the multi-scale inductive mass preservation m_{k+1}^2 = m_k^2 - delta_k >= m_0^2 / 4 > 0 and center-vortex area-law string tension sigma > 0 across dyadic RG scales k = 0..4 in Lean 4. Combines with Osterwalder-Seiler reconstruction to establish an unconditional spectral gap floor Delta >= m_0 / sqrt(2) > 0. Verified with zero sorry.</p><p><strong>Methodology:</strong> In accordance with open research principles, ai is being used as a tool for formal verification synthesis and computational checks.</p><p><strong>Epistemic Status:</strong> Finite structural theorem; Clay Millennium open horizons remain strictly open.</p>",
         "creators": [
             {
-                "name": "Arqam",
-                "affiliation": "Brandenburg University of Technology (BTU) Cottbus-Senftenberg",
+                "name": "Qamar Munawer",
+                "affiliation": "Brandenburg University of Technology Cottbus-Senftenberg",
                 "orcid": "0009-0004-9467-3363"
             }
         ],
@@ -1392,7 +1386,7 @@ def copy_to_friend_audit_pack():
 def main():
     print("=" * 80)
     print("BUILDING ALL YANG-MILLS THEOREM AND COMMON-PERSON PAPERS")
-    print("Author: Arqam, Brandenburg University of Technology (BTU) Cottbus-Senftenberg")
+    print("Author: Qamar Munawer, Brandenburg University of Technology (BTU) Cottbus-Senftenberg")
     print("Exact methodology note: 'ai is being used as a tool'")
     print("=" * 80)
 
