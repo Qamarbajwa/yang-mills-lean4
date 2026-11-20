@@ -1,8 +1,8 @@
 # Yang–Mills and the Mass Gap — Local Research Repository
 
-> **Lean 4 Formalization Suite (`YM101`–`YM187`):** `3,017` Lake build jobs, `108/108` Gate 3 HMAC-SHA256 manifest artifacts, zero `sorry`, zero custom axioms (`[propext, Classical.choice, Quot.sound]`).  
+> **Zero-Axiom Finite-Dimensional & Parameterized Bridge Certification in Lean 4 (`YM101`–`YM187`):** `3,017` Lake build jobs, `108/108` Gate 3 HMAC-SHA256 manifest artifacts, zero `sorry`, zero custom axioms (`[propext, Classical.choice, Quot.sound]`).  
 > **Zenodo Bundle:** `10.5281/zenodo.24398407` (Concept DOI `10.5281/zenodo.24327876`) | **Dedicated Papers:** `10.5281/zenodo.24403296` (Paper 1), `10.5281/zenodo.24403299` (Paper 2), `10.5281/zenodo.24403303` (Paper 3), `10.5281/zenodo.24403305` (Paper 4).  
-> **Epistemic Lock:** Hypothesis 4.1 (proving uniform $(a \to 0, L \to \infty)$ bounds on the 4D Wilson Gibbs measure) and the Clay 4D Yang–Mills Mass Gap problem remain strictly **OPEN**.
+> **Scope & Methodology:** `SU(2) ~ S^3` quaternion commutators generate the Grade-2 holonomy twist that `U(1) ~ S^1` lacks; taring the `65.4505` cavity covolume locks the `13.47x` paramagnetic Schur pull, and `YM186`–`YM187` (`YM1`–`YM2`) certify positive RG drift and exclude UV stagnation and massless phases under parameterized cluster bounds (Hypothesis 4.1 isolates the continuum $(a \to 0, L \to \infty)$ limit). In this work, ai is being used as a tool by Arqam (Brandenburg University of Technology Cottbus-Senftenberg).
 
 This repository is a local, evidence-first workspace for studying the Yang–Mills existence and mass-gap problem.
 
