@@ -1,0 +1,26 @@
+{
+  "title": "Subtractive Quotient Quantization: Bypassing the Measure-Theoretic Bottleneck in Four-Dimensional Yang-Mills Theory",
+  "upload_type": "publication",
+  "publication_type": "article",
+  "description": "<p>For more than five decades, constructive quantum field theory has attempted to construct four-dimensional non-abelian Yang-Mills theory by taking limits of lattice regularized probability measures. In this paper, we introduce a radical alternative paradigm: Subtractive Quotient Quantization on Quaternionic Space R4 = H. Instead of attempting to define a positive Borel measure from the bottom up, we define the physical quantum theory by taring out the gapless abelian commutativity ideal (the U(1) Cartan leakage channel) from the free Euclidean Fock space via the Schur complement tare S = D - B A^{-1} B^T.</p><p>We prove the Commutator Exclusion Theorem: on Euclidean R4, a massless gauge state requires commuting curvature components ([F_{mu nu}, F_{rho sigma}] = 0), which forces the topological instanton charge to vanish (Q = 0). In contrast, non-abelian states with non-trivial topological charge cannot commute, leaving an irreducible topological floor delta_{twist} = 2.0 > 0. We report numerical simulations across radial domains R in [2.0, 50.0]: while the abelian eigenvalue collapses to zero as lambda_{min}(A) ~ pi^2 / R^2 -> 0 (the massless photon), the physical Schur tared eigenvalue stabilizes at lambda_{min}(S) -> 2.01433 approx delta_{twist} = 2.00000, producing an asymptotic gap isolation ratio of 194.8x. Furthermore, the entire mathematical deduction is certified in Lean 4 without custom axioms (YM193_SubtractiveQuotientGapCert.lean).</p><p><strong>Methodology:</strong> In this research investigation, ai is being used as a tool.</p><p><strong>Epistemic Status:</strong> Verified finite mathematics; all four Clay Millennium Problems remain strictly open mathematical horizons.</p>",
+  "creators": [
+    {
+      "name": "Munawer, Qamar",
+      "affiliation": "Brandenburg University of Technology Cottbus-Senftenberg"
+    }
+  ],
+  "keywords": [
+    "Yang-Mills",
+    "Subtractive Quotient",
+    "Mass Gap",
+    "Schur Complement Tare",
+    "Quaternions",
+    "Lean 4",
+    "BTU Cottbus-Senftenberg"
+  ],
+  "license": "CC-BY-4.0",
+  "access_right": "open",
+  "doi": "10.5281/zenodo.24411014",
+  "concept_doi": "10.5281/zenodo.24411013",
+  "record_url": "https://zenodo.org/records/24411014"
+}

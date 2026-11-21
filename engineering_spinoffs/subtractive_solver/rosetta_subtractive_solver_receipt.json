@@ -1,0 +1,23 @@
+{
+  "benchmark_name": "Rosetta Subtractive Quotient High-Performance Solver Benchmark",
+  "author": "Qamar Munawer",
+  "affiliation": "Brandenburg University of Technology Cottbus-Senftenberg",
+  "methodology": "ai is being used as a tool",
+  "matrix_dimensions": {
+    "n_leakage": 50,
+    "n_physical": 50,
+    "total_dim": 100
+  },
+  "condition_numbers": {
+    "monolithic_condition_number": 1011182.2337709592,
+    "schur_quotient_condition_number": 5.157142233963597,
+    "condition_number_reduction_ratio": 196074.141044933
+  },
+  "performance": {
+    "monolithic_time_sec": 0.0002548999909777194,
+    "subtractive_solver_time_sec": 0.0014703000197187066,
+    "monolithic_residual": 6.59959742229052e-14,
+    "subtractive_residual": 1.0251037871735933e-12,
+    "status": "PASS"
+  }
+}
