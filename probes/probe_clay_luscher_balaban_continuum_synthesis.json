@@ -1,0 +1,90 @@
+{
+  "probe_name": "Clay L\u00fcscher-Balaban Continuum & Infinite-Volume Synthesis",
+  "author": "Qamar Munawer",
+  "affiliation": "Brandenburg University of Technology Cottbus-Senftenberg",
+  "methodology": "ai is being used as a tool",
+  "epistemic_status": "verified-finite",
+  "open_horizon_lock": "STRICTLY OPEN",
+  "status": "PASS",
+  "asymptotic_results": {
+    "smallest_spacing_a": 0.05,
+    "largest_radius_R": 50.0,
+    "asymptotic_mass_gap_Delta": 2.0145576840754815,
+    "target_twist_floor": 2.0,
+    "gap_isolation_ratio": 191.72222747941146,
+    "rotational_invariance_defect": 0.00025000000000000006,
+    "infinite_volume_boundary_error": 1.9287498479639178e-22
+  },
+  "joint_ladder": [
+    {
+      "spacing_a": 0.5,
+      "radius_R": 10.0,
+      "grid_shells": 20,
+      "abelian_min_eig_A": 0.2386872298041956,
+      "theoretical_pi2_over_R2": 0.09869604401089357,
+      "schur_mass_gap_Delta": 2.3032481775582583,
+      "delta_twist_floor": 2.0,
+      "gap_isolation_ratio": 9.64964979252431,
+      "rotational_defect": 0.025,
+      "boundary_decoupling_error": 9.933910899043201e-11,
+      "is_reflection_positive": true,
+      "is_gapped_above_floor": true
+    },
+    {
+      "spacing_a": 0.25,
+      "radius_R": 20.0,
+      "grid_shells": 80,
+      "abelian_min_eig_A": 0.06430879107356652,
+      "theoretical_pi2_over_R2": 0.024674011002723394,
+      "schur_mass_gap_Delta": 2.087525339812024,
+      "delta_twist_floor": 2.0,
+      "gap_isolation_ratio": 32.460963811681424,
+      "rotational_defect": 0.00625,
+      "boundary_decoupling_error": 7.37879222925031e-19,
+      "is_reflection_positive": true,
+      "is_gapped_above_floor": true
+    },
+    {
+      "spacing_a": 0.125,
+      "radius_R": 30.0,
+      "grid_shells": 240,
+      "abelian_min_eig_A": 0.02906194078951359,
+      "theoretical_pi2_over_R2": 0.010966227112321508,
+      "schur_mass_gap_Delta": 2.0400237689310825,
+      "delta_twist_floor": 2.0,
+      "gap_isolation_ratio": 70.19571692428688,
+      "rotational_defect": 0.0015625,
+      "boundary_decoupling_error": 1.9287498479639178e-22,
+      "is_reflection_positive": true,
+      "is_gapped_above_floor": true
+    },
+    {
+      "spacing_a": 0.0625,
+      "radius_R": 40.0,
+      "grid_shells": 500,
+      "abelian_min_eig_A": 0.016418302245140022,
+      "theoretical_pi2_over_R2": 0.006168502750680848,
+      "schur_mass_gap_Delta": 2.0227036442663673,
+      "delta_twist_floor": 2.0,
+      "gap_isolation_ratio": 123.19810014857701,
+      "rotational_defect": 0.000390625,
+      "boundary_decoupling_error": 1.9287498479639178e-22,
+      "is_reflection_positive": true,
+      "is_gapped_above_floor": true
+    },
+    {
+      "spacing_a": 0.05,
+      "radius_R": 50.0,
+      "grid_shells": 500,
+      "abelian_min_eig_A": 0.01050768974761583,
+      "theoretical_pi2_over_R2": 0.0039478417604357436,
+      "schur_mass_gap_Delta": 2.0145576840754815,
+      "delta_twist_floor": 2.0,
+      "gap_isolation_ratio": 191.72222747941146,
+      "rotational_defect": 0.00025000000000000006,
+      "boundary_decoupling_error": 1.9287498479639178e-22,
+      "is_reflection_positive": true,
+      "is_gapped_above_floor": true
+    }
+  ]
+}

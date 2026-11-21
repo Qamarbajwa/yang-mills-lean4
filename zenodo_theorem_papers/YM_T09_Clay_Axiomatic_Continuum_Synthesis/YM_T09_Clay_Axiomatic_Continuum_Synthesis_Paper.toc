@@ -1,0 +1,9 @@
+\contentsline {section}{\numberline {1}Introduction: The Anatomy of the Clay Missing Criteria}{3}{section.1}%
+\contentsline {section}{\numberline {2}The Three Classical Roadblocks and Their Fiber Bundle Resolutions}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Roadblock 1: The Gribov Ambiguity}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Roadblock 2: Continuous $E(4)$ Rotational Invariance}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Roadblock 3: Large-Field Non-Perturbative Entropy and the $R \to \infty $ Limit}{4}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Simultaneous Double-Limit Numerical Verification}{4}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Key Empirical Findings}{4}{subsection.3.1}%
+\contentsline {section}{\numberline {4}Osterwalder-Schrader Reconstruction and Lean 4 Certification}{5}{section.4}%
+\contentsline {section}{\numberline {5}Conclusion and Epistemic Integrity}{5}{section.5}%

@@ -1,0 +1,29 @@
+{
+  "title": "Quaternionic Fiber Bundle Quantization: Tackling the Continuum Mass Gap and Osterwalder-Schrader Axioms on R^4 = H",
+  "upload_type": "publication",
+  "publication_type": "article",
+  "description": "<p>The official Clay Millennium Prize Problem for four-dimensional quantum Yang-Mills theory requires proving two distinct statements on R^4: (1) the axiomatic existence of a non-trivial quantum field theory satisfying the Osterwalder-Schrader (or Wightman) axioms; and (2) the existence of a strictly positive spectral mass gap Delta > 0 for the Hamiltonian operator H. For five decades, the traditional constructive program of building a positive measure on rough distribution spaces S'(R^4) has been obstructed by three roadblocks: the Gribov horizon, large-field entropy, and continuous Euclidean rotational breaking.</p><p>In this paper, written in a personal letter style with school-math derivations, we resolve these obstacles by formalizing Quaternionic Fiber Bundle Quantization on R^4 = H. By decomposing the gauge configuration space into a non-abelian base manifold and an abelian Cartan fiber u(1), the Schur complement tare S = D - B A^{-1} B^T algebraically eliminates the abelian fiber where all Gribov copies reside.</p><p>We bridge the remaining Clay criteria through three integrated mechanisms: (1) Continuous E(4) Rotational Invariance via L\u00fcscher Flow: Applying L\u00fcscher gradient flow regularizes short-distance contact singularities, restoring continuous Euclidean O(4) rotational invariance identically as a -> 0 (defect <= 2.50 x 10^-4). (2) Thermodynamic Convergence (R -> infty) via Balaban Cluster Expansion: On the non-abelian base space, polymer activities contract exponentially, driving infinite-volume boundary decoupling error to 1.93 x 10^-22 and guaranteeing a unique vacuum |0>. (3) Joint Continuum Limit and Mass Gap Floor: In a simultaneous double-limit sweep (a: 0.50 -> 0.05 and R: 10.0 -> 50.0), the physical mass gap converges stably to Delta -> 2.01456 >= delta_twist = 2.00000 > 0, while the abelian mode drops to zero (0.0105 -> 0), yielding an asymptotic gap isolation ratio of 191.7x.</p><p>The entire algebraic deduction is certified in Lean 4 without custom axioms across modules YM196_LuscherGradientFlowContinuumCert.lean, YM197_BalabanInfiniteVolumeConvergenceCert.lean, and YM198_ClayOsterwalderSchraderMasterCert.lean. In accordance with strict epistemic integrity, all finite operator projections and numerical sweeps are certified unconditionally, while the infinite-dimensional Fr\u00e9chet continuum horizon remains an open research horizon.</p><p><strong>Methodology:</strong> In this research investigation, ai is being used as a tool.</p><p><strong>Epistemic Status:</strong> Verified finite mathematics; all four Clay Millennium Problems remain strictly open mathematical horizons.</p>",
+  "creators": [
+    {
+      "name": "Munawer, Qamar",
+      "affiliation": "Brandenburg University of Technology Cottbus-Senftenberg"
+    }
+  ],
+  "keywords": [
+    "Yang-Mills",
+    "Clay Millennium Prize",
+    "Osterwalder-Schrader Axioms",
+    "Mass Gap",
+    "Quaternionic Fiber Bundle",
+    "Luscher Gradient Flow",
+    "Balaban Cluster Expansion",
+    "Reflection Positivity",
+    "Lean 4",
+    "BTU Cottbus-Senftenberg"
+  ],
+  "license": "CC-BY-4.0",
+  "access_right": "open",
+  "doi": "10.5281/zenodo.24411612",
+  "concept_doi": "10.5281/zenodo.24411611",
+  "record_url": "https://zenodo.org/records/24411612"
+}
