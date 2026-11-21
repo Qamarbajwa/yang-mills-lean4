@@ -1,0 +1,29 @@
+{
+  "benchmark_name": "AI Formal Governance Premise A -> Verdict Sandbox",
+  "author": "Qamar Munawer",
+  "affiliation": "Brandenburg University of Technology Cottbus-Senftenberg",
+  "methodology": "ai is being used as a tool",
+  "epistemic_status": "verified-finite deterministic formal governance",
+  "municipal_verification": {
+    "verdict": "PROVEN_COMPLIANT",
+    "premise_hash": "648eb4fe411fbaecea7606554e44362f19534ce9f2f2706cb0132ee1299299bc",
+    "actual_far": 1.5,
+    "required_egress_m": 2.0,
+    "span_to_depth": 15.0,
+    "violations": []
+  },
+  "scientific_verification": {
+    "verdict": "PROVEN_COMPLIANT",
+    "premise_hash": "424ea5283769e7b2b39685cdc6e376da53b92c2a1e1c87c07306a6446521886d",
+    "claim_id": "YM_T02_COVOLUME_TARE",
+    "finite_metric": "cavity_tare_energy",
+    "metric_margin": 65.4505,
+    "axioms_verified": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "epistemic_status": "verified-finite"
+  },
+  "overall_status": "PASS"
+}
