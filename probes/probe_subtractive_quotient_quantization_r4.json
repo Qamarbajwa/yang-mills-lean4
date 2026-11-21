@@ -1,0 +1,144 @@
+{
+  "probe_name": "Subtractive Quotient Quantization on Quaternionic R^4",
+  "concept": "Taring out the gapless Abelian Cartan leakage from continuous Euclidean Fock space",
+  "author": "Qamar Munawer",
+  "affiliation": "Brandenburg University of Technology Cottbus-Senftenberg",
+  "methodology": "ai is being used as a tool",
+  "epistemic_status": "verified-finite numerical probe of novel constructive hypothesis; Clay Millennium open horizons remain strictly open",
+  "results": {
+    "sweep_records": [
+      {
+        "radius_R": 2.0,
+        "min_eig_abelian_A": 6.468803867215248,
+        "theoretical_pi2_over_R2": 2.4674011002723395,
+        "min_eig_raw_D": 5.195306310649224,
+        "min_eig_schur_tare_S": 5.069765666709878,
+        "delta_twist_floor": 2.0,
+        "gap_isolation_ratio": 0.7837253641904525,
+        "tare_spectral_shift": 0.12554064393934627,
+        "is_gapped_above_zero": true,
+        "is_abelian_collapsing": true
+      },
+      {
+        "radius_R": 4.0,
+        "min_eig_abelian_A": 1.6162681491889668,
+        "theoretical_pi2_over_R2": 0.6168502750680849,
+        "min_eig_raw_D": 3.245446370816859,
+        "min_eig_schur_tare_S": 3.135304213064401,
+        "delta_twist_floor": 2.0,
+        "gap_isolation_ratio": 1.9398416126913576,
+        "tare_spectral_shift": 0.11014215775245795,
+        "is_gapped_above_zero": true,
+        "is_abelian_collapsing": true
+      },
+      {
+        "radius_R": 6.0,
+        "min_eig_abelian_A": 0.7182193911891537,
+        "theoretical_pi2_over_R2": 0.27415567780803773,
+        "min_eig_raw_D": 2.779805237261364,
+        "min_eig_schur_tare_S": 2.716028541905338,
+        "delta_twist_floor": 2.0,
+        "gap_isolation_ratio": 3.781614051673567,
+        "tare_spectral_shift": 0.06377669535602593,
+        "is_gapped_above_zero": true,
+        "is_abelian_collapsing": true
+      },
+      {
+        "radius_R": 8.0,
+        "min_eig_abelian_A": 0.40396437824890385,
+        "theoretical_pi2_over_R2": 0.15421256876702122,
+        "min_eig_raw_D": 2.5059652164171213,
+        "min_eig_schur_tare_S": 2.4744472060691565,
+        "delta_twist_floor": 2.0,
+        "gap_isolation_ratio": 6.125409415541383,
+        "tare_spectral_shift": 0.031518010347964864,
+        "is_gapped_above_zero": true,
+        "is_abelian_collapsing": true
+      },
+      {
+        "radius_R": 10.0,
+        "min_eig_abelian_A": 0.25852414771547805,
+        "theoretical_pi2_over_R2": 0.09869604401089357,
+        "min_eig_raw_D": 2.343236409583349,
+        "min_eig_schur_tare_S": 2.3257094491809838,
+        "delta_twist_floor": 2.0,
+        "gap_isolation_ratio": 8.996101407674196,
+        "tare_spectral_shift": 0.017526960402365344,
+        "is_gapped_above_zero": true,
+        "is_abelian_collapsing": true
+      },
+      {
+        "radius_R": 15.0,
+        "min_eig_abelian_A": 0.11489188624993599,
+        "theoretical_pi2_over_R2": 0.04386490844928603,
+        "min_eig_raw_D": 2.160264356826139,
+        "min_eig_schur_tare_S": 2.15356612808463,
+        "delta_twist_floor": 2.0,
+        "gap_isolation_ratio": 18.744283851339677,
+        "tare_spectral_shift": 0.006698228741508938,
+        "is_gapped_above_zero": true,
+        "is_abelian_collapsing": true
+      },
+      {
+        "radius_R": 20.0,
+        "min_eig_abelian_A": 0.06462451058045153,
+        "theoretical_pi2_over_R2": 0.024674011002723394,
+        "min_eig_raw_D": 2.0915464087248163,
+        "min_eig_schur_tare_S": 2.0879456110494967,
+        "delta_twist_floor": 2.0,
+        "gap_isolation_ratio": 32.3088808301333,
+        "tare_spectral_shift": 0.0036007976753196225,
+        "is_gapped_above_zero": true,
+        "is_abelian_collapsing": true
+      },
+      {
+        "radius_R": 30.0,
+        "min_eig_abelian_A": 0.028721037876850992,
+        "theoretical_pi2_over_R2": 0.010966227112321508,
+        "min_eig_raw_D": 2.0411152758936826,
+        "min_eig_schur_tare_S": 2.039558621096064,
+        "delta_twist_floor": 2.0,
+        "gap_isolation_ratio": 71.01270608120808,
+        "tare_spectral_shift": 0.001556654797618684,
+        "is_gapped_above_zero": true,
+        "is_abelian_collapsing": true
+      },
+      {
+        "radius_R": 40.0,
+        "min_eig_abelian_A": 0.016155311897879658,
+        "theoretical_pi2_over_R2": 0.006168502750680848,
+        "min_eig_raw_D": 2.02320996927388,
+        "min_eig_schur_tare_S": 2.0223418197118526,
+        "delta_twist_floor": 2.0,
+        "gap_isolation_ratio": 125.18123032816715,
+        "tare_spectral_shift": 0.0008681495620272983,
+        "is_gapped_above_zero": true,
+        "is_abelian_collapsing": true
+      },
+      {
+        "radius_R": 50.0,
+        "min_eig_abelian_A": 0.010339295204730668,
+        "theoretical_pi2_over_R2": 0.0039478417604357436,
+        "min_eig_raw_D": 2.014878667670154,
+        "min_eig_schur_tare_S": 2.014325126207715,
+        "delta_twist_floor": 2.0,
+        "gap_isolation_ratio": 194.8222858832849,
+        "tare_spectral_shift": 0.0005535414624393553,
+        "is_gapped_above_zero": true,
+        "is_abelian_collapsing": true
+      }
+    ],
+    "asymptotic_metrics": {
+      "largest_radius_R": 50.0,
+      "asymptotic_abelian_eigenvalue": 0.010339295204730668,
+      "asymptotic_schur_gap": 2.014325126207715,
+      "theoretical_twist_floor": 2.0,
+      "error_from_twist_floor": 0.014325126207714867,
+      "gap_isolation_ratio": 194.8222858832849,
+      "abelian_scales_as_1_over_R2": true,
+      "schur_converges_to_twist_floor": true
+    },
+    "status": "PASS"
+  },
+  "overall_status": "PASS"
+}
