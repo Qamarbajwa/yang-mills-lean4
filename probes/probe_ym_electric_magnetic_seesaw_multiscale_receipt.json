@@ -1,0 +1,69 @@
+{
+  "probe": "probe_ym_electric_magnetic_seesaw_multiscale",
+  "verified": true,
+  "status": "PASS",
+  "elapsed_seconds": 0.017,
+  "epistemic_lock": {
+    "all_four_clay_millennium_problems_open": true,
+    "status": "verified-finite",
+    "open_horizon_lock": "STRICTLY OPEN"
+  },
+  "author": "Qamar Munawer",
+  "affiliation": "Brandenburg University of Technology Cottbus-Senftenberg",
+  "methodology": "ai is being used as a tool",
+  "electric_magnetic_seesaw": {
+    "A_elec": 4.0,
+    "D_mag": 2.0,
+    "B_em": 1.0,
+    "det_2x2": 7.0,
+    "sigma_mag": 1.75,
+    "exact_rational_sigma": 1.75,
+    "adjoint_error": 5.551115123125783e-17
+  },
+  "balaban_multiscale_rg": {
+    "alpha_twist": 2.0,
+    "beta_polymer": 1.0,
+    "profiles": [
+      {
+        "S": 2.0,
+        "m_opt": 2.0,
+        "F_max": 4.0,
+        "F_under": 1.44,
+        "F_over": -12.0,
+        "confining_mass_gap_floor": 4.0
+      },
+      {
+        "S": 4.0,
+        "m_opt": 4.0,
+        "F_max": 16.0,
+        "F_under": 5.76,
+        "F_over": -48.0,
+        "confining_mass_gap_floor": 16.0
+      },
+      {
+        "S": 8.0,
+        "m_opt": 8.0,
+        "F_max": 64.0,
+        "F_under": 23.04,
+        "F_over": -192.0,
+        "confining_mass_gap_floor": 64.0
+      },
+      {
+        "S": 16.0,
+        "m_opt": 16.0,
+        "F_max": 256.0,
+        "F_under": 92.16,
+        "F_over": -768.0,
+        "confining_mass_gap_floor": 256.0
+      },
+      {
+        "S": 32.0,
+        "m_opt": 32.0,
+        "F_max": 1024.0,
+        "F_under": 368.64,
+        "F_over": -3072.0,
+        "confining_mass_gap_floor": 1024.0
+      }
+    ]
+  }
+}
