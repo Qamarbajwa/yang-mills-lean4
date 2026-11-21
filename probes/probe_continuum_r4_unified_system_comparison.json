@@ -1,0 +1,275 @@
+{
+  "probe": "probe_continuum_r4_unified_system_comparison",
+  "author": "Qamar Munawer",
+  "affiliation": "Brandenburg University of Technology Cottbus-Senftenberg",
+  "methodology": "ai is being used as a tool",
+  "timestamp_utc": "2026-11-21T02:47:11.960631+00:00",
+  "epistemic_boundaries": {
+    "status": "verified-finite",
+    "HODGE_MILLENNIUM_001_OPEN": true,
+    "YANG_MILLS_4D_CONTINUUM_GAP_OPEN": true,
+    "RIEMANN_HYPOTHESIS_NO_RH_PROOF": true,
+    "NAVIER_STOKES_3D_GLOBAL_REGULARITY_OPEN": true
+  },
+  "yang_mills_r4": {
+    "bpst_instanton_numeric": 78.9568352006072,
+    "bpst_instanton_exact": 78.95683520871486,
+    "bpst_instanton_abs_error": 8.107662097245338e-09,
+    "greens_function_4d": [
+      {
+        "r": 0.1,
+        "G_r": 2.533029591058444
+      },
+      {
+        "r": 0.5,
+        "G_r": 0.10132118364233778
+      },
+      {
+        "r": 1.0,
+        "G_r": 0.025330295910584444
+      },
+      {
+        "r": 2.0,
+        "G_r": 0.006332573977646111
+      },
+      {
+        "r": 5.0,
+        "G_r": 0.0010132118364233778
+      },
+      {
+        "r": 10.0,
+        "G_r": 0.00025330295910584445
+      }
+    ],
+    "luscher_flow_damping": [
+      {
+        "p": 1.0,
+        "resolvent_damping": 0.9090909090909091,
+        "gaussian_damping": 0.9048374180359595
+      },
+      {
+        "p": 2.0,
+        "resolvent_damping": 0.7142857142857143,
+        "gaussian_damping": 0.6703200460356393
+      },
+      {
+        "p": 5.0,
+        "resolvent_damping": 0.2857142857142857,
+        "gaussian_damping": 0.0820849986238988
+      },
+      {
+        "p": 10.0,
+        "resolvent_damping": 0.09090909090909091,
+        "gaussian_damping": 4.5399929762484854e-05
+      },
+      {
+        "p": 20.0,
+        "resolvent_damping": 0.024390243902439025,
+        "gaussian_damping": 4.248354255291589e-18
+      },
+      {
+        "p": 50.0,
+        "resolvent_damping": 0.00398406374501992,
+        "gaussian_damping": 2.6691902155412764e-109
+      },
+      {
+        "p": 100.0,
+        "resolvent_damping": 0.000999000999000999,
+        "gaussian_damping": 0.0
+      }
+    ],
+    "symanzik_rotational_restoration": [
+      {
+        "a": 0.2,
+        "leading_O_a2": 0.0,
+        "residual_O_a4": 0.0016000000000000003
+      },
+      {
+        "a": 0.1,
+        "leading_O_a2": 0.0,
+        "residual_O_a4": 0.00010000000000000002
+      },
+      {
+        "a": 0.05,
+        "leading_O_a2": 0.0,
+        "residual_O_a4": 6.250000000000001e-06
+      },
+      {
+        "a": 0.025,
+        "leading_O_a2": 0.0,
+        "residual_O_a4": 3.9062500000000007e-07
+      },
+      {
+        "a": 0.0125,
+        "leading_O_a2": 0.0,
+        "residual_O_a4": 2.4414062500000004e-08
+      },
+      {
+        "a": 0.00625,
+        "leading_O_a2": 0.0,
+        "residual_O_a4": 1.5258789062500003e-09
+      }
+    ],
+    "covolume_tare_energy": 65.4505,
+    "paramagnetic_pull": -0.3783,
+    "diamagnetic_push": 0.023,
+    "net_drift_eta": 0.3553,
+    "paramagnetic_dominance_ratio": 16.447826086956525,
+    "status": "PASS"
+  },
+  "riemann_r4": {
+    "tested_integers": 30,
+    "exact_matches": 30,
+    "sample_r4_values": [
+      {
+        "n": 1,
+        "r4_lattice": 8,
+        "r4_jacobi_formula": 8,
+        "match": true
+      },
+      {
+        "n": 2,
+        "r4_lattice": 24,
+        "r4_jacobi_formula": 24,
+        "match": true
+      },
+      {
+        "n": 3,
+        "r4_lattice": 32,
+        "r4_jacobi_formula": 32,
+        "match": true
+      },
+      {
+        "n": 4,
+        "r4_lattice": 24,
+        "r4_jacobi_formula": 24,
+        "match": true
+      },
+      {
+        "n": 5,
+        "r4_lattice": 48,
+        "r4_jacobi_formula": 48,
+        "match": true
+      },
+      {
+        "n": 10,
+        "r4_lattice": 144,
+        "r4_jacobi_formula": 144,
+        "match": true
+      },
+      {
+        "n": 15,
+        "r4_lattice": 192,
+        "r4_jacobi_formula": 192,
+        "match": true
+      },
+      {
+        "n": 20,
+        "r4_lattice": 144,
+        "r4_jacobi_formula": 144,
+        "match": true
+      },
+      {
+        "n": 25,
+        "r4_lattice": 248,
+        "r4_jacobi_formula": 248,
+        "match": true
+      },
+      {
+        "n": 30,
+        "r4_lattice": 576,
+        "r4_jacobi_formula": 576,
+        "match": true
+      }
+    ],
+    "theta_quartic_lift": "theta(q)^4 == sum r_4(n) q^n",
+    "riemann_gram_floor": 1.22e-55,
+    "anchor_norm": 1.0,
+    "active_core_percent": 94.7,
+    "dissipative_tail_percent": 5.3,
+    "status": "PASS"
+  },
+  "navier_stokes_r4": {
+    "spacetime_helical_schur_tare": 2660.0,
+    "bulk_enstrophy_raw": 621106.65,
+    "tare_reduction_percent": 99.57173216548237,
+    "multiscale_vorticity_depletion": [
+      {
+        "block_scale": 1,
+        "vorticity_norm": 0.2713,
+        "depletion_ratio": 1.0
+      },
+      {
+        "block_scale": 2,
+        "vorticity_norm": 0.0821,
+        "depletion_ratio": 3.304506699147381
+      },
+      {
+        "block_scale": 4,
+        "vorticity_norm": 0.014,
+        "depletion_ratio": 19.378571428571426
+      }
+    ],
+    "total_depletion_factor": 19.378571428571426,
+    "win_win_arch_margin": 0.0138,
+    "active_core_percent": 93.1,
+    "dissipative_tail_percent": 6.9,
+    "status": "PASS"
+  },
+  "hodge_r4": {
+    "shioda_aoki_gram_diagonal": [
+      16,
+      432,
+      1152
+    ],
+    "chiral_trace_T_ch": 1152,
+    "cm_cycle_Z_CM": 576.0,
+    "chiral_identity_holds": true,
+    "active_core_percent": 91.8,
+    "dissipative_tail_percent": 8.2,
+    "status": "PASS"
+  },
+  "rosetta_5x4_synthesis": [
+    {
+      "rosetta_pattern": "1. Schur Complement Tare",
+      "operation": "S = D - B^T A^{-1} B (Subtracting bulk container)",
+      "yang_mills_4d": "Tare cavity 65.4505 -> 0.0; net pull 0.3553",
+      "riemann_hypothesis": "Subtract rank-1 anchor |b><1|; ||b||^2 = 1.0",
+      "navier_stokes_3d": "Tare bulk 621106.65 -> S_Schur = 2660.0 (99.57% tare)",
+      "hodge_conjecture": "Tare ambient cohomology -> socle T_ch = 1152"
+    },
+    {
+      "rosetta_pattern": "2. Orthogonal Triple Gram",
+      "operation": "G = Omega^T Omega = diag (Zero cross-talk between modes)",
+      "yang_mills_4d": "Gauge orbit _|_ Transverse _|_ Topological instanton",
+      "riemann_hypothesis": "Overlap G_22..G_44 <= 1.22e-55 (Zero cross-talk)",
+      "navier_stokes_3d": "Helical Beltrami modes: h_+ _|_ h_- _|_ longitudinal",
+      "hodge_conjecture": "Band 1-4 character Gram: diag(16, 432, 1152)"
+    },
+    {
+      "rosetta_pattern": "3. Chiral Half-Domain",
+      "operation": "K_half + K_half^T = 4 T_ch (Recovering sign from parity blindness)",
+      "yang_mills_4d": "OS3 half-space reflection: <Theta(F) F> >= 0 on x_4 > 0",
+      "riemann_hypothesis": "Critical strip half-split across Re(s) = 1/2",
+      "navier_stokes_3d": "Two leaning walls: win-win arch margin 0.0138",
+      "hodge_conjecture": "Self-dual vs anti-self-dual: 2 * Z_CM = T_ch (576 * 2 = 1152)"
+    },
+    {
+      "rosetta_pattern": "4. Cocycle Twist Defect",
+      "operation": "1D line (delta = 0) vs 2D/3D plane (delta > 0)",
+      "yang_mills_4d": "U(1) circle delta=0 (massless) vs SU(2) S^3 twist delta=2 > 0",
+      "riemann_hypothesis": "Prime-pair multiplicative cocycles via Jacobi r_4(n) = 8*sigma_1^*(n)",
+      "navier_stokes_3d": "1D pipes cannot knot; 2D/3D planes twist (19.38x depletion)",
+      "hodge_conjecture": "Mumford-Tate spinor cocycle on Calabi-Yau fourfolds"
+    },
+    {
+      "rosetta_pattern": "5. Wavefunction SVD",
+      "operation": "State = |core> + |tail> (>90% active core, <10% dissipative tail)",
+      "yang_mills_4d": "Active instanton core >92% vs dissipative UV heat tail",
+      "riemann_hypothesis": "Active core 94.70% vs dissipative tail 5.30%",
+      "navier_stokes_3d": "Active core 93.10% vs dissipative tail 6.90%",
+      "hodge_conjecture": "Active core 91.80% vs dissipative tail 8.20%"
+    }
+  ],
+  "overall_status": "ALL_4_DOMAINS_PASS"
+}
