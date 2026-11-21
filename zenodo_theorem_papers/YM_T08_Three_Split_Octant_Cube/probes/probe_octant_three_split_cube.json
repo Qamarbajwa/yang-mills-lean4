@@ -1,0 +1,151 @@
+{
+  "probe_name": "The 3rd Split: 8-Fold Octant Cube Investigation",
+  "author": "Qamar Munawer",
+  "affiliation": "Brandenburg University of Technology Cottbus-Senftenberg",
+  "methodology": "ai is being used as a tool",
+  "epistemic_status": "verified-finite",
+  "open_horizon_lock": "STRICTLY OPEN",
+  "status": "PASS",
+  "elapsed_seconds": 0.101,
+  "fluid_mechanics_8_triads": {
+    "triads_sampled": 500,
+    "total_octants": 8,
+    "octant_data": {
+      "(+++)": {
+        "is_homochiral": true,
+        "mean_coupling": 0.06607124641892813,
+        "max_coupling": 0.34535339810258114,
+        "active_channels": 500
+      },
+      "(++-)": {
+        "is_homochiral": false,
+        "mean_coupling": 0.5884056301066928,
+        "max_coupling": 3.587199720318857,
+        "active_channels": 500
+      },
+      "(+-+)": {
+        "is_homochiral": false,
+        "mean_coupling": 1.480498329916397,
+        "max_coupling": 3.9430433613915046,
+        "active_channels": 500
+      },
+      "(+--)": {
+        "is_homochiral": false,
+        "mean_coupling": 0.8215790935376392,
+        "max_coupling": 2.1001942768448982,
+        "active_channels": 500
+      },
+      "(-++)": {
+        "is_homochiral": false,
+        "mean_coupling": 0.8215790935376392,
+        "max_coupling": 2.1001942768448982,
+        "active_channels": 500
+      },
+      "(-+-)": {
+        "is_homochiral": false,
+        "mean_coupling": 1.480498329916397,
+        "max_coupling": 3.9430433613915046,
+        "active_channels": 500
+      },
+      "(--+)": {
+        "is_homochiral": false,
+        "mean_coupling": 0.5884056301066928,
+        "max_coupling": 3.587199720318857,
+        "active_channels": 500
+      },
+      "(---)": {
+        "is_homochiral": true,
+        "mean_coupling": 0.06607124641892813,
+        "max_coupling": 0.34535339810258114,
+        "active_channels": 500
+      }
+    },
+    "homochiral_self_destruction_status": "PASS"
+  },
+  "yang_mills_8_spectral_octants": {
+    "domain_R_max": 30.0,
+    "core_R": 5.0,
+    "delta_twist_floor": 2.0,
+    "octant_breakdown": {
+      "SD(+)_Abelian(+)_Core(+)": {
+        "chirality": "SD(+)",
+        "color": "Abelian(+)",
+        "scale": "Core(+)",
+        "min_eigenvalue": 0.9594552982978536,
+        "max_eigenvalue": 397.26755088072355,
+        "is_gapped_above_zero": false,
+        "dimension": 17
+      },
+      "SD(+)_Abelian(+)_Tail(-)": {
+        "chirality": "SD(+)",
+        "color": "Abelian(+)",
+        "scale": "Tail(-)",
+        "min_eigenvalue": 0.029187001062068098,
+        "max_eigenvalue": 43.85466518309048,
+        "is_gapped_above_zero": false,
+        "dimension": 83
+      },
+      "SD(+)_NonAbelian(-)_Core(+)": {
+        "chirality": "SD(+)",
+        "color": "NonAbelian(-)",
+        "scale": "Core(+)",
+        "min_eigenvalue": 2.931498915371683,
+        "max_eigenvalue": 379.70599630099207,
+        "is_gapped_above_zero": true,
+        "dimension": 17
+      },
+      "SD(+)_NonAbelian(-)_Tail(-)": {
+        "chirality": "SD(+)",
+        "color": "NonAbelian(-)",
+        "scale": "Tail(-)",
+        "min_eigenvalue": 2.0412327558186276,
+        "max_eigenvalue": 45.879632892438515,
+        "is_gapped_above_zero": true,
+        "dimension": 83
+      },
+      "ASD(-)_Abelian(+)_Core(+)": {
+        "chirality": "ASD(-)",
+        "color": "Abelian(+)",
+        "scale": "Core(+)",
+        "min_eigenvalue": 0.9594552982978536,
+        "max_eigenvalue": 397.26755088072355,
+        "is_gapped_above_zero": false,
+        "dimension": 17
+      },
+      "ASD(-)_Abelian(+)_Tail(-)": {
+        "chirality": "ASD(-)",
+        "color": "Abelian(+)",
+        "scale": "Tail(-)",
+        "min_eigenvalue": 0.029187001062068098,
+        "max_eigenvalue": 43.85466518309048,
+        "is_gapped_above_zero": false,
+        "dimension": 83
+      },
+      "ASD(-)_NonAbelian(-)_Core(+)": {
+        "chirality": "ASD(-)",
+        "color": "NonAbelian(-)",
+        "scale": "Core(+)",
+        "min_eigenvalue": 2.985448082757266,
+        "max_eigenvalue": 389.48675422860356,
+        "is_gapped_above_zero": true,
+        "dimension": 17
+      },
+      "ASD(-)_NonAbelian(-)_Tail(-)": {
+        "chirality": "ASD(-)",
+        "color": "NonAbelian(-)",
+        "scale": "Tail(-)",
+        "min_eigenvalue": 2.03540523376809,
+        "max_eigenvalue": 45.86622663943572,
+        "is_gapped_above_zero": true,
+        "dimension": 83
+      }
+    },
+    "summary": {
+      "total_octants": 8,
+      "gapped_octants": 4,
+      "gapless_decay_octants": 4,
+      "isolated_physical_core_octant": "SD(+)_NonAbelian(-)_Core(+)",
+      "physical_core_mass_floor": 2.931498915371683
+    }
+  }
+}
