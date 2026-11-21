@@ -322,7 +322,9 @@ We maintain strict academic honesty. All results formalized in Lean 4 and verifi
             "Lean 4",
             "BTU Cottbus-Senftenberg"
         ],
-        "doi": "10.5281/zenodo.24393110",
+        "doi": "10.5281/zenodo.24409870",
+        "concept_doi": "10.5281/zenodo.24409869",
+        "record_url": "https://zenodo.org/records/24409870",
         "license": "CC-BY-4.0",
         "access_right": "open"
     }
@@ -534,7 +536,9 @@ The proofs presented here establish a finite-dimensional algebraic and topologic
             "Lean 4",
             "BTU Cottbus-Senftenberg"
         ],
-        "doi": "10.5281/zenodo.24393111",
+        "doi": "10.5281/zenodo.24409883",
+        "concept_doi": "10.5281/zenodo.24409882",
+        "record_url": "https://zenodo.org/records/24409883",
         "license": "CC-BY-4.0",
         "access_right": "open"
     }
@@ -710,7 +714,9 @@ These computations are exact for finite lattice blocks ($L=2, 4$). The construct
             "Lean 4",
             "BTU Cottbus-Senftenberg"
         ],
-        "doi": "10.5281/zenodo.24393112",
+        "doi": "10.5281/zenodo.24409885",
+        "concept_doi": "10.5281/zenodo.24409884",
+        "record_url": "https://zenodo.org/records/24409885",
         "license": "CC-BY-4.0",
         "access_right": "open"
     }
@@ -885,7 +891,9 @@ These contradiction theorems operate conditionally on the finite-lattice drift p
             "Lean 4",
             "BTU Cottbus-Senftenberg"
         ],
-        "doi": "10.5281/zenodo.24393113",
+        "doi": "10.5281/zenodo.24409887",
+        "concept_doi": "10.5281/zenodo.24409886",
+        "record_url": "https://zenodo.org/records/24409887",
         "license": "CC-BY-4.0",
         "access_right": "open"
     }
@@ -1112,7 +1120,9 @@ Bridge Lemmas YM1 and YM2 establish conditional algebraic convergence bounds wit
             "Lean 4",
             "BTU Cottbus-Senftenberg"
         ],
-        "doi": "10.5281/zenodo.24393114",
+        "doi": "10.5281/zenodo.24409889",
+        "concept_doi": "10.5281/zenodo.24409888",
+        "record_url": "https://zenodo.org/records/24409889",
         "license": "CC-BY-4.0",
         "access_right": "open"
     }
@@ -1290,7 +1300,9 @@ The proofs verified here demonstrate that if uniform clustering holds across all
             "Lean 4",
             "BTU Cottbus-Senftenberg"
         ],
-        "doi": "10.5281/zenodo.24393115",
+        "doi": "10.5281/zenodo.24409893",
+        "concept_doi": "10.5281/zenodo.24409892",
+        "record_url": "https://zenodo.org/records/24409893",
         "license": "CC-BY-4.0",
         "access_right": "open"
     }
@@ -1494,7 +1506,9 @@ These proofs rigorously establish the inductive preservation of the mass gap acr
             "Lean 4",
             "BTU Cottbus-Senftenberg"
         ],
-        "doi": "10.5281/zenodo.24393116",
+        "doi": "10.5281/zenodo.24409895",
+        "concept_doi": "10.5281/zenodo.24409894",
+        "record_url": "https://zenodo.org/records/24409895",
         "license": "CC-BY-4.0",
         "access_right": "open"
     }

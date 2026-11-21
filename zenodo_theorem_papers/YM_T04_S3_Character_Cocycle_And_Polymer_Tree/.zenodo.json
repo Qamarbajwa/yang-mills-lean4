@@ -20,8 +20,8 @@
     "BTU Cottbus-Senftenberg"
   ],
   "doi": "10.5281/zenodo.24409889",
-  "license": "CC-BY-4.0",
-  "access_right": "open",
   "concept_doi": "10.5281/zenodo.24409888",
-  "record_url": "https://zenodo.org/records/24409889"
+  "record_url": "https://zenodo.org/records/24409889",
+  "license": "CC-BY-4.0",
+  "access_right": "open"
 }
