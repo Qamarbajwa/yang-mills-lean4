@@ -1,0 +1,60 @@
+{
+  "probe_name": "Continuum Uniform Transfer Matrix & Mass Gap on R^4 = H",
+  "author": "Qamar Munawer",
+  "affiliation": "Brandenburg University of Technology Cottbus-Senftenberg",
+  "methodology": "ai is being used as a tool",
+  "epistemic_status": "verified-finite",
+  "open_horizon_lock": "STRICTLY OPEN",
+  "status": "PASS",
+  "domain_radius_R": 10.0,
+  "twist_floor": 2.0,
+  "continuum_limit_finest_gap": 2.329693111691222,
+  "coarse_to_fine_gap_drift": 0.02644493413296356,
+  "spacing_ladder": [
+    {
+      "spacing_a": 0.5,
+      "n_grid_points": 20,
+      "physical_mass_gap_Delta": 2.3032481775582583,
+      "delta_twist_floor": 2.0,
+      "error_from_twist_floor": 0.3032481775582583,
+      "is_reflection_positive": true,
+      "is_gapped_above_zero": true
+    },
+    {
+      "spacing_a": 0.25,
+      "n_grid_points": 40,
+      "physical_mass_gap_Delta": 2.317135232773755,
+      "delta_twist_floor": 2.0,
+      "error_from_twist_floor": 0.3171352327737549,
+      "is_reflection_positive": true,
+      "is_gapped_above_zero": true
+    },
+    {
+      "spacing_a": 0.125,
+      "n_grid_points": 80,
+      "physical_mass_gap_Delta": 2.324268977634163,
+      "delta_twist_floor": 2.0,
+      "error_from_twist_floor": 0.32426897763416296,
+      "is_reflection_positive": true,
+      "is_gapped_above_zero": true
+    },
+    {
+      "spacing_a": 0.0625,
+      "n_grid_points": 160,
+      "physical_mass_gap_Delta": 2.3278783549424,
+      "delta_twist_floor": 2.0,
+      "error_from_twist_floor": 0.32787835494240003,
+      "is_reflection_positive": true,
+      "is_gapped_above_zero": true
+    },
+    {
+      "spacing_a": 0.03125,
+      "n_grid_points": 320,
+      "physical_mass_gap_Delta": 2.329693111691222,
+      "delta_twist_floor": 2.0,
+      "error_from_twist_floor": 0.32969311169122184,
+      "is_reflection_positive": true,
+      "is_gapped_above_zero": true
+    }
+  ]
+}

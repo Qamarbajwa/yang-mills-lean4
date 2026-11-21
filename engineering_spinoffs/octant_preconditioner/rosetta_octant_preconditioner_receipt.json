@@ -1,0 +1,14 @@
+{
+  "benchmark_name": "Rosetta 8-Octant Preconditioner Benchmark",
+  "author": "Qamar Munawer",
+  "affiliation": "Brandenburg University of Technology Cottbus-Senftenberg",
+  "methodology": "ai is being used as a tool",
+  "dimension": 64,
+  "total_octants": 8,
+  "partition_of_unity_error": 0.0,
+  "homochiral_filtering_energy_ratio": 0.75,
+  "raw_matrix_condition_number": 100000.00000002467,
+  "preconditioned_residual": 5.824778842909018e-15,
+  "solve_time_seconds": 0.0003169999981764704,
+  "status": "PASS"
+}
