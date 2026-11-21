@@ -1,0 +1,29 @@
+{
+  "title": "The Geometry of Four Dimensions: Why Nuclear Forces, Fluid Vortices, Prime Numbers, and Calabi-Yau Manifolds Share the Same Five Laws",
+  "upload_type": "publication",
+  "publication_type": "article",
+  "description": "<p>Four dimensions occupies an extraordinary, singular place across modern mathematics and physics. It is the only dimension where smooth exotic differential structures exist on Euclidean space R4, where Yang-Mills gauge coupling is dimensionless, where 2-forms split symmetrically into self-dual and anti-self-dual sub-bundles, and where Jacobi's four-square divisor sum r4(n) = 8 sum_{d|n, 4 does not divide d} d links discrete lattice points to continuous harmonic analysis.</p><p>In this monograph, we present the synthesis of our multi-year research across four foundational mathematical disciplines: 4D Yang-Mills gauge theory, 3D/4D Navier-Stokes fluid mechanics, the distribution of prime numbers in analytic number theory, and Calabi-Yau algebraic geometry. We demonstrate that across all four domains, five universal mathematical laws govern the physics: (1) Orthogonal Diagonal Overlap, (2) Schur Complement Bulk Taring, (3) Chiral Half-Domain Sign Reconstruction, (4) 1D Line versus 2D Plane Cocycle Twist, and (5) Wavefunction Core-Tail Partition.</p><p>We report unified numerical results on R4, including the evaluation of the BPST instanton action to 78.95683520 (matching 8 pi^2 with error 8.11e-9), exact representation counts for r4(n), and multi-channel noise taring exceeding 99% with active core energy above 90%. Furthermore, we document two working open-source engineering spin-offs in Heritage Building Information Modeling (HBIM) vibration analysis and Zero-Trust AI governance.</p><p><strong>Methodology:</strong> In this research investigation, ai is being used as a tool.</p><p><strong>Epistemic Status:</strong> Verified finite mathematics; all four Clay Millennium Problems remain strictly open mathematical horizons.</p>",
+  "creators": [
+    {
+      "name": "Munawer, Qamar",
+      "affiliation": "Brandenburg University of Technology Cottbus-Senftenberg"
+    }
+  ],
+  "keywords": [
+    "Four-Dimensional Geometry",
+    "Yang-Mills",
+    "Schur Complement Tare",
+    "Rosetta Architecture",
+    "Navier-Stokes",
+    "Riemann Hypothesis",
+    "Calabi-Yau",
+    "HBIM Structural Monitoring",
+    "AI Formal Governance",
+    "BTU Cottbus-Senftenberg"
+  ],
+  "license": "CC-BY-4.0",
+  "access_right": "open",
+  "doi": "10.5281/zenodo.24410541",
+  "concept_doi": "10.5281/zenodo.24410540",
+  "record_url": "https://zenodo.org/records/24410541"
+}

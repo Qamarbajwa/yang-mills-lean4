@@ -1,0 +1,35 @@
+{
+  "benchmark_name": "HBIM Historic Arch Structural Health Schur Tare",
+  "author": "Qamar Munawer",
+  "affiliation": "Brandenburg University of Technology Cottbus-Senftenberg",
+  "methodology": "ai is being used as a tool",
+  "epistemic_status": "verified-finite practical engineering toolkit",
+  "matrices": {
+    "A_dimension": [
+      8,
+      8
+    ],
+    "B_dimension": [
+      8,
+      2
+    ],
+    "D_dimension": [
+      2,
+      2
+    ],
+    "schur_complement_eigenvalues": [
+      114.88,
+      137.15555555555557
+    ]
+  },
+  "performance_metrics": {
+    "raw_rms_acceleration": 3.9830102224791197,
+    "clean_rms_acceleration": 0.2297950318617826,
+    "noise_subtraction_percent": 99.66714243787071,
+    "snr_isolation_db": 24.777415719443468,
+    "target_crack_frequency_hz": 18.5,
+    "detected_crack_frequency_hz": 18.5,
+    "frequency_detection_error_hz": 0.0,
+    "status": "PASS"
+  }
+}
