@@ -1,0 +1,62 @@
+{
+  "title": "Yang-Mills Symanzik Quaternion & Baryonic Y-Junction Probe",
+  "author": "Qamar Munawer",
+  "affiliation": "Brandenburg University of Technology Cottbus-Senftenberg",
+  "methodology": "ai is being used as a tool",
+  "status": "PASS",
+  "verified": true,
+  "epistemic_lock": {
+    "all_four_clay_millennium_problems_open": true,
+    "status": "verified-finite"
+  },
+  "metrics": {
+    "symanzik_norm": 1.0,
+    "symanzik_ghost": 0.0,
+    "twist_tr_minus": -2.0,
+    "twist_energy_defect": 2.0,
+    "covolume_tare": 0.0,
+    "paramagnetic_dominance_ratio": 16.447826086956525,
+    "steiner_y_junction_records": [
+      {
+        "triad": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "L_Y_sq": 6.0,
+        "lower_bound": 3.0,
+        "margin": 3.0
+      },
+      {
+        "triad": [
+          2.0,
+          3.0,
+          4.0
+        ],
+        "L_Y_sq": 55.0,
+        "lower_bound": 27.0,
+        "margin": 28.0
+      },
+      {
+        "triad": [
+          0.5,
+          1.2,
+          0.8
+        ],
+        "L_Y_sq": 4.29,
+        "lower_bound": 2.0833333333333335,
+        "margin": 2.2066666666666666
+      },
+      {
+        "triad": [
+          3.5,
+          2.1,
+          4.2
+        ],
+        "L_Y_sq": 65.17,
+        "lower_bound": 32.01333333333334,
+        "margin": 33.15666666666666
+      }
+    ]
+  }
+}
