@@ -1,0 +1,224 @@
+{
+  "probe_name": "Continuum L\u00fcscher Gradient Flow & Symanzik O(a^2) Restoration on R^4",
+  "author": "Qamar Munawer",
+  "affiliation": "Brandenburg University of Technology Cottbus-Senftenberg",
+  "methodology": "ai is being used as a tool",
+  "epistemic_status": "verified-finite continuum flow probe; Clay open horizons remain strictly open",
+  "luscher_gradient_flow": {
+    "flow_sweep": [
+      {
+        "flow_time_t": 0.1,
+        "lambda_t": 1.1832159566199232,
+        "smoothing_radius_r": 0.8944271909999159,
+        "peak_density_L0": 24.48979591836735,
+        "integrated_action_S": 78.9568169452004,
+        "exact_action_8pi2": 78.95683520871486,
+        "action_conservation_error": 1.8263514462546482e-05,
+        "coupling_gf_proxy": 34.37576498882825
+      },
+      {
+        "flow_time_t": 0.2,
+        "lambda_t": 1.3416407864998738,
+        "smoothing_radius_r": 1.2649110640673518,
+        "peak_density_L0": 14.814814814814813,
+        "integrated_action_S": 78.95681694520043,
+        "exact_action_8pi2": 78.95683520871486,
+        "action_conservation_error": 1.8263514434124772e-05,
+        "coupling_gf_proxy": 83.18086342975724
+      },
+      {
+        "flow_time_t": 0.3,
+        "lambda_t": 1.4832396974191326,
+        "smoothing_radius_r": 1.5491933384829668,
+        "peak_density_L0": 9.917355371900825,
+        "integrated_action_S": 78.95681694520042,
+        "exact_action_8pi2": 78.95683520871486,
+        "action_conservation_error": 1.8263514448335627e-05,
+        "coupling_gf_proxy": 125.28687900886985
+      },
+      {
+        "flow_time_t": 0.4,
+        "lambda_t": 1.61245154965971,
+        "smoothing_radius_r": 1.7888543819998317,
+        "peak_density_L0": 7.10059171597633,
+        "integrated_action_S": 78.9568169452004,
+        "exact_action_8pi2": 78.95683520871486,
+        "action_conservation_error": 1.8263514462546482e-05,
+        "coupling_gf_proxy": 159.47100444521504
+      },
+      {
+        "flow_time_t": 0.5,
+        "lambda_t": 1.7320508075688772,
+        "smoothing_radius_r": 2.0,
+        "peak_density_L0": 5.333333333333333,
+        "integrated_action_S": 78.95681694520042,
+        "exact_action_8pi2": 78.95683520871486,
+        "action_conservation_error": 1.8263514448335627e-05,
+        "coupling_gf_proxy": 187.15694271695375
+      },
+      {
+        "flow_time_t": 0.6,
+        "lambda_t": 1.8439088914585775,
+        "smoothing_radius_r": 2.1908902300206643,
+        "peak_density_L0": 4.152249134948097,
+        "integrated_action_S": 78.9568169452004,
+        "exact_action_8pi2": 78.95683520871486,
+        "action_conservation_error": 1.8263514462546482e-05,
+        "coupling_gf_proxy": 209.8230084439205
+      },
+      {
+        "flow_time_t": 0.8,
+        "lambda_t": 2.04939015319192,
+        "smoothing_radius_r": 2.5298221281347035,
+        "peak_density_L0": 2.7210884353741496,
+        "integrated_action_S": 78.95681694520037,
+        "exact_action_8pi2": 78.95683520871486,
+        "action_conservation_error": 1.826351449096819e-05,
+        "coupling_gf_proxy": 244.44988436500088
+      },
+      {
+        "flow_time_t": 1.0,
+        "lambda_t": 2.23606797749979,
+        "smoothing_radius_r": 2.8284271247461903,
+        "peak_density_L0": 1.92,
+        "integrated_action_S": 78.9568169452004,
+        "exact_action_8pi2": 78.95683520871486,
+        "action_conservation_error": 1.8263514462546482e-05,
+        "coupling_gf_proxy": 269.5059975124134
+      },
+      {
+        "flow_time_t": 1.2,
+        "lambda_t": 2.4083189157584592,
+        "smoothing_radius_r": 3.0983866769659336,
+        "peak_density_L0": 1.426872770511296,
+        "integrated_action_S": 78.95681694520043,
+        "exact_action_8pi2": 78.95683520871486,
+        "action_conservation_error": 1.8263514434124772e-05,
+        "coupling_gf_proxy": 288.4130770049608
+      },
+      {
+        "flow_time_t": 1.5,
+        "lambda_t": 2.6457513110645907,
+        "smoothing_radius_r": 3.4641016151377544,
+        "peak_density_L0": 0.9795918367346939,
+        "integrated_action_S": 78.95681694520042,
+        "exact_action_8pi2": 78.95683520871486,
+        "action_conservation_error": 1.8263514448335627e-05,
+        "coupling_gf_proxy": 309.3818848994542
+      },
+      {
+        "flow_time_t": 1.8,
+        "lambda_t": 2.8635642126552705,
+        "smoothing_radius_r": 3.794733192202055,
+        "peak_density_L0": 0.7138607971445569,
+        "integrated_action_S": 78.95681694520042,
+        "exact_action_8pi2": 78.95683520871486,
+        "action_conservation_error": 1.8263514448335627e-05,
+        "coupling_gf_proxy": 324.65773049532254
+      },
+      {
+        "flow_time_t": 2.0,
+        "lambda_t": 3.0,
+        "smoothing_radius_r": 4.0,
+        "peak_density_L0": 0.5925925925925926,
+        "integrated_action_S": 78.95681694520042,
+        "exact_action_8pi2": 78.95683520871486,
+        "action_conservation_error": 1.8263514448335627e-05,
+        "coupling_gf_proxy": 332.7234537190289
+      }
+    ],
+    "max_action_conservation_error": 1.826351449096819e-05,
+    "topological_invariance_verified": true,
+    "flow_status": "PASS"
+  },
+  "symanzik_rotational_restoration": {
+    "symanzik_sweep": [
+      {
+        "lattice_spacing_a": 0.2,
+        "wilson_rotational_defect_O_a2": 0.0025000000000000005,
+        "symanzik_rotational_defect_O_a4": 4.166666666666667e-06,
+        "rotational_symmetry_improvement_ratio": 600.0000000000001,
+        "theoretical_a2": 0.04000000000000001,
+        "theoretical_a4": 0.0016000000000000003
+      },
+      {
+        "lattice_spacing_a": 0.1,
+        "wilson_rotational_defect_O_a2": 0.0006250000000000001,
+        "symanzik_rotational_defect_O_a4": 2.604166666666667e-07,
+        "rotational_symmetry_improvement_ratio": 2400.0000000000005,
+        "theoretical_a2": 0.010000000000000002,
+        "theoretical_a4": 0.00010000000000000002
+      },
+      {
+        "lattice_spacing_a": 0.05,
+        "wilson_rotational_defect_O_a2": 0.00015625000000000003,
+        "symanzik_rotational_defect_O_a4": 1.6276041666666667e-08,
+        "rotational_symmetry_improvement_ratio": 9600.000000000002,
+        "theoretical_a2": 0.0025000000000000005,
+        "theoretical_a4": 6.250000000000001e-06
+      },
+      {
+        "lattice_spacing_a": 0.025,
+        "wilson_rotational_defect_O_a2": 3.906250000000001e-05,
+        "symanzik_rotational_defect_O_a4": 1.0172526041666667e-09,
+        "rotational_symmetry_improvement_ratio": 38400.00000000001,
+        "theoretical_a2": 0.0006250000000000001,
+        "theoretical_a4": 3.9062500000000007e-07
+      },
+      {
+        "lattice_spacing_a": 0.0125,
+        "wilson_rotational_defect_O_a2": 9.765625000000002e-06,
+        "symanzik_rotational_defect_O_a4": 6.357828776041667e-11,
+        "rotational_symmetry_improvement_ratio": 153600.00000000003,
+        "theoretical_a2": 0.00015625000000000003,
+        "theoretical_a4": 2.4414062500000004e-08
+      },
+      {
+        "lattice_spacing_a": 0.00625,
+        "wilson_rotational_defect_O_a2": 2.4414062500000005e-06,
+        "symanzik_rotational_defect_O_a4": 3.973642985026042e-12,
+        "rotational_symmetry_improvement_ratio": 614400.0000000001,
+        "theoretical_a2": 3.906250000000001e-05,
+        "theoretical_a4": 1.5258789062500003e-09
+      }
+    ],
+    "tree_level_c0": 1.6666666666666667,
+    "tree_level_c1": -0.08333333333333333,
+    "rotational_defect_cancellation": 0.0,
+    "symanzik_status": "PASS"
+  },
+  "rosetta_multiscale_mapping": {
+    "domain_multiscale_mapping": [
+      {
+        "flow_time_t": 0.1,
+        "yang_mills_smoothing_radius": 0.8944271909999159,
+        "navier_stokes_core_radius": 0.06324555320336758,
+        "riemann_mollifier_tau": 5.0,
+        "hodge_ricci_curvature_damping": 0.8187307530779818
+      },
+      {
+        "flow_time_t": 0.5,
+        "yang_mills_smoothing_radius": 2.0,
+        "navier_stokes_core_radius": 0.1414213562373095,
+        "riemann_mollifier_tau": 1.0,
+        "hodge_ricci_curvature_damping": 0.36787944117144233
+      },
+      {
+        "flow_time_t": 1.0,
+        "yang_mills_smoothing_radius": 2.8284271247461903,
+        "navier_stokes_core_radius": 0.2,
+        "riemann_mollifier_tau": 0.5,
+        "hodge_ricci_curvature_damping": 0.1353352832366127
+      },
+      {
+        "flow_time_t": 2.0,
+        "yang_mills_smoothing_radius": 4.0,
+        "navier_stokes_core_radius": 0.282842712474619,
+        "riemann_mollifier_tau": 0.25,
+        "hodge_ricci_curvature_damping": 0.01831563888873418
+      }
+    ],
+    "mapping_status": "PASS"
+  },
+  "overall_status": "PASS"
+}
