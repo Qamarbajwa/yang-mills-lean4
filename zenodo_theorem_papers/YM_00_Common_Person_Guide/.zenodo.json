@@ -19,7 +19,9 @@
     "Lean 4",
     "BTU Cottbus-Senftenberg"
   ],
-  "doi": "10.5281/zenodo.24393110",
+  "doi": "10.5281/zenodo.24409870",
   "license": "CC-BY-4.0",
-  "access_right": "open"
+  "access_right": "open",
+  "concept_doi": "10.5281/zenodo.24409869",
+  "record_url": "https://zenodo.org/records/24409870"
 }

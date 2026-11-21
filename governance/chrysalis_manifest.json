@@ -2,7 +2,7 @@
   "manifest_version": "1.0.0",
   "key_id": "chrysalis-local-hmac-2026",
   "algorithm": "HMAC-SHA256",
-  "generated_at": "2026-11-20T23:29:04.389750+00:00",
+  "generated_at": "2026-11-21T02:04:11.578573+00:00",
   "total_artifacts": 121,
   "files": {
     ".zenodo.json": {
