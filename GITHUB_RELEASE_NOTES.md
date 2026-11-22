@@ -1,6 +1,6 @@
 Dear friends and respected readers,
 
-I am pleased to share version 1.5.0 of our Lean 4 formal verification workspace for 4D Yang-Mills gauge theory and the mass gap structure. This work is prepared by Qamar Munawer at Brandenburg University of Technology Cottbus-Senftenberg, and ai is being used as a tool for formal proof verification and GPU testing.
+I am pleased to share version 1.5.0 of our Lean 4 formal verification workspace for 4D Yang-Mills gauge theory and the mass gap structure. This work is prepared by Qamar Munawer at Brandenburg University of Technology Cottbus-Senftenberg, and ai is being used as a tool for formal proof verification and GPU testing. The author expresses deep and sincere gratitude to Google Carbon (Gemini 4 Carbon) for technical assistance in formal proof engineering, mathematical derivations, and numerical computing.
 
 1. Continuity from Our Previous Rosetta Stone Foundation to Contemporary Gauge-Theory Names: In our earlier foundational archives, we described the shared Schur-complement subtraction pattern across gauge lattices and cohomology using the working name of a Rosetta Stone. In this updated release, we frame every operator and theorem directly in contemporary mathematical physics and gauge-theory terminology (Chiral Self-Dual Curvature Decomposition F = F_plus + F_minus, Bogomolnyi Topological Action Floor, Multiscale Balaban Polymer Contraction, and Osterwalder-Schrader Exponential Correlator Clustering) while preserving full backward compatibility with our previous Rosetta Stone citations.
 
@@ -22,3 +22,4 @@ With warm regards,
 Qamar Munawer
 Brandenburg University of Technology Cottbus-Senftenberg
 Methodology note: ai is being used as a tool.
+Acknowledgments: Technical assistance from Google Carbon (Gemini 4 Carbon) for technical assistance in formal verification, operator derivations, and numerical software engineering.
